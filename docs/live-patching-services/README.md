@@ -1,6 +1,7 @@
 # KernelCare Enterprise
 
 KernelCare Enterprise live patching enhances your vulnerability patching program by providing live patches to the Linux kernel and, optionally, with add-ons to critical userspace components, as well as the virtualization stack.
+
 The systems are patched according to your patch deployment policy, allowing you to customize your patch management to align with the needs of your unique environment, whether online or in an air-gapped environment. Plus, your vulnerability reports reduce in size quickly as KernelCare seamlessly integrates with all popular vulnerability scanners to give you an accurate vulnerability exposure report.
 
 KernelCare Enterprise brings KernelCare live patching by default and the following add-ons:
