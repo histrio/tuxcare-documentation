@@ -107,7 +107,7 @@ const getBreadcrumbsForArticle = (obj) => {
 
   &:hover
     .search-result__title
-      color $mainColor
+      color #44A2F5
       text-decoration underline
 
   &__title
@@ -155,7 +155,7 @@ const getBreadcrumbsForArticle = (obj) => {
     color $drawerHiddenResultColor
 
 .no_results
-  font-size 25px
+  font-size 20px
   font-weight 700
   &__link
     &:hover

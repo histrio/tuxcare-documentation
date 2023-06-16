@@ -35,15 +35,15 @@ export default defineClientConfig({
         })
         provide('themeConfig', {
             //general
-            cloudlinuxSite: "https://cloudlinux.com",
+            cloudlinuxSite: "https://tuxcare.com",
             defaultURL: "/",
             githubBranch: "master",
             allowGithubEdit: true,
             githubMainDir: "docs",
             sidebarDepth: 2,
-            githubRepository: "cloudlinux/cloudlinux-documentation",
-            submitRequestURL: "https://www.cloudlinux.com/support-portal/",
-            tryFreeLink: "https://cloudlinux.com/trial",
+            githubRepository: "cloudlinux/tuxcare-documentation",
+            submitRequestURL: "https://www.tuxcare.com/support-portal/",
+            tryFreeLink: "https://portal.tuxcare.com/",
 
             //docs cards
             documents,
@@ -58,8 +58,8 @@ export default defineClientConfig({
             headerSearchIcon: 'global/header-search.svg',
 
             // Header
-            headerSearch: "CloudLinux Product Documentation",
-            headerSearchPlaceholder: "Search across all CloudLinux product documentation",
+            headerSearch: "TuxCare Product Documentation",
+            headerSearchPlaceholder: "Search across all TuxCare product documentation",
 
             //locales
             locales: {
@@ -69,7 +69,7 @@ export default defineClientConfig({
                 siteTitle: "Documentation",
                 stayInTouch: "Stay in touch",
                 submitRequest: "Submit support request",
-                tryFree: "Try Free",
+                tryFree: "TuxCare Portal Login",
             },
 
             // Products
@@ -81,9 +81,9 @@ export default defineClientConfig({
 
             // Algolia
             algoliaOptions: {
-                apiKey: "e6b9d79daf71aa98e2e2a51d4556f9d4",
-                indexName: "cloudlinuxos",
-                appId: "0TCNL6CGX8"
+                apiKey: "17e673c12b93fbf7c4a00159b0ae2de0",
+                indexName: "tuxcare",
+                appId: "R7FCMJM4P7"
             },
 
             MAX_ALGOLIA_VISIBLE_RESULT: 10,

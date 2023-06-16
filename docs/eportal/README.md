@@ -1112,7 +1112,7 @@ You can use `kc.eportal replication --short-status` CLI command to check replica
 status. It exits with code `1` if there are some issues with replication and
 outputs JSON:
 
-```json
+```
 {
   "ok": true,       // overall health status
   "lag": 1,         // overall replication lag in seconds
@@ -1484,36 +1484,46 @@ If mail sending attempt fails, ePortal will save the reports in
 
 First of all you need to install `ssmtp`:
 
-    yum install -y ssmtp
+```
+yum install -y ssmtp
+```
 
 Edit `/etc/ssmtp/ssmtp.conf` file in accordance with your SMTP server
 configuration. Here is a simple config file describing a common way to connect
 to Gmail accounts:
 
-    root=username@gmail.com
-    mailhub=smtp.gmail.com:587
-    hostname=localhost
-    UseSTARTTLS=YES
-    AuthUser=username@gmail.com
-    AuthPass=xxxxxxxxxxxxxxxxxxx
-    FromLineOverride=YES
-    TLS_CA_File=/etc/ssl/certs/ca-certificates.crt
+```
+root=username@gmail.com
+mailhub=smtp.gmail.com:587
+hostname=localhost
+UseSTARTTLS=YES
+AuthUser=username@gmail.com
+AuthPass=xxxxxxxxxxxxxxxxxxx
+FromLineOverride=YES
+TLS_CA_File=/etc/ssl/certs/ca-certificates.crt
+```
 
 Actual location of a TLS_CA_Files depends on Linux distribution:
 
-    "/etc/ssl/certs/ca-certificates.crt",                // Debian/Ubuntu/Gentoo etc.
-    "/etc/pki/tls/certs/ca-bundle.crt",                  // Fedora/RHEL 6
-    "/etc/ssl/ca-bundle.pem",                            // OpenSUSE
-    "/etc/pki/tls/cacert.pem",                           // OpenELEC
-    "/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem", // CentOS/RHEL 7
+```
+"/etc/ssl/certs/ca-certificates.crt",                // Debian/Ubuntu/Gentoo etc.
+"/etc/pki/tls/certs/ca-bundle.crt",                  // Fedora/RHEL 6
+"/etc/ssl/ca-bundle.pem",                            // OpenSUSE
+"/etc/pki/tls/cacert.pem",                           // OpenELEC
+"/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem", // CentOS/RHEL 7
+```
 
 Also you could get if from:
 
-    curl-config --ca
+```
+curl-config --ca
+```
 
 Now you can test a connection:
 
-    echo -n 'Subject: test\n\nTesting ssmtp' | sendmail -v some-recipient@gmail.com
+```
+echo -n 'Subject: test\n\nTesting ssmtp' | sendmail -v some-recipient@gmail.com
+```
 
 ## Custom environment variables
 

@@ -80,7 +80,7 @@ const closeDrawer = () => {
     font-weight: 500
     font-size: 3.4rem
     line-height: 4rem
-    color white
+    color #27353C
     margin-top 5.625rem
     margin-bottom: 2.5rem
 
@@ -89,11 +89,12 @@ const closeDrawer = () => {
     border-radius: $homeSearchBorderRadius
     border none
     padding 1.4rem 2rem
-    color: $gray-500;
+    color: gray
     font-size: $text-default
     line-height: 16px
     margin-bottom 7.25rem
     outline: none
+    box-shadow: 0 3px 7px 0 rgba(0,0,0,.23);
 
   &-default
     border-radius $defaultSearchBorderRadius
@@ -101,13 +102,13 @@ const closeDrawer = () => {
     outline: none
     padding 12px 15px
     width 250px
-    background rgba(0, 0, 0, 0.1)
-    color white
+    background #D8EFFF
+    color #27353C
     font-size: $text-default
     line-height: 16px
 
   &-default::placeholder
-    color: white;
+    color: #27353C;
 
 
   &-icon
@@ -115,6 +116,7 @@ const closeDrawer = () => {
     top: 8%;
     right 5%
     cursor pointer
+  
 
     &-default
       position absolute

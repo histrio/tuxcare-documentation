@@ -57,7 +57,7 @@ onUnmounted(() => {
     font-size $text-default
     cursor pointer
     line-height 16px
-    color white
+    color #27353C
 
 .header-products-container
   display: flex;

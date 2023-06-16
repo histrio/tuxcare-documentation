@@ -87,7 +87,7 @@ const submitRequestUrl = computed(() => submitRequestURL || "https://cloudlinux.
 
   .links
     box-sizing border-box
-    background-color $mainColor
+    background-color #fff
     white-space nowrap
     font-size 0.9rem
     display flex
@@ -111,7 +111,7 @@ const submitRequestUrl = computed(() => submitRequestURL || "https://cloudlinux.
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: $mainColor;
+  background-color: #fff;
   border: 2px solid $buttonBorderColor;
   border-radius: 4px;
   font-size: 0.88rem;

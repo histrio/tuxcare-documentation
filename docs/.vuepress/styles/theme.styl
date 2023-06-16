@@ -13,7 +13,7 @@ body
   font-family -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
   -webkit-font-smoothing antialiased
   -moz-osx-font-smoothing grayscale
-  font-size 14px
+  font-size 0.875rem
   color $textColor
 
 #app
@@ -24,12 +24,13 @@ body
   padding-bottom 10rem
 
 .navbar
-  background-color $mainColor
+  background-color #fff
   box-sizing border-box
+  box-shadow: 0 3px 7px 0 rgba(0,0,0,.23);
 
 .sidebar
   padding-bottom 204px;
-  font-size 15px
+  font-size 0.9375rem
   width $sidebarWidth
   background-color: $sidebarBgColor;
   position fixed
@@ -71,6 +72,7 @@ a
 p a code
   font-weight 400
   color $accentColor
+
 
 
 kbd
@@ -192,3 +194,63 @@ th, td
     .custom-layout
       padding-top 0
 
+.language-text
+  border-radius 6px
+  font-size 12px
+
+:not(.language-text) > code
+  color: #4b6c89
+  padding: 0.25rem 0.5rem
+  margin: 0
+  font-size: .85em
+  background-color: rgba(27,31,35,.05)
+  border-radius: 3px
+
+badge[type="warning"]
+  display: inline-block
+  padding: 0.2em 0.5em;
+  border-radius: 3px;
+  font-weight: bold;
+  background-color: #FFD42A;
+  color: black;
+  font-size: 12px;
+  margin-left: 0.5em;
+
+  &:before
+    content: attr(text);
+
+badge[type="info"]
+  display: inline-block
+  padding: 0.2em 0.5em;
+  border-radius: 3px;
+  font-weight: bold;
+  background-color: #48AE41;
+  color: white;
+  font-size: 12px;
+  margin-left: 0.5em;
+
+  &:before
+    content: attr(text);
+
+badge[type="danger"]
+  display: inline-block
+  padding: 0.2em 0.5em;
+  border-radius: 3px;
+  font-weight: bold;
+  background-color: #CA2029;
+  color: white;
+  font-size: 12px;
+  margin-left: 0.5em;
+
+  &:before
+    content: attr(text);
+
+@media (max-width: $mobileBreakpoint)
+  .content:not(.custom)
+    width 100%
+    margin 0
+
+    & > h1:first-child
+      margin 0
+  a.header-anchor
+    font-size 0 !important

@@ -7,7 +7,7 @@
     >
       <template #top>
         <div v-if="documents" class="sidebar-header">
-          <p class="sidebar-header__paragraph">Select CL docs</p>
+          <p class="sidebar-header__paragraph">Select TuxCare docs</p>
           <DSelect
               with-icon
               v-model="selectedValue"

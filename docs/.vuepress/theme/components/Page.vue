@@ -129,7 +129,7 @@ const createEditLink = (githubRepository, docsRepo, githubMainDir, githubBranch,
       gap 5px
 
       a
-        color $mainColor
+        color #314659
         font-weight 600
         font-size $text-default
         line-height 16px

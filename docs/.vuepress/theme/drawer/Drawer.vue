@@ -103,7 +103,7 @@ watch(() => props.isOpenDrawer, () => {
   overflow-y auto
   z-index 1000
   box-sizing border-box
-  background: $drawerHeaderBgColor
+  background: #EEF9FF
   opacity: 0;
   transform: translateY(-100%);
   transition: 0.4s ease;

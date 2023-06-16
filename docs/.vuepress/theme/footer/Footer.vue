@@ -44,7 +44,7 @@ const isGlobalLayout = computed(() => frontmatter.value.layout === 'HomeLayout')
   color $textColor
   border-top 1px solid $borderColor
   height $footerHeight
-  background #fff
+  background #061329
   display flex
   align-items center
   justify-content space-between
@@ -75,10 +75,11 @@ const isGlobalLayout = computed(() => frontmatter.value.layout === 'HomeLayout')
     color: $colorLink
 
   .footer-social-text
+    color #d8d8d8
     margin-right 13px
     line-height 20px
     padding-left 12px
-    border-left 1px solid #ccc
+    border-left 2px solid #ccc
 
   &-icons-link
     display: flex

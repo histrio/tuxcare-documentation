@@ -107,6 +107,7 @@ watch(
   font-size: $searchColorFontSize
   line-height: 16px
   outline: none
+  box-shadow: 0 3px 7px 0 rgba(0,0,0,.23)
 
   &-icon
     position absolute
@@ -121,7 +122,7 @@ watch(
 
 .drawer-header__paragraph
   margin 0
-  color $headerSearchTitleColor
+  color #27353C
   font-weight $headerSearchFontWeight
   font-size $headerSearchFontSize
   line-height 35.8px
