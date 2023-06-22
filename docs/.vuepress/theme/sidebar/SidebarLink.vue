@@ -2,37 +2,38 @@
 import {groupHeaders, isActive} from '../util'
 import {h} from "vue"
 import {usePageData} from "@vuepress/client";
-import {RouterLink, useRoute} from "vue-router";
+import {RouterLink, useRoute,useRouter} from "vue-router";
 
 export default {
   functional: true,
-  props: ['item'],
-  render({item}) {
+  props: ['item', 'closeSidebarDrawer'],
+  render({item,closeSidebarDrawer}) {
     if (!item) return;
     const $page = usePageData();
     const $route = useRoute();
+    const $router = useRouter();
     const selfActive = isActive($route, item?.path);
     const active = item?.type === 'auto'
         ? selfActive || item.children.some(c => isActive($route, item.basePath + '#' + c.slug))
         : selfActive;
-    const link = renderHeader(h, item?.path, item.title || item?.path, active, item.headers);
+    const link = renderHeader(h, item?.path, item.title || item?.path, active, item.headers,closeSidebarDrawer,$router);
     const configDepth = $page.value.frontmatter?.sidebarDepth != null
         ? $page.value.frontmatter?.sidebarDepth
-        : 2;
+        : 5;
     const maxDepth = configDepth == null ? 1 : configDepth;
     if (item?.type === 'auto') {
-      return [link, renderChildren(h, item.children, item.basePath, $route, maxDepth)]
+      return [link, renderChildren(h, item.children, item.basePath, $route, maxDepth,1,closeSidebarDrawer)]
     } else {
       if (item.headers && item.headers.length) {
         const children = groupHeaders(item.headers);
-        return [link, renderChildren(h, children, item?.path, $route, maxDepth)];
+        return [link, renderChildren(h, children, item?.path, $route, maxDepth, 1,closeSidebarDrawer)];
       }
-      return renderLink(h, item?.path, item.title || item?.path, active, item.children);
+      return renderLink(h, item?.path, item.title || item?.path, active, item.children,0,closeSidebarDrawer);
     }
   }
 }
 
-function renderLink(h, to, text, active, children, depth = 0) {
+function renderLink(h, to, text, active, children, depth = 0,closeSidebarDrawer) {
   const link = h(RouterLink, {
     'data-anchor': to,
     to,
@@ -47,17 +48,19 @@ function renderLink(h, to, text, active, children, depth = 0) {
   return h('div', {
     class: {
       active,
+      'collapsed': true,
       'sidebar-link-container': !!children?.length
     },
     onClick: (e) => {
       const classes = e.target.classList;
       classes.toggle('collapsed')
+      e.target.tagName !== 'DIV' && closeSidebarDrawer()
     },
   }, [link]);
 }
 
-function renderHeader(h, to, text, active, childHeaders) {
-  const hasDirectChildren = !!childHeaders && childHeaders.some(child => child.level === 2);
+function renderHeader(h, to, text, active, childHeaders,closeSidebarDrawer,$router) {
+  const hasDirectChildren = !!childHeaders && childHeaders.some(child => child.level !== 1);
   return h('div', {
     class: {
       active,
@@ -68,24 +71,26 @@ function renderHeader(h, to, text, active, childHeaders) {
     },
     onClick: (e) => {
       const classes = e.target.classList;
+      const link = e.target.querySelector('a');
       classes.toggle('collapsed')
-    },
-  }, [renderLink(h, to, text, active, null)])
+      link && $router.push(link.getAttribute('href'))
+    }
+  }, [renderLink(h, to, text, active, null,0,closeSidebarDrawer)])
 }
 
-function renderChildren(h, children, path, route, maxDepth, depth = 1) {
+function renderChildren(h, children, path, route, maxDepth, depth = 1,closeSidebarDrawer) {
   if (!children || depth > maxDepth) return null;
 
   return h('ul', {class: 'sidebar-sub-headers'}, children.map(c => {
     const active = isActive(route, path + '#' + c.slug);
     return h('li', {
       class: {
-        'collapsible': depth < 2,
+        'collapsible': depth < 3,
         'sidebar-sub-header': true
       }
     }, [
-      renderLink(h, path + '#' + c.slug, c.title, active, c.children, depth),
-      renderChildren(h, c.children, path, route, maxDepth, depth + 1)
+      renderLink(h, path + '#' + c.slug, c.title, active, c.children, depth,closeSidebarDrawer),
+      renderChildren(h, c.children, path, route, maxDepth, depth + 1,closeSidebarDrawer)
     ])
   }))
 }
@@ -104,8 +109,8 @@ function renderChildren(h, children, path, route, maxDepth, depth = 1) {
     & > .sidebar-link-container
       background-image url("../../public/expand-more-down.svg")
       background-repeat no-repeat
-      background-position: left 17px top 16px
-      background-size 16px 9px
+      background-position: left 1.0625rem top 1rem
+      background-size 1rem 0.5625rem
       padding-left 2rem
       cursor pointer
       margin-left 0
@@ -115,8 +120,8 @@ function renderChildren(h, children, path, route, maxDepth, depth = 1) {
 
       &.collapsed
         background-image url("../../public/expand-more.svg")
-        background-size 16px 9px
-        background-position: left 17px top 14.5px
+        background-size 1rem 0.5625rem
+        background-position: left 1.0625rem top 0.90625rem
 
         & + .sidebar-sub-headers
           display none
@@ -144,7 +149,7 @@ function renderChildren(h, children, path, route, maxDepth, depth = 1) {
     background-image url("../../public/expand-more.svg")
     background-repeat no-repeat
     background-position left 5px center
-    background-size 16px 9px
+    background-size 1rem 0.5625rem
     position relative
     &:not(.sidebar-header--empty)::before
       content: ''
@@ -158,7 +163,7 @@ function renderChildren(h, children, path, route, maxDepth, depth = 1) {
     &.collapsed
       border-left-color $accentColor
       background-image url("../../public/expand-more-down.svg")
-      background-size 16px 9px
+      background-size 1rem 0.5625rem
       background-position left 5px center
 
 
@@ -186,9 +191,45 @@ function renderChildren(h, children, path, route, maxDepth, depth = 1) {
     &.active
       font-weight 500
       border-right 3px solid $accentColor
-      background-color $sidebarActiveColor
 
 .sidebar-header--empty
   background-image none !important
 
+@media (max-width: $mobileBreakpoint)
+
+  .sidebar-sub-headers:has(.sidebar-sub-header > div.active)
+    margin-left 0
+
+  .sidebar .sidebar-sub-header .sidebar-sub-headers > .sidebar-sub-header > div:not(.active)
+    margin-left 3.2rem
+
+  .sidebar .sidebar-sub-header .sidebar-sub-headers
+    margin-left 0
+
+  .sidebar-sub-headers > div:is(.active)
+    margin 0 !important;
+
+  .sidebar-link.sidebar-header, .sidebar-link.sidebar-header.collapsed
+    background-position left 2px center
+
+  .sidebar .sidebar-sub-header.collapsible > div:is(.active)
+    margin 0 !important
+
+  .sidebar-sub-headers .sidebar-link.active
+    border-right none !important
+    border-radius 7px
+    padding-left 3.5rem
+
+  .sidebar .sidebar-sub-header.collapsible > .sidebar-link-container.active
+    background-color: $sidebarActiveColor !important
+    border-radius 7px
+
+  .active:is(.active > .link-depth-level-1)
+    background $sidebarActiveColor
+    border-right none !important
+    border-radius 7px
+    padding-left 2.65rem
+
+  .active:is(.active > .link-depth-level-3)
+    padding-left 7rem !important
 </style>

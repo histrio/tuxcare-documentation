@@ -55,12 +55,16 @@ onUnmounted(() => {
     left 8px
     font-weight 400
     bottom 0
-    font-size 12px
+    font-size 0.75rem
     line-height $text-default
     color black
 
   &.active
     visibility visible
     opacity 1
+
+@media (max-width: $mobileBreakpoint)
+  .back-to-top__link
+    right 1rem;
 
 </style>

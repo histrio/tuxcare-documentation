@@ -2,7 +2,7 @@
   <VueSelect
       ref="dropdown"
       @update:model-value="changeSidebarItems"
-      :model-value="selectedValue"
+      :model-value="modelValue"
       label="title"
       value="link"
       :clearable="false"
@@ -29,7 +29,7 @@ defineProps({
     type: Boolean,
     default: true
   },
-  selectedValue: {
+  modelValue: {
     type: Object,
     default: () => ({
       label: '',
@@ -63,17 +63,17 @@ onUnmounted(() => window.removeEventListener('click', closeDropdown))
 @import '../../styles/config.styl'
 .v-select
   .vs__selected-options
-    padding 5px 0 5px 11px
+    padding 0.3125rem 0 0.3125rem 0.6875rem
 
   .vs__dropdown-option
-    padding-left 18px !important
+    padding-left 1.125rem !important
 
   .vs__selected
     display block;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 200px
+    max-width: 12.5rem
 
   .vs__search
     display none
@@ -81,19 +81,28 @@ onUnmounted(() => window.removeEventListener('click', closeDropdown))
   .vs__dropdown
     &-toggle
       width 100%
-      height 43px
+      height 2.6875rem
       border 1px solid $selectBorderColor
       outline none
       border-radius $selectBorderRadius
       background white
 
     &-menu
-      margin-top 5px
-      border-radius 4px
+      margin-top 0.3125rem
+      border-radius 0.25rem
 
     &-option
-      padding 8px
+      padding 0.5rem
 
   .select-icon
     margin-right 1rem
+
+@media (max-width: $mobileBreakpoint)
+  .v-select
+    .vs__selected
+      margin 0
+      border 0
+
+      &-options
+        padding 0.625rem 0 0.3125rem 1rem
 </style>
