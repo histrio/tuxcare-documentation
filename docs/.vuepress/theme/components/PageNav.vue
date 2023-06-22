@@ -80,5 +80,9 @@ const find = (page, items, offset) => {
   display flex
   position absolute
   right 0
-  top 30px
+  top 1.875rem
+
+@media (max-width: $mobileBreakpoint)
+  .page-nav
+    top 0
 </style>

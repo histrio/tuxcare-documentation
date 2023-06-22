@@ -40,7 +40,7 @@ export default [
         link: "/extended-lifecycle-support-for-languages/",
     },
     {
-        title: "Subscription management portal",
+        title: "Subscription Management Portal",
         description: "The TuxCare subscription management portal is designed to easily manage your licenses of TuxCare products and services by means of a user-friendly interface.",
         link: "/tuxcare-cln/",
     },

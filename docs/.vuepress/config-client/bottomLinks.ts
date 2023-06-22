@@ -9,6 +9,10 @@ export default [
     },
     {
         text: "Blog",
-        url: "https://tuxcare.com/blogs/"
+        url: "https://blog.tuxcare.com/"
+    },
+        {
+        text: "Privacy Policy",
+        url: "https://www.cloudlinux.com/privacy-policy/"
     }
 ]

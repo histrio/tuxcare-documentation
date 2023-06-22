@@ -4,6 +4,12 @@
 
     <Breadcrumb class="page-breadcrumb"/>
 
+    <img @click="openMobileSidebarMenu"
+         class="page-mobile__sidebar-menu"
+         :src="withBase('/global/sidebar-menu.svg')"
+         alt="sidebar hamburger menu"
+    />
+
     <div class="page-nav-wrapper">
       <PageNav :sidebar-items="sidebarItems" :allPages="allPages"/>
     </div>
@@ -31,7 +37,7 @@
 import {endingSlashRE, normalize, outboundRE} from '../util'
 import BackToTop from './BackToTop.vue';
 import {usePageData, usePageFrontmatter, usePageLang, withBase} from "@vuepress/client";
-import {computed, inject} from "vue";
+import {computed, inject, ref} from "vue";
 import Breadcrumb from "./Breadcrumb.vue";
 import PageNav from "./PageNav.vue";
 
@@ -43,13 +49,17 @@ const {
   editLinkText
 } = inject('themeConfig')
 
-defineProps({
+const props = defineProps({
   sidebarItems: {
     type: Array,
     default: () => []
   },
   allPages: {
-    type: Array
+    type: Array,
+    default: () => []
+  },
+  isMobileWidth: {
+    type: Boolean,
   }
 })
 
@@ -57,6 +67,10 @@ const page = usePageData()
 const lang = usePageLang()
 const frontmatter = usePageFrontmatter()
 
+const isOpenMobileSidebarMenu = ref(props.isMobileWidth)
+
+const openMobileSidebarMenu = () => isOpenMobileSidebarMenu.value = true
+const closeSidebarDrawer = () => isOpenMobileSidebarMenu.value = false
 
 const editLink = computed(() => {
   if (frontmatter.value.editLink === false) return
@@ -99,6 +113,12 @@ const createEditLink = (githubRepository, docsRepo, githubMainDir, githubBranch,
       path
   )
 }
+
+
+defineExpose({
+  isOpenMobileSidebarMenu,
+  closeSidebarDrawer
+})
 </script>
 
 <style lang="stylus">
@@ -108,6 +128,9 @@ const createEditLink = (githubRepository, docsRepo, githubMainDir, githubBranch,
 .page
   padding-bottom 2rem
   padding-top 6rem
+
+  &-mobile__sidebar-menu
+    display none
 
   &-breadcrumb
     margin-left 3rem
@@ -129,10 +152,10 @@ const createEditLink = (githubRepository, docsRepo, githubMainDir, githubBranch,
       gap 5px
 
       a
-        color #314659
+        color $mainColor
         font-weight 600
         font-size $text-default
-        line-height 16px
+        line-height 1rem
         margin-right 0.25rem
 
     .last-updated
@@ -150,4 +173,27 @@ const createEditLink = (githubRepository, docsRepo, githubMainDir, githubBranch,
 .content
   h1
     max-width 80%
+
+@media (max-width: $mobileBreakpoint)
+  .page
+    padding 1.5rem 1.25rem 2.28125rem 1.25rem !important
+    margin-top 4.375rem
+    margin-bottom 18.5rem
+
+    &-edit
+      margin 0 !important
+      padding 0 !important
+
+    &-mobile__sidebar-menu
+      display block
+      margin-top 0.8125rem
+      margin-bottom 1.4375rem
+      cursor pointer
+
+    &-breadcrumb
+     margin-left 0
+
+    &-nav-wrapper
+      margin 0
+      width 100%
 </style>

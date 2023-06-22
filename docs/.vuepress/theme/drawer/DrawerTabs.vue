@@ -61,12 +61,35 @@ const selectTab = (index) => {
 
   &__text
     font-size $drawerTabTextSize
-    line-height 16.18px
+    line-height 1.01125rem
     color $drawerTabTextColor
     margin 0
 
   &__text__active
     color $drawerTabActiveTextColor !important
     font-size $drawerTabTextSize
-    line-height 15.03px
+    line-height 0.939375rem
+
+@media (max-width: $mobileBreakpoint)
+  .drawer-tab
+    text-align center
+    padding $drawerTabPaddingVerticallyMobile $drawerTabPaddingHorizontallyMobile
+    box-sizing border-box
+    height $drawerTabsMaxHeight
+
+
+    &__active
+      padding $drawerTabActivePaddingVerticallyMobile $drawerTabActivePaddingHorizontallyMobile
+      text-align center
+      box-sizing border-box
+      height $drawerTabsMaxHeight
+
+  .drawer-tabs__wrapper
+    padding 0 1.25rem 1.25rem 1.25rem
+    flex-wrap wrap
+    align-items: center
+    justify-content: flex-start
+    margin 0
+    display: grid !important
+    grid-template-columns: 1fr 1fr;
 </style>

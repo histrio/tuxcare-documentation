@@ -9,8 +9,8 @@
           class="sidebar-group-items"
           v-if="open || !collapsable"
       >
-        <li v-for="child in item.children">
-          <SidebarLink :item="child"/>
+        <li v-for="child in item?.children">
+          <SidebarLink :closeSidebarDrawer="closeSidebarDrawer" :item="child"/>
         </li>
       </ul>
     </DropdownTransition>
@@ -20,7 +20,6 @@
 <script setup>
 import SidebarLink from './SidebarLink.vue'
 import DropdownTransition from "../components/DropdownTransition.vue";
-import {inject} from "vue";
 
 const props = defineProps({
   item: {
@@ -39,6 +38,10 @@ const props = defineProps({
     type: Boolean,
     required: true
   },
+  closeSidebarDrawer:{
+    type: Function,
+    default: () => {}
+  }
 })
 </script>
 
@@ -63,8 +66,8 @@ const props = defineProps({
   font-size 0.95em
   padding 0 1.5rem
   margin 0 1.2rem 1.5rem 1.6rem
-  height 41px
-  line-height 41px
+  height 2.5625rem
+  line-height 2.5625rem
   background-color #f2f4f5
   border-radius 4px
   font-weight 600

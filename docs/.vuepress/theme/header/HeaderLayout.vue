@@ -13,25 +13,36 @@
               alt="logo header"
           >
         </router-link>
-        <HeaderLayoutSearch v-if="!isGlobalLayout"/>
+        <HeaderLayoutSearch
+            v-if="!isGlobalLayout"
+            :closeSidebarDrawer="closeSidebarDrawer"
+            ref="headerLayoutSearch"
+            :class="{'header-mobile__hidden': !headerLayoutSearch?.mobileDrawerVisible}"
+            :isMobileWidth="isMobileWidth"
+        />
       </div>
       <div
           class="links"
           :style="{ 'max-width': linksWrapMaxWidth + 'px'}"
       >
-        <HeaderProducts/>
-        <a :href="submitRequestUrl" target="_blank" class="btn">
-          {{ submitRequestTitle }}
-        </a>
+        <img @click="openMobileAlgoliaDrawer" class="navbar-header__mobile-search" :src="withBase(headerDefaultSearchIcon)" alt="icon image"/>
+        <HeaderProducts :isMobileWidth="isMobileWidth"/>
 
-        <a :href="tryFreeLink" target="_blank" class="btn btn-free">
-          {{ tryFreeTitle }}
-        </a>
+        <a v-for="item in locales.navbarLinks" 
+        :href="item.url"
+        target="_blank" 
+        :class="item.class" 
+        @click="onClick(item.event)">{{ item.text }}</a>
+
       </div>
     </div>
-    <HeaderLayoutSearch v-if="isGlobalLayout"/>
+    <HeaderLayoutSearch
+        v-if="isGlobalLayout"
+        :closeSidebarDrawer="closeSidebarDrawer"
+        ref="headerLayoutSearch"
+        :isMobileWidth="isMobileWidth"
+        />
   </header>
-
 </template>
 
 <script setup>
@@ -40,14 +51,22 @@ import HeaderProducts from "./HeaderProducts.vue";
 import {computed, inject, ref} from "vue";
 import {usePageFrontmatter, useRouteLocale,withBase} from "@vuepress/client";
 
-const {siteLogo, locales, defaultURL, tryFreeLink, submitRequestURL} = inject('themeConfig');
+const props = defineProps({
+  isMobileWidth: {
+    type: Boolean,
+  },
+  closeSidebarDrawer: {
+    type: Function,
+  }
+})
+
+const {siteLogo,  defaultURL, locales, headerDefaultSearchIcon} = inject('themeConfig');
 const linksWrapMaxWidth = ref(null)
 const frontmatter = usePageFrontmatter()
 const localePath = useRouteLocale()
+const headerLayoutSearch = ref(null)
 
-const tryFreeTitle = computed(() => locales.tryFreeLink || 'Try Free')
-
-const submitRequestTitle = computed(() => locales.submitRequest || 'Submit support request')
+const openMobileAlgoliaDrawer = () => headerLayoutSearch?.value?.openDrawer()
 
 const isGlobalLayout = computed(() => frontmatter.value.layout === 'HomeLayout')
 
@@ -57,7 +76,16 @@ const homeUrl = computed(() => {
   return defaultUrl.replace(/\/+/g, '/');
 })
 
-const submitRequestUrl = computed(() => submitRequestURL || "https://cloudlinux.zendesk.com/hc/en-us/requests/new")
+const onClick = (event) => {
+  if (event.type) {
+    switch (event.type) {
+        case 'event':
+          var event = new CustomEvent(event.name);
+          document.dispatchEvent(event);
+      }
+  }
+}
+
 </script>
 
 <style src="../../styles/theme.styl" lang="stylus"></style>
@@ -71,6 +99,9 @@ const submitRequestUrl = computed(() => submitRequestURL || "https://cloudlinux.
   flex-direction column
   margin-bottom 3.125rem
   z-index 99
+
+  &-header__mobile-search
+    display none
 
   &-header__logo-wrapper
     display flex
@@ -87,7 +118,7 @@ const submitRequestUrl = computed(() => submitRequestURL || "https://cloudlinux.
 
   .links
     box-sizing border-box
-    background-color #fff
+    background-color $mainColor
     white-space nowrap
     font-size 0.9rem
     display flex
@@ -111,7 +142,7 @@ const submitRequestUrl = computed(() => submitRequestURL || "https://cloudlinux.
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
+  background-color: $mainColor;
   border: 2px solid $buttonBorderColor;
   border-radius: 4px;
   font-size: 0.88rem;
@@ -125,11 +156,26 @@ const submitRequestUrl = computed(() => submitRequestURL || "https://cloudlinux.
   cursor: pointer;
   font-weight 600
 
-.btn-free
+.btn-white
   background-color: white;
   color black
-  font-size 15px
+  font-size 0.9375rem
   font-weight 500
-  line-height 16px
+  line-height 1rem
 
+
+@media (max-width: $mobileBreakpoint)
+  .navbar
+    padding  $layout-vertical-padding 1.25rem
+    margin-bottom 0
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.22);
+    z-index 9999
+
+    &-header__mobile-search
+      display block
+      margin-right 1.25rem
+  .links > a
+    display none !important
+  .header-mobile__hidden
+    display none !important
 </style>

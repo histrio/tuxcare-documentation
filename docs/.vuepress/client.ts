@@ -1,38 +1,32 @@
 import {provide} from "vue";
 import {defineClientConfig} from "@vuepress/client";
-import InstantSearch from 'vue-instantsearch/vue3/es/index.js';
+import mitt from 'mitt';
 
 import Layout from "./theme/layouts/Layout.vue";
 import HomeLayout from "./theme/layouts/HomeLayout.vue";
+import NotFound from "./theme/layouts/NotFound.vue";
 
 import bottomLinks from "./config-client/bottomLinks";
+import navbarLinks from "./config-client/navbarLinks";
 import documents from "./config-client/documents";
 import sidebar from "./config-client/sidebar";
 import social from "./config-client/social";
-import {onBeforeMount} from "vue";
+
+import Chat from "./components/Chat.vue";
 
 export default defineClientConfig({
+    rootComponents: [
+        Chat,
+    ],
+    async enhance({ app }) {
+        app.config.globalProperties.$eventBus = mitt();
+    },
     layouts: {
         Layout,
-        HomeLayout
-    },
-    enhance({app}) {
-        app.component('InstantSearch', InstantSearch)
+        HomeLayout,
+        NotFound
     },
     setup() {
-        onBeforeMount(()=>{
-            const script = document.createElement('script');
-            script.type = 'text/javascript';
-            script.src = 'https://cdn.weglot.com/weglot.min.js';
-            script.async = true;
-            script.onload = () => {
-                Weglot.initialize({
-                    // change to key provided by DeShea
-                    api_key: "wg_81b8e0e5154d36a6f5c48e5bc7db13c14"
-                });
-            };
-            document.head.appendChild(script);
-        })
         provide('themeConfig', {
             //general
             cloudlinuxSite: "https://tuxcare.com",
@@ -40,10 +34,8 @@ export default defineClientConfig({
             githubBranch: "master",
             allowGithubEdit: true,
             githubMainDir: "docs",
-            sidebarDepth: 2,
             githubRepository: "cloudlinux/tuxcare-documentation",
-            submitRequestURL: "https://www.tuxcare.com/support-portal/",
-            tryFreeLink: "https://portal.tuxcare.com/",
+            MOBILE_BREAKPOINT: 767,
 
             //docs cards
             documents,
@@ -59,7 +51,7 @@ export default defineClientConfig({
 
             // Header
             headerSearch: "TuxCare Product Documentation",
-            headerSearchPlaceholder: "Search across all TuxCare product documentation",
+            headerSearchPlaceholder: "Search across the TuxCare product documentation",
 
             //locales
             locales: {
@@ -68,8 +60,7 @@ export default defineClientConfig({
                 sidebar,
                 siteTitle: "Documentation",
                 stayInTouch: "Stay in touch",
-                submitRequest: "Submit support request",
-                tryFree: "TuxCare Portal Login",
+                navbarLinks: navbarLinks,
             },
 
             // Products
@@ -86,8 +77,9 @@ export default defineClientConfig({
                 appId: "R7FCMJM4P7"
             },
 
-            MAX_ALGOLIA_VISIBLE_RESULT: 10,
-            MAX_ALGOLIA_VISIBLE_ROWS: 5,
+            MAX_ALGOLIA_VISIBLE_RESULT: 20,
+            MAX_ALGOLIA_VISIBLE_ROWS: 15,
+            MAX_ALGOLIA_HITS_PER_PAGE: 20,
         })
     }
 })

@@ -12,33 +12,39 @@
         </div>
       </div>
       <DrawerTabs v-model="selectedTabIndex" :data="tabs"/>
-      <main class="drawer-main">
-        <div class="drawer-main__wrapper">
-          <div class="drawer-main__breadcrumb">
-            <p v-if="drawerArticleResult.length" class="drawer-main__breadcrumb__text">Home
-              <img :src="withBase('/arrows/arrow-right-breadcrumb.svg')" alt="breadcrumb icon"/>
-              Documentation
-            </p>
-          </div>
-          <DrawerSearchResult :modelValue="modelValue" :data="drawerArticleResult"/>
-          <BackToTop/>
-        </div>
+      <main>
+       <div class="drawer-main">
+         <div class="drawer-main__wrapper">
+           <div class="drawer-main__breadcrumb">
+             <p v-if="drawerArticleResult.length" class="drawer-main__breadcrumb__text">Home
+               <img :src="withBase('/arrows/arrow-right-breadcrumb.svg')" alt="breadcrumb icon"/>
+               Documentation
+             </p>
+           </div>
+           <DrawerSearchResult :modelValue="modelValue" :data="drawerArticleResult"/>
+         </div>
+       </div>
+        <Footer v-if="isOpenDrawer && isMobileWidth" class="drawer-footer__mobile"/>
       </main>
     </div>
-    <Footer v-if="isOpenDrawer" class="drawer-footer"/>
+    <Footer v-if="isOpenDrawer && !isMobileWidth" class="drawer-footer"/>
   </div>
 </template>
 
 <script setup>
 import {withBase} from "@vuepress/client";
 import Footer from "../footer/Footer.vue";
-import {computed, inject, ref, watch} from "vue";
+import {computed, ref, watch} from "vue";
 import DrawerTabs from "./DrawerTabs.vue";
 import DrawerSearchResult from "./DrawerSearchResult.vue";
-import BackToTop from "../components/BackToTop.vue";
 
 const props = defineProps({
   isOpenDrawer: {
+    type: Boolean,
+    required: true,
+    default: false
+  },
+  isMobileWidth:{
     type: Boolean,
     required: true,
     default: false
@@ -103,13 +109,13 @@ watch(() => props.isOpenDrawer, () => {
   overflow-y auto
   z-index 1000
   box-sizing border-box
-  background: #EEF9FF
+  background: $drawerHeaderBgColor
   opacity: 0;
   transform: translateY(-100%);
   transition: 0.4s ease;
 
   &-header
-    padding $layout-vertical-padding  $layout-horizontal-padding
+    padding 1.25rem $layout-horizontal-padding
     display flex
     justify-content space-between
     align-items center
@@ -122,20 +128,20 @@ watch(() => props.isOpenDrawer, () => {
       padding $searchVerticallyPadding $searchHorizontallyPadding
       color: $searchColorText;
       font-size: $searchColorFontSize
-      line-height: 16px
+      line-height: 1rem
       outline: none
 
     &__wrapper
       display: flex;
       align-items center
-      gap 40px
+      gap 2.5rem
 
     &__paragraph
       margin 0
       color $headerSearchTitleColor
       font-weight $headerSearchFontWeight
       font-size $headerSearchFontSize
-      line-height 35.8px
+      line-height 2.2375rem
 
     &__input
       position relative
@@ -144,12 +150,12 @@ watch(() => props.isOpenDrawer, () => {
       align-content center
 
 .drawer-cross
-  margin-top 12px
+  margin-top 0.75rem
   display flex
   flex-direction column
   justify-content flex-end
   align-items center
-  gap 11px
+  gap 0.6875rem
 
   &__img
     cursor pointer
@@ -165,7 +171,7 @@ watch(() => props.isOpenDrawer, () => {
   background $drawerMainBackgroundColor
   padding $layout-vertical-padding  $layout-horizontal-padding
   margin-top $drawerMainMarginTop
-  min-height 80%
+  min-height 100vh
 
   &__breadcrumb__text
     font-size $drawerBreadcrumbFontSize
@@ -183,10 +189,77 @@ watch(() => props.isOpenDrawer, () => {
   left 0
   width 100vw
 
+.drawer-footer__mobile
+  position static
+  width 100vw
+
 
 .is-open {
   opacity: 1;
   transform: translateY(0);
 }
+@media (max-width: $mobileBreakpoint)
+  #drawerSearch
+    width 100%
 
+  .drawer
+    height 100%
+    &-footer
+      position static
+      width 100vw
+
+    &-header
+      align-items normal
+      padding 1.875rem 1.25rem 0 1.25rem
+
+
+      &__search-icon
+        top 9% !important
+        right 8% !important
+
+        & > img
+          width 1.563rem
+          height 1.563rem
+
+      &__wrapper
+        width 100%
+        flex-direction column
+        gap 1.875rem
+
+      &__paragraph
+        width 100%
+
+    &-cross
+      position absolute
+      right 0.625rem
+      top 0.75rem
+      margin-top 0
+      gap 0.375rem
+      justify-content flex-start
+      &__text
+        font-size 0.625rem
+      &__img
+        width 0.9375rem
+        height 0.9375rem
+
+    &-main
+      margin-top 0
+      padding 2.625rem 1.25rem 0 1.25rem
+      min-height 100vh
+
+      &__wrapper
+        margin-bottom 0 !important
+        padding-bottom 2.6875rem
+
+      &__breadcrumb__text
+         margin-top 0
+         margin-bottom 2.625rem !important
+      &__search-results
+        display flex
+        flex-direction column
+        gap 2.8125rem
+
+    .no_results
+      margin 0
+      font-size 1.25rem
 </style>

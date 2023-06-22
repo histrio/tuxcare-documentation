@@ -1,17 +1,22 @@
 <template>
   <div class="sidebar">
     <slot name="top"/>
-    <ul class="sidebar-links" v-if="sidebarItemsTest.length">
-      <li v-for="(item, i) in sidebarItemsTest" :key="i">
+    <ul class="sidebar-links" v-if="sidebarItems.length">
+      <li v-for="(item, i) in sidebarItems" :key="i">
         <SidebarGroup
             v-if="item.type === 'group'"
             :item="item"
             :first="i === 0"
             :open="i === openGroupIndex"
+            :closeSidebarDrawer="closeSidebarDrawer"
             :collapsable="!!(item.collapsable || item.collapsible)"
             @toggle="toggleGroup(i)"
         />
-        <SidebarLink v-else :item="item" :closeFirstSidebarItem="item.closeFirstSidebarItem"/>
+        <SidebarLink
+            v-else
+            :closeSidebarDrawer="closeSidebarDrawer"
+            :item="item"
+        />
       </li>
     </ul>
     <slot name="bottom"/>
@@ -31,18 +36,24 @@ const props = defineProps({
   items: {
     type: Array,
     required: true
+  },
+  closeSidebarDrawer: {
+    type: Function,
+    default: () => {}
+  },
+  isMobileWidth: {
+    type: Boolean,
   }
 })
-const propsItems = computed(() => {
-  return props.items
-})
+const propsItems = computed(() => props.items)
 
 const route = useRoute()
 const page = usePageData()
 
-const sidebarItemsTest = computed(() => resolveSidebarItems(page.value, route, propsItems.value))
+const sidebarItems = computed(() => resolveSidebarItems(page.value, route, propsItems.value))
 
-const openGroupIndex = ref(0)
+
+ const openGroupIndex = ref(0)
 
 const refreshIndex = () => {
   const index = resolveOpenGroupIndex(
@@ -62,10 +73,11 @@ const isInViewport = (element) => {
   const rect = element.getBoundingClientRect();
   return (
       rect.top >= 0 &&
-      rect.bottom <= window.innerHeight - 350
+      rect.bottom <= window.innerHeight - 650
   );
 }
 watch(() => route, refreshIndex)
+
 const checkIfScroll = () => {
   const pageAnchors = document.querySelectorAll('.header-anchor')
   const sidebar = document.querySelector('.sidebar')
@@ -108,10 +120,11 @@ const resolveOpenGroupIndex = (route, items) => {
 
 onMounted(() => {
   refreshIndex()
-  window.addEventListener("scroll", checkIfScroll)
+  !props.isMobileWidth ? window.addEventListener("scroll", checkIfScroll) : null
 })
 
 onUnmounted(() => window.removeEventListener("scroll", checkIfScroll))
+
 </script>
 
 <style lang="stylus">
@@ -127,7 +140,17 @@ onUnmounted(() => window.removeEventListener("scroll", checkIfScroll))
     display block
 
   .sidebar-group-items
-    margin-left 32px
-    margin-right 10px
+    margin-left 2rem
+    margin-right 0.625rem
 
+@media (max-width: $mobileBreakpoint)
+  .page
+    padding 1.5rem 1.25rem 2.28125rem 1.25rem
+  .sidebar
+    width 100% !important
+    padding 0 0 7.5rem 0 !important
+    margin 0 !important
+    top 3.875rem !important
+    background #FFFFFF !important
+    z-index 999
 </style>
