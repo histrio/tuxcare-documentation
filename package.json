@@ -17,6 +17,8 @@
     "@vuepress/plugin-prismjs": "^2.0.0-beta.4",
     "@vuepress/theme-default": "^1.9.9",
     "@vuepress/utils": "^2.0.0-alpha.1",
+    "cl-doc-vue-bot-ui": "0.1.2",
+    "mitt": "^3.0.0",
     "algoliasearch": "4.14.3",
     "instantsearch.js": "4.55.0",
     "stylus": "^0.59.0",
