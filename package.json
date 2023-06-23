@@ -16,7 +16,7 @@
     "@vuepress/plugin-container": "^2.0.0-beta.8",
     "@vuepress/plugin-prismjs": "^2.0.0-beta.4",
     "@vuepress/theme-default": "^1.9.9",
-    "@vuepress/utils": "^2.0.0-alpha.1"
+    "@vuepress/utils": "^2.0.0-alpha.1",
     "algoliasearch": "4.14.3",
     "instantsearch.js": "4.55.0",
     "stylus": "^0.59.0",
