@@ -3871,10 +3871,10 @@ cipher-base@^1.0.0, cipher-base@^1.0.1, cipher-base@^1.0.3:
     inherits "^2.0.1"
     safe-buffer "^5.0.1"
 
-cl-doc-vue-bot-ui@0.1.2:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/cl-doc-vue-bot-ui/-/cl-doc-vue-bot-ui-0.1.2.tgz#b40267155a01256e7c9f96d3aa1cd95f6825f7a9"
-  integrity sha512-keoMvNYe2D7vPImphf8W4uPhKLI96A77z3Whn50wXbDPrBMu1kbkwNco2OwViTdM1hpaMaK3NhtN4jEBMTlDFw==
+cl-doc-vue-bot-ui@0.1.4:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/cl-doc-vue-bot-ui/-/cl-doc-vue-bot-ui-0.1.4.tgz#1a04eb82a49f0df6eaebc42e33c6a56bfa778eef"
+  integrity sha512-SJhiJhldI8PNoMbyyOOtrzYbefYpJYXU5dURlcEjVLDALkiIKScpiKpyvMXch1XCUNM8f9rasOC+AQ2PHfv7OA==
   dependencies:
     vue-star-rating "^2.1.0"
 
