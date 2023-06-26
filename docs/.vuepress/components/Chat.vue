@@ -50,10 +50,10 @@ export default {
             botOptions: {
                 botAvatarImg: BotIcon,
                 botTitle: 'AI Bot',
-                colorScheme: '#1994F9',
+                colorScheme: '#314659',
                 boardContentBg: '#f4f4f4',
                 msgBubbleBgBot: '#fff',
-                msgBubbleBgUser: '#3f83f8',
+                msgBubbleBgUser: '#314659',
                 inputPlaceholder: 'Ask a new question'
             },
             docName: "tuxcare-documentation",
@@ -98,8 +98,8 @@ export default {
         })
 
         console.log('Starting connection...')
-        this.connection = new WebSocket('wss://doc-bot.cloudlinux.com:2096')
-        // dev -> this.connection = new WebSocket('ws://localhost:8765')
+        // this.connection = new WebSocket('wss://doc-bot.cloudlinux.com:2096')
+        this.connection = new WebSocket('ws://localhost:8765') // dev
 
         this.connection.onmessage = (response) => {
             const event = JSON.parse(response.data)
@@ -167,7 +167,7 @@ export default {
 .multiselect__option--highlight::after,
 .multiselect__option--highlight,
 .multiselect__tag {
-  background: #3f83f8;
+  background: #314659;
 }
 
 .qkb-board-header__select_field {
