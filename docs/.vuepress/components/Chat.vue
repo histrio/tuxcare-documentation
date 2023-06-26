@@ -98,8 +98,8 @@ export default {
         })
 
         console.log('Starting connection...')
-        // this.connection = new WebSocket('wss://doc-bot.cloudlinux.com:2096')
-        this.connection = new WebSocket('ws://localhost:8765') // dev
+        this.connection = new WebSocket('wss://doc-bot.cloudlinux.com:2096')
+        // this.connection = new WebSocket('ws://localhost:8765') // dev
 
         this.connection.onmessage = (response) => {
             const event = JSON.parse(response.data)
