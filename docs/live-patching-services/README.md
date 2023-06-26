@@ -326,7 +326,7 @@ Patches that can be disabled:
 |CVE-2015-5157 | kcare_modify_ldt|
 
 
-# Extra patchset
+## Extra patchset
 
 ::: tip Note
 KernelCare Enterprise 2.12-5 or higher
