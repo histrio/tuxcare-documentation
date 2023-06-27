@@ -26,5 +26,15 @@ export default defineUserConfig({
         src: "//cdn.cookie-script.com/s/c9f81de32507a4fec1eb03ee80d0f0ed.js",
       },
     ],
+    [
+      "script",
+      {
+        type: "text/javascript",
+        id: "hs-script-loader",
+        async: true,
+        defer: true,
+        src: "//js.hs-scripts.com/5408110.js",
+      },
+    ],
   ],
 });
