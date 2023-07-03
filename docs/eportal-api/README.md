@@ -133,7 +133,7 @@ curl -X POST https://eportal.corp.com/admin/api/register -F key=test
 
 **POST /admin/api/delete_server**
 
-Removes registered servers by IP or hostname
+Removes registered servers by IP, hostname or server_id
 
 Requires basic authorization with admin user permissions.
 
@@ -141,8 +141,9 @@ Requires basic authorization with admin user permissions.
 
 * `hostname`: String, optional. Server's hostname to delete.
 * `ip`: String, optional. Server's IP to delete.
+* `server_id`: String, optional. Server's id to delete.
 
-Endpoint requires at least one parameter `hostname` or `ip`.
+Endpoint requires at least one parameter `hostname`, `ip` or `server_id`.
 
 **Response:**
 
@@ -161,7 +162,7 @@ curl --user admin:admin-password -X POST https://eportal.corp.com/admin/api/dele
 ```
 
 Below are examples of using `/admin/api/delete_server` endpoint with various
-CM products. Take note, you need a host IP or a hostname to delete it via API.
+CM products. Take note, you need a host IP, a hostname or a server_id to delete it via API.
 It can be more convenient to use on of:
 
 * if you have an access to a host (it is alive) it's a way more simpler to call `kcarectl --unregister` to delete the host.
@@ -181,6 +182,10 @@ Requires write permissions and accepts basic authorization.
 * `name`: String, required. Name of created or modified feed.
 * `auto`: Boolean, optional. Sets auto-update property. Default is false.
 * `deploy_after`: Integer, optional. Sets delayed period in hours. Default is 0 (not delayed).
+* `channel`: String, optional. Sets patchset channel to use. Default is `default`.
+  Available channels:
+  - `default`: stable patches.
+  - `test`: testing patches.
 
 **Response:**
 
