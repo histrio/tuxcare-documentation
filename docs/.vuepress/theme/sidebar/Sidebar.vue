@@ -71,11 +71,14 @@ const toggleGroup = (index) => {
 
 const isInViewport = (element) => {
   const rect = element.getBoundingClientRect();
+
   return (
-      rect.top >= 0 &&
-      rect.bottom <= window.innerHeight - 650
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight / 2 || document.documentElement.clientHeight / 2) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
   );
-}
+};
 watch(() => route, refreshIndex)
 
 const checkIfScroll = () => {
