@@ -1,10 +1,10 @@
 # Enterprise Support for AlmaLinux
 
-This guide guide describes [Enterprise Support for AlmaLinux](https://tuxcare.com/almalinux-enterprise-support/) and how to set it up on your AlmaLinux system.
+This guide describes [Enterprise Support for AlmaLinux](https://tuxcare.com/almalinux-enterprise-support/) and how to set it up on your AlmaLinux system.
 
 ## What is Enterprise Support for AlmaLinux?
 
-Enterprise Support for AlmaLinux services provide a TuxCare-vetted repository of AlmaLinux updates with 16 years of support coverage, minimize vulnerability windows with rebootless security patches and help to avoid costly upfront support package fees with pay-as-you-go hourly support bundles. 
+Enterprise Support for AlmaLinux services provides a TuxCare-vetted repository of AlmaLinux updates with 16 years of support coverage, minimizes vulnerability windows with rebootless security patches and helps to avoid costly upfront support package fees with pay-as-you-go hourly support bundles. 
 
 Available services:
 * **Essential Support**: TuxCare-vetted repository of AlmaLinux updates with guaranteed uptime, expedited break-and-fix support and up to 16 years of support coverage 
@@ -53,7 +53,7 @@ This means your system is registered and ready to receive updates from TuxCare.
 :::warning
 If during installation something goes wrong then the `tuxctl` tool will show an error message and suggest how to handle it. For example, if your system is already registered you'll receive the following message:
 ```
-This server already has an TuxCare token installed
+This server already has a TuxCare token installed
 To force re-registration, please run the script with --force
 ```
 Then you will have to run `tuxctl` like this:
@@ -68,7 +68,7 @@ Live Patching brings rapid security patching for the kernel and critical userspa
 
 ### Installation
 
-To install the LivePatching product follow the instructions here or simply run the following as root to download the installer and configure the repo:
+To install the Live Patching product follow the instructions here or simply run the following as root to download the installer and configure the repo:
 ```
 curl -s -L https://kernelcare.com/installer | bash
 ```
@@ -88,7 +88,7 @@ To enable rapid security updates with live patching for critical userspace compo
 
 ### Using the Live Patching for AlmaLinux (KernelCare and LibCare)
 
-After installation you can verify that your system has access to KernelCare live patching by running:
+After installation, you can verify that your system has access to KernelCare live patching by running:
 ```
 # kcarectl -u
 ```
@@ -109,17 +109,17 @@ In April 2023, TuxCare, a division of CloudLinux Inc., launched Enterprise Suppo
 
 There are two levels of support services for AlmaLinux:
 
-**Essential Support** –  a limited technical support offering that covers AlmaLinux installation/update issues (packaging, dependencies, repositories), migration issues (from CentOS/OracleLinux/RHEL to AlmaLinux), operating systems bugs/kernel crashes, self-service portal, as well as an online knowledge base
+**Essential Support** –  a limited technical support offering that covers AlmaLinux installation/update issues (packaging, dependencies, repositories), migration issues (from CentOS/OracleLinux/RHEL to AlmaLinux), operating systems bugs/kernel crashes, a self-service portal, as well as an online knowledge base
 
-**Enhanced Support** – an enterprise technical support service covering a range of open-source software running on AlmaLinux, self-service portal, as well as an online knowledge base.
+**Enhanced Support** – an enterprise technical support service covering a range of open-source software running on AlmaLinux, a self-service portal, as well as an online knowledge base.
 
 ### 2. Definitions
 
 **“Customer,” “End User,” “User,” “You/Your”** shall mean an organization which has a valid license to the Product that is supported in accordance with this Program. 
 
-**“Customer Technical Lead”** shall mean an employee or authorized contractor of Customer who shall complete required AlmaLinux product training, in order to serve as Customer’s first line of internal support for the purpose of triaging AlmaLinux related product issues, and who shall have authority to submit Technical Support Incidents and Service Requests to TuxCare Technical Support 
+**“Customer Technical Lead”** shall mean an employee or authorized contractor of Customer who shall complete required AlmaLinux product training, in order to serve as Customer’s first line of internal support for the purpose of triaging AlmaLinux-related product issues, and who shall have authority to submit Technical Support Incidents and Service Requests to TuxCare Technical Support 
 
-**“Incident”** shall mean any event reported by the Customer, which is not part of the standard operation of a Product, and which causes, or may cause, an interruption to, or a reduction in, the quality of service provided by the Product. 
+**“Incident”** shall mean any event reported by the Customer, which is not part of the standard operation of a Product, and which causes, or may cause an interruption to, or a reduction in, the quality of service provided by the Product. 
 
 **“Incident Severity/Urgency”** shall mean a measure of the business criticality of an incident or problem based on the business needs of the Customer. See Appendix 1 for more details. 
 
@@ -129,9 +129,9 @@ There are two levels of support services for AlmaLinux:
 
 **“Product(s)”** shall mean software product(s) of TuxCare, which the Customer has purchased, deployed, and installed in accordance with the terms of a License Agreement between TuxCare and the Customer. 
 
-**“Product Error”** shall mean undeclared behavior of the Product. 
+**“Product Error”** shall mean undeclared behaviour of the Product. 
 
-**“Response time”** shall mean the elapsed time measured from the moment of any incident receipt until confirmation of receipt by TuxCare to the initiator (via support system). 
+**“Response time”** shall mean the elapsed time measured from the moment of any incident receipt until confirmation of receipt by TuxCare to the initiator (via the support system). 
 
 **“Service Request”** shall mean a request from a Customer for support, delivery, information, advice, or documentation, which is not related to an incorrect functioning or non-functioning of the Product(s). 
 
@@ -152,16 +152,16 @@ There are two levels of support services for AlmaLinux:
 
 #### Accessing Technical Support
 
-TuxCare Technical Support is designed for enterprise clients with trained IT staffs which provide initial ‘1st-line’ support to triage incidents. Customer and TuxCare will agree on Customer Technical Leads with the client, who will be entitled to access TuxCare Technical Support services; Customer Technical Leads must complete AlmaLinux training requirements. Customer Technical Leads may submit Technical Support Incidents and Service Requests to:
+TuxCare Technical Support is designed for enterprise clients with trained IT staff which provide initial ‘1st-line’ support to triage incidents. Customer and TuxCare will agree on Customer Technical Leads with the client, who will be entitled to access TuxCare Technical Support services; Customer Technical Leads must complete AlmaLinux training requirements. Customer Technical Leads may submit Technical Support Incidents and Service Requests to:
 
 1. Technical Support ticketing system:
   * Acceptance of requests 24 hours a day, 365 days a year 
   * Unlimited number of tickets may be submitted 
-  * Customers will be supplied with instructions describing use of the ticketing system during on-boarding 
+  * Customers will be supplied with instructions describing the use of the ticketing system during onboarding 
   * User accounts will be created for each nominated user within each client organization  
   * User accounts will have access to log, view and respond to tickets
 2. Email: acceptance of requests 24 hours a day, 365 days a year:
-  * New tickets may be created by simply emailing the support desk (email address to be provided during on-boarding) 
+  * New tickets may be created by simply emailing the support desk (email address to be provided during onboarding) 
 
 All customers are entitled to access the Support knowledgebase, FAQs, and other self-service tools as may be offered by Enterprise Support for AlmaLinux.
 
