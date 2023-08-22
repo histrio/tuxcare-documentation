@@ -1,3 +1,5 @@
+import routes from './routes.json';
+
 export default [
     [
       "script",
@@ -27,6 +29,21 @@ export default [
               'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
               })(window,document,'script','dataLayer','GTM-5BSW555');
               `,
+    ],
+    [
+      "script",
+      {},
+      `
+      (function() {
+        var routes = ${JSON.stringify(routes)};
+    
+        for (var route_url in routes) {
+          if (window.location.href.indexOf(route_url) !== -1) {
+            window.location.href = routes[route_url];
+          }
+        }
+      })();
+      `,
     ],
     [
       "script",
