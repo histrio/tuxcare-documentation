@@ -1325,9 +1325,9 @@ through ePortal.
 
 ## Deploying Essential Support/Live Patching for AlmaLinux
 
-You can find instructions how to se up [Enterprise Support for AlmaLinux](https://docs.tuxcare.com/enterprise-support-for-almalinux/) on **http://your-eportal-domain/admin/docs/**.
+You can find instructions on how to set up [Enterprise Support for AlmaLinux](https://docs.tuxcare.com/enterprise-support-for-almalinux/) on **http://your-eportal-domain/admin/docs/**.
 
-Tuxctl is a setup tool for TuxCare’s Enterprise Support for AlmaLinux, which provides access to Essential Support, Extended Security Updates, and Live Patching, depending on the purchased license. To set up `tuxctl` through ePortal you can use special endpoint **http://your-eportal-domain/install-almacare**:
+Tuxctl is a setup tool for TuxCare’s Enterprise Support for AlmaLinux, which provides access to Essential Support, Extended Security Updates, and Live Patching, depending on the purchased license. To set up `tuxctl` through ePortal you can use a special endpoint **http://your-eportal-domain/install-almacare**:
 
 ```
 $ curl -s http://eportal.mycompany.com/install-almacare | bash
