@@ -5,9 +5,9 @@ export default [
         link: "/tuxcare/",
     },
     {
-        title: "AlmaCare",
-        description: "brings essential support and a 16-year long lifecycle to your AlmaLinux systems. It comes with high value extensions that enable your cybersecurity compliance with rapid security updates and your compliance with the FIPS 140-3 standard.",
-        link: "/almacare/",
+        title: "Enterprise Support for AlmaLinux",
+        description: "provides a TuxCare-vetted repository of AlmaLinux updates with 16 years of support coverage, minimizes vulnerability windows with rebootless security patches and helps to avoid costly upfront support package fees with pay-as-you-go hourly support bundles.",
+        link: "/enterprise-support-for-almalinux/",
     },
     {
         title: "KernelCare Enterprise",
