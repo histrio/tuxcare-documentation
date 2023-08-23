@@ -1,9 +1,9 @@
 export default {
-    '/almacare/': [
+    '/enterprise-support-for-almalinux/': [
         {
             collapsable: false,
             children: [
-                "/almacare/",
+                "/enterprise-support-for-almalinux/",
             ]
         },
     ],

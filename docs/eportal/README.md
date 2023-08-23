@@ -467,12 +467,11 @@ Once you set up patch source access info, you will get to a list of available pa
 
 * **Manage**: opens dialog to enable/disable the patchset.
 
-### AlmaCare Cybersecurity patch management
+### Live Patching for AlmaLinux (KernelCare and LibCare) management
 
-After enabling **AlmaCare Cybersecurity** product for one of the keys AlmaCare
-patchsets would be available on a separate dashboard tab page:
+After enabling **Live Patching** for one of the keys AlmaLinux patchsets would be available on a separate dashboard tab page:
 
-![](/images/eportal-dashboard-alma.png)
+![](/images/eportal-dashboard-alma1.png)
 
 
 ### Manage patchset page
@@ -713,25 +712,23 @@ Fill in the following fields:
 * **Description** — you can provide a description for the key
 * **Server Limit** — the amount of servers that can be registered under that key
 * **Feed** — select a specific feed or leave empty. Take note: keys with
-  KCE/AlmaCare Cybersecurity products can't share the same feed.
+  KCE/Live Patching for AlmaLinux products can't share the same feed.
 * **Products** - limit allowed products can be used with the key.
 
 Available products:
 
 * **KernelCare**/**LibCare**/**QemuCare**/**DBCare**: allow only patches of selected
     type.
-* **AlmaCare**: allow access to AlmaCare package repository with security updates.
-* **AlmaCare Cybersecurity**: allow access to AlmaCare package repository with security
-   updates and allow to use AlmaLinux live patches.
+* **Enterprise Support for AlmaLinux**:
+  * **Essential Support**: allows access to the TuxCare-vetted package repository of AlmaLinux updates with guaranteed uptime, expedited break-and-fix support and up to 16 years of support coverage
+  * **Live Patching for AlmaLinux (KernelCare and LibCare)**: allows to use AlmaLinux live patches.
 
 Products can be mixed to limit access to a particular set of patch types.
 For example:
 
 * **KernelCare** + **LibCare**: allow access only to kernel and lib patches.
-* **AlmaCare Cybersecurity** + **KernelCare**: allow access only to AlmaCare kernel live patches.
 
-For AlmaCare deployment instructions please look into
-a [dedicated section](#deploying-almacare-almacare-cybersecurity).
+For Enterprise Support for AlmaLinux deployment instructions please look into a [dedicated section](https://docs.tuxcare.com/eportal/#deploying-essential-support-esu-live-patching-almalinux).
 
 Click _Save_ to add the key. The new registration key will be created and added
 to the list. The key itself will be used as a part of the registration command
@@ -748,7 +745,7 @@ Click _Cancel_ to return to the key list tab without adding a new key.
 ```
 ~$ kc.eportal key --help
 usage: kc.eportal key [-h] [-a] [-c] [--note NOTE] [--server-limit SERVER_LIMIT] [--feed FEED]
-                      [--product {almacare-cybersecurity,almacare-repo,db,kernel,libcare,qemu}] [--default-products]
+                      [--product {tuxcare-repo,db,kernel,libcare,qemu}] [--default-products]
                       [key]
 
 list available keys by default
@@ -764,7 +761,7 @@ optional arguments:
   --server-limit SERVER_LIMIT
                         maximum number of servers allowed
   --feed FEED           feed to associate key to
-  --product {almacare-cybersecurity,almacare-repo,db,kernel,libcare,qemu}
+  --product {tuxcare-repo,db,kernel,libcare,qemu}
                         products available for the key, can be specified multiple times
   --default-products    set default product list (KernelCare, LibCare, DBCare, QEMUCare) for the key
 ```
@@ -1326,19 +1323,18 @@ through ePortal.
 * `set-patch-server` configures new address of patch server.
 
 
-## Deploying AlmaCare/AlmaCare Cybersecurity
+## Deploying Essential Support/Live Patching for AlmaLinux
 
-You can find instructions how to setup [AlmaCare](/almacare/) on http://your-eportal-domain/admin/docs/.
+You can find instructions on how to set up [Enterprise Support for AlmaLinux](https://docs.tuxcare.com/enterprise-support-for-almalinux/) on **http://your-eportal-domain/admin/docs/**.
 
-To setup AlmaCare through ePortal you can use special endpoint `http://your-eportal-domain/install-almacare`:
+Tuxctl is a setup tool for TuxCare’s Enterprise Support for AlmaLinux, which provides access to Essential Support, Extended Security Updates, and Live Patching, depending on the purchased license. To set up `tuxctl` through ePortal you can use a special endpoint **http://your-eportal-domain/install-almacare**:
 
 ```
 $ curl -s http://eportal.mycompany.com/install-almacare | bash
-$ almactl --register my-key
+$ tuxctl --register my-key
 ```
 
-Where `my-key` should have enabled `AlmaCare` or `AlmaCare Cybersecurity`
-products.
+Where `my-key` should have enabled `Essential Support` or `Live Patching (KernelCare and LibCare)` or `Extended Security Updates` products.
 
 
 ## Migrate ePortal
