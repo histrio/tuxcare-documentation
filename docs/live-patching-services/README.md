@@ -1533,3 +1533,38 @@ kc.eportal qemu deploy --feed test /tmp/U20210818_01-qemu.tar.bz2
 
 This command will deploy and enable the `U20210818_01-qemu` patchset in to the `test` feed.
 
+## Vulnerability Scanner Integration with KernelCare
+
+This document is made for developers of vulnerability scanners to correctly report live patched vulnerabilities as delivered by KernelCare. There are several approaches that vendors might take to identify vulnerabilities patched by KernelCare correctly.
+
+### Easiest: Identifying correctly the effective kernel
+
+KernelCare provides "effective kernel" information in the
+
+-   `/proc/kcare/effective_version`
+
+Security scanners can check if the file is present, and if it is, use it instead of /proc/version to identify the kernel. This will provide an effective kernel version from a security standpoint.
+
+Alternatively, the command:\_ _<mark>_/usr/bin/kcarectl --uname _</mark>_ c_an be run instead of the <mark>\_uname_</mark> command to detect effective kernel version
+
+### Comprehensive: Using OVAL data
+
+KernelCare comes with OVAL data that provides instructions to the scanner to identify the vulnerabilities addressed by the installed live patches. OVAL data are available for the operating systems supported by KernelCare Enterprise, including AlmaLinux, Red Hat Enterprise Linux, Oracle Linux, CentOS, Debian, and Ubuntu.
+
+The OVAL data cover all KernelCare enterprise products and add-ons, including LibCare and QEMUCare.
+
+The OVAL data for KernelCare live patching are available at [patches.kernelcare.com/oval](https://patches.kernelcare.com/oval/).
+
+### Comprehensive & local: Using the local CVELIST file on each scanned node
+
+KernelCare provides two files listing the vulnerabilities the currently installed live patches address. These files contain a list of CVEs separated by a new line.
+
+The list of vulnerabilities addressed by Kernel live patches is available at:
+
+-   `/proc/kcare/cvelist`
+
+The list of vulnerabilities addressed by system live patching (LibCare, QEMUCare, etc.) is available at:
+
+-   `/var/cache/kcare/libcare_cvelist`
+
+          
