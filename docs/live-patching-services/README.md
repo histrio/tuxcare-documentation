@@ -1539,13 +1539,15 @@ This document is made for developers of vulnerability scanners to correctly repo
 
 ### Easiest: Identifying correctly the effective kernel
 
-KernelCare provides "effective kernel" information in the
+KernelCare provides "effective kernel" information in
 
--   `/proc/kcare/effective_version`
+```
+/proc/kcare/effective_version
+```
 
 Security scanners can check if the file is present, and if it is, use it instead of /proc/version to identify the kernel. This will provide an effective kernel version from a security standpoint.
 
-Alternatively, the command:\_ _<mark>_/usr/bin/kcarectl --uname _</mark>_ c_an be run instead of the <mark>\_uname_</mark> command to detect effective kernel version
+Alternatively, the command `/usr/bin/kcarectl --uname` can be run instead of the `uname` command to detect effective kernel version
 
 ### Comprehensive: Using OVAL data
 
@@ -1561,11 +1563,15 @@ KernelCare provides two files listing the vulnerabilities the currently installe
 
 The list of vulnerabilities addressed by Kernel live patches is available at:
 
--   `/proc/kcare/cvelist`
+```
+/proc/kcare/cvelist
+```
 
 The list of vulnerabilities addressed by system live patching (LibCare, QEMUCare, etc.) is available at:
 
--   `/var/cache/kcare/libcare_cvelist`
+```
+/var/cache/kcare/libcare_cvelist
+```
 
 
           
