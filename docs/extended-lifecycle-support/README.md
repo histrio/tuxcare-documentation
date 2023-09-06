@@ -51,18 +51,18 @@ In order to use Extended Lifecycle Support, you will need to open TCP port 443 t
 1. Download an installer script:
 
 ```
-wget https://repo.cloudlinux.com/centos6-els/install-centos6-els-repo.py
+wget https://repo.cloudlinux.com/centos6-els/install-centos6-els-repo.sh
 ```
 
 2. Run the installer script with keys:
 
 ```
-python install-centos6-els-repo.py --license-key XXX-XXXXXXXXXXXX
+sh install-centos6-els-repo.sh --license-key XXXX-XXXXXXXXX
 ```
 
-The installation script registers the server in the CLN with the key, adds a PGP key to the server, and switches clients to use our CentOS repositories instead of the upstream ones. So basically, the base, updates, extras, centosplus, contrib, and fasttrack repositories will all be reconfigured for our mirrors.
+The installation script registers a server in CLN with the key and adds a PGP key to the server.
 
-3. Verify that the installation was successful
+3. Verify that the installation was successful.
 
 To ensure the installation has been completed successfully, run the following command:
 
@@ -70,27 +70,14 @@ To ensure the installation has been completed successfully, run the following co
 yum info els-define
 ```
 
-It should return the info of an available package. If you can see information about the package, you can be sure that the installation was successful.
-After this, you will be able to install updates from the repository using a regular yum upgrade command.
+It should return the info about an available package. If you can see information about the package, you can be sure that the installation was successful. After this, you will be able to install updates from the repository using a regular yum upgrade command.
 
 Example: 
 
 ```
-[els@centos6 ~]# python install-centos6-els-repo.py --license-key XXX-XXXXXXXXXX
-Get dist name... centos
-Check that repository isn't created... Ok
-Check that repository isn't created... Ok
-https://cln.cloudlinux.com/cln/api/centos/token/register
-Request repository token for this server... Ok
-Prepare repo configuration... Ok
-Save repo file to /etc/yum.repos.d/centos6-els.repo... Ok
-Prepare repo configuration... Ok
-Save repo file to /etc/yum.repos.d/centos-els-release.repo... Ok
-Install necessarily packages (['centos-els-release'])... Ok
-Removing repo file /etc/yum.repos.d/centos-els-release.repo... Ok
-
 [els@centos6 ~]# yum info els-define
-
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
 Available Packages
 Name        : els-define
 Arch        : x86_64
@@ -100,7 +87,7 @@ Size        : 2.6 k
 Repo        : centos6-els
 Summary     : CentOS Server simulate release file
 License     : GPLv2
-Description : CentOS Server simulate els release file
+Description : CentOS Server simulate els release files
 ```
 
 ### OracleLinux 6 ELS
