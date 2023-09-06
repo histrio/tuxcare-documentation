@@ -462,7 +462,7 @@ To detect whether a system has TuxCare ELS installed, check for following file b
  
 Once that is validated, you can use the corresponding to the operating system OVAL files from above to scan for vulnerabilities.
 
-## Deinstallation instructions of yum repositories
+## Deinstallation instructions for yum repositories
 
 1. Find and remove the file with ELS repositories:
 
@@ -475,5 +475,5 @@ Once that is validated, you can use the corresponding to the operating system OV
 
 2. Remove the `els-define` package:
 ```
-[els@centos6 ~]# yum remove els-define
+# yum remove els-define
 ```
