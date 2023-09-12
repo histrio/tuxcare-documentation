@@ -282,20 +282,19 @@ A `kcarectl` behavior can be configured using `/etc/sysconfig/kcare/kcare.conf`
 
 | | |
 |-|-|
-|`AUTO_UPDATE=YES|NO` | `YES` - enable auto-update; `NO` - disable auto-update.|
-|`chkconfig kcare off` | Disable auto-update after restart.|
-|`PATCH_METHOD=normal|nofreeze|smart` | `Normal` - (default) use freezer;<br>`Nofreeze` - don't use freezer to freeze processes;<br> `Smart` - smart freezer freezes only threads that need to be frozen for patching [kernelcare 2.3+].|
+|`AUTO_UPDATE=YES\|NO` | `YES` - enable auto-update; `NO` - disable auto-update.|
+|`PATCH_METHOD=normal\|nofreeze\|smart` | `Normal` - (default) use freezer;<br>`Nofreeze` - don't use freezer to freeze processes;<br> `Smart` - smart freezer freezes only threads that need to be frozen for patching [kernelcare 2.3+].|
 |`PATCH_SERVER` | Server to use to download patches.|
 |`REGISTRATION_URL` | Licensing server.|
-|`PREFIX=prefix` | Patch source prefix, used to test different builds, by downloading builds from a different location, based on prefix (v2.2+)|
-|`UPDATE_POLICY=REMOTE|LOCAL|LOCAL_FIRST [since 1.6] ` | Depending on the policy, on server startup, use:<br>`REMOTE` - (default) patches from patch server.<br>`LOCAL` - only locally cached patches, if none cached (caching is done automatically) - do nothing.<br>`LOCAL_FIRST` - see if locally cached patches exist, and load them. If not, try getting them from remote server.|
-|`IGNORE_UNKNOWN_KERNEL=True|False` `[since 2.5-4]` | Don't provide notification if unknown kernel on auto-update.|
-|`LOAD_KCARE_SYSCTL [since 2.7-1]` | Controls if `/etc/sysconfig/kcare/sysctl.conf` will be loaded on patchset load. True by default.|
-|`--set-patch-type extra` | To enable extra patches.|
-|`--set-patch-type free` | To enable free patches.|
+|`PREFIX=prefix` | Patch source prefix, used to test different builds, by downloading builds from a different location, based on prefix [kernelcare 2.2+]|
+|`UPDATE_POLICY=REMOTE\|LOCAL\|LOCAL_FIRST` | Depending on the policy, on server startup, use:<br>`REMOTE` - (default) patches from patch server.<br>`LOCAL` - only locally cached patches, if none cached (caching is done automatically) - do nothing.<br>`LOCAL_FIRST` - see if locally cached patches exist, and load them. If not, try getting them from remote server.|
+|`IGNORE_UNKNOWN_KERNEL=True\|False` | Don't provide notification if unknown kernel on auto-update. [kernelcare 2.5+]|
+|`LOAD_KCARE_SYSCTL` | Controls if `/etc/sysconfig/kcare/sysctl.conf` will be loaded on patchset load. True by default. [kernelcare 2.7+]|
 |`STICKY_PATCH=KEY` | Retrieve sticky patch from `KEY` (see CLN, Key Edit); not supported for IP based servers or ePortal.|
 |`STICKY_PATCH=DDMMYY` | Stick patch to a particular date. More info at [Sticky Patches](/live-patching-services/#sticky-patches).|
-|`REPORT_FQDN=True|False` | Force using Fully Qualified Domain as a hostname. False by default.|
+|`[AUTO_]UPDATE_DELAY=<num>h\|<num>d` | Use patchsets not newer than specified time. For example `24h` or `2d`. `AUTO_UPDATE_DELAY` works for `auto` and `smart` modes. `UPDATE_DELAY` works for all modes. [kernelcare 2.82+]|
+|`[AUTO_]STICKY_PATCHSET=<patchset>`| Use patchsets not newer than specified value. For example `K20230908_02`. `AUTO_STICKY_PATCHSET` works for `auto` and `smart` modes. `STICKY_PATCHSET` works for all modes. [kernelcare 2.82+]|
+|`REPORT_FQDN=True\|False` | Force using Fully Qualified Domain as a hostname. False by default.|
 |`FORCE_GID=N`|Use this group ID for symlink protection patch. By default, it's 48 (default Apache user GID) or 99 (`nobody` user)|
 |`USERSPACE_PATCHES=libs,qemu`| Define which userspace patches will be applyed by default|
 
@@ -405,12 +404,16 @@ sysctl -w fs.enforce_symlinksifowner=1
 This functionality is not available for ePortal customers. If you are using ePortal, please use [Feeds](/eportal/#feed-management) instead.
 :::
 
+:::tip Note
+Since v2.82 there is more convenient way to specify latest available release
+via `[AUTO]_STICKY_PATCHSET` and `[AUTO_]UPDATE_DELAY` configuration options.
+It also works with recent ePortal versions (v2.3+).
+:::
+
 Sometimes you don't want to use the latest patches, but you'd like to control which patches are get installed instead. For example, you have tested the patch released on 25th of May 2018 and want to use that patch across all servers.
 
-You can do it by setting `STICKY_PATCH=250518` (ddmmyy format) in `/etc/sysconfig/kcare/kcare.conf`
+You can do it by setting `STICKY_PATCH=25052018` (DDMMYY format, ISO YYYY-MM-DD is also valid) in `/etc/sysconfig/kcare/kcare.conf`
 This guarantees that when `kcarectl --update` or `kcarectl --auto-update` is called, you will get patches from that date and not the newest patches.
-
-With `STICKY_PATCH` you can go back as far as 60 days.
 
 Alternatively, you can set `STICKY_PATCH=KEY`
 This way you can control the date from which patches will be applied using KernelCare keys in CLN.
@@ -426,10 +429,6 @@ Here is how you can do that:
 * Now, for example, let's use patches as of 03052018 (DDMMYY format). Set them for your QA server key. On the next auto-update, your QA servers will get those patches (auto-updates are typically every 4 hours).
 
 Once you are happy with this patches, set the same Sticky Tag for Production servers key. In 4 hours your production servers should be updated to the same patches that QA servers were.
-
-:::tip Note
-You can choose any date within the last 60 days. You cannot choose today's date or date in the future.
-:::
 
 
 #### How to find a proper sticky patch name
