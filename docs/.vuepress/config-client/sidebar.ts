@@ -4,6 +4,7 @@ export default {
             collapsable: false,
             children: [
                 "/enterprise-support-for-almalinux/",
+                "/enterprise-support-for-almalinux/fips/",
             ]
         },
     ],
