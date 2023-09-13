@@ -12,3 +12,5 @@ Using the [TuxCare Extended Lifecycle Support](/extended-lifecycle-support/) ser
 
 [Enterprise Support for AlmaLinux](/enterprise-support-for-almalinux/) provides a TuxCare-vetted repository of AlmaLinux updates with 16 years of support coverage, minimizes vulnerability windows with rebootless security patches and helps to avoid costly upfront support package fees with pay-as-you-go hourly support bundles.
 
+TuxCare provides the AlmaLinux community with FIPS 140-3 certification for AlmaLinux 9.2. Organizations requiring FIPS-certified AlmaLinux deployments or those operating under compliance regimes with similar requirements (e.g., PCI DSS, HIPAA) can download and install [FIPS-validated cryptographic packages for AlmaLinux 9.2](/enterprise-support-for-almalinux/fips/) (including the kernel and OpenSSL) for free.
+
