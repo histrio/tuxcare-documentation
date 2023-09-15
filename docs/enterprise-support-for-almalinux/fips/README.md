@@ -24,3 +24,16 @@ You should get a message like this (may say `aarch64` instead of `x86_64`):
 FIPS mode is enabled.
 5.14.0-284.11.1.el9_2.tuxcare.5.x86_64
 ```
+
+If you wish to stay on the FIPS validated kernel/openssl packages when a newer AlmaLinux package is available, you can use `dnf versionlock` like so:
+
+```
+# dnf -y install 'dnf-command(versionlock)'
+# dnf versionlock add openssl*tuxcare* kernel*tuxcare*
+```
+
+To revert to the previous behaviour of getting updated kernel/openssl packages from AlmaLinux, run the following as root:
+
+```
+# dnf versionlock delete openssl*tuxcare* kernel*tuxcare*
+```
