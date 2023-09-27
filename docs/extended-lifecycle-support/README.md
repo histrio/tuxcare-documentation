@@ -434,7 +434,7 @@ Currently, we provide OVAL data for the following products:
 
 OpenSCAP is an open source vulnerability scanner and compliance tool and it can be used to scan a system protected by TuxCare ELS. The following command show how to produce a vulnerability report for the system:
 
-1. Install OpenSCAP
+1. Install els-define and OpenSCAP
 
   * for rpm systems:
   ```
