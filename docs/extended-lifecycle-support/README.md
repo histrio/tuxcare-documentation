@@ -434,22 +434,53 @@ Currently, we provide OVAL data for the following products:
 
 OpenSCAP is an open source vulnerability scanner and compliance tool and it can be used to scan a system protected by TuxCare ELS. The following command show how to produce a vulnerability report for the system:
 
-1. Install OpenSCAP
+1. Install els-define and OpenSCAP
+
   * for rpm systems:
   ```
-  yum install openscap openscap-utils scap-security-guide -y
+  yum install els-define openscap openscap-utils scap-security-guide -y
   ```
   * for deb systems:
   ```
-  apt-get install libopenscap8 -y
+  apt-get install els-define libopenscap8 -y
   ```
 2. Download OVAL stream:
+
 ```
 wget https://repo.cloudlinux.com/ubuntu18_04-els/ubuntu18.04-els-oval.xml
 ```
 3. Run scanning:
+
 ```
-oscap oval eval --results result.xml --report report.xml ubuntu18.04-els-oval.xml
+oscap oval eval --results results.xml --report report.html ubuntu18.04-els-oval.xml
+```
+4. Examine scan results report 
+
+Following the example above scan results report will be saved to repot.html file in current directory. This file can then be downloaded for analysis or published directly with local web server, for example:
+```
+python3 -m http.server 8000
+```
+or for python2
+```
+python -m SimpleHTTPServer 8000
+```
+
+Assuming the above command is run from the directory with report.html file, the webpage with the report can then be accessed on `http://<server-ip-addess>:8000/report.html`cve through a web browser.
+
+![](/images/available-cve-fixes-and-their-status.png)
+
+The report includes a table with vulnerabilities and their status on examined system. Line as the following one reports that the system is vulnerable to the CVE-2023-2828:
+
+```
+update oval:com.tuxcare.clsa:def:1688677755 true patch [CLSA-2023:1688677755], [CVE-2023-2828] Fix CVE(s): CVE-2023-2828
+```
+
+The table also includes corresponding hyperlinks to advisory pages where the package and the version containing the fix can be found as well as the command to run on the target system in order to install the update.
+
+Lines like the one below designate that the fix for corresponding CVE is allready installed on the system, and no further action is needed:
+
+```
+oval:com.tuxcare.clsa:def:1694538670 false patch [CLSA-2023:1694538670], [CVE-2022-40433] Fix CVE(s): CVE-2022-40433
 ```
 
 ### How integrate the OVAL data with a new vulnerability scanner
