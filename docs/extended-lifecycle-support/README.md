@@ -1,6 +1,6 @@
 # Extended Lifecycle Support
 
-TuxCare's [Extended Lifecycle Support (ELS)](https://tuxcare.com/extended-lifecycle-support/) service provides security updates, system enhancement patches, and selected bug fixes for older versions of a variety of Linux distributions, including CentOS 6, Oracle Linux 6, CloudLinux 6, CentOS 8, Ubuntu 16.04, and Ubuntu 18.04. These distributions have either reached their end of standard support from vendors or have reached End of Life (EOL). 
+TuxCare's [Extended Lifecycle Support (ELS)](https://tuxcare.com/extended-lifecycle-support/) service provides security updates, system enhancement patches, and selected bug fixes for older versions of a variety of Linux distributions, including CentOS 6, Oracle Linux 6, CloudLinux 6, CentOS 7, CentOS 8, Ubuntu 16.04, and Ubuntu 18.04. These distributions have either reached their end of standard support from vendors or have reached End of Life (EOL). 
 
 Our ELS service is designed to provide solutions for organizations that are not yet ready to migrate to newer versions and that are seeking long-term stability for their out-of-date operating systems. The service coverage includes updates for the Linux kernel and a list of essential packages that are integral to server operations.
 
@@ -39,7 +39,7 @@ TuxCare Extended Lifecycle Support provides qualified security and selected bug-
 
 ### OVAL patch definitions
 
-Leveraging the [Open Vulnerability and Assessment Language (OVAL)](https://docs.tuxcare.com/extended-lifecycle-support/#oval-data) patch definitions with OVAL-compatible tools, e.g. OpenSCAP, users can accurately check their systems for the presence of vulnerabilities. 
+Leveraging the [Open Vulnerability and Assessment Language (OVAL)](/extended-lifecycle-support/#oval-data) patch definitions with OVAL-compatible tools, e.g. OpenSCAP, users can accurately check their systems for the presence of vulnerabilities. 
 
 ### Connection to ELS repository
 
@@ -54,11 +54,6 @@ In order to use Extended Lifecycle Support, you will need to open TCP port 443 t
 
 All TuxCare live patching products include technical support provided according to the [support policy](https://tuxcare.com/TuxCare-support-policy.pdf). It delivers 24/7/365 access to our engineers through the TuxCare Support Portal [https://tuxcare.com/support-portal/](https://tuxcare.com/support-portal/) and to our online knowledge base. 
 
-### About TuxCare
-
-
-TuxCare is a leader in providing extended support for Linux distributions. Our commitment to open-source values, flexibility, choice, and control over our client’s infrastructure sets us apart in the industry.
-For detailed inclusion criteria, package lists, and other relevant details, please refer to our official website or contact our support team.
 
 
 ## Installation instructions of yum repositories
