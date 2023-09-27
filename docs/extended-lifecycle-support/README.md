@@ -18,7 +18,7 @@ We aim to deliver security patches for critical and high-risk vulnerabilities (C
 
 ### Duration of support
 
-TuxCare provides Extended Lifecycle Support (ELS) for four years after the Linux distribution has reached EOL or no longer receives standard support. The support is provided until the end of the month indicated for each corresponding distribution in the table below. 
+TuxCare provides Extended Lifecycle Support (ELS) for up to four years (except for CentOS 7 which is supported for up to five years). This support is offered after the Linux distribution has reached its End of Life (EOL) or no longer receives standard support. 
 
 | **Distribution** | **EOL**  | **ELS**  |
 |---|---|---|
@@ -52,7 +52,7 @@ In order to use Extended Lifecycle Support, you will need to open TCP port 443 t
 
 ### Technical Support
 
-All TuxCare live patching products include technical support provided according to the [support policy](https://tuxcare.com/TuxCare-support-policy.pdf). It delivers 24/7/365 access to our engineers through the TuxCare Support Portal [https://tuxcare.com/support-portal/](https://tuxcare.com/support-portal/) and to our online knowledge base. 
+All TuxCare products include technical support provided according to the [support policy](https://tuxcare.com/TuxCare-support-policy.pdf). It delivers 24/7/365 access to our engineers through the TuxCare Support Portal [https://tuxcare.com/support-portal/](https://tuxcare.com/support-portal/) and to our online knowledge base. 
 
 
 
