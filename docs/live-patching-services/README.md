@@ -325,7 +325,7 @@ Patches that can be disabled:
 |CVE-2015-5157 | kcare_modify_ldt|
 
 
-## Extra patchset
+### Extra patchset
 
 ::: tip Note
 KernelCare Enterprise 2.12-5 or higher
@@ -406,7 +406,7 @@ This functionality is not available for ePortal customers. If you are using ePor
 
 :::tip Note
 Since v2.82 there is more convenient way to specify latest available release
-via `[AUTO]_STICKY_PATCHSET` and `[AUTO_]UPDATE_DELAY` configuration options.
+via `[AUTO_]STICKY_PATCHSET` and `[AUTO_]UPDATE_DELAY` configuration options.
 It also works with recent ePortal versions (v2.3+).
 :::
 
