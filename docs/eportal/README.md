@@ -1640,6 +1640,7 @@ Edit [ePortal config file](#config-files):
 OIDC_AUTH_URL="https://dev-61441893.okta.com/oauth2/v1/authorize"
 OIDC_TOKEN_URL="https://dev-61441893.okta.com/oauth2/v1/token"
 OIDC_USERINFO_URL="https://dev-61441893.okta.com/oauth2/v1/userinfo"
+OIDC_LOGOUT_URL="https://dev-61441893.okta.com/oauth2/v1/logout"
 
 OIDC_CLIENT_ID="0Aa134lzhUKj8jDMo5d7"
 OIDC_CLIENT_SECRET="AoBNuWRLRu2dxIR3Q0btO53N1entmGxBjQqwmjVL"
