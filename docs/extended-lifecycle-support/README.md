@@ -22,7 +22,7 @@ TuxCare provides Extended Lifecycle Support (ELS) for up to four years (except f
 
 | **Distribution** | **EOL**  | **ELS**  |
 |---|---|---|
-| CentOS 6  | December 2020  | December 2024  |
+| CentOS 6  | November 2020  | November 2024  |
 | CentOS 7  | June 2024  | June 2029  |
 | CentOS 8  | January 2022  | January 2026  |
 | Oracle Linux 6  | December 2020  | December 2024  |
