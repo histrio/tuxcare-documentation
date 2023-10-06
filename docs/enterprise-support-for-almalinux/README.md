@@ -1,4 +1,4 @@
-# Enterprise Support for AlmaLinux
+# **Enterprise Support for AlmaLinux**
 
 This guide describes [Enterprise Support for AlmaLinux](https://tuxcare.com/almalinux-enterprise-support/) and how to set it up on your AlmaLinux system.
 
@@ -63,7 +63,7 @@ Then you will have to run `tuxctl` like this:
 ```
 :::
 
-## Extended Security Update
+## **Extended Security Updates**
 
 Extended Security Updates (ESU) for AlmaLinux extend the lifecycle of specific AlmaLinux minor versions by delivering both prolonged security updates for High and Critical vulnerabilities as well as FIPS-compliant security patches enabling greater stability and security for AlmaLinux deployments. 
 
@@ -113,7 +113,7 @@ Technical Support for Extended Security Updates provides assistance with:
 * AlmaLinux kernel crash issues (root cause analysis)
 
 
-## Live Patching (KernelCare and LibCare)
+## **Live Patching (KernelCare and LibCare)**
 
 Live Patching brings rapid security patching for the kernel and critical userspace packages such as `glibc` and `openssl` using the [KernelCare Enterprise](https://docs.tuxcare.com/live-patching-services/) and [LibCare](https://docs.tuxcare.com/live-patching-services/#libcare) live patching technologies.
 
@@ -150,7 +150,7 @@ Patch level 1 applied. Effective kernel version 5.14.0-162.12.1.el9_1
 Kernel is safe
 ```
 
-## Essential and Enhanced Support
+## **Essential and Enhanced Support**
 
 ### 1. Introduction
 
