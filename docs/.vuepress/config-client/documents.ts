@@ -6,7 +6,7 @@ export default [
     },
     {
         title: "Enterprise Support for AlmaLinux",
-        description: "provides a TuxCare-vetted repository of AlmaLinux updates with 16 years of support coverage, minimizes vulnerability windows with rebootless security patches and helps to avoid costly upfront support package fees with pay-as-you-go hourly support bundles.",
+        description: "provides a TuxCare-vetted repository of AlmaLinux updates with 16 years of support coverage, delivers an extension of an additional 4.5 years of security fixes for Critical and High-risk vulnerabilities and FIPS-compliant security patches for select AlmaLinux minor versions, minimizes vulnerability windows with rebootless security patches and helps to avoid costly upfront support package fees with pay-as-you-go hourly support bundles.",
         link: "/enterprise-support-for-almalinux/",
     },
     {
