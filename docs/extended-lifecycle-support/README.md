@@ -22,7 +22,7 @@ TuxCare provides Extended Lifecycle Support (ELS) for up to four years (except f
 
 | **Distribution** | **EOL**  | **ELS**  |
 |---|---|---|
-| CentOS 6  | November 2020  | November 2024  |
+| CentOS 6  | November 2020  | November 2026  |
 | CentOS 7  | June 2024  | June 2029  |
 | CentOS 8  | January 2022  | January 2026  |
 | Oracle Linux 6  | December 2020  | December 2024  |
@@ -50,6 +50,29 @@ In order to use Extended Lifecycle Support, you will need to open TCP port 443 t
 * [cln.cloudlinux.com](http://cln.cloudlinux.com)
 * [repo.cloudlinux.com](http://repo.cloudlinux.com)
 
+### Outbound Firewall Settings
+
+You need to open the TCP port 443 to the following destinations in order to use ELS for:
+
+- CentOS 6 ELS:
+
+```
+cln.cloudlinux.com
+repo.cloudlinux.com
+els-rollout.cloudlinux.com
+```
+
+- OracleLinux 6 ELS,
+- CentOS 7 ELS,
+- CentOS 8 ELS,
+- Ubuntu 16.04 ELS,
+- Ubuntu 18.04 ELS:
+
+```
+cln.cloudlinux.com
+repo.cloudlinux.com
+```
+
 ### Technical Support
 
 All TuxCare products include technical support provided according to the [support policy](https://tuxcare.com/TuxCare-support-policy.pdf). It delivers 24/7/365 access to our engineers through the TuxCare Support Portal [https://tuxcare.com/support-portal/](https://tuxcare.com/support-portal/) and to our online knowledge base. 
@@ -58,11 +81,11 @@ All TuxCare products include technical support provided according to the [suppor
 
 ## Installation instructions of yum repositories
 
+### CentOS 6 ELS
+
 :::tip 
 You do not need ELS for CentOS 6 subscription if you are already using CloudLinux OS 6. You can find more information [here](https://docs.cloudlinux.com/cln/billing/#cloudlinux-os-6-extended-lifecycle-support).
 :::
-
-### CentOS 6 ELS
 
 1. Download an installer script:
 
