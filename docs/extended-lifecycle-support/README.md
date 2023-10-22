@@ -58,6 +58,10 @@ All TuxCare products include technical support provided according to the [suppor
 
 ## Installation instructions of yum repositories
 
+:::tip 
+You do not need ELS for CentOS 6 subscription if you are already using CloudLinux OS 6. You can find more information [here](https://docs.cloudlinux.com/cln/billing/#cloudlinux-os-6-extended-lifecycle-support).
+:::
+
 ### CentOS 6 ELS
 
 1. Download an installer script:
