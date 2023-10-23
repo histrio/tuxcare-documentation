@@ -1,6 +1,6 @@
 # Extended Lifecycle Support
 
-TuxCare's [Extended Lifecycle Support (ELS)](https://tuxcare.com/extended-lifecycle-support/) service provides security updates, system enhancement patches, and selected bug fixes for older versions of a variety of Linux distributions, including CentOS 6, Oracle Linux 6, CloudLinux 6, CentOS 7, CentOS 8, Ubuntu 16.04, and Ubuntu 18.04. These distributions have either reached their end of standard support from vendors or have reached End of Life (EOL). 
+TuxCare's [Extended Lifecycle Support (ELS)](https://tuxcare.com/extended-lifecycle-support/) service provides security updates, system enhancement patches, and selected bug fixes for older versions of a variety of Linux distributions, including CentOS 6, Oracle Linux 6, CloudLinux 6, CentOS 7, CentOS 8, Ubuntu 16.04, and Ubuntu 18.04. These distributions have either reached their end of standard support from vendors or have reached End of Life (EOL).
 
 Our ELS service is designed to provide solutions for organizations that are not yet ready to migrate to newer versions and that are seeking long-term stability for their out-of-date operating systems. The service coverage includes updates for the Linux kernel and a list of essential packages that are integral to server operations.
 
@@ -18,7 +18,7 @@ We aim to deliver security patches for critical and high-risk vulnerabilities (C
 
 ### Duration of support
 
-TuxCare provides Extended Lifecycle Support (ELS) for up to four years (except for CentOS 7 which is supported for up to five years). This support is offered after the Linux distribution has reached its End of Life (EOL) or no longer receives standard support. 
+TuxCare provides Extended Lifecycle Support (ELS) for up to four years (except for CentOS 7 which is supported for up to five years). This support is offered after the Linux distribution has reached its End of Life (EOL) or no longer receives standard support.
 
 | **Distribution** | **EOL**  | **ELS**  |
 |---|---|---|
@@ -39,7 +39,7 @@ TuxCare Extended Lifecycle Support provides qualified security and selected bug-
 
 ### OVAL patch definitions
 
-Leveraging the [Open Vulnerability and Assessment Language (OVAL)](/extended-lifecycle-support/#oval-data) patch definitions with OVAL-compatible tools, e.g. OpenSCAP, users can accurately check their systems for the presence of vulnerabilities. 
+Leveraging the [Open Vulnerability and Assessment Language (OVAL)](/extended-lifecycle-support/#oval-data) patch definitions with OVAL-compatible tools, e.g. OpenSCAP, users can accurately check their systems for the presence of vulnerabilities.
 
 ### Connection to ELS repository
 
@@ -63,7 +63,6 @@ els-rollout.cloudlinux.com
 ```
 
 - OracleLinux 6 ELS,
-- CentOS 7 ELS,
 - CentOS 8 ELS,
 - Ubuntu 16.04 ELS,
 - Ubuntu 18.04 ELS:
@@ -73,19 +72,21 @@ cln.cloudlinux.com
 repo.cloudlinux.com
 ```
 
+- CentOS 7 ELS
+```
+cln.cloudlinux.com
+repo.tuxcare.com
+```
+
 ### Technical Support
 
-All TuxCare products include technical support provided according to the [support policy](https://tuxcare.com/TuxCare-support-policy.pdf). It delivers 24/7/365 access to our engineers through the TuxCare Support Portal [https://tuxcare.com/support-portal/](https://tuxcare.com/support-portal/) and to our online knowledge base. 
+All TuxCare products include technical support provided according to the [support policy](https://tuxcare.com/TuxCare-support-policy.pdf). It delivers 24/7/365 access to our engineers through the TuxCare Support Portal [https://tuxcare.com/support-portal/](https://tuxcare.com/support-portal/) and to our online knowledge base.
 
 
 
 ## Installation instructions of yum repositories
 
 ### CentOS 6 ELS
-
-:::tip 
-You do not need ELS for CentOS 6 subscription if you are already using CloudLinux OS 6. You can find more information [here](https://docs.cloudlinux.com/cln/billing/#cloudlinux-os-6-extended-lifecycle-support).
-:::
 
 1. Download an installer script:
 
@@ -111,7 +112,7 @@ yum info els-define
 
 It should return the info about an available package. If you can see information about the package, you can be sure that the installation was successful. After this, you will be able to install updates from the repository using a regular yum upgrade command.
 
-Example: 
+Example:
 
 ```
 [els@centos6 ~]# yum info els-define
@@ -129,6 +130,12 @@ License     : GPLv2
 Description : CentOS Server simulate els release files
 ```
 
+### CloudLinux 6 ELS
+
+:::tip
+You do not need ELS for CentOS 6 subscription if you are already using CloudLinux OS 6. You can find more information [here](https://docs.cloudlinux.com/cln/billing/#cloudlinux-os-6-extended-lifecycle-support).
+:::
+
 ### OracleLinux 6 ELS
 
 1. Download an installer script:
@@ -145,7 +152,7 @@ python install-oraclelinux-els-repo.py --license-key XXX-XXXXXXXXXXXX
 
 The installation script registers the server in the CLN with the key and adds a PGP key to the server.
 
-3. Verify that the installation was successful. To ensure the installation has been completed successfully, run the following command:   
+3. Verify that the installation was successful. To ensure the installation has been completed successfully, run the following command:
 
 ```
 yum info els-define
@@ -154,7 +161,7 @@ yum info els-define
 It should return the info of an available package. If you see information about the package, you can be sure that the installation was successful.
 After this, you will be able to install updates from the repository using a regular yum upgrade command.
 
-Example: 
+Example:
 
 
 ```
@@ -165,7 +172,7 @@ Request repository token for this server... Ok
 Prepare repo configuration... Ok
 Save repo file to /etc/yum.repos.d/oraclelinux-els.repo... Ok
 Save GPG key to /etc/pki/rpm-gpg/RPM-GPG-KEY-CloudLinux... Ok
-Import Cloudlinux GPG... 
+Import Cloudlinux GPG...
 
 
 
@@ -188,7 +195,7 @@ Description : CentOS Server simulate els release files
 1. Download an installer script:
 
   * For CentOS 8.4:
-  
+
   ```
   wget https://repo.cloudlinux.com/el8-els/centos8.4-els/install-centos8.4-els-repo.sh
   ```
@@ -206,13 +213,13 @@ Description : CentOS Server simulate els release files
   ```
   sh install-centos8.4-els-repo.sh --license-key XXXX-XXXXXXXXXXXX
   ```
-  
+
   * For CentOS 8.5:
 
   ```
   sh install-centos8.5-els-repo.sh --license-key XXXX-XXXXXXXXXXXX
   ```
-  
+
   The installation script registers the server in the CLN with the key and adds a PGP key to the server.
 
 3. Verify that the installation was successful. To ensure the installation has been completed successfully, run the following command:
@@ -272,7 +279,7 @@ apt-cache show els-define
 It should return the info of an available package. If you see information about the package, you can be sure that the installation was successful.
 After this, you will be able to install updates from the repository using a regular yum upgrade command.
 
-Example: 
+Example:
 
 ```
 [els@ubuntu16 ~]# python install-ubuntu-els-repo.py --license-key XXXX-XXXXXXXXX
@@ -368,7 +375,7 @@ rsync  -avSHP --delete rsync://repo.cloudlinux.com/CENTOS6/ .
 
 ### OracleLinux 6 ELS
 
-To create a local mirror of the repository with security updates via `rsync`, use the following: 
+To create a local mirror of the repository with security updates via `rsync`, use the following:
 
 ```
 rsync://repo.cloudlinux.com/ORALINUX6ELS/
@@ -382,7 +389,7 @@ rsync  -avSHP --delete rsync://repo.cloudlinux.com/ORALINUX6ELS/ .
 
 ### CentOS 8 ELS
 
-To create a local mirror of the repository with security updates via rsync, use the following: 
+To create a local mirror of the repository with security updates via rsync, use the following:
 
 * For CentOS 8.4:
 
@@ -410,7 +417,7 @@ rsync  -avSHP --delete rsync://repo.cloudlinux.com/CENTOS85_ELS/ .
 
 ### Ubuntu 16.04 ELS
 
-To create a local mirror of the repository with security updates via `rsync`, use the following: 
+To create a local mirror of the repository with security updates via `rsync`, use the following:
 
 ```
 rsync://repo.cloudlinux.com/UBUNTU1604ELS/
@@ -481,7 +488,7 @@ wget https://repo.cloudlinux.com/ubuntu18_04-els/ubuntu18.04-els-oval.xml
 ```
 oscap oval eval --results results.xml --report report.html ubuntu18.04-els-oval.xml
 ```
-4. Examine scan results report 
+4. Examine scan results report
 
 Following the example above scan results report will be saved to repot.html file in current directory. This file can then be downloaded for analysis or published directly with local web server, for example:
 ```
@@ -516,7 +523,7 @@ Identifying the vulnerabilities that apply to your systems is an important task 
 
 To detect whether a system has TuxCare ELS installed, check for following file being present:
 `/etc/els-release`
- 
+
 Once that is validated, you can use the corresponding to the operating system OVAL files from above to scan for vulnerabilities.
 
 ## Deinstallation instructions for yum repositories
