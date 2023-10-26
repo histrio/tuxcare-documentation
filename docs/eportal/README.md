@@ -79,7 +79,8 @@ EOL
 
 :::tip Note
 
-If you are using CentOS 7, starting from version `2.4-2`, it is required to install the `centos-release-scl` package:
+If you are using RHEL7, CentOS7 or any EL7-based distribution, starting from ePortal version 2.4-2, it's necessary to install the `centos-release-scl` package. 
+You can do so with the following command:
 
 ```
 yum install centos-release-scl
