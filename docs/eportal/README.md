@@ -85,6 +85,14 @@ You can do so with the following command:
 ```
 yum install centos-release-scl
 ```
+
+For RHEL7 users, you'll need to enable the necessary repositories to ensure access to the required packages. Use the subscription-manager utility with the following commands:
+
+```
+subscription-manager repos --enable rhel-7-server-optional-rpms
+subscription-manager repos --enable rhel-server-rhscl-7-rpms
+```
+
 :::
 
 Install ePortal:
