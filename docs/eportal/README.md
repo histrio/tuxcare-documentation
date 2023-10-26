@@ -77,6 +77,15 @@ gpgcheck=1
 EOL
 ```
 
+:::tip Note
+
+If you are using CentOS 7, starting from version `2.4-2`, it is required to install the `centos-release-scl` package:
+
+```
+yum install centos-release-scl
+```
+:::
+
 Install ePortal:
 
 ```
