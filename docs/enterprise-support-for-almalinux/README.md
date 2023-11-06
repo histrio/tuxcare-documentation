@@ -17,14 +17,65 @@ Available services:
 
 Learn more at [https://tuxcare.com/almalinux-enterprise-support/](https://tuxcare.com/almalinux-enterprise-support/)
 
-## Requirements
+## **Extended Security Updates**
 
-* AlmaLinux 8 or AlmaLinux 9 operating system
+Extended Security Updates (ESU) for AlmaLinux extend the lifecycle of specific AlmaLinux minor versions by delivering both prolonged security updates for High and Critical vulnerabilities as well as FIPS-compliant security patches enabling greater stability and security for AlmaLinux deployments.
+
+### ESU lifecycle
+
+AlmaLinux provides a 10-year lifecycle with a new minor release arriving every 6 months, bringing new features until the fifth year. Each of the minor releases is supported for 6 months. Customers who want to remain with the specific AlmaLinux minor release for longer can opt for Extended Security Updates (ESU). ESU delivers an extension of an additional 4.5 years of security fixes for Critical and High-risk vulnerabilities as well as FIPS-compliant security patches for select AlmaLinux minor versions. The service is currently available for AlmaLinux 9.2 with planned support for AlmaLinux 9.6 and 9.10. This provision ensures that a given minor release continues to receive essential updates, allowing customers to avoid upgrading every 6 months and test/certify their applications against the next minor version at their own pace.
+
+![esu lifecycle](/images/esu_lifecycle_graph.png)
+
+:::warning
+**Disclaimer**: AlmaLinux minor releases planned for ESU are subject to change. TuxCare reserves the right to change them at any time without prior notice.
+:::
+
+### Vulnerability coverage
+
+TuxCare employs the Common Vulnerability Scoring System (CVSS v3) to assess the severity of security vulnerabilities. Our severity rating system for patching vulnerabilities integrates both NVD scoring and vendor scoring (when available). When the vendor's score is lower than the NVD score, we give priority to the NVD score.
+ESU provides security patches for High and Critical vulnerabilities (with a 7+ CVSS score) and urgent priority bug fixes. This strategy aims to reduce changes in the environment, prioritizing stability without compromising critical security.
+
+### FIPS-compliant security patches
+
+ESU enables continuous security for FIPS-certified AlmaLinux 9.2 deployments by offering FIPS-compliant security patches for the FIPS-validated [kernel and OpenSSL packages](/enterprise-support-for-almalinux/fips/). These patches [do not change the validated cryptography](https://tuxcare.com/blog/the-dilemmas-of-fips-140-3-compliance/) and are suitable for organizations that don't require strict FIPS-certified implementations that are static and never patched (i.e. military or intelligence agencies). In case of a cryptographic vulnerability that will require a security patch that changes the validated cryptography, we will fix it by delivering a new packaged kernel. This kernel will undergo an expedited FIPS 140-3 recertification to ensure it is attested to conform to FIPS 140-3 requirements.
+
+### Target response times
+
+Aligning with many industry standards and regulatory requirements, TuxCare is committed to delivering timely security updates. For instance, the Payment Card Industry Data Security Standard (PCI DSS) mandates that all 'High' vulnerabilities (CVSS score of 7.0+) must be addressed within 30 days. Other regulations and standards, such as the Health Insurance Portability and Accountability Act (HIPAA) for healthcare organizations or the Federal Information Security Management Act (FISMA) for government agencies, uphold similar requirements.
+We aim to deliver security patches for Critical and High-risk vulnerabilities (CVSS 7+) within 14 days from when the vulnerabilities become publicly disclosed. This rapid response time significantly reduces the window of opportunity for potential attackers and meets most security regulation requirements.
+
+### Supported packages
+
+ESU provides updates for a comprehensive list of packages integral to server operations (100+ packages), providing maximum security for your operating system. You can view the full list of supported packages, as well as get detailed information on the patched CVEs, here [https://cve.tuxcare.com/](https://cve.tuxcare.com/). Support for additional packages can be provided on request.
+
+### Errata advisories
+
+ESU provides qualified security and selected bug-fix errata advisories across all architectures. They can help users track which Common Vulnerabilities and Exposures (CVE) are resolved and which bugs have been addressed. You can view the full list of released advisories here [https://cve.tuxcare.com/els/releases](https://cve.tuxcare.com/els/releases).
+
+### OVAL patch definitions
+
+Leveraging Open Vulnerability and Assessment Language (OVAL) patch definitions with OVAL-compatible tools, e.g. OpenSCAP, users can accurately check their systems for the presence of vulnerabilities.
+
+### Technical support
+
+All TuxCare products include technical support provided according to the support policy [https://tuxcare.com/TuxCare-support-policy.pdf](https://tuxcare.com/TuxCare-support-policy.pdf). It delivers 24/7/365 access to our engineers through the TuxCare Support Portal [https://tuxcare.com/support-portal/](https://tuxcare.com/support-portal/) and to our online knowledge base.
+Technical Support for Extended Security Updates provides assistance with:
+
+* ESU repository setup issues
+* Package update problems (package conflicts, missing dependencies)
+* FIPS and CVE-related questions
+* ePortal issues
+* AlmaLinux kernel crash issues (root cause analysis)
+
+### Installing tuxctl
+
+**Requirements**
+
+* AlmaLinux 9.2 operating system
 * x86_64 or aarch64 architecture
 * Enterprise Support license key (should be obtained from [portal.tuxcare.com](https://portal.tuxcare.com))
 * Internet access
-
-## Installing tuxctl
 
 `tuxctl` is the setup tool for TuxCare's Enterprise Support for AlmaLinux, which will configure your system to receive patches from the TuxCare repositories. To install `tuxctl` you need to install the `tuxcare-release` package first. This package contains the TuxCare repo definitions, TuxCare GPG key and the `tuxctl` setup tool. Run the following as root:
 
@@ -72,32 +123,9 @@ Then you will have to run `tuxctl` like this:
 
 :::
 
-## **Extended Security Updates**
-
-Extended Security Updates (ESU) for AlmaLinux extend the lifecycle of specific AlmaLinux minor versions by delivering both prolonged security updates for High and Critical vulnerabilities as well as FIPS-compliant security patches enabling greater stability and security for AlmaLinux deployments.
-
-### ESU lifecycle
-
-AlmaLinux provides a 10-year lifecycle with a new minor release arriving every 6 months, bringing new features until the fifth year. Each of the minor releases is supported for 6 months. Customers who want to remain with the specific AlmaLinux minor release for longer can opt for Extended Security Updates (ESU). ESU delivers an extension of an additional 4.5 years of security fixes for Critical and High-risk vulnerabilities as well as FIPS-compliant security patches for select AlmaLinux minor versions. The service is currently available for AlmaLinux 9.2 with planned support for AlmaLinux 9.6 and 9.10. This provision ensures that a given minor release continues to receive essential updates, allowing customers to avoid upgrading every 6 months and test/certify their applications against the next minor version at their own pace.
-
-![esu lifecycle](/images/esu_lifecycle_graph.png)
-
-:::warning
-**Disclaimer**: AlmaLinux minor releases planned for ESU are subject to change. TuxCare reserves the right to change them at any time without prior notice.
-:::
-
-### Vulnerability coverage
-
-TuxCare employs the Common Vulnerability Scoring System (CVSS v3) to assess the severity of security vulnerabilities. Our severity rating system for patching vulnerabilities integrates both NVD scoring and vendor scoring (when available). When the vendor's score is lower than the NVD score, we give priority to the NVD score.
-ESU provides security patches for High and Critical vulnerabilities (with a 7+ CVSS score) and urgent priority bug fixes. This strategy aims to reduce changes in the environment, prioritizing stability without compromising critical security.
-
-### FIPS-compliant security patches
-
-ESU enables continuous security for FIPS-certified AlmaLinux 9.2 deployments by offering FIPS-compliant security patches for the FIPS-validated [kernel and OpenSSL packages](/enterprise-support-for-almalinux/fips/). These patches [do not change the validated cryptography](https://tuxcare.com/blog/the-dilemmas-of-fips-140-3-compliance/) and are suitable for organizations that don't require strict FIPS-certified implementations that are static and never patched (i.e. military or intelligence agencies). In case of a cryptographic vulnerability that will require a security patch that changes the validated cryptography, we will fix it by delivering a new packaged kernel. This kernel will undergo an expedited FIPS 140-3 recertification to ensure it is attested to conform to FIPS 140-3 requirements.
-
 ### Enabling FIPS 140-3 mode
 
-First please ensure you have installed the `tuxcare-release` package as described [here](/enterprise-support-for-almalinux/#installing-tuxctl). If you haven't already registered your ESU license using `tuxctl` the next step will also do that for you.
+First please ensure you have installed the `tuxcare-release` package as described above. If you haven't already registered your ESU license using `tuxctl` the next step will also do that for you.
 
 To enable the FIPS repo, install the FIPS 140-3 validated packages, enable FIPS mode and configure grub to boot into the FIPS-validated kernel, please run these commands as root, substituting in your license key:
 
@@ -124,34 +152,6 @@ $ openssl list -providers | grep -A3 fips
     version: 3.0.7-1d2bd88ee26b3c90
     status: active
 ```
-
-### Target response times
-
-Aligning with many industry standards and regulatory requirements, TuxCare is committed to delivering timely security updates. For instance, the Payment Card Industry Data Security Standard (PCI DSS) mandates that all 'High' vulnerabilities (CVSS score of 7.0+) must be addressed within 30 days. Other regulations and standards, such as the Health Insurance Portability and Accountability Act (HIPAA) for healthcare organizations or the Federal Information Security Management Act (FISMA) for government agencies, uphold similar requirements.
-We aim to deliver security patches for Critical and High-risk vulnerabilities (CVSS 7+) within 14 days from when the vulnerabilities become publicly disclosed. This rapid response time significantly reduces the window of opportunity for potential attackers and meets most security regulation requirements.
-
-### Supported packages
-
-ESU provides updates for a comprehensive list of packages integral to server operations (100+ packages), providing maximum security for your operating system. You can view the full list of supported packages, as well as get detailed information on the patched CVEs, here [https://cve.tuxcare.com/](https://cve.tuxcare.com/). Support for additional packages can be provided on request.
-
-### Errata advisories
-
-ESU provides qualified security and selected bug-fix errata advisories across all architectures. They can help users track which Common Vulnerabilities and Exposures (CVE) are resolved and which bugs have been addressed. You can view the full list of released advisories here [https://cve.tuxcare.com/els/releases](https://cve.tuxcare.com/els/releases).
-
-### OVAL patch definitions
-
-Leveraging Open Vulnerability and Assessment Language (OVAL) patch definitions with OVAL-compatible tools, e.g. OpenSCAP, users can accurately check their systems for the presence of vulnerabilities.
-
-### Technical support
-
-All TuxCare products include technical support provided according to the support policy [https://tuxcare.com/TuxCare-support-policy.pdf](https://tuxcare.com/TuxCare-support-policy.pdf). It delivers 24/7/365 access to our engineers through the TuxCare Support Portal [https://tuxcare.com/support-portal/](https://tuxcare.com/support-portal/) and to our online knowledge base.
-Technical Support for Extended Security Updates provides assistance with:
-
-* ESU repository setup issues
-* Package update problems (package conflicts, missing dependencies)
-* FIPS and CVE-related questions
-* ePortal issues
-* AlmaLinux kernel crash issues (root cause analysis)
 
 ## **Live Patching (KernelCare and LibCare)**
 
@@ -326,3 +326,21 @@ Technical support covered by any of the TuxCare Support Programs shall not be pr
 * Incidents caused by installing and running third-party applications (including, but not limited to the list of unsupported or incompatible applications published in the documentation)
 * Incidents for which the Customer cannot provide accurate information, as reasonably requested by TuxCare, in order to reproduce, investigate, and resolve the incident
 * Incidents which arise as a result of neglect or incorrect use of TuxCare instructions, which, if properly used, would have prevented the Incident
+
+### Switching repositories
+
+For Essential Support customers wishing to use our vetted TuxCare repos instead of the community AlmaLinux ones, all you have to do is run the following as root:
+
+```text
+# sed -i \
+  -e 's|https://repo.almalinux.org/almalinux/|https://repo.tuxcare.com/almalinux/|' \
+  -e 's|^mirrorlist|# mirrorlist|' \
+  -e 's|^# baseurl|baseurl|' \
+  /etc/yum.repos.d/almalinux*.repo
+```
+
+This method will work for any version of AlmaLinux 8.x or 9.x, we currently don't mirror the vault (debuginfo/source) repo's.
+
+:::warning
+Note that if you upgrade past 9.2 you won't be able to upgrade to ESU without a reinstall. ESU customers can find instructions [above](/enterprise-support-for-almalinux/#installing-tuxctl)
+:::
