@@ -528,6 +528,17 @@ To detect whether a system has TuxCare ELS installed, check for following file b
 
 Once that is validated, you can use the corresponding to the operating system OVAL files from above to scan for vulnerabilities.
 
+## TuxCare ELS RSS releases feeds
+
+* CentOS 6: [https://cve.tuxcare.com/rss_feed/releases/centos6els](https://cve.tuxcare.com/rss_feed/releases/centos6els)
+* CloudLinux 6: [https://cve.tuxcare.com/rss_feed/releases/cloudlinux6els](https://cve.tuxcare.com/rss_feed/releases/cloudlinux6els)
+* Oracle Linux 6: [https://cve.tuxcare.com/rss_feed/releases/oraclelinux6els](https://cve.tuxcare.com/rss_feed/releases/oraclelinux6els)
+* CentOS 7: [https://cve.tuxcare.com/rss_feed/releases/centos7els](https://cve.tuxcare.com/rss_feed/releases/centos7els)
+* CentOS 8.4: [https://cve.tuxcare.com/rss_feed/releases/centos8.4els](https://cve.tuxcare.com/rss_feed/releases/centos8.4els)
+* CentOS 8.5: [https://cve.tuxcare.com/rss_feed/releases/centos8.5els](https://cve.tuxcare.com/rss_feed/releases/centos8.5els)
+* Ubuntu 16.04: [https://cve.tuxcare.com/rss_feed/releases/ubuntu16.04els](https://cve.tuxcare.com/rss_feed/releases/ubuntu16.04els)
+* Ubuntu 18.04: [https://cve.tuxcare.com/rss_feed/releases/ubuntu18.04els](https://cve.tuxcare.com/rss_feed/releases/ubuntu18.04els)
+
 ## Deinstallation instructions for yum repositories
 
 1. Find and remove the file with ELS repositories:
