@@ -209,7 +209,7 @@ oscap oval eval --results result.xml --report report.xml centos6-els-php-oval.xm
 
 ### PHP extensions list
 
-You can find the list of the supported add-ons [here](https://docs.cloudlinux.com/cloudlinux_os_components/#bundled-php-extensions).
+You can find the list of the supported add-ons [here](https://docs.cloudlinux.com/shared/cloudlinux_os_components/#bundled-php-extensions).
 
 ### How to use PHP-ELS
 
