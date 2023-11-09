@@ -341,6 +341,16 @@ For Essential Support customers wishing to use our vetted TuxCare repos instead 
 
 This method will work for any version of AlmaLinux 8.x or 9.x, we currently don't mirror the vault (debuginfo/source) repo's.
 
+To revert back to the community mirrors you can run the following as root:
+
+```text
+# sed -i \
+  -e 's|https://repo.tuxcare.com/almalinux/|https://repo.almalinux.org/almalinux/|' \
+  -e 's|^# mirrorlist|mirrorlist|' \
+  -e 's|^baseurl|# baseurl|' \
+  /etc/yum.repos.d/almalinux*.repo
+```
+
 :::warning
 Note that if you upgrade past 9.2 you won't be able to upgrade to ESU without a reinstall. ESU customers can find instructions [above](/enterprise-support-for-almalinux/#installing-tuxctl)
 :::
