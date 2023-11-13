@@ -153,6 +153,53 @@ $ openssl list -providers | grep -A3 fips
     status: active
 ```
 
+### Uninstalling tuxctl
+
+To uninstall tuxctl, disable the ESU/FIPS functionality and revert to AlmaLinux community repo's, you can run the following as root:
+
+```text
+# dnf -y remove almacare-release tuxcare-release
+
+# fips-mode-setup --disable
+
+# sed -i \
+  -e 's|https://repo.tuxcare.com/almalinux/|https://repo.almalinux.org/almalinux/|' \
+  -e 's|^# mirrorlist|mirrorlist|' \
+  -e 's|^baseurl|# baseurl|' \
+  -e 's|$tuxcare_releasever|$releasever|g' \
+  -e 's|$almacare_releasever|$releasever|g' \
+  /etc/yum.repos.d/almalinux*.repo
+
+# dnf upgrade
+
+# reboot
+```
+
+:::warning
+Note that by disabling ESU, you will revert to tracking major version releases instead of sticking to a specific minor version, so you may be upgraded from 9.2 to 9.3 for example - a process you cannot undo.
+:::
+
+To completely remove the TuxCare packages, after following the above steps, run the following as root:
+
+```text
+# dnf remove openssl*tuxcare* kernel*tuxcare*
+```
+
+In most cases this will be the end of the uninstallation procedure, however if you see an error message like the following, then you may have to use `grubby` or `grub2-reboot` or simply the grub menu, to reboot into a non-TuxCare kernel first:
+
+```text
+Error:
+ Problem: The operation would result in removing the following protected packages: sudo, systemd, kernel-core
+(try to add '--skip-broken' to skip uninstallable packages or '--nobest' to use not only best candidate packages)
+```
+
+Then run the following:
+
+```text
+# dnf downgrade openssl
+# dnf remove kernel*tuxcare*
+```
+
 ## **Live Patching (KernelCare and LibCare)**
 
 Live Patching brings rapid security patching for the kernel and critical userspace packages such as `glibc` and `openssl` using the [KernelCare Enterprise](https://docs.tuxcare.com/live-patching-services/) and [LibCare](https://docs.tuxcare.com/live-patching-services/#libcare) live patching technologies.
