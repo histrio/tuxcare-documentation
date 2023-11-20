@@ -6,33 +6,71 @@ sidebarDepth: 4
 
 # KernelCare Enterprise
 
-KernelCare Enterprise live patching enhances your vulnerability patching program by providing live patches to the Linux kernel and, optionally, with add-ons to critical userspace components, as well as the virtualization stack.
+KernelCare Enterprise live patching enhances customers' vulnerability patching programs by providing live patches to the Linux kernel and, optionally (with an add-on), to critical userspace components. The systems are patched according to your patch deployment policy, allowing you to customize your patch management to align with the needs of your unique environment, whether online or air-gapped.
 
-The systems are patched according to your patch deployment policy, allowing you to customize your patch management to align with the needs of your unique environment, whether online or in an air-gapped environment. Plus, your vulnerability reports reduce in size quickly as KernelCare seamlessly integrates with all popular vulnerability scanners to give you an accurate vulnerability exposure report.
+KernelCare Enterprise can be extended with the following add-ons:
 
-KernelCare Enterprise brings KernelCare live patching by default and the following add-ons are available:
+* LibCare – for live patching of critical userspace components.
+* QEMUCare – for live patching of QEMU-based virtualization systems.
 
-* LibCare
-* QEMUCare
-
-The sections below describe KernelCare live patching and the additional add-ons in more detail.
+The sections below describe KernelCare and LibCare live patching in more detail.
 
 ## KernelCare
 
 ### Introduction
 
-KernelCare Enterprise is a live kernel patching service that provides security patches and bugfixes for a range of popular Linux kernels that can be installed without rebooting the system
+KernelCare Enterprise is a live kernel patching product that provides security patches for a range of popular Linux kernels that can be installed without rebooting the system. It supports kernels of Enterprise Linux operating systems, i.e., RHEL, Oracle, Rocky, AlmaLinux, and CentOS, as well as Ubuntu and Debian. Each individual kernel receives new live patches for as long as the kernel vendor releases security updates for the series.
 
-### Benefits
+The KernelCare Enterprise offering consists of the client application, the live patching service hosted by TuxCare, and an optional on-prem management server. The client application runs on machines, periodically checks for available patches, downloads, verifies, and installs them. 
 
-Today, system administrators have to reboot a server to apply the latest kernel updates. These updates are necessary to prevent security issues. Due to downtime associated with reboots, however, such updates are often delayed, pushed into the darkest hours of the night. It is common for server owners to not update their systems for months or even years and to run vulnerable systems to avoid downtime. Managed service providers face the problem of having to schedule downtime and then updating and rebooting thousands of servers in a short period of time, straining resources. KernelCare solves this update and reboot issue by providing live kernel patching without the need for a reboot
+At the same time, complex enterprise environments often follow policies that require a gradual roll-out of updates to reduce risk or have high-security isolated environments that need to be updated. ePortal is an on-prem management server allowing organizations to define their rollout policy and remain in full control of which machines will get updated and when. 
 
-### Key Features
+### The live patching process
 
-* Rebootless Linux Kernel Patching & Custom Patching
-* Works On-prem & in the cloud
-* Private patch server for gated infrastructures - ePortal
-* Out-of-the-box integration with patch management & vulnerability assessment tools
+When a new vulnerability is detected in the Linux kernel, TuxCare creates a live patch addressing the vulnerability. After the live patch is made available, it is tested in TuxCare’s internal server farm and then promoted gradually to a series of testing tiers, ensuring that any released live patch has been tested sufficient time on live systems. Once the patch is released, systems that enable the KernelCare Enterprise client will receive the patch over an authenticated channel and apply it. 
+
+### ePortal
+
+Many organizations have a gradual patch roll-out policy or maintain a strict policy on which systems get upgraded and when. With ePortal, an on-prem management server, you can use the patch roll-out policy of your choice while automatically deploying patches in your air-gapped environment – all with a simple user interface. 
+
+### Live patching testing tiers 
+
+KernelCare Enterprise delivers live patches to “tiers”. A tier is a target audience for the delivery of a patch. Your tier depends on whether your systems receive updates directly from the TuxCare Portal repository or use ePortal as a proxy to gradually roll out patches according to your patching policy. The differences are outlined below. 
+
+| TIER  | DESCRIPTION  |
+|---|---|
+| Internal  | For internal TuxCare use. Updates are first tested and then applied across TuxCare infrastructure to decrease the odds of a faulty patch making it to customer machines.  |
+| TuxCare Portal  | Patches are delivered to these machines next.  |
+| ePortal Customers  | Patches become available in the ePortal last. However, ePortal customers can customize the updates to receive them as soon as they become available in the test feed.  |
+
+Our kernel team closely monitors the patch health internally before promoting it to the TuxCare Portal and further monitoring is done before promoting the patch to ePortal servers. 
+
+### Kernel patching lifetime 
+
+KernelCare Enterprise offers live patches for each individual kernel for as long as the kernel vendor releases security updates for the series. This allows you to enjoy continuous protection for your existing kernels without being bound by the kernel vendor’s release schedule when planning your maintenance windows. 
+
+### Vulnerability coverage 
+
+During the lifecycle of an operating system, TuxCare makes commercially reasonable efforts to provide live patches for all vulnerability fixes provided by the vendor, irrespective of their vulnerability rating. We may also address vulnerabilities that haven't been addressed by the OS vendor if they gained significant attention and were being actively discussed, exploited (according to the [CISA list](https://www.cisa.gov/known-exploited-vulnerabilities-catalog)), or researched by the cybersecurity community. 
+
+### Target response rates
+TuxCare is committed to delivering timely security updates. We aim to deliver live patches for all CVEs patched by the vendor within 10 days from when the vulnerability is publicly disclosed. This rapid response time significantly reduces the opportunity window for a potential attack and meets most security regulation requirements. However, a live patch for a vulnerability can be significantly more complex than an ordinary kernel patch, and due to the additional complexity, can take more time to develop and test. 
+
+### Supported architectures 
+
+KernelCare is available for both x86-64 (Intel and AMD) and ARM64 architectures. 
+
+### Supported Linux distros and kernels 
+
+Customers can find detailed information about supported kernels, Linux distributions, specific vulnerabilities, and live patches provided by KernelCare and LibCare for each of the supported Linux distributions at [https://patches.kernelcare.com/](https://patches.kernelcare.com/). 
+
+### End-of-life (EOL) policy 
+
+TuxCare will stop supporting live patching for specific distros if there are no security advisories provided by the distro's vendor for the last 365 days. In this case, all customers running the affected distributions are notified about the upcoming EOL. Existing live patches for EOL distributions are available for the next 6 years after the EOL date. 
+
+### Technical Support 
+
+All TuxCare live patching products include technical support provided according to the [TuxCare support policy](https://tuxcare.com/TuxCare-support-policy.pdf). It delivers 24/7/365 access to our engineers through the [TuxCare Support Portal](https://tuxcare.com/support-portal/) and to our online knowledge base.
 
 ### Getting a trial license
 
@@ -1289,17 +1327,19 @@ That's it!
 
 ## LibCare
 
-LibCare enables security patching of critical userspace shared libraries in-memory without restarting or disrupting the applications using them. This is techinical  documentation describing the solution; for a high level summary see [LibCare's main web site](https://tuxcare.com/enterprise-live-patching-services/libcare/).
+LibCare enables security patching of critical userspace shared libraries in-memory without restarting or disrupting the applications using them. It provides security updates for the OpenSSL and glibc libraries on many operating systems including CentOS, AlmaLinux, Oracle Linux, Debian, and Ubuntu. 
 
-### Supported libraries and operating systems
+### Library Patching Lifetime 
 
-LibCare provide security updates for the OpenSSL and glibc libraries on many operating systems.
+Each individual OpenSSL and glibc library covered by LibCare receives live patches for the same time period as the operating system (including the extended lifecycle support phase). LibCare tracks all releases of OpenSSL and glibc linked in memory at any given time and patches them forward. 
 
-### Supported operating systems
+### Supported Architectures 
 
-LibCare patching is available for many operating systems including CentOS, AlmaLinux, Oracle Linux, Debian and Ubuntu.
+LibCare is available only for x86-64 (Intel and AMD) architecture. 
 
-[Check compatibility with your operating system](https://patches.kernelcare.com/).
+### Technical Support 
+
+All TuxCare live patching products include technical support provided according to the [TuxCare support policy](https://tuxcare.com/TuxCare-support-policy.pdf). It delivers 24/7/365 access to our engineers through the [TuxCare Support Portal](https://tuxcare.com/support-portal/) and to our online knowledge base.
 
 ### Installation and upgrade
 
