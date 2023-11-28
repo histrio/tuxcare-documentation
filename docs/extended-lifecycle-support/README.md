@@ -243,13 +243,13 @@ Description : CentOS Server els-release file
   * For CentOS 8.4:
 
   ```
-  wget https://repo.cloudlinux.com/el8-els/centos8.4-els/install-centos8.4-els-repo.sh
+  wget https://repo.cloudlinux.com/centos8.4-els/install-centos8.4-els-repo.sh
   ```
 
   * For CentOS 8.5:
 
   ```
-  wget https://repo.cloudlinux.com/el8-els/centos8.5-els/install-centos8.5-els-repo.sh
+  wget https://repo.cloudlinux.com/centos8.5-els/install-centos8.5-els-repo.sh
   ```
 
 2. Run the installer script with keys:
