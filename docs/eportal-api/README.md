@@ -418,7 +418,7 @@ Requires write permissions and accepts basic authorization.
 Enable libcare patchset `U20200506_01` in `main` and `test-feed` feeds:
 
 ```
-curl -X POST -u admin 'https://eportal.corp.com/admin/api/patchsets/manage?patchset=U20200506_01&feed=main&feed=test-feed&product=user&action=enable'
+curl -X POST -u admin 'https://eportal.corp.com/admin/api/patchsets/manage?patchset=U20200506_01&feed=main&feed=test-feed&product=libcare&action=enable'
 ```
 
 ## List users
