@@ -6,13 +6,32 @@ Spring® is a trademark of Broadcom Inc. and/or its subsidiaries.
 
 TuxCare's Endless Lifecycle Support (ELS) for Spring® provides security updates, system enhancement patches, and selected bug fixes that are integral to the stable operation of applications running on these versions of Spring® ecosystem components. These components have either reached their end of standard support from vendors or have reached End of Life (EOL).
 
+Our ELS for Spring® service is designed to provide solutions for organizations that are not yet ready to migrate to newer versions and that are seeking long-term stability for their legacy Spring® applications.
+
 :::tip
 ELS for Spring® also patches transitive dependencies at no extra cost, including Hibernate, Netty, Jackson Databind, SnakeYAML, Apache Kafka, Apache Velocity, and more. See the [full list of supported Java libraries](/els-for-libraries/java-libraries/).
 :::
 
 ### Supported Modules and Versions
 
-<TableTabs label="Choose group: ">
+<TableTabs label="Choose group: " :labels="{
+  Framework: 'Spring® Framework',
+  AMQP: 'Spring® AMQP',
+  Batch: 'Spring® Batch',
+  Boot: 'Spring® Boot',
+  Cloud: 'Spring® Cloud',
+  Data: 'Spring® Data',
+  Security: 'Spring® Security',
+  Security_OAuth: 'Spring® Security OAuth',
+  Web_Services: 'Spring® Web Services',
+  Integration: 'Spring® Integration',
+  HATEOAS: 'Spring® HATEOAS',
+  LDAP: 'Spring® LDAP',
+  GraphQL: 'Spring® GraphQL',
+  Retry: 'Spring® Retry',
+  Plugin: 'Spring® Plugin',
+  Web_Flow: 'Spring® Web Flow'
+}">
 
 <template #Framework>
 

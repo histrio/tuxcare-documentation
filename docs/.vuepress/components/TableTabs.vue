@@ -15,6 +15,10 @@ defineProps({
   label: {
     type: String,
     default: ''
+  },
+  labels: {
+    type: Object,
+    default: () => ({})
   }
 })
 
@@ -48,7 +52,7 @@ watch(activeTab, (newVal) => {
       </span>
       <select v-model="activeTab" class="tab-select">
         <option v-for="key in tabKeys" :key="key" :value="key">
-          {{ formatKey(key) }}
+          {{ labels[key] || formatKey(key) }}
         </option>
       </select>
     </div>
