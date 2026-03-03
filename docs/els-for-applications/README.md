@@ -2,11 +2,18 @@
 
 # Endless Lifecycle Support for Open-Source Applications
 
+### Java
+
 * [Apache Hadoop](./apache-hadoop)
 * [Apache Hive](./apache-hive)
 * [Apache Tomcat®](./apache-tomcat)
 * [Apache Maven](./maven)
 * [Gradle](./gradle)
+
+### Go
+
+* [Grafana](./grafana)
+* [Loki](./loki)
 
 ## Vulnerability Coverage and Target Response Times
 
