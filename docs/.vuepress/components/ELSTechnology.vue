@@ -62,7 +62,8 @@
                   v-for="(project, pIndex) in getFilteredProjects(filteredData[activeTab])"
                   :key="'v' + pIndex"
                 >
-                  <span class="badge">{{ project.versions }}</span>
+                  <span v-if="project.detailsHash" class="badge">versions vary per module — <a :href="project.link + '#' + project.detailsHash">details</a></span>
+                  <span v-else class="badge">{{ project.versions }}</span>
                 </li>
               </ul>
             </div>
@@ -311,8 +312,88 @@ const techData = [
         link: "./java-libraries/",
       },
       {
-        name: "Spring®",
-        versions: "Multiple",
+        name: "Spring® Framework",
+        versions: "3.1 | 4.0 | 4.1 | 4.3 | 5.2 | 5.3 | 6.0 | 6.1",
+        link: "./spring/",
+        detailsHash: "Framework",
+      },
+      {
+        name: "Spring® AMQP",
+        versions: "2.4.17",
+        link: "./spring/",
+      },
+      {
+        name: "Spring® Batch",
+        versions: "4.3.10",
+        link: "./spring/",
+      },
+      {
+        name: "Spring® Boot",
+        versions: "2.4 | 2.6 | 2.7 | 3.1",
+        link: "./spring/",
+        detailsHash: "Boot",
+      },
+      {
+        name: "Spring® Cloud",
+        versions: "3.1.9",
+        link: "./spring/",
+      },
+      {
+        name: "Spring® Data",
+        versions: "2021.2",
+        link: "./spring/",
+        detailsHash: "Data",
+      },
+      {
+        name: "Spring® Security",
+        versions: "5.7 | 5.8 | 6.1",
+        link: "./spring/",
+        detailsHash: "Security",
+      },
+      {
+        name: "Spring® Security OAuth",
+        versions: "1.1.1",
+        link: "./spring/",
+      },
+      {
+        name: "Spring® Web Services",
+        versions: "3.1.8",
+        link: "./spring/",
+      },
+      {
+        name: "Spring® Integration",
+        versions: "5.5.20",
+        link: "./spring/",
+      },
+      {
+        name: "Spring® HATEOAS",
+        versions: "1.5.6",
+        link: "./spring/",
+      },
+      {
+        name: "Spring® LDAP",
+        versions: "2.4.1 | 2.4.4",
+        link: "./spring/",
+        detailsHash: "LDAP",
+      },
+      {
+        name: "Spring® GraphQL",
+        versions: "1.0.6",
+        link: "./spring/",
+      },
+      {
+        name: "Spring® Retry",
+        versions: "1.3.4",
+        link: "./spring/",
+      },
+      {
+        name: "Spring® Plugin",
+        versions: "2.0.0",
+        link: "./spring/",
+      },
+      {
+        name: "Spring® Web Flow",
+        versions: "2.3.1 | 2.3.3",
         link: "./spring/",
       },
       {
