@@ -63,7 +63,7 @@ Add the `els_php` Composer repository either via CLI or by editing `composer.jso
 Install the TuxCare-maintained Zend Framework 1 release that matches your project:
 
 <CodeTabs :tabs="[
-  { title: 'Composer CLI', content: `composer require zendframework/zf1:1.12.10-p1+tuxcare` },
+  { title: 'Composer CLI', content: `composer require zendframework/zendframework1:1.12.10-p1+tuxcare` },
   { title: 'composer.json', content: zf1json }
 ]" />
 
@@ -113,7 +113,7 @@ This allows Composer to fall back to Packagist for packages not available in the
 
 VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives and helps prioritize real risks.
 
-TuxCare provides VEX for Zend Framework 1 ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_php/zendframework-zf1/](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/zendframework-zf1/)
+TuxCare provides VEX for Zend Framework 1 ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_php/zendframework-zendframework1/](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/zendframework-zendframework1/)
 
 ## How to Upgrade to a Newer Version
 
@@ -122,7 +122,7 @@ If you have already installed a TuxCare Zend Framework 1 package and want to upg
 <CodeWithCopy>
 
 ```text
-composer require zendframework/zf1:VERSION-pN+tuxcare
+composer require zendframework/zendframework1:VERSION-pN+tuxcare
 ```
 
 </CodeWithCopy>
@@ -194,7 +194,7 @@ const cli =
 const zf1json =
 `{
     "require": {
-        "zendframework/zf1": "1.12.10-p1+tuxcare"
+        "zendframework/zendframework1": "1.12.10-p1+tuxcare"
     }
 }`
 
