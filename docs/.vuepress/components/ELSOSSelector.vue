@@ -1,7 +1,7 @@
 <template>
   <div class="os-selector">
     <div class="os-selector-heading">
-      <h4>Which OS are you running?</h4>
+      <h3>Which OS are you running?</h3>
       <p>Select your operating system to get started with ELS.</p>
     </div>
 
@@ -13,7 +13,7 @@
         class="os-card"
       >
         <span class="os-card-icon">
-          <img :src="os.icon" :alt="os.name" />
+          <img :src="os.icon" alt="" aria-hidden="true" />
         </span>
         <span class="os-card-name">{{ os.name }}</span>
         <span class="os-card-arrow">&rarr;</span>
@@ -101,7 +101,7 @@ const operatingSystems = [
   margin-bottom: 1.25rem;
 }
 
-.os-selector-heading h4 {
+.os-selector-heading h3 {
   font-size: 1.3rem;
   font-weight: 700;
   margin-bottom: 0.25rem;
@@ -189,7 +189,7 @@ const operatingSystems = [
 }
 
 .os-selector-footer a {
-  color: #007bff;
+  color: #0B5CAD;
   text-decoration: none;
 }
 

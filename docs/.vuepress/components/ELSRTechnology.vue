@@ -1,6 +1,6 @@
 <template>
   <div class="heading text-center">
-    <h4>Supported Runtimes for ELS</h4>
+    <h2>Supported Runtimes for ELS</h2>
   </div>
 
   <div class="sp-sorting runtimes-sorting">
@@ -19,7 +19,7 @@
         :class="['item', { clickable: runtime.link }]"
       >
         <span class="item-l">
-          <img :src="runtime.icon" :alt="runtime.name" />
+          <img :src="runtime.icon" alt="" aria-hidden="true" />
           {{ runtime.name }}
         </span>
         <span class="item-r">
@@ -36,18 +36,18 @@
 
   <div class="txc-logos-list">
     <div class="heading text-center">
-      <h4>We Keep Your Runtimes Secure on Enterprise Linux, <br>Windows, and Debian-Based Operating Systems</h4>
+      <h3>We Keep Your Runtimes Secure on Enterprise Linux, <br>Windows, and Debian-Based Operating Systems</h3>
     </div>
 
     <div class="list">
       <ul>
         <li v-for="(os, index) in operatingSystems" :key="index">
           <a v-if="os.link" :href="os.link">
-            <span class="thumb"><img :src="os.icon" :alt="os.name" /></span>
+            <span class="thumb"><img :src="os.icon" alt="" aria-hidden="true" /></span>
             <span class="name" v-html="os.name"></span>
           </a>
           <template v-else>
-            <span class="thumb"><img :src="os.icon" :alt="os.name" /></span>
+            <span class="thumb"><img :src="os.icon" alt="" aria-hidden="true" /></span>
             <span class="name" v-html="os.name"></span>
           </template>
         </li>

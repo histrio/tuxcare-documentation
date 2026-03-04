@@ -1,6 +1,6 @@
 <template>
   <div class="heading text-center">
-    <h4>Available Guides for ELS for Libraries</h4>
+    <h2>Available Guides for ELS for Libraries</h2>
     <p>If something's missing or you have questions, contact <a href="mailto:sales@tuxcare.com">sales@tuxcare.com</a>.</p>
   </div>
 
@@ -29,7 +29,7 @@
             :class="{ active: activeTab === index }"
             @click="activeTab = index"
           >
-            <img :src="item.ecosystemIcon" class="ecosystem-icon" />
+            <img :src="item.ecosystemIcon" class="ecosystem-icon" alt="" aria-hidden="true" />
             {{ item.ecosystem }}
           </li>
         </ul>

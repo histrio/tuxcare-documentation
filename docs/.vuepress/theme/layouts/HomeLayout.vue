@@ -1,7 +1,9 @@
 <template>
   <div class="theme-container">
     <HeaderLayout :isMobileWidth="isMobileWidth"/>
-    <DocsCardsWrapper/>
+    <main id="main-content" role="main">
+      <DocsCardsWrapper/>
+    </main>
     <Footer/>
   </div>
 </template>

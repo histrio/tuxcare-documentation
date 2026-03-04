@@ -32,7 +32,29 @@ export default defineClientConfig({
         Chat,
         GlobalCopyCode,
     ],
-    async enhance({ app }) {
+    async enhance({ app, router }) {
+        const applyA11yRuntimeFixes = () => {
+            // VuePress header anchors are decorative links; remove them from keyboard tab order.
+            document.querySelectorAll('a.header-anchor[aria-hidden="true"]').forEach((el) => {
+                el.setAttribute('tabindex', '-1');
+            });
+
+            // Make horizontally scrollable code blocks keyboard focusable.
+            document.querySelectorAll('div[class*="language-"] > pre').forEach((pre) => {
+                const preElement = pre;
+                if (!preElement.hasAttribute('tabindex')) {
+                    preElement.setAttribute('tabindex', '0');
+                }
+            });
+
+            document.querySelectorAll('.code-block-wrapper > pre').forEach((pre) => {
+                const preElement = pre;
+                if (!preElement.hasAttribute('tabindex')) {
+                    preElement.setAttribute('tabindex', '0');
+                }
+            });
+        };
+
         app.config.globalProperties.$eventBus = mitt();
         app.component("CodeTabs", CodeTabs);
         app.component("CodeWithCopy", CodeWithCopy);
@@ -45,6 +67,13 @@ export default defineClientConfig({
         app.component("ELSSteps", ELSSteps);
         app.component("WhatsNext", WhatsNext);
         app.component("ELSApplication", ELSApplication);
+
+        if (!__VUEPRESS_SSR__) {
+            setTimeout(applyA11yRuntimeFixes, 0);
+            router.afterEach(() => {
+                setTimeout(applyA11yRuntimeFixes, 0);
+            });
+        }
     },
     layouts: {
         Layout,

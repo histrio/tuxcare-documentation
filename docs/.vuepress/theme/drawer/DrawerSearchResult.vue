@@ -88,12 +88,14 @@ const showAllHiddenResult = () => {
 };
 
 const getTitleForArticle = (title) => {
-  let sliced = title.split("->").map((part) => part.trim());
+  const safeTitle = typeof title === "string" ? title : "Documentation";
+  let sliced = safeTitle.split("->").map((part) => part.trim());
   return sliced.pop();
 };
 
 const getBreadcrumbsForArticle = (title) => {
-  let sliced = title.split("->").map((part) => part.trim());
+  const safeTitle = typeof title === "string" ? title : "Documentation";
+  let sliced = safeTitle.split("->").map((part) => part.trim());
   sliced.pop();
   return sliced.join(" > ");
 };

@@ -3,13 +3,21 @@
     <input type="text" 
            :value="modelValue"
            @input="$emit('update:modelValue', $event.target.value)"
+           @keydown.enter.prevent="performSearch"
            id="algolia-search-input"
            :placeholder="placeholder"
            :class="activeSearchClass"
            maxlength="100"
     />
     <div :class="activeSearchIconClass">
-      <img v-if="!loading" @click="performSearch" alt="search icon" :src="withBase(activeSearchIcon)"/>
+      <button
+        v-if="!loading"
+        type="submit"
+        class="search-submit-btn"
+        aria-label="Submit search"
+      >
+        <img alt="" :src="withBase(activeSearchIcon)"/>
+      </button>
       <div v-if="loading" class="spinner"></div>
     </div>
   </form>
@@ -69,7 +77,11 @@ const placeholder = computed(() => {
 
 function parseDocs(api_response) {
   return api_response.tuxcare_docs.map((doc) => {
-    const titleParts = doc.title.split("->").map((part) => part.trim());
+    const safeTitle = typeof doc?.title === "string" && doc.title.trim()
+      ? doc.title
+      : "Documentation";
+    const safeUrl = typeof doc?.url === "string" ? doc.url : "";
+    const titleParts = safeTitle.split("->").map((part) => part.trim());
 
     const hierarchy = {
       lvl0: titleParts[0] || null,
@@ -81,7 +93,7 @@ function parseDocs(api_response) {
       lvl6: null,
     };
 
-    const anchor = doc.url.split("#")[1] || "";
+    const anchor = safeUrl.includes("#") ? safeUrl.split("#")[1] || "" : "";
 
     const objectID = doc.id;
 
@@ -89,8 +101,8 @@ function parseDocs(api_response) {
       anchor,
       content: null,
       hierarchy,
-      url: doc.url,
-      title: doc.title,
+      url: safeUrl,
+      title: safeTitle,
       preview: doc.preview,
       category: doc.category,
       section: doc.section,
@@ -209,6 +221,16 @@ watch(
   display: flex;
   justify-content center
   align-content center
+
+.search-submit-btn
+  background none
+  border none
+  padding 0
+  margin 0
+  cursor pointer
+  display flex
+  align-items center
+  justify-content center
 
 @media (max-width: $mobileBreakpoint)
   .drawer-header__search

@@ -1,6 +1,6 @@
 <template>
   <div class="heading text-center">
-    <h4>Supported Applications for ELS</h4>
+    <h2>Supported Applications for ELS</h2>
     <p>If something's missing or you have questions, contact <a href="mailto:sales@tuxcare.com">sales@tuxcare.com</a>.</p>
   </div>
 
@@ -20,7 +20,7 @@
         :class="['item', { clickable: app.link }]"
       >
         <span class="item-l">
-          <img :src="app.icon" :alt="app.name" />
+          <img :src="app.icon" alt="" aria-hidden="true" />
           {{ app.name }}
         </span>
         <span class="item-r">{{ app.versions }}</span>
