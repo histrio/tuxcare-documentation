@@ -18,7 +18,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, nextTick, defineProps } from "vue";
+import { ref, onMounted, nextTick } from "vue";
 
 const props = defineProps({
   versions: {

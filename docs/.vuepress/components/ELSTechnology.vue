@@ -44,14 +44,13 @@
             >
               <a
                 v-if="project.link"
-                :href="project.link"
-                class="project-row"
+                :href="getProjectHref(project)"
+                class="project-row clickable"
               >
                 <span class="project-name">{{ project.name }}</span>
                 <span class="project-versions">
                   <span v-if="project.detailsHash">
-                    versions vary per module —
-                    <span class="project-details-link">details</span>
+                    versions vary per module — details
                   </span>
                   <span v-else>{{ project.versions }}</span>
                 </span>
@@ -1230,6 +1229,13 @@ const filteredData = computed(() => {
 function getFilteredProjects(item) {
   return item.projects;
 }
+
+function getProjectHref(project) {
+  if (project.detailsHash) {
+    return `${project.link}#${project.detailsHash}`;
+  }
+  return project.link;
+}
 </script>
 
 <style scoped>
@@ -1357,23 +1363,26 @@ function getFilteredProjects(item) {
   transition: all 0.2s ease;
   text-decoration: none;
   color: inherit;
-  cursor: pointer;
   border-radius: 6px;
 }
 
-a.project-row:hover {
+.project-row.clickable {
+  cursor: pointer;
+}
+
+a.project-row.clickable:hover {
   background: #FEF6F2;
   box-shadow: 0 2px 8px rgba(244, 130, 67, 0.1);
 }
 
-a.project-row:hover .project-arrow {
+a.project-row.clickable:hover .project-arrow {
   opacity: 1;
   transform: translateX(0);
   color: #F48243;
 }
 
-a.project-row:hover .project-name,
-a.project-row:hover .project-versions {
+a.project-row.clickable:hover .project-name,
+a.project-row.clickable:hover .project-versions {
   color: #F48243;
 }
 

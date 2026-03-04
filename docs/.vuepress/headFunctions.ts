@@ -13,6 +13,47 @@ export default [
   ],
   [
     "script",
+    {
+      type: "application/ld+json",
+      id: "tc-org-schema",
+    },
+    JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: "TuxCare",
+      url: "https://tuxcare.com",
+      logo: "https://tuxcare.com/wp-content/uploads/2022/11/TuxCare-logo.svg",
+      sameAs: [
+        "https://www.linkedin.com/company/tuxcare",
+        "https://www.youtube.com/@TuxCare",
+      ],
+    }),
+  ],
+  [
+    "script",
+    {
+      type: "application/ld+json",
+      id: "tc-website-schema",
+    },
+    JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: "TuxCare Documentation",
+      url: "https://docs.tuxcare.com",
+      publisher: {
+        "@type": "Organization",
+        name: "TuxCare",
+        url: "https://tuxcare.com",
+      },
+      potentialAction: {
+        "@type": "SearchAction",
+        target: "https://docs.tuxcare.com/?q={search_term_string}",
+        "query-input": "required name=search_term_string",
+      },
+    }),
+  ],
+  [
+    "script",
     {},
     `
       (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

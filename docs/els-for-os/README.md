@@ -4,6 +4,8 @@ TuxCare's [Endless Lifecycle Support (ELS) for OS](https://tuxcare.com/extended-
 
 Our ELS service is designed to provide solutions for organizations that are not yet ready to migrate to newer versions and that are seeking long-term stability for their out-of-date operating systems. The service coverage includes updates for the Linux kernel and a list of essential packages that are integral to server operations.
 
+## Supported Operating Systems
+
 <ELSOSSelector />
 
 ## Support Duration

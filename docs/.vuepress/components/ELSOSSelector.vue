@@ -69,7 +69,7 @@ const operatingSystems = [
     link: "./oracle-linux-7-els",
   },
   {
-    name: "RHEL 7",
+    name: "Red Hat Enterprise Linux 7",
     icon: "/images/redhat.webp",
     link: "./red-hat-enterprise-linux-7-els",
   },

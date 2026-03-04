@@ -1,5 +1,12 @@
 <template>
-  <div class="docs-card-container" @click="goTo()">
+  <div
+    class="docs-card-container"
+    role="link"
+    tabindex="0"
+    @click="goTo()"
+    @keydown.enter.prevent="goTo()"
+    @keydown.space.prevent="goTo()"
+  >
     <div class="docs-card-container__header">
       <img width="20" height="20" :src="withBase('collections-bookmark.svg')" alt="document icon">
       <p v-if="card.title" class="docs-card-container__header-paragraph">{{ card.title }}</p>
@@ -46,6 +53,10 @@ const goTo = () => router.push(props.card?.link)
   &:hover .docs-card-container__footer-arrow
     opacity 1
     transform translateX(0)
+
+  &:focus-visible
+    outline 2px solid $buttonColorBg
+    outline-offset 2px
 
   &__header
     display: flex;
