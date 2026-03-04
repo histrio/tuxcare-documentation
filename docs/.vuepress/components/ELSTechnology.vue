@@ -50,7 +50,7 @@
                 <span class="project-name">{{ project.name }}</span>
                 <span class="project-versions">
                   <span v-if="project.detailsHash">
-                    versions vary per module — details
+                    versions vary per module
                   </span>
                   <span v-else>{{ project.versions }}</span>
                 </span>

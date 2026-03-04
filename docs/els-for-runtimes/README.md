@@ -58,4 +58,4 @@ TuxCare provides technical support according to the:
 * Standard [support policy](https://tuxcare.com/TuxCare-support-policy.pdf) **(excluding .NET)**.
 * The **.NET-specific** [support policy](https://tuxcare.com/TuxCare-els-windows-support-policy.pdf).
 
-It delivers 24/7/365 access to the TuxCare’s support team through the [TuxCare Support Portal](https://tuxcare.com/support-portal/) and to the TuxCare’s online knowledge base.
+It delivers 24/7/365 access to TuxCare’s support team through the [TuxCare Support Portal](https://tuxcare.com/support-portal/) and to TuxCare’s online knowledge base.

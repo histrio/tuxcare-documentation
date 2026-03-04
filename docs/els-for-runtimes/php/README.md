@@ -88,7 +88,7 @@ Below are tables with information about the time of security support from the ve
 The following steps are provided for both **RPM-based** (CentOS, CentOS Stream, CloudLinux, Oracle Linux, AlmaLinux, Amazon Linux 2, etc) and **DEB-based** (Debian, Ubuntu) systems. Please select the appropriate tab for your distribution.
 
 :::tip
-**Amazon Linux 2-specific preprequisities**. Before installing `alt-php`, make sure `libvpx` is installed. Amazon Linux 2 provides two version of libvpx: 1.9 (the default) and 1.3. `alt-php` requires 1.3 for compatibility with EL 7 systems like CentOS 7:
+**Amazon Linux 2-specific prerequisites**. Before installing `alt-php`, make sure `libvpx` is installed. Amazon Linux 2 provides two versions of libvpx: 1.9 (the default) and 1.3. `alt-php` requires 1.3 for compatibility with EL 7 systems like CentOS 7:
 
 <CodeWithCopy>
 
@@ -238,7 +238,7 @@ sudo yum install libvpx-1.3.0
    WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
    ```
 
-   The `apt` commandline is designed as an end-user tool and it may change behavior between versions. 
+   The `apt` command line is designed as an end-user tool and it may change behavior between versions. 
    While it tries not to break backward compatibility this is not guaranteed either if a change seems beneficial for interactive use.
    All features of `apt` are available in dedicated APT tools like `apt-get` and `apt-cache` as well. 
    `apt` just changes the default value of some options. Therefore, we recommend using these commands (potentially with some additional options enabled) as they keep backward compatibility as much as possible.
@@ -1168,7 +1168,7 @@ TuxCare provides a Windows Installer that allows you to install and manage ELS P
 1. Follow the instructions provided by [sales@tuxcare.com](mailto:sales@tuxcare.com) to create your secure download link.
 2. Use this link to download the latest version of the installer.
 3. Launch the installer. After the first run, it will appear under **Settings > Apps**.
-4. Provide you access credentials:
+4. Provide your access credentials:
    *  **Register** - if this is your first time using the installer or you're installing on a new system, choose the "Register" option. You’ll be asked to provide your license key or authentication token. You can also save your token for future use.
     
    ![image](/images/php-installer-token.webp)
@@ -1310,7 +1310,7 @@ You can integrate PHP with other tools, for example, IIS or WordPress. For furth
 
 ### Uninstallation
 
-#### Uninstall a PHP version, 
+#### Uninstall a PHP version
 
 To uninstall a PHP version:
 
@@ -1384,10 +1384,10 @@ OVAL can be used with the OpenSCAP tool.
 Common Security Advisory Framework (CSAF) is a machine-readable format, standardized by [OASIS](https://www.csaf.io/). It's designed to enable consistent and automated sharing of security advisory information. 
 
 TuxCare publishes the following CSAF files at [security.tuxcare.com](https://security.tuxcare.com/csaf/v2/):
-* CSAF Vulnerability Exploitability eXchange (VEX) files – indexed by CVE VEX documents are available in CSAF 2.0 format, including past CVEs.
+* CSAF Vulnerability Exploitability eXchange (VEX) files – VEX documents, indexed by CVE, are available in CSAF 2.0 format, including past CVEs.
 * CSAF Security Advisory files – advisories are published in CSAF 2.0 format and indexed by Security Advisory.
 
-`provider-matadata.json` contains information for tools and users about where and how to retrieve CSAF advisories published by TuxCare. By OASIS requirements, it is available at two URLs (both serving the same file):
+`provider-metadata.json` contains information for tools and users about where and how to retrieve CSAF advisories published by TuxCare. By OASIS requirements, it is available at two URLs (both serving the same file):
 * [csaf.data.security.tuxcare.com](https://csaf.data.security.tuxcare.com/)
 * [tuxcare.com/.well-known/csaf/provider-metadata.json](https://tuxcare.com/.well-known/csaf/provider-metadata.json)
 
@@ -1396,9 +1396,9 @@ TuxCare publishes the following CSAF files at [security.tuxcare.com](https://sec
 Currently, we provide CSAF data for the following OS versions:
 
 * EL 7 (CentOS, CloudLinux, Oracle Linux, Amazon Linux 2, etc.): [security.tuxcare.com/csaf/v2/els_alt_php/el7/](https://security.tuxcare.com/csaf/v2/els_alt_php/el7/)
-* EL 8 (AlmaLinux, CentOS,CentOS Stream, CloudLinux, Oracle Linux, etc.): [security.tuxcare.com/csaf/v2/els_alt_php/el8/](https://security.tuxcare.com/csaf/v2/els_alt_php/el8/)
+* EL 8 (AlmaLinux, CentOS, CentOS Stream, CloudLinux, Oracle Linux, etc.): [security.tuxcare.com/csaf/v2/els_alt_php/el8/](https://security.tuxcare.com/csaf/v2/els_alt_php/el8/)
 * EL 9 (AlmaLinux, CentOS, CloudLinux, etc.): [security.tuxcare.com/csaf/v2/els_alt_php/el9/](https://security.tuxcare.com/csaf/v2/els_alt_php/el9/)
-* EL 10 (AlmaLinux, CloudLinux, Oracle Linix, etc.): [security.tuxcare.com/csaf/v2/els_alt_php/el10/](https://security.tuxcare.com/csaf/v2/els_alt_php/el10/)
+* EL 10 (AlmaLinux, CloudLinux, Oracle Linux, etc.): [security.tuxcare.com/csaf/v2/els_alt_php/el10/](https://security.tuxcare.com/csaf/v2/els_alt_php/el10/)
 * Ubuntu 16.04: [security.tuxcare.com/csaf/v2/els_alt_php/ubuntu16.04/](https://security.tuxcare.com/csaf/v2/els_alt_php/ubuntu16.04/)
 * Ubuntu 18.04: [security.tuxcare.com/csaf/v2/els_alt_php/ubuntu18.04/](https://security.tuxcare.com/csaf/v2/els_alt_php/ubuntu18.04/)
 * Ubuntu 20.04: [security.tuxcare.com/csaf/v2/els_alt_php/ubuntu20.04/](https://security.tuxcare.com/csaf/v2/els_alt_php/ubuntu20.04/)
@@ -1418,7 +1418,7 @@ The CSAF files are published in JSON format which is easy to parse and integrate
 Currently, we provide errata for the following OS versions:
 
 * EL 7 (CentOS, CloudLinux, Oracle Linux, Amazon Linux 2, etc.): [security.tuxcare.com/errata/els_alt_php/el7/](https://security.tuxcare.com/errata/els_alt_php/el7/)
-* EL 8 (AlmaLinux, CentOS, CentOS Stream,  CloudLinux, Oracle Linux, etc.): [security.tuxcare.com/errata/els_alt_php/el8/](https://security.tuxcare.com/errata/els_alt_php/el8/)
+* EL 8 (AlmaLinux, CentOS, CentOS Stream, CloudLinux, Oracle Linux, etc.): [security.tuxcare.com/errata/els_alt_php/el8/](https://security.tuxcare.com/errata/els_alt_php/el8/)
 * EL 9 (AlmaLinux, CentOS, CloudLinux, etc.): [security.tuxcare.com/errata/els_alt_php/el9/](https://security.tuxcare.com/errata/els_alt_php/el9/)
 * EL 10 (AlmaLinux, CloudLinux, Oracle Linux, etc.): [security.tuxcare.com/errata/els_alt_php/el10/](https://security.tuxcare.com/errata/els_alt_php/el10/)
 * Ubuntu 16.04: [security.tuxcare.com/errata/els_alt_php/ubuntu16.04/](https://security.tuxcare.com/errata/els_alt_php/ubuntu16.04/)
@@ -1434,7 +1434,7 @@ Currently, we provide errata for the following OS versions:
 ## RSS Feed
 
 * EL 7 (CentOS, CloudLinux, Oracle Linux, Amazon Linux 2, etc.): [cve.tuxcare.com/rss_feed/els-alt-php/releases/el7](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/el7)
-* EL 8 (AlmaLinux, CentOS, CentOS Stream,  CloudLinux, Oracle Linux, etc.): [cve.tuxcare.com/rss_feed/els-alt-php/releases/el8](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/el8)
+* EL 8 (AlmaLinux, CentOS, CentOS Stream, CloudLinux, Oracle Linux, etc.): [cve.tuxcare.com/rss_feed/els-alt-php/releases/el8](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/el8)
 * EL 9 (AlmaLinux, CentOS, CloudLinux, etc.): [cve.tuxcare.com/rss_feed/els-alt-php/releases/el9](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/el9)
 * EL 10 (AlmaLinux, CloudLinux, Oracle Linux, etc.): [cve.tuxcare.com/rss_feed/els-alt-php/releases/el10/](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/el10/)
 * Ubuntu 16.04: [cve.tuxcare.com/rss_feed/els-alt-php/releases/ubuntu16.04/](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/ubuntu16.04/)
@@ -1600,7 +1600,7 @@ The PHP core includes many built-in extensions that provide basic functionality,
 
   | |  |  |  | |
   |-|-|-|-|-|
-  |leveldb <br> sourceguardian <br> ffmpeg* <br> amqp <br> clos_ssa* <br> gearman <br> ioncube_ loader <br> jsmin <br> mailparse <br> mcrypt <br> memcache <br> psr <br> rrd <br> solr <br> ssh2 <br> tideways_xhprof <br> yaz <br> zmq <br> apcu <br> bcmath <br> brotli <br> bz2 <br> calendar <br> core <br> ctype <br> curl <br> date <br> dba <br> dbase <br> dom <br> eio <br> enchant <br> exif <br> fileinfo <br> filter <br> ftp <br> gd <br> gender <br> geoip <br> geos | gettext <br> gmagick <br> gmp <br> gnupg <br> grpc <br> hash <br> http <br> iconv <br> igbinary <br> imagick <br> imap <br> inotify <br> intl <br> json <br> ldap <br> libxml <br> luasandbox* <br> lzf <br> mbstring <br> memcached <br> mongodb | mysqli <br> mysqlnd <br> nd_mysqli <br> nd_pdo_mysql <br> newrelic <br> snuffleupagus <br> oauth <br> oci8 <br> odbc <br> opcache <br> openssl <br> pcntl <br> pcre <br> pdf <br> pdo <br> pdo_dblib <br> pdo_firebird <br> pdo_mysql <br> pdo_oci <br> pdo_odbc <br> pdo_pgsql <br> vld <br> pdo_sqlite <br> pdo_sqlsrv | pgsql <br> phalcon4 <br> phar <br> posix <br> propro <br> pspell <br> raphf <br> readline <br> redis <br> reflection <br>phalcon5 <br> session <br> shmop <br> simplexml <br> snmp <br> soap <br> sockets <br> sodium <br> spl <br> sqlite3 <br> sqlsrv <br> standard | stats <br> swoole <br> sysvmsg <br> sysvsem <br> sysvshm <br> tidy <br> timezonedb <br> tokenizer <br> trader <br> xray <br> uploadprogress <br> uuid <br> vips* <br> xdebug <br> xml <br> xmlreader <br> xmlrpc <br> xmlwriter <br> xsl <br> yaml <br> zip <br> zlib |
+  |leveldb <br> sourceguardian <br> ffmpeg* <br> amqp <br> clos_ssa* <br> gearman <br> ioncube_loader <br> jsmin <br> mailparse <br> mcrypt <br> memcache <br> psr <br> rrd <br> solr <br> ssh2 <br> tideways_xhprof <br> yaz <br> zmq <br> apcu <br> bcmath <br> brotli <br> bz2 <br> calendar <br> core <br> ctype <br> curl <br> date <br> dba <br> dbase <br> dom <br> eio <br> enchant <br> exif <br> fileinfo <br> filter <br> ftp <br> gd <br> gender <br> geoip <br> geos | gettext <br> gmagick <br> gmp <br> gnupg <br> grpc <br> hash <br> http <br> iconv <br> igbinary <br> imagick <br> imap <br> inotify <br> intl <br> json <br> ldap <br> libxml <br> luasandbox* <br> lzf <br> mbstring <br> memcached <br> mongodb | mysqli <br> mysqlnd <br> nd_mysqli <br> nd_pdo_mysql <br> newrelic <br> snuffleupagus <br> oauth <br> oci8 <br> odbc <br> opcache <br> openssl <br> pcntl <br> pcre <br> pdf <br> pdo <br> pdo_dblib <br> pdo_firebird <br> pdo_mysql <br> pdo_oci <br> pdo_odbc <br> pdo_pgsql <br> vld <br> pdo_sqlite <br> pdo_sqlsrv | pgsql <br> phalcon4 <br> phar <br> posix <br> propro <br> pspell <br> raphf <br> readline <br> redis <br> reflection <br>phalcon5 <br> session <br> shmop <br> simplexml <br> snmp <br> soap <br> sockets <br> sodium <br> spl <br> sqlite3 <br> sqlsrv <br> standard | stats <br> swoole <br> sysvmsg <br> sysvsem <br> sysvshm <br> tidy <br> timezonedb <br> tokenizer <br> trader <br> xray <br> uploadprogress <br> uuid <br> vips* <br> xdebug <br> xml <br> xmlreader <br> xmlrpc <br> xmlwriter <br> xsl <br> yaml <br> zip <br> zlib |
   </div>
 
   <sup>*</sup> CentOS 7, CloudLinux 7, etc.
@@ -1628,7 +1628,7 @@ The PHP core includes many built-in extensions that provide basic functionality,
 
   | |  |  |  | |
   |-|-|-|-|-|
-  |amqp <br> apcu <br> bcmath <br> brotli <br> bz2 <br> calendar <br> clos_ssa*** <br> Core <br> ctype <br> curl <br> date <br> dba <br> dbase <br> dom <br> enchant <br> exif <br> ffi** <br> fileinfo <br> filter <br> ftp | gd <br> geoip <br> gearman <br> gettext <br> gmagick <br> gmp <br> gnupg** <br> grpc <br> hash <br> ioncube_loader <br> iconv <br> igbinary <br> imagick <br> imap <br> inotify <br> intl <br> jsmin <br> json <br> ldap <br> libxml <br> lzf <br> mailparse <br> mbstring <br> mcrypt | memcache <br> memcached <br> mongodb <br> mysqli <br> mysqlnd <br> nd_mysqli <br> nd_pdo_mysql <br> newrelic <br> oauth <br> oci8 <br> odbc <br> opcache <br> openssl <br> pcntl <br> pcre <br> pdf <br> pdo <br> pdo_dblib <br> pdo_mysql <br> pdo_oci <br> pdo_odbc <br> phalcon5 <br> pdo_pgsql <br> pdo_firebird <br> pdo_sqlite <br> pdo_sqlsr | pgsql <br> phar <br> posix <br> process <br> pspell <br> psr <br> rrd <br> raphf <br> readline <br> redis <br> Reflection <br> session <br> shmop <br> SimpleXML v snmp <br> solr <br> sourceguardian <br> soap <br> sockets <br> sodium <br> SPL <br> sqlite3 <br> sqlsrv <br> ssh2 <br> standard <br> swoole | sysvmsg <br> sysvsem <br> sysvshm <br> tideways_xhprof <br> tidy <br> timezonedb <br> tokenizer <br> trader <br> uploadprogress <br> uuid <br> vips* <br> xdebug <br> xml <br> xmlreader <br> xmlrpc** <br> xmlwriter <br> xsl <br> yaf <br> yaml <br> zip <br> zlib <br> zmq <br> xray |
+  |amqp <br> apcu <br> bcmath <br> brotli <br> bz2 <br> calendar <br> clos_ssa*** <br> Core <br> ctype <br> curl <br> date <br> dba <br> dbase <br> dom <br> enchant <br> exif <br> ffi** <br> fileinfo <br> filter <br> ftp | gd <br> geoip <br> gearman <br> gettext <br> gmagick <br> gmp <br> gnupg** <br> grpc <br> hash <br> ioncube_loader <br> iconv <br> igbinary <br> imagick <br> imap <br> inotify <br> intl <br> jsmin <br> json <br> ldap <br> libxml <br> lzf <br> mailparse <br> mbstring <br> mcrypt | memcache <br> memcached <br> mongodb <br> mysqli <br> mysqlnd <br> nd_mysqli <br> nd_pdo_mysql <br> newrelic <br> oauth <br> oci8 <br> odbc <br> opcache <br> openssl <br> pcntl <br> pcre <br> pdf <br> pdo <br> pdo_dblib <br> pdo_mysql <br> pdo_oci <br> pdo_odbc <br> phalcon5 <br> pdo_pgsql <br> pdo_firebird <br> pdo_sqlite <br> pdo_sqlsrv | pgsql <br> phar <br> posix <br> process <br> pspell <br> psr <br> rrd <br> raphf <br> readline <br> redis <br> Reflection <br> session <br> shmop <br> SimpleXML v snmp <br> solr <br> sourceguardian <br> soap <br> sockets <br> sodium <br> SPL <br> sqlite3 <br> sqlsrv <br> ssh2 <br> standard <br> swoole | sysvmsg <br> sysvsem <br> sysvshm <br> tideways_xhprof <br> tidy <br> timezonedb <br> tokenizer <br> trader <br> uploadprogress <br> uuid <br> vips* <br> xdebug <br> xml <br> xmlreader <br> xmlrpc** <br> xmlwriter <br> xsl <br> yaf <br> yaml <br> zip <br> zlib <br> zmq <br> xray |
   </div>
 
   <sup>*</sup> CentOS 7, CloudLinux 7, etc.

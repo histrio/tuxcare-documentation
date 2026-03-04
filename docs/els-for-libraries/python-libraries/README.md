@@ -75,7 +75,7 @@ pip install --upgrade \
 </CodeWithCopy>
 
 **Replace:**
-* `<username>` and `<password>` - with the credentials provided by sales.  
+* `<username>` and `<password>` with the credentials provided by sales.  
 * `<package>` - with the Python package name (e.g., `certifi`).
 
 #### Option 2: Configure `pip` to Use the ELS Repository (Full Replacement)
@@ -103,7 +103,7 @@ This method is recommended if you want to use only ELS-patched Python packages f
 
    </CodeWithCopy>
 
-   **Replace `<package>` with the python package name, for example, certifi.**
+   **Replace `<package>` with the Python package name, for example, certifi.**
 
    Or install a specific patched TuxCare version, for example:
 
@@ -146,7 +146,7 @@ To upgrade to a newer TuxCare release (e.g., from `version.post1+tuxcare` to `ve
 
 ## Vulnerability Exploitability eXchange (VEX) 
 
-VEX is a machine-readable format that tells you if a known vulnerability and is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
+VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
 
 TuxCare provides VEX for Python Libraries ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_python/](https://security.tuxcare.com/vex/cyclonedx/els_lang_python/).
 
