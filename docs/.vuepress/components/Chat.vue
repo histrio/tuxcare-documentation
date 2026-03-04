@@ -1,5 +1,5 @@
 <template>
-  <div id="bot-ui">
+  <aside id="bot-ui" role="complementary" aria-label="AI assistant chat">
     <!-- Conditionally show toggle button with highlight -->
     <div class="toggle-container" v-show="!(isMobile && showChat)">
       <div v-if="shouldShowTooltip" class="pulse-ring"></div>
@@ -75,7 +75,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </aside>
 </template>
 
 <script>

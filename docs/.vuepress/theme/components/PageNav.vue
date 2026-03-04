@@ -4,14 +4,18 @@
         v-if="prev"
         class="nav-arrow left"
         :to="prev.path"
+        :aria-label="`Previous page: ${prev.title || 'previous'}`"
     >
+      <span class="sr-only">Previous</span>
     </router-link>
 
     <router-link
         v-if="next"
         class="nav-arrow right"
         :to="next.path"
+        :aria-label="`Next page: ${next.title || 'next'}`"
     >
+      <span class="sr-only">Next</span>
     </router-link>
   </div>
 </template>
@@ -85,6 +89,16 @@ const find = (page, items, offset) => {
   position absolute
   right 0
   top 1.875rem
+
+.sr-only
+  position absolute
+  width 1px
+  height 1px
+  padding 0
+  margin -1px
+  overflow hidden
+  clip rect(0, 0, 0, 0)
+  border 0
 
 @media (max-width: $mobileBreakpoint)
   .page-nav

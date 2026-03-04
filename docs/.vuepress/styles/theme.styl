@@ -88,7 +88,10 @@ blockquote
   margin-left 0
   padding-left 1rem
 
-ul, ol
+ul
+  padding-left 1.2em
+
+ol
   padding-left 1.2em
 
 strong
@@ -196,7 +199,7 @@ th, td
   font-size 12px
 
 :not(.language-text) > code
-  color: #4b6c89
+  color: #1f3f5b
   padding: 0.25rem 0.5rem
   margin: 0
   font-size: .85em
@@ -241,6 +244,26 @@ badge[type="danger"]
 
   &:before
     content: attr(text);
+
+// Global copy button for code blocks
+.global-copy-btn
+  position absolute
+  top 0.5rem
+  right 0.5rem
+  background none
+  border none
+  cursor pointer
+  padding 0.2rem
+  z-index 10
+  line-height 0
+  svg
+    fill #ccc
+    width 20px
+    height 20px
+    transition fill 0.3s
+
+  &:hover svg
+    fill #1994f9
 
 @media (max-width: $mobileBreakpoint)
   .content:not(.custom)

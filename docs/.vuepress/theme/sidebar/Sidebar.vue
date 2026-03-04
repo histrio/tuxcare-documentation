@@ -1,5 +1,5 @@
 <template>
-  <div class="sidebar">
+  <aside class="sidebar" aria-label="Documentation sidebar">
     <slot name="top"/>
     <ul class="sidebar-links" v-if="sidebarItems.length">
       <li v-for="(item, i) in sidebarItems" :key="i">
@@ -20,7 +20,7 @@
       </li>
     </ul>
     <slot name="bottom"/>
-  </div>
+  </aside>
 </template>
 
 

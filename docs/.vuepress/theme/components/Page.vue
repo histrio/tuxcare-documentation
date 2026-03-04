@@ -1,5 +1,5 @@
 <template>
-  <div class="page">
+  <main id="main-content" class="page" role="main">
     <slot name="top"/>
 
     <Breadcrumb class="page-breadcrumb"/>
@@ -30,7 +30,7 @@
     <BackToTop/>
 
     <slot name="bottom"/>
-  </div>
+  </main>
 </template>
 
 <script setup>
