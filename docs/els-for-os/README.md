@@ -4,8 +4,6 @@ TuxCare's [Endless Lifecycle Support (ELS) for OS](https://tuxcare.com/extended-
 
 Our ELS service is designed to provide solutions for organizations that are not yet ready to migrate to newer versions and that are seeking long-term stability for their out-of-date operating systems. The service coverage includes updates for the Linux kernel and a list of essential packages that are integral to server operations.
 
-## Supported Operating Systems
-
 <ELSOSSelector />
 
 ## Support Duration
@@ -18,7 +16,7 @@ All updates are delivered at a fixed price for the full term of your contract, e
 	
 TuxCare provides technical support according to the standard [support policy](https://tuxcare.com/TuxCare-support-policy.pdf).
 	
-It delivers 24/7/365 access to the TuxCare’s support team through the [TuxCare Support Portal](https://tuxcare.com/support-portal/) and to the TuxCare’s online knowledge base.
+It delivers 24/7/365 access to TuxCare’s support team through the [TuxCare Support Portal](https://tuxcare.com/support-portal/) and to TuxCare’s online knowledge base.
 
 ## Vulnerability coverage
 
@@ -38,7 +36,7 @@ Requests for customer-directed security patches for CVEs that are outside of the
 
 ## Rollout Process
 
-For several platforms, TuxCare delivers security updates through a staged rollout repositories. This process may take up to 14 additional days after a patch is published to stable repositories.
+For several platforms, TuxCare delivers security updates through staged rollout repositories. This process may take up to 14 additional days after a patch is published to stable repositories.
 
 During the rollout period, updates are applied in the usual way with standard package manager commands. 
 

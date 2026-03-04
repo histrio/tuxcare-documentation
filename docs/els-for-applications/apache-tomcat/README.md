@@ -4,7 +4,7 @@ Apache®, Apache Tomcat®, are either registered trademarks or trademarks of the
 
 <br>
 
-TuxCare's Endless Lifecycle Support (ELS) for Apache Tomcat® provides security patches, and selected bug fixes, that are integral to the stable operation of applications running on these versions of Apache Tomcat® core components such as Coyote, Catalina, Jasper etc.. These components have either reached their end of standard support from vendors or have reached End of Life (EOL).
+TuxCare's Endless Lifecycle Support (ELS) for Apache Tomcat® provides security patches, and selected bug fixes, that are integral to the stable operation of applications running on these versions of Apache Tomcat® core components such as Coyote, Catalina, Jasper, etc. These components have either reached their end of standard support from vendors or have reached End of Life (EOL).
 Our ELS for Apache Tomcat® service is designed to provide solutions for organizations that are not yet ready to migrate to newer versions and that are seeking long-term stability for their legacy Apache Tomcat® applications.
 
 This guide outlines the steps needed for Apache Tomcat server setup and configuration.
@@ -238,7 +238,7 @@ Download the Apache Tomcat® .zip archive from [https://nexus.repo.tuxcare.com/r
 
 To upgrade to a newer TuxCare release (e.g., from `tuxcare.1` to `tuxcare.3`):
 
-1. Download and extract a new version of the Apache Apache Tomcat® archive from TuxCare using the instructions above.
+1. Download and extract a new version of the Apache Tomcat® archive from TuxCare using the instructions above.
 
 2. Start Apache Tomcat® by running the startup script.
 

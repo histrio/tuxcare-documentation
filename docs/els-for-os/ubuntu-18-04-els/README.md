@@ -83,7 +83,7 @@ TuxCare provides security updates as a part of ELS for OS along with OpenSCAP sc
 
 ## Removing the ELS repository 
 
-1. List ELS repository file (ending with -els.repo) in the repository folder:
+1. List ELS repository file (ending with -els.list) in the repository folder:
 
    <CodeWithCopy>
 
