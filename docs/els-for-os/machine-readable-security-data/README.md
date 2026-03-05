@@ -67,45 +67,29 @@ OpenSCAP is an open source vulnerability scanner and compliance tool and it can 
 
 5. Download the OVAL stream. For example, Ubuntu 18.04:
 
-   <CodeWithCopy>
-
    ```
    wget https://security.tuxcare.com/oval/els_os/ubuntu18.04els/oval.xml
    ```
 
-   </CodeWithCopy>
-
 6. Run the scan:
-
-   <CodeWithCopy>
 
    ```
    oscap oval eval --results results.xml --report report.html oval.xml
    ```
 
-   </CodeWithCopy>
-
 7. Examine the scan results report.
 
    Following the example above, the scan results report will be saved to the report.html file in the current directory. This file can then be downloaded for analysis or published directly with a local web server, for example:
-
-   <CodeWithCopy>
 
    ```
    python3 -m http.server 8000
    ```
 
-   </CodeWithCopy>
-
    or for python2
-
-   <CodeWithCopy>
 
    ```
    python -m SimpleHTTPServer 8000
    ```
-
-   </CodeWithCopy>
 
    Assuming the above command is run from the directory with the report.html file, the webpage with the report can then be accessed on `http://<server-ip-address>:8000/report.html` through a web browser.
 
@@ -122,7 +106,7 @@ OpenSCAP is an open source vulnerability scanner and compliance tool and it can 
    The table also includes corresponding hyperlinks to advisory pages where the package and the version containing the fix can be found as well as the command to run on the target system in order to install the update.
 
    Lines like the one below designate that the fix for the corresponding CVE is already installed on the system, and no further action is needed:
- 
+
    ```
    oval:com.tuxcare.clsa:def:1694538670 false patch [CLSA-2023:1694538670], [CVE-2022-40433] Fix CVE(s): CVE-2022-40433
    ```

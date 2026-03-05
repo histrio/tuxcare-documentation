@@ -21,39 +21,27 @@ To use Endless Lifecycle Support for Ubuntu 20.04, you need to open TCP port 443
 
 1. Download an installation script:
 
-   <CodeWithCopy>
-
    ```
    wget https://repo.tuxcare.com/ubuntu20_04-els/install-ubuntu20.04-els-repo.sh
    ```
 
-   </CodeWithCopy>
-
 2. Run the installation script with your license key. The installation script registers the server in the CLN with the key, adds a PGP key to the server.
-
-   <CodeWithCopy>
 
    ```
    bash install-ubuntu20.04-els-repo.sh --license-key XXXXXXXXXXX
    ```
 
-   </CodeWithCopy>
-
 3. Verify that the installation was successful by running the following command:
-
-   <CodeWithCopy>
 
    ```
    apt-cache show els-define
    ```
 
-   </CodeWithCopy>
-
    It should return information about the available package. If the package information is displayed, the installation was successful.
    After that, you can install updates from the repository using a standard `apt upgrade` command.
 
    Example:
- 
+
    ```
    root@localhost:~# apt-cache show els-define
    Package: els-define

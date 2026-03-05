@@ -33,15 +33,11 @@ TuxCare provides ELS for AngularJS as an NPM package, hosted on a secure interna
 
 3. Use an editor of your choice (e.g., VS Code) to add the following registry address line:
 
-   <CodeWithCopy>
-
    ```text
    registry=https://registry.npmjs.org/
    @els-angularjs:registry=https://nexus.repo.tuxcare.com/repository/els_angularjs/
    //nexus.repo.tuxcare.com/repository/els_angularjs/:_auth=${TOKEN}
    ```
-
-   </CodeWithCopy>
 
    :::warning
    Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sales@tuxcare.com).
@@ -53,21 +49,15 @@ TuxCare provides ELS for AngularJS as an NPM package, hosted on a secure interna
 
       <template #AngularJS_1.4.4>
 
-      <CodeWithCopy>
-
       ```text
       "dependencies": {
           "angular": "npm:@els-angularjs/angular@>=1.4.4-tuxcare.1"
       }
       ```
 
-      </CodeWithCopy>
-
       </template>
 
       <template #AngularJS_1.5.11>
-
-      <CodeWithCopy>
 
       ```text
       "dependencies": {
@@ -75,13 +65,9 @@ TuxCare provides ELS for AngularJS as an NPM package, hosted on a secure interna
       }
       ```
 
-      </CodeWithCopy>
-
       </template>
 
       <template #AngularJS_1.6.10>
-
-      <CodeWithCopy>
 
       ```text
       "dependencies": {
@@ -89,27 +75,19 @@ TuxCare provides ELS for AngularJS as an NPM package, hosted on a secure interna
       }
       ```
 
-      </CodeWithCopy>
-
       </template>
 
       <template #AngularJS_1.7.9>
 
-      <CodeWithCopy>
- 
       ```text
       "dependencies": {
           "angular": "npm:@els-angularjs/angular@>=1.7.9-tuxcare.1"
       }
       ```
 
-      </CodeWithCopy>
-
       </template>
 
       <template #AngularJS_1.8.2>
-
-      <CodeWithCopy>
 
       ```text
       "dependencies": {
@@ -117,13 +95,9 @@ TuxCare provides ELS for AngularJS as an NPM package, hosted on a secure interna
       }
       ```
 
-      </CodeWithCopy>    
-
       </template> 
 
       <template #AngularJS_1.8.3>
-
-      <CodeWithCopy>
 
       ```text
       "dependencies": {
@@ -131,43 +105,29 @@ TuxCare provides ELS for AngularJS as an NPM package, hosted on a secure interna
       }
       ```
 
-      </CodeWithCopy>
-
       </template>
 
      </TableTabs>
 
 5. You need to remove the `node_modules` directory and the `package-lock.json` file, and also clear the `npm cache` before installing the patched packages. Use the following commands:
-   
-   <CodeWithCopy>
 
    ```text
    rm -rf node_modules package-lock.json && npm cache clean --force
    ```
 
-   </CodeWithCopy>
-
 6. Run the following command to install ELS for AngularJS dependencies (token for the TuxCare repository will be automatically picked up from your `.npmrc` file):
-
-   <CodeWithCopy>
 
    ```text
    npm install
    ```
 
-   </CodeWithCopy>
-
 ## Step 3: Verify Installation
 
 1. To confirm the TuxCare AngularJS repository is set up correctly, use npm to list the project's dependencies:
 
-   <CodeWithCopy>
-
    ```text
    npm list
    ```
-
-   </CodeWithCopy>
 
 2. After reviewing the dependencies, run your application to ensure everything works correctly.
 
@@ -183,14 +143,10 @@ TuxCare provides VEX for AngularJS ELS versions: [security.tuxcare.com/vex/cyclo
 
 If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), remove node_modules, clear the npm cache to avoid conflicts, and then run the installation command:
 
-  <CodeWithCopy>
-
   ```text
   rm -rf node_modules package-lock.json && npm cache clean --force
   npm install
   ```
-
-  </CodeWithCopy>
 
 ## Resolved CVEs
 
@@ -217,8 +173,6 @@ Fixes for the following vulnerabilities are available in ELS for AngularJS from 
 | GHSA-5cp4-xmrw-59wf |  Direct  |  Medium  |      AngularJS     |        <1.8.0       |
 | GHSA-28hp-fgcr-2r4h |  Direct  |  Medium  |      AngularJS     |        <1.6.0       |
 | CVE-2019-14863 |  Direct  |  Medium  |      AngularJS     |       <=1.4.14      |
-
-
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 

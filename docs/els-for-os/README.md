@@ -13,7 +13,7 @@ TuxCare provides continuous security patching for all supported end-of-life (EOL
 All updates are delivered at a fixed price for the full term of your contract, ensuring predictable costs and uninterrupted protection.
 
 ## Technical Support
-	
+
 TuxCare provides technical support according to the standard [support policy](https://tuxcare.com/TuxCare-support-policy.pdf).
 	
 It delivers 24/7/365 access to TuxCare’s support team through the [TuxCare Support Portal](https://tuxcare.com/support-portal/) and to TuxCare’s online knowledge base.
@@ -42,25 +42,17 @@ During the rollout period, updates are applied in the usual way with standard pa
 
 **For example, standard update for kernel**:
 
-<CodeWithCopy>
-
 ```
 yum update kernel*
 ```
-
-</CodeWithCopy>
 
 If you need to apply the fix immediately without waiting for the rollout to complete, you can use the bypass repository. The necessary instructions are always provided on the release information page.
 
 **For example (packages in the 3rd rollout slot)**:
 
-<CodeWithCopy>
-
 ```
 yum update kernel* --enablerepo=centos7els-rollout-3-bypass
 ```
-
-</CodeWithCopy>
 
 You can track the status of vulnerabilities and their corresponding fixes via [cve.tuxcare.com](https://cve.tuxcare.com/):
 * [Vulnerabilities](https://cve.tuxcare.com/els/cve)

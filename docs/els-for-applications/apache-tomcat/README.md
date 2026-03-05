@@ -23,16 +23,12 @@ Apache Tomcat® is also available for installation as a library for Maven and Gr
 
   To verify if JDK is already installed on your system, open a terminal or command prompt and run:
 
-  <CodeWithCopy>
-
   ```text
   java -version
   ```
 
-  </CodeWithCopy>
-
   If JDK is installed, you should see version information. If not, you'll need to install it.
-  
+
 * Make sure the `JAVA_HOME` environment variable is properly set to point to your JDK installation directory.
 
 ## Repository Access
@@ -48,58 +44,38 @@ To browse available artifacts via the web interface, visit TuxCare [Nexus](https
 
 1. For security purposes, create a `tomcat` group:
 
-   <CodeWithCopy>
-
    ```text
    sudo groupadd tomcat
    ```
 
-   </CodeWithCopy>
-
 2. Create a new `tomcat` user as a member of this `tomcat` group, with a home directory of `/opt/tomcat`, which will be used to install Apache Tomcat®, and set the user's login shell to `/bin/false` so that no one can log in directly as this user:
-
-   <CodeWithCopy>
 
    ```text
    sudo useradd -s /bin/false -g tomcat -d /opt/tomcat tomcat
    ```
 
-   </CodeWithCopy>
-
 ### Step 2: Download and Install Apache Tomcat®
 
 1. Open the terminal and download Apache Tomcat® from TuxCare using your credentials. For example, Apache Tomcat® 8.5.100:
-
-   <CodeWithCopy>
 
    ```text
    curl -u USERNAME:PASSWORD -O https://nexus.repo.tuxcare.com/repository/els_java/org/apache/tomcat/tomcat/8.5.100-tuxcare.3/tomcat-8.5.100-tuxcare.3.tar.gz
    ```
 
-   </CodeWithCopy>
-
    Replace `USERNAME` and `PASSWORD` with your actual credentials.
 
 2. Create the `/opt/tomcat` directory and extract the Apache Tomcat® archive into it:
-
-   <CodeWithCopy>
 
    ```text
    sudo mkdir -p /opt/tomcat
    sudo tar -xvzf tomcat-8.5.100-tuxcare.3.tar.gz -C /opt/tomcat --strip-components=1
    ```
 
-   </CodeWithCopy>
-
 3. Change to the Apache Tomcat® installation directory:
-
-   <CodeWithCopy>
 
    ```text
    cd /opt/tomcat
    ```
-
-   </CodeWithCopy>
 
 ### Step 4: Configure Permissions
 
@@ -107,46 +83,30 @@ Update permissions so that the `tomcat` user has access to the Apache Tomcat® i
 
 1. Change ownership to the `tomcat` group:
 
-   <CodeWithCopy>
-
    ```text
    sudo chgrp -R tomcat /opt/tomcat
    ```
 
-   </CodeWithCopy>
-
 2. Give the `tomcat` group read access to the `conf` directory and its contents, and execute access to the directory itself:
-
-   <CodeWithCopy>
 
    ```text
    sudo chmod -R g+r conf
    sudo chmod g+x conf
    ```
 
-   </CodeWithCopy>
-
 3. Give the `tomcat` user write access to the `webapps`, `work`, `temp`, and `logs` directories:
-
-   <CodeWithCopy>
 
    ```text
    sudo chown -R tomcat webapps/ work/ temp/ logs/
    ```
 
-   </CodeWithCopy>
-
 ### Step 5: Configure Environment Variables
 
 1. Add the following line at the end of your `~/.bashrc` file, updating the path if needed:
 
-   <CodeWithCopy>
-
    ```text
    export CATALINA_HOME=/opt/tomcat
    ```
-
-   </CodeWithCopy>
 
    :::tip
    If you're using a different shell, you may need to edit `~/.bash_profile` instead.
@@ -154,35 +114,23 @@ Update permissions so that the `tomcat` user has access to the Apache Tomcat® i
 
 2. Then reload:
 
-   <CodeWithCopy>
-
    ```text
    source ~/.bashrc
    ```
 
-   </CodeWithCopy>
-
 3. Verify the changes:
-
-   <CodeWithCopy>
 
    ```text
    echo $CATALINA_HOME
    ```
 
-   </CodeWithCopy>
-
 ### Step 6: Run Apache Tomcat®
 
 1. To start Apache Tomcat® run:
 
-   <CodeWithCopy>
-
    ```text
    sudo -u tomcat /opt/tomcat/bin/startup.sh
    ```
-
-   </CodeWithCopy>
 
 2. Verify installation. 
 
@@ -190,25 +138,17 @@ Update permissions so that the `tomcat` user has access to the Apache Tomcat® i
 
    * Or check from the terminal:
 
-    <CodeWithCopy>
-
     ```text
     curl http://localhost:8080
     ```
-
-    </CodeWithCopy>
 
     Successful output will be an HTML page from Apache Tomcat®.
 
 3. To stop Apache Tomcat® run: 
 
-   <CodeWithCopy>
-
    ```text
    sudo -u tomcat /opt/tomcat/bin/shutdown.sh
    ```
-
-   </CodeWithCopy>
 
 ## Windows Installation
 
@@ -247,24 +187,16 @@ To upgrade to a newer TuxCare release (e.g., from `tuxcare.1` to `tuxcare.3`):
 Check logs for detailed error information:
 
 * **Linux:**
-  
-  <CodeWithCopy>
 
   ```text
   /opt/tomcat/logs/catalina.out
   ```
 
-  </CodeWithCopy>
-
 * **Windows:**
 
-  <CodeWithCopy>
-  
   ```text
   C:\Tomcat\logs\catalina.[date].log
   ```
-
-  </CodeWithCopy>
 
 ## Vulnerability Exploitability eXchange (VEX)
 

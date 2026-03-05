@@ -32,13 +32,9 @@ You need credentials in order to access the TuxCare ELS Loki repository. Anonymo
 
    <template #Debian_13>
 
-   <CodeWithCopy>
-
    ```text
    curl -u USERNAME:PASSWORD -O https://nexus.repo.tuxcare.com/repository/els-golang/loki/debian13/loki-3.1.0-tuxcare.1.tar.gz
    ```
-
-   </CodeWithCopy>
 
    For other Loki versions, replace `3.1.0` in the path with `3.2.0` or `3.3.0` as needed.
 
@@ -46,13 +42,9 @@ You need credentials in order to access the TuxCare ELS Loki repository. Anonymo
 
    <template #Debian_12>
 
-   <CodeWithCopy>
-
    ```text
    curl -u USERNAME:PASSWORD -O https://nexus.repo.tuxcare.com/repository/els-golang/loki/debian12/loki-3.1.0-tuxcare.1.tar.gz
    ```
-
-   </CodeWithCopy>
 
    For other Loki versions, replace `3.1.0` in the path with `3.2.0` or `3.3.0` as needed.
 
@@ -60,13 +52,9 @@ You need credentials in order to access the TuxCare ELS Loki repository. Anonymo
 
    <template #Alpine_Linux_3.22>
 
-   <CodeWithCopy>
-
    ```text
    curl -u USERNAME:PASSWORD -O https://nexus.repo.tuxcare.com/repository/els-golang/loki/alpine3_22/loki-3.1.0-tuxcare.1.tar.gz
    ```
-
-   </CodeWithCopy>
 
    For other Loki versions, replace `3.1.0` in the path with `3.2.0` or `3.3.0` as needed.
 
@@ -76,14 +64,10 @@ You need credentials in order to access the TuxCare ELS Loki repository. Anonymo
 
 3. Create an installation directory (for example `/opt/loki`) and extract the archive:
 
-   <CodeWithCopy>
-
    ```text
    sudo mkdir -p /opt/loki
    sudo tar -xzf loki-3.1.0-tuxcare.1.tar.gz -C /opt/loki --strip-components=1
    ```
-
-   </CodeWithCopy>
 
    Adjust the archive filename if you downloaded a different version.
 
@@ -91,14 +75,10 @@ You need credentials in order to access the TuxCare ELS Loki repository. Anonymo
 
 1. Change to the Loki installation directory and run the binary to confirm the TuxCare ELS build is installed:
 
-   <CodeWithCopy>
-
    ```text
    cd /opt/loki
    ./loki --version
    ```
-
-   </CodeWithCopy>
 
 2. Start Loki with your configuration and verify that the application runs correctly.
 

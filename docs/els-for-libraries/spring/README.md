@@ -404,7 +404,7 @@ This guide outlines the steps needed to integrate the TuxCare ELS for Spring® r
 You need a username and password in order to use the TuxCare ELS Spring® repository. Anonymous access is disabled. To receive a username and password please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
 ### Step 2: Configure Registry
- 
+
 1. Navigate to the directory depending on your operating system.
    * Windows
    ```text
@@ -509,7 +509,6 @@ If a source JAR is not available for a specific package, please contact [sales@t
 <ClientOnly>
   <ResolvedCveTable project="spring-els" />
 </ClientOnly>
-
 
 <!-- data for spring instructions used in code blocks -->
 

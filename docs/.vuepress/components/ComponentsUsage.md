@@ -1,22 +1,3 @@
-## Components: CodeWithCopy
-
-**Description**: 
-- Adds copy button to a code.
-- Suitable for both single/multiple lines in a *code-block*
-
-**Known issues**: 
-- Doesn't look nice on long code-lines, copy button overlays code. It's better to break such lines to several.
-
-**Usage example**:
-
-<CodeWithCopy>
-
-```text
-CODE
-```
-
-</CodeWithCopy>
-
 ## Components: CodeTabs
 
 **Description**:
@@ -149,33 +130,27 @@ With a custom title:
 
 1. Download the install script
 
-   <CodeWithCopy>
 
    ```
    wget https://repo.els.tuxcare.com/centos6-els/install-centos6-els-repo.sh
    ```
 
-   </CodeWithCopy>
 
 2. Run with your license key
 
-   <CodeWithCopy>
 
    ```
    sh install-centos6-els-repo.sh --license-key XXXXXXXX
    ```
 
-   </CodeWithCopy>
 
 3. Verify installation
 
-   <CodeWithCopy>
 
    ```
    yum info els-define
    ```
 
-   </CodeWithCopy>
 
 </ELSSteps>
 ```

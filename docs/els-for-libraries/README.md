@@ -67,7 +67,7 @@ Why it matters:
 - Context-aware vulnerability status (“affected”, “not affected”, “fixed”)
 - Cuts scanner noise to what truly matters
 - Automation-friendly for tooling and CI/CD
-  
+
 Language-specific: 
 
 - [Python](https://security.tuxcare.com/vex/cyclonedx/els_lang_python/)

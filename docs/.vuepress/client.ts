@@ -14,7 +14,6 @@ import social from "./config-client/social";
 
 import Chat from "./components/Chat.vue";
 import CodeTabs from "./components/CodeTabs.vue";
-import CodeWithCopy from "./components/CodeWithCopy.vue";
 import TableTabs from "./components/TableTabs.vue";
 import ELSTechnology from "./components/ELSTechnology.vue";
 import ELSRTechnology from "./components/ELSRTechnology.vue";
@@ -46,18 +45,10 @@ export default defineClientConfig({
                     preElement.setAttribute('tabindex', '0');
                 }
             });
-
-            document.querySelectorAll('.code-block-wrapper > pre').forEach((pre) => {
-                const preElement = pre;
-                if (!preElement.hasAttribute('tabindex')) {
-                    preElement.setAttribute('tabindex', '0');
-                }
-            });
         };
 
         app.config.globalProperties.$eventBus = mitt();
         app.component("CodeTabs", CodeTabs);
-        app.component("CodeWithCopy", CodeWithCopy);
         app.component("ResolvedCveTable", ResolvedCveTable);
         app.component("TableTabs", TableTabs);
         app.component("ELSTechnology", ELSTechnology);

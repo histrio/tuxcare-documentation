@@ -20,36 +20,22 @@ To use Endless Lifecycle Support for CentOS Stream 8, you need to open TCP port 
 ## Installing the repository
 
 1. Download an installation script:
-   
-   <CodeWithCopy>
 
    ```
    wget https://repo.tuxcare.com/centos8stream-els/install-centos8stream-els-repo.sh
    ```
 
-   </CodeWithCopy>
-
 2. Run the installation script with your license key. It registers the server in the CLN with the key, adds a PGP key to the server.
-   
-   <CodeWithCopy>
 
    ```
    sh install-centos8stream-els-repo.sh --license-key XXXXXXXX
    ```
 
-   </CodeWithCopy>
-
-   
-
 3. Verify that the installation was successful by running the following command:
-   
-   <CodeWithCopy>
 
    ```
    yum info els-define
    ```
-
-   </CodeWithCopy>
 
    It should return information about the available package. If the package information is displayed, the installation was successful.
    After that, you can install updates from the repository using a standard `yum upgrade` command.
@@ -84,31 +70,19 @@ TuxCare provides security updates as a part of ELS for OS along with OpenSCAP sc
 
 1. List ELS repository file (ending with `-els.repo`) in the repository folder:
 
-   <CodeWithCopy>
-
    ```
    ls -l /etc/yum.repos.d/*-els.repo
    ```
 
-   </CodeWithCopy>
-
    Remove the file to disable the ELS repository, for example:
-
-   <CodeWithCopy>
 
    ```
    rm /etc/yum.repos.d/centos8stream-els.repo
    ```
 
-   </CodeWithCopy>
-
 2. Uninstall the `els-define` package:
-
-   <CodeWithCopy>
 
    ```
    yum remove els-define
    ```
-
-   </CodeWithCopy>
 
