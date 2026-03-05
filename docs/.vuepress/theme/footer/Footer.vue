@@ -6,9 +6,7 @@
              :alt="footerLogoAlt">
       </a>
     </div>
-    <div class="footer-company-title">{{ year }}.
-      Cloud Linux Software Inc
-    </div>
+    <div class="footer-company-title">&copy; {{ year }} All rights reserved. TuxCare Inc.</div>
 
     <div class="social">
       <div class="social_links">
@@ -34,7 +32,7 @@ const frontmatter = usePageFrontmatter()
 
 const year = computed(() => (new Date()).getFullYear());
 const isGlobalLayout = computed(() => frontmatter.value.layout === 'HomeLayout');
-const footerLogoAlt = computed(() => footerCustomAltText || "CloudLinux");
+const footerLogoAlt = computed(() => footerCustomAltText || "TuxCare");
 </script>
 <style lang="stylus" scoped>
 @import '../../styles/config.styl'
