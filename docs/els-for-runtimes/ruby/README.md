@@ -36,22 +36,15 @@ alt-ruby provides a more flexible and convenient environment for working with di
 
 1. Download the installer script:
 
-   <CodeWithCopy>
-
    ```text
    wget https://repo.alt.tuxcare.com/alt-ruby-els/install-els-alt-ruby-deb-repo.sh
    ```
-   </CodeWithCopy>
 
 2. Run the installer script with your key. The installation script registers the server to CLN with the key, and adds our PGP key and repository to the server.
-
-   <CodeWithCopy>
 
    ```text
    bash install-els-alt-ruby-deb-repo.sh --license-key XXX-XXXXXXXXXXXX
    ```
-
-   </CodeWithCopy>
 
    After the repository is added, you can install packages using standard commands.
 
@@ -59,44 +52,32 @@ alt-ruby provides a more flexible and convenient environment for working with di
    
    * To install a specific version only (for example, alt-ruby27):
    
-     <CodeWithCopy>
 
      ```text
      apt-get install alt-ruby27
      ```
 
-     </CodeWithCopy>
    
    * To find out which packages are available for installation, use the following command:
    
-     <CodeWithCopy>
 
      ```text
      apt list -a | grep alt-ruby
      ```
 
-     </CodeWithCopy>
-
    **Using alt-ruby versions:**
    
    `alt-ruby` versions are intended to be installed alongside the system's default ruby and allow multiple versions to coexist. To use a specific `alt-ruby` version, please run it directly from its installation directory, for example:
-
-   <CodeWithCopy>
 
    ```text
    source /opt/alt/alt-ruby27/enable
    ruby -v 
    ```
 
-   </CodeWithCopy>
-
 4. Update installed packages when updates are available:
-
-   <CodeWithCopy>
 
    ```text
    apt-get update
    apt-get --only-upgrade install alt-ruby*
    ```
 
-   </CodeWithCopy>

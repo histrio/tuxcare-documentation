@@ -23,23 +23,16 @@ You need a username and password in order to use TuxCare ELS for Symfony reposit
 
     * **Linux/macOS**: 
 
-        <CodeWithCopy>
         
         ```text
         ~/.composer/auth.json
         ```
 
-        </CodeWithCopy>
-
     * **Windows**: 
-
-        <CodeWithCopy>
 
         ```text
         %APPDATA%\Composer\auth.json
         ```
-
-        </CodeWithCopy>
 
 2. Use either the Composer CLI or edit `auth.json` directly to add your credentials for `nexus.repo.tuxcare.com`.
 
@@ -72,13 +65,9 @@ Install the TuxCare-maintained Symfony components release that matches your proj
 
 If you edited `composer.json` manually, run `composer update` to install the package:
 
-<CodeWithCopy>
-
 ```text
 composer update
 ```
-
-</CodeWithCopy>
 
 Composer will resolve dependencies against the TuxCare repository and install the patched releases.
 
@@ -92,8 +81,6 @@ it usually means your project requires a package version that is not yet availab
 
 **Solution**: Update your `composer.json` to set the TuxCare repository as non-canonical:
 
-<CodeWithCopy>
-
 ```
 {
     "repositories": [
@@ -106,8 +93,6 @@ it usually means your project requires a package version that is not yet availab
 }
 ```
 
-</CodeWithCopy>
-
 This allows Composer to fall back to Packagist for packages not available in the TuxCare repository, while still preferring TuxCare patches when available.
 
 ## Vulnerability Exploitability eXchange (VEX)
@@ -118,28 +103,19 @@ TuxCare provides VEX for Symfony components ELS versions:
 * Symfony Process - [security.tuxcare.com/vex/cyclonedx/els_lang_php/symfony-process/](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/symfony-process/)
 * Symfony HttpFoundation - [security.tuxcare.com/vex/cyclonedx/els_lang_php/symfony-http-foundation/](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/symfony-http-foundation/)
 
-
 ## How to Upgrade to a Newer Version
 
 If you have already installed a TuxCare Symfony Process package and want to upgrade to a newer release, update the version string in your `composer.json` file or run the `composer require` command with the new version:
-
-<CodeWithCopy>
 
 ```text
 composer require symfony/process:VERSION-pN+tuxcare
 ```
 
-</CodeWithCopy>
-
 Then run `composer update` to apply the changes:
-
-<CodeWithCopy>
 
 ```text
 composer update
 ```
-
-</CodeWithCopy>
 
 ## Resolved CVEs
 

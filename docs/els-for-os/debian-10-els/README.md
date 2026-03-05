@@ -21,33 +21,21 @@ To use Endless Lifecycle Support for Debian 10, you need to open TCP port 443 to
 
 1. Download an installation script:
 
-   <CodeWithCopy>
-
    ```
    wget https://repo.tuxcare.com/debian10-els/install-debian10-els-repo.sh
    ```
 
-   </CodeWithCopy>
-
 2. Run the installation script with your license key. It registers the server in the CLN with the key, adds a PGP key to the server.
-
-   <CodeWithCopy>
 
    ```
    bash install-debian10-els-repo.sh --license-key XXXXXXXXXXX
    ```
 
-   </CodeWithCopy>
-
 3. Verify that the installation was successful by running the following command:
-
-   <CodeWithCopy>
 
    ```
    apt-cache show els-os-release
    ```
-
-   </CodeWithCopy>
 
    It should return information about the available package. If the package information is displayed, the installation was successful. After that, you can install updates from the repository using the standard `apt upgrade` command.
 
@@ -85,10 +73,8 @@ TuxCare provides security updates as a part of ELS for OS along with OpenSCAP sc
 ## Removing the ELS repository
 
 The repository can be removed by running the installation script with the `--delete` flag:
-   <CodeWithCopy>
 
    ```
    bash install-debian10-els-repo.sh --delete
    ```
 
-   </CodeWithCopy>

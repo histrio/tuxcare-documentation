@@ -67,45 +67,29 @@ OpenSCAP is an open source vulnerability scanner and compliance tool and it can 
 
 4. Download OVAL stream. For example, Ubuntu 18.04:
 
-   <CodeWithCopy>
-
    ```
    wget https://security.tuxcare.com/oval/els_os/ubuntu18.04els/oval.xml
    ```
 
-   </CodeWithCopy>
-
 5. Run the scan:
-
-   <CodeWithCopy>
 
    ```
    oscap oval eval --results results.xml --report report.html oval.xml
    ```
 
-   </CodeWithCopy>
-
 4. Examine the scan results report.
 
    Following the example above scan results report will be saved to report.html file in current directory. This file can then be downloaded for analysis or published directly with a local web server, for example:
-
-   <CodeWithCopy>
 
    ```
    python3 -m http.server 8000
    ```
 
-   </CodeWithCopy>
-
    or for python2
-
-   <CodeWithCopy>
 
    ```
    python -m SimpleHTTPServer 8000
    ```
-
-   </CodeWithCopy>
 
    Assuming the above command is run from the directory with the report.html file, the webpage with the report can then be accessed on `http://<server-ip-addess>:8000/report.html` through a web browser.
 

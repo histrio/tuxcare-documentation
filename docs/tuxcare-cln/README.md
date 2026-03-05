@@ -1,10 +1,8 @@
 # Subscription management portal
 
-
 The TuxCare subscription management portal is designed to easily manage your licenses of TuxCare products and services by means of a user-friendly interface.
 
 ## Introduction
-
 
 The following are available in TuxCare portal:
 
@@ -19,9 +17,7 @@ If you are a first time user, go to [https://portal.tuxcare.com](https://portal.
 
 ### Log in
 
-
 Go to [https://portal.tuxcare.com](https://portal.tuxcare.com/auth/login?originUrl=%2Fdashboard%2Fproducts) and sign in with your credentials.
-
 
 ## Dashboard
 
@@ -61,7 +57,6 @@ Click the server name to show server details:
 
 * **Installed products** – the full name of the installed products
 * **Last check-in** — the last date when a server successfully responded to check-in
-
 
 The following filters are available:
 
@@ -185,7 +180,6 @@ Click the server name to show server details:
 * **Installed products** – the full name of the installed products
 * **Last check-in** — the last date when a server successfully responded to check-in
 
-
 The following filters are available:
 
 * **Product** — click _Product_ button and select one or more products
@@ -212,7 +206,6 @@ Click the server name to show server details:
 * **Installed products** – the full name of the installed products
 * **Last check-in** — the last date when a server successfully responded to check-in
 
-
 The following filters are available:
 
 * **Registered date** — click _Registered date_ to display a calendar where you can pick a date or a period to filter by
@@ -234,7 +227,6 @@ Here you find the following:
 * your balance
 
 You can top up your account by entering the amount and clicking _Top up_.
-
 
 ### Payment methods
 
@@ -329,7 +321,6 @@ Click _Save_ to apply changes.
 
 Click _Save_ to apply changes.
 
-
 ### Account sublogins
 
 You can create additional logins for your account in the form of the email address. The sub login can have any role with different permissions listed below. A master Server Administrator account has the full scope of permissions; this role can create account sub logins.
@@ -405,6 +396,5 @@ Click _Save_ to apply changes.
 It is possible to set reports receiving for an account to the desired email address.
 
 ![](/images/reports.png)
-
 
 To add a new report configuration, click _Add config_.

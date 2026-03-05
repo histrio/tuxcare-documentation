@@ -24,32 +24,22 @@ This installation method is suitable for both non-containerized systems and cont
 
 1. Download the TuxCare OpenJDK ELS repository package:
 
-   <CodeWithCopy>
-
    ```text
    wget https://repo.tuxcare.com/openjdk-els/install-openjdk-els-repo.sh
    ```
 
-   </CodeWithCopy>
-
 2. Install the repository package:
-
-   <CodeWithCopy>
 
    ```text
    sh install-openjdk-els-repo.sh --license-key XXXXXXXXXXX
    ```
-   </CodeWithCopy>
 
 3. Verify the repository is enabled:
-
-   <CodeWithCopy>
 
    ```text
    yum repolist | grep openjdk-els
    ```
 
-   </CodeWithCopy>
    
    You can now install OpenJDK versions supported by TuxCare’s Endless Lifecycle Support (ELS).
 
@@ -59,25 +49,19 @@ This installation method is suitable for both non-containerized systems and cont
 
    <template #8>
   
-   <CodeWithCopy>
 
    ```text
    yum install java-1.8.0-openjdk
    ```
 
-   </CodeWithCopy>
-
    </template>
 
    <template #11>
   
-   <CodeWithCopy>
 
    ```text
    yum install java-11-openjdk
    ```
-
-   </CodeWithCopy>
 
    </template>
 
@@ -85,11 +69,7 @@ This installation method is suitable for both non-containerized systems and cont
 
 5. Verify the installation:
 
-   <CodeWithCopy>
-
    ```text
    java -version
    ```
-
-   </CodeWithCopy>
 

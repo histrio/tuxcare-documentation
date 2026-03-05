@@ -510,7 +510,6 @@ If a source JAR is not available for a specific package, please contact [sales@t
   <ResolvedCveTable project="spring-els" />
 </ClientOnly>
 
-
 <!-- data for spring instructions used in code blocks -->
 
 <script setup>

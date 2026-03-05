@@ -44,25 +44,17 @@ During the rollout period, updates are applied in the usual way with standard pa
 
 **For example, standard update for kernel**:
 
-<CodeWithCopy>
-
 ```
 yum update kernel*
 ```
-
-</CodeWithCopy>
 
 If you need to apply the fix immediately without waiting for the rollout to complete, you can use the bypass repository. The necessary instructions are always provided on the release information page.
 
 **For example (packages in the 3rd rollout slot)**:
 
-<CodeWithCopy>
-
 ```
 yum update kernel* --enablerepo=centos7els-rollout-3-bypass
 ```
-
-</CodeWithCopy>
 
 You can track the status of vulnerabilities and their corresponding fixes via [cve.tuxcare.com](https://cve.tuxcare.com/):
 * [Vulnerabilities](https://cve.tuxcare.com/els/cve)

@@ -6,45 +6,30 @@ We provide the ability to create local mirrors of PHP for ELS updates.
 
 * To create a local mirror of the repository with security updates via `rsync`, use the following:
   
-  <CodeWithCopy>
 
   ```
   rsync://repo.cloudlinux.com/ALT_COMMON/
   ```
 
-  </CodeWithCopy>
-
   and
-
-  <CodeWithCopy>
 
   ```
   rsync://repo.cloudlinux.com/ALT_PHP_ELS/
   ```
 
-  </CodeWithCopy>
-
 * Example of creating a local mirror for all supported OS versions:
-
-  <CodeWithCopy>
 
   ```
   rsync -avSHP --delete rsync://repo.cloudlinux.com/ALT_COMMON/   alt-common
   rsync -avSHP --delete rsync://repo.cloudlinux.com/ALT_PHP_ELS/ alt-php-els
   ```
 
-  </CodeWithCopy>
-
 * Example of creating a local mirror for a specific OS version:
-
-  <CodeWithCopy>
 
   ```
   rsync -avSHP --delete rsync://repo.cloudlinux.com/ALT_COMMON/rpm/el/8/   alt-common
   rsync -avSHP --delete rsync://repo.cloudlinux.com/ALT_PHP_ELS/rpm/el/8/ alt-php-els
   ```
-
-  </CodeWithCopy>
 
 * Use one of the suggested options to specify the OS:
 

@@ -138,7 +138,6 @@ The following steps are provided for both **RPM-based** (CentOS, CentOS Stream, 
      { title: 'DEB', content: debex }
    ]" />
 
-
 ## OVAL data
 
 This section contains information about available ELS for Python OVAL streams that can be used for partner application integration.
@@ -174,23 +173,16 @@ OVAL can be used with the OpenSCAP tool.
 
 2. Download an OVAL stream. For example, EL 8:
 
-   <CodeWithCopy>
    
     ```text
     wget https://security.tuxcare.com/oval/els_alt_python/el8/oval.xml
     ```
 
-   </CodeWithCopy>
-
 3. Run a scan:
-
-   <CodeWithCopy>
 
    ```text
    oscap oval eval --results result.xml --report report.xml oval.xml
    ```
-
-   </CodeWithCopy>
 
 ## Common Security Advisory Framework
 

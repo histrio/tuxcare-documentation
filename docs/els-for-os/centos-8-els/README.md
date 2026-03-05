@@ -10,7 +10,6 @@ The list of supported packages is provided here:
 
 * [CentOS 8.5 ELS](https://cve.tuxcare.com/els/projects?os=a3407f4d-0962-4971-bb9f-3141bb924451&project=&version=&packages=&orderBy=project-asc)
 
-
 ## Connecting to ELS repository
 
 To install the Endless Lifecycle Support repository on a server, download an installation script and run it with a license key. The installation script registers the server in the CLN using the license key, adds a PGP key to the server, and creates the ELS repository.
@@ -42,13 +41,10 @@ To use Endless Lifecycle Support for CentOS 8, you need to open TCP port 443 to 
 
 3. Verify that the installation was successful by running the following command:
    
-   <CodeWithCopy>
 
    ```
    yum info els-define
    ```
-
-   </CodeWithCopy>
 
    It should return information about the available package. If the package information is displayed, the installation was successful.
    After that, you can install updates from the repository using a standard `yum upgrade` command.
@@ -88,31 +84,19 @@ TuxCare provides security updates as a part of ELS for OS along with OpenSCAP sc
 
 1. List ELS repository file (ending with `-els.repo`) in the repository folder:
 
-   <CodeWithCopy>
-
    ```
    ls -l /etc/yum.repos.d/*-els.repo
    ```
 
-   </CodeWithCopy>
-
    Remove the file to disable the ELS repository, for example:
-
-   <CodeWithCopy>
 
    ```
    rm /etc/yum.repos.d/centos8.5-els.repo
    ```
 
-   </CodeWithCopy>
-
 2. Uninstall the `els-define` package:
-
-   <CodeWithCopy>
 
    ```
    yum remove els-define
    ```
-
-   </CodeWithCopy>
 

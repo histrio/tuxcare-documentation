@@ -64,15 +64,11 @@ To use TuxCare's ELS for Python libraries, follow one of the options below:
 
 You can install or upgrade a package directly using the ELS repository with your credentials:
 
-<CodeWithCopy>
-
 ```text
 pip install --upgrade \
   -i https://<username>:<password>@nexus.repo.tuxcare.com/repository/els_python/simple \
   <package>
 ```
-
-</CodeWithCopy>
 
 **Replace:**
 * `<username>` and `<password>` - with the credentials provided by sales.  
@@ -95,25 +91,17 @@ This method is recommended if you want to use only ELS-patched Python packages f
 
 2. Run the command to install the latest package version:
 
-   <CodeWithCopy>
-
    ```text
    pip install --upgrade <package>
    ```
-
-   </CodeWithCopy>
 
    **Replace `<package>` with the python package name, for example, certifi.**
 
    Or install a specific patched TuxCare version, for example:
 
-   <CodeWithCopy>
-
    ```text
    pip install certifi==2021.10.8.post2+tuxcare
    ```
-
-   </CodeWithCopy>
 
 #### Option 3: Add the TuxCare ELS Repository as Additional (recommended)
 
@@ -132,13 +120,9 @@ If you want to keep using public PyPI and fetch only specific patched packages f
 
 2. Run the command to install a specific patched TuxCare version, for example:
 
-   <CodeWithCopy>
-
    ```text
    pip install certifi==2021.10.8.post2+tuxcare
    ```
-
-   </CodeWithCopy>
 
 ## Upgrading to a Newer TuxCare Version
 

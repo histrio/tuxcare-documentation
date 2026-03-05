@@ -33,15 +33,11 @@ TuxCare provides ELS for Nuxt as an NPM package, hosted on a secure internal reg
 
 3. Use an editor of your choice (e.g., VS Code) to add the following registry address line:
 
-   <CodeWithCopy>
-
    ```text
    registry=https://registry.npmjs.org/
    @els-js:registry=https://nexus.repo.tuxcare.com/repository/els-js/
    //nexus.repo.tuxcare.com/repository/els-js/:_auth=${TOKEN}
    ```
-
-   </CodeWithCopy>
 
    :::warning
    Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sales@tuxcare.com).
@@ -53,8 +49,6 @@ TuxCare provides ELS for Nuxt as an NPM package, hosted on a secure internal reg
 
     <template #nuxt_3.2.0>
 
-    <CodeWithCopy>
-
     ```text
     "overrides": {
       "lodash.pick@4.4.0": "npm:@els-js/lodash.pick@>=4.4.0-tuxcare.1",
@@ -62,13 +56,9 @@ TuxCare provides ELS for Nuxt as an NPM package, hosted on a secure internal reg
     }
     ```
 
-    </CodeWithCopy>
-
     </template>
 
     <template #nuxt_2.18.1>
-
-    <CodeWithCopy>
 
     ```text
     "overrides": {
@@ -86,43 +76,30 @@ TuxCare provides ELS for Nuxt as an NPM package, hosted on a secure internal reg
     }
     ```
 
-    </CodeWithCopy>
-
     </template>
 
    </TableTabs>
 
 5. You need to remove the `node_modules` directory and the `package-lock.json` file, and also clear the `npm cache` before installing the patched packages. Use the following commands:
    
-   <CodeWithCopy>
 
    ```text
    rm -rf node_modules package-lock.json && npm cache clean --force
    ```
 
-   </CodeWithCopy>
-
 6. Run the following command to install the ELS version of the Nuxt library (token for the TuxCare repository will be automatically picked up from your `.npmrc` file):
-
-   <CodeWithCopy>
 
    ```text
    npm install
    ```
 
-   </CodeWithCopy>
-
 ## Step 3: Verify Installation
 
 1. To confirm the TuxCare Nuxt library is set up correctly, use npm to list the project's dependencies:
 
-   <CodeWithCopy>
-
    ```text
    npm list
    ```
-
-   </CodeWithCopy>
 
 2. After reviewing the dependencies, run your application to ensure everything works correctly.
 
@@ -138,14 +115,10 @@ TuxCare provides VEX for Nuxt ELS versions: [security.tuxcare.com/vex/cyclonedx/
 
 If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), remove node_modules, clear the npm cache to avoid conflicts, and then run the installation command:
 
-  <CodeWithCopy>
-
   ```text
   rm -rf node_modules package-lock.json && npm cache clean --force
   npm install
   ```
-
-  </CodeWithCopy>
 
 ## Resolved CVEs
 

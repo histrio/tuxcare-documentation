@@ -90,12 +90,9 @@ The following steps are provided for both **RPM-based** (CentOS, CentOS Stream, 
 :::tip
 **Amazon Linux 2-specific preprequisities**. Before installing `alt-php`, make sure `libvpx` is installed. Amazon Linux 2 provides two version of libvpx: 1.9 (the default) and 1.3. `alt-php` requires 1.3 for compatibility with EL 7 systems like CentOS 7:
 
-<CodeWithCopy>
-
 ```
 sudo yum install libvpx-1.3.0
 ```
-</CodeWithCopy>
 
 :::
 
@@ -460,7 +457,6 @@ To update alt-php, you typically follow a process that involves using the packag
    mod-hostinglimits/unknown 1.0-41 amd64 [upgradable from: 1.0-40]` }
    ]" />
 
-
 2. Update packages:
     
    * Update all groups/meta-packages with names starting with "alt-php":
@@ -564,13 +560,9 @@ When using these commands, replace `alt-package-name` with the specific name of 
 
   <template #The_bin_files>
 
-<CodeWithCopy>
-
 ```text
 ls -l /opt/alt/phpXY/usr/bin/
 ```
-
-</CodeWithCopy>
 
 **An example output:**
 
@@ -583,13 +575,9 @@ dbunit           lsphp            peardev          phar             php         
 
   <template #Modules_and_pecl_extensions>
 
-<CodeWithCopy>
-
 ```text
 ls /opt/alt/phpXY/usr/lib64/php/modules/
 ```
-
-</CodeWithCopy>
 
 **An example output:**
 
@@ -632,16 +620,11 @@ igbinary.so         oauth.so           stats.so
 
   <template #Running_code_on_a_specific_version_through_the_CLI>
 
-<CodeWithCopy>
-
 ```text
 /opt/alt/phpXY/usr/bin/php helloworld.php
 ```
 
-</CodeWithCopy>
-
 **An example output:**
-
 
 ```text
 Hello, World!
@@ -651,13 +634,9 @@ Hello, World!
 
   <template #Location_of_ini_config_files>
 
-<CodeWithCopy>
-
 ```text
 /opt/alt/phpXY/etc/php.d.all/
 ```
-
-</CodeWithCopy>
 
 **An example output:**
 
@@ -701,25 +680,17 @@ lzf.ini               raphf.ini
 
   <template #Location_of_default.ini>
 
-<CodeWithCopy>
-
 ```text
 ls /opt/alt/phpXY/etc/php.d/default.ini
 ```
-
-</CodeWithCopy>
 
   </template>
 
   <template #Listing_enabled_modules_on_a_specific_version>
 
-<CodeWithCopy>
-
 ```text
 /opt/alt/php73/usr/bin/php -m
 ```
-
-</CodeWithCopy>
 
 **An example output:**
 
@@ -768,13 +739,9 @@ To enable or disable extensions in your installed PHP version:
 
 1. Open the `default.ini` file, usually located in the PHP configuration directory, in an editor of your choice: 
 
-<CodeWithCopy>
-
 ```
 /opt/alt/phpXY/etc/php.d/default.ini
 ```
-
-</CodeWithCopy>
 
 2. Edit the list of extensions:
    * To enable an extension, remove the semicolon `;` at the beginning of the line.
@@ -789,23 +756,15 @@ PHP extensions can also be enabled or disabled through their `.ini` configuratio
 
 1. Locate the extension’s `.ini` file (e.g., `memcached.ini`) in the directory:
 
-  <CodeWithCopy>
-
   ```
   /opt/alt/phpXY/etc/php.d.all/
   ```
 
-  </CodeWithCopy>
-
 2. To enable the extension, copy the located `.ini` file to:
-
-  <CodeWithCopy>
 
   ```
   /opt/alt/phpXY/etc/php.d/
   ```
-
-  </CodeWithCopy>
 
   :::warning
   If the same extension is present in multiple `.ini` configuration files within the `/opt/alt/phpXY/etc/php.d/` directory, you may see warnings in PHP logs and possibly on your site.
@@ -813,13 +772,9 @@ PHP extensions can also be enabled or disabled through their `.ini` configuratio
 
 **Option 3: Enabling a module through the CLI**
 
-<CodeWithCopy>
-
 ```text
 /opt/alt/php73/usr/bin/php -d "extension=igbinary.so" -m
 ```
-
-</CodeWithCopy>
 
 **An example output:**
 
@@ -866,15 +821,11 @@ If you need to increase memory and upload size limits:
 1. Open the `default.ini` file in an editor of your choice.
 2. Set the limits as needed, e.g:
 
-    <CodeWithCopy>
-
     ```text
     upload_max_filesize=40M
     post_max_size=40M
     memory_limit=256M
     ```
-
-    </CodeWithCopy>
 
   </template>
 
@@ -906,35 +857,25 @@ To build the PHP extension, ensure the following packages are installed: `httpd`
 
 2. Create a working directory and navigate into it. Move the downloaded zip file into the working directory and extract the archive
 
-   <CodeWithCopy>
-
    ```text
    mkdir saxon && cd saxon
    mv ../SaxonCHE-linux-x86_64-12-9-0.zip .
    unzip SaxonCHE-linux-x86_64-12-9-0.zip
    ```
 
-   </CodeWithCopy>
    
 3. Verify the extraction:
 
-   <CodeWithCopy>
    
    ```text
    ls
    ```
 
-   </CodeWithCopy>
-
    Example output:
-
-   <CodeWithCopy>
 
    ```text
    SaxonCHE-linux-x86_64-12-9-0  SaxonCHE-linux-x86_64-12-9-0.zip
    ```
-
-   </CodeWithCopy>
 
 #### Install the libraries
 
@@ -944,34 +885,23 @@ Starting with version 12.6, `/opt/saxonica/` is the recommended installation pat
 
 1. Navigate into the extracted directory and create the target directory for Saxon installation.
   
-   <CodeWithCopy>
 
    ```text
    cd SaxonCHE-linux-x86_64-12-9-0
    mkdir /opt/saxonica/
    ```
 
-   </CodeWithCopy>
-
 2. Copy all Saxon files (binaries, headers, libraries) to the installation directory
-
-   <CodeWithCopy>
 
    ```text
    sudo cp -r SaxonCHE/* /opt/saxonica/
    ```
 
-   </CodeWithCopy>
-
 3. Verify the installation structure
-
-   <CodeWithCopy>
 
    ```text
    ls /opt/saxonica/
    ```
-
-   </CodeWithCopy>
 
    Example output:
 
@@ -983,23 +913,15 @@ Starting with version 12.6, `/opt/saxonica/` is the recommended installation pat
    
    * The LD_LIBRARY_PATH variable must be set to the location of the lib directory containing the SaxonC libraries.
 
-     <CodeWithCopy>
-
      ```text
      export LD_LIBRARY_PATH="/opt/saxonica/lib:$LD_LIBRARY_PATH"
      ```
 
-     </CodeWithCopy>
-
    * To run the Transform, Query, and Validate (EE only) binaries the PATH variable can be set.
-
-     <CodeWithCopy>
 
      ```text
      export PATH="/opt/saxonica/bin:$PATH"
      ```
-
-     </CodeWithCopy>
 
    :::tip
    If the PHP web server can't find the Saxon libraries, you may also need to add `/opt/saxonica/lib` to a new file in `/etc/ld.so.conf.d/` and run `ldconfig`.
@@ -1009,23 +931,15 @@ Starting with version 12.6, `/opt/saxonica/` is the recommended installation pat
 
 1. Install the development package for alt-php82:
 
-   <CodeWithCopy>
-
    ```text
    dnf install alt-php82-devel
    ```
 
-   </CodeWithCopy>
-
 2. Verify that phpize required for compiling PHP extensions is available:
-
-   <CodeWithCopy>
 
    ```text
    ls /opt/alt/php82/usr/bin/phpize
    ```
-
-   </CodeWithCopy>
 
    Example output: 
    
@@ -1039,14 +953,12 @@ Now you can compile the Saxon PHP extension from source. The build process uses 
 
 1. Navigate to the PHP extension source directory within the extracted Saxon archive and prepare the build environment.
  
-   <CodeWithCopy>
 
    ```text
    cd php/src/
    /opt/alt/php82/usr/bin/phpize
    ```
 
-   </CodeWithCopy>
  
    Example output:
 
@@ -1059,33 +971,22 @@ Now you can compile the Saxon PHP extension from source. The build process uses 
 
 2. Configure the extension build with Saxon support and link to the Saxon libraries
 
-   <CodeWithCopy>
-
    ```text
    ./configure --with-saxon --with-php-config=/opt/alt/php82/usr/bin/php-config LDFLAGS="-L/opt/saxonica/lib"
    ```
 
-   </CodeWithCopy>
-
 3. Compile the extension
-
-   <CodeWithCopy>
 
    ```text
    make
    ```
 
-   </CodeWithCopy>
-
 4. Install the compiled extension to the PHP modules directory
 
-   <CodeWithCopy>
   
    ```text
    sudo make install
    ```
-
-   </CodeWithCopy>
 
    Example output:
 
@@ -1097,8 +998,6 @@ Now you can compile the Saxon PHP extension from source. The build process uses 
 
 1. After installation, you need to enable the extension by creating a configuration file that tells PHP to load it.
 
-   <CodeWithCopy>
-
    ```text
    tee -a /opt/alt/php82/etc/php.d/20-saxon.ini <<EOF
    ; configuration for php Saxon HE/PE/EE module
@@ -1106,17 +1005,11 @@ Now you can compile the Saxon PHP extension from source. The build process uses 
    EOF
    ```
 
-   </CodeWithCopy>
-
 2. Verify that the Saxon extension appears in the list of loaded modules:
-
-   <CodeWithCopy>
 
    ```text
    /opt/alt/php82/usr/bin/php -m | grep saxon
    ```
-
-   </CodeWithCopy>
 
    Example output:
 
@@ -1125,8 +1018,6 @@ Now you can compile the Saxon PHP extension from source. The build process uses 
    ```
 
 3. Test that it works:
-
-   <CodeWithCopy>
 
    ```text
    /opt/alt/php82/usr/bin/php -ddisplay_errors=E_ALL  << 'EOF'
@@ -1143,8 +1034,6 @@ Now you can compile the Saxon PHP extension from source. The build process uses 
      echo "$node \n";
    EOF
    ```
-
-   </CodeWithCopy>
 
    Example output:
 
@@ -1222,13 +1111,9 @@ To confirm PHP is working:
 1. Open **Command Prompt**, **PowerShell**, or **Terminal**.
 2. Run the following command:
 
-    <CodeWithCopy>
-
     ```text
     php -v
     ```
-
-    </CodeWithCopy>
 
     You should see output like this:
 
@@ -1255,13 +1140,9 @@ If you have multiple PHP versions installed and want to change the default, upda
 5. Click OK and restart your terminal
 6. Verify the active PHP version by running:
 
-    <CodeWithCopy>
-
     ```text
     php -v
     ```
-
-    </CodeWithCopy>
 
 #### Extensions
 
@@ -1275,8 +1156,6 @@ To enable or disable extensions in your installed PHP version:
 
    **Example:**
 
-    <CodeWithCopy>
-
     ```text
     ;extension=curl
     extension=gd2
@@ -1285,8 +1164,6 @@ To enable or disable extensions in your installed PHP version:
     extension=pdo_mysql
     ```
 
-    </CodeWithCopy>
-
 #### Increase Upload/Memory Limits
 
 If you're integrating PHP with applications like WordPress, you might need to increase memory and upload size limits:
@@ -1294,15 +1171,11 @@ If you're integrating PHP with applications like WordPress, you might need to in
 1. Open the `php.ini` file in an editor of your choice (e.g. Notepad).
 2. Set the limits as needed, e.g:
 
-    <CodeWithCopy>
-
     ```text
     upload_max_filesize=40M
     post_max_size=40M
     memory_limit=256M
     ```
-
-    </CodeWithCopy>
 
 #### Example Use Cases
 
@@ -1361,23 +1234,16 @@ OVAL can be used with the OpenSCAP tool.
 
 2. Download an OVAL stream. For example, EL 8:
 
-   <CodeWithCopy>
    
     ```text
     wget https://security.tuxcare.com/oval/els_alt_php/el8/oval.xml
     ```
 
-   </CodeWithCopy>
-
 3. Run a scan:
-
-   <CodeWithCopy>
 
    ```text
    oscap oval eval --results result.xml --report report.xml oval.xml
    ```
-
-   </CodeWithCopy>
 
 ## Common Security Advisory Framework
 

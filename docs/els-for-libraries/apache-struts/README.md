@@ -224,4 +224,3 @@ const gradledeps2 =
 }`
 </script>
 
-
