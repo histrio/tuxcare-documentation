@@ -59,13 +59,13 @@ TuxCare provides ELS for jQuery as an NPM package, hosted on a secure internal r
      ```
 
      The patcher will update your `package.json`, for example, from:
-    
+
      ```text
      "dependencies": {
        "jquery": "^1.12.4"
      }
      ```
-    
+
      to:
 
      ```text
@@ -119,7 +119,6 @@ TuxCare provides ELS for jQuery as an NPM package, hosted on a secure internal r
      </TableTabs>
 
 5. You need to remove the `node_modules` directory and the `package-lock.json` file, and also clear the `npm cache` before installing the patched packages. Use the following commands:
-   
 
    ```text
    rm -rf node_modules package-lock.json && npm cache clean --force

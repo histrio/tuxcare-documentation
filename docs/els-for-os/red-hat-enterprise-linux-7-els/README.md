@@ -20,7 +20,6 @@ To use Endless Lifecycle Support for Red Hat Enterprise Linux 7, you need to ope
 ## Installing the repository
 
 1. Download an installation script:
-   
 
    ```
    wget https://repo.tuxcare.com/rhel7-els/install-rhel7-els-repo.sh
@@ -32,10 +31,7 @@ To use Endless Lifecycle Support for Red Hat Enterprise Linux 7, you need to ope
    sh install-rhel7-els-repo.sh --license-key XXXXXXXX
    ```
 
-   
-
 3. Verify that the installation was successful by running the following command:
-   
 
    ```
    yum info els-define

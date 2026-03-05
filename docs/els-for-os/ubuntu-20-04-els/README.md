@@ -41,7 +41,7 @@ To use Endless Lifecycle Support for Ubuntu 20.04, you need to open TCP port 443
    After that, you can install updates from the repository using a standard `apt upgrade` command.
 
    Example:
- 
+
    ```
    root@localhost:~# apt-cache show els-define
    Package: els-define

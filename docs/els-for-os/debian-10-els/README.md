@@ -40,7 +40,7 @@ To use Endless Lifecycle Support for Debian 10, you need to open TCP port 443 to
    It should return information about the available package. If the package information is displayed, the installation was successful. After that, you can install updates from the repository using the standard `apt upgrade` command.
 
    Example:
- 
+
    ```
    root@localhost:~# apt-cache show els-os-release
    Package: els-os-release

@@ -15,7 +15,6 @@ This guide outlines the steps needed to integrate the TuxCare ELS for Angular re
 Before you begin, ensure you have **npm** up to date and you use version 9.6.3 or later for security and compatibility reasons.
 
 * To check your current versions, run:
-  
 
   ```text
   npm --version
@@ -105,7 +104,7 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
 
      :::tip
      If you use any of the following **non-default Angular modules**, update their versions as shown below:
- 
+
      * "@angular/animations": "npm:@els-angular/angular-animations@>=17.3.12-tuxcare.1",
      * "@angular/upgrade": "npm:@els-angular/angular-upgrade@>=17.3.12-tuxcare.1",
      * "@angular/platform-server": "npm:@els-angular/angular-platform-server@>=17.3.12-tuxcare.1",
@@ -219,7 +218,6 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
      </template>
 
      <template #Angular_14>
- 
 
      ```text
      "dependencies": {
@@ -260,7 +258,7 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
 
      :::tip
      If you use any of the following **non-default Angular modules**, update their versions as shown below:
- 
+
      * "@angular/elements": "npm:@els-angular/angular-elements@>=14.3.0-tuxcare.1",
      * "@angular/upgrade": "npm:@els-angular/angular-upgrade@>=14.3.0-tuxcare.1",
      * "@angular/platform-server": "npm:@els-angular/angular-platform-server@>=14.3.0-tuxcare.1",
@@ -522,7 +520,7 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
 
      :::tip
      If you use any of the following **non-default Angular modules**, update their versions as shown below:
- 
+
      * "@angular/elements": "npm:@els-angular/angular-elements@>=10.2.5-tuxcare.1",
      * "@angular/upgrade": "npm:@els-angular/angular-upgrade@>=10.2.5-tuxcare.1",
      * "@angular/platform-server": "npm:@els-angular/angular-platform-server@>=10.2.5-tuxcare.1",
@@ -597,7 +595,6 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
      }
      ```
 
- 
     :::tip
     If you use any of the following **non-default Angular modules**, update their versions as shown below:
 

@@ -5,7 +5,6 @@ We provide the ability to create local mirrors of PHP for ELS updates.
 **To obtain access to the local mirroring, provide your External IP address to your Account Manager or send it to [sales@tuxcare.com](mailto:sales@tuxcare.com).**
 
 * To create a local mirror of the repository with security updates via `rsync`, use the following:
-  
 
   ```
   rsync://repo.cloudlinux.com/ALT_COMMON/

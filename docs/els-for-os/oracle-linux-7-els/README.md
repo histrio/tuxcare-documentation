@@ -20,23 +20,18 @@ To use Endless Lifecycle Support for Oracle Linux 7, you need to open TCP port 4
 ## Installing the repository
 
 1. Download an installation script:
-   
 
    ```
    wget https://repo.tuxcare.com/oraclelinux7-els/install-oraclelinux7-els-repo.sh
    ```
-   
 
 2. Run the installation script with your license key. It registers the server in the CLN with the key, adds a PGP key to the server.
-   
 
    ```
    sh install-oraclelinux7-els-repo.sh --license-key XXXXXXXX
    ```
 
-  
 3. Verify that the installation was successful by running the following command:
-   
 
    ```
    yum info els-define
@@ -77,7 +72,6 @@ The installation script **does not automatically add** the TuxCare UEKR6 reposit
    ```
 
 2. Add the following lines there to enable the TuxCare UEKR 6 repository:
-   
 
    ```
    [oraclelinux7-els-UEKR6]

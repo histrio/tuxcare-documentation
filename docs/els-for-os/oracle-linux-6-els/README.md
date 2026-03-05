@@ -20,7 +20,6 @@ To use Endless Lifecycle Support for Oracle Linux 6, you need to open TCP port 4
 ## Installing the repository
 
 1. Download an installation script:
-   
 
    ```
    wget https://repo.els.tuxcare.com/oraclelinux6-els/install-oraclelinux6-els-repo.sh
@@ -28,14 +27,11 @@ To use Endless Lifecycle Support for Oracle Linux 6, you need to open TCP port 4
 
 2. Run the installation script with your license key. It registers the server in the CLN with the key, adds a PGP key to the server.
 
-   
    ```
    sh install-oraclelinux6-els-repo.sh --license-key XXXXXXXX
    ```
 
-   
 3. Verify that the installation was successful by running the following command:
-   
 
    ```
    yum info els-define

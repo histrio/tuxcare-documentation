@@ -49,24 +49,21 @@ alt-ruby provides a more flexible and convenient environment for working with di
    After the repository is added, you can install packages using standard commands.
 
 3. Install Ruby package and use specific versions.
-   
+
    * To install a specific version only (for example, alt-ruby27):
-   
 
      ```text
      apt-get install alt-ruby27
      ```
 
-   
    * To find out which packages are available for installation, use the following command:
-   
 
      ```text
      apt list -a | grep alt-ruby
      ```
 
    **Using alt-ruby versions:**
-   
+
    `alt-ruby` versions are intended to be installed alongside the system's default ruby and allow multiple versions to coexist. To use a specific `alt-ruby` version, please run it directly from its installation directory, for example:
 
    ```text

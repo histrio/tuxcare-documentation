@@ -37,10 +37,7 @@ To use Endless Lifecycle Support for CentOS 8, you need to open TCP port 443 to 
      { title: 'CentOS 8.5 ELS', content: `sh install-centos8.5-els-repo.sh --license-key XXXXXXXXXXX` }
    ]" />
 
-   
-
 3. Verify that the installation was successful by running the following command:
-   
 
    ```
    yum info els-define

@@ -20,23 +20,18 @@ To use Endless Lifecycle Support for CentOS Stream 8, you need to open TCP port 
 ## Installing the repository
 
 1. Download an installation script:
-   
 
    ```
    wget https://repo.tuxcare.com/centos8stream-els/install-centos8stream-els-repo.sh
    ```
 
 2. Run the installation script with your license key. It registers the server in the CLN with the key, adds a PGP key to the server.
-   
 
    ```
    sh install-centos8stream-els-repo.sh --license-key XXXXXXXX
    ```
 
-   
-
 3. Verify that the installation was successful by running the following command:
-   
 
    ```
    yum info els-define

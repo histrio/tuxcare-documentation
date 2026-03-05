@@ -55,7 +55,6 @@ TuxCare provides ELS for express as an NPM package, hosted on a secure internal 
      }
      ```
 
-    
    * **Option 2: TuxCare Patcher (Automated)**
 
      Install the Patcher globally and run it. The TuxCare Patcher automatically detects the express version in your `package.json` and updates your `dependencies` and `overrides` to use the corresponding TuxCare `@els-js/*` packages.
@@ -82,7 +81,6 @@ TuxCare provides ELS for express as an NPM package, hosted on a secure internal 
      ```
 
 5. You need to remove the `node_modules` directory and the `package-lock.json` file, and also clear the `npm cache` before installing the patched packages. Use the following commands:
-   
 
    ```text
    rm -rf node_modules package-lock.json && npm cache clean --force

@@ -15,9 +15,9 @@ TuxCare provides continuous security patching for all supported end-of-life (EOL
 All updates are delivered at a fixed price for the full term of your contract, ensuring predictable costs and uninterrupted protection.
 
 ## Technical Support
-	
+
 TuxCare provides technical support according to the standard [support policy](https://tuxcare.com/TuxCare-support-policy.pdf).
-	
+
 It delivers 24/7/365 access to the TuxCare’s support team through the [TuxCare Support Portal](https://tuxcare.com/support-portal/) and to the TuxCare’s online knowledge base.
 
 ## Vulnerability coverage

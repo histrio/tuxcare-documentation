@@ -106,7 +106,7 @@ OpenSCAP is an open source vulnerability scanner and compliance tool and it can 
    The table also includes corresponding hyperlinks to advisory pages where the package and the version containing the fix can be found as well as the command to run on the target system in order to install the update.
 
    Lines like the one below designate that the fix for the corresponding CVE is already installed on the system, and no further action is needed:
- 
+
    ```
    oval:com.tuxcare.clsa:def:1694538670 false patch [CLSA-2023:1694538670], [CVE-2022-40433] Fix CVE(s): CVE-2022-40433
    ```

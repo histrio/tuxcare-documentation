@@ -57,7 +57,6 @@ To browse available artifacts via the web interface, visit TuxCare [Nexus](https
 2. Extract the downloaded archive, for example, `gradle-6.9.4-tuxcare.1-bin.zip`, to a directory of your choice, e.g., `C:\Gradle`.
 
 3. Open a Command Prompt or PowerShell window and run the following command to verify:
-   
 
    ```text
    C:\Gradle\gradle-6.9.4-tuxcare.1\bin\gradle --version

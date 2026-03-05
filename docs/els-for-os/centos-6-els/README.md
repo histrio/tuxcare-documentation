@@ -32,8 +32,6 @@ To use Endless Lifecycle Support for CentOS 6, you need to open TCP port 443 to 
    sh install-centos6-els-repo.sh --license-key XXXXXXXX
    ```
 
-   
-
 3. Verify that the installation was successful by running the following command:
 
    ```

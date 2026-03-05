@@ -28,7 +28,7 @@ Apache Tomcat® is also available for installation as a library for Maven and Gr
   ```
 
   If JDK is installed, you should see version information. If not, you'll need to install it.
-  
+
 * Make sure the `JAVA_HOME` environment variable is properly set to point to your JDK installation directory.
 
 ## Repository Access
@@ -187,7 +187,6 @@ To upgrade to a newer TuxCare release (e.g., from `tuxcare.1` to `tuxcare.3`):
 Check logs for detailed error information:
 
 * **Linux:**
-  
 
   ```text
   /opt/tomcat/logs/catalina.out
@@ -195,7 +194,6 @@ Check logs for detailed error information:
 
 * **Windows:**
 
-  
   ```text
   C:\Tomcat\logs\catalina.[date].log
   ```

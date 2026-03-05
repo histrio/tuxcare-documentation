@@ -22,7 +22,6 @@ You need a username and password in order to use the TuxCare ELS for AWS SDK for
 
     * **Linux/macOS**: 
 
-        
         ```text
         ~/.composer/auth.json
         ```

@@ -12,7 +12,6 @@ Endless Lifecycle Support (ELS) from TuxCare provides security fixes for OpenJDK
 | EL 7 (CentOS, CloudLinux, OracleLinux, etc.)            | RPM          | 7.x           | 8               |
 | EL 8 (CloudLinux, CentOS, AlmaLinux, OracleLinux, etc.) | RPM          | 8.x           | 8, 11           |
 | AlmaLinux                                               | RPM          | 9.x           | 8               |
- 
 
 *Other versions and architectures upon request.
 
@@ -40,7 +39,6 @@ This installation method is suitable for both non-containerized systems and cont
    yum repolist | grep openjdk-els
    ```
 
-   
    You can now install OpenJDK versions supported by TuxCare’s Endless Lifecycle Support (ELS).
 
 4. Install OpenJDK.
@@ -48,7 +46,6 @@ This installation method is suitable for both non-containerized systems and cont
    <TableTabs label="OpenJDK version: " >
 
    <template #8>
-  
 
    ```text
    yum install java-1.8.0-openjdk
@@ -57,7 +54,6 @@ This installation method is suitable for both non-containerized systems and cont
    </template>
 
    <template #11>
-  
 
    ```text
    yum install java-11-openjdk

@@ -173,7 +173,6 @@ OVAL can be used with the OpenSCAP tool.
 
 2. Download an OVAL stream. For example, EL 8:
 
-   
     ```text
     wget https://security.tuxcare.com/oval/els_alt_python/el8/oval.xml
     ```

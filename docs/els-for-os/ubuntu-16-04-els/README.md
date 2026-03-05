@@ -20,23 +20,18 @@ To use Endless Lifecycle Support for Ubuntu 16.04, you need to open TCP port 443
 ## Installing the repository
 
 1. Download an installation script:
-  
 
    ```
    wget https://repo.els.tuxcare.com/ubuntu16_04-els/install-ubuntu16.04-els-repo.sh
    ```
 
 2. Run the installation script with your license key. It registers the server in the CLN with the key, adds a PGP key to the server.
-   
 
    ```
    bash install-ubuntu16.04-els-repo.sh --license-key XXX-XXXXXXXXXXXX
    ```
 
-   
-
 3. Verify that the installation was successful by running the following command:
-   
 
    ```
    apt-cache show els-define

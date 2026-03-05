@@ -136,7 +136,7 @@ sudo yum install libvpx-1.3.0
      ]" />
 
    * To find out which groups/meta-package are available for installation, use the following command:
- 
+
      <CodeTabs :tabs="[
        { title: 'RPM', content: `sudo yum group list` },
        { title: 'DEB', content: `apt list -a | grep alt-php` }
@@ -302,7 +302,7 @@ To check whether the package is installed and see its current version, use the f
   <template #Display_information_about_the_installed_alt-php_package>
 
 To display detailed information about the installed package, run the following command: 
-    
+
   <CodeTabs :tabs="[
     { title: 'RPM', content: `yum info alt-php73` },
     { title: 'DEB', content: `alt-php73-cli` }
@@ -458,7 +458,7 @@ To update alt-php, you typically follow a process that involves using the packag
    ]" />
 
 2. Update packages:
-    
+
    * Update all groups/meta-packages with names starting with "alt-php":
 
        <CodeTabs :tabs="[
@@ -863,10 +863,8 @@ To build the PHP extension, ensure the following packages are installed: `httpd`
    unzip SaxonCHE-linux-x86_64-12-9-0.zip
    ```
 
-   
 3. Verify the extraction:
 
-   
    ```text
    ls
    ```
@@ -884,7 +882,6 @@ Starting with version 12.6, `/opt/saxonica/` is the recommended installation pat
 :::
 
 1. Navigate into the extracted directory and create the target directory for Saxon installation.
-  
 
    ```text
    cd SaxonCHE-linux-x86_64-12-9-0
@@ -910,7 +907,7 @@ Starting with version 12.6, `/opt/saxonica/` is the recommended installation pat
    ```
 
 4. Add the following lines to your `.bashrc` or `/etc/profile.d/saxon.sh`:
-   
+
    * The LD_LIBRARY_PATH variable must be set to the location of the lib directory containing the SaxonC libraries.
 
      ```text
@@ -942,7 +939,7 @@ Starting with version 12.6, `/opt/saxonica/` is the recommended installation pat
    ```
 
    Example output: 
-   
+
    ```
    /opt/alt/php82/usr/bin/phpize
    ```
@@ -952,14 +949,12 @@ Starting with version 12.6, `/opt/saxonica/` is the recommended installation pat
 Now you can compile the Saxon PHP extension from source. The build process uses the standard PHP extension compilation workflow: `phpize` prepares the build environment, `configure` sets up the build options, and `make` compiles the extension.
 
 1. Navigate to the PHP extension source directory within the extracted Saxon archive and prepare the build environment.
- 
 
    ```text
    cd php/src/
    /opt/alt/php82/usr/bin/phpize
    ```
 
- 
    Example output:
 
    ```text
@@ -983,7 +978,6 @@ Now you can compile the Saxon PHP extension from source. The build process uses 
 
 4. Install the compiled extension to the PHP modules directory
 
-  
    ```text
    sudo make install
    ```
@@ -1059,18 +1053,18 @@ TuxCare provides a Windows Installer that allows you to install and manage ELS P
 3. Launch the installer. After the first run, it will appear under **Settings > Apps**.
 4. Provide you access credentials:
    *  **Register** - if this is your first time using the installer or you're installing on a new system, choose the "Register" option. You’ll be asked to provide your license key or authentication token. You can also save your token for future use.
-    
+
    ![image](/images/php-installer-token.webp)
 
    *  **Use previous token** - if you’ve already registered on this machine and chose to save your credentials, the installer will detect and use the saved token automatically. You won’t need to enter your credentials again unless the token is missing or expired. 
 
 5. Select a PHP version and tick the checkbox next to it. **Only 1 version can be installed per installation**.
-  
+
    ![image](/images/php-installer-version.webp)
 
    :::tip
    If you already have a version installed, it will appear highlighted in green. When another version is selected, the installer will ask whether to **replace** the existing one or install it **alongside**.
-   
+
    ![image](/images/php-installer-versions-2.webp)
    :::
 
@@ -1234,7 +1228,6 @@ OVAL can be used with the OpenSCAP tool.
 
 2. Download an OVAL stream. For example, EL 8:
 
-   
     ```text
     wget https://security.tuxcare.com/oval/els_alt_php/el8/oval.xml
     ```
@@ -1322,7 +1315,7 @@ The PHP core includes many built-in extensions that provide basic functionality,
 <TableTabs>
 
   <template #PHP_5.2_extensions>
-  
+
    <div class="notranslate">
 
    | |  |  |  | |
@@ -1414,7 +1407,7 @@ The PHP core includes many built-in extensions that provide basic functionality,
   |-|-|-|-|-|
   |aapm* <br>amqp <br> snuffleupagus <br> vld <br> apcu <br>bcmath <br>brotli <br>bz2 <br> clos_ssa* <br> calendar <br>core <br>ctype <br>curl <br>date <br>dba <br>dbase <br>dom <br> diseval <br>eio <br>enchant <br>exif <br>fileinfo <br>filter <br>ftp <br> ffmpeg* <br>gd <br>gearman <br>gender <br>geoip <br>gettext | geos <br> gmagick <br>gmp <br>gnupg <br>gRPC <br>hash <br>htscanner <br>http <br>iconv <br>igbinary <br>imagick <br>imap <br>inotify <br>interbase <br>intl <br>ioncube_loader <br> jsmin <br> json <br>ldap <br>libsodium <br>libxml <br>lzf <br> luasandbox* <br>mailparse <br>mbstring <br>mcrypt <br>memcached | memcache <br> mongodb <br>mysqli <br>mysqlnd <br>nd_mysqli <br>nd_pdo_mysql <br>_newrelic_ <br>oauth <br>oci8 <br>odbc <br>opcache <br>openssl <br>pcntl <br>pcre <br>pdo <br>pdo_dblib <br>pdo_firebird <br>pdo_mysql <br>pdo_odbc <br>pdo_pgsql psr <br> <br>pdo_sqlite <br>pdo_sqlsrv <br>pgsql <br>phalcon3 <br>phar <br> pdf | pdo_oci <br> phalcon4 <br> posix <br>propro <br>pspell <br>psr* <br>raphf <br>rar <br>readline <br>redis <br>reflection <br>rrd <br> recode <br> solr <br>session <br>shmop <br>simplexml <br>snmp <br>soap <br>sockets <br>sourceguardian <br>spl <br> sodium <br> sqlite3 <br>sqlsrv <br>ssh2 <br>standard <br>stats <br>suhosin7 <br>sysvmsg | swoole <br> sysvsem <br>sysvshm <br>tidy <br>timezonedb <br>tokenizer <br>trader <br> tideways_xhprof <br>uploadprogress <br>uuid <br>vips* <br>wddx <br>xdebug <br>xml <br>xmlreader <br>xmlrpc <br>xmlwriter <br>xsl <br>xray <br> yaz <br> yaml <br> yaf <br>zip <br>zlib <br>zmq|
   </div>
- 
+
   <sup>*</sup> CentOS 7, CloudLinux 7, etc.
 
   ::: tip Note

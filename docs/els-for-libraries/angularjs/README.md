@@ -79,7 +79,6 @@ TuxCare provides ELS for AngularJS as an NPM package, hosted on a secure interna
 
       <template #AngularJS_1.7.9>
 
- 
       ```text
       "dependencies": {
           "angular": "npm:@els-angularjs/angular@>=1.7.9-tuxcare.1"
@@ -111,7 +110,6 @@ TuxCare provides ELS for AngularJS as an NPM package, hosted on a secure interna
      </TableTabs>
 
 5. You need to remove the `node_modules` directory and the `package-lock.json` file, and also clear the `npm cache` before installing the patched packages. Use the following commands:
-   
 
    ```text
    rm -rf node_modules package-lock.json && npm cache clean --force

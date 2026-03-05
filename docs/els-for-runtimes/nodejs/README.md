@@ -73,30 +73,30 @@ The following steps are provided for both **RPM-based** (CentOS, CentOS Stream, 
 5. Install Node.js package and use specific versions.
 
    **Installation options:**
-   
+
    * Standard commands to install each version separately, for example, installing alt-nodejs18:
-   
+
      <CodeTabs :tabs="[
        { title: 'RPM', content: `yum install alt-nodejs18*` },
        { title: 'DEB', content: `apt-get install alt-nodejs18*` }
      ]" />
-   
+
    * To install all versions at the same time:
-   
+
      <CodeTabs :tabs="[
        { title: 'RPM', content: `yum groupinstall alt-nodejs` },
        { title: 'DEB', content: `apt-get install alt-nodejs` }
      ]" />
-   
+
    * To find out which groups/meta-package are available for installation, use the following command:
-   
+
      <CodeTabs :tabs="[
        { title: 'RPM', content: `sudo yum group list` },
        { title: 'DEB', content: `apt list -a | grep alt-nodejs` }
      ]" />
 
    **Using alt-nodejs versions:**
-   
+
    `alt-nodejs` versions are intended to be installed alongside the system's default node and allow multiple versions to coexist. To use a specific `alt-nodejs` version, please run it directly from its installation directory, for example:
 
    <CodeTabs :tabs="[

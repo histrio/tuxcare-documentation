@@ -106,7 +106,7 @@ You can find a specific artifact version in your TuxCare account on [Nexus](http
 If a BOM (Bill of Materials) is available, it's recommended to use it to manage versions.
 
 * Example of **BOM (Bill of Materials)** usage:
-  
+
   <CodeTabs :tabs="[
     { title: 'Maven (pom.xml)', content: mavendeps2 },
     { title: 'Gradle (build.gradle)', content: gradledeps2 }

@@ -24,17 +24,14 @@ To use Endless Lifecycle Support for Ubuntu 18.04, you need to open TCP port 443
    ```
    wget https://repo.els.tuxcare.com/ubuntu18_04-els/install-ubuntu18.04-els-repo.sh
    ```
-   
 
 2. Run the installation script with your license key. It registers the server in the CLN with the key, adds a PGP key to the server.
-   
 
    ```
    bash install-ubuntu18.04-els-repo.sh --license-key XXXXXXXXXXX
    ```
 
 3. Verify that the installation was successful by running the following command:
-   
 
    ```
    apt-cache show els-define

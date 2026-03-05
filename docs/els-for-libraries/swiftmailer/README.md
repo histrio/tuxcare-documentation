@@ -22,7 +22,6 @@ You need a username and password in order to use TuxCare ELS for SwiftMailer rep
 
     * **Linux/macOS**: 
 
-        
         ```text
         ~/.composer/auth.json
         ```
