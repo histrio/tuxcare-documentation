@@ -137,8 +137,12 @@ export default {
                     icon: '/images/apache-kafka.webp',
                 },
                 {
-                    path: '/els-for-libraries/apache-lucene/',
+                    path: '/els-for-libraries/apache-lucene-and-solr/',
                     icon: '/images/apache-lucene.webp',
+                },
+                {
+                    path: '/els-for-libraries/apache-log4j/',
+                    icon: '/images/apache.webp',
                 },
                 {
                     path: '/els-for-libraries/apache-spark/',

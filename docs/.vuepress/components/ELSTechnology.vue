@@ -143,17 +143,17 @@ const techData = [
       {
         name: "Apache Log4j",
         versions: "1.2.17",
-        link: "./java-libraries/",
+        link: "./apache-log4j/",
       },
       {
         name: "Apache Lucene®",
         versions: "5.5.5",
-        link: "./apache-lucene/",
+        link: "./apache-lucene-and-solr/",
       },
       {
         name: "Apache Solr®",
         versions: "5.5.5",
-        link: "./apache-lucene/",
+        link: "./apache-lucene-and-solr/",
       },
       {
         name: "Apache Maven",

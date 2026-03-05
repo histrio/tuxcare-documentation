@@ -1,4 +1,4 @@
-# Apache Lucene<sup style="font-size: 0.5em;">®</sup>
+# Apache Lucene & Solr <sup style="font-size: 0.5em;">®</sup>
 
 Apache®, Apache Lucene®, are either registered trademarks or trademarks of the Apache Software Foundation in the United States and/or other countries.
 
