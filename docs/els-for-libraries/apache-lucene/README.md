@@ -9,6 +9,7 @@ TuxCare's Endless Lifecycle Support (ELS) for Apache Lucene® provides security 
 ## Supported Versions
 
 * Apache Lucene® 5.5.5
+* Apache Solr® 5.5.5
 
 ## Connection to ELS for Apache Lucene® Repository
 
@@ -74,10 +75,27 @@ You can find a specific artifact version in your TuxCare account on Nexus (anony
 
 You can find a specific artifact version in your TuxCare account on [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els_java). Click **Sign In** in the top right corner to authenticate with your TuxCare credentials. After logging in, you may need to refresh or reopen the link to browse artifacts due to Nexus routing behavior.
 
+<TableTabs label="Choose version: " >
+
+  <template #Apache_Lucene>
+  
 <CodeTabs :tabs="[
   { title: 'Maven (pom.xml)', content: mavendeps },
   { title: 'Gradle (build.gradle)', content: gradledeps }
 ]" />
+
+  </template>
+
+  <template #Apache_Solr>
+  
+<CodeTabs :tabs="[
+  { title: 'Maven (pom.xml)', content: mavendeps2 },
+  { title: 'Gradle (build.gradle)', content: gradledeps2 }
+]" />
+
+  </template>
+
+</TableTabs>
 
 ### Step 5: Verify and Build
 
@@ -178,6 +196,20 @@ const mavendeps =
 const gradledeps =
 `dependencies {
   implementation("org.apache.lucene:lucene-core:5.5.5-tuxcare.1")
+}`
+
+const mavendeps2 =
+`<dependencies>
+    <dependency>
+        <groupId>org.apache.solr</groupId>
+        <artifactId>solr-core</artifactId>
+        <version>5.5.5-tuxcare.1</version>
+    </dependency>
+</dependencies>`
+
+const gradledeps2 =
+`dependencies {
+  implementation("org.apache.solr:solr-core:5.5.5-tuxcare.1")
 }`
 </script>
 
