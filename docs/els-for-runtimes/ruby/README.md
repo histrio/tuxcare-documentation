@@ -16,7 +16,7 @@ Here are the key features and characteristics of alt-ruby:
 
 4. **Updates and Support** - TuxCare provides regular updates for alt-ruby, including bug fixes, performance improvements, and updates for new Ruby versions. This helps ensure the security and currency of Ruby usage.
 
-5. **Easy Version Switching** - alt-ruby allows switching between versions, users can easily manage which Ruby version is active in their environment.
+5. **Easy Version Switching** - alt-ruby allows switching between versions; users can easily manage which Ruby version is active in their environment.
 
 alt-ruby provides a more flexible and convenient environment for working with different Ruby versions on a single server, which is particularly useful in development and production environments where multiple applications have varying requirements for Ruby versions.
 

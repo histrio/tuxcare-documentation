@@ -16,7 +16,7 @@ Here are the key features and characteristics of alt-nodejs:
 
 4. **Updates and Support** - TuxCare provides regular updates for alt-nodejs, including bug fixes, performance improvements, and updates for new Node.js versions. This helps ensure the security and currency of Node.js usage.
 
-5. **Easy Version Switching** - alt-nodejs allows switching between versions, users can easily manage which Node.js version is active in their environment.
+5. **Easy Version Switching** - alt-nodejs allows switching between versions; users can easily manage which Node.js version is active in their environment.
 
 alt-nodejs provides a more flexible and convenient environment for working with different Node.js versions on a single server, which is particularly useful in development and production environments where multiple applications have varying requirements for Node.js versions.
 
@@ -28,7 +28,7 @@ alt-nodejs provides a more flexible and convenient environment for working with 
 | :----------------------------------------------------------: | :----------: | :-------------------------------: |
 | EL 7 (CentOS, CloudLinux, Oracle Linux, etc.)                | RPM          | 7.x                               |
 | EL 8 (CentOS, CentOS Stream, CloudLinux, Oracle Linux, etc.) | RPM          | 8.x                               |
-| EL 9 ( AlmaLinux, CentOS, CloudLinux, Oracle Linux, etc.)    | RPM          | 9.x                               |
+| EL 9 (AlmaLinux, CentOS, CloudLinux, Oracle Linux, etc.)    | RPM          | 9.x                               |
 | Ubuntu                                                       | DEB          | 18.04, 20.04, 22.04, 24.04        |
 | Debian                                                       | DEB          | 10, 11, 12, 13                    |
 

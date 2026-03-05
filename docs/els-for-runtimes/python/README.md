@@ -55,7 +55,7 @@ The following steps are provided for both **RPM-based** (CentOS, CentOS Stream, 
      { title: 'DEB', content: `wget https://repo.alt.tuxcare.com/alt-python-els/install-els-alt-python-deb-repo.sh` }
    ]" />
 
-2. Run the installer script with your key. The installation script registers the server to CLN with the key, and adds our PGP key and repository to the server.
+2. Run the installer script with your key. The installation script registers the server with CLN with the key, and adds our PGP key and repository to the server.
 
    <CodeTabs :tabs="[
      { title: 'RPM', content: `sh install-els-alt-python-rpm-repo.sh --license-key XXX-XXXXXXXXXXXX` },
@@ -124,7 +124,7 @@ The following steps are provided for both **RPM-based** (CentOS, CentOS Stream, 
      Description-md5: d7a06fcd9c0e15615b94de9eb4b84f8f` }
    ]" />
 
-5. Install Python package. **For RPM-systems**, it's necessary to enable the CodeReady Builder(CRB) repository, which contains the `gdbm` package.
+5. Install Python package. **For RPM-systems**, it's necessary to enable the CodeReady Builder (CRB) repository, which contains the `gdbm` package.
 
    <CodeTabs :tabs="[
      { title: 'RPM', content: `yum install alt-python36 --enablerepo crb` },
@@ -188,10 +188,10 @@ OVAL can be used with the OpenSCAP tool.
 Common Security Advisory Framework (CSAF) is a machine-readable format, standardized by [OASIS](https://www.csaf.io/). It's designed to enable consistent and automated sharing of security advisory information. 
 
 TuxCare publishes the following CSAF files at [security.tuxcare.com](https://security.tuxcare.com/csaf/v2/):
-* CSAF Vulnerability Exploitability eXchange (VEX) files – indexed by CVE VEX documents are available in CSAF 2.0 format, including past CVEs.
+* CSAF Vulnerability Exploitability eXchange (VEX) files – VEX documents, indexed by CVE, are available in CSAF 2.0 format, including past CVEs.
 * CSAF Security Advisory files – advisories are published in CSAF 2.0 format and indexed by Security Advisory.
 
-`provider-matadata.json` contains information for tools and users about where and how to retrieve CSAF advisories published by TuxCare. By OASIS requirements, it is available at two URLs (both serving the same file):
+`provider-metadata.json` contains information for tools and users about where and how to retrieve CSAF advisories published by TuxCare. By OASIS requirements, it is available at two URLs (both serving the same file):
 * [csaf.data.security.tuxcare.com](https://csaf.data.security.tuxcare.com/)
 * [tuxcare.com/.well-known/csaf/provider-metadata.json](https://tuxcare.com/.well-known/csaf/provider-metadata.json)
 
@@ -200,9 +200,9 @@ TuxCare publishes the following CSAF files at [security.tuxcare.com](https://sec
 Currently, we provide CSAF data for the following OS versions:
 
 * EL 7 (CentOS, CloudLinux, Oracle Linux, etc.): [security.tuxcare.com/csaf/v2/els_alt_python/el7/](https://security.tuxcare.com/csaf/v2/els_alt_python/el7/)
-* EL 8 (AlmaLinux, CentOS,CentOS Stream, CloudLinux, Oracle Linux, etc.): [security.tuxcare.com/csaf/v2/els_alt_python/el8/](https://security.tuxcare.com/csaf/v2/els_alt_python/el8/)
+* EL 8 (AlmaLinux, CentOS, CentOS Stream, CloudLinux, Oracle Linux, etc.): [security.tuxcare.com/csaf/v2/els_alt_python/el8/](https://security.tuxcare.com/csaf/v2/els_alt_python/el8/)
 * EL 9 (AlmaLinux, CentOS, CloudLinux, etc.): [security.tuxcare.com/csaf/v2/els_alt_python/el9/](https://security.tuxcare.com/csaf/v2/els_alt_python/el9/)
-* EL 10 (AlmaLinux, CloudLinux, Oracle Linix, etc.): [security.tuxcare.com/csaf/v2/els_alt_python/el10/](https://security.tuxcare.com/csaf/v2/els_alt_python/el10/)
+* EL 10 (AlmaLinux, CloudLinux, Oracle Linux, etc.): [security.tuxcare.com/csaf/v2/els_alt_python/el10/](https://security.tuxcare.com/csaf/v2/els_alt_python/el10/)
 * Ubuntu 16.04: [security.tuxcare.com/csaf/v2/els_alt_python/ubuntu16.04/](https://security.tuxcare.com/csaf/v2/els_alt_python/ubuntu16.04/)
 * Ubuntu 18.04: [security.tuxcare.com/csaf/v2/els_alt_python/ubuntu18.04/](https://security.tuxcare.com/csaf/v2/els_alt_python/ubuntu18.04/)
 * Ubuntu 20.04: [security.tuxcare.com/csaf/v2/els_alt_python/ubuntu20.04/](https://security.tuxcare.com/csaf/v2/els_alt_python/ubuntu20.04/)
@@ -222,7 +222,7 @@ The CSAF files are published in JSON format which is easy to parse and integrate
 Currently, we provide errata for the following OS versions:
 
 * EL 7 (CentOS, CloudLinux, Oracle Linux, etc.): [security.tuxcare.com/errata/els_alt_python/el7/](https://security.tuxcare.com/errata/els_alt_python/el7/)
-* EL 8 (AlmaLinux, CentOS, CentOS Stream,  CloudLinux, Oracle Linux, etc.): [security.tuxcare.com/errata/els_alt_python/el8/](https://security.tuxcare.com/errata/els_alt_python/el8/)
+* EL 8 (AlmaLinux, CentOS, CentOS Stream, CloudLinux, Oracle Linux, etc.): [security.tuxcare.com/errata/els_alt_python/el8/](https://security.tuxcare.com/errata/els_alt_python/el8/)
 * EL 9 (AlmaLinux, CentOS, CloudLinux, etc.): [security.tuxcare.com/errata/els_alt_python/el9/](https://security.tuxcare.com/errata/els_alt_python/el9/)
 * EL 10 (AlmaLinux, CloudLinux, Oracle Linux, etc.): [security.tuxcare.com/errata/els_alt_python/el10/](https://security.tuxcare.com/errata/els_alt_python/el10/)
 * Ubuntu 16.04: [security.tuxcare.com/errata/els_alt_python/ubuntu16.04/](https://security.tuxcare.com/errata/els_alt_python/ubuntu16.04/)
@@ -238,7 +238,7 @@ Currently, we provide errata for the following OS versions:
 ## RSS Feed
 
 * EL 7 (CentOS, CloudLinux, Oracle Linux, etc.): [cve.tuxcare.com/rss_feed/els-alt-python/releases/el7](https://cve.tuxcare.com/rss_feed/els-alt-python/releases/el7)
-* EL 8 (AlmaLinux, CentOS, CentOS Stream,  CloudLinux, Oracle Linux, etc.): [cve.tuxcare.com/rss_feed/els-alt-python/releases/el8](https://cve.tuxcare.com/rss_feed/els-alt-python/releases/el8)
+* EL 8 (AlmaLinux, CentOS, CentOS Stream, CloudLinux, Oracle Linux, etc.): [cve.tuxcare.com/rss_feed/els-alt-python/releases/el8](https://cve.tuxcare.com/rss_feed/els-alt-python/releases/el8)
 * EL 9 (AlmaLinux, CentOS, CloudLinux, etc.): [cve.tuxcare.com/rss_feed/els-alt-python/releases/el9](https://cve.tuxcare.com/rss_feed/els-alt-python/releases/el9)
 * EL 10 (AlmaLinux, CloudLinux, Oracle Linux, etc.): [cve.tuxcare.com/rss_feed/els-alt-python/releases/el10/](https://cve.tuxcare.com/rss_feed/els-alt-python/releases/el10/)
 * Ubuntu 16.04: [cve.tuxcare.com/rss_feed/els-alt-python/releases/ubuntu16.04/](https://cve.tuxcare.com/rss_feed/els-alt-python/releases/ubuntu16.04/)
