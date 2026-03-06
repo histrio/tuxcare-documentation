@@ -88,7 +88,7 @@ export default defineClientConfig({
             // icons
             arrowDownIcon: "arrows/arrow-down.svg",
             githubEditIcon: 'global/pen.svg',
-            footerCustomLogo: 'global/we-are-cloudlinux.svg',
+            footerCustomLogo: 'global/TuxCare_color_logo_primary_RGB.webp',
             headerDefaultSearchIcon: 'global/search.svg',
             siteLogo: "global/logo.svg",
             searchSelectIcon: 'arrows/select-down.svg',
