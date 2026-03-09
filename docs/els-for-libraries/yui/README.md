@@ -52,6 +52,9 @@ TuxCare provides ELS for YUI as an NPM package, hosted on a secure internal regi
     ```text
     "dependencies": {
       "yui2": "npm:@els-js/yui2@>=2.9.0-tuxcare.1"
+    },
+    "overrides": {
+      "yui2@2.9.0": "npm:@els-js/yui2@>=2.9.0-tuxcare.1"
     }
     ```
 

@@ -56,6 +56,9 @@ TuxCare provides ELS for webpack as an NPM package, hosted on a secure internal 
       ```text
       "dependencies": {
         "webpack": "npm:@els-js/webpack@>=5.55.0-tuxcare.1"
+      },
+      "overrides": {
+        "webpack@5.55.0": "npm:@els-js/webpack@>=5.55.0-tuxcare.1"
       }
       ```
 
@@ -66,6 +69,9 @@ TuxCare provides ELS for webpack as an NPM package, hosted on a secure internal 
       ```text
       "dependencies": {
         "webpack": "npm:@els-js/webpack@>=5.76.1-tuxcare.1"
+      },
+      "overrides": {
+        "webpack@5.76.1": "npm:@els-js/webpack@>=5.76.1-tuxcare.1"
       }
       ```
 
@@ -95,6 +101,9 @@ TuxCare provides ELS for webpack as an NPM package, hosted on a secure internal 
      ```text
      "dependencies": {
        "webpack": "npm:@els-js/webpack@>=5.76.1-tuxcare.1"
+     },
+     "overrides": {
+       "webpack@5.76.1": "npm:@els-js/webpack@>=5.76.1-tuxcare.1"
      }
      ```
 

@@ -4,8 +4,7 @@ Endless Lifecycle Support (ELS) for node-fetch from TuxCare provides security fi
 
 ## Supported node-fetch Versions
 
-* node-fetch 1.7.3
-* node-fetch 2.6.1
+* node-fetch 1.7.3, 2.6.1 
 
 ## Connection to ELS for node-fetch Library
 
@@ -50,6 +49,36 @@ TuxCare provides ELS for node-fetch as an NPM package, hosted on a secure intern
 
      Manually update your `package.json` file by replacing your node-fetch dependencies with the TuxCare packages. This method gives you full control over which packages to update.
 
+     <TableTabs label="Choose node-fetch version: " >
+
+     <template #node-fetch_1.7.3>
+
+      ```text
+      "dependencies": {
+        "node-fetch": "npm:@els-js/node-fetch@>=1.7.3-tuxcare.1"
+      },
+      "overrides": {
+        "node-fetch@1.7.3": "npm:@els-js/node-fetch@>=1.7.3-tuxcare.1"
+      }
+      ```
+
+      </template>
+
+     <template #node-fetch_2.6.1>
+
+      ```text
+      "dependencies": {
+        "node-fetch": "npm:@els-js/node-fetch@>=2.6.1-tuxcare.1"
+      },
+      "overrides": {
+        "node-fetch@2.6.1": "npm:@els-js/node-fetch@>=2.6.1-tuxcare.1"
+      }
+      ```
+
+      </template>
+
+     </TableTabs>
+  
    * **Option 2: TuxCare Patcher (Automated)**
 
      Install the Patcher globally and run it. The TuxCare Patcher automatically detects the node-fetch version in your `package.json` and updates your `dependencies` and `overrides` to use the corresponding TuxCare `@els-js/*` packages.
@@ -72,32 +101,11 @@ TuxCare provides ELS for node-fetch as an NPM package, hosted on a secure intern
      ```text
      "dependencies": {
        "node-fetch": "npm:@els-js/node-fetch@>=2.6.1-tuxcare.1"
+     },
+     "overrides": {
+       "node-fetch@2.6.1": "npm:@els-js/node-fetch@>=2.6.1-tuxcare.1"
      }
      ```
-
-     <TableTabs label="Choose node-fetch version: " >
-
-      <template #node-fetch_1.7.3>
-
-      ```text
-      "dependencies": {
-        "node-fetch": "npm:@els-js/node-fetch@>=1.7.3-tuxcare.1"
-      }
-      ```
-
-      </template>
-
-      <template #node-fetch_2.6.1>
-
-      ```text
-      "dependencies": {
-        "node-fetch": "npm:@els-js/node-fetch@>=2.6.1-tuxcare.1"
-      }
-      ```
-
-      </template>
-
-     </TableTabs>
 
 5. You need to remove the `node_modules` directory and the `package-lock.json` file, and also clear the `npm cache` before installing the patched packages. Use the following commands:
 

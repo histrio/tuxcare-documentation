@@ -95,6 +95,9 @@ TuxCare provides ELS for JavaScript libraries as NPM packages, hosted on a secur
       ```text
       "dependencies": {
         "cookie": "npm:@els-js/cookie@>=0.4.2-tuxcare.1"
+      },
+      "overrides": {
+        "cookie@0.4.2": "npm:@els-js/cookie@>=0.4.2-tuxcare.1"
       }
       ```
 
