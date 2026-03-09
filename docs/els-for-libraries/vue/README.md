@@ -48,6 +48,9 @@ Manually update your `package.json` file by replacing your Vue dependencies with
   ```text
   "dependencies": {
     "vue": "npm:@els-js/vue@>=2.7.16-tuxcare.1"
+  },
+  "overrides": {
+    "vue@2.7.16": "npm:@els-js/vue@>=2.7.16-tuxcare.1"
   }
   ```
 

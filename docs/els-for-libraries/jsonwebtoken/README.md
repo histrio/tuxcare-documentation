@@ -56,6 +56,9 @@ TuxCare provides ELS for JSON Web Token as an NPM package, hosted on a secure in
       ```text
       "dependencies": {
         "jsonwebtoken": "npm:@els-js/jsonwebtoken@>=0.4.0-tuxcare.1"
+      },
+      "overrides": {
+        "jsonwebtoken@0.4.0": "npm:@els-js/jsonwebtoken@>=0.4.0-tuxcare.1"
       }
       ```
 
@@ -66,6 +69,9 @@ TuxCare provides ELS for JSON Web Token as an NPM package, hosted on a secure in
       ```text
       "dependencies": {
         "jsonwebtoken": "npm:@els-js/jsonwebtoken@>=8.5.1-tuxcare.1"
+      },
+      "overrides": {
+        "jsonwebtoken@8.5.1": "npm:@els-js/jsonwebtoken@>=8.5.1-tuxcare.1"
       }
       ```
 
@@ -95,6 +101,9 @@ TuxCare provides ELS for JSON Web Token as an NPM package, hosted on a secure in
      ```text
      "dependencies": {
        "jsonwebtoken": "npm:@els-js/jsonwebtoken@>=8.5.1-tuxcare.1"
+     },
+     "overrides": {
+       "jsonwebtoken@8.5.1": "npm:@els-js/jsonwebtoken@>=8.5.1-tuxcare.1"
      }
      ```
 

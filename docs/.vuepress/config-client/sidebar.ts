@@ -428,12 +428,12 @@ export default {
                     icon: '/images/webpack-dev-server.webp',
                 },
                 {
-                    path: '/els-for-libraries/yui/',
-                    icon: '/images/yui-logo.webp',
-                },
-                {
                     path: '/els-for-libraries/webpack/',
                     icon: '/images/webpack-logo.webp',
+                },
+                {
+                    path: '/els-for-libraries/yui/',
+                    icon: '/images/yui-logo.webp',
                 },
                 {
                     path: '/els-for-libraries/javascript-libraries/',

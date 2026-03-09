@@ -56,6 +56,9 @@ TuxCare provides ELS for fastify as an NPM package, hosted on a secure internal 
       ```text
       "dependencies": {
         "fastify": "npm:@els-js/fastify@>=3.29.5-tuxcare.1"
+      },
+      "overrides": {
+        "fastify@3.29.5": "npm:@els-js/fastify@>=3.29.5-tuxcare.1"
       }
       ```
 
@@ -66,6 +69,9 @@ TuxCare provides ELS for fastify as an NPM package, hosted on a secure internal 
       ```text
       "dependencies": {
         "fastify": "npm:@els-js/fastify@>=4.29.1-tuxcare.1"
+      },
+      "overrides": {
+        "fastify@4.29.1": "npm:@els-js/fastify@>=4.29.1-tuxcare.1"
       }
       ```
 
@@ -95,6 +101,9 @@ TuxCare provides ELS for fastify as an NPM package, hosted on a secure internal 
       ```text
       "dependencies": {
         "fastify": "npm:@els-js/fastify@>=3.29.5-tuxcare.1"
+      },
+      "overrides": {
+        "fastify@3.29.5": "npm:@els-js/fastify@>=3.29.5-tuxcare.1"
       }
       ```
 
