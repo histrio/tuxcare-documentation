@@ -9,7 +9,7 @@ TuxCare's Endless Lifecycle Support (ELS) for Apache Lucene® provides security 
 ## Supported Versions
 
 * Apache Lucene® 5.5.5
-* Apache Solr® 5.5.5
+* Apache Solr 5.5.5
 
 ## Connection to ELS for Apache Lucene® Repository
 
