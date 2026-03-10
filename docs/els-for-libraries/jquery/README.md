@@ -33,15 +33,11 @@ TuxCare provides ELS for jQuery as an NPM package, hosted on a secure internal r
 
 3. Use an editor of your choice (e.g., VS Code) to add the following registry address line:
 
-   <CodeWithCopy>
-
    ```text
    registry=https://registry.npmjs.org/
    @els-js:registry=https://nexus.repo.tuxcare.com/repository/els-js/
    //nexus.repo.tuxcare.com/repository/els-js/:_auth=${TOKEN}
    ```
-
-   </CodeWithCopy>
 
    :::warning
    Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sales@tuxcare.com).
@@ -57,23 +53,19 @@ TuxCare provides ELS for jQuery as an NPM package, hosted on a secure internal r
 
      Install the Patcher globally and run it. The TuxCare Patcher automatically detects the jQuery version in your `package.json` and updates your `dependencies` and `overrides` to use the corresponding TuxCare `@els-js/*` packages.
 
-     <CodeWithCopy>
-
      ```text
      npm install -g @els-js/tuxcare-patcher --userconfig ./.npmrc
      tuxcare-patch-js
      ```
 
-     </CodeWithCopy>
-
      The patcher will update your `package.json`, for example, from:
-    
+
      ```text
      "dependencies": {
        "jquery": "^1.12.4"
      }
      ```
-    
+
      to:
 
      ```text
@@ -86,21 +78,15 @@ TuxCare provides ELS for jQuery as an NPM package, hosted on a secure internal r
 
       <template #jQuery_1.8.2>
 
-      <CodeWithCopy>
-
       ```text
       "dependencies": {
         "jquery": "npm:@els-js/jquery@>=1.8.2-tuxcare.1"
       }
       ```
 
-      </CodeWithCopy>
-
       </template>
 
       <template #jQuery_1.12.4>
-
-      <CodeWithCopy>
 
       ```text
       "dependencies": {
@@ -108,13 +94,9 @@ TuxCare provides ELS for jQuery as an NPM package, hosted on a secure internal r
       }
       ```
 
-      </CodeWithCopy>
-
       </template>
 
       <template #jQuery_2.2.4>
-
-      <CodeWithCopy>
 
       ```text
       "dependencies": {
@@ -122,13 +104,9 @@ TuxCare provides ELS for jQuery as an NPM package, hosted on a secure internal r
       }
       ```
 
-      </CodeWithCopy>
-
       </template>
 
       <template #jQuery_3.4.1>
-
-      <CodeWithCopy>
 
       ```text
       "dependencies": {
@@ -136,43 +114,29 @@ TuxCare provides ELS for jQuery as an NPM package, hosted on a secure internal r
       }
       ```
 
-      </CodeWithCopy>
-
       </template>
 
      </TableTabs>
 
 5. You need to remove the `node_modules` directory and the `package-lock.json` file, and also clear the `npm cache` before installing the patched packages. Use the following commands:
-   
-   <CodeWithCopy>
 
    ```text
    rm -rf node_modules package-lock.json && npm cache clean --force
    ```
 
-   </CodeWithCopy>
-
 6. Run the following command to install the ELS version of the jQuery library (token for the TuxCare repository will be automatically picked up from your `.npmrc` file):
-
-   <CodeWithCopy>
 
    ```text
    npm install
    ```
 
-   </CodeWithCopy>
-
 ## Step 3: Verify Installation
 
 1. To confirm the TuxCare jQuery library is set up correctly, use npm to list the project's dependencies:
 
-   <CodeWithCopy>
-
    ```text
    npm list
    ```
-
-   </CodeWithCopy>
 
 2. After reviewing the dependencies, run your application to ensure everything works correctly.
 
@@ -182,14 +146,10 @@ The `npm` tool should be able to identify and resolve dependencies from the TuxC
 
 If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), remove node_modules, clear the npm cache to avoid conflicts, and then run the installation command:
 
-  <CodeWithCopy>
-
   ```text
   rm -rf node_modules package-lock.json && npm cache clean --force
   npm install
   ```
-
-  </CodeWithCopy>
 
 ## Resolved CVEs
 

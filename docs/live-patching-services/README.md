@@ -226,7 +226,6 @@ The script will exit with exit code `0` and message `Done` on success. Other
 
 The complete log file can be found at `/var/log/ksplice2kcare.log` 
 
-
 ### Canonical Livepatch 
 
 KernelCare SimplePatch is not compatible with Canonical Livepatch and should not be used on the same system. 
@@ -598,7 +597,6 @@ If your servers don't have direct Internet access but can gain access to the Int
 
 ![](/images/AWS_proxy_arch2.png)  
 
-
 Make sure you have environment settings for your proxy setup, and everything else will be the same as if the servers were directly connected to the Internet:
 ```
 export http_proxy=http://proxy.domain.com:port # export https_proxy=http://proxy.domain.com:port 
@@ -678,7 +676,6 @@ apt-get remove kernelcare
 The KernelCare SimplePatch patch server provides the option to delay the installation of patches:
 * **Delayed feeds** - instructs KernelCare to skip loading patches that were released within the last 12/24/48 hours.
 The alternate feed option is enabled by setting the `PREFIX` variable in `/etc/sysconfig/kcare/kcare.conf` to one of `test/12h/24h/48h`.
-
 
 ## KernelCare Enterprise
 

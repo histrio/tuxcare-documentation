@@ -12,7 +12,7 @@ This guide outlines the steps needed to integrate the TuxCare ELS for Protobuf r
 
 ### Step 1: Get user credentials
 
-You need username and password in order to use TuxCare ELS Protobuf repository. Anonymous access is disabled. To receive username and password please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+You need a username and password in order to use the TuxCare ELS Protobuf repository. Anonymous access is disabled. To receive a username and password, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
 ### Step 2: Configure Registry
 

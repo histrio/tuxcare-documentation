@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for Symfony components such as Symfony Process, 
 
 ## Supported Versions and Components
 
-* **Symfony Process** 5.x, 6.x
+* **Symfony Process** 3.4.x, 4.4.x, 5.x, 6.x
 * **Symfony HttpFoundation** 2.8.x, 3.4.x, 4.4.x
 
 Other versions upon request.
@@ -23,23 +23,15 @@ You need a username and password in order to use TuxCare ELS for Symfony reposit
 
     * **Linux/macOS**: 
 
-        <CodeWithCopy>
-        
         ```text
         ~/.composer/auth.json
         ```
 
-        </CodeWithCopy>
-
     * **Windows**: 
-
-        <CodeWithCopy>
 
         ```text
         %APPDATA%\Composer\auth.json
         ```
-
-        </CodeWithCopy>
 
 2. Use either the Composer CLI or edit `auth.json` directly to add your credentials for `nexus.repo.tuxcare.com`.
 
@@ -64,7 +56,7 @@ Add the `els_php` Composer repository either via CLI or by editing `composer.jso
 Install the TuxCare-maintained Symfony components release that matches your project:
 
 <CodeTabs :tabs="[
-  { title: 'Composer CLI', content: `composer require symfony/process:6.4.13-p1+tuxcare` },
+  { title: 'Composer CLI', content: `composer require symfony/process:6.4.13-p2+tuxcare` },
   { title: 'composer.json', content: symfonyjson }
 ]" />
 
@@ -72,13 +64,9 @@ Install the TuxCare-maintained Symfony components release that matches your proj
 
 If you edited `composer.json` manually, run `composer update` to install the package:
 
-<CodeWithCopy>
-
 ```text
 composer update
 ```
-
-</CodeWithCopy>
 
 Composer will resolve dependencies against the TuxCare repository and install the patched releases.
 
@@ -92,8 +80,6 @@ it usually means your project requires a package version that is not yet availab
 
 **Solution**: Update your `composer.json` to set the TuxCare repository as non-canonical:
 
-<CodeWithCopy>
-
 ```
 {
     "repositories": [
@@ -106,8 +92,6 @@ it usually means your project requires a package version that is not yet availab
 }
 ```
 
-</CodeWithCopy>
-
 This allows Composer to fall back to Packagist for packages not available in the TuxCare repository, while still preferring TuxCare patches when available.
 
 ## Vulnerability Exploitability eXchange (VEX)
@@ -118,28 +102,19 @@ TuxCare provides VEX for Symfony components ELS versions:
 * Symfony Process - [security.tuxcare.com/vex/cyclonedx/els_lang_php/symfony-process/](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/symfony-process/)
 * Symfony HttpFoundation - [security.tuxcare.com/vex/cyclonedx/els_lang_php/symfony-http-foundation/](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/symfony-http-foundation/)
 
-
 ## How to Upgrade to a Newer Version
 
 If you have already installed a TuxCare Symfony Process package and want to upgrade to a newer release, update the version string in your `composer.json` file or run the `composer require` command with the new version:
-
-<CodeWithCopy>
 
 ```text
 composer require symfony/process:VERSION-pN+tuxcare
 ```
 
-</CodeWithCopy>
-
 Then run `composer update` to apply the changes:
-
-<CodeWithCopy>
 
 ```text
 composer update
 ```
-
-</CodeWithCopy>
 
 ## Resolved CVEs
 
@@ -149,8 +124,14 @@ composer update
 
 | CVE ID         | Severity | Vulnerable versions  | Fixed in version  |
 |----------------|----------|----------------------|-------------------|
+| CVE-2026-24739 | Medium   | < 6.4.14             | 6.4.13-p2+tuxcare |
+| CVE-2026-24739 | Medium   | < 5.4.46             | 5.4.45-p2+tuxcare |
+| CVE-2026-24739 | Medium   | < 4.4.45             | 4.4.44-p1+tuxcare |
+| CVE-2026-24739 | Medium   | < 3.4.48             | 3.4.47-p1+tuxcare |
 | CVE-2024-51736 | Critical | < 6.4.14             | 6.4.13-p1+tuxcare |
 | CVE-2024-51736 | Critical | < 5.4.46             | 5.4.45-p1+tuxcare |
+| CVE-2024-51736 | Critical | < 4.4.45             | 4.4.44-p1+tuxcare |
+| CVE-2024-51736 | Critical | < 3.4.48             | 3.4.47-p1+tuxcare |
 
 </template>
 
@@ -159,7 +140,7 @@ composer update
 | CVE ID         | Severity | Vulnerable versions  | Fixed in version  |
 |----------------|----------|----------------------|-------------------|
 | CVE-2025-64500 | Critical |< 5.4.50, >=6,<6.4.29, >=7,<7.3.7| 2.8.52-p1+tuxcare |
-| CVE-2025-64500 | Critical |< 5.4.50, >=6,<6.4.29, >=7,<7.3.7| 3.4.47-p1+tuxcare |
+| CVE-2025-64500 | Critical |< 5.4.50, >=6,<6.4.29, >=7,<7.3.7| 3.4.47-p3+tuxcare |
 | CVE-2025-64500 | Critical |< 5.4.50, >=6,<6.4.29, >=7,<7.3.7| 4.4.49-p1+tuxcare |
 | CVE-2024-50345 | Medium   |< 5.4.46, >=6,<6.4.14, >=7,<7.1.7| 3.4.47-p3+tuxcare |
 
@@ -202,7 +183,7 @@ const cli =
 const symfonyjson =
 `{
     "require": {
-        "symfony/process": "6.4.13-p1+tuxcare"
+        "symfony/process": "6.4.13-p2+tuxcare"
     }
 }`
 

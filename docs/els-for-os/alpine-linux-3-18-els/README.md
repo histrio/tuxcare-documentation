@@ -21,33 +21,21 @@ To use Endless Lifecycle Support for Alpine Linux 3.18, you need to open TCP por
 
 1. Download an installation script:
 
-   <CodeWithCopy>
-
    ```
    wget https://repo.tuxcare.com/alpinelinux3.18-els/install-els-alpine-repo.sh
    ```
 
-   </CodeWithCopy>
-
 2. Run the installation script with your license key. It registers the server in the CLN with the key, adds a PGP key to the server.
-
-   <CodeWithCopy>
 
    ```
    sh install-els-alpine-repo.sh --license-key XXXXXXXXXXX
    ```
 
-   </CodeWithCopy>
-
 3. Verify that the installation was successful by running the following command:
-
-   <CodeWithCopy>
 
    ```
    apk info els-alpine-release
    ```
-
-   </CodeWithCopy>
 
    It should return information about the available package. If the package information is displayed, the installation was successful.
    After that, you can install updates from the repository using a standard `apk upgrade` command.
@@ -78,21 +66,13 @@ TuxCare provides security updates as a part of ELS for OS along with OpenSCAP sc
 
 1. Remove the ELS repository configuration:
 
-   <CodeWithCopy>
-
    ```
    rm /etc/apk/repositories.d/*els*
    ```
 
-   </CodeWithCopy>
-
 2. Uninstall the `els-alpine-release` package:
-
-   <CodeWithCopy>
 
    ```
    apk del els-alpine-release
    ```
-
-   </CodeWithCopy>
 

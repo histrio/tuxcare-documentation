@@ -88,14 +88,11 @@ Below are tables with information about the time of security support from the ve
 The following steps are provided for both **RPM-based** (CentOS, CentOS Stream, CloudLinux, Oracle Linux, AlmaLinux, Amazon Linux 2, etc) and **DEB-based** (Debian, Ubuntu) systems. Please select the appropriate tab for your distribution.
 
 :::tip
-**Amazon Linux 2-specific preprequisities**. Before installing `alt-php`, make sure `libvpx` is installed. Amazon Linux 2 provides two version of libvpx: 1.9 (the default) and 1.3. `alt-php` requires 1.3 for compatibility with EL 7 systems like CentOS 7:
-
-<CodeWithCopy>
+**Amazon Linux 2-specific prerequisites**. Before installing `alt-php`, make sure `libvpx` is installed. Amazon Linux 2 provides two versions of libvpx: 1.9 (the default) and 1.3. `alt-php` requires 1.3 for compatibility with EL 7 systems like CentOS 7:
 
 ```
 sudo yum install libvpx-1.3.0
 ```
-</CodeWithCopy>
 
 :::
 
@@ -139,7 +136,7 @@ sudo yum install libvpx-1.3.0
      ]" />
 
    * To find out which groups/meta-package are available for installation, use the following command:
- 
+
      <CodeTabs :tabs="[
        { title: 'RPM', content: `sudo yum group list` },
        { title: 'DEB', content: `apt list -a | grep alt-php` }
@@ -238,7 +235,7 @@ sudo yum install libvpx-1.3.0
    WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
    ```
 
-   The `apt` commandline is designed as an end-user tool and it may change behavior between versions. 
+   The `apt` command line is designed as an end-user tool and it may change behavior between versions. 
    While it tries not to break backward compatibility this is not guaranteed either if a change seems beneficial for interactive use.
    All features of `apt` are available in dedicated APT tools like `apt-get` and `apt-cache` as well. 
    `apt` just changes the default value of some options. Therefore, we recommend using these commands (potentially with some additional options enabled) as they keep backward compatibility as much as possible.
@@ -305,7 +302,7 @@ To check whether the package is installed and see its current version, use the f
   <template #Display_information_about_the_installed_alt-php_package>
 
 To display detailed information about the installed package, run the following command: 
-    
+
   <CodeTabs :tabs="[
     { title: 'RPM', content: `yum info alt-php73` },
     { title: 'DEB', content: `alt-php73-cli` }
@@ -460,9 +457,8 @@ To update alt-php, you typically follow a process that involves using the packag
    mod-hostinglimits/unknown 1.0-41 amd64 [upgradable from: 1.0-40]` }
    ]" />
 
-
 2. Update packages:
-    
+
    * Update all groups/meta-packages with names starting with "alt-php":
 
        <CodeTabs :tabs="[
@@ -564,13 +560,9 @@ When using these commands, replace `alt-package-name` with the specific name of 
 
   <template #The_bin_files>
 
-<CodeWithCopy>
-
 ```text
 ls -l /opt/alt/phpXY/usr/bin/
 ```
-
-</CodeWithCopy>
 
 **An example output:**
 
@@ -583,13 +575,9 @@ dbunit           lsphp            peardev          phar             php         
 
   <template #Modules_and_pecl_extensions>
 
-<CodeWithCopy>
-
 ```text
 ls /opt/alt/phpXY/usr/lib64/php/modules/
 ```
-
-</CodeWithCopy>
 
 **An example output:**
 
@@ -632,16 +620,11 @@ igbinary.so         oauth.so           stats.so
 
   <template #Running_code_on_a_specific_version_through_the_CLI>
 
-<CodeWithCopy>
-
 ```text
 /opt/alt/phpXY/usr/bin/php helloworld.php
 ```
 
-</CodeWithCopy>
-
 **An example output:**
-
 
 ```text
 Hello, World!
@@ -651,13 +634,9 @@ Hello, World!
 
   <template #Location_of_ini_config_files>
 
-<CodeWithCopy>
-
 ```text
 /opt/alt/phpXY/etc/php.d.all/
 ```
-
-</CodeWithCopy>
 
 **An example output:**
 
@@ -701,25 +680,17 @@ lzf.ini               raphf.ini
 
   <template #Location_of_default.ini>
 
-<CodeWithCopy>
-
 ```text
 ls /opt/alt/phpXY/etc/php.d/default.ini
 ```
-
-</CodeWithCopy>
 
   </template>
 
   <template #Listing_enabled_modules_on_a_specific_version>
 
-<CodeWithCopy>
-
 ```text
 /opt/alt/php73/usr/bin/php -m
 ```
-
-</CodeWithCopy>
 
 **An example output:**
 
@@ -768,13 +739,9 @@ To enable or disable extensions in your installed PHP version:
 
 1. Open the `default.ini` file, usually located in the PHP configuration directory, in an editor of your choice: 
 
-<CodeWithCopy>
-
 ```
 /opt/alt/phpXY/etc/php.d/default.ini
 ```
-
-</CodeWithCopy>
 
 2. Edit the list of extensions:
    * To enable an extension, remove the semicolon `;` at the beginning of the line.
@@ -789,23 +756,15 @@ PHP extensions can also be enabled or disabled through their `.ini` configuratio
 
 1. Locate the extension’s `.ini` file (e.g., `memcached.ini`) in the directory:
 
-  <CodeWithCopy>
-
   ```
   /opt/alt/phpXY/etc/php.d.all/
   ```
 
-  </CodeWithCopy>
-
 2. To enable the extension, copy the located `.ini` file to:
-
-  <CodeWithCopy>
 
   ```
   /opt/alt/phpXY/etc/php.d/
   ```
-
-  </CodeWithCopy>
 
   :::warning
   If the same extension is present in multiple `.ini` configuration files within the `/opt/alt/phpXY/etc/php.d/` directory, you may see warnings in PHP logs and possibly on your site.
@@ -813,13 +772,9 @@ PHP extensions can also be enabled or disabled through their `.ini` configuratio
 
 **Option 3: Enabling a module through the CLI**
 
-<CodeWithCopy>
-
 ```text
 /opt/alt/php73/usr/bin/php -d "extension=igbinary.so" -m
 ```
-
-</CodeWithCopy>
 
 **An example output:**
 
@@ -866,15 +821,11 @@ If you need to increase memory and upload size limits:
 1. Open the `default.ini` file in an editor of your choice.
 2. Set the limits as needed, e.g:
 
-    <CodeWithCopy>
-
     ```text
     upload_max_filesize=40M
     post_max_size=40M
     memory_limit=256M
     ```
-
-    </CodeWithCopy>
 
   </template>
 
@@ -906,35 +857,23 @@ To build the PHP extension, ensure the following packages are installed: `httpd`
 
 2. Create a working directory and navigate into it. Move the downloaded zip file into the working directory and extract the archive
 
-   <CodeWithCopy>
-
    ```text
    mkdir saxon && cd saxon
    mv ../SaxonCHE-linux-x86_64-12-9-0.zip .
    unzip SaxonCHE-linux-x86_64-12-9-0.zip
    ```
 
-   </CodeWithCopy>
-   
 3. Verify the extraction:
 
-   <CodeWithCopy>
-   
    ```text
    ls
    ```
 
-   </CodeWithCopy>
-
    Example output:
-
-   <CodeWithCopy>
 
    ```text
    SaxonCHE-linux-x86_64-12-9-0  SaxonCHE-linux-x86_64-12-9-0.zip
    ```
-
-   </CodeWithCopy>
 
 #### Install the libraries
 
@@ -943,35 +882,23 @@ Starting with version 12.6, `/opt/saxonica/` is the recommended installation pat
 :::
 
 1. Navigate into the extracted directory and create the target directory for Saxon installation.
-  
-   <CodeWithCopy>
 
    ```text
    cd SaxonCHE-linux-x86_64-12-9-0
    mkdir /opt/saxonica/
    ```
 
-   </CodeWithCopy>
-
 2. Copy all Saxon files (binaries, headers, libraries) to the installation directory
-
-   <CodeWithCopy>
 
    ```text
    sudo cp -r SaxonCHE/* /opt/saxonica/
    ```
 
-   </CodeWithCopy>
-
 3. Verify the installation structure
-
-   <CodeWithCopy>
 
    ```text
    ls /opt/saxonica/
    ```
-
-   </CodeWithCopy>
 
    Example output:
 
@@ -980,26 +907,18 @@ Starting with version 12.6, `/opt/saxonica/` is the recommended installation pat
    ```
 
 4. Add the following lines to your `.bashrc` or `/etc/profile.d/saxon.sh`:
-   
-   * The LD_LIBRARY_PATH variable must be set to the location of the lib directory containing the SaxonC libraries.
 
-     <CodeWithCopy>
+   * The LD_LIBRARY_PATH variable must be set to the location of the lib directory containing the SaxonC libraries.
 
      ```text
      export LD_LIBRARY_PATH="/opt/saxonica/lib:$LD_LIBRARY_PATH"
      ```
 
-     </CodeWithCopy>
-
    * To run the Transform, Query, and Validate (EE only) binaries the PATH variable can be set.
-
-     <CodeWithCopy>
 
      ```text
      export PATH="/opt/saxonica/bin:$PATH"
      ```
-
-     </CodeWithCopy>
 
    :::tip
    If the PHP web server can't find the Saxon libraries, you may also need to add `/opt/saxonica/lib` to a new file in `/etc/ld.so.conf.d/` and run `ldconfig`.
@@ -1009,26 +928,18 @@ Starting with version 12.6, `/opt/saxonica/` is the recommended installation pat
 
 1. Install the development package for alt-php82:
 
-   <CodeWithCopy>
-
    ```text
    dnf install alt-php82-devel
    ```
 
-   </CodeWithCopy>
-
 2. Verify that phpize required for compiling PHP extensions is available:
-
-   <CodeWithCopy>
 
    ```text
    ls /opt/alt/php82/usr/bin/phpize
    ```
 
-   </CodeWithCopy>
-
    Example output: 
-   
+
    ```
    /opt/alt/php82/usr/bin/phpize
    ```
@@ -1038,16 +949,12 @@ Starting with version 12.6, `/opt/saxonica/` is the recommended installation pat
 Now you can compile the Saxon PHP extension from source. The build process uses the standard PHP extension compilation workflow: `phpize` prepares the build environment, `configure` sets up the build options, and `make` compiles the extension.
 
 1. Navigate to the PHP extension source directory within the extracted Saxon archive and prepare the build environment.
- 
-   <CodeWithCopy>
 
    ```text
    cd php/src/
    /opt/alt/php82/usr/bin/phpize
    ```
 
-   </CodeWithCopy>
- 
    Example output:
 
    ```text
@@ -1059,33 +966,21 @@ Now you can compile the Saxon PHP extension from source. The build process uses 
 
 2. Configure the extension build with Saxon support and link to the Saxon libraries
 
-   <CodeWithCopy>
-
    ```text
    ./configure --with-saxon --with-php-config=/opt/alt/php82/usr/bin/php-config LDFLAGS="-L/opt/saxonica/lib"
    ```
 
-   </CodeWithCopy>
-
 3. Compile the extension
-
-   <CodeWithCopy>
 
    ```text
    make
    ```
 
-   </CodeWithCopy>
-
 4. Install the compiled extension to the PHP modules directory
 
-   <CodeWithCopy>
-  
    ```text
    sudo make install
    ```
-
-   </CodeWithCopy>
 
    Example output:
 
@@ -1097,8 +992,6 @@ Now you can compile the Saxon PHP extension from source. The build process uses 
 
 1. After installation, you need to enable the extension by creating a configuration file that tells PHP to load it.
 
-   <CodeWithCopy>
-
    ```text
    tee -a /opt/alt/php82/etc/php.d/20-saxon.ini <<EOF
    ; configuration for php Saxon HE/PE/EE module
@@ -1106,17 +999,11 @@ Now you can compile the Saxon PHP extension from source. The build process uses 
    EOF
    ```
 
-   </CodeWithCopy>
-
 2. Verify that the Saxon extension appears in the list of loaded modules:
-
-   <CodeWithCopy>
 
    ```text
    /opt/alt/php82/usr/bin/php -m | grep saxon
    ```
-
-   </CodeWithCopy>
 
    Example output:
 
@@ -1125,8 +1012,6 @@ Now you can compile the Saxon PHP extension from source. The build process uses 
    ```
 
 3. Test that it works:
-
-   <CodeWithCopy>
 
    ```text
    /opt/alt/php82/usr/bin/php -ddisplay_errors=E_ALL  << 'EOF'
@@ -1143,8 +1028,6 @@ Now you can compile the Saxon PHP extension from source. The build process uses 
      echo "$node \n";
    EOF
    ```
-
-   </CodeWithCopy>
 
    Example output:
 
@@ -1168,20 +1051,20 @@ TuxCare provides a Windows Installer that allows you to install and manage ELS P
 1. Follow the instructions provided by [sales@tuxcare.com](mailto:sales@tuxcare.com) to create your secure download link.
 2. Use this link to download the latest version of the installer.
 3. Launch the installer. After the first run, it will appear under **Settings > Apps**.
-4. Provide you access credentials:
+4. Provide your access credentials:
    *  **Register** - if this is your first time using the installer or you're installing on a new system, choose the "Register" option. You’ll be asked to provide your license key or authentication token. You can also save your token for future use.
-    
+
    ![image](/images/php-installer-token.webp)
 
    *  **Use previous token** - if you’ve already registered on this machine and chose to save your credentials, the installer will detect and use the saved token automatically. You won’t need to enter your credentials again unless the token is missing or expired. 
 
 5. Select a PHP version and tick the checkbox next to it. **Only 1 version can be installed per installation**.
-  
+
    ![image](/images/php-installer-version.webp)
 
    :::tip
    If you already have a version installed, it will appear highlighted in green. When another version is selected, the installer will ask whether to **replace** the existing one or install it **alongside**.
-   
+
    ![image](/images/php-installer-versions-2.webp)
    :::
 
@@ -1222,13 +1105,9 @@ To confirm PHP is working:
 1. Open **Command Prompt**, **PowerShell**, or **Terminal**.
 2. Run the following command:
 
-    <CodeWithCopy>
-
     ```text
     php -v
     ```
-
-    </CodeWithCopy>
 
     You should see output like this:
 
@@ -1255,13 +1134,9 @@ If you have multiple PHP versions installed and want to change the default, upda
 5. Click OK and restart your terminal
 6. Verify the active PHP version by running:
 
-    <CodeWithCopy>
-
     ```text
     php -v
     ```
-
-    </CodeWithCopy>
 
 #### Extensions
 
@@ -1275,8 +1150,6 @@ To enable or disable extensions in your installed PHP version:
 
    **Example:**
 
-    <CodeWithCopy>
-
     ```text
     ;extension=curl
     extension=gd2
@@ -1285,8 +1158,6 @@ To enable or disable extensions in your installed PHP version:
     extension=pdo_mysql
     ```
 
-    </CodeWithCopy>
-
 #### Increase Upload/Memory Limits
 
 If you're integrating PHP with applications like WordPress, you might need to increase memory and upload size limits:
@@ -1294,15 +1165,11 @@ If you're integrating PHP with applications like WordPress, you might need to in
 1. Open the `php.ini` file in an editor of your choice (e.g. Notepad).
 2. Set the limits as needed, e.g:
 
-    <CodeWithCopy>
-
     ```text
     upload_max_filesize=40M
     post_max_size=40M
     memory_limit=256M
     ```
-
-    </CodeWithCopy>
 
 #### Example Use Cases
 
@@ -1310,7 +1177,7 @@ You can integrate PHP with other tools, for example, IIS or WordPress. For furth
 
 ### Uninstallation
 
-#### Uninstall a PHP version, 
+#### Uninstall a PHP version
 
 To uninstall a PHP version:
 
@@ -1361,33 +1228,25 @@ OVAL can be used with the OpenSCAP tool.
 
 2. Download an OVAL stream. For example, EL 8:
 
-   <CodeWithCopy>
-   
     ```text
     wget https://security.tuxcare.com/oval/els_alt_php/el8/oval.xml
     ```
 
-   </CodeWithCopy>
-
 3. Run a scan:
-
-   <CodeWithCopy>
 
    ```text
    oscap oval eval --results result.xml --report report.xml oval.xml
    ```
-
-   </CodeWithCopy>
 
 ## Common Security Advisory Framework
 
 Common Security Advisory Framework (CSAF) is a machine-readable format, standardized by [OASIS](https://www.csaf.io/). It's designed to enable consistent and automated sharing of security advisory information. 
 
 TuxCare publishes the following CSAF files at [security.tuxcare.com](https://security.tuxcare.com/csaf/v2/):
-* CSAF Vulnerability Exploitability eXchange (VEX) files – indexed by CVE VEX documents are available in CSAF 2.0 format, including past CVEs.
+* CSAF Vulnerability Exploitability eXchange (VEX) files – VEX documents, indexed by CVE, are available in CSAF 2.0 format, including past CVEs.
 * CSAF Security Advisory files – advisories are published in CSAF 2.0 format and indexed by Security Advisory.
 
-`provider-matadata.json` contains information for tools and users about where and how to retrieve CSAF advisories published by TuxCare. By OASIS requirements, it is available at two URLs (both serving the same file):
+`provider-metadata.json` contains information for tools and users about where and how to retrieve CSAF advisories published by TuxCare. By OASIS requirements, it is available at two URLs (both serving the same file):
 * [csaf.data.security.tuxcare.com](https://csaf.data.security.tuxcare.com/)
 * [tuxcare.com/.well-known/csaf/provider-metadata.json](https://tuxcare.com/.well-known/csaf/provider-metadata.json)
 
@@ -1396,9 +1255,9 @@ TuxCare publishes the following CSAF files at [security.tuxcare.com](https://sec
 Currently, we provide CSAF data for the following OS versions:
 
 * EL 7 (CentOS, CloudLinux, Oracle Linux, Amazon Linux 2, etc.): [security.tuxcare.com/csaf/v2/els_alt_php/el7/](https://security.tuxcare.com/csaf/v2/els_alt_php/el7/)
-* EL 8 (AlmaLinux, CentOS,CentOS Stream, CloudLinux, Oracle Linux, etc.): [security.tuxcare.com/csaf/v2/els_alt_php/el8/](https://security.tuxcare.com/csaf/v2/els_alt_php/el8/)
+* EL 8 (AlmaLinux, CentOS, CentOS Stream, CloudLinux, Oracle Linux, etc.): [security.tuxcare.com/csaf/v2/els_alt_php/el8/](https://security.tuxcare.com/csaf/v2/els_alt_php/el8/)
 * EL 9 (AlmaLinux, CentOS, CloudLinux, etc.): [security.tuxcare.com/csaf/v2/els_alt_php/el9/](https://security.tuxcare.com/csaf/v2/els_alt_php/el9/)
-* EL 10 (AlmaLinux, CloudLinux, Oracle Linix, etc.): [security.tuxcare.com/csaf/v2/els_alt_php/el10/](https://security.tuxcare.com/csaf/v2/els_alt_php/el10/)
+* EL 10 (AlmaLinux, CloudLinux, Oracle Linux, etc.): [security.tuxcare.com/csaf/v2/els_alt_php/el10/](https://security.tuxcare.com/csaf/v2/els_alt_php/el10/)
 * Ubuntu 16.04: [security.tuxcare.com/csaf/v2/els_alt_php/ubuntu16.04/](https://security.tuxcare.com/csaf/v2/els_alt_php/ubuntu16.04/)
 * Ubuntu 18.04: [security.tuxcare.com/csaf/v2/els_alt_php/ubuntu18.04/](https://security.tuxcare.com/csaf/v2/els_alt_php/ubuntu18.04/)
 * Ubuntu 20.04: [security.tuxcare.com/csaf/v2/els_alt_php/ubuntu20.04/](https://security.tuxcare.com/csaf/v2/els_alt_php/ubuntu20.04/)
@@ -1418,7 +1277,7 @@ The CSAF files are published in JSON format which is easy to parse and integrate
 Currently, we provide errata for the following OS versions:
 
 * EL 7 (CentOS, CloudLinux, Oracle Linux, Amazon Linux 2, etc.): [security.tuxcare.com/errata/els_alt_php/el7/](https://security.tuxcare.com/errata/els_alt_php/el7/)
-* EL 8 (AlmaLinux, CentOS, CentOS Stream,  CloudLinux, Oracle Linux, etc.): [security.tuxcare.com/errata/els_alt_php/el8/](https://security.tuxcare.com/errata/els_alt_php/el8/)
+* EL 8 (AlmaLinux, CentOS, CentOS Stream, CloudLinux, Oracle Linux, etc.): [security.tuxcare.com/errata/els_alt_php/el8/](https://security.tuxcare.com/errata/els_alt_php/el8/)
 * EL 9 (AlmaLinux, CentOS, CloudLinux, etc.): [security.tuxcare.com/errata/els_alt_php/el9/](https://security.tuxcare.com/errata/els_alt_php/el9/)
 * EL 10 (AlmaLinux, CloudLinux, Oracle Linux, etc.): [security.tuxcare.com/errata/els_alt_php/el10/](https://security.tuxcare.com/errata/els_alt_php/el10/)
 * Ubuntu 16.04: [security.tuxcare.com/errata/els_alt_php/ubuntu16.04/](https://security.tuxcare.com/errata/els_alt_php/ubuntu16.04/)
@@ -1434,7 +1293,7 @@ Currently, we provide errata for the following OS versions:
 ## RSS Feed
 
 * EL 7 (CentOS, CloudLinux, Oracle Linux, Amazon Linux 2, etc.): [cve.tuxcare.com/rss_feed/els-alt-php/releases/el7](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/el7)
-* EL 8 (AlmaLinux, CentOS, CentOS Stream,  CloudLinux, Oracle Linux, etc.): [cve.tuxcare.com/rss_feed/els-alt-php/releases/el8](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/el8)
+* EL 8 (AlmaLinux, CentOS, CentOS Stream, CloudLinux, Oracle Linux, etc.): [cve.tuxcare.com/rss_feed/els-alt-php/releases/el8](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/el8)
 * EL 9 (AlmaLinux, CentOS, CloudLinux, etc.): [cve.tuxcare.com/rss_feed/els-alt-php/releases/el9](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/el9)
 * EL 10 (AlmaLinux, CloudLinux, Oracle Linux, etc.): [cve.tuxcare.com/rss_feed/els-alt-php/releases/el10/](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/el10/)
 * Ubuntu 16.04: [cve.tuxcare.com/rss_feed/els-alt-php/releases/ubuntu16.04/](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/ubuntu16.04/)
@@ -1456,7 +1315,7 @@ The PHP core includes many built-in extensions that provide basic functionality,
 <TableTabs>
 
   <template #PHP_5.2_extensions>
-  
+
    <div class="notranslate">
 
    | |  |  |  | |
@@ -1548,7 +1407,7 @@ The PHP core includes many built-in extensions that provide basic functionality,
   |-|-|-|-|-|
   |aapm* <br>amqp <br> snuffleupagus <br> vld <br> apcu <br>bcmath <br>brotli <br>bz2 <br> clos_ssa* <br> calendar <br>core <br>ctype <br>curl <br>date <br>dba <br>dbase <br>dom <br> diseval <br>eio <br>enchant <br>exif <br>fileinfo <br>filter <br>ftp <br> ffmpeg* <br>gd <br>gearman <br>gender <br>geoip <br>gettext | geos <br> gmagick <br>gmp <br>gnupg <br>gRPC <br>hash <br>htscanner <br>http <br>iconv <br>igbinary <br>imagick <br>imap <br>inotify <br>interbase <br>intl <br>ioncube_loader <br> jsmin <br> json <br>ldap <br>libsodium <br>libxml <br>lzf <br> luasandbox* <br>mailparse <br>mbstring <br>mcrypt <br>memcached | memcache <br> mongodb <br>mysqli <br>mysqlnd <br>nd_mysqli <br>nd_pdo_mysql <br>_newrelic_ <br>oauth <br>oci8 <br>odbc <br>opcache <br>openssl <br>pcntl <br>pcre <br>pdo <br>pdo_dblib <br>pdo_firebird <br>pdo_mysql <br>pdo_odbc <br>pdo_pgsql psr <br> <br>pdo_sqlite <br>pdo_sqlsrv <br>pgsql <br>phalcon3 <br>phar <br> pdf | pdo_oci <br> phalcon4 <br> posix <br>propro <br>pspell <br>psr* <br>raphf <br>rar <br>readline <br>redis <br>reflection <br>rrd <br> recode <br> solr <br>session <br>shmop <br>simplexml <br>snmp <br>soap <br>sockets <br>sourceguardian <br>spl <br> sodium <br> sqlite3 <br>sqlsrv <br>ssh2 <br>standard <br>stats <br>suhosin7 <br>sysvmsg | swoole <br> sysvsem <br>sysvshm <br>tidy <br>timezonedb <br>tokenizer <br>trader <br> tideways_xhprof <br>uploadprogress <br>uuid <br>vips* <br>wddx <br>xdebug <br>xml <br>xmlreader <br>xmlrpc <br>xmlwriter <br>xsl <br>xray <br> yaz <br> yaml <br> yaf <br>zip <br>zlib <br>zmq|
   </div>
- 
+
   <sup>*</sup> CentOS 7, CloudLinux 7, etc.
 
   ::: tip Note
@@ -1600,7 +1459,7 @@ The PHP core includes many built-in extensions that provide basic functionality,
 
   | |  |  |  | |
   |-|-|-|-|-|
-  |leveldb <br> sourceguardian <br> ffmpeg* <br> amqp <br> clos_ssa* <br> gearman <br> ioncube_ loader <br> jsmin <br> mailparse <br> mcrypt <br> memcache <br> psr <br> rrd <br> solr <br> ssh2 <br> tideways_xhprof <br> yaz <br> zmq <br> apcu <br> bcmath <br> brotli <br> bz2 <br> calendar <br> core <br> ctype <br> curl <br> date <br> dba <br> dbase <br> dom <br> eio <br> enchant <br> exif <br> fileinfo <br> filter <br> ftp <br> gd <br> gender <br> geoip <br> geos | gettext <br> gmagick <br> gmp <br> gnupg <br> grpc <br> hash <br> http <br> iconv <br> igbinary <br> imagick <br> imap <br> inotify <br> intl <br> json <br> ldap <br> libxml <br> luasandbox* <br> lzf <br> mbstring <br> memcached <br> mongodb | mysqli <br> mysqlnd <br> nd_mysqli <br> nd_pdo_mysql <br> newrelic <br> snuffleupagus <br> oauth <br> oci8 <br> odbc <br> opcache <br> openssl <br> pcntl <br> pcre <br> pdf <br> pdo <br> pdo_dblib <br> pdo_firebird <br> pdo_mysql <br> pdo_oci <br> pdo_odbc <br> pdo_pgsql <br> vld <br> pdo_sqlite <br> pdo_sqlsrv | pgsql <br> phalcon4 <br> phar <br> posix <br> propro <br> pspell <br> raphf <br> readline <br> redis <br> reflection <br>phalcon5 <br> session <br> shmop <br> simplexml <br> snmp <br> soap <br> sockets <br> sodium <br> spl <br> sqlite3 <br> sqlsrv <br> standard | stats <br> swoole <br> sysvmsg <br> sysvsem <br> sysvshm <br> tidy <br> timezonedb <br> tokenizer <br> trader <br> xray <br> uploadprogress <br> uuid <br> vips* <br> xdebug <br> xml <br> xmlreader <br> xmlrpc <br> xmlwriter <br> xsl <br> yaml <br> zip <br> zlib |
+  |leveldb <br> sourceguardian <br> ffmpeg* <br> amqp <br> clos_ssa* <br> gearman <br> ioncube_loader <br> jsmin <br> mailparse <br> mcrypt <br> memcache <br> psr <br> rrd <br> solr <br> ssh2 <br> tideways_xhprof <br> yaz <br> zmq <br> apcu <br> bcmath <br> brotli <br> bz2 <br> calendar <br> core <br> ctype <br> curl <br> date <br> dba <br> dbase <br> dom <br> eio <br> enchant <br> exif <br> fileinfo <br> filter <br> ftp <br> gd <br> gender <br> geoip <br> geos | gettext <br> gmagick <br> gmp <br> gnupg <br> grpc <br> hash <br> http <br> iconv <br> igbinary <br> imagick <br> imap <br> inotify <br> intl <br> json <br> ldap <br> libxml <br> luasandbox* <br> lzf <br> mbstring <br> memcached <br> mongodb | mysqli <br> mysqlnd <br> nd_mysqli <br> nd_pdo_mysql <br> newrelic <br> snuffleupagus <br> oauth <br> oci8 <br> odbc <br> opcache <br> openssl <br> pcntl <br> pcre <br> pdf <br> pdo <br> pdo_dblib <br> pdo_firebird <br> pdo_mysql <br> pdo_oci <br> pdo_odbc <br> pdo_pgsql <br> vld <br> pdo_sqlite <br> pdo_sqlsrv | pgsql <br> phalcon4 <br> phar <br> posix <br> propro <br> pspell <br> raphf <br> readline <br> redis <br> reflection <br>phalcon5 <br> session <br> shmop <br> simplexml <br> snmp <br> soap <br> sockets <br> sodium <br> spl <br> sqlite3 <br> sqlsrv <br> standard | stats <br> swoole <br> sysvmsg <br> sysvsem <br> sysvshm <br> tidy <br> timezonedb <br> tokenizer <br> trader <br> xray <br> uploadprogress <br> uuid <br> vips* <br> xdebug <br> xml <br> xmlreader <br> xmlrpc <br> xmlwriter <br> xsl <br> yaml <br> zip <br> zlib |
   </div>
 
   <sup>*</sup> CentOS 7, CloudLinux 7, etc.
@@ -1628,7 +1487,7 @@ The PHP core includes many built-in extensions that provide basic functionality,
 
   | |  |  |  | |
   |-|-|-|-|-|
-  |amqp <br> apcu <br> bcmath <br> brotli <br> bz2 <br> calendar <br> clos_ssa*** <br> Core <br> ctype <br> curl <br> date <br> dba <br> dbase <br> dom <br> enchant <br> exif <br> ffi** <br> fileinfo <br> filter <br> ftp | gd <br> geoip <br> gearman <br> gettext <br> gmagick <br> gmp <br> gnupg** <br> grpc <br> hash <br> ioncube_loader <br> iconv <br> igbinary <br> imagick <br> imap <br> inotify <br> intl <br> jsmin <br> json <br> ldap <br> libxml <br> lzf <br> mailparse <br> mbstring <br> mcrypt | memcache <br> memcached <br> mongodb <br> mysqli <br> mysqlnd <br> nd_mysqli <br> nd_pdo_mysql <br> newrelic <br> oauth <br> oci8 <br> odbc <br> opcache <br> openssl <br> pcntl <br> pcre <br> pdf <br> pdo <br> pdo_dblib <br> pdo_mysql <br> pdo_oci <br> pdo_odbc <br> phalcon5 <br> pdo_pgsql <br> pdo_firebird <br> pdo_sqlite <br> pdo_sqlsr | pgsql <br> phar <br> posix <br> process <br> pspell <br> psr <br> rrd <br> raphf <br> readline <br> redis <br> Reflection <br> session <br> shmop <br> SimpleXML v snmp <br> solr <br> sourceguardian <br> soap <br> sockets <br> sodium <br> SPL <br> sqlite3 <br> sqlsrv <br> ssh2 <br> standard <br> swoole | sysvmsg <br> sysvsem <br> sysvshm <br> tideways_xhprof <br> tidy <br> timezonedb <br> tokenizer <br> trader <br> uploadprogress <br> uuid <br> vips* <br> xdebug <br> xml <br> xmlreader <br> xmlrpc** <br> xmlwriter <br> xsl <br> yaf <br> yaml <br> zip <br> zlib <br> zmq <br> xray |
+  |amqp <br> apcu <br> bcmath <br> brotli <br> bz2 <br> calendar <br> clos_ssa*** <br> Core <br> ctype <br> curl <br> date <br> dba <br> dbase <br> dom <br> enchant <br> exif <br> ffi** <br> fileinfo <br> filter <br> ftp | gd <br> geoip <br> gearman <br> gettext <br> gmagick <br> gmp <br> gnupg** <br> grpc <br> hash <br> ioncube_loader <br> iconv <br> igbinary <br> imagick <br> imap <br> inotify <br> intl <br> jsmin <br> json <br> ldap <br> libxml <br> lzf <br> mailparse <br> mbstring <br> mcrypt | memcache <br> memcached <br> mongodb <br> mysqli <br> mysqlnd <br> nd_mysqli <br> nd_pdo_mysql <br> newrelic <br> oauth <br> oci8 <br> odbc <br> opcache <br> openssl <br> pcntl <br> pcre <br> pdf <br> pdo <br> pdo_dblib <br> pdo_mysql <br> pdo_oci <br> pdo_odbc <br> phalcon5 <br> pdo_pgsql <br> pdo_firebird <br> pdo_sqlite <br> pdo_sqlsrv | pgsql <br> phar <br> posix <br> process <br> pspell <br> psr <br> rrd <br> raphf <br> readline <br> redis <br> Reflection <br> session <br> shmop <br> SimpleXML v snmp <br> solr <br> sourceguardian <br> soap <br> sockets <br> sodium <br> SPL <br> sqlite3 <br> sqlsrv <br> ssh2 <br> standard <br> swoole | sysvmsg <br> sysvsem <br> sysvshm <br> tideways_xhprof <br> tidy <br> timezonedb <br> tokenizer <br> trader <br> uploadprogress <br> uuid <br> vips* <br> xdebug <br> xml <br> xmlreader <br> xmlrpc** <br> xmlwriter <br> xsl <br> yaf <br> yaml <br> zip <br> zlib <br> zmq <br> xray |
   </div>
 
   <sup>*</sup> CentOS 7, CloudLinux 7, etc.

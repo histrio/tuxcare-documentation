@@ -20,35 +20,22 @@ To use Endless Lifecycle Support for Ubuntu 16.04, you need to open TCP port 443
 ## Installing the repository
 
 1. Download an installation script:
-  
-   <CodeWithCopy>
 
    ```
    wget https://repo.els.tuxcare.com/ubuntu16_04-els/install-ubuntu16.04-els-repo.sh
    ```
 
-   </CodeWithCopy>
-
 2. Run the installation script with your license key. It registers the server in the CLN with the key, adds a PGP key to the server.
-   
-   <CodeWithCopy>
 
    ```
    bash install-ubuntu16.04-els-repo.sh --license-key XXX-XXXXXXXXXXXX
    ```
 
-   </CodeWithCopy>
-
-   
-
 3. Verify that the installation was successful by running the following command:
-   
-   <CodeWithCopy>
 
    ```
    apt-cache show els-define
    ```
-   </CodeWithCopy>
 
    It should return information about the available package. If the package information is displayed, the installation was successful.
    After that, you can install updates from the repository using a standard `apt upgrade` command.
@@ -82,34 +69,22 @@ TuxCare provides security updates as a part of ELS for OS along with OpenSCAP sc
 * **Ubuntu 16.04 ELS**: [security.tuxcare.com/csaf/v2/els_os/ubuntu16.04els/](https://security.tuxcare.com/csaf/v2/els_os/ubuntu16.04els/)
 * **Ubuntu 16.04 ELS**: [cve.tuxcare.com/rss_feed/els/releases/ubuntu16.04els](https://cve.tuxcare.com/rss_feed/els/releases/ubuntu16.04els)
 
-
 ## Removing the ELS repository 
 
-1. List ELS repository file (ending with -els.repo) in the repository folder:
-
-   <CodeWithCopy>
+1. List ELS repository file (ending with -els.list) in the repository folder:
 
    ```
    ls -l /etc/apt/sources.list.d/*-els.list
    ```
 
-   </CodeWithCopy>
-
 2. Remove the file to disable the ELS repository, for example:
-
-   <CodeWithCopy>
 
    ```
    rm /etc/apt/sources.list.d/ubuntu-els.list
    ```
 
-   </CodeWithCopy>
-
 3. Uninstall the `els-define` package:
-
-   <CodeWithCopy>
 
    ```
    apt remove els-define
    ```
-   </CodeWithCopy>

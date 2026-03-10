@@ -24,17 +24,13 @@ To use TuxCare's ELS for FastAPI, follow one of the options below:
 
 You can install or upgrade a package directly using the ELS repository with your credentials:
 
-<CodeWithCopy>
-
 ```text
 pip install --upgrade \
   -i https://<username>:<password>@nexus.repo.tuxcare.com/repository/els_python/simple \
   fastapi
 ```
 
-</CodeWithCopy>
-
-**Replace `<username>` and `<password>` - with the credentials provided by sales.**
+**Replace `<username>` and `<password>` with the credentials provided by sales.**
 
 #### Option 2: Configure `pip` to Use the ELS Repository (Full Replacement)
 
@@ -53,25 +49,17 @@ This method is recommended if you want to use only ELS-patched Python packages f
 
 2. Run the command to install the latest package version:
 
-   <CodeWithCopy>
-
    ```text
    pip install --upgrade fastapi
    ```
 
-   </CodeWithCopy>
-
    Or install a specific patched TuxCare version, for example:
-
-   <CodeWithCopy>
 
    ```text
    pip install fastapi==0.63.0.post1+tuxcare
    ```
 
-   </CodeWithCopy>
-
-#### Option 3: Add the TuxCare ELS Repository as Additional (recommended )
+#### Option 3: Add the TuxCare ELS Repository as Additional (recommended)
 
 If you want to keep using public PyPI and fetch only specific patched packages from TuxCare, use *extra-index-url* instead. In this configuration, make sure to specify the exact patched version (step 2 below), otherwise `pip` may install the version from public PyPI.
 
@@ -88,13 +76,9 @@ If you want to keep using public PyPI and fetch only specific patched packages f
 
 2. Run the command to install a specific patched TuxCare version, for example:
 
-   <CodeWithCopy>
-
    ```text
    pip install fastapi==0.63.0.post1+tuxcare
    ```
-
-   </CodeWithCopy>
 
 ## Upgrading to a Newer TuxCare Version
 
@@ -102,7 +86,7 @@ To upgrade to a newer TuxCare release (e.g., from `version.post1+tuxcare` to `ve
 
 ## Vulnerability Exploitability eXchange (VEX) 
 
-VEX is a machine-readable format that tells you if a known vulnerability and is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
+VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
 
 TuxCare provides VEX for FastAPI ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_python/fastapi/](https://security.tuxcare.com/vex/cyclonedx/els_lang_python/fastapi/).
 

@@ -1,7 +1,7 @@
 <template>
   <div class="heading text-center">
-    <h4>Available Guides for ELS for Libraries.</h4>
-    <p>If something's missing or you have questions, <a href="https://tuxcare.com/support-portal/">contact support</a>.</p>
+    <h2>Available Guides for ELS for Libraries</h2>
+    <p>If something's missing or you have questions, contact <a href="mailto:sales@tuxcare.com">sales@tuxcare.com</a>.</p>
   </div>
 
   <div class="supported-product-sorting">
@@ -14,9 +14,9 @@
 
     <div class="sp-sort-head">
       <ul>
-        <li>Ecosystem</li>
-        <li>Product</li>
-        <li>Versions</li>
+        <li class="head-ecosystem">Ecosystem</li>
+        <li class="head-product">Product</li>
+        <li class="head-versions">Versions</li>
       </ul>
     </div>
 
@@ -29,7 +29,7 @@
             :class="{ active: activeTab === index }"
             @click="activeTab = index"
           >
-            <img :src="item.ecosystemIcon" class="ecosystem-icon" />
+            <img :src="item.ecosystemIcon" class="ecosystem-icon" alt="" aria-hidden="true" />
             {{ item.ecosystem }}
           </li>
         </ul>
@@ -37,36 +37,36 @@
 
       <div class="sp-sort-row" v-if="filteredData[activeTab]">
         <div class="scroll-container">
-          <div class="project-version-box">
-            <div class="project-col">
-              <ul>
-                <li
-                  v-for="(project, pIndex) in getFilteredProjects(filteredData[activeTab])"
-                  :key="pIndex"
-                >
-                  <a
-                    v-if="project.link"
-                    :href="project.link"
-                    rel="noopener noreferrer"
-                  >
-                    {{ project.name }}
-                  </a>
-                  <span v-else>{{ project.name }}</span>
-                </li>
-              </ul>
-            </div>
-
-            <div class="version-col">
-              <ul>
-                <li
-                  v-for="(project, pIndex) in getFilteredProjects(filteredData[activeTab])"
-                  :key="'v' + pIndex"
-                >
-                  <span class="badge">{{ project.versions }}</span>
-                </li>
-              </ul>
-            </div>
-          </div>
+          <ul class="project-list">
+            <li
+              v-for="(project, pIndex) in getFilteredProjects(filteredData[activeTab])"
+              :key="pIndex"
+            >
+              <a
+                v-if="project.link"
+                :href="getProjectHref(project)"
+                class="project-row clickable"
+              >
+                <span class="project-name">{{ project.name }}</span>
+                <span class="project-versions">
+                  <span v-if="project.detailsHash">
+                    versions vary per module
+                  </span>
+                  <span v-else>{{ project.versions }}</span>
+                </span>
+                <span class="project-arrow">&rarr;</span>
+              </a>
+              <div v-else class="project-row">
+                <span class="project-name">{{ project.name }}</span>
+                <span class="project-versions">
+                  <span v-if="project.detailsHash">
+                    versions vary per module — details
+                  </span>
+                  <span v-else>{{ project.versions }}</span>
+                </span>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -311,8 +311,88 @@ const techData = [
         link: "./java-libraries/",
       },
       {
-        name: "Spring®",
-        versions: "Multiple",
+        name: "Spring® Framework",
+        versions: "3.1 | 4.0 | 4.1 | 4.3 | 5.2 | 5.3 | 6.0 | 6.1",
+        link: "./spring/",
+        detailsHash: "Framework",
+      },
+      {
+        name: "Spring® AMQP",
+        versions: "2.4.17",
+        link: "./spring/",
+      },
+      {
+        name: "Spring® Batch",
+        versions: "4.3.10",
+        link: "./spring/",
+      },
+      {
+        name: "Spring® Boot",
+        versions: "2.4 | 2.6 | 2.7 | 3.1",
+        link: "./spring/",
+        detailsHash: "Boot",
+      },
+      {
+        name: "Spring® Cloud",
+        versions: "3.1.9",
+        link: "./spring/",
+      },
+      {
+        name: "Spring® Data",
+        versions: "2021.2",
+        link: "./spring/",
+        detailsHash: "Data",
+      },
+      {
+        name: "Spring® Security",
+        versions: "5.7 | 5.8 | 6.1",
+        link: "./spring/",
+        detailsHash: "Security",
+      },
+      {
+        name: "Spring® Security OAuth",
+        versions: "1.1.1",
+        link: "./spring/",
+      },
+      {
+        name: "Spring® Web Services",
+        versions: "3.1.8",
+        link: "./spring/",
+      },
+      {
+        name: "Spring® Integration",
+        versions: "5.5.20",
+        link: "./spring/",
+      },
+      {
+        name: "Spring® HATEOAS",
+        versions: "1.5.6",
+        link: "./spring/",
+      },
+      {
+        name: "Spring® LDAP",
+        versions: "2.4.1 | 2.4.4",
+        link: "./spring/",
+        detailsHash: "LDAP",
+      },
+      {
+        name: "Spring® GraphQL",
+        versions: "1.0.6",
+        link: "./spring/",
+      },
+      {
+        name: "Spring® Retry",
+        versions: "1.3.4",
+        link: "./spring/",
+      },
+      {
+        name: "Spring® Plugin",
+        versions: "2.0.0",
+        link: "./spring/",
+      },
+      {
+        name: "Spring® Web Flow",
+        versions: "2.3.1 | 2.3.3",
         link: "./spring/",
       },
       {
@@ -1039,6 +1119,11 @@ const techData = [
         link: "./phpmailer/",
       },
       {
+        name: "PHPUnit",
+        versions: "12.4.5",
+        link: "./phpunit/",
+      },
+      {
         name: "PhpSpreadsheet",
         versions: "4.5.0",
         link: "./phpspreadsheet/",
@@ -1055,8 +1140,13 @@ const techData = [
       },
       {
         name: "Symfony Process",
-        versions: "5.x | 6.x",
+        versions: "3.4.x | 4.4.x | 5.x | 6.x",
         link: "./symfony/",
+      },
+      {
+        name: "Zend Framework 1",
+        versions: "1.12.10",
+        link: "./zendframework-zf1/",
       },
     ],
   },
@@ -1123,6 +1213,13 @@ const filteredData = computed(() => {
 function getFilteredProjects(item) {
   return item.projects;
 }
+
+function getProjectHref(project) {
+  if (project.detailsHash) {
+    return `${project.link}#${project.detailsHash}`;
+  }
+  return project.link;
+}
 </script>
 
 <style scoped>
@@ -1161,9 +1258,20 @@ function getFilteredProjects(item) {
 }
 
 .sp-sort-head li {
-  flex: 1;
   text-align: left;
   padding-left: 0.5rem;
+}
+
+.sp-sort-head .head-ecosystem {
+  flex: 0 0 33.333%;
+}
+
+.sp-sort-head .head-product {
+  flex: 0 0 29.7%;
+}
+
+.sp-sort-head .head-versions {
+  flex: 1;
 }
 
 .sp-sort-body {
@@ -1192,6 +1300,13 @@ function getFilteredProjects(item) {
   min-height: 2.5rem;
   margin-bottom: 0.4rem;
   border-bottom: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  transition: background-color 0.15s ease;
+}
+
+.ecosystem-tabs li:hover {
+  background-color: #f5f7fa;
 }
 
 .ecosystem-tabs li.active {
@@ -1216,61 +1331,74 @@ function getFilteredProjects(item) {
   width: auto;
 }
 
-.project-version-box {
-  display: flex;
-  background-color: #FEF6F2;
-  padding: 0.5rem;
-  gap: 1.4rem;
-  width: auto;
-}
-
-.project-col,
-.version-col {
-  width: 50%;
-}
-
-.project-col ul,
-.version-col ul {
+.project-list {
   list-style: none;
-  padding: 0;
   margin: 0;
+  background-color: #FEF6F2;
+  padding: 0.25rem 0.5rem;
 }
 
-.project-col li,
-.version-col li {
-  min-height: 2.5rem;
-  margin-bottom: 0.4rem;
+.project-row {
   display: flex;
   align-items: center;
-  border-bottom: none;
-  border-bottom: 1px solid #F48243;
-}
-
-.version-col li {
-  line-height: 1.1;
-  justify-content: flex-start;
-}
-
-.project-col a {
-  color: #007bff;
+  gap: 1rem;
+  padding: 0.5rem 0.5rem;
+  border-bottom: 1px solid #f0d4c2;
+  transition: all 0.2s ease;
   text-decoration: none;
-  font-size: 0.9rem;
-}
-
-.project-col a,
-.version-col .badge {
-  display: block;
-  word-wrap: break-word;
-  white-space: normal;
-  text-align: left;
-}
-
-.badge {
-  background: none;
   color: inherit;
-  padding: 0;
-  border-radius: 0;
+  border-radius: 6px;
+}
+
+.project-row.clickable {
+  cursor: pointer;
+}
+
+a.project-row.clickable:hover {
+  background: #FEF6F2;
+  box-shadow: 0 2px 8px rgba(244, 130, 67, 0.1);
+}
+
+a.project-row.clickable:hover .project-arrow {
+  opacity: 1;
+  transform: translateX(0);
+  color: #F48243;
+}
+
+a.project-row.clickable:hover .project-name,
+a.project-row.clickable:hover .project-versions {
+  color: #F48243;
+}
+
+.project-list > li:last-child .project-row {
+  border-bottom: none;
+}
+
+.project-name {
+  flex: 0 0 45%;
+  min-width: 0;
+  word-wrap: break-word;
   font-size: 0.9rem;
+  font-weight: 500;
+  color: #1b1f27;
+  transition: color 0.2s ease;
+}
+
+.project-versions {
+  flex: 1;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  word-wrap: break-word;
+  color: #5c6370;
+}
+
+.project-arrow {
+  font-size: 1.1rem;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: all 0.2s ease;
+  color: #5c6370;
+  flex-shrink: 0;
 }
 </style>
 
