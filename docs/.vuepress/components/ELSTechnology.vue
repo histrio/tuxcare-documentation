@@ -151,7 +151,7 @@ const techData = [
         link: "./apache-lucene-and-solr/",
       },
       {
-        name: "Apache Solr®",
+        name: "Apache Solr",
         versions: "5.5.5",
         link: "./apache-lucene-and-solr/",
       },

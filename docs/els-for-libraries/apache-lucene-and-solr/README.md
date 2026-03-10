@@ -1,23 +1,23 @@
-# Apache Lucene & Solr <sup style="font-size: 0.5em;">®</sup>
+# Apache Lucene<sup style="font-size: 0.5em;">®</sup> & Solr 
 
 Apache®, Apache Lucene®, are either registered trademarks or trademarks of the Apache Software Foundation in the United States and/or other countries.
 
 <br>
 
-TuxCare's Endless Lifecycle Support (ELS) for Apache Lucene® provides security patches and selected bug fixes that are integral to the stable operation of applications running on Apache Lucene®.
+TuxCare's Endless Lifecycle Support (ELS) for Apache Lucene® and Apache Solr provides security patches and selected bug fixes that are integral to the stable operation of applications running on these libraries.
 
 ## Supported Versions
 
 * Apache Lucene® 5.5.5
 * Apache Solr 5.5.5
 
-## Connection to ELS for Apache Lucene® Repository
+## Connection to ELS Repository
 
-This guide outlines the steps needed to integrate the TuxCare ELS for Apache Lucene® repository into your Java application. The repository provides trusted Java libraries that can be easily integrated into your **Maven** and **Gradle** projects.
+This guide outlines the steps needed to integrate the TuxCare ELS for Apache Lucene® / Apache Solr repository into your Java application. The repository provides trusted Java libraries that can be easily integrated into your **Maven** and **Gradle** projects.
 
 ### Step 1: Get user credentials
 
-You need a username and password in order to use the TuxCare ELS Apache Lucene® repository. Anonymous access is disabled. To receive a username and password please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+You need a username and password in order to use the TuxCare ELS repository. Anonymous access is disabled. To receive a username and password please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
 ### Step 2: Configure Registry
 
@@ -53,14 +53,14 @@ You need a username and password in order to use the TuxCare ELS Apache Lucene®
 
 ### Step 3: Update Build Configuration
 
-Add the TuxCare Apache Lucene® repository and plugins to your build configuration:
+Add the TuxCare repository and plugins to your build configuration:
 
 <CodeTabs :tabs="[
   { title: 'Maven (pom.xml)', content: mavenrepo },
   { title: 'Gradle (build.gradle)', content: gradlerepo }
 ]" />
 
-* To fully switch from the official Apache Lucene® repository, replace it with the TuxCare repository.
+* To fully switch from the official Apache Lucene® / Apache Solr repository, replace it with the TuxCare repository.
 * To keep both, add TuxCare after the official one.
 
 Example Maven and Gradle projects are available on GitHub. Remember to set the required environment variables.
@@ -69,7 +69,7 @@ Example Maven and Gradle projects are available on GitHub. Remember to set the r
 
 ### Step 4: Update Dependencies
 
-Replace the Apache Lucene® dependencies in your build file with the TuxCare-maintained versions to cover both direct and transitive dependencies.
+Replace the Apache Lucene® or Apache Solr dependencies in your build file with the TuxCare-maintained versions to cover both direct and transitive dependencies.
 
 You can find a specific artifact version in your TuxCare account on Nexus (anonymous access is restricted).
 
@@ -99,7 +99,7 @@ You can find a specific artifact version in your TuxCare account on [Nexus](http
 
 ### Step 5: Verify and Build
 
-1. To confirm the TuxCare Apache Lucene® repository is set up correctly, use your build tool to list the project's dependencies. It shows both direct and transitive dependencies in the classpath.
+1. To confirm the repository is set up correctly, use your build tool to list the project's dependencies. It shows both direct and transitive dependencies in the classpath.
 
    <CodeTabs :tabs="[
      { title: 'Maven', content: `mvn dependency:tree -Dverbose` },
@@ -113,11 +113,11 @@ You can find a specific artifact version in your TuxCare account on [Nexus](http
     { title: 'Gradle', content: `./gradlew build` }
    ]" />
 
-The build tool you're using should be able to identify and resolve dependencies from the TuxCare ELS for Apache Lucene® repository.
+The build tool you're using should be able to identify and resolve dependencies from the TuxCare ELS for Apache Lucene® / Apache Solr repository.
 
 ### Conclusion
 
-You've successfully integrated the TuxCare ELS for Apache Lucene® repository into your project. You can now benefit from the secure and vetted Apache Lucene® libraries it provides.
+You've successfully integrated the TuxCare ELS repository into your project. You can now benefit from the secure and vetted libraries it provides.
 
 ## Vulnerability Exploitability eXchange (VEX)
 
@@ -131,7 +131,7 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 
 ## Source Code
 
-Source code for TuxCare-patched Apache Lucene® libraries is available in the repository. Source JARs follow the standard Maven naming convention with a `-sources` classifier.
+Source code for TuxCare-patched Apache Lucene® and Apache Solr libraries is available in the repository. Source JARs follow the standard Maven naming convention with a `-sources` classifier.
 
 For example: [https://nexus.repo.tuxcare.com/repository/els_java/org/apache/lucene/lucene-core/5.5.5-tuxcare.1/lucene-core-5.5.5-tuxcare.1-sources.jar](https://nexus.repo.tuxcare.com/repository/els_java/org/apache/lucene/lucene-core/5.5.5-tuxcare.1/lucene-core-5.5.5-tuxcare.1-sources.jar).
 
@@ -139,7 +139,7 @@ For example: [https://nexus.repo.tuxcare.com/repository/els_java/org/apache/luce
 If a source JAR is not available for a specific package, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com) to report the issue.
 :::
 
-## Resolved CVEs in ELS for Apache Lucene®
+## Resolved CVEs
 
 <ClientOnly>
   <ResolvedCveTable project="apache-lucene" />
