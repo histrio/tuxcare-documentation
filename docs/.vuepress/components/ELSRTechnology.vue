@@ -55,29 +55,10 @@
     </div>
   </div>
 
-  <p>If something's missing or you have questions, contact <a href="mailto:sales@tuxcare.com">sales@tuxcare.com</a>.<br>Support for other Linux distros is available upon request.</p>
 </template>
 
 <script setup>
 const runtimes = [
-  {
-    name: "OpenJDK",
-    versions: "7 | 8 | 11 | 17",
-    link: "./openjdk/",
-    icon: "/images/java.webp",
-  },
-  {
-    name: "PHP",
-    versions: "5.2 | 5.3 | 5.4 | 5.5 | 5.6 | 7.0 | 7.1 | 7.2 | 7.3 | 7.4 | 8.0 | 8.1 | 8.2 ",
-    link: "./php/",
-    icon: "/images/php.webp",
-  },
-  {
-    name: "Python",
-    versions: "2.7 | 3.6 ",
-    link: "./python/",
-    icon: "/images/python.webp",
-  },
   {
     name: ".NET",
     versions: "6 | 8 | 10",
@@ -89,6 +70,24 @@ const runtimes = [
     versions: "12 | 14 | 16 | 18 | 20",
     link: "./nodejs/",
     icon: "/images/javascript.webp",
+  },
+  {
+    name: "OpenJDK",
+    versions: "7 | 8 | 11 | 17",
+    link: "./openjdk/",
+    icon: "/images/java.webp",
+  },
+  {
+    name: "PHP",
+    versions: "5.2 | 5.3 | 5.4 | 5.5 | 5.6 | 7.0 | 7.1 | 7.2 | 7.3 | 7.4 | 8.0 | 8.1 | 8.2",
+    link: "./php/",
+    icon: "/images/php.webp",
+  },
+  {
+    name: "Python",
+    versions: "2.7 | 3.6 | 3.7 | 3.8 | 3.9",
+    link: "./python/",
+    icon: "/images/python.webp",
   },
   {
     name: "Ruby",

@@ -45,9 +45,11 @@
   content: "\2713";
   position: absolute;
   left: 0;
+  top: 0.2rem;
   color: #16a34a;
   font-weight: 700;
-  font-size: 0.85rem;
+  font-size: 0.92rem;
+  line-height: 1.6;
 }
 
 .prereqs-body :deep(p) {
