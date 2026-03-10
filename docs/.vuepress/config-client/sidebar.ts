@@ -440,19 +440,6 @@ export default {
                     icon: '/images/javascript.webp',
                 },
                 {
-                    title: 'Go',
-                    type: 'section-header',
-                    icon: '/images/go_logo.webp',
-                },
-                {
-                    path: '/els-for-libraries/grafana/',
-                    icon: '/images/grafana_logo.webp',
-                },
-                {
-                    path: '/els-for-libraries/loki/',
-                    icon: '/images/grafana_logo.webp',
-                },
-                {
                     title: '.NET',
                     type: 'section-header',
                     icon: '/images/dotnet-logo.webp',
@@ -469,6 +456,11 @@ export default {
             collapsable: false,
             children: [
                 "/els-for-applications/",
+                {
+                    title: 'Java',
+                    type: 'section-header',
+                    icon: '/images/java.webp',
+                },
                 {
                     path: '/els-for-applications/apache-hadoop/',
                     icon: '/images/apache.webp',
@@ -488,6 +480,19 @@ export default {
                 {
                     path: '/els-for-applications/gradle/',
                     icon: '/images/gradle.webp',
+                },
+                {
+                    title: 'Go',
+                    type: 'section-header',
+                    icon: '/images/go_logo.webp',
+                },
+                {
+                    path: '/els-for-applications/grafana/',
+                    icon: '/images/grafana_logo.webp',
+                },
+                {
+                    path: '/els-for-applications/loki/',
+                    icon: '/images/grafana_logo.webp',
                 },
             ]
         },
