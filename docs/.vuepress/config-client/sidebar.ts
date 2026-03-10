@@ -88,18 +88,6 @@ export default {
             children: [
                 "/els-for-runtimes/",
                 {
-                    path: '/els-for-runtimes/openjdk/',
-                    icon: '/images/openjdk-logo.webp',
-                },
-                {
-                    path: '/els-for-runtimes/python/',
-                    icon: '/images/python.webp',
-                },
-                {
-                    path: '/els-for-runtimes/php/',
-                    icon: '/images/php-logo.webp',
-                },
-                {
                     path: '/els-for-runtimes/dotnet/',
                     icon: '/images/dotnet-logo.webp',
                 },
@@ -108,9 +96,22 @@ export default {
                     icon: '/images/nodejs.webp',
                 },
                 {
+                    path: '/els-for-runtimes/openjdk/',
+                    icon: '/images/openjdk-logo.webp',
+                },
+                {
+                    path: '/els-for-runtimes/php/',
+                    icon: '/images/php-logo.webp',
+                },
+                {
+                    path: '/els-for-runtimes/python/',
+                    icon: '/images/python.webp',
+                },
+                {
                     path: '/els-for-runtimes/ruby/',
                     icon: '/images/ruby.webp',
                 },
+                "/els-for-runtimes/machine-readable-security-data/",
             ]
         },
     ],

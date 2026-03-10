@@ -4,44 +4,49 @@ Endless Lifecycle Support (ELS) from TuxCare provides security fixes for OpenJDK
 
 ## Supported OS and OpenJDK versions
 
-**Supported architecture:** x86_64.
-
 | OS                                                      | Package Type | OS Version    | OpenJDK version |
 | :-----------------------------------------------------: | :----------: | :-----------: | :-------------: |
-| EL 6 (CentOS, CloudLinux, OracleLinux, etc.)            | RPM          | 6.x           | 8               |
-| EL 7 (CentOS, CloudLinux, OracleLinux, etc.)            | RPM          | 7.x           | 8               |
-| EL 8 (CloudLinux, CentOS, AlmaLinux, OracleLinux, etc.) | RPM          | 8.x           | 8, 11           |
+| EL 6 (CentOS, CloudLinux, Oracle Linux, etc.)            | RPM          | 6.x           | 8               |
+| EL 7 (CentOS, CloudLinux, Oracle Linux, etc.)            | RPM          | 7.x           | 8               |
+| EL 8 (CloudLinux, CentOS, AlmaLinux, Oracle Linux, etc.) | RPM          | 8.x           | 8, 11           |
 | AlmaLinux                                               | RPM          | 9.x           | 8               |
 
-*Other versions and architectures upon request.
+**Supported architecture:** x86_64 (64-bit)
 
-## Installation Instructions
+<ContactSales text="Other versions and architectures available upon request. Contact sales@tuxcare.com for more information." />
 
-:::tip
-This installation method is suitable for both non-containerized systems and containerized environments (such as Docker containers based on supported OS versions).
-:::
+## Installation
 
-1. Download the TuxCare OpenJDK ELS repository package:
+<ELSBadge heading>Docker compatible</ELSBadge>
+
+<ELSPrerequisites>
+
+* A valid TuxCare ELS license key — contact [sales@tuxcare.com](mailto:sales@tuxcare.com) to obtain one
+* Root or `sudo` access to the server
+
+</ELSPrerequisites>
+
+<ELSSteps>
+
+1. Download the installer script
 
    ```text
    wget https://repo.tuxcare.com/openjdk-els/install-openjdk-els-repo.sh
    ```
 
-2. Install the repository package:
+2. Run the installer script with your license key
 
    ```text
    sh install-openjdk-els-repo.sh --license-key XXXXXXXXXXX
    ```
 
-3. Verify the repository is enabled:
+3. Verify the repository is enabled
 
    ```text
    yum repolist | grep openjdk-els
    ```
 
-   You can now install OpenJDK versions supported by TuxCare’s Endless Lifecycle Support (ELS).
-
-4. Install OpenJDK.
+4. Install OpenJDK
 
    <TableTabs label="OpenJDK version: " >
 
@@ -63,9 +68,10 @@ This installation method is suitable for both non-containerized systems and cont
 
    </TableTabs>
 
-5. Verify the installation:
+5. Verify the installation
 
    ```text
    java -version
    ```
 
+</ELSSteps>
