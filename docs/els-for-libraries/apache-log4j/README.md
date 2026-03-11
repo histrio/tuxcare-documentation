@@ -109,7 +109,7 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 
 Source code for TuxCare-patched Apache Log4j libraries is available in the repository. Source JARs follow the standard Maven naming convention with a `-sources` classifier.
 
-For example: [https://nexus.repo.tuxcare.com/repository/els_java/log4j/log4j/1.2.17-tuxcare.1/log4j-1.2.17-tuxcare.1-sources.jar](https://nexus.repo.tuxcare.com/repository/els_java/log4j/log4j/1.2.17-tuxcare.1/log4j-1.2.17-tuxcare.1-sources.jar).
+For example: [https://nexus.repo.tuxcare.com/repository/els_java/log4j/log4j/1.2.17.tuxcare.1/log4j-1.2.17.tuxcare.1-sources.jar](https://nexus.repo.tuxcare.com/repository/els_java/log4j/log4j/1.2.17.tuxcare.1/log4j-1.2.17.tuxcare.1-sources.jar).
 
 :::tip
 If a source JAR is not available for a specific package, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com) to report the issue.
@@ -162,15 +162,15 @@ const gradlerepo =
 
 const mavendeps =
 `<dependencies>
-    <dependency>
-        <groupId>log4j</groupId>
-        <artifactId>log4j</artifactId>
-        <version>1.2.17-tuxcare.1</version>
-    </dependency>
+  <dependency>
+    <groupId>log4j</groupId>
+    <artifactId>log4j</artifactId>
+    <version>1.2.17.tuxcare.1</version>
+  </dependency>
 </dependencies>`
 
 const gradledeps =
 `dependencies {
-  implementation("log4j:log4j:1.2.17-tuxcare.1")
+  implementation("log4j:log4j:1.2.17.tuxcare.1")
 }`
 </script>
