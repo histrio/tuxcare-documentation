@@ -1,22 +1,18 @@
-# Apache Lucene<sup style="font-size: 0.5em;">®</sup>
+# Apache Log4j
 
-Apache®, Apache Lucene®, are either registered trademarks or trademarks of the Apache Software Foundation in the United States and/or other countries.
-
-<br>
-
-TuxCare's Endless Lifecycle Support (ELS) for Apache Lucene® provides security patches and selected bug fixes that are integral to the stable operation of applications running on Apache Lucene®.
+TuxCare's Endless Lifecycle Support (ELS) for Apache Log4j provides security patches and selected bug fixes that are integral to the stable operation of applications running on Apache Log4j.
 
 ## Supported Versions
 
-* Apache Lucene® 5.5.5
+* Apache Log4j 1.2.17
 
-## Connection to ELS for Apache Lucene® Repository
+## Connection to ELS for Apache Log4j Repository
 
-This guide outlines the steps needed to integrate the TuxCare ELS for Apache Lucene® repository into your Java application. The repository provides trusted Java libraries that can be easily integrated into your **Maven** and **Gradle** projects.
+This guide outlines the steps needed to integrate the TuxCare ELS for Apache Log4j repository into your Java application. The repository provides trusted Java libraries that can be easily integrated into your Maven and Gradle projects.
 
 ### Step 1: Get user credentials
 
-You need a username and password in order to use the TuxCare ELS Apache Lucene® repository. Anonymous access is disabled. To receive a username and password please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+You need a username and password in order to use the TuxCare ELS Apache Log4j repository. Anonymous access is disabled. To receive a username and password please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
 ### Step 2: Configure Registry
 
@@ -52,14 +48,14 @@ You need a username and password in order to use the TuxCare ELS Apache Lucene®
 
 ### Step 3: Update Build Configuration
 
-Add the TuxCare Apache Lucene® repository and plugins to your build configuration:
+Add the TuxCare Apache Log4j repository and plugins to your build configuration:
 
 <CodeTabs :tabs="[
   { title: 'Maven (pom.xml)', content: mavenrepo },
   { title: 'Gradle (build.gradle)', content: gradlerepo }
 ]" />
 
-* To fully switch from the official Apache Lucene® repository, replace it with the TuxCare repository.
+* To fully switch from the official Apache Log4j repository, replace it with the TuxCare repository.
 * To keep both, add TuxCare after the official one.
 
 Example Maven and Gradle projects are available on GitHub. Remember to set the required environment variables.
@@ -68,9 +64,7 @@ Example Maven and Gradle projects are available on GitHub. Remember to set the r
 
 ### Step 4: Update Dependencies
 
-Replace the Apache Lucene® dependencies in your build file with the TuxCare-maintained versions to cover both direct and transitive dependencies.
-
-You can find a specific artifact version in your TuxCare account on Nexus (anonymous access is restricted).
+Replace the Apache Log4j dependencies in your build file with the TuxCare-maintained versions to cover both direct and transitive dependencies.
 
 You can find a specific artifact version in your TuxCare account on [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els_java). Click **Sign In** in the top right corner to authenticate with your TuxCare credentials. After logging in, you may need to refresh or reopen the link to browse artifacts due to Nexus routing behavior.
 
@@ -81,7 +75,7 @@ You can find a specific artifact version in your TuxCare account on [Nexus](http
 
 ### Step 5: Verify and Build
 
-1. To confirm the TuxCare Apache Lucene® repository is set up correctly, use your build tool to list the project's dependencies. It shows both direct and transitive dependencies in the classpath.
+1. To confirm the TuxCare Apache Log4j repository is set up correctly, use your build tool to list the project's dependencies. It shows both direct and transitive dependencies in the classpath.
 
    <CodeTabs :tabs="[
      { title: 'Maven', content: `mvn dependency:tree -Dverbose` },
@@ -95,17 +89,17 @@ You can find a specific artifact version in your TuxCare account on [Nexus](http
     { title: 'Gradle', content: `./gradlew build` }
    ]" />
 
-The build tool you're using should be able to identify and resolve dependencies from the TuxCare ELS for Apache Lucene® repository.
+The build tool you're using should be able to identify and resolve dependencies from the TuxCare ELS for Apache Log4j repository.
 
 ### Conclusion
 
-You've successfully integrated the TuxCare ELS for Apache Lucene® repository into your project. You can now benefit from the secure and vetted Apache Lucene® libraries it provides.
+You've successfully integrated the TuxCare ELS for Apache Log4j repository into your project. You can now benefit from the secure and vetted Apache Log4j libraries it provides.
 
 ## Vulnerability Exploitability eXchange (VEX)
 
 VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives and helps prioritize real risks.
 
-TuxCare provides VEX for Apache Lucene® ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_java/org.apache.lucene/](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/org.apache.lucene/).
+TuxCare provides VEX for Apache Log4j ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_java/log4j/](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/log4j/).
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
@@ -113,18 +107,18 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 
 ## Source Code
 
-Source code for TuxCare-patched Apache Lucene® libraries is available in the repository. Source JARs follow the standard Maven naming convention with a `-sources` classifier.
+Source code for TuxCare-patched Apache Log4j libraries is available in the repository. Source JARs follow the standard Maven naming convention with a `-sources` classifier.
 
-For example: [https://nexus.repo.tuxcare.com/repository/els_java/org/apache/lucene/lucene-core/5.5.5-tuxcare.1/lucene-core-5.5.5-tuxcare.1-sources.jar](https://nexus.repo.tuxcare.com/repository/els_java/org/apache/lucene/lucene-core/5.5.5-tuxcare.1/lucene-core-5.5.5-tuxcare.1-sources.jar).
+For example: [https://nexus.repo.tuxcare.com/repository/els_java/log4j/log4j/1.2.17.tuxcare.1/log4j-1.2.17.tuxcare.1-sources.jar](https://nexus.repo.tuxcare.com/repository/els_java/log4j/log4j/1.2.17.tuxcare.1/log4j-1.2.17.tuxcare.1-sources.jar).
 
 :::tip
 If a source JAR is not available for a specific package, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com) to report the issue.
 :::
 
-## Resolved CVEs in ELS for Apache Lucene®
+## Resolved CVEs in ELS for Apache Log4j
 
 <ClientOnly>
-  <ResolvedCveTable project="apache-lucene" />
+  <ResolvedCveTable project="apache-log4j" />
 </ClientOnly>
 
 <script setup>
@@ -168,16 +162,15 @@ const gradlerepo =
 
 const mavendeps =
 `<dependencies>
-    <dependency>
-        <groupId>org.apache.lucene</groupId>
-        <artifactId>lucene-core</artifactId>
-        <version>5.5.5-tuxcare.1</version>
-    </dependency>
+  <dependency>
+    <groupId>log4j</groupId>
+    <artifactId>log4j</artifactId>
+    <version>1.2.17.tuxcare.1</version>
+  </dependency>
 </dependencies>`
 
 const gradledeps =
 `dependencies {
-  implementation("org.apache.lucene:lucene-core:5.5.5-tuxcare.1")
+  implementation("log4j:log4j:1.2.17.tuxcare.1")
 }`
 </script>
-
