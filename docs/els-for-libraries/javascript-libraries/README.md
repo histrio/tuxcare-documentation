@@ -18,6 +18,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **express-jwt** 0.1.3
 * **form-data** 2.3.3
 * **formidable** 2.1.2
+* **highlight.js** 9.18.5
 * **http-proxy-middleware** 0.19.1, 2.0.8
 * **i18next** 23.16.8
 * **ini** 1.3.5

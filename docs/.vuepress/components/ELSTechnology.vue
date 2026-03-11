@@ -532,6 +532,11 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "highlight.js",
+        versions: "9.18.5",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "http-proxy-middleware",
         versions: "0.19.1 | 2.0.8",
         link: "./javascript-libraries/",
