@@ -32,6 +32,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **nth-check** 1.0.2
 * **pdfjs-dist** 2.16.105
 * **picocolors** 0.2.1
+* **qs** 5.1.0, 5.2.0
 * **quill** 1.3.7
 * **request** 2.88.0
 * **rollup** 2.1.0, 2.26.5, 2.38.4, 2.79.1, 2.79.2
@@ -194,6 +195,8 @@ Fixes for the following vulnerabilities are available in ELS for JavaScript Libr
 | CVE-2020-7733  | Direct   | High     | ua-parser-js      | < 0.7.22           |
 | CVE-2020-7793  | Direct   | High     | ua-parser-js      | < 0.7.23           |
 | CVE-2021-27292 | Direct   | High     | ua-parser-js      | >= 0.7.14, < 0.7.24 |
+| CVE-2022-24999 | Direct   | High | qs | 5.1.0, 5.2.0 |
+| CVE-2017-1000048 | Direct   | High | qs | 5.1.0, 5.2.0 |
 | CVE-2017-16137 | Direct   | Medium   | debug             | >= 2.0.0, < 2.6.9, >= 3.0.0, < 3.1.0 |
 | CVE-2020-7608  | Direct   | Medium   | yargs-parser      | < 5.0.1, ≥ 6.0.0 < 13.1.2, ≥ 14.0.0 < 15.0.1, ≥ 16.0.0 < 18.1.1 |
 | CVE-2023-0842  | Direct   | Medium   | xml2js            | 0.4.23             |
@@ -214,6 +217,7 @@ Fixes for the following vulnerabilities are available in ELS for JavaScript Libr
 | CVE-2020-15262 | Direct   | Low      | webpack-subresource-integrity | < 1.5.1            |
 | AIKIDO-2024-10030 | Direct   | Low      | Quill             | 0.0.1 - 1.3.7      |
 | AIKIDO-2024-10093 | Direct   | Low      | picocolors        | 0.1.0 - 1.0.0      |
+| CVE-2025-15284 | Direct   | Low | qs | 5.1.0, 5.2.0 |
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
