@@ -593,7 +593,7 @@ const techData = [
       },
       {
         name: "debug",
-        versions: "4.1.1",
+        versions: "2.1.1 | 2.3.3 | 4.1.1",
         link: "./javascript-libraries/",
       },
       {
