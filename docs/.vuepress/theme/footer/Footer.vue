@@ -1,27 +1,25 @@
 <template>
-  <div class="footer" :class="{'footer-default-layout': !isGlobalLayout}">
+  <footer class="footer" :class="{'footer-default-layout': !isGlobalLayout}" role="contentinfo">
     <div class="footer__img">
-      <a :href="cloudlinuxSite">
+      <a :href="cloudlinuxSite" aria-label="TuxCare website">
         <img :src="withBase(footerCustomLogo)"
-             :alt="footerCustomAltText">
+             :alt="footerLogoAlt">
       </a>
     </div>
-    <div class="footer-company-title">{{ year }}.
-      Cloud Linux Software Inc
-    </div>
+    <div class="footer-company-title">&copy; {{ year }} All rights reserved. TuxCare Inc.</div>
 
     <div class="social">
       <div class="social_links">
-        <a v-for="item in locales.bottomLinks" :href="item.url" target="_blank">{{ item.text }}</a>
+        <a v-for="item in locales.bottomLinks" :href="item.url" target="_blank" rel="noopener noreferrer">{{ item.text }}</a>
       </div>
       <span class="footer-social-text">{{ locales.stayInTouch }}</span>
       <div class="social-icons-wrapper">
-        <a v-for="item in social" class="social-icons-link" :href="item?.url" target="_blank">
+        <a v-for="item in social" class="social-icons-link" :href="item?.url" target="_blank" rel="noopener noreferrer" :aria-label="item?.text || 'social link'">
           <img v-if="item.icon" class="social-icons-link-img" :src="withBase(item?.icon)" alt="footer logo"/>
         </a>
       </div>
     </div>
-  </div>
+  </footer>
 </template>
 
 
@@ -34,6 +32,7 @@ const frontmatter = usePageFrontmatter()
 
 const year = computed(() => (new Date()).getFullYear());
 const isGlobalLayout = computed(() => frontmatter.value.layout === 'HomeLayout');
+const footerLogoAlt = computed(() => footerCustomAltText || "TuxCare");
 </script>
 <style lang="stylus" scoped>
 @import '../../styles/config.styl'
@@ -50,9 +49,13 @@ const isGlobalLayout = computed(() => frontmatter.value.layout === 'HomeLayout')
   justify-content space-between
 
 
+  &__img img
+    height 2rem
+    width auto
+
   &-company-title
     font-size 0.8rem
-    color $footerCompanyTitle
+    color #4a5568
 
 .social
   display flex
@@ -72,7 +75,7 @@ const isGlobalLayout = computed(() => frontmatter.value.layout === 'HomeLayout')
     justify-content space-between
 
   .social_links a
-    color #1994F9
+    color #0b5cad
 
   .footer-social-text
     margin-right 0.8125rem

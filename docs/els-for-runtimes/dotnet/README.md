@@ -4,8 +4,6 @@ Endless Lifecycle Support (ELS) for .NET from TuxCare provides security fixes fo
 
 ## Supported Versions
 
-**Supported .NET versions**: 6.0.x, 8.0.x, 10.0.x
-
 | Windows Version                                         | .NET 6 | .NET 8 | .NET 10 | Architectures |
 |---------------------------------------------------------|:------:|:------:|:-------:|:-------------:|
 | **Nano Server 2019, 2022**                              | ✓      | ✓      | ✓       | x64           |
@@ -16,174 +14,148 @@ Endless Lifecycle Support (ELS) for .NET from TuxCare provides security fixes fo
 | **Windows Server** 2022, 2019, 2016, 2012-R2, 2012      | ✓      | ✓      | ✓       | x64, x86      |
 | **Windows Server Core** 2022, 2019, 2016, 2012-R2, 2012 | ✓      | ✓      | ✓       | x64, x86      |
 
-#### SDK
+<ContactSales text="Other versions and architectures available upon request. Contact sales@tuxcare.com for more information." />
 
-The .NET SDK (Software Development Kit) is the recommended option if you plan to develop, build, test, or publish .NET applications. It includes:
+## Available Runtimes
 
-* The .NET Runtime, which is required to run .NET apps.
-* The ASP.NET Core Runtime, so you can develop and host ASP.NET Core web applications out of the box.
-* The .NET CLI and build tools for compiling and managing your .NET projects.
+Choose the component that fits your use case. For more details, refer to the [official .NET documentation](https://learn.microsoft.com/en-us/dotnet/fundamentals/). TuxCare applies security patches to .NET for the above OS versions, ensuring continued stability and security even beyond the official end-of-life date.
+
+<TableTabs>
+
+  <template #SDK>
+
+The .NET SDK (Software Development Kit) is the recommended option if you plan to develop, build, test, or publish .NET applications. It includes the .NET Runtime (required to run .NET apps), the ASP.NET Core Runtime (for hosting web applications out of the box), and the .NET CLI and build tools for compiling and managing your projects.
 
 With the SDK, you won't need to install separate runtimes for ASP.NET Core or the Desktop environment - everything is bundled together to streamline development and deployment.
 
-#### ASP.NET Core Runtime
-The ASP.NET Core Runtime contains the components needed to run ASP.NET Core web applications on .NET. It includes libraries and features for building dynamic web pages, RESTful APIs, and real-time communication with SignalR.
+  </template>
 
-*Note:* If you install the full .NET SDK, you already get the ASP.NET Core Runtime.
+  <template #ASP_NET_Core_Runtime>
 
-#### .NET Desktop Runtime
+The ASP.NET Core Runtime contains the components needed to run ASP.NET Core web applications on .NET. It includes libraries and features for building dynamic web pages, RESTful APIs, and real-time communication with SignalR. 
+
+Note, if you install the full .NET SDK, you already get the ASP.NET Core Runtime.
+
+  </template>
+
+  <template #Desktop_Runtime>
 
 The .NET Desktop Runtime allows you to run Windows desktop applications built with Windows Forms or WPF (Windows Presentation Foundation). It focuses on providing a smooth experience for traditional graphical apps on Windows platforms.
 
-#### .NET Runtime
+  </template>
 
-The .NET Runtime is the base runtime required to run console or server-based .NET applications. It's more lightweight than the SDK, since it does not include compilers, build tools, or additional libraries for web or desktop development.
+  <template #Runtime>
 
-TuxCare applies security patches to .NET for the above OS versions, ensuring continued stability and security even beyond the official end-of-life date.
+The .NET Runtime is the base runtime required to run console or server-based .NET applications. It is more lightweight than the SDK, since it does not include compilers, build tools, or additional libraries for web or desktop development.
 
-## Installation via the .NET Installer
+  </template>
 
-### Prerequisites & System Requirements
+</TableTabs>
 
-* Check the [supported versions](#supported-versions) section above for operating system compatibility.
-* Refer to the [official .NET documentation](https://learn.microsoft.com/en-us/dotnet/fundamentals/) for system requirements.
-* Administrator rights for installation
-* Check if you have .NET already installed on your system:
-  * Open *Command Prompt* (type `cmd` in the search bar) or *PowerShell* (type `powershell` in the search bar) and run the following command:
+## Installation
 
-    <CodeWithCopy>
+<ELSPrerequisites>
 
-    ```text
-    dotnet --version
-    ```
-
-    </CodeWithCopy>
-
-  * If .NET is already installed, the command will return the version number. If it’s not installed, you’ll see an error message.
-  * Install the latest version of .NET before uninstalling the old one to ensure a smooth transition without breaking the dependencies.
-
-### Installation Steps
-
-* Obtain the required license to get access to the service.
-* Contact [sales@tuxcare.com](mailto:sales@tuxcare.com) to receive the necessary steps for generating your unique access link (tokenized URL). Anonymous access is restricted.
-* Follow the provided instructions to create your secure download link.
-* Use this link to access and download .NET files.
-* Choose the appropriate runtime:
-  * **.NET SDK** - Includes everything needed for development, including the runtime and build tools.
-  * **.NET Runtime** - Runs .NET applications but does not include development tools.
-  * **.NET Runtime Desktop** - Required for running desktop applications built with .NET.
-  * **ASP.NET Core Runtime** - Needed for running web applications and services built with ASP.NET Core.
-  For more information, refer to the [official .NET documentation](https://learn.microsoft.com/en-us/dotnet/fundamentals/).
-* Download the corresponding installer based on your system type (x64 or x86). Downloading the latest version is recommended.
-  * .NET SDK - Installed via an .exe installer.
-  * .NET Runtime, .NET Runtime Desktop, and ASP.NET Core Runtime – Installed via .msi files.
-
-:::tip
-In certain versions of some browsers (for example, Edge), you might see a warning after downloading. In this case,  manually allow the download.
-:::
-
-:::warning
-Note: The following steps use the .NET SDK installation as an example. If you are installing a runtime instead, follow a similar process using the corresponding .msi file.
-:::
-
-* Once the installer is downloaded, double-click the file to run it. You’ll see a dialog window. Follow the on-screen instructions:
-  ![image](/images/els-dotnet-installation.webp)
-  * Accept the **license agreement**.
-  * Click **Install** and wait for the process to complete. It should only take a few minutes.
-  * Once the installation is finished, click **Close**.
-* Verify the installation. Open *Command Prompt* (type `cmd` in the search bar) or *PowerShell* (type `powershell` in the search bar) to confirm that .NET was installed successfully:
-
-  <CodeWithCopy>
-
-  ```text
+* A supported Windows version — see the [compatibility table](#supported-versions) above
+* Administrator rights
+* Secure download link (tokenized URL) — contact [sales@tuxcare.com](mailto:sales@tuxcare.com) to receive instructions for generating one
+* Check if .NET is already installed — open **Command Prompt** (`cmd`) or **PowerShell** and run:
+  ```
   dotnet --version
   ```
+  If .NET is already installed, the command will return the version number. If it's not installed, you'll see an error message. Install the latest version of .NET before uninstalling the old one to ensure a smooth transition without breaking the dependencies.
 
-  </CodeWithCopy>
+</ELSPrerequisites>
 
-  Example output:
+:::warning
+The following steps use the .NET SDK installation as an example. If you are installing a runtime instead, follow a similar process using the corresponding .msi file.
+:::
 
-  ```text
-  6.0.429
-  ```
+<ELSSteps>
 
-## Start Using .NET
+1. Download the installer
 
-Now that .NET is installed, you are ready to start using it. You can create and run .NET applications using the command-line tools or Visual Studio/Visual Studio Code.
+   Use your tokenized URL to access the download page. Choose the appropriate runtime (SDK, Runtime, Desktop Runtime, or ASP.NET Core Runtime) and download the installer for your architecture (x64 or x86). Downloading the latest version is recommended.
 
-If you’re new to .NET, we recommend visiting the [official .NET documentation](https://learn.microsoft.com/en-us/dotnet/fundamentals/) for a deeper understanding of the platform.
+   The .NET SDK is installed via an `.exe` installer. The .NET Runtime, Desktop Runtime, and ASP.NET Core Runtime are installed via `.msi` files.
 
-### Create and Run a Test Project
+   :::tip
+   In certain versions of some browsers (for example, Edge), you might see a warning after downloading. In this case, manually allow the download.
+   :::
 
-For a quick start, follow this example to create and run a simple console application:
+2. Run the installer
 
-* Open *Command Prompt* (type `cmd` in the search bar) or *PowerShell* (type `powershell` in the search bar).
-* Run the following command to create a new console application:
+   Double-click the downloaded file. Accept the **license agreement** and click **Install**.
 
-  <CodeWithCopy>
+   ![image](/images/els-dotnet-installation.webp)
 
-  ```text
-  dotnet new console -o MyTestApp
-  ```
+3. Complete the installation
 
-  </CodeWithCopy>
+   Wait for the process to finish, then click **Close**.
 
-  Example output:
+4. Verify the installation
 
-  ```text
-  Welcome to .NET 6.0!
-  ---------------------
-  SDK Version: 6.0.429
+   Open **Command Prompt** or **PowerShell** and run:
 
-  ----------------------------------------------------------------------------
-  The template "Console App" was created successfully.
+   ```text
+   dotnet --version
+   ```
 
-  Processing post-creation actions...
-  Running 'dotnet restore' on C:\Users\user\MyTestApp\MyTestApp.csproj...
-    Determining projects to restore...
-    Restored C:\Users\user\MyTestApp\MyTestApp.csproj (in 115 ms).
-  Restore succeeded.
-  ```
+   Example output:
 
-* Navigate to the newly created folder:
+   ```text
+   6.0.429
+   ```
 
-  <CodeWithCopy>
+5. Create and run a test project
 
-  ```text
-  cd MyTestApp
-  ```
+   Create a new console application to confirm everything works:
 
-  </CodeWithCopy>
+   ```text
+   dotnet new console -o MyTestApp
+   ```
 
-* Build and run the application:
+   Example output:
 
-  <CodeWithCopy>
+   ```text
+   Welcome to .NET 6.0!
+   ---------------------
+   SDK Version: 6.0.429
 
-  ```text
-  dotnet run
-  ```
+   ----------------------------------------------------------------------------
+   The template "Console App" was created successfully.
 
-  </CodeWithCopy>
+   Processing post-creation actions...
+   Running 'dotnet restore' on C:\Users\user\MyTestApp\MyTestApp.csproj...
+     Determining projects to restore...
+     Restored C:\Users\user\MyTestApp\MyTestApp.csproj (in 115 ms).
+   Restore succeeded.
+   ```
 
-  When executed, you should see the following output:
+   Navigate to the folder and run it:
 
-  ```text
-  Hello, World!
-  ```
+   ```text
+   cd MyTestApp
+   dotnet run
+   ```
 
-### Useful Commands
+   Expected output:
 
-The following commands are useful for managing and troubleshooting .NET installation.
+   ```text
+   Hello, World!
+   ```
 
-* `where.exe dotnet` locates the dotnet executable on the system. The output shows the exact path where the dotnet command is installed. By default, the .NET installation is placed in the Program Files\dotnet folder, unless a different destination is chosen during setup.
+</ELSSteps>
 
-  <CodeWithCopy>
+## Additional configurations
+
+### Useful commands
+
+* `where.exe dotnet` — locates the dotnet executable on the system:
 
   ```text
   where.exe dotnet
   ```
-
-  </CodeWithCopy>
 
   Example output:
 
@@ -191,29 +163,26 @@ The following commands are useful for managing and troubleshooting .NET installa
   C:\Program Files\dotnet\dotnet.exe
   ```
 
-* `dotnet --info` displays information about the installed .NET SDKs, runtimes and your OS. It also verifies the .NET is correctly set up.
-
-  <CodeWithCopy>
+* `dotnet --info` — displays information about installed SDKs, runtimes, and your OS:
 
   ```text
   dotnet --info
   ```
 
-  </CodeWithCopy>
-
-  Example output:
+  <details>
+  <summary>Example output</summary>
 
   ```text
   .NET SDK (reflecting any global.json):
-   Version:   6.0.429
-   Commit:    ef6f5ce48c
+  Version:   6.0.429
+  Commit:    ef6f5ce48c
 
   Runtime Environment:
-   OS Name:     Windows
-   OS Version:  10.0.22631
-   OS Platform: Windows
-   RID:         win10-x64
-   Base Path:   C:\Program Files\dotnet\sdk\6.0.429\
+  OS Name:     Windows
+  OS Version:  10.0.22631
+  OS Platform: Windows
+  RID:         win10-x64
+  Base Path:   C:\Program Files\dotnet\sdk\6.0.429\
 
   global.json file:
     Not found
@@ -238,89 +207,63 @@ The following commands are useful for managing and troubleshooting .NET installa
     https://aka.ms/dotnet/runtimes-sdk-info
   ```
 
-* `dotnet --list-sdks` lists all the .NET SDKs installed on your system. Uninstall the old .NET version after you install a new one.
+  </details>
 
-  <CodeWithCopy>
+* `dotnet --list-sdks` — lists all installed SDKs. Uninstall old versions after installing a new one:
 
   ```text
   dotnet --list-sdks
   ```
-
-  </CodeWithCopy>
-
+  
   Example output:
 
   ```text
   6.0.429 [C:\Program Files\dotnet\sdk]
   ```
 
-## NuGet Repository (Optional)
+### Uninstallation
 
-Developers working on .NET projects may need a NuGet repository to manage and share packages across projects. TuxCare provides a shared NuGet repository, which you can add with a simple command:
+* **Via Windows Settings** 
+  
+  Open **Settings** &rarr; **Apps** &rarr; **Installed Apps** (or **Apps & Features** on older versions). Search for *.NET SDK* or *.NET Runtime* depending on what you've installed. Click on each entry and select **Uninstall**.
 
-<CodeWithCopy>
-
-```text
-dotnet nuget add source \
-  https://nexus.repo.tuxcare.com/repository/els_dotnet/index.json \
-  --name TuxCare \
-  --username $USERNAME \
-  --password $PASSWORD
-```
-
-</CodeWithCopy>
-
-Replace `$USERNAME` and `$PASSWORD` with the credentials provided by [sales@tuxcare.com](mailto:sales@tuxcare.com).
-
-## Uninstall ELS for .NET
-
-### Uninstall via Windows Settings
-
-* Open **Settings** &rarr; **Apps** &rarr; **Installed Apps** (or **Apps & Features** on older versions).
-* Search for *.NET SDK* or *.NET Runtime* depending on what you’ve installed.
-* Click on each entry and select **Uninstall**.
   :::tip
   During the uninstall, a **"Files in use"** window can appear. Select the **"Do not close applications. A reboot will be required"** option and click **OK** to proceed.
   :::
-* A dialog window will appear. Click **Uninstall**. It should take a few minutes. When the process is finished, close the window.
 
-<video autoplay loop muted playsinline style="max-width: 100%; border-radius: 8px;">
-  <source src="/images/dotnet-uninstall-settings.webm" type="video/webm">
-  <source src="/images/dotnet-uninstall-settings.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+  A dialog window will appear. Click **Uninstall**. It should take a few minutes. When the process is finished, close the window.
 
-### Uninstall via Control Panel
+  ![Uninstalling via Windows Settings](/images/dotnet-uninstall-settings.webp)
 
-* Open **Control Panel** &rarr; **Programs** &rarr; **Programs and Features**.
-* Search for *.NET SDK* or *.NET Runtime* depending on what you’ve installed.
-* Right-click on each entry and select **Uninstall**.
+* **Via Control Panel**
+  
+  Open **Control Panel** &rarr; **Programs** &rarr; **Programs and Features**. Search for *.NET SDK* or *.NET Runtime*, right-click on each entry and select **Uninstall**.
+
   :::tip
   During the uninstall, a **"Files in use"** window can appear. Select the **"Do not close applications. A reboot will be required"** option and click **OK** to proceed.
   :::
-* A dialog window will appear. Click **Uninstall**. It should take a few minutes. When the process is finished, close the window.
 
-<video autoplay loop muted playsinline style="max-width: 100%; border-radius: 8px;">
-  <source src="/images/dotnet-uninstall-controlpanel.webm" type="video/webm">
-  <source src="/images/dotnet-uninstall-controlpanel.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+  A dialog window will appear. Click **Uninstall**. It should take a few minutes. When the process is finished, close the window.
 
-### Remove Remaining Files
+  ![Uninstalling via Control Panel](/images/dotnet-uninstall-controlpanel.webp)
 
-After uninstalling .NET some files may remain in the following locations:
-
-* `C:\Program Files\dotnet\`
-* `C:\Users\<user>\.dotnet\`
-
-Delete the folders manually to fully remove .NET.
+* **Remove remaining files**
+  
+  After uninstalling .NET some files may remain in `C:\Program Files\dotnet\` and `C:\Users\<user>\.dotnet\`. Delete these folders manually to fully remove .NET.
 
 ## Frequent Issues
 
-**How do I update .NET if a new version is released?**
+* **How do I update .NET if a new version is released?**
 
-Currently, to update .NET, you need to manually download the latest installer and follow the installation steps described above. After installing the new version, it’s recommended to remove the previous one. In the future, an automatic update mechanism for the components will be provided.
+  Currently, to update .NET, you need to manually download the latest installer and follow the installation steps described above. After installing the new version, it's recommended to remove the previous one. In the future, an automatic update mechanism for the components will be provided.
 
-**What should I do if there are conflicts during installation?**
+* **What should I do if there are conflicts during installation?**
 
-If you encounter conflicts, try uninstalling the previous version before installing the new one. In most cases, .NET versions can coexist without issues, but removing the older version may help resolve compatibility problems.
+  If you encounter conflicts, try uninstalling the previous version before installing the new one. In most cases, .NET versions can coexist without issues, but removing the older version may help resolve compatibility problems.
+
+<WhatsNext>
+
+* ![](/images/box.webp) [ELS NuGet Repository](/els-for-libraries/dotnet/) — Set up the TuxCare NuGet feed, install patched packages, and manage .NET package dependencies
+* ![](/images/book.webp) [Official .NET documentation](https://learn.microsoft.com/en-us/dotnet/fundamentals/) — Getting started guides, API reference, and platform fundamentals
+
+</WhatsNext>

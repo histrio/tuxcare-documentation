@@ -4,20 +4,7 @@ TuxCare's [Endless Lifecycle Support (ELS) for OS](https://tuxcare.com/extended-
 
 Our ELS service is designed to provide solutions for organizations that are not yet ready to migrate to newer versions and that are seeking long-term stability for their out-of-date operating systems. The service coverage includes updates for the Linux kernel and a list of essential packages that are integral to server operations.
 
-## Supported Operating Systems
-
-* [Alpine Linux 3.18](./alpine-linux-3-18-els)
-* [CentOS 6](./centos-6-els)
-* [CentOS 7](./centos-7-els)
-* [CentOS 8](./centos-8-els)
-* [CentOS Stream 8](./centos-stream-8-els)
-* [Debian 10](./debian-10-els)
-* [Oracle Linux 6](./oracle-linux-6-els)
-* [Oracle Linux 7](./oracle-linux-7-els)
-* [Red Hat Enterprise Linux 7](./red-hat-enterprise-linux-7-els)
-* [Ubuntu 16.04](./ubuntu-16-04-els)
-* [Ubuntu 18.04](./ubuntu-18-04-els)
-* [Ubuntu 20.04](./ubuntu-20-04-els)
+<ELSOSSelector />
 
 ## Support Duration
 
@@ -26,10 +13,10 @@ TuxCare provides continuous security patching for all supported end-of-life (EOL
 All updates are delivered at a fixed price for the full term of your contract, ensuring predictable costs and uninterrupted protection.
 
 ## Technical Support
-	
+
 TuxCare provides technical support according to the standard [support policy](https://tuxcare.com/TuxCare-support-policy.pdf).
 	
-It delivers 24/7/365 access to the TuxCare’s support team through the [TuxCare Support Portal](https://tuxcare.com/support-portal/) and to the TuxCare’s online knowledge base.
+It delivers 24/7/365 access to TuxCare’s support team through the [TuxCare Support Portal](https://tuxcare.com/support-portal/) and to TuxCare’s online knowledge base.
 
 ## Vulnerability coverage
 
@@ -49,31 +36,23 @@ Requests for customer-directed security patches for CVEs that are outside of the
 
 ## Rollout Process
 
-For several platforms, TuxCare delivers security updates through a staged rollout repositories. This process may take up to 14 additional days after a patch is published to stable repositories.
+For several platforms, TuxCare delivers security updates through staged rollout repositories. This process may take up to 14 additional days after a patch is published to stable repositories.
 
 During the rollout period, updates are applied in the usual way with standard package manager commands. 
 
 **For example, standard update for kernel**:
 
-<CodeWithCopy>
-
 ```
 yum update kernel*
 ```
-
-</CodeWithCopy>
 
 If you need to apply the fix immediately without waiting for the rollout to complete, you can use the bypass repository. The necessary instructions are always provided on the release information page.
 
 **For example (packages in the 3rd rollout slot)**:
 
-<CodeWithCopy>
-
 ```
 yum update kernel* --enablerepo=centos7els-rollout-3-bypass
 ```
-
-</CodeWithCopy>
 
 You can track the status of vulnerabilities and their corresponding fixes via [cve.tuxcare.com](https://cve.tuxcare.com/):
 * [Vulnerabilities](https://cve.tuxcare.com/els/cve)

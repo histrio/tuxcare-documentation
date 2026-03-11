@@ -27,7 +27,6 @@ entity deletion doesn't raise an error in case there is no such entity.
 Or entity creation/modification is a single request that just works and
 simply brings desired final state.
 
-
 ## List servers
 
 **GET /admin/api/servers**
@@ -138,7 +137,6 @@ curl -X POST https://eportal.corp.com/admin/api/register -F key=test
 {"server_id":"lw1MO1Du5sF3Cj39"}
 ```
 
-
 ## Unregister host
 
 **POST /admin/api/delete_server**
@@ -206,7 +204,6 @@ For example:
 curl --user admin:admin-password -X DELETE https://eportal.corp.com/admin/api/servers?checkin_age=15
 ```
 
-
 ## Create/modify feed
 
 **POST /admin/api/feeds/**
@@ -243,7 +240,6 @@ Requires write permissions and accepts basic authorization.
 curl -X POST -u admin -d name=test-feed -d auto=true https://eportal.corp.com/admin/api/feeds/
 ```
 
-
 ## List feeds
 
 **GET /admin/api/feeds/**
@@ -268,13 +264,11 @@ Requires read permissions and accepts basic authorization.
 }
 ```
 
-
 **Example:**
 
 ```
 curl -u admin https://eportal.corp.com/admin/api/feeds/
 ```
-
 
 ## Delete feed
 
@@ -295,7 +289,6 @@ Requires write permissions and accepts basic authorization.
 ```
 curl -X DELETE -u admin https://eportal.corp.com/admin/api/feeds/test-feed
 ```
-
 
 ## Create/modify registration key
 
@@ -333,7 +326,6 @@ Requires write permissions and accepts basic authorization.
 curl -X POST -u admin -d key=test-key -d feed=test-feed https://eportal.corp.com/admin/api/keys/
 ```
 
-
 ## List keys
 
 **GET /admin/api/keys/**
@@ -358,13 +350,11 @@ Requires read permissions and accepts basic authorization.
 }
 ```
 
-
 **Example:**
 
 ```
 curl -u admin https://eportal.corp.com/admin/api/keys/
 ```
-
 
 ## Delete key
 
@@ -422,7 +412,6 @@ Requires read permissions and accepts basic authorization.
 ```
 curl -u admin 'https://eportal.corp.com/admin/api/patchsets/?feed=main&product=kernel&distro=almalinux8'
 ```
-
 
 ## Manage patchsets
 
@@ -485,13 +474,11 @@ Requires read permissions and accepts basic authorization.
 }
 ```
 
-
 **Example:**
 
 ```
 curl -u admin https://eportal.corp.com/admin/api/users/
 ```
-
 
 ## Set tags
 
@@ -523,7 +510,6 @@ Assign tags `test` and `stage` to server with id `test-centos`
 ```
 curl -X POST -u admin 'https://eportal.corp.com/admin/api/set_tags?server_id=test-centos&tags=test;stage'
 ```
-
 
 ## Configuration manager integration
 

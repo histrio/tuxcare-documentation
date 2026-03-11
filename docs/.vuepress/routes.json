@@ -207,5 +207,7 @@
     "/els-for-runtimes-and-libraries/xml2js/": "/els-for-libraries/javascript-libraries/",
     "/els-for-runtimes-and-libraries/yargs-parser/": "/els-for-libraries/javascript-libraries/",
     "/els-for-libraries/symfony-process/": "/els-for-libraries/symfony/",
-    "/els-for-libraries/apache-lucene/": "/els-for-libraries/apache-lucene-and-solr/"
+    "/els-for-libraries/apache-lucene/": "/els-for-libraries/apache-lucene-and-solr/",
+    "/els-for-libraries/grafana/": "/els-for-applications/grafana/",
+    "/els-for-libraries/loki/": "/els-for-applications/loki/"
 }

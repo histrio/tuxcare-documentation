@@ -64,18 +64,14 @@ To use TuxCare's ELS for Python libraries, follow one of the options below:
 
 You can install or upgrade a package directly using the ELS repository with your credentials:
 
-<CodeWithCopy>
-
 ```text
 pip install --upgrade \
   -i https://<username>:<password>@nexus.repo.tuxcare.com/repository/els_python/simple \
   <package>
 ```
 
-</CodeWithCopy>
-
 **Replace:**
-* `<username>` and `<password>` - with the credentials provided by sales.  
+* `<username>` and `<password>` with the credentials provided by sales.  
 * `<package>` - with the Python package name (e.g., `certifi`).
 
 #### Option 2: Configure `pip` to Use the ELS Repository (Full Replacement)
@@ -95,25 +91,17 @@ This method is recommended if you want to use only ELS-patched Python packages f
 
 2. Run the command to install the latest package version:
 
-   <CodeWithCopy>
-
    ```text
    pip install --upgrade <package>
    ```
-
-   </CodeWithCopy>
 
    **Replace `<package>` with the python package name, for example, certifi.**
 
    Or install a specific patched TuxCare version, for example:
 
-   <CodeWithCopy>
-
    ```text
    pip install certifi==2021.10.8.post2+tuxcare
    ```
-
-   </CodeWithCopy>
 
 #### Option 3: Add the TuxCare ELS Repository as Additional (recommended)
 
@@ -132,13 +120,9 @@ If you want to keep using public PyPI and fetch only specific patched packages f
 
 2. Run the command to install a specific patched TuxCare version, for example:
 
-   <CodeWithCopy>
-
    ```text
    pip install certifi==2021.10.8.post2+tuxcare
    ```
-
-   </CodeWithCopy>
 
 ## Upgrading to a Newer TuxCare Version
 
@@ -146,7 +130,7 @@ To upgrade to a newer TuxCare release (e.g., from `version.post1+tuxcare` to `ve
 
 ## Vulnerability Exploitability eXchange (VEX) 
 
-VEX is a machine-readable format that tells you if a known vulnerability and is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
+VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
 
 TuxCare provides VEX for Python Libraries ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_python/](https://security.tuxcare.com/vex/cyclonedx/els_lang_python/).
 

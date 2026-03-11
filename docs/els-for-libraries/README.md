@@ -56,18 +56,18 @@ All updates are delivered at a fixed price for the full term of your contract, e
 
 TuxCare provides technical support according to the standard [support policy](https://tuxcare.com/TuxCare-support-policy.pdf).
 
-It delivers 24/7/365 access to the TuxCare’s support team through the [TuxCare Support Portal](https://tuxcare.com/support-portal/) and to the TuxCare’s online knowledge base. 
+It delivers 24/7/365 access to TuxCare’s support team through the [TuxCare Support Portal](https://tuxcare.com/support-portal/) and to TuxCare’s online knowledge base. 
 
 ## Vulnerability Exploitability eXchange (VEX) 
 
-VEX is a machine-readable format that tells you if a known vulnerability and is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
+VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
  
 Why it matters: 
 
 - Context-aware vulnerability status (“affected”, “not affected”, “fixed”)
 - Cuts scanner noise to what truly matters
 - Automation-friendly for tooling and CI/CD
-  
+
 Language-specific: 
 
 - [Python](https://security.tuxcare.com/vex/cyclonedx/els_lang_python/)

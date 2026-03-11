@@ -14,25 +14,61 @@ import social from "./config-client/social";
 
 import Chat from "./components/Chat.vue";
 import CodeTabs from "./components/CodeTabs.vue";
-import CodeWithCopy from "./components/CodeWithCopy.vue";
 import TableTabs from "./components/TableTabs.vue";
 import ELSTechnology from "./components/ELSTechnology.vue";
 import ELSRTechnology from "./components/ELSRTechnology.vue";
+import ELSOSSelector from "./components/ELSOSSelector.vue";
+import ELSPrerequisites from "./components/ELSPrerequisites.vue";
+import ELSSteps from "./components/ELSSteps.vue";
+import WhatsNext from "./components/WhatsNext.vue";
+import ELSApplication from "./components/ELSApplication.vue";
+import GlobalCopyCode from "./components/GlobalCopyCode.vue";
 
 import ResolvedCveTable from './components/ResolvedCveTable.vue'
+import ELSBadge from './components/ELSBadge.vue'
+import ContactSales from './components/ContactSales.vue'
 
 export default defineClientConfig({
     rootComponents: [
         Chat,
+        GlobalCopyCode,
     ],
-    async enhance({ app }) {
+    async enhance({ app, router }) {
+        const applyA11yRuntimeFixes = () => {
+            // VuePress header anchors are decorative links; remove them from keyboard tab order.
+            document.querySelectorAll('a.header-anchor[aria-hidden="true"]').forEach((el) => {
+                el.setAttribute('tabindex', '-1');
+            });
+
+            // Make horizontally scrollable code blocks keyboard focusable.
+            document.querySelectorAll('div[class*="language-"] > pre').forEach((pre) => {
+                const preElement = pre;
+                if (!preElement.hasAttribute('tabindex')) {
+                    preElement.setAttribute('tabindex', '0');
+                }
+            });
+        };
+
         app.config.globalProperties.$eventBus = mitt();
         app.component("CodeTabs", CodeTabs);
-        app.component("CodeWithCopy", CodeWithCopy);
         app.component("ResolvedCveTable", ResolvedCveTable);
         app.component("TableTabs", TableTabs);
         app.component("ELSTechnology", ELSTechnology);
         app.component("ELSRTechnology", ELSRTechnology);
+        app.component("ELSOSSelector", ELSOSSelector);
+        app.component("ELSPrerequisites", ELSPrerequisites);
+        app.component("ELSSteps", ELSSteps);
+        app.component("WhatsNext", WhatsNext);
+        app.component("ELSApplication", ELSApplication);
+        app.component("ELSBadge", ELSBadge);
+        app.component("ContactSales", ContactSales);
+
+        if (!__VUEPRESS_SSR__) {
+            setTimeout(applyA11yRuntimeFixes, 0);
+            router.afterEach(() => {
+                setTimeout(applyA11yRuntimeFixes, 0);
+            });
+        }
     },
     layouts: {
         Layout,
@@ -56,7 +92,7 @@ export default defineClientConfig({
             // icons
             arrowDownIcon: "arrows/arrow-down.svg",
             githubEditIcon: 'global/pen.svg',
-            footerCustomLogo: 'global/we-are-cloudlinux.svg',
+            footerCustomLogo: 'global/TuxCare_color_logo_primary_RGB.webp',
             headerDefaultSearchIcon: 'global/search.svg',
             siteLogo: "global/logo.svg",
             searchSelectIcon: 'arrows/select-down.svg',

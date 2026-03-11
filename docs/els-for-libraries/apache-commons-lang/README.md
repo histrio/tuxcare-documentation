@@ -71,7 +71,7 @@ You can find a specific artifact version in your TuxCare account on [Nexus](http
 <TableTabs label="Choose version: " >
 
 <template #Commons_Lang>
-            
+
   <CodeTabs :tabs="[
 { title: 'Maven (pom.xml)', content: mavenDepsLang },
 { title: 'Gradle (build.gradle)', content: gradleDepsLang }
@@ -80,7 +80,7 @@ You can find a specific artifact version in your TuxCare account on [Nexus](http
 </template>
 
 <template #Commons_Lang3>
-            
+
   <CodeTabs :tabs="[
 { title: 'Maven (pom.xml)', content: mavenDepsLang3 },
 { title: 'Gradle (build.gradle)', content: gradleDepsLang3 }

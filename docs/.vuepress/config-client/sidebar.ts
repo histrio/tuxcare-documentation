@@ -88,18 +88,6 @@ export default {
             children: [
                 "/els-for-runtimes/",
                 {
-                    path: '/els-for-runtimes/openjdk/',
-                    icon: '/images/openjdk-logo.webp',
-                },
-                {
-                    path: '/els-for-runtimes/python/',
-                    icon: '/images/python.webp',
-                },
-                {
-                    path: '/els-for-runtimes/php/',
-                    icon: '/images/php-logo.webp',
-                },
-                {
                     path: '/els-for-runtimes/dotnet/',
                     icon: '/images/dotnet-logo.webp',
                 },
@@ -108,9 +96,22 @@ export default {
                     icon: '/images/nodejs.webp',
                 },
                 {
+                    path: '/els-for-runtimes/openjdk/',
+                    icon: '/images/openjdk-logo.webp',
+                },
+                {
+                    path: '/els-for-runtimes/php/',
+                    icon: '/images/php-logo.webp',
+                },
+                {
+                    path: '/els-for-runtimes/python/',
+                    icon: '/images/python.webp',
+                },
+                {
                     path: '/els-for-runtimes/ruby/',
                     icon: '/images/ruby.webp',
                 },
+                "/els-for-runtimes/machine-readable-security-data/",
             ]
         },
     ],
@@ -271,6 +272,10 @@ export default {
                     icon: '/images/phpmailer.webp',
                 },
                 {
+                    path: '/els-for-libraries/phpunit/',
+                    icon: '/images/phpunit.webp',
+                },
+                {
                     path: '/els-for-libraries/phpspreadsheet/',
                     icon: '/images/phpspreadsheet.webp',
                 },
@@ -281,6 +286,10 @@ export default {
                 {
                     path: '/els-for-libraries/symfony/',
                     icon: '/images/symfony-logo.webp',
+                },
+                {
+                    path: '/els-for-libraries/zendframework-zf1/',
+                    icon: '/images/zf1.webp',
                 },
                 {
                     title: 'JavaScript',
@@ -424,29 +433,16 @@ export default {
                     icon: '/images/webpack-dev-server.webp',
                 },
                 {
-                    path: '/els-for-libraries/yui/',
-                    icon: '/images/yui-logo.webp',
-                },
-                {
                     path: '/els-for-libraries/webpack/',
                     icon: '/images/webpack-logo.webp',
                 },
                 {
+                    path: '/els-for-libraries/yui/',
+                    icon: '/images/yui-logo.webp',
+                },
+                {
                     path: '/els-for-libraries/javascript-libraries/',
                     icon: '/images/javascript.webp',
-                },
-                {
-                    title: 'Go',
-                    type: 'section-header',
-                    icon: '/images/go_logo.webp',
-                },
-                {
-                    path: '/els-for-libraries/grafana/',
-                    icon: '/images/grafana_logo.webp',
-                },
-                {
-                    path: '/els-for-libraries/loki/',
-                    icon: '/images/grafana_logo.webp',
                 },
                 {
                     title: '.NET',
@@ -466,6 +462,11 @@ export default {
             children: [
                 "/els-for-applications/",
                 {
+                    title: 'Java',
+                    type: 'section-header',
+                    icon: '/images/java.webp',
+                },
+                {
                     path: '/els-for-applications/apache-hadoop/',
                     icon: '/images/apache.webp',
                 },
@@ -484,6 +485,19 @@ export default {
                 {
                     path: '/els-for-applications/gradle/',
                     icon: '/images/gradle.webp',
+                },
+                {
+                    title: 'Go',
+                    type: 'section-header',
+                    icon: '/images/go_logo.webp',
+                },
+                {
+                    path: '/els-for-applications/grafana/',
+                    icon: '/images/grafana_logo.webp',
+                },
+                {
+                    path: '/els-for-applications/loki/',
+                    icon: '/images/grafana_logo.webp',
                 },
             ]
         },

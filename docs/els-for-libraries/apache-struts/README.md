@@ -76,7 +76,7 @@ You can find a specific artifact version in your TuxCare account on [Nexus](http
 <TableTabs label="Choose an extension: " >
 
   <template #1.3.5>
-  
+
   <CodeTabs :tabs="[
     { title: 'Maven (pom.xml)', content: mavendeps },
     { title: 'Gradle (build.gradle)', content: gradledeps }
@@ -85,7 +85,7 @@ You can find a specific artifact version in your TuxCare account on [Nexus](http
   </template>
 
   <template #2.5.33>
-  
+
   <CodeTabs :tabs="[
     { title: 'Maven (pom.xml)', content: mavendeps2 },
     { title: 'Gradle (build.gradle)', content: gradledeps2 }
@@ -223,5 +223,4 @@ const gradledeps2 =
     implementation("org.apache.struts:struts2-core:2.5.33-tuxcare.1")
 }`
 </script>
-
 

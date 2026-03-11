@@ -4,6 +4,8 @@
 
 <ELSRTechnology />
 
+<ContactSales text="Need a runtime or version not listed? Contact sales@tuxcare.com for more information." />
+
 ## Vulnerability Coverage and Target Response Times
 
 TuxCare employs the Common Vulnerability Scoring System (CVSS v3.1) to assess the severity of security vulnerabilities. Our severity rating system for patching vulnerabilities integrates both NVD scoring and vendor scoring (when available). When the vendor's score is lower than the NVD score, we prioritize the NVD score.
@@ -58,4 +60,4 @@ TuxCare provides technical support according to the:
 * Standard [support policy](https://tuxcare.com/TuxCare-support-policy.pdf) **(excluding .NET)**.
 * The **.NET-specific** [support policy](https://tuxcare.com/TuxCare-els-windows-support-policy.pdf).
 
-It delivers 24/7/365 access to the TuxCare’s support team through the [TuxCare Support Portal](https://tuxcare.com/support-portal/) and to the TuxCare’s online knowledge base.
+It delivers 24/7/365 access to TuxCare’s support team through the [TuxCare Support Portal](https://tuxcare.com/support-portal/) and to TuxCare’s online knowledge base.

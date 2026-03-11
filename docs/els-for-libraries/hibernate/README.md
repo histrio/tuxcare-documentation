@@ -72,7 +72,7 @@ You can find a specific artifact version in your TuxCare account on [Nexus](http
 <TableTabs label="Choose an extension: " >
 
   <template #Hibernate_ORM>
-  
+
 <CodeTabs :tabs="[
   { title: 'Maven (pom.xml)', content: mavendeps },
   { title: 'Gradle (build.gradle)', content: gradledeps }
@@ -81,7 +81,7 @@ You can find a specific artifact version in your TuxCare account on [Nexus](http
   </template>
 
   <template #Hibernate_Search>
-  
+
 <CodeTabs :tabs="[
   { title: 'Maven (pom.xml)', content: mavendeps2 },
   { title: 'Gradle (build.gradle)', content: gradledeps2 }

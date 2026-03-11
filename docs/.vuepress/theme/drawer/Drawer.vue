@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="drawer" :class="{'is-open': isOpenDrawer}">
+    <div class="drawer" :class="{'is-open': isOpenDrawer}" tabindex="0">
       <div class="drawer-header">
         <div class="drawer-header__wrapper">
           <h2 class="drawer-header__paragraph">How can we help you?</h2>
@@ -11,7 +11,7 @@
           <p @click="onCloseDrawer" class="drawer-cross__text">close</p>
         </div>
       </div>
-      <main>
+      <section role="region" aria-label="Search results">
         <div class="drawer-main">
           <div class="drawer-main__wrapper">
             <div class="drawer-main__breadcrumb">
@@ -21,7 +21,7 @@
           </div>
         </div>
         <Footer v-if="isOpenDrawer && isMobileWidth" class="drawer-footer__mobile"/>
-      </main>
+      </section>
     </div>
     <Footer v-if="isOpenDrawer && !isMobileWidth" class="drawer-footer"/>
   </div>
