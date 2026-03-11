@@ -627,6 +627,11 @@ const techData = [
         link: "./mongoose/",
       },
       {
+        name: "mout",
+        versions: "0.9.1",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "multer",
         versions: "1.4.5-lts",
         link: "./javascript-libraries/",
