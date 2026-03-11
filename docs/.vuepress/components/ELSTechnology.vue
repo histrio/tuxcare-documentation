@@ -662,6 +662,11 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "parsejson",
+        versions: "0.0.3",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "passport",
         versions: "0.5.3",
         link: "./passport/",
