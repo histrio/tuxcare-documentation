@@ -617,6 +617,11 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "moment",
+        versions: "2.10.6",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "MongoDB Driver",
         versions: "2.2.36",
         link: "./mongodb-driver/",
