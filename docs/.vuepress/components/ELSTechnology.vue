@@ -447,6 +447,11 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "async",
+        versions: "2.6.1",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "base64url",
         versions: "0.0.6",
         link: "./javascript-libraries/",
