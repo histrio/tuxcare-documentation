@@ -5,6 +5,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 ## Supported JavaScript Libraries
 
 * **ansi-html** 0.0.7
+* **async** 2.6.1
 * **base64url** 0.0.6
 * **bson** 0.5.7, 1.0.9
 * **braces** 2.3.2
@@ -197,6 +198,7 @@ Fixes for the following vulnerabilities are available in ELS for JavaScript Libr
 | CVE-2020-7733  | Direct   | High     | ua-parser-js      | < 0.7.22           |
 | CVE-2020-7793  | Direct   | High     | ua-parser-js      | < 0.7.23           |
 | CVE-2021-27292 | Direct   | High     | ua-parser-js      | >= 0.7.14, < 0.7.24 |
+| CVE-2021-43138 | Direct   | High     | async             | < 2.6.4 |
 | CVE-2017-16137 | Direct   | Medium   | debug             | >= 2.0.0, < 2.6.9, >= 3.0.0, < 3.1.0 |
 | CVE-2020-7608  | Direct   | Medium   | yargs-parser      | < 5.0.1, ≥ 6.0.0 < 13.1.2, ≥ 14.0.0 < 15.0.1, ≥ 16.0.0 < 18.1.1 |
 | CVE-2023-0842  | Direct   | Medium   | xml2js            | 0.4.23             |
