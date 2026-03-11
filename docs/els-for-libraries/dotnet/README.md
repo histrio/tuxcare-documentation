@@ -217,8 +217,8 @@ dotnet nuget add source "https://nexus.repo.tuxcare.com/repository/<els_dotnet_c
 
 | CVE ID | Severity | Affected Package | Affected Versions | Safe Versions |
 | :----: | :------: | :--------------: | :---------------: | :-----------: |
-| CVE-2024-21907 | Unknown | Newtonsoft.Json | < latest tuxcare | See Nexus |
-| GHSA-5crp-9r3c-p9vr | high | Newtonsoft.Json | < latest tuxcare | See Nexus |
+| CVE-2024-21907 | High | Newtonsoft.Json | < 13.0.1 | See Nexus |
+| GHSA-5crp-9r3c-p9vr | High | Newtonsoft.Json | < 13.0.1 | See Nexus |
 
 <script setup>
 
