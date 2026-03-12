@@ -1190,7 +1190,7 @@ const techData = [
       },
       {
         name: "DomPDF",
-        versions: "0.8.x | 1.2.x",
+        versions: "0.8.x | 1.2.x | 3.1.0",
         link: "./dompdf/",
       },
       {
@@ -1200,7 +1200,7 @@ const techData = [
       },
       {
         name: "Laravel",
-        versions: "5.8.38 | 8 | 10 | 11",
+        versions: "5.4.36 | 5.5.50 | 5.6.40 | 5.7.29 | 5.8.38 | 8 | 10 | 11",
         link: "./laravel/",
       },
       {
