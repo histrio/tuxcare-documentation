@@ -6,6 +6,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 
 * **ansi-html** 0.0.7
 * **async** 2.6.1
+* **diff** 1.4.0
 * **base64url** 0.0.6
 * **bson** 0.5.7, 1.0.9
 * **braces** 2.3.2
@@ -17,33 +18,41 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **dompurify** 2.3.0, 2.4.3
 * **elliptic** 6.6.0
 * **express-jwt** 0.1.3
-* **form-data** 2.3.3
+* **extend** 3.0.0
+* **form-data** 1.0.0-rc3, 2.3.3
+* **fstream** 1.0.8
 * **formidable** 2.1.2
 * **http-proxy-middleware** 0.19.1, 2.0.8
 * **i18next** 23.16.8
 * **ini** 1.3.5
 * **ip** 1.1.5, 2.0.0
 * **jsonpath-plus** 7.2.0
+* **lodash.merge** 3.3.2
 * **jspdf** 2.5.2
-* **marked** 4.0.9
+* **marked** 0.2.10, 4.0.9
 * **micromatch** 3.1.10
 * **minimatch** 3.0.4
 * **multer** 1.4.5-lts
 * **node-forge** 0.10.0
 * **nth-check** 1.0.2
 * **pdfjs-dist** 2.16.105
+* **qs** 2.4.2, 6.5.3
 * **picocolors** 0.2.1
 * **quill** 1.3.7
 * **request** 2.88.0
 * **rollup** 2.1.0, 2.26.5, 2.38.4, 2.79.1, 2.79.2
 * **semver** 7.1.3, 7.3.2
 * **sentry-browser** 5.7.1
+* **tar** 2.2.2
 * **ssr-window** 4.0.2
 * **terser** 4.6.10, 4.8.1, 5.3.0, 5.5.1
 * **tinymce** 6.8.6
 * **tough-cookie** 2.4.3, 2.5.0
 * **ua-parser-js** 0.7.21
 * **underscore** 1.7.0
+* **validator** 8.2.0, 10.11.0
+* **websocket-extensions** 0.1.1
+* **xmlhttprequest-ssl** 1.5.3
 * **webpack-subresource-integrity** 1.4.0
 * **xml2js** 0.4.23
 * **yargs-parser** 11.1.1
