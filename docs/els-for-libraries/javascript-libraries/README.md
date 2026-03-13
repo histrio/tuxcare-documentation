@@ -35,6 +35,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **multer** 1.4.5-lts
 * **node-forge** 0.10.0
 * **nth-check** 1.0.2
+* **parsejson** 0.0.3
 * **pdfjs-dist** 2.16.105
 * **picocolors** 0.2.1
 * **quill** 1.3.7
