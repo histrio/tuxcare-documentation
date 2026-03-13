@@ -35,8 +35,8 @@ TuxCare provides ELS for Vue as an NPM package, hosted on a secure internal regi
 
    ```text
    registry=https://registry.npmjs.org/
-   @els-js:registry=https://nexus.repo.tuxcare.com/repository/els-js/
-   //nexus.repo.tuxcare.com/repository/els-js/:_auth=${TOKEN}
+   @els-vue:registry=https://nexus.repo.tuxcare.com/repository/els-vue/
+   //nexus.repo.tuxcare.com/repository/els-vue/:_auth=${TOKEN}
    ```
 
    :::warning
@@ -47,7 +47,10 @@ Manually update your `package.json` file by replacing your Vue dependencies with
 
   ```text
   "dependencies": {
-    "vue": "npm:@els-js/vue@>=2.7.16-tuxcare.1"
+    "vue": "npm:@els-vue/vue@>=2.7.16-tuxcare.1"
+  },
+  "overrides": {
+    "vue@2.7.16": "npm:@els-vue/vue@>=2.7.16-tuxcare.1"
   }
   ```
 

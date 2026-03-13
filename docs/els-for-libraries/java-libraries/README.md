@@ -5,6 +5,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 ## Supported Java Libraries
 
 * **Apache Avro** 1.10.2
+* **Apache Axis** 1.4
 * **Apache Commons BeanUtils** 1.9.4
 * **Apache Commons Compress** 1.20
 * **Apache Commons HttpClient** 3.1
@@ -12,31 +13,47 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Apache HttpComponents Client** 4.5.2
 * **Apache Santuario XML Security For Java** 2.0.10, 2.3.1
 * **Apache Thrift** 0.9.1, 0.9.3
+* **Apache XMLBeans** 2.6.0
+* **Bouncy Castle** 1.76
 * **DNSJava** 2.1.7
 * **Dom4j** 1.6.1
+* **Eclipse JGit** 5.7.0, 5.13.3
+* **Eclipse Parsson** 1.0.0
+* **EdDSA** 0.3.0
 * **el-spec** 3.0.0
 * **Google Gson** 2.8.5, 2.9.1
 * **Google Guava** 20.0, 25.1-android, 25.1-jre, 30.1-jre, 31.1-jre
 * **Google Guice** 4.2.1
+* **Google OAuth Client** 1.25.0
 * **H2 Database** 1.4.200
+* **Hazelcast** 4.2.8
 * **HtmlUnit** 2.70.0
+* **iText** 2.1.7
+* **JBoss XNIO** 3.8.0
+* **JDOM** 1.0, 1.1.3
 * **JSON** 20090211, 20140107
 * **JSON Assert** 1.2.3
 * **JSON Smart v2** 2.4.8
 * **Logback** 1.1.7, 1.2.13, 1.4.14
+* **LZ4** 1.8.1
+* **Mozilla Rhino** 1.7.10, 1.7.15
+* **NekoHTML** 1.9.22
 * **Netty** 4.1.115.Final, 4.1.63.Final
 * **Nimbus JOSE + JWT** 9.22, 9.24.4
+* **OkHttp3** 3.14.9
 * **Okio** 2.8.0, 2.10.0
 * **Plexus Utils** 1.4.5, 1.5.8
 * **Querydsl** 5.1.0
 * **Reactor BOM** 2020.0.23, 2020.0.38, 2022.0.15
 * **Reactor Netty** 1.0.23, 1.0.32, 1.0.39, 1.1.15
-* **Reload4j** 1.2.17
+* **RSocket** 1.1.3
 * **SnakeYAML** 1.23, 1.26, 1.29, 1.30, 1.33
 * **Snappy Java** 1.1.8.4
+* **Sonatype Aether** 1.13.1
 * **Thymeleaf** 3.0.15.RELEASE
 * **Undertow** 2.2.33.Final, 2.3.10.Final
 * **Woodstox** 5.0.3
+* **Xerces** 2.11.0
 * **XMLUnit** 2.9.1, 2.9.0
 
 Other libraries upon request.

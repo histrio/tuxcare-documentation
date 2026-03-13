@@ -8,21 +8,19 @@ alt-php is a component provided by TuxCare designed for managing PHP versions on
 
 Here are the key features and characteristics of alt-php:
 
-1. **Multiple PHP Versions** - alt-php allows the installation and usage of various PHP versions on a single web server. This enables users to select the PHP version that best suits their web applications.
+* **Multiple PHP Versions** - alt-php allows the installation and usage of various PHP versions on a single web server. This enables users to select the PHP version that best suits their web applications.
 
-2. **User Segmentation** - alt-php allows hosting providers and web server administrators to provide different PHP versions for different users. Each user can choose the PHP version that suits their website.
+* **User Segmentation** - alt-php allows hosting providers and web server administrators to provide different PHP versions for different users. Each user can choose the PHP version that suits their website.
 
-3. **Enhanced Compatibility** - alt-php is designed to ensure maximum compatibility with various web applications and frameworks. This includes optimizations and changes to make it compatible with a wide range of PHP applications.
+* **Enhanced Compatibility** - alt-php is designed to ensure maximum compatibility with various web applications and frameworks. This includes optimizations and changes to make it compatible with a wide range of PHP applications.
 
-4. **Updates and Support** - CloudLinux provides regular updates for alt-php, including bug fixes, performance improvements, and updates for new PHP versions. This helps ensure the security and currency of PHP usage.
+* **Updates and Support** - CloudLinux provides regular updates for alt-php, including bug fixes, performance improvements, and updates for new PHP versions. This helps ensure the security and currency of PHP usage.
 
-5. **Management Tools** - alt-php usually comes with a set of management tools, such as PHP Selector, allowing users to manage PHP versions and enable/disable various PHP extensions.
+* **Management Tools** - alt-php usually comes with a set of management tools, such as PHP Selector, allowing users to manage PHP versions and enable/disable various PHP extensions.
 
 alt-php provides a more flexible and convenient environment for working with different PHP versions on a single server, which is particularly useful in a web hosting environment where multiple users have varying requirements for PHP versions for their web applications.
 
 ## Supported OS and PHP versions
-
-**Supported architecture:** 64-bit.
 
 <TableTabs>
 
@@ -40,21 +38,19 @@ alt-php provides a more flexible and convenient environment for working with dif
 
 **For supported PHP versions, see [cve.tuxcare.com](https://cve.tuxcare.com/els-alt-php/projects).**
 
-Other distros and architectures upon request.
+**Supported architecture:** x86_64 (64-bit) on Linux
+
+<ContactSales text="Other versions and architectures available upon request. Contact sales@tuxcare.com for more information." />
 
   </template>
 
   <template #End_Of_Life>
 
-CloudLinux provides additional security support time of 
-php, python, ruby and nodejs after the end of support from the vendor.
-Below are tables with information about the time of security support from the vendor and from CloudLinux.
+TuxCare provides additional security support for PHP versions after the end of support from the vendor.
 
-*EOL - end of life
+*EOL — end of life, SST — security support time*
 
-*SST - security support time
-
-| Version |  Released  | EOL by vendor | SST by vendor (years) |    EOL by CloudLinux    | SST by Cloudlinux after vendor's EOL (years) |
+| Version |  Released  | EOL by vendor | SST by vendor (years) |    EOL by CloudLinux    | SST by CloudLinux after vendor's EOL (years) |
 |:-------:|:----------:|:-------------:|:---------------------:|:-----------------------:|:--------------------------------------------:|
 |   4.4   | 07.11.2005 |  08.07.2008   |          2.7          | [01.07.2023](https://blog.cloudlinux.com/php-4.4-end-of-life-0) | 14.9 |
 |   5.1   | 23.11.2005 |  24.08.2006   |          0.8          | [01.04.2024](https://blog.cloudlinux.com/php-5.1-end-of-life)   | 17.6 |
@@ -76,174 +72,68 @@ Below are tables with information about the time of security support from the ve
 
 </TableTabs>
 
-## Installation Instructions for Linux
+## Installation on Linux
 
-### Get user credentials
+<ELSPrerequisites>
 
-1. Obtain the required license to get access to the service.
-2. Contact [sales@tuxcare.com](mailto:sales@tuxcare.com) to receive instructions for generating your unique access link (tokenized URL). Anonymous access is restricted.
-
-### Install ALT-PHP
-
-The following steps are provided for both **RPM-based** (CentOS, CentOS Stream, CloudLinux, Oracle Linux, AlmaLinux, Amazon Linux 2, etc) and **DEB-based** (Debian, Ubuntu) systems. Please select the appropriate tab for your distribution.
-
-:::tip
-**Amazon Linux 2-specific prerequisites**. Before installing `alt-php`, make sure `libvpx` is installed. Amazon Linux 2 provides two versions of libvpx: 1.9 (the default) and 1.3. `alt-php` requires 1.3 for compatibility with EL 7 systems like CentOS 7:
+* A valid TuxCare ELS license key — contact [sales@tuxcare.com](mailto:sales@tuxcare.com) to obtain one
+* Root or `sudo` access to the server
+* **Amazon Linux 2-specific.** Before installing `alt-php`, make sure `libvpx` is installed. Amazon Linux 2 provides two versions of libvpx: 1.9 (the default) and 1.3. `alt-php` requires 1.3 for compatibility with EL 7 systems like CentOS 7:
 
 ```
 sudo yum install libvpx-1.3.0
 ```
 
-:::
+</ELSPrerequisites>
 
-1. Download the installer script:
+<ELSSteps>
 
-    <CodeTabs :tabs="[
-      { title: 'RPM', content: `wget https://repo.alt.tuxcare.com/alt-php-els/install-els-alt-php-rpm-repo.sh` },
-      { title: 'DEB', content: `wget https://repo.alt.tuxcare.com/alt-php-els/install-els-alt-php-deb-repo.sh` }
-    ]" />
+1. Download the installer script
 
-2. Run the installer script with keys. The installation script registers the server in the CLN with the key, adds the yum repository, and adds a PGP key to the server.
+   <CodeTabs :tabs="[
+     { title: 'RPM', content: `wget https://repo.alt.tuxcare.com/alt-php-els/install-els-alt-php-rpm-repo.sh` },
+     { title: 'DEB', content: `wget https://repo.alt.tuxcare.com/alt-php-els/install-els-alt-php-deb-repo.sh` }
+   ]" />
 
-    <CodeTabs :tabs="[
-      { title: 'RPM', content: `sh install-els-alt-php-rpm-repo.sh --license-key XXX-XXXXXXXXXXXX` },
-      { title: 'DEB', content: `bash install-els-alt-php-deb-repo.sh --license-key XXX-XXXXXXXXXXXX` }
-    ]" />
+2. Run the installer script with your license key
 
-3. Verify that the installation was successful.
+   The script registers the server with CLN, adds the PGP key and repository.
 
-    To ensure the installation has been completed successfully, run the following command. It should return info about a package. If information about the package is available it means that installation was successful. After which, updates will be available for installation from the repository using the usual command:
+   <CodeTabs :tabs="[
+     { title: 'RPM', content: `sh install-els-alt-php-rpm-repo.sh --license-key XXX-XXXXXXXXXXXX` },
+     { title: 'DEB', content: `bash install-els-alt-php-deb-repo.sh --license-key XXX-XXXXXXXXXXXX` }
+   ]" />
 
-    <CodeTabs :tabs="[
-      { title: 'RPM', content: `yum upgrade` },
-      { title: 'DEB', content: `apt upgrade` }
-    ]" />
+3. Install a PHP version
 
-4. Install PHP package. Each version of PHP can be installed individually or all versions at once.
+   Each version can be installed individually or all versions at once.
 
-   * Standard commands to install each version separately, for example, installing alt-php73:
+   <CodeTabs :tabs="[
+     { title: 'RPM', content: `yum groupinstall alt-php73` },
+     { title: 'DEB', content: `apt-get install alt-php73-meta` }
+   ]" />
 
-     <CodeTabs :tabs="[
-       { title: 'RPM', content: `yum groupinstall alt-php73` },
-       { title: 'DEB', content: `apt-get install alt-php73-meta` }
-     ]" />
+   To install all versions at the same time:
 
-   * To install all versions at the same time:
+   <CodeTabs :tabs="[
+     { title: 'RPM', content: `yum groupinstall alt-php` },
+     { title: 'DEB', content: `apt-get install alt-php` }
+   ]" />
 
-     <CodeTabs :tabs="[
-       { title: 'RPM', content: `yum groupinstall alt-php` },
-       { title: 'DEB', content: `apt-get install alt-php` }
-     ]" />
+4. Verify the installation
 
-   * To find out which groups/meta-package are available for installation, use the following command:
+   Check that the desired PHP version is installed:
 
-     <CodeTabs :tabs="[
-       { title: 'RPM', content: `sudo yum group list` },
-       { title: 'DEB', content: `apt list -a | grep alt-php` }
-     ]" />
+   <CodeTabs :tabs="[
+     { title: 'RPM', content: `rpm -qa | grep alt-php` },
+     { title: 'DEB', content: `dpkg -l | grep alt-php` }
+   ]" />
 
-     For example:
+</ELSSteps>
 
-     <CodeTabs :tabs="[
-     { title: 'RPM', content:
-     `sudo yum group list 
-     ............\n
-     Available Environment Groups:
-       Server with GUI
-       Server
-       Minimal Install
-       CloudLinux OS Admin (minimal)
-       CloudLinux OS Solo (minimal)
-       Workstation
-       Custom Operating System
-       Virtualization Host
-     Available Groups:
-       alt-nodejs
-       alt-nodejs10
-       alt-nodejs11
-       alt-nodejs12
-       alt-nodejs14
-       alt-nodejs6
-       alt-nodejs8
-       alt-nodejs9
-       alt-php
-       alt-php44
-       alt-php51
-       alt-php52
-     ..................
-       alt-ruby30
-       alt-ruby31
-       alt-ruby32` },
-     { title: 'DEB', content:
-     `apt list -a | grep alt-php 
-     ............
-     alt-php-config/unknown 1-51.1 amd64
-     alt-php-internal-bcmath/unknown 7.4.33-13.1 amd64
-     alt-php-internal-bcmath/unknown 7.4.13-3 amd64
-     alt-php-internal-cli/unknown,now 7.4.33-13.1 amd64 [installed,automatic]
-     alt-php-internal-cli/unknown 7.4.13-3 amd64
-     alt-php-internal-common/unknown,now 7.4.33-13.1 amd64 [installed,automatic]
-     alt-php-internal-common/unknown 7.4.13-3 amd64
-     .........
-     alt-php83-soap/unknown 8.3.0rc3-1 amd64
-     alt-php83-sodium/unknown 8.3.0rc3-1 amd64
-     alt-php83-tidy/unknown 8.3.0rc3-1 amd64
-     alt-php83-xml/unknown 8.3.0rc3-1 amd64
-     alt-php83/unknown 8.3.0rc3-1 amd64
-     alt-php/unknown 1-5 all` }
-     ]" />
+### Useful Commands and Usage
 
-   * To get a list of packages of a specific group or meta package, use the following command:
-
-     <CodeTabs :tabs="[
-       { title: 'RPM', content: `sudo yum groupinfo alt-phpXY` },
-       { title: 'DEB', content: `apt-cache showpkg alt-phpXY` }
-     ]" />
-
-     Replace `XY` with a version of alt-php. For example:
-
-     <CodeTabs :tabs="[
-     { title: 'RPM', content:
-     `sudo yum groupinfo alt-php72 
-     ............\n
-     Group: alt-php72
-     Description: PHP 7.2.x packages for CloudLinux OS PHP Selector
-     Default Packages:
-       alt-php72
-       alt-php72-bcmath
-       alt-php72-brotli
-       alt-php72-cli
-       alt-php72-common
-       alt-php72-dba
-       alt-php72-devel
-       ................
-       alt-php72-xml
-       alt-php72-xmlrpc` },
-     { title: 'DEB', content:
-     `apt-cache showpkg alt-php72
-     ............
-     Dependencies:
-     7.2.34-34 - alt-php72-cli (5 7.2.34-34) alt-php72-common (5 7.2.34-34) libcurl4-openssl-dev (0 (null)) libreadline-dev (0 (null)) libwebp-dev (0 (null))
-     7.2.34-33 - alt-php72-cli (5 7.2.34-33) alt-php72-common (5 7.2.34-33) libcurl4-openssl-dev (0 (null)) libreadline-dev (0 (null)) libwebp-dev (0 (null))
-     7.2.34-19.2 - alt-pcre (0 (null)) alt-php72-cli (5 7.2.34-19.2) alt-php72-common (5 7.2.34-19.2) alt-php-config (2 1-45) alt-sqlite (0 (null)) libcurl4-openssl-dev (0 (null)) libreadline-dev (0 (null)) libwebp-dev (0 (null)) libxml2 (0 (null))` }
-     ]" />
-
-   ::: tip Important!
-   When executing the `apt` command, a warning may appear:
-
-   ```
-   WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
-   ```
-
-   The `apt` command line is designed as an end-user tool and it may change behavior between versions. 
-   While it tries not to break backward compatibility this is not guaranteed either if a change seems beneficial for interactive use.
-   All features of `apt` are available in dedicated APT tools like `apt-get` and `apt-cache` as well. 
-   `apt` just changes the default value of some options. Therefore, we recommend using these commands (potentially with some additional options enabled) as they keep backward compatibility as much as possible.
-   :::
-
-### Useful Commands and Usage of PHP ELS
-
-When you deploy an updated version of PHP through PHP ELS, using your system's regular update tool (yum, dnf, apt) the new version will be installed under `/opt/alt/php[version]/`. This means that all modules, configurations and additional files pertaining to this version will be contained inside that path. Different versions of PHP will each have their own path and can coexist without issues on the same system. Below you will find the location of all the relevant files, should you want to make any changes.
+When you deploy an updated version of PHP through PHP ELS, using your system's regular update tool (yum, dnf, apt), the new version will be installed under `/opt/alt/php[version]/`. This means that all modules, configurations and additional files pertaining to this version will be contained inside that path. Different versions of PHP will each have their own path and can coexist without issues on the same system. Below you will find the location of all the relevant files, should you want to make any changes.
 
 <TableTabs>
 
@@ -256,149 +146,31 @@ To check whether the package is installed and see its current version, use the f
     { title: 'DEB', content: `dpkg -l | grep php` }
   ]" />
 
-  For example, alt-php73:
-
-  <CodeTabs :tabs="[
-  { title: 'RPM', content:
-  `sudo yum list installed | grep php 
-  ............
-  alt-php-config.noarch                       1-54.el8                                               @cloudlinux-updates-testing
-  alt-php-internal.x86_64                     7.4.33-6.el8                                           @cloudlinux-updates-testing
-  alt-php-internal-cli.x86_64                 7.4.33-6.el8                                           @cloudlinux-updates-testing
-  alt-php-internal-common.x86_64              7.4.33-6.el8                                           @cloudlinux-updates-testing
-  alt-php-internal-intl.x86_64                7.4.33-6.el8                                           @cloudlinux-updates-testing
-  alt-php-internal-mbstring.x86_64            7.4.33-6.el8                                           @cloudlinux-updates-testing
-  alt-php-libc-client11.x86_64                2007f-3.el8                                            @cloudlinux-updates-testing
-  alt-php-ssa.x86_64                          0.4-3.el8                                              @AppStream\n
-  alt-php73.x86_64                            1:7.3.33-18.el8                                        @cloudlinux-updates-testing
-  alt-php73-apm-agent.x86_64                  1.9.0-1.el8                                            @cloudlinux-updates-testing
-  alt-php73-bcmath.x86_64                     1:7.3.33-18.el8                                        @cloudlinux-updates-testing
-  alt-php73-bcmath-debuginfo.x86_64           1:7.3.31-2.el8                                         @cloudlinux-updates-testing
-  alt-php73-brotli.x86_64                     0.5.0-2.el8                                            @cloudlinux-x86_64-server-8
-  .....................
-  alt-php73-xmlrpc-debuginfo.x86_64           1:7.3.31-2.el8                                         @cloudlinux-updates-testing` },
-  { title: 'DEB', content:
-  `dpkg -l | grep php  
-  ............
-  ii  alt-php-internal-cli                  7.4.33-13.1                       amd64        command-line interpreter for the PHP scripting language
-  ii  alt-php-internal-common               7.4.33-13.1                       amd64        documentation, examples and common module for PHP
-  ii  alt-php-internal-intl                 7.4.33-13.1                       amd64        Internationalisation module for PHP
-  ii  alt-php-internal-mbstring             7.4.33-13.1                       amd64        MBSTRING module for PHP
-  ii  alt-php-libc-client                   2007f-1                           amd64        Provides a common API for accessing mailboxes.
-  ii  alt-php73                             7.3.33-19                         amd64        server-side, HTML-embedded scripting language (metapackage)
-  ii  alt-php73-bcmath                      7.3.33-19                         amd64        Bcmath module for PHP
-  ii  alt-php73-cli                         7.3.33-19                         amd64        command-line interpreter for the PHP scripting language
-  ii  alt-php73-common                      7.3.33-19                         amd64        documentation, examples and common module for PHP
-  ii  alt-php73-dba                         7.3.33-19                         amd64        DBA module for PHP
-  ii  alt-php73-dev                         7.3.33-19                         amd64        Files for PHP7.0 module development
-  ii  alt-php73-enchant                     7.3.33-19                         amd64        Enchant module for PHP
-  ii  alt-php73-firebird                    7.3.33-19                         amd64        firebird module for PHP
-  ......................
-  ii  alt-php73-xmlrpc                      7.3.33-19                         amd64        XMLRPC-EPI module for PHP` }
-  ]" />
-
   </template>
 
-  <template #Display_information_about_the_installed_alt-php_package>
+  <template #List_available_groups>
 
-To display detailed information about the installed package, run the following command: 
-
-  <CodeTabs :tabs="[
-    { title: 'RPM', content: `yum info alt-php73` },
-    { title: 'DEB', content: `alt-php73-cli` }
-  ]" />
-
-  An example output:
+To find out which groups/meta-packages are available for installation:
 
   <CodeTabs :tabs="[
-  { title: 'RPM', content: 
-  `Available Packages
-  Name        : alt-php73
-  Arch        : x86_64
-  Epoch       : 1
-  Version     : 7.3.33
-  Release     : 5.2.el7
-  Size        : 22 k
-  Repo        : alt-php-els/7
-  Summary     : PHP scripting language for creating dynamic web sites
-  URL         : http://www.php.net/
-  License     : PHP and LGPLv2 and LGPLv2+
-  Description : PHP is an HTML-embedded scripting language.` },
-  { title: 'DEB', content: 
-  `Package: alt-php73-cli
-  Source: php
-  Version: 7.3.18-1
-  Architecture: amd64
-  Maintainer: Sergey Fokin <sfokin@cloudlinux.com>
-  Installed-Size: 51694
-  Depends: libbz2-1.0, libc6 (>= 2.14), libcurl3 (>= 7.44.0), libgmp10, libreadline6 (>= 6.0), libssl1.0.0 (>= 1.0.2~beta3), libsystemd0, libxml2 (>= 2.9.0), zlib1g (>= 1:1.1.4), alt-php73-common (= 7.3.18-1), libcurl4-openssl-dev, libnghttp2-14
-  Homepage: http://www.php.net/
-  Priority: optional
-  Section: libs
-  Filename: pool/main/p/php/alt-php73-cli_7.3.18-1_amd64.deb
-  Size: 10247916
-  SHA256: 6f107e60684695b6261871a5540c4742eb6e86befe767ab313d1eacda023e5bb
-  SHA1: e8e7d6ab06470cbda5f5ef65a48c7c527ff52e9b
-  MD5sum: d6c664d4f4b229c1e6727804888f6079
-  Description: command-line interpreter for the PHP scripting language.
-  Description-md5: 0d83f7bf7177d3376a59b73890c8494d` }
+    { title: 'RPM', content: `sudo yum group list` },
+    { title: 'DEB', content: `apt list -a | grep alt-php` }
   ]" />
 
-  </template>
-
-  <template #Find_out_what_dependencies_alt-php_packages_have>
-
-Dependencies for a successful installation of alt packages may vary depending on the specific packages and their versions. However, typically, the system automatically manages dependencies and provides the necessary packages when installing selected components:
+To get a list of packages of a specific group or meta package:
 
   <CodeTabs :tabs="[
-    { title: 'RPM', content: `sudo yum deplist alt-php73 ` },
-    { title: 'DEB', content: `sudo apt-cache depends alt-php74` }
+    { title: 'RPM', content: `sudo yum groupinfo alt-phpXY` },
+    { title: 'DEB', content: `apt-cache showpkg alt-phpXY` }
   ]" />
 
-  For example:
-
-  <CodeTabs :tabs="[
-  { title: 'RPM', content:
-  `sudo yum deplist alt-php73  
-  ............
-  package: alt-php73-1:7.3.15-1.2.el8.x86_64
-    dependency: /bin/sh
-    provider: bash-4.4.20-4.el8_6.x86_64
-    dependency: alt-libcurl
-    provider: alt-libcurl-7.64.0-2.el8.x86_64
-    dependency: alt-libxml2
-    provider: alt-libxml2-2.10.2-3.el8.x86_64
-  ..................
-  package: alt-php73-1:7.3.15-2.2.el8.x86_64
-    dependency: /bin/sh
-    provider: bash-4.4.20-4.el8_6.x86_64
-    dependency: alt-libcurl
-    provider: alt-libcurl-7.64.0-2.el8.x86_64
-  ..................` },
-  { title: 'DEB', content:
-  `sudo apt-cache depends alt-php74  
-  ............
-  alt-php74
-    Depends: alt-php74-cli
-    Depends: alt-php74-common
-    Depends: libreadline-dev
-    Depends: libwebp-dev` }
-  ]" />
-
-  During the installation process, the package manager, such as YUM or APT, 
-automatically handles dependencies, and you will usually see a list of packages that will be installed, 
-modified, or removed to satisfy dependency requirements.
-
-  If there are issues with dependencies, it can often be resolved by manually installing the missing packages. 
-It's important to pay attention to any error messages provided by the system and follow the suggested instructions.
+Replace `XY` with a version of alt-php.
 
   </template>
 
   <template #Update_alt-php>
 
-To update alt-php, you typically follow a process that involves using the package management tools provided by CloudLinux.
-
-1. Check for Updates:
+1. Check for updates:
 
     <CodeTabs :tabs="[
       { title: 'RPM', content: `sudo yum check-update` },
@@ -406,56 +178,6 @@ To update alt-php, you typically follow a process that involves using the packag
       `sudo apt-get update
       apt list --upgradable` }
     ]" />
-
-   Example:
-
-   <CodeTabs :tabs="[
-   { title: 'RPM', content:
-   `sudo yum check-update  
-   ............ \n
-   kernel.x86_64                                    1:4.18.0-513.9.1.lve.el8                    cloudlinux-x86_64-server-8
-   kernel-core.x86_64                               1:4.18.0-513.9.1.lve.el8                    cloudlinux-x86_64-server-8
-   kernel-modules.x86_64                            1:4.18.0-513.9.1.lve.el8                    cloudlinux-x86_64-server-8
-   kernel-tools.x86_64                              1:4.18.0-513.9.1.lve.el8                    cloudlinux-x86_64-server-8
-   kernel-tools-libs.x86_64                         1:4.18.0-513.9.1.lve.el8                    cloudlinux-x86_64-server-8
-   python3-perf.x86_64                              1:4.18.0-513.9.1.lve.el8                    cloudlinux-x86_64-server-8
-   Obsoleting Packages
-   alt-python-cllib.x86_64                          2.0.8-3.el8.cloudlinux                      cloudlinux-updates-testing
-       alt-python27-cllib.x86_64                    3.3.9-1.el8.cloudlinux                      @cloudlinux-updates-testing` },
-   { title: 'DEB', content:
-   `sudo apt-get update  
-   ............\n
-   Get:1 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
-   Hit:2 http://us.archive.ubuntu.com/ubuntu focal InRelease
-   Get:3 http://us.archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
-   Hit:4 https://repo.cloudlinux.com/cloudlinux-ubuntu/cloudlinux/stable/20.04 focal InRelease
-   Hit:5 http://us.archive.ubuntu.com/ubuntu focal-backports InRelease
-   Get:6 https://repo.cloudlinux.com/cloudlinux-ubuntu/cloudlinux/testing/20.04 focal InRelease [1,168 B]
-   Hit:7 https://repo.cloudlinux.com/cloudlinux-ubuntu/cloudlinux-ea4/stable/20.04 focal InRelease
-   Get:8 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [2,604 kB]
-   Hit:9 https://repo.cloudlinux.com/cloudlinux-ubuntu/cloudlinux-ea4/testing/20.04 focal InRelease
-   Get:10 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [2,994 kB]
-   Get:11 http://security.ubuntu.com/ubuntu focal-security/main i386 Packages [680 kB]
-   Get:12 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [914 kB]
-   Get:13 http://us.archive.ubuntu.com/ubuntu focal-updates/main i386 Packages [913 kB]
-   Get:14 http://security.ubuntu.com/ubuntu focal-security/universe i386 Packages [633 kB]
-   Get:15 http://us.archive.ubuntu.com/ubuntu focal-updates/universe i386 Packages [761 kB]
-   Get:16 http://us.archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [1,139 kB]
-   Get:17 https://repo.cloudlinux.com/cloudlinux-ubuntu/cloudlinux/testing/20.04 focal/main amd64 Packages [84.8 kB]
-   Fetched 11.0 MB in 5s (2,182 kB/s)
-   Reading package lists... Done\n
-   apt list --upgradable\n 
-   ............
-   Listing... Done
-   alt-python27-cllib/unknown 3.3.9-1 amd64 [upgradable from: 3.3.8-1]
-   curl/focal-updates,focal-security 7.68.0-1ubuntu2.21 amd64 [upgradable from: 7.68.0-1ubuntu2.20]
-   libcurl3-gnutls/focal-updates,focal-security 7.68.0-1ubuntu2.21 amd64 [upgradable from: 7.68.0-1ubuntu2.20]
-   libcurl4-openssl-dev/focal-updates,focal-security 7.68.0-1ubuntu2.21 amd64 [upgradable from: 7.68.0-1ubuntu2.20]
-   libcurl4/focal-updates,focal-security 7.68.0-1ubuntu2.21 amd64 [upgradable from: 7.68.0-1ubuntu2.20]
-   librados2/focal-updates 15.2.17-0ubuntu0.20.04.5 amd64 [upgradable from: 15.2.17-0ubuntu0.20.04.4]
-   librbd1/focal-updates 15.2.17-0ubuntu0.20.04.5 amd64 [upgradable from: 15.2.17-0ubuntu0.20.04.4]
-   mod-hostinglimits/unknown 1.0-41 amd64 [upgradable from: 1.0-40]` }
-   ]" />
 
 2. Update packages:
 
@@ -466,360 +188,73 @@ To update alt-php, you typically follow a process that involves using the packag
          { title: 'DEB', content: `sudo apt-get upgrade alt-php*` }
        ]" />
 
-   * Update a group/meta-package named "alt-php":
-
-       <CodeTabs :tabs="[
-         { title: 'RPM', content: `sudo yum groupupdate alt-php` },
-         { title: 'DEB', content: `sudo apt-get upgrade alt-php` }
-       ]" />
-
-   * You can specify a group/meta-package with a specific version of alt-php:
+   * Update a specific version:
 
        <CodeTabs :tabs="[
          { title: 'RPM', content: `sudo yum groupupdate alt-phpXY` },
          { title: 'DEB', content: `sudo apt-get upgrade alt-phpXY` }
        ]" />
 
-     Replace `XY` with a version of alt-php. For example:
-
-     <CodeTabs :tabs="[
-     { title: 'RPM', content:
-     `sudo yum groupupdate alt-php74  
-     ............ \n
-     Dependencies resolved.
-     ========================================================================================================================
-     Package                           Architecture    Version                    Repository                           Size
-     ========================================================================================================================
-     Installing group/module packages:
-     alt-php74                         x86_64          7.4.33-13.el8              cloudlinux-updates-testing           24 k
-     alt-php74-bcmath                  x86_64          7.4.33-13.el8              cloudlinux-updates-testing           34 k
-     alt-php74-brotli                  x86_64          0.5.0-2.el8                cloudlinux-x86_64-server-8          293 k
-     alt-php74-cli                     x86_64          7.4.33-13.el8              cloudlinux-updates-testing          9.3 M
-     alt-php74-common                  x86_64          7.4.33-13.el8              cloudlinux-updates-testing          480 k
-     .....................
-       libdav1d                          x86_64          0.5.2-1.el8                cloudlinux-updates-testing          346 k
-     svt-av1-libs                      x86_64          0.8.7-1.el8                cloudlinux-updates-testing          4.7 M
-     Installing Groups:
-     alt-php74\n
-     Transaction Summary
-     ========================================================================================================================
-     Install  53 Packages\n
-     Total download size: 38 M
-     Installed size: 139 M
-     Is this ok [y/N]:` },
-     { title: 'DEB', content:
-     `sudo apt-get upgrade alt-php83  
-     ............
-     Reading package lists... Done
-     Building dependency tree
-     Reading state information... Done
-     Calculating upgrade... Done
-     The following NEW packages will be installed:
-       alt-php83 alt-php83-cli alt-php83-common
-     The following packages will be upgraded:
-       alt-python27-cllib curl libcurl3-gnutls libcurl4 libcurl4-openssl-dev libpq5 librados2 librbd1 mod-hostinglimits
-     9 upgraded, 3 newly installed, 0 to remove and 0 not upgraded.
-     Need to get 12.3 MB of archives.
-     After this operation, 44.7 MB of additional disk space will be used.
-     Do you want to continue? [Y/n]` }
-     ]" />
+     Replace `XY` with a version of alt-php.
 
   </template>
 
-  <template #Search_for_packages_in_repositories>
+  <template #Search_for_packages>
 
-To search for alt-php packages in repositories:
+  <CodeTabs :tabs="[
+    { title: 'RPM', content: `sudo yum search alt-package-name` },
+    { title: 'DEB', content: `sudo apt search alt-package-name` }
+  ]" />
 
-<CodeTabs :tabs="[
-  { title: 'RPM', content: `sudo yum search alt-package-name` },
-  { title: 'DEB', content: `sudo apt search alt-package-name` }
-]" />
-
-For example:
-
-<CodeTabs :tabs="[
-{ title: 'RPM', content:
-`sudo yum search alt-php73-firebird  
-............\n
-========================================================= Name Exactly Matched: alt-php73-firebird =========================================================
-alt-php73-firebird.x86_64 : Firebird and Interbase extensions
-======================================================== Name & Summary Matched: alt-php73-firebird ========================================================
-alt-php73-firebird-debuginfo.x86_64 : Debug information for package alt-php73-firebird` },
-{ title: 'DEB', content:
-`sudo apt search alt-php73-firebird  
-............ \n
-Sorting... Done
-Full Text Search... Done
-alt-php73-firebird/unknown,now 7.3.33-19 amd64 [installed]
-  firebird module for PHP` }
-]" />
-
-When using these commands, replace `alt-package-name` with the specific name of the package you are looking for or want to install.
+Replace `alt-package-name` with the specific name of the package you are looking for.
 
   </template>
 
-  <template #The_bin_files>
+  <template #File_locations>
 
-```text
-ls -l /opt/alt/phpXY/usr/bin/
-```
+**Bin files:** `ls -l /opt/alt/phpXY/usr/bin/`
 
-**An example output:**
+**Modules:** `ls /opt/alt/phpXY/usr/lib64/php/modules/`
 
-```text
-bytekit          hphpa            pear             pecl             phar.phar        phpcb            php-config       phpcpd           phploc           phpunit-skelgen
-dbunit           lsphp            peardev          phar             php              php-cgi          phpcov           phpize           phpunit          ppw
-```
+**Config files:** `/opt/alt/phpXY/etc/php.d.all/`
 
-  </template>
+**default.ini:** `/opt/alt/phpXY/etc/php.d/default.ini`
 
-  <template #Modules_and_pecl_extensions>
+**Run PHP CLI:** `/opt/alt/phpXY/usr/bin/php helloworld.php`
 
-```text
-ls /opt/alt/phpXY/usr/lib64/php/modules/
-```
-
-**An example output:**
-
-```text
-ZendGuardLoader.so  imagick.so         oci8.so          stem.so
-amqp.so             imap.so            odbc.so          stomp.so
-apc.so              inclued.so         opcache.so       suhosin.so
-apcu.so             inotify.so         pdf.so           sybase_ct.so
-apm.so              interbase.so       pdo.so           sysvmsg.so
-ares.so             intl.so            pdo_dblib.so     sysvsem.so
-bcmath.so           ioncube_loader.so  pdo_firebird.so  sysvshm.so
-big_int.so          ixed.5.4.lin       pdo_mysql.so     tideways.so
-bitset.so           jsmin.so           pdo_oci.so       tidy.so
-brotli.so           json.so            pdo_odbc.so      timezonedb.so
-bz2_filter.so       ldap.so            pdo_pgsql.so     trader.so
-dba.so              libevent.so        pdo_sqlite.so    translit.so
-dbase.so            libsodium.so       pgsql.so         uploadprogress.so
-dbx.so              luasandbox.so      phalcon.so       uri_template.so
-dom.so              lzf.so             phar.so          uuid.so
-doublemetaphone.so  mailparse.so       posix.so         wddx.so
-eaccelerator.so     mbstring.so        propro.so        weakref.so
-eio.so              mcrypt.so          pspell.so        xcache.so
-enchant.so          memcache.so        quickhash.so     xcache_3.so
-fileinfo.so         memcached.so       radius.so        xdebug.so
-functional.so       mongo.so           raphf.so         xhprof.so
-gd.so               mongodb.so         rar.so           xmlreader.so
-gender.so           msgpack.so         recode.so        xmlrpc.so
-geoip.so            mssql.so           redis.so         xmlwriter.so
-geos.so             mysql.so           rsync.so         xrange.so
-gmagick.so          mysqli.so          snmp.so          xsl.so
-gnupg.so            mysqlnd.so         soap.so          yaf.so
-haru.so             ncurses.so         sockets.so       yaml.so
-hidef.so            nd_mysql.so        solr.so          yaz.so
-htscanner.so        nd_mysqli.so       spl_types.so     zip.so
-http.so             nd_pdo_mysql.so    ssh2.so          zmq.so
-igbinary.so         oauth.so           stats.so
-```
-
-  </template>
-
-  <template #Running_code_on_a_specific_version_through_the_CLI>
-
-```text
-/opt/alt/phpXY/usr/bin/php helloworld.php
-```
-
-**An example output:**
-
-```text
-Hello, World!
-```
-
-  </template>
-
-  <template #Location_of_ini_config_files>
-
-```text
-/opt/alt/phpXY/etc/php.d.all/
-```
-
-**An example output:**
-
-```text
-40-leveldb.ini        mailparse.ini     redis.ini
-40-snuffleupagus.ini  mbstring.ini      rrd.ini
-40-vld.ini            mcrypt.ini        snmp.ini
-amqp.ini              memcache.ini      snuffleupagus-default.rules
-apcu.ini              memcached.ini     soap.ini
-bcmath.ini            mongodb.ini       sockets.ini
-dba.ini               mysqli.ini        sodium.ini
-dbase.ini             mysqlnd.ini       solr.ini
-dom.ini               nd_mysqli.ini     sourceguardian.ini
-eio.ini               nd_pdo_mysql.ini  sqlsrv.ini
-enchant.ini           newrelic.ini      ssh2.ini
-ffmpeg.ini            oauth.ini         stats.ini
-fileinfo.ini          oci8.ini          swoole.ini
-gd.ini                odbc.ini          sysvmsg.ini
-gearman.ini           opcache.ini       sysvsem.ini
-gender.ini            pdf.ini           sysvshm.ini
-geoip.ini             pdo.ini           tideways_xhprof.ini
-geos.ini              pdo_dblib.ini     tidy.ini
-gmagick.ini           pdo_firebird.ini  timezonedb.ini
-gnupg.ini             pdo_mysql.ini     trader.ini
-grpc.ini              pdo_oci.ini       uploadprogress.ini
-http.ini              pdo_odbc.ini      uuid.ini
-igbinary.ini          pdo_pgsql.ini     vips.ini
-imagick.ini           pdo_sqlite.ini    xdebug.ini
-imap.ini              pdo_sqlsrv.ini    xmlreader.ini
-inotify.ini           pgsql.ini         xmlrpc.ini
-intl.ini              phalcon4.ini      xmlwriter.ini
-ioncube_loader.ini    phar.ini          xsl.ini
-jsmin.ini             posix.ini         yaml.ini
-json.ini              propro.ini        yaz.ini
-ldap.ini              pspell.ini        zip.ini
-luasandbox.ini        psr.ini           zmq.ini
-lzf.ini               raphf.ini
-```
-
-  </template>
-
-  <template #Location_of_default.ini>
-
-```text
-ls /opt/alt/phpXY/etc/php.d/default.ini
-```
-
-  </template>
-
-  <template #Listing_enabled_modules_on_a_specific_version>
-
-```text
-/opt/alt/php73/usr/bin/php -m
-```
-
-**An example output:**
-
-```text
-[PHP Modules]
-bz2
-calendar
-Core
-ctype
-curl
-date
-exif
-filter
-ftp
-gettext
-gmp
-hash
-iconv
-libxml
-openssl
-pcntl
-pcre
-readline
-Reflection
-session
-shmop
-SimpleXML
-SPL
-sqlite3
-standard
-tokenizer
-xml
-zlib
-[Zend Modules]
-```
+**List enabled modules:** `/opt/alt/php73/usr/bin/php -m`
 
   </template>
 
   <template #Enabling_a_module>
 
-The **default.ini** file is important for configuring alt-php. It sets default PHP settings and can be used to enable default extensions. We do not modify this file on our side. You need to update **default.ini** yourself to adjust PHP settings based on your Endless Lifecycle Support (ELS) usage and specific requirements.
+**Option 1: Through `default.ini`**
 
-**Option 1: Enabling a module through `default.ini`**
+1. Open `/opt/alt/phpXY/etc/php.d/default.ini` in an editor.
+2. Remove `;` to enable an extension, add `;` to disable.
+3. If the extension line is missing, add: `extension=extension_name.so`
 
-To enable or disable extensions in your installed PHP version:
+**Option 2: Through configuration files**
 
-1. Open the `default.ini` file, usually located in the PHP configuration directory, in an editor of your choice: 
-
-```
-/opt/alt/phpXY/etc/php.d/default.ini
-```
-
-2. Edit the list of extensions:
-   * To enable an extension, remove the semicolon `;` at the beginning of the line.
-   * To disable an extension, add a semicolon `;` at the beginning of the line.
-   * If the extension line is missing, add it in this format: `extension=extension_name.so` (replace `extension_name.so` with the actual extension name).
-
-3. Save the changes in the `default.ini` file.
-
-**Option 2: Enabling a module through the configuration files**
-
-PHP extensions can also be enabled or disabled through their `.ini` configuration files. This method allows you to control which extensions are active for a specific PHP version or setup. If you're unsure which file to modify to enable a specific extension, start by checking the extension's own `.ini` file.
-
-1. Locate the extension’s `.ini` file (e.g., `memcached.ini`) in the directory:
-
-  ```
-  /opt/alt/phpXY/etc/php.d.all/
-  ```
-
-2. To enable the extension, copy the located `.ini` file to:
-
-  ```
-  /opt/alt/phpXY/etc/php.d/
-  ```
+1. Locate the extension's `.ini` file in `/opt/alt/phpXY/etc/php.d.all/`
+2. Copy it to `/opt/alt/phpXY/etc/php.d/`
 
   :::warning
-  If the same extension is present in multiple `.ini` configuration files within the `/opt/alt/phpXY/etc/php.d/` directory, you may see warnings in PHP logs and possibly on your site.
+  If the same extension is present in multiple `.ini` files within `/opt/alt/phpXY/etc/php.d/`, you may see warnings in PHP logs.
   :::
 
-**Option 3: Enabling a module through the CLI**
+**Option 3: Through the CLI**
 
 ```text
 /opt/alt/php73/usr/bin/php -d "extension=igbinary.so" -m
-```
-
-**An example output:**
-
-```text
-[PHP Modules]
-bz2
-calendar
-Core
-ctype
-curl
-date
-exif
-filter
-ftp
-gettext
-gmp
-hash
-iconv
-igbinary
-libxml
-openssl
-pcntl
-pcre
-readline
-Reflection
-session
-shmop
-SimpleXML
-SPL
-sqlite3
-standard
-tokenizer
-xml
-zlib
-[Zend Modules]
 ```
 
   </template>
 
   <template #Increase_upload_or_memory_limits>
 
-If you need to increase memory and upload size limits:
-
-1. Open the `default.ini` file in an editor of your choice.
-2. Set the limits as needed, e.g:
+1. Open the `default.ini` file in an editor.
+2. Set the limits as needed:
 
     ```text
     upload_max_filesize=40M
@@ -831,17 +266,326 @@ If you need to increase memory and upload size limits:
 
 </TableTabs>
 
-### SaxonC Use Case
+## Installation on Windows
 
-You can extend alt-php with additional modules. Below is an example of installing the SaxonC PHP extension. 
+TuxCare provides two ways to install ELS PHP on Windows: **manually** by downloading and configuring PHP from the repository, or using the **TuxCare Installer** — a graphical tool that automates the process.
+
+<ELSPrerequisites>
+
+* Secure download link (tokenized URL) — contact [sales@tuxcare.com](mailto:sales@tuxcare.com)
+* Administrator access to the Windows system
+
+</ELSPrerequisites>
+
+:::warning Troubleshooting: browser credential prompts
+Always include a **trailing slash** at the end of your tokenized URL (e.g. `https://TOKEN@windows.tuxcare.com/php/`). Without it, the server issues a redirect that strips the authentication token, causing the browser to prompt for credentials on every page. With the trailing slash, credentials are cached and subfolder navigation works as expected.
+
+<details>
+<summary>How to use a tokenized URL</summary>
+
+Your tokenized URL provides access to the TuxCare PHP for Windows repository. It contains an authentication token embedded in the URL:
+
+```text
+https://<YOUR-TOKEN>@windows.tuxcare.com/php/
+```
+
+**Always include the trailing slash.** This applies to all directory URLs, including version subfolders:
+
+- ✅ `https://TOKEN@windows.tuxcare.com/php/` — works correctly
+- ❌ `https://TOKEN@windows.tuxcare.com/php` — may prompt for credentials
+
+**Use a private browsing window.** We recommend opening the tokenized URL in a private (incognito) window to ensure a clean session with no cached credentials that might interfere with token authentication.
+
+- **Chrome / Edge**: `Ctrl+Shift+N` (Windows) or `Cmd+Shift+N` (macOS)
+- **Firefox**: `Ctrl+Shift+P` (Windows) or `Cmd+Shift+P` (macOS)
+
+**Browsing subdirectories.** Once you open the URL with a trailing slash in a private window, the browser caches your credentials for the session. If you are still prompted when entering a subdirectory, manually insert the token into the URL — prepend `<YOUR-TOKEN>@` before `windows.tuxcare.com` in the address bar.
+
+**Example walkthrough:**
+
+1. Open the repository root:
+   ```text
+   https://<YOUR-TOKEN>@windows.tuxcare.com/php/
+   ```
+2. Click on `7.4.33/`. If the browser navigates to `https://windows.tuxcare.com/php/7.4.33/` and prompts for a password, edit the address bar and add the token:
+   ```text
+   https://<YOUR-TOKEN>@windows.tuxcare.com/php/7.4.33/
+   ```
+3. Click on `tuxcare.els8/`. If prompted again, add the token to the URL:
+   ```text
+   https://<YOUR-TOKEN>@windows.tuxcare.com/php/7.4.33/tuxcare.els8/
+   ```
+4. You see the ZIP files listed. Click on the file to download it directly.
+
+**Downloading files directly.** If you already know which file you need, skip browsing and build the full URL from the repository root, version, release folder, and file name:
+
+```text
+https://<YOUR-TOKEN>@windows.tuxcare.com
+  /php/<version>/tuxcare.els<N>/<filename>.zip
+```
+
+PowerShell:
+
+```text
+$base = "https://<YOUR-TOKEN>@windows.tuxcare.com"
+$file = "/php/7.4.33/tuxcare.els8/" +
+  "php-7.4.33-tuxcare-els8-nts-Win32-vc15-x64-signed.zip"
+Invoke-WebRequest -Uri "$base$file" -OutFile "php-7.4.33.zip"
+```
+
+curl:
+
+```text
+BASE="https://<YOUR-TOKEN>@windows.tuxcare.com"
+FILE="/php/7.4.33/tuxcare.els8/\
+php-7.4.33-tuxcare-els8-nts-Win32-vc15-x64-signed.zip"
+curl -O "${BASE}${FILE}"
+```
+
+</details>
+<br>
+:::
+
+<TableTabs>
+
+<template #Manual>
+
+<ELSSteps>
+
+1. Open the repository in your browser
+
+   Navigate to your tokenized URL:
+
+   ```text
+   https://<YOUR-TOKEN>@windows.tuxcare.com/php/
+   ```
+
+   You will see a directory listing of all available PHP versions (e.g. `5.6.40/`, `7.4.33/`, `8.1.33/`). Click on the version you need.
+
+2. Choose the correct archive
+
+   Inside each version folder you will find subfolders named `tuxcare.elsN/`, where `N` is the TuxCare release number. Always select the subfolder with the **highest** number, as it contains the latest security updates. Each archive follows this naming pattern:
+
+   ```text
+   php-<version>-tuxcare-els<N>-<thread>-Win32-<vc>-<arch>-signed.zip
+   ```
+
+   Select the archive that matches your environment:
+
+   | Component | Options | How to choose |
+   | --- | --- | --- |
+   | **Thread safety** | `nts` (Non-Thread Safe) or `ts` (Thread Safe) | Use `nts` for IIS with FastCGI, nginx, or CLI. Use `ts` only for Apache `mod_php`. |
+   | **Architecture** | `x64` or `x86` | Use `x64` for 64-bit Windows (most common). Use `x86` only for 32-bit systems. |
+   | **VC runtime** | `vc15`, `vs16`, `vs17`, etc. | Indicates the required Visual C++ Redistributable. Download from [Microsoft](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist) if not installed. |
+
+   For example, to install PHP 7.4 (NTS, 64-bit), download `php-7.4.33-tuxcare-els8-nts-Win32-vc15-x64-signed.zip`. This archive requires the **Visual C++ Redistributable for Visual Studio 2017** (`vc15`).
+
+3. Extract the archive
+
+   Create a destination folder (e.g. `C:\PHP`) and extract the ZIP contents into it. Right-click the downloaded ZIP file, select **Extract All...**, set the destination, and click **Extract**.
+
+   Alternatively, use PowerShell:
+
+   ```text
+   New-Item -ItemType Directory -Path "C:\PHP" -Force
+   Expand-Archive `
+     -Path "$HOME\Downloads\php-7.4.33-tuxcare-els8-nts-Win32-vc15-x64-signed.zip" `
+     -DestinationPath "C:\PHP"
+   ```
+
+   After extraction, your directory should contain `php.exe`, `php.ini-development`, `php.ini-production`, and an `ext` folder with extension DLLs.
+
+4. Configure php.ini
+
+   Create a configuration file from one of the provided templates — copy `php.ini-development` for development or `php.ini-production` for production to `php.ini`:
+
+   ```text
+   Copy-Item "C:\PHP\php.ini-production" "C:\PHP\php.ini"
+   ```
+
+   Open `C:\PHP\php.ini` in a text editor, set the extension directory, and enable the extensions your application requires:
+
+   ```text
+   extension_dir = "C:\PHP\ext"
+   extension=curl
+   extension=mbstring
+   extension=mysqli
+   extension=openssl
+   ```
+
+5. Add PHP to the System PATH
+
+   To make `php` available from any terminal, add the PHP directory to the System PATH. Open **Settings > System > About** → **Advanced system settings** → **Environment Variables**. Under *System variables*, find **Path**, click **Edit**, then click **New** and add `C:\PHP`.
+
+   Alternatively, use PowerShell (run as Administrator):
+
+   ```text
+   $currentPath = [System.Environment]::GetEnvironmentVariable("Path", "Machine")
+   [System.Environment]::SetEnvironmentVariable("Path", "$currentPath;C:\PHP", "Machine")
+   ```
+
+   Close and reopen any terminal windows for the change to take effect.
+
+6. Verify the installation
+
+   Open **Command Prompt**, **PowerShell**, or **Terminal** and run:
+
+   ```text
+   php -v
+   ```
+
+   You should see output like:
+
+   ```text
+   PHP 7.4.33 (cli) (built: Mar 10 2026 10:12:00)
+   Copyright (c) The PHP Group
+   Zend Engine v3.4.0, Copyright (c) Zend Technologies
+   ```
+
+   To verify that the required extensions are loaded, run `php -m`.
+
+</ELSSteps>
+
+</template>
+
+<template #TuxCare_Installer>
+
+TuxCare Installer allows you to install and manage ELS PHP versions through a graphical interface on Windows Server 2019, 2022, and 2025.
+
+<ELSSteps>
+
+1. Download the installer and launch it
+
+   Download the installer using your tokenized URL:
+
+   ```text
+   https://<YOUR-TOKEN>@windows.tuxcare.com/php/installer/TuxCare.Installer.exe
+   ```
+
+   Run the downloaded file. After the first run, the installer appears under **Settings > Apps**.
+
+2. Register with your license key or authentication token
+
+   ![image](/images/php-installer-token.webp)
+
+   :::tip
+   If you've already registered on this machine and saved your credentials, the installer detects and uses the saved token automatically.
+   :::
+
+3. Select a PHP version
+
+   Tick the checkbox next to the version you want. **Only 1 version can be installed per installation**.
+
+   ![image](/images/php-installer-version.webp)
+
+   :::tip
+   If you already have a version installed, it will appear highlighted in green. When another version is selected, the installer will ask whether to **replace** the existing one or install it **alongside**.
+
+   ![image](/images/php-installer-versions-2.webp)
+   :::
+
+4. Choose installation path and load modules
+
+   By default, the installer uses `C:\Program Files`. Click **Change** to install to a different location.
+
+   Click **Load** to fetch the required PHP archive. Select the modules you need and click **Continue**.
+
+   ![image](/images/php-installer-load.webp)
+
+5. Verify the installation
+
+   Open **Command Prompt**, **PowerShell**, or **Terminal** and run:
+
+   ```text
+   php -v
+   ```
+
+   You should see output like:
+
+   ```text
+   PHP 5.6.40 (cli) (built: May 30 2025 15:43:43)
+   Copyright (c) 1997-2016 The PHP Group
+   Zend Engine v2.6.0, Copyright (c) 1998-2016 Zend Technologies
+   ```
+
+</ELSSteps>
+
+During installation, the installer creates a folder with PHP configuration and selected modules, and adds TuxCare PHP to the **System PATH**.
+
+</template>
+
+</TableTabs>
+<br>
+<details>
+ <summary>How to find System PATH</summary>
+
+ 1. Right-click **This PC** and select **Properties**, or search for **Settings > System > About** in the Start menu.
+ 2. Click **Advanced system settings**.
+
+    ![image](/images/php-windows-advanced-settings.webp)
+
+ 3. Click on **Environment Variables**.
+
+    ![image](/images/php-windows-environment-variables.webp)
+
+ 4. Under *System variables*, find **Path** and click **Edit**.
+
+    ![image](/images/php-windows-add-path.webp)
+
+ 5. You will see your PHP `C:\PHP` directory added.
+
+    ![image](/images/php-windows-add-path-2.webp)
+</details>
+
+### Additional configurations
+
+Depending on your ELS PHP usage purpose, additional configurations may be required. You can integrate PHP with other tools, for example, IIS or WordPress. For further details, refer to the [official PHP documentation](https://www.php.net/manual/en/index.php).
+
+#### Change default PHP version
+
+If you have multiple PHP versions installed and want to change the default, update your **System Path** environment variable. Open **Settings > System > About** → **Advanced system settings** → **Environment Variables**. Under *System variables*, find **Path** and click **Edit**. Move the desired PHP version's path to the top, and remove or move down other PHP paths. Click OK, restart your terminal, and verify with `php -v`.
+
+#### Extensions
+
+Extensions are managed through the `php.ini` file located in your PHP installation directory (e.g. `C:\PHP`). Open it in a text editor and find the extensions section. Remove the semicolon `;` at the beginning of a line to enable an extension, or add `;` to disable it.
+
+```text
+;extension=curl
+extension=gd2
+;extension=mbstring
+extension=mysqli
+extension=pdo_mysql
+```
+
+#### Increase upload/memory limits
+
+If you're integrating PHP with applications like WordPress, you might need to increase memory and upload size limits. Open the `php.ini` file and set the values as needed:
+
+```text
+upload_max_filesize=40M
+post_max_size=40M
+memory_limit=256M
+```
+
+#### Uninstallation
+
+To **uninstall a PHP version manually**, delete the PHP installation directory (e.g. `C:\PHP`) and remove the corresponding path from **System Path**.
+
+To **uninstall via TuxCare Installer**, open **Settings > Apps**, find *TuxCare Installer* and click **Uninstall**.
+
+## SaxonC Use Case
+
+You can extend alt-php with additional modules. Below is an example of installing the SaxonC PHP extension.
 
 Although this guide uses **alt-php82** in its examples, the same installation steps apply to **alt-php83** and newer versions. Replace `php82` with your target version in all commands and file paths.
 
 This guide also uses **SaxonC-HE** as an example. Be sure to adjust file names and paths to match the version you downloaded.
 
-#### Prerequisites
+<ELSPrerequisites>
 
-Saxon 12 is required for PHP 8.2+ compatibility. There are three versions of the SaxonC product. **SaxonC-HE** is the open source version, while other professional editions (PE and EE) are available for commercial use.
+* Saxon 12+ (required for PHP 8.2+ compatibility) — download from [saxonica.com](https://www.saxonica.com/download/c.xml)
+* `httpd` (or `apache2`), `gcc-c++` (or `g++`) with minimum C++14 support
+* `alt-php82-devel` (or matching version)
 
 | Edition   | License     | Key Features                            |
 | --------- | ----------- | --------------------------------------- |
@@ -849,23 +593,27 @@ Saxon 12 is required for PHP 8.2+ compatibility. There are three versions of the
 | SaxonC-PE | Commercial  | HE + ICU localization, JSON support     |
 | SaxonC-EE | Commercial  | PE + Schema validation, Optimization    |
 
-To build the PHP extension, ensure the following packages are installed: `httpd` (or `apache2`), `gcc-c++` (or `g++`) with minimum C++14 support.
+</ELSPrerequisites>
 
-#### Download SaxonC
+### Set up SaxonC
 
-1. Download SaxonC from the [official Saxonica download page](https://www.saxonica.com/download/c.xml).
+<ELSSteps>
 
-2. Create a working directory and navigate into it. Move the downloaded zip file into the working directory and extract the archive
+1. Download SaxonC
+
+   Download from the [official Saxonica download page](https://www.saxonica.com/download/c.xml). Create a working directory and move the downloaded zip file into it:
 
    ```text
    mkdir saxon && cd saxon
    mv ../SaxonCHE-linux-x86_64-12-9-0.zip .
-   unzip SaxonCHE-linux-x86_64-12-9-0.zip
    ```
 
-3. Verify the extraction:
+2. Extract the archive
+
+   Unzip the downloaded file and verify:
 
    ```text
+   unzip SaxonCHE-linux-x86_64-12-9-0.zip
    ls
    ```
 
@@ -875,80 +623,61 @@ To build the PHP extension, ensure the following packages are installed: `httpd`
    SaxonCHE-linux-x86_64-12-9-0  SaxonCHE-linux-x86_64-12-9-0.zip
    ```
 
-#### Install the libraries
+3. Install the libraries
 
-:::tip
-Starting with version 12.6, `/opt/saxonica/` is the recommended installation path for Saxon libraries. 
-:::
-
-1. Navigate into the extracted directory and create the target directory for Saxon installation.
+   Starting with version 12.6, `/opt/saxonica/` is the recommended installation path. Navigate into the extracted directory and copy all Saxon files:
 
    ```text
    cd SaxonCHE-linux-x86_64-12-9-0
-   mkdir /opt/saxonica/
-   ```
-
-2. Copy all Saxon files (binaries, headers, libraries) to the installation directory
-
-   ```text
+   sudo mkdir -p /opt/saxonica/
    sudo cp -r SaxonCHE/* /opt/saxonica/
    ```
 
-3. Verify the installation structure
+   The installed structure should contain `bin`, `include`, and `lib` directories.
+
+4. Configure environment variables
+
+   Add the following lines to your `.bashrc` or `/etc/profile.d/saxon.sh`.
+
+   The `LD_LIBRARY_PATH` variable must point to the Saxon libraries:
 
    ```text
-   ls /opt/saxonica/
+   export LD_LIBRARY_PATH="/opt/saxonica/lib:$LD_LIBRARY_PATH"
    ```
 
-   Example output:
+   To run the Transform, Query, and Validate (EE only) binaries, set the `PATH` variable:
 
    ```text
-   bin  include  lib
+   export PATH="/opt/saxonica/bin:$PATH"
    ```
-
-4. Add the following lines to your `.bashrc` or `/etc/profile.d/saxon.sh`:
-
-   * The LD_LIBRARY_PATH variable must be set to the location of the lib directory containing the SaxonC libraries.
-
-     ```text
-     export LD_LIBRARY_PATH="/opt/saxonica/lib:$LD_LIBRARY_PATH"
-     ```
-
-   * To run the Transform, Query, and Validate (EE only) binaries the PATH variable can be set.
-
-     ```text
-     export PATH="/opt/saxonica/bin:$PATH"
-     ```
 
    :::tip
    If the PHP web server can't find the Saxon libraries, you may also need to add `/opt/saxonica/lib` to a new file in `/etc/ld.so.conf.d/` and run `ldconfig`.
    :::
 
-#### Install alt-php82-devel
+</ELSSteps>
 
-1. Install the development package for alt-php82:
+### Build the PHP extension
+
+<ELSSteps>
+
+1. Install alt-php82-devel
+
+   Install the development package required for compiling PHP extensions:
 
    ```text
    dnf install alt-php82-devel
    ```
 
-2. Verify that phpize required for compiling PHP extensions is available:
+   Verify that `phpize` is available:
 
    ```text
    ls /opt/alt/php82/usr/bin/phpize
    ```
 
-   Example output: 
+2. Prepare the build environment
 
-   ```
-   /opt/alt/php82/usr/bin/phpize
-   ```
-
-#### Build the PHP extension
-
-Now you can compile the Saxon PHP extension from source. The build process uses the standard PHP extension compilation workflow: `phpize` prepares the build environment, `configure` sets up the build options, and `make` compiles the extension.
-
-1. Navigate to the PHP extension source directory within the extracted Saxon archive and prepare the build environment.
+   Navigate to the PHP extension source directory within the extracted Saxon archive and run `phpize` to prepare the build:
 
    ```text
    cd php/src/
@@ -964,21 +693,18 @@ Now you can compile the Saxon PHP extension from source. The build process uses 
    Zend Extension Api No:   420220829
    ```
 
-2. Configure the extension build with Saxon support and link to the Saxon libraries
+3. Configure and compile
+
+   Configure the extension build with Saxon support and link to the Saxon libraries:
 
    ```text
    ./configure --with-saxon --with-php-config=/opt/alt/php82/usr/bin/php-config LDFLAGS="-L/opt/saxonica/lib"
    ```
 
-3. Compile the extension
+   Compile and install:
 
    ```text
    make
-   ```
-
-4. Install the compiled extension to the PHP modules directory
-
-   ```text
    sudo make install
    ```
 
@@ -988,9 +714,9 @@ Now you can compile the Saxon PHP extension from source. The build process uses 
    Installing shared extensions:     /opt/alt/php82/usr/lib64/php/modules/
    ```
 
-#### Enable and verify the extension
+4. Enable the extension
 
-1. After installation, you need to enable the extension by creating a configuration file that tells PHP to load it.
+   Create a configuration file that tells PHP to load the extension:
 
    ```text
    tee -a /opt/alt/php82/etc/php.d/20-saxon.ini <<EOF
@@ -999,7 +725,7 @@ Now you can compile the Saxon PHP extension from source. The build process uses 
    EOF
    ```
 
-2. Verify that the Saxon extension appears in the list of loaded modules:
+   Verify that the Saxon extension appears in the list of loaded modules:
 
    ```text
    /opt/alt/php82/usr/bin/php -m | grep saxon
@@ -1011,7 +737,9 @@ Now you can compile the Saxon PHP extension from source. The build process uses 
    saxonc
    ```
 
-3. Test that it works:
+5. Verify with a test script
+
+   Run a quick test to confirm the extension works:
 
    ```text
    /opt/alt/php82/usr/bin/php -ddisplay_errors=E_ALL  << 'EOF'
@@ -1035,276 +763,9 @@ Now you can compile the Saxon PHP extension from source. The build process uses 
    <a/>
    ```
 
-4. If you are using php-fpm or Apache, restart the services.
+   If you are using php-fpm or Apache, restart the services.
 
-## Installation Instructions for Windows
-
-### Get user credentials
-
-1. Obtain the required license to get access to the service.
-2. Contact [sales@tuxcare.com](mailto:sales@tuxcare.com) to receive instructions for generating your unique access link (tokenized URL). Anonymous access is restricted.
-
-### Download and Install TuxCare PHP Windows
-
-TuxCare provides a Windows Installer that allows you to install and manage ELS PHP versions. 
-
-1. Follow the instructions provided by [sales@tuxcare.com](mailto:sales@tuxcare.com) to create your secure download link.
-2. Use this link to download the latest version of the installer.
-3. Launch the installer. After the first run, it will appear under **Settings > Apps**.
-4. Provide your access credentials:
-   *  **Register** - if this is your first time using the installer or you're installing on a new system, choose the "Register" option. You’ll be asked to provide your license key or authentication token. You can also save your token for future use.
-
-   ![image](/images/php-installer-token.webp)
-
-   *  **Use previous token** - if you’ve already registered on this machine and chose to save your credentials, the installer will detect and use the saved token automatically. You won’t need to enter your credentials again unless the token is missing or expired. 
-
-5. Select a PHP version and tick the checkbox next to it. **Only 1 version can be installed per installation**.
-
-   ![image](/images/php-installer-version.webp)
-
-   :::tip
-   If you already have a version installed, it will appear highlighted in green. When another version is selected, the installer will ask whether to **replace** the existing one or install it **alongside**.
-
-   ![image](/images/php-installer-versions-2.webp)
-   :::
-
-6. Choose Installation Path. By default, the installer will use `C:\Program Files`. Click **Change** if you want to install to a different location.
-7. Click **Load** to fetch the required PHP archive. Once the archive is loaded, a list of available PHP modules will appear. Select the modules you need and click **Continue** to confirm.
-
-   ![image](/images/php-installer-load.webp)
-
-8. During installation, the installer will create a folder with PHP configuration and selected modules, and add TuxCare PHP to the **System PATH** (advanced settings).
-
-   <details>
-    <summary>Click to see more</summary>
-
-    1. Right-click **This PC** and select **Properties**, or search for **Settings > System > About** in the Start menu.
-    2. Click **Advanced system settings**.
-
-      ![image](/images/php-windows-advanced-settings.webp)
-
-    3. Click on **Environment Variables**.
-
-      ![image](/images/php-windows-environment-variables.webp)
-
-    4. Under *System variables*, find **Path** and click **Edit**.
-
-      ![image](/images/php-windows-add-path.webp)
-
-    5. You will see your PHP `C:\PHP` directory added.
-
-      ![image](/images/php-windows-add-path-2.webp)
-   </details>
-
-9. Wait for the installation process to complete.
-
-### Validate the Installation
-
-To confirm PHP is working:
-
-1. Open **Command Prompt**, **PowerShell**, or **Terminal**.
-2. Run the following command:
-
-    ```text
-    php -v
-    ```
-
-    You should see output like this:
-
-    ```text
-    PHP 5.6.40 (cli) (built: May 30 2025 15:43:43)
-    Copyright (c) 1997-2016 The PHP Group
-    Zend Engine v2.6.0, Copyright (c) 1998-2016 Zend Technologies
-    ```
-
-### Additional configurations (optional)
-
-Depending on your ELS PHP usage purpose, additional configurations may be required. Here are some commonly useful configurations.
-
-#### Change Default PHP Version
-
-If you have multiple PHP versions installed and want to change the default, update your *System Path* environment variable:
-
-1. Open **Settings > System > About** in the Start menu.
-2. Click **Advanced system settings**.
-3. Click on **Environment Variables**.
-4. Under *System variables*, find **Path** and click **Edit**.
-   * Move the desired PHP version’s path to the top.
-   * Remove or move down other PHP paths.
-5. Click OK and restart your terminal
-6. Verify the active PHP version by running:
-
-    ```text
-    php -v
-    ```
-
-#### Extensions
-
-To enable or disable extensions in your installed PHP version:
-
-1. Navigate to your PHP installation directory, e.g. `C:\PHP` directory.
-2. Open the `php.ini` file in an editor of your choice (e.g. Notepad).
-3. Edit the list of extensions:
-   * To enable an extension, remove the semicolon `;` at the beginning of the line.
-   * To disable an extension, add a semicolon `;` at the beginning of the line.
-
-   **Example:**
-
-    ```text
-    ;extension=curl
-    extension=gd2
-    ;extension=mbstring
-    extension=mysqli
-    extension=pdo_mysql
-    ```
-
-#### Increase Upload/Memory Limits
-
-If you're integrating PHP with applications like WordPress, you might need to increase memory and upload size limits:
-
-1. Open the `php.ini` file in an editor of your choice (e.g. Notepad).
-2. Set the limits as needed, e.g:
-
-    ```text
-    upload_max_filesize=40M
-    post_max_size=40M
-    memory_limit=256M
-    ```
-
-#### Example Use Cases
-
-You can integrate PHP with other tools, for example, IIS or WordPress. For further details and documentation, refer to the [official PHP documentation](https://www.php.net/manual/en/index.php).
-
-### Uninstallation
-
-#### Uninstall a PHP version
-
-To uninstall a PHP version:
-
-1. Manually delete the PHP installation directory (e.g., `C:\Program Files\TuxCare\php-version`).
-
-2. Remove the PHP path from **System Path**.
-
-#### Uninstall TuxCare Installer
-
-To uninstall TuxCare Installer:
-
-1. Open **Settings > Apps**.
-
-2. Find *TuxCare Installer* and click  **Uninstall** to remove it from the list of installed apps.
-
-## OVAL data
-
-This section contains information about available ELS for PHP OVAL streams that can be used by vulnerability scanners.
-
-### TuxCare PHP ELS OVAL Streams
-
-Currently, we provide OVAL data for the following OS versions:
-
-* EL 7 (CentOS, CloudLinux, Oracle Linux, Amazon Linux 2, etc.): [oval.xml](https://security.tuxcare.com/oval/els_alt_php/el7/oval.xml)
-* EL 8 (AlmaLinux, CentOS, CentOS Stream, CloudLinux, Oracle Linux, etc.): [oval.xml](https://security.tuxcare.com/oval/els_alt_php/el8/oval.xml)
-* EL 9 (AlmaLinux, CentOS, CloudLinux, etc.): [oval.xml](http://security.tuxcare.com/oval/els_alt_php/el9/oval.xml)
-* EL 10 (AlmaLinux, CloudLinux, Oracle Linux, etc.): [oval.xml](http://security.tuxcare.com/oval/els_alt_php/el10/oval.xml)
-* Ubuntu 16.04: [oval.xml](https://security.tuxcare.com/oval/els_alt_php/ubuntu16.04/oval.xml)
-* Ubuntu 18.04: [oval.xml](https://security.tuxcare.com/oval/els_alt_php/ubuntu18.04/oval.xml)
-* Ubuntu 20.04: [oval.xml](https://security.tuxcare.com/oval/els_alt_php/ubuntu20.04/oval.xml)
-* Ubuntu 22.04: [oval.xml](https://security.tuxcare.com/oval/els_alt_php/ubuntu22.04/oval.xml)
-* Ubuntu 24.04: [oval.xml](https://security.tuxcare.com/oval/els_alt_php/ubuntu24.04/oval.xml)
-* Debian 10: [oval.xml](https://security.tuxcare.com/oval/els_alt_php/debian10/oval.xml)
-* Debian 11: [oval.xml](https://security.tuxcare.com/oval/els_alt_php/debian11/oval.xml)
-* Debian 12: [oval.xml](https://security.tuxcare.com/oval/els_alt_php/debian12/oval.xml)
-* Debian 13: [oval.xml](https://security.tuxcare.com/oval/els_alt_php/debian13/oval.xml)
-
-### How to use OVAL
-
-OVAL can be used with the OpenSCAP tool.
-
-1. Install OpenSCAP
-
-    <CodeTabs :tabs="[
-      { title: 'RPM', content: `yum install openscap openscap-utils scap-security-guide -y` },
-      { title: 'DEB', content: `apt-get install libopenscap8 -y` }
-    ]" />
-
-2. Download an OVAL stream. For example, EL 8:
-
-    ```text
-    wget https://security.tuxcare.com/oval/els_alt_php/el8/oval.xml
-    ```
-
-3. Run a scan:
-
-   ```text
-   oscap oval eval --results result.xml --report report.xml oval.xml
-   ```
-
-## Common Security Advisory Framework
-
-Common Security Advisory Framework (CSAF) is a machine-readable format, standardized by [OASIS](https://www.csaf.io/). It's designed to enable consistent and automated sharing of security advisory information. 
-
-TuxCare publishes the following CSAF files at [security.tuxcare.com](https://security.tuxcare.com/csaf/v2/):
-* CSAF Vulnerability Exploitability eXchange (VEX) files – VEX documents, indexed by CVE, are available in CSAF 2.0 format, including past CVEs.
-* CSAF Security Advisory files – advisories are published in CSAF 2.0 format and indexed by Security Advisory.
-
-`provider-metadata.json` contains information for tools and users about where and how to retrieve CSAF advisories published by TuxCare. By OASIS requirements, it is available at two URLs (both serving the same file):
-* [csaf.data.security.tuxcare.com](https://csaf.data.security.tuxcare.com/)
-* [tuxcare.com/.well-known/csaf/provider-metadata.json](https://tuxcare.com/.well-known/csaf/provider-metadata.json)
-
-### TuxCare CSAF data
-
-Currently, we provide CSAF data for the following OS versions:
-
-* EL 7 (CentOS, CloudLinux, Oracle Linux, Amazon Linux 2, etc.): [security.tuxcare.com/csaf/v2/els_alt_php/el7/](https://security.tuxcare.com/csaf/v2/els_alt_php/el7/)
-* EL 8 (AlmaLinux, CentOS, CentOS Stream, CloudLinux, Oracle Linux, etc.): [security.tuxcare.com/csaf/v2/els_alt_php/el8/](https://security.tuxcare.com/csaf/v2/els_alt_php/el8/)
-* EL 9 (AlmaLinux, CentOS, CloudLinux, etc.): [security.tuxcare.com/csaf/v2/els_alt_php/el9/](https://security.tuxcare.com/csaf/v2/els_alt_php/el9/)
-* EL 10 (AlmaLinux, CloudLinux, Oracle Linux, etc.): [security.tuxcare.com/csaf/v2/els_alt_php/el10/](https://security.tuxcare.com/csaf/v2/els_alt_php/el10/)
-* Ubuntu 16.04: [security.tuxcare.com/csaf/v2/els_alt_php/ubuntu16.04/](https://security.tuxcare.com/csaf/v2/els_alt_php/ubuntu16.04/)
-* Ubuntu 18.04: [security.tuxcare.com/csaf/v2/els_alt_php/ubuntu18.04/](https://security.tuxcare.com/csaf/v2/els_alt_php/ubuntu18.04/)
-* Ubuntu 20.04: [security.tuxcare.com/csaf/v2/els_alt_php/ubuntu20.04/](https://security.tuxcare.com/csaf/v2/els_alt_php/ubuntu20.04/)
-* Ubuntu 22.04: [security.tuxcare.com/csaf/v2/els_alt_php/ubuntu22.04/](https://security.tuxcare.com/csaf/v2/els_alt_php/ubuntu22.04/)
-* Ubuntu 24.04 [security.tuxcare.com/csaf/v2/els_alt_php/ubuntu24.04/](https://security.tuxcare.com/csaf/v2/els_alt_php/ubuntu24.04/)
-* Debian 10: [security.tuxcare.com/csaf/v2/els_alt_php/debian10/](https://security.tuxcare.com/csaf/v2/els_alt_php/debian10/)
-* Debian 11: [security.tuxcare.com/csaf/v2/els_alt_php/debian11/](https://security.tuxcare.com/csaf/v2/els_alt_php/debian11/)
-* Debian 12: [security.tuxcare.com/csaf/v2/els_alt_php/debian12/](https://security.tuxcare.com/csaf/v2/els_alt_php/debian12/)
-* Debian 13: [security.tuxcare.com/csaf/v2/els_alt_php/debian13/](https://security.tuxcare.com/csaf/v2/els_alt_php/debian13/)
-
-### How to Use CSAF
-
-The CSAF files are published in JSON format which is easy to parse and integrate with other tools - OASIS provides a [list of reference tools](https://www.csaf.io/tools.html) that support CSAF.
-
-## Errata
-
-Currently, we provide errata for the following OS versions:
-
-* EL 7 (CentOS, CloudLinux, Oracle Linux, Amazon Linux 2, etc.): [security.tuxcare.com/errata/els_alt_php/el7/](https://security.tuxcare.com/errata/els_alt_php/el7/)
-* EL 8 (AlmaLinux, CentOS, CentOS Stream, CloudLinux, Oracle Linux, etc.): [security.tuxcare.com/errata/els_alt_php/el8/](https://security.tuxcare.com/errata/els_alt_php/el8/)
-* EL 9 (AlmaLinux, CentOS, CloudLinux, etc.): [security.tuxcare.com/errata/els_alt_php/el9/](https://security.tuxcare.com/errata/els_alt_php/el9/)
-* EL 10 (AlmaLinux, CloudLinux, Oracle Linux, etc.): [security.tuxcare.com/errata/els_alt_php/el10/](https://security.tuxcare.com/errata/els_alt_php/el10/)
-* Ubuntu 16.04: [security.tuxcare.com/errata/els_alt_php/ubuntu16.04/](https://security.tuxcare.com/errata/els_alt_php/ubuntu16.04/)
-* Ubuntu 18.04: [security.tuxcare.com/errata/els_alt_php/ubuntu18.04/](https://security.tuxcare.com/errata/els_alt_php/ubuntu18.04/)
-* Ubuntu 20.04: [security.tuxcare.com/errata/els_alt_php/ubuntu20.04/](https://security.tuxcare.com/errata/els_alt_php/ubuntu20.04/)
-* Ubuntu 22.04: [security.tuxcare.com/errata/els_alt_php/ubuntu22.04/](https://security.tuxcare.com/errata/els_alt_php/ubuntu22.04/)
-* Ubuntu 24.04 [security.tuxcare.com/errata/els_alt_php/ubuntu24.04/](https://security.tuxcare.com/errata/els_alt_php/ubuntu24.04/)
-* Debian 10: [security.tuxcare.com/errata/els_alt_php/debian10/](https://security.tuxcare.com/errata/els_alt_php/debian10/)
-* Debian 11: [security.tuxcare.com/errata/els_alt_php/debian11/](https://security.tuxcare.com/errata/els_alt_php/debian11/)
-* Debian 12: [security.tuxcare.com/errata/els_alt_php/debian12/](https://security.tuxcare.com/errata/els_alt_php/debian12/)
-* Debian 13: [security.tuxcare.com/errata/els_alt_php/debian13/](https://security.tuxcare.com/errata/els_alt_php/debian13/)
-
-## RSS Feed
-
-* EL 7 (CentOS, CloudLinux, Oracle Linux, Amazon Linux 2, etc.): [cve.tuxcare.com/rss_feed/els-alt-php/releases/el7](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/el7)
-* EL 8 (AlmaLinux, CentOS, CentOS Stream, CloudLinux, Oracle Linux, etc.): [cve.tuxcare.com/rss_feed/els-alt-php/releases/el8](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/el8)
-* EL 9 (AlmaLinux, CentOS, CloudLinux, etc.): [cve.tuxcare.com/rss_feed/els-alt-php/releases/el9](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/el9)
-* EL 10 (AlmaLinux, CloudLinux, Oracle Linux, etc.): [cve.tuxcare.com/rss_feed/els-alt-php/releases/el10/](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/el10/)
-* Ubuntu 16.04: [cve.tuxcare.com/rss_feed/els-alt-php/releases/ubuntu16.04/](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/ubuntu16.04/)
-* Ubuntu 18.04: [cve.tuxcare.com/rss_feed/els-alt-php/releases/ubuntu18.04/](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/ubuntu18.04/)
-* Ubuntu 20.04: [cve.tuxcare.com/rss_feed/els-alt-php/releases/ubuntu20.04/](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/ubuntu20.04/)
-* Ubuntu 22.04: [cve.tuxcare.com/rss_feed/els-alt-php/releases/ubuntu22.04/](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/ubuntu22.04/)
-* Ubuntu 24.04 [cve.tuxcare.com/rss_feed/els-alt-php/releases/ubuntu24.04/](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/ubuntu24.04/)
-* Debian 10: [cve.tuxcare.com/rss_feed/els-alt-php/releases/debian10/](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/debian10/)
-* Debian 11: [cve.tuxcare.com/rss_feed/els-alt-php/releases/debian11/](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/debian11/)
-* Debian 12: [cve.tuxcare.com/rss_feed/els-alt-php/releases/debian12/](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/debian12/)
-* Debian 13: [cve.tuxcare.com/rss_feed/els-alt-php/releases/debian13/](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/debian13/)
+</ELSSteps>
 
 ## PHP extensions list
 
@@ -1534,11 +995,9 @@ The PHP core includes many built-in extensions that provide basic functionality,
 
 </TableTabs>
 
-## Conclusion
+<WhatsNext>
 
-As you can see, each version is entirely self-contained, and changing configurations in one will not impact the others, a desired feature in hosting environments. 
+* ![](/images/shield.webp) [Machine-readable security data](../machine-readable-security-data/) — OVAL, CSAF, Errata, and RSS feeds for PHP ELS
+* ![](/images/clipboard-notes.webp) [PHP Changelog](https://changelog.cloudlinux.com/) — latest updates, fixes, and enhancements for ALT-PHP
 
-## PHP Changelog 
-
-To stay informed about the latest updates, fixes, and enhancements for ALT-PHP, please refer to the [CloudLinux Changelog](https://changelog.cloudlinux.com/).
-All PHP ELS package updates are published there as part of the CloudLinux update stream.
+</WhatsNext>

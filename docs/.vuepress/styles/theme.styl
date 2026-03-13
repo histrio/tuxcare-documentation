@@ -261,9 +261,16 @@ badge[type="danger"]
     width 20px
     height 20px
     transition fill 0.3s
+  img
+    width 20px
+    height 20px
+    opacity 0.6
+    transition opacity 0.3s
 
   &:hover svg
     fill #1994f9
+  &:hover img
+    opacity 1
 
 @media (max-width: $mobileBreakpoint)
   .content:not(.custom)

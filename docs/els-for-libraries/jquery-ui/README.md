@@ -52,6 +52,9 @@ TuxCare provides ELS for jQuery UI as an NPM package, hosted on a secure interna
      ```text
      "dependencies": {
        "jquery-ui": "npm:@els-js/jquery-ui@>=1.10.4-tuxcare.1"
+     },
+     "overrides": {
+       "jquery-ui@1.10.4": "npm:@els-js/jquery-ui@>=1.10.4-tuxcare.1"
      }
      ```
 
@@ -77,6 +80,9 @@ TuxCare provides ELS for jQuery UI as an NPM package, hosted on a secure interna
      ```text
      "dependencies": {
        "jquery-ui": "npm:@els-js/jquery-ui@>=1.10.4-tuxcare.1"
+     },
+     "overrides": {
+       "jquery-ui@1.10.4": "npm:@els-js/jquery-ui@>=1.10.4-tuxcare.1"
      }
      ```
 

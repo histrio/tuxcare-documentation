@@ -25,6 +25,8 @@ import ELSApplication from "./components/ELSApplication.vue";
 import GlobalCopyCode from "./components/GlobalCopyCode.vue";
 
 import ResolvedCveTable from './components/ResolvedCveTable.vue'
+import ELSBadge from './components/ELSBadge.vue'
+import ContactSales from './components/ContactSales.vue'
 
 export default defineClientConfig({
     rootComponents: [
@@ -58,6 +60,8 @@ export default defineClientConfig({
         app.component("ELSSteps", ELSSteps);
         app.component("WhatsNext", WhatsNext);
         app.component("ELSApplication", ELSApplication);
+        app.component("ELSBadge", ELSBadge);
+        app.component("ContactSales", ContactSales);
 
         if (!__VUEPRESS_SSR__) {
             setTimeout(applyA11yRuntimeFixes, 0);
@@ -88,7 +92,7 @@ export default defineClientConfig({
             // icons
             arrowDownIcon: "arrows/arrow-down.svg",
             githubEditIcon: 'global/pen.svg',
-            footerCustomLogo: 'global/we-are-cloudlinux.svg',
+            footerCustomLogo: 'global/TuxCare_color_logo_primary_RGB.webp',
             headerDefaultSearchIcon: 'global/search.svg',
             siteLogo: "global/logo.svg",
             searchSelectIcon: 'arrows/select-down.svg',

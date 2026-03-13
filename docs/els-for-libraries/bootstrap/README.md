@@ -56,6 +56,9 @@ TuxCare provides ELS for Bootstrap as an NPM package, hosted on a secure interna
       ```text
       "dependencies": {
         "bootstrap": "npm:@els-js/bootstrap@>=3.2.0-tuxcare.1"
+      },
+      "overrides": {
+        "bootstrap@3.2.0": "npm:@els-js/bootstrap@>=3.2.0-tuxcare.1"
       }
       ```
 
@@ -66,6 +69,9 @@ TuxCare provides ELS for Bootstrap as an NPM package, hosted on a secure interna
       ```text
       "dependencies": {
         "bootstrap": "npm:@els-js/bootstrap@>=3.4.1-tuxcare.1"
+      },
+      "overrides": {
+        "bootstrap@3.4.1": "npm:@els-js/bootstrap@>=3.4.1-tuxcare.1"
       }
       ```
 
@@ -76,6 +82,9 @@ TuxCare provides ELS for Bootstrap as an NPM package, hosted on a secure interna
       ```text
       "dependencies": {
         "bootstrap": "npm:@els-js/bootstrap@>=4.1.1-tuxcare.1"
+      },
+      "overrides": {
+        "bootstrap@4.1.1": "npm:@els-js/bootstrap@>=4.1.1-tuxcare.1"
       }
       ```
 
@@ -86,6 +95,9 @@ TuxCare provides ELS for Bootstrap as an NPM package, hosted on a secure interna
       ```text
       "dependencies": {
         "bootstrap": "npm:@els-js/bootstrap@>=4.6.2-tuxcare.1"
+      },
+      "overrides": {
+        "bootstrap@4.6.2": "npm:@els-js/bootstrap@>=4.6.2-tuxcare.1"
       }
       ```
 
@@ -115,6 +127,9 @@ TuxCare provides ELS for Bootstrap as an NPM package, hosted on a secure interna
      ```text
      "dependencies": {
        "bootstrap": "npm:@els-js/bootstrap@>=4.6.2-tuxcare.1"
+     },
+     "overrides": {
+       "bootstrap@4.6.2": "npm:@els-js/bootstrap@>=4.6.2-tuxcare.1"
      }
      ```
 

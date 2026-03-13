@@ -1,7 +1,7 @@
 export default [
     {
         text: "Knowledge base",
-        url: "https://cloudlinux.zendesk.com/hc/en-us/categories/360002375960-KernelCare"
+        url: "https://support.tuxcare.com/"
     },
     {
         text: "Forum",
@@ -13,6 +13,6 @@ export default [
     },
         {
         text: "Privacy Policy",
-        url: "https://www.cloudlinux.com/privacy-policy/"
+        url: "https://tuxcare.com/privacy-policies-hub/privacy-policy/"
     }
 ]
