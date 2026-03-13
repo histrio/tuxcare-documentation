@@ -38,6 +38,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **parsejson** 0.0.3
 * **pdfjs-dist** 2.16.105
 * **picocolors** 0.2.1
+* **qs** 5.1.0, 5.2.0
 * **quill** 1.3.7
 * **request** 2.88.0
 * **rollup** 2.1.0, 2.26.5, 2.38.4, 2.79.1, 2.79.2

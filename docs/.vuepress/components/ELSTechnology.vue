@@ -807,6 +807,11 @@ const techData = [
         link: "./postcss/",
       },
       {
+        name: "qs",
+        versions: "5.1.0 | 5.2.0",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "Quill",
         versions: "1.3.7",
         link: "./javascript-libraries/",
