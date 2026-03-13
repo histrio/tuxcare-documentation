@@ -632,6 +632,11 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "highlight.js",
+        versions: "9.18.5",
+        link: "./javascript-libraries/",
+      },
+      {   
         name: "handlebars",
         versions: "3.0.3",
         link: "./javascript-libraries/",
