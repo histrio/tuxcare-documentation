@@ -50,7 +50,7 @@ TuxCare provides additional security support for PHP versions after the end of s
 
 *EOL — end of life, SST — security support time*
 
-| Version |  Released  | EOL by vendor | SST by vendor (years) |    EOL by CloudLinux    | SST by Cloudlinux after vendor's EOL (years) |
+| Version |  Released  | EOL by vendor | SST by vendor (years) |    EOL by CloudLinux    | SST by CloudLinux after vendor's EOL (years) |
 |:-------:|:----------:|:-------------:|:---------------------:|:-----------------------:|:--------------------------------------------:|
 |   4.4   | 07.11.2005 |  08.07.2008   |          2.7          | [01.07.2023](https://blog.cloudlinux.com/php-4.4-end-of-life-0) | 14.9 |
 |   5.1   | 23.11.2005 |  24.08.2006   |          0.8          | [01.04.2024](https://blog.cloudlinux.com/php-5.1-end-of-life)   | 17.6 |
@@ -122,16 +122,18 @@ sudo yum install libvpx-1.3.0
 
 4. Verify the installation
 
+   Check that the desired PHP version is installed:
+
    <CodeTabs :tabs="[
-     { title: 'RPM', content: `yum upgrade` },
-     { title: 'DEB', content: `apt upgrade` }
+     { title: 'RPM', content: `rpm -qa | grep alt-php` },
+     { title: 'DEB', content: `dpkg -l | grep alt-php` }
    ]" />
 
 </ELSSteps>
 
 ### Useful Commands and Usage
 
-When you deploy an updated version of PHP through PHP ELS, using your system's regular update tool (yum, dnf, apt) the new version will be installed under `/opt/alt/php[version]/`. This means that all modules, configurations and additional files pertaining to this version will be contained inside that path. Different versions of PHP will each have their own path and can coexist without issues on the same system. Below you will find the location of all the relevant files, should you want to make any changes.
+When you deploy an updated version of PHP through PHP ELS, using your system's regular update tool (yum, dnf, apt), the new version will be installed under `/opt/alt/php[version]/`. This means that all modules, configurations and additional files pertaining to this version will be contained inside that path. Different versions of PHP will each have their own path and can coexist without issues on the same system. Below you will find the location of all the relevant files, should you want to make any changes.
 
 <TableTabs>
 
@@ -148,7 +150,7 @@ To check whether the package is installed and see its current version, use the f
 
   <template #List_available_groups>
 
-To find out which groups/meta-package are available for installation:
+To find out which groups/meta-packages are available for installation:
 
   <CodeTabs :tabs="[
     { title: 'RPM', content: `sudo yum group list` },
@@ -168,7 +170,7 @@ Replace `XY` with a version of alt-php.
 
   <template #Update_alt-php>
 
-1. Check for Updates:
+1. Check for updates:
 
     <CodeTabs :tabs="[
       { title: 'RPM', content: `sudo yum check-update` },
@@ -266,7 +268,7 @@ Replace `alt-package-name` with the specific name of the package you are looking
 
 ## Installation on Windows
 
-TuxCare provides a Windows Installer that allows you to install and manage ELS PHP versions on Windows Server 2019, 2022, and 2025.
+TuxCare provides two ways to install ELS PHP on Windows: **manually** by downloading and configuring PHP from the repository, or using the **TuxCare Installer** — a graphical tool that automates the process.
 
 <ELSPrerequisites>
 
@@ -275,11 +277,192 @@ TuxCare provides a Windows Installer that allows you to install and manage ELS P
 
 </ELSPrerequisites>
 
+:::warning Troubleshooting: browser credential prompts
+Always include a **trailing slash** at the end of your tokenized URL (e.g. `https://TOKEN@windows.tuxcare.com/php/`). Without it, the server issues a redirect that strips the authentication token, causing the browser to prompt for credentials on every page. With the trailing slash, credentials are cached and subfolder navigation works as expected.
+
+<details>
+<summary>How to use a tokenized URL</summary>
+
+Your tokenized URL provides access to the TuxCare PHP for Windows repository. It contains an authentication token embedded in the URL:
+
+```text
+https://<YOUR-TOKEN>@windows.tuxcare.com/php/
+```
+
+**Always include the trailing slash.** This applies to all directory URLs, including version subfolders:
+
+- ✅ `https://TOKEN@windows.tuxcare.com/php/` — works correctly
+- ❌ `https://TOKEN@windows.tuxcare.com/php` — may prompt for credentials
+
+**Use a private browsing window.** We recommend opening the tokenized URL in a private (incognito) window to ensure a clean session with no cached credentials that might interfere with token authentication.
+
+- **Chrome / Edge**: `Ctrl+Shift+N` (Windows) or `Cmd+Shift+N` (macOS)
+- **Firefox**: `Ctrl+Shift+P` (Windows) or `Cmd+Shift+P` (macOS)
+
+**Browsing subdirectories.** Once you open the URL with a trailing slash in a private window, the browser caches your credentials for the session. If you are still prompted when entering a subdirectory, manually insert the token into the URL — prepend `<YOUR-TOKEN>@` before `windows.tuxcare.com` in the address bar.
+
+**Example walkthrough:**
+
+1. Open the repository root:
+   ```text
+   https://<YOUR-TOKEN>@windows.tuxcare.com/php/
+   ```
+2. Click on `7.4.33/`. If the browser navigates to `https://windows.tuxcare.com/php/7.4.33/` and prompts for a password, edit the address bar and add the token:
+   ```text
+   https://<YOUR-TOKEN>@windows.tuxcare.com/php/7.4.33/
+   ```
+3. Click on `tuxcare.els8/`. If prompted again, add the token to the URL:
+   ```text
+   https://<YOUR-TOKEN>@windows.tuxcare.com/php/7.4.33/tuxcare.els8/
+   ```
+4. You see the ZIP files listed. Click on the file to download it directly.
+
+**Downloading files directly.** If you already know which file you need, skip browsing and build the full URL from the repository root, version, release folder, and file name:
+
+```text
+https://<YOUR-TOKEN>@windows.tuxcare.com
+  /php/<version>/tuxcare.els<N>/<filename>.zip
+```
+
+PowerShell:
+
+```text
+$base = "https://<YOUR-TOKEN>@windows.tuxcare.com"
+$file = "/php/7.4.33/tuxcare.els8/" +
+  "php-7.4.33-tuxcare-els8-nts-Win32-vc15-x64-signed.zip"
+Invoke-WebRequest -Uri "$base$file" -OutFile "php-7.4.33.zip"
+```
+
+curl:
+
+```text
+BASE="https://<YOUR-TOKEN>@windows.tuxcare.com"
+FILE="/php/7.4.33/tuxcare.els8/\
+php-7.4.33-tuxcare-els8-nts-Win32-vc15-x64-signed.zip"
+curl -O "${BASE}${FILE}"
+```
+
+</details>
+<br>
+:::
+
+<TableTabs>
+
+<template #Manual>
+
 <ELSSteps>
 
-1. Download the installer from your tokenized URL and launch it
+1. Open the repository in your browser
 
-   After the first run, the installer appears under **Settings > Apps**.
+   Navigate to your tokenized URL:
+
+   ```text
+   https://<YOUR-TOKEN>@windows.tuxcare.com/php/
+   ```
+
+   You will see a directory listing of all available PHP versions (e.g. `5.6.40/`, `7.4.33/`, `8.1.33/`). Click on the version you need.
+
+2. Choose the correct archive
+
+   Inside each version folder you will find subfolders named `tuxcare.elsN/`, where `N` is the TuxCare release number. Always select the subfolder with the **highest** number, as it contains the latest security updates. Each archive follows this naming pattern:
+
+   ```text
+   php-<version>-tuxcare-els<N>-<thread>-Win32-<vc>-<arch>-signed.zip
+   ```
+
+   Select the archive that matches your environment:
+
+   | Component | Options | How to choose |
+   | --- | --- | --- |
+   | **Thread safety** | `nts` (Non-Thread Safe) or `ts` (Thread Safe) | Use `nts` for IIS with FastCGI, nginx, or CLI. Use `ts` only for Apache `mod_php`. |
+   | **Architecture** | `x64` or `x86` | Use `x64` for 64-bit Windows (most common). Use `x86` only for 32-bit systems. |
+   | **VC runtime** | `vc15`, `vs16`, `vs17`, etc. | Indicates the required Visual C++ Redistributable. Download from [Microsoft](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist) if not installed. |
+
+   For example, to install PHP 7.4 (NTS, 64-bit), download `php-7.4.33-tuxcare-els8-nts-Win32-vc15-x64-signed.zip`. This archive requires the **Visual C++ Redistributable for Visual Studio 2017** (`vc15`).
+
+3. Extract the archive
+
+   Create a destination folder (e.g. `C:\PHP`) and extract the ZIP contents into it. Right-click the downloaded ZIP file, select **Extract All...**, set the destination, and click **Extract**.
+
+   Alternatively, use PowerShell:
+
+   ```text
+   New-Item -ItemType Directory -Path "C:\PHP" -Force
+   Expand-Archive `
+     -Path "$HOME\Downloads\php-7.4.33-tuxcare-els8-nts-Win32-vc15-x64-signed.zip" `
+     -DestinationPath "C:\PHP"
+   ```
+
+   After extraction, your directory should contain `php.exe`, `php.ini-development`, `php.ini-production`, and an `ext` folder with extension DLLs.
+
+4. Configure php.ini
+
+   Create a configuration file from one of the provided templates — copy `php.ini-development` for development or `php.ini-production` for production to `php.ini`:
+
+   ```text
+   Copy-Item "C:\PHP\php.ini-production" "C:\PHP\php.ini"
+   ```
+
+   Open `C:\PHP\php.ini` in a text editor, set the extension directory, and enable the extensions your application requires:
+
+   ```text
+   extension_dir = "C:\PHP\ext"
+   extension=curl
+   extension=mbstring
+   extension=mysqli
+   extension=openssl
+   ```
+
+5. Add PHP to the System PATH
+
+   To make `php` available from any terminal, add the PHP directory to the System PATH. Open **Settings > System > About** → **Advanced system settings** → **Environment Variables**. Under *System variables*, find **Path**, click **Edit**, then click **New** and add `C:\PHP`.
+
+   Alternatively, use PowerShell (run as Administrator):
+
+   ```text
+   $currentPath = [System.Environment]::GetEnvironmentVariable("Path", "Machine")
+   [System.Environment]::SetEnvironmentVariable("Path", "$currentPath;C:\PHP", "Machine")
+   ```
+
+   Close and reopen any terminal windows for the change to take effect.
+
+6. Verify the installation
+
+   Open **Command Prompt**, **PowerShell**, or **Terminal** and run:
+
+   ```text
+   php -v
+   ```
+
+   You should see output like:
+
+   ```text
+   PHP 7.4.33 (cli) (built: Mar 10 2026 10:12:00)
+   Copyright (c) The PHP Group
+   Zend Engine v3.4.0, Copyright (c) Zend Technologies
+   ```
+
+   To verify that the required extensions are loaded, run `php -m`.
+
+</ELSSteps>
+
+</template>
+
+<template #TuxCare_Installer>
+
+TuxCare Installer allows you to install and manage ELS PHP versions through a graphical interface on Windows Server 2019, 2022, and 2025.
+
+<ELSSteps>
+
+1. Download the installer and launch it
+
+   Download the installer using your tokenized URL:
+
+   ```text
+   https://<YOUR-TOKEN>@windows.tuxcare.com/php/installer/TuxCare.Installer.exe
+   ```
+
+   Run the downloaded file. After the first run, the installer appears under **Settings > Apps**.
 
 2. Register with your license key or authentication token
 
@@ -301,7 +484,7 @@ TuxCare provides a Windows Installer that allows you to install and manage ELS P
    ![image](/images/php-installer-versions-2.webp)
    :::
 
-4. Choose Installation Path and load modules
+4. Choose installation path and load modules
 
    By default, the installer uses `C:\Program Files`. Click **Change** to install to a different location.
 
@@ -329,6 +512,10 @@ TuxCare provides a Windows Installer that allows you to install and manage ELS P
 
 During installation, the installer creates a folder with PHP configuration and selected modules, and adds TuxCare PHP to the **System PATH**.
 
+</template>
+
+</TableTabs>
+<br>
 <details>
  <summary>How to find System PATH</summary>
 
@@ -382,9 +569,9 @@ memory_limit=256M
 
 #### Uninstallation
 
-To **uninstall a PHP version**, delete the PHP installation directory (e.g., `C:\Program Files\TuxCare\php-version`) and remove the corresponding path from **System Path**.
+To **uninstall a PHP version manually**, delete the PHP installation directory (e.g. `C:\PHP`) and remove the corresponding path from **System Path**.
 
-To **uninstall TuxCare Installer**, open **Settings > Apps**, find *TuxCare Installer* and click **Uninstall**.
+To **uninstall via TuxCare Installer**, open **Settings > Apps**, find *TuxCare Installer* and click **Uninstall**.
 
 ## SaxonC Use Case
 
