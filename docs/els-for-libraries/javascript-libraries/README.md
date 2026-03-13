@@ -25,6 +25,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **i18next** 23.16.8
 * **ini** 1.3.5
 * **ip** 1.1.5, 2.0.0
+* **jquery-validation** 1.19.0
 * **jsonpath-plus** 7.2.0
 * **jspdf** 2.5.2
 * **marked** 4.0.9

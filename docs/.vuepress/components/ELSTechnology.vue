@@ -672,6 +672,11 @@ const techData = [
         link: "./jquery-ui/",
       },
       {
+        name: "jquery-validation",
+        versions: "1.19.0",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "JSON Web Token (JWT)",
         versions: "0.4.0 | 8.5.1",
         link: "./jsonwebtoken/",
