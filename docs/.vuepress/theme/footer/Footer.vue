@@ -49,6 +49,10 @@ const footerLogoAlt = computed(() => footerCustomAltText || "TuxCare");
   justify-content space-between
 
 
+  &__img img
+    height 2rem
+    width auto
+
   &-company-title
     font-size 0.8rem
     color #4a5568

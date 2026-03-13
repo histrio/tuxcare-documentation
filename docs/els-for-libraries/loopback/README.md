@@ -54,6 +54,7 @@ TuxCare provides ELS for LoopBack as an NPM package, hosted on a secure internal
        "loopback": "npm:@els-js/loopback@>=1.10.0-tuxcare.1"
      },
      "overrides": {
+        "loopback@1.10.0": "npm:@els-js/loopback@>=1.10.0-tuxcare.1",
         "aws-sdk": "npm:@els-js/aws-sdk@>=2.0.5-tuxcare.1",
         "base64-url": "npm:@els-js/base64-url@>=1.2.1-tuxcare.1",
         "basic-auth-connect": "npm:@els-js/basic-auth-connect@>=1.0.0-tuxcare.1",
@@ -86,6 +87,9 @@ TuxCare provides ELS for LoopBack as an NPM package, hosted on a secure internal
      ```text
      "dependencies": {
        "loopback": "npm:@els-js/loopback@>=2.42.0-tuxcare.1"
+     },
+     "overrides": {
+       "loopback@2.42.0": "npm:@els-js/loopback@>=2.42.0-tuxcare.1"
      }
      ```
 

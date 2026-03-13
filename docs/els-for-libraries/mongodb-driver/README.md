@@ -52,6 +52,9 @@ TuxCare provides ELS for MongoDB driver as an NPM package, hosted on a secure in
      ```text
      "dependencies": {
        "mongodb": "npm:@els-js/mongodb@>=2.2.36-tuxcare.1"
+     },
+     "overrides": {
+       "mongodb@2.2.36": "npm:@els-js/mongodb@>=2.2.36-tuxcare.1"
      }
      ```
 
@@ -77,6 +80,9 @@ TuxCare provides ELS for MongoDB driver as an NPM package, hosted on a secure in
      ```text
      "dependencies": {
        "mongodb": "npm:@els-js/mongodb@>=2.2.36-tuxcare.1"
+     },
+     "overrides": {
+       "mongodb@2.2.36": "npm:@els-js/mongodb@>=2.2.36-tuxcare.1"
      }
      ```
 

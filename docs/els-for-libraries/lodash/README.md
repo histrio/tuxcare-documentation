@@ -56,6 +56,9 @@ TuxCare provides ELS for Lodash as an NPM package, hosted on a secure internal r
       ```text
       "dependencies": {
         "lodash": "npm:@els-js/lodash@>=4.5.0-tuxcare.1"
+      },
+      "overrides": {
+        "lodash@4.5.0": "npm:@els-js/lodash@>=4.5.0-tuxcare.1"
       }
       ```
 
@@ -66,6 +69,9 @@ TuxCare provides ELS for Lodash as an NPM package, hosted on a secure internal r
       ```text
       "dependencies": {
         "lodash": "npm:@els-js/lodash@>=4.17.15-tuxcare.1"
+      },
+      "overrides": {
+        "lodash@4.17.15": "npm:@els-js/lodash@>=4.17.15-tuxcare.1"
       }
       ```
 
@@ -76,6 +82,9 @@ TuxCare provides ELS for Lodash as an NPM package, hosted on a secure internal r
       ```text
       "dependencies": {
         "lodash": "npm:@els-js/lodash@>=4.17.19-tuxcare.1"
+      },
+      "overrides": {
+        "lodash@4.17.19": "npm:@els-js/lodash@>=4.17.19-tuxcare.1"
       }
       ```
 
@@ -105,6 +114,9 @@ TuxCare provides ELS for Lodash as an NPM package, hosted on a secure internal r
      ```text
      "dependencies": {
        "lodash": "npm:@els-js/lodash@>=4.17.19-tuxcare.1"
+     },
+     "overrides": {
+       "lodash@4.17.19": "npm:@els-js/lodash@>=4.17.19-tuxcare.1"
      }
      ```
 

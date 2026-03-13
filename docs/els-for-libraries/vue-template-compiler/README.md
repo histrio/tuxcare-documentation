@@ -35,8 +35,8 @@ TuxCare provides ELS for vue-template-compiler as an NPM package, hosted on a se
 
    ```text
    registry=https://registry.npmjs.org/
-   @els-js:registry=https://nexus.repo.tuxcare.com/repository/els-js/
-   //nexus.repo.tuxcare.com/repository/els-js/:_auth=${TOKEN}
+   @els-vue:registry=https://nexus.repo.tuxcare.com/repository/els-vue/
+   //nexus.repo.tuxcare.com/repository/els-vue/:_auth=${TOKEN}
    ```
 
    :::warning
@@ -51,16 +51,19 @@ TuxCare provides ELS for vue-template-compiler as an NPM package, hosted on a se
 
      ```text
      "dependencies": {
-       "vue-template-compiler": "npm:@els-js/vue-template-compiler@>=2.6.11-tuxcare.1"
+       "vue-template-compiler": "npm:@els-vue/vue-template-compiler@>=2.6.11-tuxcare.1"
+     },
+     "overrides": {
+       "vue-template-compiler@2.6.11": "npm:@els-vue/vue-template-compiler@>=2.6.11-tuxcare.1"
      }
      ```
 
    * **Option 2: TuxCare Patcher (Automated)**
 
-     Install the Patcher globally and run it. The TuxCare Patcher automatically detects the vue-template-compiler version in your `package.json` and updates your `dependencies` and `overrides` to use the corresponding TuxCare `@els-js/*` packages.
+     Install the Patcher globally and run it. The TuxCare Patcher automatically detects the vue-template-compiler version in your `package.json` and updates your `dependencies` and `overrides` to use the corresponding TuxCare `@els-vue/*` packages.
 
      ```text
-     npm install -g @els-js/tuxcare-patcher --userconfig ./.npmrc
+     npm install -g @els-vue/tuxcare-patcher --userconfig ./.npmrc
      tuxcare-patch-js
      ```
 
@@ -76,7 +79,10 @@ TuxCare provides ELS for vue-template-compiler as an NPM package, hosted on a se
 
      ```text
      "dependencies": {
-       "vue-template-compiler": "npm:@els-js/vue-template-compiler@>=2.6.11-tuxcare.1"
+       "vue-template-compiler": "npm:@els-vue/vue-template-compiler@>=2.6.11-tuxcare.1"
+     },
+     "overrides": {
+       "vue-template-compiler@2.6.11": "npm:@els-vue/vue-template-compiler@>=2.6.11-tuxcare.1"
      }
      ```
 

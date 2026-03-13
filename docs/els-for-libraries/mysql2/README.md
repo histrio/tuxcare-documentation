@@ -52,6 +52,9 @@ TuxCare provides ELS for MySQL2 as an NPM package, hosted on a secure internal r
      ```text
      "dependencies": {
        "mysql2": "npm:@els-js/mysql2@>=2.3.3-tuxcare.1"
+     },
+     "overrides": {
+       "mysql2@2.3.3": "npm:@els-js/mysql2@>=2.3.3-tuxcare.1"
      }
      ```
 
@@ -77,6 +80,9 @@ TuxCare provides ELS for MySQL2 as an NPM package, hosted on a secure internal r
      ```text
      "dependencies": {
        "mysql2": "npm:@els-js/mysql2@>=2.3.3-tuxcare.1"
+     },
+     "overrides": {
+       "mysql2@2.3.3": "npm:@els-js/mysql2@>=2.3.3-tuxcare.1"
      }
      ```
 

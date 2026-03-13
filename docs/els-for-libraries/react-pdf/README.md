@@ -52,6 +52,9 @@ TuxCare provides ELS for react-pdf as an NPM package, hosted on a secure interna
      ```text
      "dependencies": {
        "react-pdf": "npm:@els-js/react-pdf@>=7.7.1-tuxcare.1"
+     },
+     "overrides": {
+       "react-pdf@7.7.1": "npm:@els-js/react-pdf@>=7.7.1-tuxcare.1"
      }
      ```
 
@@ -77,6 +80,9 @@ TuxCare provides ELS for react-pdf as an NPM package, hosted on a secure interna
      ```text
      "dependencies": {
        "react-pdf": "npm:@els-js/react-pdf@>=7.7.1-tuxcare.1"
+     },
+     "overrides": {
+       "react-pdf@7.7.1": "npm:@els-js/react-pdf@>=7.7.1-tuxcare.1"
      }
      ```
 

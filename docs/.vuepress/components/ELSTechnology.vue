@@ -90,6 +90,11 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "Apache Axis",
+        versions: "1.4",
+        link: "./java-libraries/",
+      },
+      {
         name: "Apache Commons BeanUtils",
         versions: "1.9.4",
         link: "./java-libraries/",
@@ -135,9 +140,19 @@ const techData = [
         link: "./apache-kafka/",
       },
       {
+        name: "Apache Log4j",
+        versions: "1.2.17",
+        link: "./apache-log4j/",
+      },
+      {
         name: "Apache Lucene®",
         versions: "5.5.5",
-        link: "./apache-lucene/",
+        link: "./apache-lucene-and-solr/",
+      },
+      {
+        name: "Apache Solr",
+        versions: "5.5.5",
+        link: "./apache-lucene-and-solr/",
       },
       {
         name: "Apache Maven",
@@ -176,6 +191,16 @@ const techData = [
         link: "./apache-velocity-engine/",
       },
       {
+        name: "Apache XMLBeans",
+        versions: "2.6.0",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Bouncy Castle",
+        versions: "1.76",
+        link: "./java-libraries/",
+      },
+      {
         name: "DNSJava",
         versions: "2.1.7",
         link: "./java-libraries/",
@@ -183,6 +208,21 @@ const techData = [
       {
         name: "Dom4j",
         versions: "1.6.1",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Eclipse JGit",
+        versions: "5.7.0 | 5.13.3",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Eclipse Parsson",
+        versions: "1.0.0",
+        link: "./java-libraries/",
+      },
+      {
+        name: "EdDSA",
+        versions: "0.3.0",
         link: "./java-libraries/",
       },
       {
@@ -206,8 +246,18 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "Google OAuth Client",
+        versions: "1.25.0",
+        link: "./java-libraries/",
+      },
+      {
         name: "H2 Database",
         versions: "1.4.200",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Hazelcast",
+        versions: "4.2.8",
         link: "./java-libraries/",
       },
       {
@@ -226,9 +276,24 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "iText",
+        versions: "2.1.7",
+        link: "./java-libraries/",
+      },
+      {
         name: "Jackson",
         versions: "1.9.13",
         link: "./jackson/",
+      },
+      {
+        name: "JBoss XNIO",
+        versions: "3.8.0",
+        link: "./java-libraries/",
+      },
+      {
+        name: "JDOM",
+        versions: "1.0 | 1.1.3",
+        link: "./java-libraries/",
       },
       {
         name: "JSON",
@@ -251,6 +316,21 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "LZ4",
+        versions: "1.8.1",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Mozilla Rhino",
+        versions: "1.7.10 | 1.7.15",
+        link: "./java-libraries/",
+      },
+      {
+        name: "NekoHTML",
+        versions: "1.9.22",
+        link: "./java-libraries/",
+      },
+      {
         name: "Netty",
         versions: "4.1.115.Final | 4.1.63.Final",
         link: "./java-libraries/",
@@ -258,6 +338,11 @@ const techData = [
       {
         name: "Nimbus JOSE + JWT",
         versions: "9.22 | 9.24.4",
+        link: "./java-libraries/",
+      },
+      {
+        name: "OkHttp3",
+        versions: "3.14.9",
         link: "./java-libraries/",
       },
       {
@@ -296,8 +381,8 @@ const techData = [
         link: "./java-libraries/",
       },
       {
-        name: "Reload4j",
-        versions: "1.2.17",
+        name: "RSocket",
+        versions: "1.1.3",
         link: "./java-libraries/",
       },
       {
@@ -308,6 +393,11 @@ const techData = [
       {
         name: "Snappy Java",
         versions: "1.1.8.4",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Sonatype Aether",
+        versions: "1.13.1",
         link: "./java-libraries/",
       },
       {
@@ -411,6 +501,11 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "Xerces",
+        versions: "2.11.0",
+        link: "./java-libraries/",
+      },
+      {
         name: "XMLUnit",
         versions: "2.9.1 | 2.9.0",
         link: "./java-libraries/",
@@ -444,6 +539,11 @@ const techData = [
       {
         name: "ansi-html",
         versions: "0.0.7",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "async",
+        versions: "2.6.1",
         link: "./javascript-libraries/",
       },
       {
@@ -536,6 +636,11 @@ const techData = [
         versions: "9.18.5",
         link: "./javascript-libraries/",
       },
+      {   
+        name: "handlebars",
+        versions: "3.0.3",
+        link: "./javascript-libraries/",
+      },
       {
         name: "http-proxy-middleware",
         versions: "0.19.1 | 2.0.8",
@@ -619,6 +724,16 @@ const techData = [
       {
         name: "minimatch",
         versions: "3.0.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "minimist",
+        versions: "1.2.8",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "moment",
+        versions: "2.10.6",
         link: "./javascript-libraries/",
       },
       {
@@ -1095,7 +1210,7 @@ const techData = [
       },
       {
         name: "DomPDF",
-        versions: "0.8.x | 1.2.x",
+        versions: "0.8.x | 1.2.x | 3.1.0",
         link: "./dompdf/",
       },
       {
@@ -1105,7 +1220,7 @@ const techData = [
       },
       {
         name: "Laravel",
-        versions: "5.8.38 | 8 | 10 | 11",
+        versions: "5.4.36 | 5.5.50 | 5.6.40 | 5.7.29 | 5.8.38 | 8 | 10 | 11",
         link: "./laravel/",
       },
       {
@@ -1156,22 +1271,6 @@ const techData = [
     ],
   },
   {
-    ecosystem: "Go",
-    ecosystemIcon: "/images/go_logo.webp",
-    projects: [
-      {
-        name: "Grafana",
-        versions: "10.4.1 | 11.2.0 | 11.3.0 | 11.4.0 | 11.5.0",
-        link: "./grafana/",
-      },
-      {
-        name: "Loki",
-        versions: "3.1.0 | 3.2.0 | 3.3.0",
-        link: "./loki/",
-      },
-    ],
-  },
-  {
     ecosystem: ".NET",
     ecosystemIcon: "/images/dotnet-logo.webp",
     projects: [
@@ -1192,7 +1291,7 @@ const techData = [
       },
       {
         name: "Newtonsoft.Json",
-        versions: "4.5.11 | 6.0.8 | 8.0.3 | 9.0.1 | 10.0.3 | 11.0.2 | 12.0.3",
+        versions: "4.5.11 | 4.5.12 | 6.0.8 | 6.0.9 | 8.0.3 | 8.0.4 | 9.0.1 | 9.0.2 | 10.0.3 | 10.0.4 | 11.0.2 | 11.0.3 | 12.0.3 | 12.0.4",
         link: "./dotnet/",
       },
       {

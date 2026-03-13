@@ -56,6 +56,9 @@ TuxCare provides ELS for PostCSS as an NPM package, hosted on a secure internal 
       ```text
       "dependencies": {
         "postcss": "npm:@els-js/postcss@>=7.0.39-tuxcare.1"
+      },
+      "overrides": {
+        "postcss@7.0.39": "npm:@els-js/postcss@>=7.0.39-tuxcare.1"
       }
       ```
 
@@ -66,6 +69,9 @@ TuxCare provides ELS for PostCSS as an NPM package, hosted on a secure internal 
       ```text
       "dependencies": {
         "postcss": "npm:@els-js/postcss@>=8.3.6-tuxcare.1"
+      },
+      "overrides": {
+        "postcss@8.3.6": "npm:@els-js/postcss@>=8.3.6-tuxcare.1"
       }
       ```
 
@@ -95,6 +101,9 @@ TuxCare provides ELS for PostCSS as an NPM package, hosted on a secure internal 
      ```text
      "dependencies": {
        "postcss": "npm:@els-js/postcss@>=8.3.6-tuxcare.1"
+     },
+     "overrides": {
+       "postcss@8.3.6": "npm:@els-js/postcss@>=8.3.6-tuxcare.1"
      }
      ```
 

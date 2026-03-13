@@ -71,6 +71,9 @@ TuxCare provides ELS for React as an NPM package, hosted on a secure internal re
      ```text
      "dependencies": {
        "react": "npm:@els-js/react@>=19.2.0-tuxcare.1"
+     },
+     "overrides": {
+       "react@19.2.0": "npm:@els-js/react@>=19.2.0-tuxcare.1"
      }
      ```
 
@@ -81,6 +84,9 @@ TuxCare provides ELS for React as an NPM package, hosted on a secure internal re
       ```text
       "dependencies": {
         "react": "npm:@els-js/react@>=15.6.2-tuxcare.1"
+      },
+      "overrides": {
+        "react@15.6.2": "npm:@els-js/react@>=15.6.2-tuxcare.1"
       }
       ```
 
@@ -91,6 +97,9 @@ TuxCare provides ELS for React as an NPM package, hosted on a secure internal re
       ```text
       "dependencies": {
         "react": "npm:@els-js/react@>=19.2.0-tuxcare.1"
+      },
+      "overrides": {
+        "react@19.2.0": "npm:@els-js/react@>=19.2.0-tuxcare.1"
       }
       ```
 

@@ -52,6 +52,9 @@ TuxCare provides ELS for react-dom as an NPM package, hosted on a secure interna
      ```text
      "dependencies": {
        "react-dom": "npm:@els-js/react-dom@>=16.4.1-tuxcare.1"
+     },
+     "overrides": {
+       "react-dom@16.4.1": "npm:@els-js/react-dom@>=16.4.1-tuxcare.1"
      }
      ```
 
@@ -77,6 +80,9 @@ TuxCare provides ELS for react-dom as an NPM package, hosted on a secure interna
      ```text
      "dependencies": {
        "react-dom": "npm:@els-js/react-dom@>=16.4.1-tuxcare.1"
+     },
+     "overrides": {
+       "react-dom@16.4.1": "npm:@els-js/react-dom@>=16.4.1-tuxcare.1"
      }
      ```
 
