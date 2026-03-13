@@ -1,36 +1,27 @@
 # CentOS 8 ELS
+<ELSPrerequisites>
 
-## Supported Architecture and Packages
+* A valid TuxCare ELS license key
+* Root access to the server
+* TCP port 443 open to [cln.cloudlinux.com](http://cln.cloudlinux.com) and [repo.cloudlinux.com](http://repo.cloudlinux.com)
+* Architecture: x86_64. For other architectures, please contact our [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
-Supported architecture is x86_64. For other architectures, please contact our [sales@tuxcare.com](mailto:sales@tuxcare.com).
+</ELSPrerequisites>
 
-The list of supported packages is provided here:
-
-* [CentOS 8.4 ELS](https://cve.tuxcare.com/els/projects?os=aa4ebb59-95d6-4734-9014-0dded2e4a382&project=&version=&packages=&orderBy=project-asc)
-
-* [CentOS 8.5 ELS](https://cve.tuxcare.com/els/projects?os=a3407f4d-0962-4971-bb9f-3141bb924451&project=&version=&packages=&orderBy=project-asc)
-
-## Connecting to ELS repository
-
-To install the Endless Lifecycle Support repository on a server, download an installation script and run it with a license key. The installation script registers the server in the CLN using the license key, adds a PGP key to the server, and creates the ELS repository.
-
-### Outbound Firewall Settings
-
-To use Endless Lifecycle Support for CentOS 8, you need to open TCP port 443 to the following destinations:
-
-* [cln.cloudlinux.com](http://cln.cloudlinux.com)
-* [repo.cloudlinux.com](http://repo.cloudlinux.com)
+<ELSSteps>
 
 ## Installing the repository
 
-1. Download an installation script:
+1. Download the install script:
 
    <CodeTabs :tabs="[
      { title: 'CentOS 8.4 ELS', content: `wget https://repo.els.tuxcare.com/centos8.4-els/install-centos8.4-els-repo.sh` },
      { title: 'CentOS 8.5 ELS', content: `wget https://repo.els.tuxcare.com/centos8.5-els/install-centos8.5-els-repo.sh` }
    ]" />
 
-2. Run the installation script with your license key. It registers the server in the CLN with the key, adds a PGP key to the server.
+2. Run with your license key.
+
+   The script registers the server in the CLN with the key, adds a PGP key to the server.
 
    <CodeTabs :tabs="[
      { title: 'CentOS 8.4 ELS', content: `sh install-centos8.4-els-repo.sh --license-key XXXXXXXXXXX` },
@@ -64,36 +55,21 @@ To use Endless Lifecycle Support for CentOS 8, you need to open TCP port 443 to 
    Description  : CentOS Server els-release file
    ```
 
-## Security Updates
+</ELSSteps>
 
-TuxCare provides security updates as a part of ELS for OS along with OpenSCAP scanning instructions - [learn more](/els-for-os/machine-readable-security-data/).
+## What's next?
 
-* **CentOS 8.4 ELS OVAL stream**: [oval.xml](https://security.tuxcare.com/oval/els_os/centos8.4els/oval.xml)
-* **CentOS 8.5 ELS OVAL stream**: [oval.xml](https://security.tuxcare.com/oval/els_os/centos8.5els/oval.xml)
+<WhatsNext hide-title :versions="['Centos-8.4', 'Centos-8.5']">
 
-* **CentOS 8.4 ELS CSAF data**: [security.tuxcare.com/csaf/v2/els_os/centos8.4els/](https://security.tuxcare.com/csaf/v2/els_os/centos8.4els/)
-* **CentOS 8.5 ELS CSAF data**: [security.tuxcare.com/csaf/v2/els_os/centos8.5els/](https://security.tuxcare.com/csaf/v2/els_os/centos8.5els/)
+* [8.4] ![](/images/shield-alert.webp) [OVAL](https://security.tuxcare.com/oval/els_os/centos8.4els/oval.xml) — OVAL security data
+* [8.5] ![](/images/shield-alert.webp) [OVAL](https://security.tuxcare.com/oval/els_os/centos8.5els/oval.xml) — OVAL security data
+* [8.4] ![](/images/unlock-alt.webp) [CSAF](https://security.tuxcare.com/csaf/v2/els_os/centos8.4els/) — CSAF security advisories
+* [8.5] ![](/images/unlock-alt.webp) [CSAF](https://security.tuxcare.com/csaf/v2/els_os/centos8.5els/) — CSAF security advisories
+* [8.4] ![](/images/eye.webp) [RSS](https://cve.tuxcare.com/rss_feed/els/releases/centos8.4els) — Release notifications
+* [8.5] ![](/images/eye.webp) [RSS](https://cve.tuxcare.com/rss_feed/els/releases/centos8.5els) — Release notifications
+* ![](/images/shield.webp) [Machine-Readable Security Data](/els-for-os/machine-readable-security-data/) — Errata, OVAL, CSAF
+* [8.4] ![](/images/box.webp) [Supported packages list](https://cve.tuxcare.com/els/projects?os=aa4ebb59-95d6-4734-9014-0dded2e4a382&project=&version=&packages=&orderBy=project-asc) — Full list of packages covered by ELS
+* [8.5] ![](/images/box.webp) [Supported packages list](https://cve.tuxcare.com/els/projects?os=a3407f4d-0962-4971-bb9f-3141bb924451&project=&version=&packages=&orderBy=project-asc) — Full list of packages covered by ELS
+* ![](/images/wrench.webp) [Managing the ELS repository](/els-for-os/managing-els-repository/) — Updates, local mirror, and other repository operations
 
-* **CentOS 8.4 ELS RSS release feed**: [cve.tuxcare.com/rss_feed/els/releases/centos8.4els](https://cve.tuxcare.com/rss_feed/els/releases/centos8.4els)
-* **CentOS 8.5 ELS RSS release feed**: [cve.tuxcare.com/rss_feed/els/releases/centos8.5els](https://cve.tuxcare.com/rss_feed/els/releases/centos8.5els)
-
-## Removing the ELS repository
-
-1. List ELS repository file (ending with `-els.repo`) in the repository folder:
-
-   ```
-   ls -l /etc/yum.repos.d/*-els.repo
-   ```
-
-   Remove the file to disable the ELS repository, for example:
-
-   ```
-   rm /etc/yum.repos.d/centos8.5-els.repo
-   ```
-
-2. Uninstall the `els-define` package:
-
-   ```
-   yum remove els-define
-   ```
-
+</WhatsNext>

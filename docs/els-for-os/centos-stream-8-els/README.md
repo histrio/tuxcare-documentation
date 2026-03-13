@@ -1,31 +1,26 @@
 # CentOS Stream 8 ELS
+<ELSPrerequisites>
 
-## Supported Architecture and Packages
+* A valid TuxCare ELS license key
+* Root access to the server
+* TCP port 443 open to [cln.cloudlinux.com](http://cln.cloudlinux.com) and [repo.tuxcare.com](http://repo.tuxcare.com)
+* Architecture: x86_64. For other architectures, please contact our [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
-Supported architecture is x86_64. For other architectures, please contact our [sales@tuxcare.com](mailto:sales@tuxcare.com).
+</ELSPrerequisites>
 
-The list of supported packages is provided [here](https://cve.tuxcare.com/els/projects?os=becccb8e-9378-476f-a37c-48c3d5cb1105&project=&version=&packages=&orderBy=project-asc).
-
-## Connecting to ELS repository
-
-To install the Endless Lifecycle Support repository on a server, download an installation script and run it with a license key. The installation script registers the server in the CLN using the license key, adds a PGP key to the server, and creates the ELS repository.
-
-### Outbound Firewall Settings
-
-To use Endless Lifecycle Support for CentOS Stream 8, you need to open TCP port 443 to the following destinations:
-
-* [cln.cloudlinux.com](http://cln.cloudlinux.com)
-* [repo.tuxcare.com](http://repo.tuxcare.com)
+<ELSSteps>
 
 ## Installing the repository
 
-1. Download an installation script:
+1. Download the install script:
 
    ```
    wget https://repo.tuxcare.com/centos8stream-els/install-centos8stream-els-repo.sh
    ```
 
-2. Run the installation script with your license key. It registers the server in the CLN with the key, adds a PGP key to the server.
+2. Run with your license key.
+
+   The script registers the server in the CLN with the key, adds a PGP key to the server.
 
    ```
    sh install-centos8stream-els-repo.sh --license-key XXXXXXXX
@@ -58,31 +53,17 @@ To use Endless Lifecycle Support for CentOS Stream 8, you need to open TCP port 
    Description : CentOS Server simulate els release files
    ```
 
-## Security Updates
+</ELSSteps>
 
-TuxCare provides security updates as a part of ELS for OS along with OpenSCAP scanning instructions - [learn more](/els-for-os/machine-readable-security-data/).
+## What's next?
 
-* **CentOS Stream 8 ELS OVAL stream**: [oval.xml](https://security.tuxcare.com/oval/els_os/centos-stream8els/oval.xml)
-* **CentOS Stream 8 ELS CSAF data**: [security.tuxcare.com/csaf/v2/els_os/centos-stream8els/](https://security.tuxcare.com/csaf/v2/els_os/centos-stream8els/)
-* **CentOS Stream 8 ELS RSS release feed**: [cve.tuxcare.com/rss_feed/els/releases/centos8streamels](https://cve.tuxcare.com/rss_feed/els/releases/centos8streamels)
+<WhatsNext hide-title>
 
-## Removing the ELS repository
+* ![](/images/shield-alert.webp) [OVAL](https://security.tuxcare.com/oval/els_os/centos-stream8els/oval.xml) — OVAL security data
+* ![](/images/unlock-alt.webp) [CSAF](https://security.tuxcare.com/csaf/v2/els_os/centos-stream8els/) — CSAF security advisories
+* ![](/images/eye.webp) [RSS](https://cve.tuxcare.com/rss_feed/els/releases/centos8streamels) — Release notifications
+* ![](/images/shield.webp) [Machine-Readable Security Data](/els-for-os/machine-readable-security-data/) — Errata, OVAL, CSAF
+* ![](/images/box.webp) [Supported packages list](https://cve.tuxcare.com/els/projects?os=becccb8e-9378-476f-a37c-48c3d5cb1105&project=&version=&packages=&orderBy=project-asc) — Full list of packages covered by ELS
+* ![](/images/wrench.webp) [Managing the ELS repository](/els-for-os/managing-els-repository/) — Updates, local mirror, and other repository operations
 
-1. List ELS repository file (ending with `-els.repo`) in the repository folder:
-
-   ```
-   ls -l /etc/yum.repos.d/*-els.repo
-   ```
-
-   Remove the file to disable the ELS repository, for example:
-
-   ```
-   rm /etc/yum.repos.d/centos8stream-els.repo
-   ```
-
-2. Uninstall the `els-define` package:
-
-   ```
-   yum remove els-define
-   ```
-
+</WhatsNext>

@@ -1,32 +1,26 @@
 # CentOS 6 ELS
+<ELSPrerequisites>
 
-## Supported Architecture and Packages
+* A valid TuxCare ELS license key
+* Root access to the server
+* TCP port 443 open to [cln.cloudlinux.com](http://cln.cloudlinux.com), [repo.cloudlinux.com](http://repo.cloudlinux.com), and [els-rollout.cloudlinux.com](https://els-rollout.cloudlinux.com/)
+* Architecture: x86_64. For other architectures, please contact our [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
-Supported architecture is x86_64. For other architectures, please contact our [sales@tuxcare.com](mailto:sales@tuxcare.com).
+</ELSPrerequisites>
 
-The list of supported packages is provided [here](https://cve.tuxcare.com/els/projects?os=ed7974b4-29fc-4e1c-999f-6c76e065e48f&project=&version=&packages=&orderBy=project-asc).
-
-## Connecting to ELS repository
-
-To install the Endless Lifecycle Support repository on a server, download an installation script and run it with a license key. The installation script registers the server in the CLN using the license key, adds a PGP key to the server, and creates the ELS repository.
-
-### Outbound Firewall Settings
-
-To use Endless Lifecycle Support for CentOS 6, you need to open TCP port 443 to the following destinations:
-
-* [cln.cloudlinux.com](http://cln.cloudlinux.com)
-* [repo.cloudlinux.com](http://repo.cloudlinux.com)
-* [els-rollout.cloudlinux.com](https://els-rollout.cloudlinux.com/)
+<ELSSteps>
 
 ## Installing the repository
 
-1. Download an installation script:
+1. Download the install script:
 
    ```
    wget https://repo.els.tuxcare.com/centos6-els/install-centos6-els-repo.sh
    ```
 
-2. Run the installation script with your license key. It registers the server in the CLN with the key, adds a PGP key to the server.
+2. Run with your license key.
+
+   The script registers the server in the CLN with the key, adds a PGP key to the server.
 
    ```
    sh install-centos6-els-repo.sh --license-key XXXXXXXX
@@ -59,36 +53,17 @@ To use Endless Lifecycle Support for CentOS 6, you need to open TCP port 443 to 
    Description : CentOS Server simulate els release files
    ```
 
-## Security Updates
+</ELSSteps>
 
-TuxCare provides security updates as a part of ELS for OS along with OpenSCAP scanning instructions - [learn more](/els-for-os/machine-readable-security-data/).
+## What's next?
 
-* **CentOS 6 ELS OVAL stream**: [oval.xml](https://security.tuxcare.com/oval/els_os/centos6els/oval.xml)
-* **CentOS 6 ELS CSAF data**: [security.tuxcare.com/csaf/v2/els_os/centos6els/](https://security.tuxcare.com/csaf/v2/els_os/centos6els/)
-* **CentOS 6 ELS RSS release feed**: [cve.tuxcare.com/rss_feed/els/releases/centos6els](https://cve.tuxcare.com/rss_feed/els/releases/centos6els)
+<WhatsNext hide-title>
 
-## Removing the ELS repository
+* ![](/images/shield-alert.webp) [OVAL](https://security.tuxcare.com/oval/els_os/centos6els/oval.xml) — OVAL security data
+* ![](/images/unlock-alt.webp) [CSAF](https://security.tuxcare.com/csaf/v2/els_os/centos6els/) — CSAF security advisories
+* ![](/images/eye.webp) [RSS](https://cve.tuxcare.com/rss_feed/els/releases/centos6els) — Release notifications
+* ![](/images/shield.webp) [Machine-Readable Security Data](/els-for-os/machine-readable-security-data/) — Errata, OVAL, CSAF
+* ![](/images/box.webp) [Supported packages list](https://cve.tuxcare.com/els/projects?os=ed7974b4-29fc-4e1c-999f-6c76e065e48f&project=&version=&packages=&orderBy=project-asc) — Full list of packages covered by ELS
+* ![](/images/wrench.webp) [Managing the ELS repository](/els-for-os/managing-els-repository/) — Updates, local mirror, and other repository operations
 
-1. List ELS repository file (ending with `-els.repo`) in the repository folder:
-
-   ```
-   ls -l /etc/yum.repos.d/*-els.repo
-   ```
-
-   Example output:
-   ```
-   -rw-r--r-- 1 root root 210 Aug  2  2021 /etc/yum.repos.d/centos6-els.repo
-   ```
-
-   Remove the file to disable the ELS repository:
-
-   ```
-   rm /etc/yum.repos.d/centos6-els.repo
-   ```
-
-2. Uninstall the `els-define` package:
-
-   ```
-   yum remove els-define
-   ```
-
+</WhatsNext>
