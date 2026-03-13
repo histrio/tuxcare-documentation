@@ -166,7 +166,6 @@ Fixes for the following vulnerabilities are available in ELS for JavaScript Libr
 | CVE-2024-48910 | Direct   | Critical | dompurify          | < 2.4.2            |
 | GHSA-vjh7-7g9h-fjfh | Direct   | Critical | elliptic          | <= 6.6.0           |
 | CVE-2025-7783  | Direct   | Critical | form-data          | < 2.5.4, 3.0.0 - 3.0.3, 4.0.0 - 4.0.3 |
-| CVE-2021-44906 | Direct   | Critical | minimist | 1.2.8 |
 | CVE-2018-13863 | Direct   | High     | bson               | >= 0.5.0, < 1.0.5 |
 | CVE-2021-23424 | Direct   | High     | ansi-html          | < 0.0.8            |
 | CVE-2021-23358 | Direct   | High     | underscore         | >= 1.3.2 < 1.12.1  |
@@ -210,7 +209,6 @@ Fixes for the following vulnerabilities are available in ELS for JavaScript Libr
 | CVE-2025-30359 | Direct   | Medium   | webpack-dev-server | < 5.2.1            |
 | CVE-2025-32997 | Direct   | Medium   | http-proxy-middleware | < 2.0.9, 3.x < 3.0.5 |
 | AIKIDO-2025-10177 | Direct   | Medium   | copy-anything     | 1.0.0 - 4.0.3      |
-| CVE-2020-7598 | Direct   | Medium | minimist | 1.2.8 |
 | GHSA-593m-55hh-j8gv | Direct   | Moderate | @sentry/browser   | < 7.119.1, >= 8.0.0-alpha.1, < 8.33.0 |
 | GHSA-rvg8-pwq2-xj7q | Direct   | Moderate | base64url         | < 3.0.0            |
 | CVE-2025-46653 | Direct   | Low      | formidable        | >= 2.1.0, < 3.5.3  |
