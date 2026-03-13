@@ -182,7 +182,7 @@ const techData = [
       },
       {
         name: "Apache Tomcat®",
-        versions: "8.5.100 | 9.0.50 | 9.0.75 | 9.0.83 | 9.0.87 | 9.0.90 | 9.0.100 | 10.1.18",
+        versions: "8.5.100 | 9.0.46 | 9.0.50 | 9.0.75 | 9.0.83 | 9.0.87 | 9.0.90 | 9.0.100 | 10.1.18",
         link: "./apache-tomcat/",
       },
       {
@@ -237,7 +237,7 @@ const techData = [
       },
       {
         name: "Google Guava",
-        versions: "20.0 | 25.1-android | 25.1-jre | 30.1-jre | 31.1-jre",
+        versions: "20.0 | 25.1-android | 25.1-jre | 27.1-android | 27.1-jre | 30.1-jre | 31.1-jre",
         link: "./java-libraries/",
       },
       {
