@@ -632,6 +632,11 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "handlebars",
+        versions: "3.0.3",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "http-proxy-middleware",
         versions: "0.19.1 | 2.0.8",
         link: "./javascript-libraries/",
