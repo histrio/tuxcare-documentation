@@ -36,13 +36,13 @@ const applications = [
     name: "Apache Hadoop",
     versions: "2.7.1 | 2.7.3",
     link: "./apache-hadoop/",
-    icon: "/images/apache.webp",
+    icon: "/images/hadoop.webp",
   },
   {
     name: "Apache Hive",
     versions: "2.3.9",
     link: "./apache-hive/",
-    icon: "/images/apache.webp",
+    icon: "/images/hive.webp",
   },
   {
     name: "Apache Tomcat®",
@@ -51,16 +51,28 @@ const applications = [
     icon: "/images/tomcat.webp",
   },
   {
-    name: "Apache Maven",
-    versions: "3.8.1",
-    link: "./maven/",
-    icon: "/images/apache.webp",
-  },
-  {
     name: "Gradle",
     versions: "6.9.4 | 7.6.6",
     link: "./gradle/",
     icon: "/images/gradle.webp",
+  },
+  {
+    name: "Grafana",
+    versions: "10.4.1 | 11.2.0 | 11.3.0 | 11.4.0 | 11.5.0",
+    link: "./grafana/",
+    icon: "/images/grafana_logo.webp",
+  },
+  {
+    name: "Loki",
+    versions: "3.1.0 | 3.2.0 | 3.3.0",
+    link: "./loki/",
+    icon: "/images/loki.webp",
+  },
+  {
+    name: "Maven",
+    versions: "3.8.1",
+    link: "./maven/",
+    icon: "/images/maven.webp",
   },
 ];
 </script>

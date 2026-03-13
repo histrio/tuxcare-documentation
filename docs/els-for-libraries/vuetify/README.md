@@ -52,6 +52,9 @@ TuxCare provides ELS for Vuetify as an NPM package, hosted on a secure internal 
      ```text
      "dependencies": {
        "vuetify": "npm:@els-js/vuetify@>=2.5.5-tuxcare.1"
+     },
+     "overrides": {
+       "vuetify@2.5.5": "npm:@els-js/vuetify@>=2.5.5-tuxcare.1"
      }
      ```
 
@@ -77,6 +80,9 @@ TuxCare provides ELS for Vuetify as an NPM package, hosted on a secure internal 
      ```text
      "dependencies": {
        "vuetify": "npm:@els-js/vuetify@>=2.5.5-tuxcare.1"
+     },
+     "overrides": {
+       "vuetify@2.5.5": "npm:@els-js/vuetify@>=2.5.5-tuxcare.1"
      }
      ```
 

@@ -5,6 +5,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 ## Supported JavaScript Libraries
 
 * **ansi-html** 0.0.7
+* **async** 2.6.1
 * **base64url** 0.0.6
 * **bson** 0.5.7, 1.0.9
 * **braces** 2.3.2
@@ -18,6 +19,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **express-jwt** 0.1.3
 * **form-data** 2.3.3
 * **formidable** 2.1.2
+* **handlebars** 3.0.3
 * **http-proxy-middleware** 0.19.1, 2.0.8
 * **i18next** 23.16.8
 * **ini** 1.3.5
@@ -28,6 +30,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **micromatch** 3.1.10
 * **minimatch** 3.0.4
 * **minimist** 1.2.8
+* **moment** 2.10.6
 * **multer** 1.4.5-lts
 * **node-forge** 0.10.0
 * **nth-check** 1.0.2
@@ -96,6 +99,9 @@ TuxCare provides ELS for JavaScript libraries as NPM packages, hosted on a secur
       ```text
       "dependencies": {
         "cookie": "npm:@els-js/cookie@>=0.4.2-tuxcare.1"
+      },
+      "overrides": {
+        "cookie@0.4.2": "npm:@els-js/cookie@>=0.4.2-tuxcare.1"
       }
       ```
 
@@ -195,6 +201,7 @@ Fixes for the following vulnerabilities are available in ELS for JavaScript Libr
 | CVE-2020-7733  | Direct   | High     | ua-parser-js      | < 0.7.22           |
 | CVE-2020-7793  | Direct   | High     | ua-parser-js      | < 0.7.23           |
 | CVE-2021-27292 | Direct   | High     | ua-parser-js      | >= 0.7.14, < 0.7.24 |
+| CVE-2021-43138 | Direct   | High     | async             | < 2.6.4 |
 | CVE-2017-16137 | Direct   | Medium   | debug             | >= 2.0.0, < 2.6.9, >= 3.0.0, < 3.1.0 |
 | CVE-2020-7608  | Direct   | Medium   | yargs-parser      | < 5.0.1, ≥ 6.0.0 < 13.1.2, ≥ 14.0.0 < 15.0.1, ≥ 16.0.0 < 18.1.1 |
 | CVE-2023-0842  | Direct   | Medium   | xml2js            | 0.4.23             |
