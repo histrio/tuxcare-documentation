@@ -642,6 +642,11 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "hoek",
+        versions: "2.12.0 | 2.14.0",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "http-proxy-middleware",
         versions: "0.19.1 | 2.0.8",
         link: "./javascript-libraries/",
@@ -818,7 +823,7 @@ const techData = [
       },
       {
         name: "qs",
-        versions: "5.1.0 | 5.2.0",
+        versions: "2.2.5 | 2.3.3 | 2.4.2 | 5.1.0 | 5.2.0",
         link: "./javascript-libraries/",
       },
       {
@@ -867,8 +872,18 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "shell-quote",
+        versions: "1.4.3",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "ssr-window",
         versions: "4.0.2",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "stringstream",
+        versions: "0.0.4",
         link: "./javascript-libraries/",
       },
       {
@@ -892,8 +907,18 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "tunnel-agent",
+        versions: "0.4.0",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "UAParser.js",
         versions: "0.7.21",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "uglify-js",
+        versions: "1.1.1",
         link: "./javascript-libraries/",
       },
       {
@@ -1316,7 +1341,7 @@ const techData = [
       },
       {
         name: "SharpZipLib",
-        versions: "0.86.0",
+        versions: "0.86.0 | 0.86.1",
         link: "./dotnet/",
       },
     ],

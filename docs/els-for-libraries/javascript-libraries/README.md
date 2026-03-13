@@ -21,6 +21,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **formidable** 2.1.2
 * **highlight.js** 9.18.5
 * **handlebars** 3.0.3
+* **hoek** 2.12.0, 2.14.0
 * **http-proxy-middleware** 0.19.1, 2.0.8
 * **i18next** 23.16.8
 * **ini** 1.3.5
@@ -40,17 +41,21 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **parsejson** 0.0.3
 * **pdfjs-dist** 2.16.105
 * **picocolors** 0.2.1
-* **qs** 5.1.0, 5.2.0
+* **qs** 2.2.5, 2.3.3, 2.4.2, 5.1.0, 5.2.0
 * **quill** 1.3.7
 * **request** 2.88.0
 * **rollup** 2.1.0, 2.26.5, 2.38.4, 2.79.1, 2.79.2
 * **semver** 7.1.3, 7.3.2
 * **sentry-browser** 5.7.1
+* **shell-quote** 1.4.3
 * **ssr-window** 4.0.2
+* **stringstream** 0.0.4
 * **terser** 4.6.10, 4.8.1, 5.3.0, 5.5.1
 * **tinymce** 6.8.6
 * **tough-cookie** 2.2.0, 2.4.3, 2.5.0
+* **tunnel-agent** 0.4.0
 * **ua-parser-js** 0.7.21
+* **uglify-js** 1.1.1
 * **underscore** 1.7.0
 * **webpack-subresource-integrity** 1.4.0
 * **xml2js** 0.4.23
@@ -168,8 +173,10 @@ Fixes for the following vulnerabilities are available in ELS for JavaScript Libr
 
 | CVE ID         | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
 | :------------: | :------: |:--------:|:------------------:| :----------------: |
+| CVE-2015-8857  | Direct   | Critical | uglify-js          | < 2.4.24           |
 | CVE-2020-15084 | Direct   | Critical | express-jwt        | <= 5.3.3           |
 | CVE-2020-7610  | Direct   | Critical | bson               | >= 1.0.0, < 1.1.4 |
+| CVE-2021-42740 | Direct   | Critical | shell-quote        | < 1.7.3            |
 | CVE-2020-7788  | Direct   | Critical | ini                | < 1.3.6            |
 | CVE-2023-26136 | Direct   | Critical | tough-cookie       | < 4.1.3            |
 | CVE-2023-46233 | Direct   | Critical | crypto-js          | < 4.2.0            |
@@ -177,13 +184,18 @@ Fixes for the following vulnerabilities are available in ELS for JavaScript Libr
 | CVE-2024-48910 | Direct   | Critical | dompurify          | < 2.4.2            |
 | GHSA-vjh7-7g9h-fjfh | Direct   | Critical | elliptic          | <= 6.6.0           |
 | CVE-2025-7783  | Direct   | Critical | form-data          | < 2.5.4, 3.0.0 - 3.0.3, 4.0.0 - 4.0.3 |
+| CVE-2015-8858  | Direct   | High     | uglify-js          | < 2.6.0            |
+| CVE-2017-1000048 | Direct | High     | qs                 | < 6.3.2            |
 | CVE-2018-13863 | Direct   | High     | bson               | >= 0.5.0, < 1.0.5 |
+| CVE-2018-3728  | Direct   | High     | hoek               | < 4.2.0, >= 5.0.0 < 5.0.3 |
+| CVE-2020-36604 | Direct   | High     | hoek               | < 8.5.1, >= 9.0.0 < 9.0.3 |
 | CVE-2021-23424 | Direct   | High     | ansi-html          | < 0.0.8            |
 | CVE-2021-23358 | Direct   | High     | underscore         | >= 1.3.2 < 1.12.1  |
 | CVE-2021-3803  | Direct   | High     | nth-check         | < 2.0.1            |
 | CVE-2022-21680 | Direct   | High     | marked            | < 4.0.10           |
 | CVE-2022-21681 | Direct   | High     | marked            | < 4.0.10           |
 | CVE-2022-24771 | Direct   | High     | node-forge        | < 1.3.0            |
+| CVE-2022-24999 | Direct   | High     | qs                 | < 6.10.3           |
 | CVE-2022-24772 | Direct   | High     | node-forge        | < 1.3.0            |
 | CVE-2022-25858 | Direct   | High     | terser            | < 4.8.1, >= 5.0.0 < 5.14.2 |
 | CVE-2022-25883 | Direct   | High     | semver            | < 5.7.2, >= 6.0.0 < 6.3.1, >= 7.0.0 < 7.5.3 |
@@ -208,6 +220,7 @@ Fixes for the following vulnerabilities are available in ELS for JavaScript Libr
 | CVE-2021-27292 | Direct   | High     | ua-parser-js      | >= 0.7.14, < 0.7.24 |
 | CVE-2021-43138 | Direct   | High     | async             | < 2.6.4 |
 | CVE-2017-16137 | Direct   | Medium   | debug             | >= 2.0.0, < 2.6.9, >= 3.0.0, < 3.1.0 |
+| CVE-2018-21270 | Direct   | Medium   | stringstream       | < 0.0.6            |
 | CVE-2020-7608  | Direct   | Medium   | yargs-parser      | < 5.0.1, ≥ 6.0.0 < 13.1.2, ≥ 14.0.0 < 15.0.1, ≥ 16.0.0 < 18.1.1 |
 | CVE-2023-0842  | Direct   | Medium   | xml2js            | 0.4.23             |
 | CVE-2023-28155 | Direct   | Medium   | request           | <= 2.88.1          |
@@ -223,9 +236,11 @@ Fixes for the following vulnerabilities are available in ELS for JavaScript Libr
 | AIKIDO-2025-10177 | Direct   | Medium   | copy-anything     | 1.0.0 - 4.0.3      |
 | GHSA-593m-55hh-j8gv | Direct   | Moderate | @sentry/browser   | < 7.119.1, >= 8.0.0-alpha.1, < 8.33.0 |
 | GHSA-rvg8-pwq2-xj7q | Direct   | Moderate | base64url         | < 3.0.0            |
+| GHSA-xc7v-wxcw-j472 | Direct   | Moderate | tunnel-agent       | < 0.6.0            |
 | CVE-2025-46653 | Direct   | Low      | formidable        | >= 2.1.0, < 3.5.3  |
 | CVE-2020-15262 | Direct   | Low      | webpack-subresource-integrity | < 1.5.1            |
 | AIKIDO-2024-10030 | Direct   | Low      | Quill             | 0.0.1 - 1.3.7      |
+| CVE-2025-15284 | Direct   | Low      | qs                 | < 6.14.1           |
 | AIKIDO-2024-10093 | Direct   | Low      | picocolors        | 0.1.0 - 1.0.0      |
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
