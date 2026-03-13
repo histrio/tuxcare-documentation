@@ -722,6 +722,11 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "minimist",
+        versions: "1.2.8",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "moment",
         versions: "2.10.6",
         link: "./javascript-libraries/",
