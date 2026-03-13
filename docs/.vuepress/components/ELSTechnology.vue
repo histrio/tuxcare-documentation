@@ -878,7 +878,7 @@ const techData = [
       },
       {
         name: "tough-cookie",
-        versions: "2.4.3 | 2.5.0",
+        versions: "2.2.0 | 2.4.3 | 2.5.0",
         link: "./javascript-libraries/",
       },
       {

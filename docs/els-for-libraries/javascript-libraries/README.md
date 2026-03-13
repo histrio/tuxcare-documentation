@@ -47,7 +47,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **ssr-window** 4.0.2
 * **terser** 4.6.10, 4.8.1, 5.3.0, 5.5.1
 * **tinymce** 6.8.6
-* **tough-cookie** 2.4.3, 2.5.0
+* **tough-cookie** 2.2.0, 2.4.3, 2.5.0
 * **ua-parser-js** 0.7.21
 * **underscore** 1.7.0
 * **webpack-subresource-integrity** 1.4.0
