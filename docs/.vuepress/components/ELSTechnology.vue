@@ -693,7 +693,7 @@ const techData = [
       },
       {
         name: "jsPDF",
-        versions: "2.5.2",
+        versions: "2.5.2 | 3.0.4",
         link: "./javascript-libraries/",
       },
       {
@@ -720,6 +720,11 @@ const techData = [
         name: "LoopBack",
         versions: "1.10.0 | 2.42.0",
         link: "./loopback/",
+      },
+      {
+        name: "loader-utils",
+        versions: "0.2.17 | 1.2.3 | 2.0.0",
+        link: "./javascript-libraries/",
       },
       {
         name: "marked",
@@ -763,7 +768,7 @@ const techData = [
       },
       {
         name: "multer",
-        versions: "1.4.5-lts",
+        versions: "1.4.5-lts | 1.4.5-lts.2",
         link: "./javascript-libraries/",
       },
       {
@@ -805,6 +810,11 @@ const techData = [
         name: "passport",
         versions: "0.5.3",
         link: "./passport/",
+      },
+      {
+        name: "path-to-regexp",
+        versions: "0.1.3",
+        link: "./javascript-libraries/",
       },
       {
         name: "pdfjs-dist",
@@ -872,6 +882,11 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "serialize-javascript",
+        versions: "6.0.2",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "shell-quote",
         versions: "1.4.3",
         link: "./javascript-libraries/",
@@ -887,9 +902,19 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "swiper",
+        versions: "11.2.10",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "tailwindcss",
         versions: "2.1.1",
         link: "./tailwindcss/",
+      },
+      {
+        name: "tar",
+        versions: "1.0.3 | 2.2.2 | 4.4.19 | 6.0.2 | 6.2.1",
+        link: "./javascript-libraries/",
       },
       {
         name: "terser",
@@ -928,7 +953,7 @@ const techData = [
       },
       {
         name: "Vite",
-        versions: "4.5.5",
+        versions: "4.5.5 | 5.4.14",
         link: "./vite/",
       },
       {
