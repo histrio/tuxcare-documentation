@@ -28,17 +28,19 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **ip** 1.1.5, 2.0.0
 * **jquery-validation** 1.19.0
 * **jsonpath-plus** 7.2.0
-* **jspdf** 2.5.2
+* **jspdf** 2.5.2, 3.0.4
+* **loader-utils** 0.2.17, 1.2.3, 2.0.0
 * **marked** 4.0.9
 * **micromatch** 3.1.10
 * **minimatch** 3.0.4
 * **minimist** 1.2.8
 * **moment** 2.10.6
 * **mout** 0.9.1
-* **multer** 1.4.5-lts
+* **multer** 1.4.5-lts, 1.4.5-lts.2
 * **node-forge** 0.10.0
 * **nth-check** 1.0.2
 * **parsejson** 0.0.3
+* **path-to-regexp** 0.1.3
 * **pdfjs-dist** 2.16.105
 * **picocolors** 0.2.1
 * **qs** 2.2.5, 2.3.3, 2.4.2, 5.1.0, 5.2.0
@@ -47,9 +49,12 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **rollup** 2.1.0, 2.26.5, 2.38.4, 2.79.1, 2.79.2
 * **semver** 7.1.3, 7.3.2
 * **sentry-browser** 5.7.1
+* **serialize-javascript** 6.0.2
 * **shell-quote** 1.4.3
 * **ssr-window** 4.0.2
 * **stringstream** 0.0.4
+* **swiper** 11.2.10
+* **tar** 1.0.3, 2.2.2, 4.4.19, 6.0.2, 6.2.1
 * **terser** 4.6.10, 4.8.1, 5.3.0, 5.5.1
 * **tinymce** 6.8.6
 * **tough-cookie** 2.2.0, 2.4.3, 2.5.0
@@ -175,6 +180,8 @@ Fixes for the following vulnerabilities are available in ELS for JavaScript Libr
 | :------------: | :------: |:--------:|:------------------:| :----------------: |
 | CVE-2015-8857  | Direct   | Critical | uglify-js          | < 2.4.24           |
 | CVE-2020-15084 | Direct   | Critical | express-jwt        | <= 5.3.3           |
+| CVE-2022-37601 | Direct   | Critical | loader-utils       | < 1.4.1, >= 2.0.0 < 2.0.3 |
+| CVE-2025-68428 | Direct   | Critical | jspdf              | < 4.0.0            |
 | CVE-2020-7610  | Direct   | Critical | bson               | >= 1.0.0, < 1.1.4 |
 | CVE-2021-42740 | Direct   | Critical | shell-quote        | < 1.7.3            |
 | CVE-2020-7788  | Direct   | Critical | ini                | < 1.3.6            |
@@ -188,6 +195,9 @@ Fixes for the following vulnerabilities are available in ELS for JavaScript Libr
 | CVE-2017-1000048 | Direct | High     | qs                 | < 6.3.2            |
 | CVE-2018-13863 | Direct   | High     | bson               | >= 0.5.0, < 1.0.5 |
 | CVE-2018-3728  | Direct   | High     | hoek               | < 4.2.0, >= 5.0.0 < 5.0.3 |
+| CVE-2021-32803 | Direct   | High     | tar                | < 3.2.3, >= 4.0.0 < 4.4.15, >= 5.0.0 < 5.0.7 |
+| CVE-2021-32804 | Direct   | High     | tar                | < 3.2.2, >= 4.0.0 < 4.4.14, >= 5.0.0 < 5.0.6 |
+| CVE-2021-37713 | Direct   | High     | tar                | < 4.4.18, >= 5.0.0 < 5.0.10, >= 6.0.0 < 6.1.9 |
 | CVE-2020-36604 | Direct   | High     | hoek               | < 8.5.1, >= 9.0.0 < 9.0.3 |
 | CVE-2021-23424 | Direct   | High     | ansi-html          | < 0.0.8            |
 | CVE-2021-23358 | Direct   | High     | underscore         | >= 1.3.2 < 1.12.1  |
@@ -197,6 +207,8 @@ Fixes for the following vulnerabilities are available in ELS for JavaScript Libr
 | CVE-2022-24771 | Direct   | High     | node-forge        | < 1.3.0            |
 | CVE-2022-24999 | Direct   | High     | qs                 | < 6.10.3           |
 | CVE-2022-24772 | Direct   | High     | node-forge        | < 1.3.0            |
+| CVE-2022-37599 | Direct   | High     | loader-utils       | >= 1.0.0 < 1.4.2, >= 2.0.0 < 2.0.4 |
+| CVE-2022-37603 | Direct   | High     | loader-utils       | < 1.4.2, >= 2.0.0 < 2.0.4 |
 | CVE-2022-25858 | Direct   | High     | terser            | < 4.8.1, >= 5.0.0 < 5.14.2 |
 | CVE-2022-25883 | Direct   | High     | semver            | < 5.7.2, >= 6.0.0 < 6.3.1, >= 7.0.0 < 7.5.3 |
 | CVE-2022-3517  | Direct   | High     | minimatch         | <= 3.0.5           |
@@ -214,6 +226,11 @@ Fixes for the following vulnerabilities are available in ELS for JavaScript Libr
 | CVE-2025-48997 | Direct   | High     | multer            | >= 1.4.4-lts.1 < 2.0.1 |
 | CVE-2025-57810 | Direct   | High     | jspdf             | < 3.0.2            |
 | CVE-2025-7338  | Direct   | High     | multer            | >= 1.4.4-lts.1, < 2.0.2 |
+| CVE-2026-23745 | Direct   | High     | tar                | < 7.5.3            |
+| CVE-2026-23950 | Direct   | High     | tar                | < 7.5.4            |
+| CVE-2026-24133 | Direct   | High     | jspdf              | < 4.1.0            |
+| CVE-2026-24737 | Direct   | High     | jspdf              | < 4.1.0            |
+| CVE-2026-24842 | Direct   | High     | tar                | < 7.5.7            |
 | AIKIDO-2025-10093 | Direct   | High     | ssr-window        | 2.0.0-beta.1 - 4.0.2 |
 | CVE-2020-7733  | Direct   | High     | ua-parser-js      | < 0.7.22           |
 | CVE-2020-7793  | Direct   | High     | ua-parser-js      | < 0.7.23           |
@@ -223,6 +240,9 @@ Fixes for the following vulnerabilities are available in ELS for JavaScript Libr
 | CVE-2018-21270 | Direct   | Medium   | stringstream       | < 0.0.6            |
 | CVE-2020-7608  | Direct   | Medium   | yargs-parser      | < 5.0.1, ≥ 6.0.0 < 13.1.2, ≥ 14.0.0 < 15.0.1, ≥ 16.0.0 < 18.1.1 |
 | CVE-2023-0842  | Direct   | Medium   | xml2js            | 0.4.23             |
+| CVE-2024-28863 | Direct   | Medium   | tar                | < 6.2.1            |
+| CVE-2026-24040 | Direct   | Medium   | jspdf              | < 4.1.0            |
+| CVE-2026-24043 | Direct   | Medium   | jspdf              | < 4.1.0            |
 | CVE-2023-28155 | Direct   | Medium   | request           | <= 2.88.1          |
 | CVE-2024-47764 | Direct   | Medium   | cookie            | < 0.7.0            |
 | CVE-2024-29881 | Direct   | Medium   | tinymce           | < 6.8.1, >= 6.8.2 < 7.0.0 |
