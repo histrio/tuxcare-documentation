@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for Vite from TuxCare provides security fixes fo
 
 ## Supported Vite Versions
 
-* Vite 4.5.5
+* Vite 4.5.5, 5.4.14
 
 ## Connection to ELS for Vite Library
 
@@ -35,8 +35,8 @@ TuxCare provides ELS for Vite as an NPM package, hosted on a secure internal reg
 
    ```text
    registry=https://registry.npmjs.org/
-   @els-js:registry=https://nexus.repo.tuxcare.com/repository/els-js/
-   //nexus.repo.tuxcare.com/repository/els-js/:_auth=${TOKEN}
+   @els-vue:registry=https://nexus.repo.tuxcare.com/repository/els-vue/
+   //nexus.repo.tuxcare.com/repository/els-vue/:_auth=${TOKEN}
    ```
 
    :::warning
@@ -51,19 +51,19 @@ TuxCare provides ELS for Vite as an NPM package, hosted on a secure internal reg
 
      ```text
      "dependencies": {
-       "vite": "npm:@els-js/vite@>=4.5.5-tuxcare.1"
+       "vite": "npm:@els-vue/vite@>=4.5.5-tuxcare.1"
      },
      "overrides": {
-       "vite@4.5.5": "npm:@els-js/vite@>=4.5.5-tuxcare.1"
+       "vite@4.5.5": "npm:@els-vue/vite@>=4.5.5-tuxcare.1"
      }
      ```
 
    * **Option 2: TuxCare Patcher (Automated)**
 
-     Install the Patcher globally and run it. The TuxCare Patcher automatically detects the Vite version in your `package.json` and updates your `dependencies` and `overrides` to use the corresponding TuxCare `@els-js/*` packages.
+     Install the Patcher globally and run it. The TuxCare Patcher automatically detects the Vite version in your `package.json` and updates your `dependencies` and `overrides` to use the corresponding TuxCare `@els-vue/*` packages.
 
      ```text
-     npm install -g @els-js/tuxcare-patcher --userconfig ./.npmrc
+     npm install -g @els-vue/tuxcare-patcher --userconfig ./.npmrc
      tuxcare-patch-js
      ```
 
@@ -79,10 +79,10 @@ TuxCare provides ELS for Vite as an NPM package, hosted on a secure internal reg
 
      ```text
      "dependencies": {
-       "vite": "npm:@els-js/vite@>=4.5.5-tuxcare.1"
+       "vite": "npm:@els-vue/vite@>=4.5.5-tuxcare.1"
      },
      "overrides": {
-       "vite@4.5.5": "npm:@els-js/vite@>=4.5.5-tuxcare.1"
+       "vite@4.5.5": "npm:@els-vue/vite@>=4.5.5-tuxcare.1"
      }
      ```
 

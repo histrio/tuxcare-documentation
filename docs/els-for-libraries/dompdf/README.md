@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for Dompdf from TuxCare provides security fixes 
 
 ## Supported Versions
 
-* **Dompdf** 0.8.6, 1.2.2
+* **Dompdf** 0.8.6, 1.2.2, 3.1.0
 
 Other versions upon request.
 

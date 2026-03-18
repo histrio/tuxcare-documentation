@@ -182,7 +182,7 @@ const techData = [
       },
       {
         name: "Apache Tomcat®",
-        versions: "8.5.100 | 9.0.50 | 9.0.75 | 9.0.83 | 9.0.87 | 9.0.90 | 9.0.100 | 10.1.18",
+        versions: "8.5.100 | 9.0.46 | 9.0.50 | 9.0.75 | 9.0.83 | 9.0.87 | 9.0.90 | 9.0.100 | 10.1.18",
         link: "./apache-tomcat/",
       },
       {
@@ -197,7 +197,7 @@ const techData = [
       },
       {
         name: "Bouncy Castle",
-        versions: "1.76",
+        versions: "1.64 | 1.76",
         link: "./java-libraries/",
       },
       {
@@ -237,7 +237,7 @@ const techData = [
       },
       {
         name: "Google Guava",
-        versions: "20.0 | 25.1-android | 25.1-jre | 30.1-jre | 31.1-jre",
+        versions: "20.0 | 25.1-android | 25.1-jre | 27.1-android | 27.1-jre | 30.1-jre | 31.1-jre",
         link: "./java-libraries/",
       },
       {
@@ -638,12 +638,27 @@ const techData = [
       },
       {
         name: "Form-Data",
-        versions: "1.0.0-rc3 | 2.3.3",
+        versions: "0.2.0 | 2.3.3",
         link: "./javascript-libraries/",
       },
       {
         name: "fstream",
         versions: "1.0.8",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "highlight.js",
+        versions: "9.18.5",
+        link: "./javascript-libraries/",
+      },
+      {   
+        name: "handlebars",
+        versions: "3.0.3",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "hoek",
+        versions: "2.12.0 | 2.14.0",
         link: "./javascript-libraries/",
       },
       {
@@ -677,6 +692,11 @@ const techData = [
         link: "./jquery-ui/",
       },
       {
+        name: "jquery-validation",
+        versions: "1.19.0",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "JSON Web Token (JWT)",
         versions: "0.4.0 | 8.5.1",
         link: "./jsonwebtoken/",
@@ -688,7 +708,7 @@ const techData = [
       },
       {
         name: "jsPDF",
-        versions: "2.5.2",
+        versions: "2.5.2 | 3.0.4",
         link: "./javascript-libraries/",
       },
       {
@@ -722,6 +742,11 @@ const techData = [
         link: "./loopback/",
       },
       {
+        name: "loader-utils",
+        versions: "0.2.17 | 1.2.3 | 2.0.0",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "marked",
         versions: "0.2.10 | 4.0.9",
         link: "./javascript-libraries/",
@@ -737,6 +762,16 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "minimist",
+        versions: "1.2.8",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "moment",
+        versions: "2.10.6",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "MongoDB Driver",
         versions: "2.2.36",
         link: "./mongodb-driver/",
@@ -747,8 +782,13 @@ const techData = [
         link: "./mongoose/",
       },
       {
+        name: "mout",
+        versions: "0.9.1",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "multer",
-        versions: "1.4.5-lts",
+        versions: "1.4.5-lts | 1.4.5-lts.2",
         link: "./javascript-libraries/",
       },
       {
@@ -782,9 +822,19 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "parsejson",
+        versions: "0.0.3",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "passport",
         versions: "0.5.3",
         link: "./passport/",
+      },
+      {
+        name: "path-to-regexp",
+        versions: "0.1.3",
+        link: "./javascript-libraries/",
       },
       {
         name: "pdfjs-dist",
@@ -803,7 +853,7 @@ const techData = [
       },
       {
         name: "qs",
-        versions: "2.4.2 | 6.5.3",
+        versions: "2.2.5 | 2.3.3 | 2.4.2 | 5.1.0 | 5.2.0 | 6.5.3",
         link: "./javascript-libraries/",
       },
       {
@@ -852,8 +902,28 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "serialize-javascript",
+        versions: "6.0.2",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "shell-quote",
+        versions: "1.4.3",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "ssr-window",
         versions: "4.0.2",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "stringstream",
+        versions: "0.0.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "swiper",
+        versions: "11.2.10",
         link: "./javascript-libraries/",
       },
       {
@@ -863,7 +933,7 @@ const techData = [
       },
       {
         name: "tar",
-        versions: "2.2.2",
+        versions: "1.0.3 | 2.2.2 | 4.4.19 | 6.0.2 | 6.2.1",
         link: "./javascript-libraries/",
       },
       {
@@ -878,7 +948,12 @@ const techData = [
       },
       {
         name: "tough-cookie",
-        versions: "2.4.3 | 2.5.0",
+        versions: "2.2.0 | 2.4.3 | 2.5.0",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "tunnel-agent",
+        versions: "0.4.0",
         link: "./javascript-libraries/",
       },
       {
@@ -892,13 +967,18 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "uglify-js",
+        versions: "1.1.1",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "undici",
         versions: "5.28.5",
         link: "./undici/",
       },
       {
         name: "Vite",
-        versions: "4.5.5",
+        versions: "4.5.5 | 5.4.14",
         link: "./vite/",
       },
       {
@@ -969,12 +1049,12 @@ const techData = [
     projects: [
       {
         name: "aiohttp",
-        versions: "3.8.1 | 3.8.4 | 3.8.5",
+        versions: "3.8.1 | 3.8.4 | 3.8.5 | 3.8.6",
         link: "./python-libraries/",
       },
       {
         name: "celery",
-        versions: "5.1.2",
+        versions: "4.4.7 | 5.1.2",
         link: "./celery/",
       },
       {
@@ -1093,13 +1173,18 @@ const techData = [
         link: "./python-libraries/",
       },
       {
+        name: "pip",
+        versions: "9.0",
+        link: "./python-libraries/",
+      },
+      {
         name: "Pillow",
         versions: "8.4.0 | 9.4.0 | 9.5.0 | 11.2.1",
         link: "./python-libraries/",
       },
       {
         name: "protobuf",
-        versions: "4.24.3",
+        versions: "3.17.0 | 3.20.3 | 4.24.3 | 4.25.8",
         link: "./python-libraries/",
       },
       {
@@ -1173,6 +1258,11 @@ const techData = [
         link: "./python-libraries/",
       },
       {
+        name: "tornado",
+        versions: "6.1.0",
+        link: "./python-libraries/",
+      },
+      {
         name: "tqdm",
         versions: "4.66.1",
         link: "./python-libraries/",
@@ -1235,7 +1325,7 @@ const techData = [
       },
       {
         name: "DomPDF",
-        versions: "0.8.x | 1.2.x",
+        versions: "0.8.x | 1.2.x | 3.1.0",
         link: "./dompdf/",
       },
       {
@@ -1245,7 +1335,7 @@ const techData = [
       },
       {
         name: "Laravel",
-        versions: "5.8.38 | 8 | 10 | 11",
+        versions: "5.4.36 | 5.5.50 | 5.6.40 | 5.7.29 | 5.8.38 | 8 | 10 | 11",
         link: "./laravel/",
       },
       {
@@ -1321,7 +1411,7 @@ const techData = [
       },
       {
         name: "SharpZipLib",
-        versions: "0.86.0",
+        versions: "0.86.0 | 0.86.1",
         link: "./dotnet/",
       },
     ],

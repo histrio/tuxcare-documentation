@@ -97,9 +97,11 @@ Fixes for the following vulnerabilities are available in ELS for Django from Tux
 | CVE ID         | Severity | Library | Vulnerable Versions | Safe Version         |
 | :------------: | :------: | :-----: | :-----------------: | :------------------: |
 | CVE-2025-57833 | High     | django  | 3.2.25              | 3.2.25.post1+tuxcare |
-| CVE-2025-48432 | N/A      | django  | 4.2                 | 4.2.post1+tuxcare    |
-| CVE-2025-48432 | N/A      | django  | 5.1.9               | 5.1.9.post1+tuxcare  |
-| CVE-2025-27556 | N/A      | django  | 5.1                 | 5.1.post2+tuxcare    |
+| CVE-2025-64458 | High     | django  | 3.2.25              | 3.2.25.post2+tuxcare |
+| CVE-2025-64459 | Critical | django  | 3.2.25              | 3.2.25.post2+tuxcare |
+| CVE-2025-48432 | Medium   | django  | 4.2                 | 4.2.post1+tuxcare    |
+| CVE-2025-48432 | Medium   | django  | 5.1.9               | 5.1.9.post1+tuxcare  |
+| CVE-2025-27556 | High     | django  | 5.1                 | 5.1.post2+tuxcare    |
 | CVE-2024-56374 | Medium   | django  | 5.1.4               | 5.1.4.post1+tuxcare  |
 | CVE-2024-53908 | N/A      | django  | 5.1                 | 5.1.post3+tuxcare    |
 | CVE-2024-53907 | N/A      | django  | 5.1                 | 5.1.post3+tuxcare    |
@@ -124,8 +126,8 @@ Fixes for the following vulnerabilities are available in ELS for Django from Tux
 | CVE-2022-34265 | Critical | django  | 4.0                 | 4.0.post3+tuxcare    |
 | CVE-2022-28347 | Critical | django  | 4.0                 | 4.0.post3+tuxcare    |
 | CVE-2022-28346 | Critical | django  | 4.0                 | 4.0.post4+tuxcare    |
-| CVE-2022-23833 | N/A      | django  | 4.0                 | 4.0.post6+tuxcare    |
-| CVE-2022-22818 | N/A      | django  | 4.0                 | 4.0.post5+tuxcare    |
+| CVE-2022-23833 | High     | django  | 4.0                 | 4.0.post6+tuxcare    |
+| CVE-2022-22818 | Medium   | django  | 4.0                 | 4.0.post5+tuxcare    |
 | CVE-2021-45452 | Medium   | django  | 4.0                 | 4.0.post4+tuxcare    |
 | CVE-2021-45116 | High     | django  | 4.0                 | 4.0.post2+tuxcare    |
 | CVE-2021-45115 | High     | django  | 4.0                 | 4.0.post4+tuxcare    |
