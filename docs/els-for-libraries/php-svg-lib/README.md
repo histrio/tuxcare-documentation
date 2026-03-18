@@ -119,7 +119,7 @@ Fixes for the following vulnerabilities are available in ELS for php-svg-lib fro
 
 | CVE ID              | Severity | Library      | Vulnerable Versions | Safe Version        |
 | :-----------------: | :------: | :----------: | :-----------------: | :-----------------: |
-| CVE-2024-25117      | Medium   | php-svg-lib  | 0.3.4               | 0.3.4-p1+tuxcare   |
+| CVE-2024-25117      | Medium   | php-svg-lib  | < 0.5.2              | 0.3.4-p1+tuxcare   |
 | CVE-2023-50251      | High     | php-svg-lib  | 0.3.4               | 0.3.4-p1+tuxcare   |
 | GHSA-97m3-52wr-xvv2 | Critical | php-svg-lib  | 0.3.4               | 0.3.4-p1+tuxcare   |
 
