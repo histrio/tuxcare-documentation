@@ -178,20 +178,6 @@ Fixes for the following vulnerabilities are available in ELS for Lodash from Tux
 
 <TableTabs label="Choose Lodash version: " >
 
-  <template #Lodash__3.10.1>
-
-| CVE ID         | CVE Type | Severity |  Affected Libraries | Vulnerable Versions |
-| :------------: | :------: |:--------:| :-----------------: |:-------------------:|
-| CVE-2021-23337  | Direct   |   High   | Lodash             |      < 4.17.20      |
-| CVE-2020-8203  | Direct   | High   | Lodash             |      < 4.17.20      |
-| CVE-2020-28500 | Direct   | Medium | Lodash             |      < 4.17.21      |
-| CVE-2019-10744 | Direct   | Critical | Lodash             |      < 4.17.12      |
-| CVE-2019-1010266 | Direct | Medium | Lodash             |      < 4.17.11      |
-| CVE-2018-16487 | Direct   | High   | Lodash             |      < 4.17.11      |
-| CVE-2018-3721  | Direct   | Medium | Lodash             |      < 4.17.5       |
-
-  </template>
-
   <template #Lodash__4.5.0>
 
 | CVE ID         | CVE Type | Severity |  Affected Libraries | Vulnerable Versions |
