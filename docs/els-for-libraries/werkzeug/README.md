@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 
 ## Supported Werkzeug Versions
 
-* **Werkzeug** 1.0.1, 2.2.3
+* **Werkzeug** 1.0.1, 2.2.3, 2.3.8
 
 Other versions upon request.
 
@@ -102,5 +102,9 @@ Fixes for the following vulnerabilities are available in ELS for Werkzeug from T
 | CVE-2024-34069 | High     | werkzeug | 1.0.1               | 1.0.1.post2+tuxcare |
 | CVE-2023-25577 | High     | werkzeug | 1.0.1               | 1.0.1.post1+tuxcare |
 | CVE-2023-23934 | Low      | werkzeug | 1.0.1               | 1.0.1.post3+tuxcare |
+| CVE-2025-66221 | Medium   | werkzeug | 2.3.8               | 2.3.8.post1+tuxcare |
+| CVE-2024-49766 | Medium   | werkzeug | 2.2.3               | 2.2.3.post3+tuxcare |
+| CVE-2023-46136 | High     | werkzeug | 1.0.1               | 1.0.1.post4+tuxcare |
+| CVE-2023-46136 | High     | werkzeug | 2.2.3               | 2.2.3.post4+tuxcare |
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).

@@ -989,12 +989,12 @@ const techData = [
     projects: [
       {
         name: "aiohttp",
-        versions: "3.8.1 | 3.8.4 | 3.8.5",
+        versions: "3.8.1 | 3.8.4 | 3.8.5 | 3.8.6",
         link: "./python-libraries/",
       },
       {
         name: "celery",
-        versions: "5.1.2",
+        versions: "4.4.7 | 5.1.2",
         link: "./celery/",
       },
       {
@@ -1113,13 +1113,18 @@ const techData = [
         link: "./python-libraries/",
       },
       {
+        name: "pip",
+        versions: "9.0",
+        link: "./python-libraries/",
+      },
+      {
         name: "Pillow",
         versions: "8.4.0 | 9.4.0 | 9.5.0 | 11.2.1",
         link: "./python-libraries/",
       },
       {
         name: "protobuf",
-        versions: "4.24.3",
+        versions: "3.17.0 | 3.20.3 | 4.24.3 | 4.25.8",
         link: "./python-libraries/",
       },
       {
@@ -1190,6 +1195,11 @@ const techData = [
       {
         name: "torch",
         versions: "1.13.1",
+        link: "./python-libraries/",
+      },
+      {
+        name: "tornado",
+        versions: "6.1.0",
         link: "./python-libraries/",
       },
       {
