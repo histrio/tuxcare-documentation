@@ -597,6 +597,11 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "diff",
+        versions: "1.4.0",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "DOMPurify",
         versions: "2.3.0 | 2.4.3",
         link: "./javascript-libraries/",
@@ -610,6 +615,11 @@ const techData = [
         name: "express",
         versions: "3.21.2",
         link: "./express/",
+      },
+      {
+        name: "extend",
+        versions: "3.0.0",
+        link: "./javascript-libraries/",
       },
       {
         name: "express-jwt",
@@ -629,6 +639,11 @@ const techData = [
       {
         name: "Form-Data",
         versions: "0.2.0 | 2.3.3",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "fstream",
+        versions: "1.0.8",
         link: "./javascript-libraries/",
       },
       {
@@ -713,8 +728,13 @@ const techData = [
       },
       {
         name: "Lodash",
-        versions: "4.5.0 | 4.17.x",
+        versions: "3.10.1 | 4.5.0 | 4.17.x",
         link: "./lodash/",
+      },
+      {
+        name: "lodash.merge",
+        versions: "3.3.2",
+        link: "./javascript-libraries/",
       },
       {
         name: "LoopBack",
@@ -728,7 +748,7 @@ const techData = [
       },
       {
         name: "marked",
-        versions: "4.0.9",
+        versions: "0.2.10 | 4.0.9",
         link: "./javascript-libraries/",
       },
       {
@@ -833,7 +853,7 @@ const techData = [
       },
       {
         name: "qs",
-        versions: "2.2.5 | 2.3.3 | 2.4.2 | 5.1.0 | 5.2.0",
+        versions: "2.2.5 | 2.3.3 | 2.4.2 | 5.1.0 | 5.2.0 | 6.5.3",
         link: "./javascript-libraries/",
       },
       {
@@ -942,6 +962,11 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "validator",
+        versions: "8.2.0 | 10.11.0",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "uglify-js",
         versions: "1.1.1",
         link: "./javascript-libraries/",
@@ -987,6 +1012,11 @@ const techData = [
         link: "./webpack-dev-server/",
       },
       {
+        name: "websocket-extensions",
+        versions: "0.1.1",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "webpack-subresource-integrity",
         versions: "1.4.0",
         link: "./javascript-libraries/",
@@ -994,6 +1024,11 @@ const techData = [
       {
         name: "xml2js",
         versions: "0.4.23",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "xmlhttprequest-ssl",
+        versions: "1.5.3",
         link: "./javascript-libraries/",
       },
       {

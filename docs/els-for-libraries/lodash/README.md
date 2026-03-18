@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for Lodash from TuxCare provides security fixes 
 
 ## Supported Lodash Versions
 
-* Lodash 4.5.0, 4.17.x
+* Lodash 3.10.1, 4.5.0, 4.17.x
 
 ## Connection to ELS for Lodash Library
 
@@ -50,6 +50,19 @@ TuxCare provides ELS for Lodash as an NPM package, hosted on a secure internal r
      Manually update your `package.json` file by replacing your Lodash dependencies with the TuxCare packages. This method gives you full control over which packages to update.
 
      <TableTabs label="Choose Lodash version: " >
+
+      <template #Lodash_3.10.1>
+
+      ```text
+      "dependencies": {
+        "lodash": "npm:@els-js/lodash@>=3.10.1-tuxcare.1"
+      },
+      "overrides": {
+        "lodash@3.10.1": "npm:@els-js/lodash@>=3.10.1-tuxcare.1"
+      }
+      ```
+
+      </template>
 
       <template #Lodash_4.5.0>
 

@@ -6,6 +6,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 
 * **ansi-html** 0.0.7
 * **async** 2.6.1
+* **diff** 1.4.0
 * **base64url** 0.0.6
 * **bson** 0.5.7, 1.0.9
 * **braces** 2.3.2
@@ -17,6 +18,8 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **dompurify** 2.3.0, 2.4.3
 * **elliptic** 6.6.0
 * **express-jwt** 0.1.3
+* **extend** 3.0.0
+* **fstream** 1.0.8
 * **form-data** 0.2.0, 2.3.3
 * **formidable** 2.1.2
 * **highlight.js** 9.18.5
@@ -29,8 +32,9 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **jquery-validation** 1.19.0
 * **jsonpath-plus** 7.2.0
 * **jspdf** 2.5.2, 3.0.4
+* **lodash.merge** 3.3.2
 * **loader-utils** 0.2.17, 1.2.3, 2.0.0
-* **marked** 4.0.9
+* **marked** 0.2.10, 4.0.9
 * **micromatch** 3.1.10
 * **minimatch** 3.0.4
 * **minimist** 1.2.8
@@ -42,6 +46,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **parsejson** 0.0.3
 * **path-to-regexp** 0.1.3
 * **pdfjs-dist** 2.16.105
+* **qs** 2.4.2, 6.5.3
 * **picocolors** 0.2.1
 * **qs** 2.2.5, 2.3.3, 2.4.2, 5.1.0, 5.2.0
 * **quill** 1.3.7
@@ -49,6 +54,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **rollup** 2.1.0, 2.26.5, 2.38.4, 2.79.1, 2.79.2
 * **semver** 7.1.3, 7.3.2
 * **sentry-browser** 5.7.1
+* **tar** 2.2.2
 * **serialize-javascript** 6.0.2
 * **shell-quote** 1.4.3
 * **ssr-window** 4.0.2
@@ -62,6 +68,9 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **ua-parser-js** 0.7.21
 * **uglify-js** 1.1.1
 * **underscore** 1.7.0
+* **validator** 8.2.0, 10.11.0
+* **websocket-extensions** 0.1.1
+* **xmlhttprequest-ssl** 1.5.3
 * **webpack-subresource-integrity** 1.4.0
 * **xml2js** 0.4.23
 * **yargs-parser** 11.1.1
