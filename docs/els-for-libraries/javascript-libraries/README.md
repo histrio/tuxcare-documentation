@@ -10,11 +10,12 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **base64url** 0.0.6
 * **bson** 0.5.7, 1.0.9
 * **braces** 2.3.2
-* **copy-anything** 2.0.6
+* **clean-css** 2.2.23
 * **cookie** 0.4.2
+* **copy-anything** 2.0.6
 * **cross-spawn** 5.1.0
 * **crypto-js** 3.3.0
-* **debug** 4.1.1
+* **debug** 2.1.1, 4.1.1
 * **dompurify** 2.3.0, 2.4.3
 * **elliptic** 6.6.0
 * **express-jwt** 0.1.3
@@ -34,12 +35,14 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **jspdf** 2.5.2, 3.0.4
 * **lodash.merge** 3.3.2
 * **loader-utils** 0.2.17, 1.2.3, 2.0.0
+* **markdown-it** 4.0.3, 4.3.0
 * **marked** 0.2.10, 4.0.9
 * **micromatch** 3.1.10
 * **minimatch** 3.0.4
 * **minimist** 1.2.8
 * **moment** 2.10.6
-* **mout** 0.9.1
+* **morgan** 1.5.3
+* **mout** 0.9.1, 0.11.0
 * **multer** 1.4.5-lts, 1.4.5-lts.2
 * **node-forge** 0.10.0
 * **nth-check** 1.0.2
