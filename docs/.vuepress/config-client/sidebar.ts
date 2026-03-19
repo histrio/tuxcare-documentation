@@ -249,7 +249,7 @@ export default {
                 },
                 {
                     path: '/els-for-libraries/php-svg-lib/',
-                    icon: '/images/php-logo.webp',
+                    icon: '/images/dompdf-logo.webp',
                 },
                 {
                     path: '/els-for-libraries/cakephp/',
