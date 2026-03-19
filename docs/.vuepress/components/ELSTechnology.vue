@@ -572,6 +572,11 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "clean-css",
+        versions: "2.2.23",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "cookie",
         versions: "0.4.2",
         link: "./javascript-libraries/",
@@ -593,7 +598,7 @@ const techData = [
       },
       {
         name: "debug",
-        versions: "4.1.1",
+        versions: "2.1.1 | 4.1.1",
         link: "./javascript-libraries/",
       },
       {
@@ -747,6 +752,11 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "markdown-it",
+        versions: "4.0.3 | 4.3.0",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "marked",
         versions: "0.2.10 | 4.0.9",
         link: "./javascript-libraries/",
@@ -782,8 +792,13 @@ const techData = [
         link: "./mongoose/",
       },
       {
+        name: "morgan",
+        versions: "1.5.3",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "mout",
-        versions: "0.9.1",
+        versions: "0.9.1 | 0.11.0",
         link: "./javascript-libraries/",
       },
       {
@@ -798,7 +813,7 @@ const techData = [
       },
       {
         name: "next",
-        versions: "12.3.7 | 13.5.11 | 16.0.6",
+        versions: "12.3.7 | 13.5.11 | 14.2.35 | 16.0.6",
         link: "./next/",
       },
       {
@@ -883,7 +898,7 @@ const techData = [
       },
       {
         name: "RequireJS",
-        versions: "2.3.6",
+        versions: "2.1.22 | 2.3.6",
         link: "./requirejs/",
       },
       {
