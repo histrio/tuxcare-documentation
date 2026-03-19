@@ -1344,6 +1344,11 @@ const techData = [
         link: "./dompdf/",
       },
       {
+        name: "php-svg-lib",
+        versions: "0.3.4",
+        link: "./php-svg-lib/",
+      },
+      {
         name: "Firebase PHP-JWT",
         versions: "6.11.1",
         link: "./firebase-php-jwt/",
