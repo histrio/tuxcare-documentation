@@ -1,16 +1,17 @@
 # Debian 10 ELS
+
+## Installation
+
 <ELSPrerequisites>
 
 * A valid TuxCare ELS license key
 * Root access to the server
-* TCP port 443 open to [cln.cloudlinux.com](http://cln.cloudlinux.com) and [repo.tuxcare.com](http://repo.tuxcare.com)
+* TCP port 443 open to `cln.cloudlinux.com` and `repo.tuxcare.com`
 * Architecture: x86_64. For other architectures, please contact our [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
 </ELSPrerequisites>
 
 <ELSSteps>
-
-## Installing the repository
 
 1. Download the install script:
 

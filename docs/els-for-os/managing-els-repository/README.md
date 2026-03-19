@@ -83,75 +83,11 @@ To obtain access to the local mirroring facility, provide your external IP addre
    ls -l /etc/yum.repos.d/*-els.repo
    ```
 
-2. Remove the file to disable the ELS repository:
-
-   <TableTabs label="Choose your OS: ">
-
-   <template #CentOS__6>
-
-   ```
-   rm /etc/yum.repos.d/centos6-els.repo
-   ```
-
-   </template>
-
-   <template #CentOS__7>
+2. Remove the file to disable the ELS repository. For example, for CentOS 7:
 
    ```
    rm /etc/yum.repos.d/centos7-els.repo
    ```
-
-   </template>
-
-   <template #CentOS__8.4>
-
-   ```
-   rm /etc/yum.repos.d/centos8.4-els.repo
-   ```
-
-   </template>
-
-   <template #CentOS__8.5>
-
-   ```
-   rm /etc/yum.repos.d/centos8.5-els.repo
-   ```
-
-   </template>
-
-   <template #CentOS__Stream__8>
-
-   ```
-   rm /etc/yum.repos.d/centos8stream-els.repo
-   ```
-
-   </template>
-
-   <template #Oracle__Linux__6>
-
-   ```
-   rm /etc/yum.repos.d/oraclelinux6-els.repo
-   ```
-
-   </template>
-
-   <template #Oracle__Linux__7>
-
-   ```
-   rm /etc/yum.repos.d/oraclelinux7-els.repo
-   ```
-
-   </template>
-
-   <template #RHEL__7>
-
-   ```
-   rm /etc/yum.repos.d/rhel7-els.repo
-   ```
-
-   </template>
-
-   </TableTabs>
 
 3. Uninstall the `els-define` package:
 
@@ -163,12 +99,18 @@ To obtain access to the local mirroring facility, provide your external IP addre
 
 <template #DEB-based_(APT)>
 
-**Applies to:** Debian 10, Ubuntu 16.04, Ubuntu 18.04
+**Applies to:** Debian 10, Ubuntu 16.04, Ubuntu 18.04, Ubuntu 20.04
 
 **For Debian 10**, the repository can be removed by running the installation script with the `--delete` flag:
 
 ```
 bash install-debian10-els-repo.sh --delete
+```
+
+**For Ubuntu 20.04**, the repository can be removed by running the installation script with the `--delete` flag:
+
+```
+bash install-ubuntu20.04-els-repo.sh --delete
 ```
 
 **For Ubuntu 16.04 / 18.04:**

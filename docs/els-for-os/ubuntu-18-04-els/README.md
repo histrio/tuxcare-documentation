@@ -1,16 +1,17 @@
 # Ubuntu 18.04 ELS
+
+## Installation
+
 <ELSPrerequisites>
 
 * A valid TuxCare ELS license key
 * Root access to the server
-* TCP port 443 open to [cln.cloudlinux.com](http://cln.cloudlinux.com) and [repo.cloudlinux.com](http://repo.cloudlinux.com)
+* TCP port 443 open to `cln.cloudlinux.com` and `repo.cloudlinux.com`
 * Architecture: x86_64. For other architectures, please contact our [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
 </ELSPrerequisites>
 
 <ELSSteps>
-
-## Installing the repository
 
 1. Download the install script:
 
