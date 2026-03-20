@@ -1,31 +1,27 @@
 # Ubuntu 20.04 ELS
 
-## Supported Architecture and Packages
+## Installation
 
-Supported architecture is x86_64. For other architectures, please contact our [sales@tuxcare.com](mailto:sales@tuxcare.com).
+<ELSPrerequisites>
 
-The list of supported packages is provided [here](https://cve.tuxcare.com/els/projects?os=4a9ad44c-1b58-42fa-aa64-7bf19d9ccd13&project=&version=&packages=&orderBy=project-asc).
+* A valid TuxCare ELS license key
+* Root access to the server
+* TCP port 443 open to `cln.cloudlinux.com` and `repo.tuxcare.com`
+* Architecture: x86_64. For other architectures, please contact our [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
-## Connecting to ELS repository
+</ELSPrerequisites>
 
-To install the Endless Lifecycle Support repository on a server, download an installation script and run it with a license key. The installation script registers the server in the CLN using the license key, adds a PGP key to the server, and creates the ELS repository.
+<ELSSteps>
 
-### Outbound Firewall Settings
-
-To use Endless Lifecycle Support for Ubuntu 20.04, you need to open TCP port 443 to the following destinations:
-
-* [cln.cloudlinux.com](http://cln.cloudlinux.com)
-* [repo.tuxcare.com](http://repo.tuxcare.com)
-
-## Installing the repository
-
-1. Download an installation script:
+1. Download the install script:
 
    ```
    wget https://repo.tuxcare.com/ubuntu20_04-els/install-ubuntu20.04-els-repo.sh
    ```
 
-2. Run the installation script with your license key. The installation script registers the server in the CLN with the key, adds a PGP key to the server.
+2. Run with your license key.
+
+   The script registers the server in the CLN with the key, adds a PGP key to the server.
 
    ```
    bash install-ubuntu20.04-els-repo.sh --license-key XXXXXXXXXXX
@@ -63,18 +59,17 @@ To use Endless Lifecycle Support for Ubuntu 20.04, you need to open TCP port 443
    Description-md5: f3fdfd5cb5f71a4ebb6f1f40c8d57483
    ```
 
-## Security Updates
+</ELSSteps>
 
-TuxCare provides security updates as a part of ELS for OS along with OpenSCAP scanning instructions - [learn more](/els-for-os/machine-readable-security-data/).
+## What's next?
 
-* **Ubuntu 20.04 ELS**: [oval.xml](https://security.tuxcare.com/oval/els_os/ubuntu20.04els/oval.xml)
-* **Ubuntu 20.04 ELS**: [security.tuxcare.com/csaf/v2/els_os/ubuntu20.04els/](https://security.tuxcare.com/csaf/v2/els_os/ubuntu20.04els/)
-* **Ubuntu 20.04 ELS**: [cve.tuxcare.com/rss_feed/els/releases/ubuntu20.04els](https://cve.tuxcare.com/rss_feed/els/releases/ubuntu20.04els)
+<WhatsNext hide-title>
 
-## Removing the ELS repository
+* ![](/images/shield-alert.webp) [OVAL](https://security.tuxcare.com/oval/els_os/ubuntu20.04els/oval.xml) — OVAL security data
+* ![](/images/unlock-alt.webp) [CSAF](https://security.tuxcare.com/csaf/v2/els_os/ubuntu20.04els/) — CSAF security advisories
+* ![](/images/eye.webp) [RSS](https://cve.tuxcare.com/rss_feed/els/releases/ubuntu20.04els) — Release notifications
+* ![](/images/shield.webp) [Machine-Readable Security Data](/els-for-os/machine-readable-security-data/) — Errata, OVAL, CSAF
+* ![](/images/box.webp) [Supported packages list](https://cve.tuxcare.com/els/projects?os=4a9ad44c-1b58-42fa-aa64-7bf19d9ccd13&project=&version=&packages=&orderBy=project-asc) — Full list of packages covered by ELS
+* ![](/images/wrench.webp) [Managing the ELS repository](/els-for-os/managing-els-repository/) — Updates, local mirror, and other repository operations
 
-The repository can be removed by running the installation script with the `--delete` flag:
-
-   ```
-   bash install-ubuntu20.04-els-repo.sh --delete
-   ```
+</WhatsNext>

@@ -1,31 +1,27 @@
 # Oracle Linux 7 ELS
 
-## Supported Architecture and Packages
+## Installation
 
-Supported architecture is x86_64. For other architectures, please contact our [sales@tuxcare.com](mailto:sales@tuxcare.com).
+<ELSPrerequisites>
 
-The list of supported packages is provided [here](https://cve.tuxcare.com/els/projects?os=b577e8d3-7a54-4fd9-80d1-04b2222621f7&project=&version=&packages=&orderBy=project-asc).
+* A valid TuxCare ELS license key
+* Root access to the server
+* TCP port 443 open to `cln.cloudlinux.com` and `repo.tuxcare.com`
+* Architecture: x86_64. For other architectures, please contact our [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
-## Connecting to ELS repository
+</ELSPrerequisites>
 
-To install the Endless Lifecycle Support repository on a server, download an installation script and run it with a license key. The installation script registers the server in the CLN using the license key, adds a PGP key to the server, and creates the ELS repository.
+<ELSSteps>
 
-### Outbound Firewall Settings
-
-To use Endless Lifecycle Support for Oracle Linux 7, you need to open TCP port 443 to the following destinations:
-
-* [cln.cloudlinux.com](http://cln.cloudlinux.com)
-* [repo.tuxcare.com](http://repo.tuxcare.com)
-
-## Installing the repository
-
-1. Download an installation script:
+1. Download the install script:
 
    ```
    wget https://repo.tuxcare.com/oraclelinux7-els/install-oraclelinux7-els-repo.sh
    ```
 
-2. Run the installation script with your license key. It registers the server in the CLN with the key, adds a PGP key to the server.
+2. Run with your license key.
+
+   The script registers the server in the CLN with the key, adds a PGP key to the server.
 
    ```
    sh install-oraclelinux7-els-repo.sh --license-key XXXXXXXX
@@ -59,11 +55,12 @@ To use Endless Lifecycle Support for Oracle Linux 7, you need to open TCP port 4
    Description : OEL7 Server els-release file
    ```
 
-### Common Use Cases
+</ELSSteps>
 
 **UEKR6 repository**
 
 The installation script **does not automatically add** the TuxCare UEKR6 repository. If you plan to use the `kernel-uek` package on your Oracle Linux 7 system, you need to enable the TuxCare UEKR6 repository manually.
+<ELSSteps>
 
 1. Use an editor of your choice to edit the `/etc/yum.repos.d/oraclelinux7-els.repo` file:
 
@@ -79,32 +76,17 @@ The installation script **does not automatically add** the TuxCare UEKR6 reposit
    baseurl = https://repo.tuxcare.com/oraclelinux7-els/\$elstoken/UEKR6/\$basearch/
    enabled = 1
    ```
+</ELSSteps>
 
-## Security Updates
+## What's next?
 
-TuxCare provides security updates as a part of ELS for OS along with OpenSCAP scanning instructions - [learn more](/els-for-os/machine-readable-security-data/).
+<WhatsNext hide-title>
 
-* **Oracle Linux 7 ELS OVAL stream**: [oval.xml](https://security.tuxcare.com/oval/els_os/oraclelinux7els/oval.xml)
-* **Oracle Linux 7 ELS CSAF data**: [security.tuxcare.com/csaf/v2/els_os/oraclelinux7els/](https://security.tuxcare.com/csaf/v2/els_os/oraclelinux7els/)
-* **Oracle Linux 7 ELS RSS release feed**: [cve.tuxcare.com/rss_feed/els/releases/oraclelinux7els](https://cve.tuxcare.com/rss_feed/els/releases/oraclelinux7els)
+* ![](/images/shield-alert.webp) [OVAL](https://security.tuxcare.com/oval/els_os/oraclelinux7els/oval.xml) — OVAL security data
+* ![](/images/unlock-alt.webp) [CSAF](https://security.tuxcare.com/csaf/v2/els_os/oraclelinux7els/) — CSAF security advisories
+* ![](/images/eye.webp) [RSS](https://cve.tuxcare.com/rss_feed/els/releases/oraclelinux7els) — Release notifications
+* ![](/images/shield.webp) [Machine-Readable Security Data](/els-for-os/machine-readable-security-data/) — Errata, OVAL, CSAF
+* ![](/images/box.webp) [Supported packages list](https://cve.tuxcare.com/els/projects?os=b577e8d3-7a54-4fd9-80d1-04b2222621f7&project=&version=&packages=&orderBy=project-asc) — Full list of packages covered by ELS
+* ![](/images/wrench.webp) [Managing the ELS repository](/els-for-os/managing-els-repository/) — Updates, local mirror, and other repository operations
 
-## Removing the ELS repository
-
-1. List ELS repository file (ending with `-els.repo`) in the repository folder:
-
-   ```
-   ls -l /etc/yum.repos.d/*-els.repo
-   ```
-
-   Remove the file to disable the ELS repository, for example:
-
-   ```
-   rm /etc/yum.repos.d/oraclelinux7-els.repo
-   ```
-
-2. Uninstall the `els-define` package:
-
-   ```
-   yum remove els-define
-   ```
-
+</WhatsNext>

@@ -1,7 +1,7 @@
 <template>
   <div class="whats-next">
-    <div class="whats-next-header">
-      <h4><slot name="title">What's next?</slot></h4>
+    <div v-if="!hideTitle || (versions && versions.length)" class="whats-next-header">
+      <h4 v-if="!hideTitle"><slot name="title">What's next?</slot></h4>
       <div v-if="versions && versions.length" class="wn-tabs">
         <button
           v-for="(ver, i) in versions"
@@ -24,6 +24,10 @@ const props = defineProps({
   versions: {
     type: Array,
     default: () => [],
+  },
+  hideTitle: {
+    type: Boolean,
+    default: false,
   },
 });
 
