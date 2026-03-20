@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for Next.js from TuxCare provides security fixes
 
 ## Supported Next.js Versions
 
-* Next.js 12.3.7, 13.5.11, 16.0.6
+* Next.js 12.3.7, 13.5.11, 14.2.35, 16.0.6
 
 ## Connection to ELS for Next.js Library
 
@@ -72,6 +72,19 @@ TuxCare provides ELS for Next.js as an NPM package, hosted on a secure internal 
        },
        "overrides": {
          "next@13.5.11": "npm:@els-js/next@>=13.5.11-tuxcare.1"
+       }
+       ```
+
+       </template>
+
+       <template #next_14.2.35>
+
+       ```text
+       "dependencies": {
+         "next": "npm:@els-js/next@>=14.2.35-tuxcare.1"
+       },
+       "overrides": {
+         "next@14.2.35": "npm:@els-js/next@>=14.2.35-tuxcare.1"
        }
        ```
 

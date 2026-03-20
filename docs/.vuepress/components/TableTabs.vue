@@ -100,5 +100,10 @@ watch(activeTab, (newVal) => {
   border-top: 1px solid #d1d5db;
   margin-top: 1rem; 
 }
+
+.tab-content :deep(.els-steps) {
+  margin-top: 0.5rem;
+  padding-top: 0;
+}
 </style>
 

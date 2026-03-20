@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 
 ## Supported Celery Versions
 
-* **Celery** 5.1.2
+* **Celery** 4.4.7, 5.1.2
 
 Other versions upon request.
 
@@ -94,8 +94,9 @@ TuxCare provides VEX for Celery ELS versions: [security.tuxcare.com/vex/cycloned
 
 Fixes for the following vulnerabilities are available in ELS for Celery from TuxCare versions:
 
-| CVE ID         | Severity | Library | Vulnerable Versions | Safe Version        |
-| :------------: | :------: | :-----: | :-----------------: | :-----------------: |
-| CVE-2021-23727 | High     | celery  | 5.1.2               | 5.1.2.post1+tuxcare |
+| CVE ID         | Severity | Library | Vulnerable Versions | Safe Version         |
+| :------------: | :------: | :-----: | :-----------------: | :------------------: |
+| CVE-2021-23727 | High     | celery  | 4.4.7               | 4.4.7.post1+tuxcare  |
+| CVE-2021-23727 | High     | celery  | 5.1.2               | 5.1.2.post1+tuxcare  |
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).

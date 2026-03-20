@@ -14,7 +14,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Apache Santuario XML Security For Java** 2.0.10, 2.3.1
 * **Apache Thrift** 0.9.1, 0.9.3
 * **Apache XMLBeans** 2.6.0
-* **Bouncy Castle** 1.76
+* **Bouncy Castle** 1.64, 1.76
 * **DNSJava** 2.1.7
 * **Dom4j** 1.6.1
 * **Eclipse JGit** 5.7.0, 5.13.3
@@ -22,7 +22,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **EdDSA** 0.3.0
 * **el-spec** 3.0.0
 * **Google Gson** 2.8.5, 2.9.1
-* **Google Guava** 20.0, 25.1-android, 25.1-jre, 30.1-jre, 31.1-jre
+* **Google Guava** 20.0, 25.1-android, 25.1-jre, 27.1-android, 27.1-jre, 30.1-jre, 31.1-jre
 * **Google Guice** 4.2.1
 * **Google OAuth Client** 1.25.0
 * **H2 Database** 1.4.200

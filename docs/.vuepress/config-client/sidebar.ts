@@ -249,6 +249,10 @@ export default {
                     icon: '/images/dompdf-logo.webp',
                 },
                 {
+                    path: '/els-for-libraries/php-svg-lib/',
+                    icon: '/images/dompdf-logo.webp',
+                },
+                {
                     path: '/els-for-libraries/cakephp/',
                     icon: '/images/cakephp.webp',
                 },
@@ -463,34 +467,20 @@ export default {
             children: [
                 "/els-for-applications/",
                 {
-                    title: 'Java',
-                    type: 'section-header',
-                    icon: '/images/java.webp',
-                },
-                {
                     path: '/els-for-applications/apache-hadoop/',
-                    icon: '/images/apache.webp',
+                    icon: '/images/hadoop.webp',
                 },
                 {
                     path: '/els-for-applications/apache-hive/',
-                    icon: '/images/apache.webp',
+                    icon: '/images/hive.webp',
                 },
                 {
                     path: '/els-for-applications/apache-tomcat/',
                     icon: '/images/tomcat.webp',
                 },
                 {
-                    path: '/els-for-applications/maven/',
-                    icon: '/images/apache.webp',
-                },
-                {
                     path: '/els-for-applications/gradle/',
                     icon: '/images/gradle.webp',
-                },
-                {
-                    title: 'Go',
-                    type: 'section-header',
-                    icon: '/images/go_logo.webp',
                 },
                 {
                     path: '/els-for-applications/grafana/',
@@ -498,7 +488,11 @@ export default {
                 },
                 {
                     path: '/els-for-applications/loki/',
-                    icon: '/images/grafana_logo.webp',
+                    icon: '/images/loki.webp',
+                },
+                {
+                    path: '/els-for-applications/maven/',
+                    icon: '/images/maven.webp',
                 },
             ]
         },

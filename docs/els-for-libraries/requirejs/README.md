@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for RequireJS from TuxCare provides security fix
 
 ## Supported RequireJS Versions
 
-* RequireJS 2.3.6
+* RequireJS 2.1.22, 2.3.6
 
 ## Connection to ELS for RequireJS Library
 
@@ -49,14 +49,35 @@ TuxCare provides ELS for RequireJS as an NPM package, hosted on a secure interna
 
      Manually update your `package.json` file by replacing your RequireJS dependencies with the TuxCare packages. This method gives you full control over which packages to update.
 
-     ```text
-     "dependencies": {
-       "requirejs": "npm:@els-js/requirejs@>=2.3.6-tuxcare.1"
-     },
-     "overrides": {
-       "requirejs@2.3.6": "npm:@els-js/requirejs@>=2.3.6-tuxcare.1"
-     }
-     ```
+    <TableTabs label="Choose RequireJS version: " >
+
+      <template #requirejs_2.1.22>
+
+      ```text
+      "dependencies": {
+        "requirejs": "npm:@els-js/requirejs@>=2.1.22-tuxcare.1"
+      },
+      "overrides": {
+        "requirejs@2.1.22": "npm:@els-js/requirejs@>=2.1.22-tuxcare.1"
+      }
+      ```
+
+      </template>
+
+      <template #requirejs_2.3.6>
+
+      ```text
+      "dependencies": {
+        "requirejs": "npm:@els-js/requirejs@>=2.3.6-tuxcare.1"
+      },
+      "overrides": {
+        "requirejs@2.3.6": "npm:@els-js/requirejs@>=2.3.6-tuxcare.1"
+      }
+      ```
+
+      </template>
+
+    </TableTabs>
 
    * **Option 2: TuxCare Patcher (Automated)**
 

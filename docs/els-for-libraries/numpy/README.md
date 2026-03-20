@@ -99,5 +99,6 @@ Fixes for the following vulnerabilities are available in ELS for NumPy from TuxC
 | CVE-2021-34141 | Medium   | numpy   | 1.15.4              | 1.15.4.post2+tuxcare |
 | CVE-2019-6446  | Critical | numpy   | 1.15.4              | 1.15.4.post1+tuxcare |
 | CVE-2019-6446  | Critical | numpy   | 1.16.0              | 1.16.0.post1+tuxcare |
+| CVE-2021-41496 | Medium   | numpy   | 1.16.0              | 1.16.0.post2+tuxcare |
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
