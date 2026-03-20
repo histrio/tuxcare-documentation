@@ -2,11 +2,11 @@
 
 Endless Lifecycle Support (ELS) for Vue from TuxCare provides security fixes for Vue versions that have reached end of life. This allows you to continue running Vue applications without vulnerability concerns, even after official support has ended.
 
-TuxCare PatchFlow for Vue targets the following Vue ecosystem packages:
+The versions **2.6.11**, **2.6.14**, and **2.7.16** are supported by TuxCare for the following Vue ecosystem packages:
 
-* Vue 2.6.11, 2.6.14, 2.7.16
-* vue-server-renderer 2.6.11, 2.6.14, 2.7.16
-* vue-template-compiler 2.6.11, 2.6.14, 2.7.16
+* `vue`
+* `@vue/server-renderer`
+* `vue-template-compiler`
 
 ## Connection to ELS for Vue Repository
 
@@ -56,12 +56,12 @@ TuxCare provides ELS for Vue as npm packages, hosted on a secure internal regist
    ```text
    "dependencies": {
      "vue": "npm:@els-vue/vue@>=2.7.16-tuxcare.1",
-     "vue-server-renderer": "npm:@els-vue/vue-server-renderer@>=2.7.16-tuxcare.1",
+     "@vue/server-renderer": "npm:@els-vue/vue-server-renderer@>=2.7.16-tuxcare.1",
      "vue-template-compiler": "npm:@els-vue/vue-template-compiler@>=2.7.16-tuxcare.1"
    },
    "overrides": {
      "vue@2.7.16": "npm:@els-vue/vue@>=2.7.16-tuxcare.1",
-     "vue-server-renderer@2.7.16": "npm:@els-vue/vue-server-renderer@>=2.7.16-tuxcare.1",
+     "@vue/server-renderer@2.7.16": "npm:@els-vue/vue-server-renderer@>=2.7.16-tuxcare.1",
      "vue-template-compiler@2.7.16": "npm:@els-vue/vue-template-compiler@>=2.7.16-tuxcare.1"
    }
    ```
@@ -73,12 +73,12 @@ TuxCare provides ELS for Vue as npm packages, hosted on a secure internal regist
    ```text
    "dependencies": {
      "vue": "npm:@els-vue/vue@>=2.6.14-tuxcare.1",
-     "vue-server-renderer": "npm:@els-vue/vue-server-renderer@>=2.6.14-tuxcare.1",
+     "@vue/server-renderer": "npm:@els-vue/vue-server-renderer@>=2.6.14-tuxcare.1",
      "vue-template-compiler": "npm:@els-vue/vue-template-compiler@>=2.6.14-tuxcare.1"
    },
    "overrides": {
      "vue@2.6.14": "npm:@els-vue/vue@>=2.6.14-tuxcare.1",
-     "vue-server-renderer@2.6.14": "npm:@els-vue/vue-server-renderer@>=2.6.14-tuxcare.1",
+     "@vue/server-renderer@2.6.14": "npm:@els-vue/vue-server-renderer@>=2.6.14-tuxcare.1",
      "vue-template-compiler@2.6.14": "npm:@els-vue/vue-template-compiler@>=2.6.14-tuxcare.1"
    }
    ```
@@ -90,12 +90,12 @@ TuxCare provides ELS for Vue as npm packages, hosted on a secure internal regist
    ```text
    "dependencies": {
      "vue": "npm:@els-vue/vue@>=2.6.11-tuxcare.1",
-     "vue-server-renderer": "npm:@els-vue/vue-server-renderer@>=2.6.11-tuxcare.1",
+     "@vue/server-renderer": "npm:@els-vue/vue-server-renderer@>=2.6.11-tuxcare.1",
      "vue-template-compiler": "npm:@els-vue/vue-template-compiler@>=2.6.11-tuxcare.1"
    },
    "overrides": {
      "vue@2.6.11": "npm:@els-vue/vue@>=2.6.11-tuxcare.1",
-     "vue-server-renderer@2.6.11": "npm:@els-vue/vue-server-renderer@>=2.6.11-tuxcare.1",
+     "@vue/server-renderer@2.6.11": "npm:@els-vue/vue-server-renderer@>=2.6.11-tuxcare.1",
      "vue-template-compiler@2.6.11": "npm:@els-vue/vue-template-compiler@>=2.6.11-tuxcare.1"
    }
    ```
