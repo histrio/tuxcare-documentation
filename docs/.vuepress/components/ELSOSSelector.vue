@@ -74,6 +74,11 @@ const operatingSystems = [
     link: "./red-hat-enterprise-linux-7-els",
   },
   {
+    name: "Red Hat Enterprise Linux 8",
+    icon: "/images/redhat.webp",
+    link: "./red-hat-enterprise-linux-8-els",
+  },
+  {
     name: "Ubuntu 16.04",
     icon: "/images/Ubuntu.webp",
     link: "./ubuntu-16-04-els",

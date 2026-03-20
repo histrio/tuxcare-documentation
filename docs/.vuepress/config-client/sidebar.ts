@@ -67,6 +67,10 @@ export default {
                     icon: '/images/redhat.webp',
                 },
                 {
+                    path: '/els-for-os/red-hat-enterprise-linux-8-els/',
+                    icon: '/images/redhat.webp',
+                },
+                {
                     path: '/els-for-os/ubuntu-16-04-els/',
                     icon: '/images/Ubuntu.webp',
                 },

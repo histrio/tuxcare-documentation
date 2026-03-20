@@ -144,6 +144,20 @@ For example:
 rsync -avSHP --delete rsync://repo.tuxcare.com/RHEL7ELS/ .
 ```
 
+### Red Hat Enterprise Linux 8 ELS
+
+To create a local mirror of the [rhel8-els](https://repo.tuxcare.com/rhel8-els/) repository with security updates via `rsync`, use the following:
+
+```
+rsync://repo.tuxcare.com/RHEL8ELS/
+```
+
+For example:
+
+```
+rsync -avSHP --delete rsync://repo.tuxcare.com/RHEL8ELS/ .
+```
+
 ### Ubuntu 16.04 ELS
 
 To create a local mirror of the ubuntu16_04-els repository with security updates via `rsync`, use the following:
