@@ -164,7 +164,7 @@ const techData = [
         versions: "3.2.1",
         link: "./java-libraries/",
       },
-      
+
       {
         name: "Apache Spark™",
         versions: "2.4.8",
@@ -656,7 +656,7 @@ const techData = [
         versions: "9.18.5",
         link: "./javascript-libraries/",
       },
-      {   
+      {
         name: "handlebars",
         versions: "3.0.3",
         link: "./javascript-libraries/",
@@ -1003,12 +1003,17 @@ const techData = [
       },
       {
         name: "vue",
-        versions: "2.7.16",
+        versions: "2.6.11 | 2.6.14 | 2.7.16",
+        link: "./vue/",
+      },
+      {
+        name: "vue-server-renderer",
+        versions: "2.6.11 | 2.6.14 | 2.7.16",
         link: "./vue/",
       },
       {
         name: "vue-template-compiler",
-        versions: "2.6.11",
+        versions: "2.6.11 | 2.6.14 | 2.7.16",
         link: "./vue-template-compiler/",
       },
       {
