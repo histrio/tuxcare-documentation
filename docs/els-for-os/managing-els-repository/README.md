@@ -10,7 +10,7 @@ After the ELS repository is installed, you can apply security updates using your
 
 <template #RPM-based_(YUM)>
 
-**Applies to:** CentOS 6, CentOS 7, CentOS 8, CentOS Stream 8, Oracle Linux 6, Oracle Linux 7, Red Hat Enterprise Linux 7
+**Applies to:** CentOS 6, CentOS 7, CentOS 8, CentOS Stream 8, Oracle Linux 6, Oracle Linux 7, Red Hat Enterprise Linux 7, Red Hat Enterprise Linux 8
 
 Update all packages:
 
@@ -75,7 +75,15 @@ To obtain access to the local mirroring facility, provide your external IP addre
 
 <template #RPM-based_(YUM)>
 
-**Applies to:** CentOS 6, CentOS 7, CentOS 8, CentOS Stream 8, Oracle Linux 6, Oracle Linux 7, Red Hat Enterprise Linux 7
+**Applies to:** CentOS 6, CentOS 7, CentOS 8, CentOS Stream 8, Oracle Linux 6, Oracle Linux 7, Red Hat Enterprise Linux 7, Red Hat Enterprise Linux 8
+
+**For Red Hat Enterprise Linux 8**, the repository can be removed by running the installation script with the `--delete` flag:
+
+```
+sh install-rhel8-els-repo.sh --delete
+```
+
+**For other RPM-based systems:**
 
 1. List the ELS repository file (ending with `-els.repo`) in the repository folder:
 
