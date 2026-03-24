@@ -1,10 +1,10 @@
-# Installation instructions of a local mirror for ELS PHP
+# Installation instructions of a local mirror for ELS Node.js
 
-We provide the ability to create local mirrors of PHP for ELS updates.
+We provide the ability to create local mirrors of Node.js for ELS updates.
 
-**To obtain access to the local mirroring, provide your External IP address to your Account Manager or send it to [sales@tuxcare.com](mailto:sales@tuxcare.com).**
+**To obtain access to the local mirroring, provide your External IP address to your Account Manager or send it to [sales@tuxcare.com](mailto:sales@tuxcare.com).**
 
-* To create a local mirror of the repository with security updates via `rsync`, use the following:
+* To create a local mirror of the repository with security updates via `rsync`, use the following:
 
   ```
   rsync://repo.cloudlinux.com/ALT_COMMON/
@@ -13,28 +13,28 @@ We provide the ability to create local mirrors of PHP for ELS updates.
   and
 
   ```
-  rsync://repo.cloudlinux.com/ALT_PHP_ELS/
+  rsync://repo.cloudlinux.com/ALT_NODEJS_ELS/
   ```
 
 * Example of creating a local mirror for all supported OS versions:
 
   ```
-  rsync -avSHP --delete rsync://repo.cloudlinux.com/ALT_COMMON/   alt-common
-  rsync -avSHP --delete rsync://repo.cloudlinux.com/ALT_PHP_ELS/ alt-php-els
+  rsync -avSHP --delete rsync://repo.cloudlinux.com/ALT_COMMON/     alt-common
+  rsync -avSHP --delete rsync://repo.cloudlinux.com/ALT_NODEJS_ELS/ alt-nodejs-els
   ```
 
 * Example of creating a local mirror for a specific OS version:
 
   ```
-  rsync -avSHP --delete rsync://repo.cloudlinux.com/ALT_COMMON/rpm/el/8/   alt-common
-  rsync -avSHP --delete rsync://repo.cloudlinux.com/ALT_PHP_ELS/rpm/el/8/ alt-php-els
+  rsync -avSHP --delete rsync://repo.cloudlinux.com/ALT_COMMON/rpm/el/8/     alt-common
+  rsync -avSHP --delete rsync://repo.cloudlinux.com/ALT_NODEJS_ELS/rpm/el/8/ alt-nodejs-els
   ```
 
 * Use one of the suggested options to specify the OS:
 
 | Option            | OS                                                                         |
 | :---------------: | :------------------------------------------------------------------------: |
-| rpm/el/7/         | CentOS 7, CloudLinux 7, OracleLinux 7, Amazon Linux 2, etc.                |
+| rpm/el/7/         | CentOS 7, CloudLinux 7, OracleLinux 7, etc.                                |
 | rpm/el/8/         | AlmaLinux 8, CentOS 8, CentOS 8 Stream, CloudLinux 8, Oracle Linux 8, etc. |
 | rpm/el/9/         | AlmaLinux 9, CloudLinux 9, Oracle Linux 9, etc.                            |
 | rpm/el/10/        | AlmaLinux 10, CloudLinux 10, Oracle Linux 10, etc.                         |
