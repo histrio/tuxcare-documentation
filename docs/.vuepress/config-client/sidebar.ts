@@ -322,6 +322,10 @@ export default {
                     icon: '/images/bootstrap-sass-logo.webp',
                 },
                 {
+                    path: '/els-for-libraries/ember/',
+                    icon: '/images/ember-logo.webp',
+                },
+                {
                     path: '/els-for-libraries/express/',
                     icon: '/images/express-logo.webp',
                 },
