@@ -612,6 +612,11 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "Ember.js",
+        versions: "2.18.2",
+        link: "./ember/",
+      },
+      {
         name: "elliptic",
         versions: "6.6.0",
         link: "./javascript-libraries/",
