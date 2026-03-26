@@ -1430,8 +1430,43 @@ const techData = [
         link: "./dotnet/",
       },
       {
+        name: "log4net",
+        versions: "1.2.15",
+        link: "./dotnet/",
+      },
+      {
+        name: "Microsoft.Azure.Storage.DataMovement",
+        versions: "1.2.0 | 1.2.1",
+        link: "./dotnet/",
+      },
+      {
+        name: "Microsoft.Data.SqlClient",
+        versions: "1.1.4 | 1.1.5",
+        link: "./dotnet/",
+      },
+      {
+        name: "MimeKit",
+        versions: "3.6.1 | 3.6.2",
+        link: "./dotnet/",
+      },
+      {
         name: "Newtonsoft.Json",
         versions: "4.5.11 | 4.5.12 | 6.0.8 | 6.0.9 | 8.0.3 | 8.0.4 | 9.0.1 | 9.0.2 | 10.0.3 | 10.0.4 | 11.0.2 | 11.0.3 | 12.0.3 | 12.0.4",
+        link: "./dotnet/",
+      },
+      {
+        name: "NHibernate",
+        versions: "4.1.2.4001",
+        link: "./dotnet/",
+      },
+      {
+        name: "Refit",
+        versions: "6.3.2",
+        link: "./dotnet/",
+      },
+      {
+        name: "RestSharp",
+        versions: "108.0.3 | 110.2.0 | 111.4.1",
         link: "./dotnet/",
       },
       {
