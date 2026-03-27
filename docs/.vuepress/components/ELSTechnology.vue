@@ -1349,6 +1349,16 @@ const techData = [
         link: "./carbon/",
       },
       {
+        name: "CraftCMS",
+        versions: "3.9.15",
+        link: "./craftcms/",
+      },
+      {
+        name: "CraftCMS Feed Me Plugin",
+        versions: "3.1.17",
+        link: "./craftcms-feed-me/",
+      },
+      {
         name: "DomPDF",
         versions: "0.8.x | 1.2.x | 3.1.0",
         link: "./dompdf/",
