@@ -1084,7 +1084,7 @@ const techData = [
       },
       {
         name: "cryptography",
-        versions: "3.4.8 | 41.0.7 | 42.0.0 | 42.0.8 | 43.0.1 | 43.0.3",
+        versions: "3.4.8 | 41.0.7 | 42.0.0 | 42.0.8 | 43.0.1 | 43.0.3 | 44.0.3 | 45.0.7",
         link: "./python-libraries/",
       },
       {

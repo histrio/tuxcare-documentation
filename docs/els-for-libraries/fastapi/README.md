@@ -96,8 +96,8 @@ Fixes for the following vulnerabilities are available in ELS for FastAPI from Tu
 
 | CVE ID         | Severity | Library | Vulnerable Versions | Safe Version          |
 | :------------: | :------: | :-----: | :-----------------: | :-------------------: |
-| CVE-2024-24762 | High     | fastapi | 0.63.0              | 0.63.0.post2+tuxcare  |
-| CVE-2024-24762 | High     | fastapi | 0.104.1             | 0.104.1.post1+tuxcare |
+| CVE-2024-24762 | High     | fastapi | < 0.109.1           | 0.63.0.post2+tuxcare  |
+| CVE-2024-24762 | High     | fastapi | < 0.109.1           | 0.104.1.post1+tuxcare |
 | CVE-2021-32677 | High     | fastapi | 0.63.0              | 0.63.0.post1+tuxcare  |
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).

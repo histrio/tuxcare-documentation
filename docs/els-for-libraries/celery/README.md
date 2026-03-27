@@ -96,7 +96,7 @@ Fixes for the following vulnerabilities are available in ELS for Celery from Tux
 
 | CVE ID         | Severity | Library | Vulnerable Versions | Safe Version         |
 | :------------: | :------: | :-----: | :-----------------: | :------------------: |
-| CVE-2021-23727 | High     | celery  | 4.4.7               | 4.4.7.post1+tuxcare  |
-| CVE-2021-23727 | High     | celery  | 5.1.2               | 5.1.2.post1+tuxcare  |
+| CVE-2021-23727 | High     | celery  | < 5.2.2             | 4.4.7.post1+tuxcare  |
+| CVE-2021-23727 | High     | celery  | < 5.2.2             | 5.1.2.post1+tuxcare  |
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
