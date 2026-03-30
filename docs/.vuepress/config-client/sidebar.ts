@@ -31,6 +31,10 @@ export default {
             children: [
                 "/els-for-os/",
                 {
+                    path: '/els-for-os/amazon-linux-2-els/',
+                    icon: '/images/placeholder-logo.webp',
+                },
+                {
                     path: '/els-for-os/alpine-linux-3-18-els/',
                     icon: '/images/alpine-linux.webp',
                 },

@@ -29,6 +29,11 @@
 <script setup>
 const operatingSystems = [
   {
+    name: "Amazon Linux 2",
+    icon: "/images/placeholder-logo.webp",
+    link: "./amazon-linux-2-els",
+  },
+  {
     name: "Alpine Linux 3.18",
     icon: "/images/alpine-linux.webp",
     link: "./alpine-linux-3-18-els",
