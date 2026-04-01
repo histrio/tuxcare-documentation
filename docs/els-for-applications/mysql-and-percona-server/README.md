@@ -1,14 +1,20 @@
-# MySQL
+# MySQL and Percona Server
 
-Endless Lifecycle Support (ELS) for MySQL from TuxCare provides security fixes for MySQL versions that have reached end-of-life. This allows you to continue running your MySQL deployments without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for MySQL and Percona Server from TuxCare provides security fixes for versions that have reached end-of-life. This allows you to continue running your deployments without vulnerability concerns, even after official support has ended.
 
 ## Supported OS and MySQL versions
 
 | OS                                                      | Package Type | OS Version | MySQL version |
 | :-----------------------------------------------------: | :----------: | :--------: | :-----------: |
-| EL 7 (CentOS, CloudLinux, Oracle Linux, etc.)          | RPM          | 7.x        | 5.7, 8.0      |
+| EL 7 (CentOS, CloudLinux, Oracle Linux, etc.)          | RPM          | 7.x        | 8.0           |
 | EL 8 (CentOS, CloudLinux, AlmaLinux, Oracle Linux, etc.) | RPM        | 8.x        | 8.0           |
 | EL 9 (CentOS, CloudLinux, AlmaLinux, Oracle Linux, etc.) | RPM        | 9.x        | 8.0           |
+
+## Supported OS and Percona Server versions
+
+| OS                                      | Package Type | OS Version | Percona Server version |
+| :-------------------------------------: | :----------: | :--------: | :--------------------: |
+| EL 7 (CentOS, CloudLinux, Oracle Linux, etc.) | RPM    | 7.x        | 8.0                    |
 
 **Supported architecture:** x86_64 (64-bit)
 

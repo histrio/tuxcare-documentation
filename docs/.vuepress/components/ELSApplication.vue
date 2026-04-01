@@ -76,8 +76,8 @@ const applications = [
   },
   {
     name: "MySQL",
-    versions: "5.7 | 8.0",
-    link: "./mysql/",
+    versions: "8.0",
+    link: "./mysql-and-percona-server/",
     icon: "/images/mysql2-logo.webp",
   },
 ];
