@@ -158,6 +158,20 @@ For example:
 rsync -avSHP --delete rsync://repo.tuxcare.com/RHEL8ELS/ .
 ```
 
+### Amazon Linux 2 ELS
+
+To create a local mirror of the [amazonlinux2-els](https://repo.tuxcare.com/amazonlinux2-els/) repository with security updates via `rsync`, use the following:
+
+```
+rsync://repo.tuxcare.com/AMAZONLINUX2ELS/
+```
+
+For example:
+
+```
+rsync -avSHP --delete rsync://repo.tuxcare.com/AMAZONLINUX2ELS/ .
+```
+
 ### Ubuntu 16.04 ELS
 
 To create a local mirror of the ubuntu16_04-els repository with security updates via `rsync`, use the following:
