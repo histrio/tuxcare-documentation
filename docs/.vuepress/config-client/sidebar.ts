@@ -265,6 +265,14 @@ export default {
                     icon: '/images/cakephp.webp',
                 },
                 {
+                    path: '/els-for-libraries/craftcms/',
+                    icon: '/images/craftcms.webp',
+                },
+                {
+                    path: '/els-for-libraries/craftcms-feed-me/',
+                    icon: '/images/feed-me.webp',
+                },
+                {
                     path: '/els-for-libraries/firebase-php-jwt/',
                     icon: '/images/firebase.webp',
                 },
