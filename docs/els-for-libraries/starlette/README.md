@@ -96,12 +96,12 @@ Fixes for the following vulnerabilities are available in ELS for Starlette from 
 
 | CVE ID         | Severity | Library   | Vulnerable Versions | Safe Version         |
 | :------------: | :------: | :-------: | :-----------------: | :------------------: |
-| CVE-2025-54121 | Medium   | starlette | 0.13.6              | 0.13.6.post1+tuxcare |
-| CVE-2025-54121 | Medium   | starlette | 0.27.0              | 0.27.0.post2+tuxcare |
-| CVE-2024-47874 | High     | starlette | 0.13.6              | 0.13.6.post2+tuxcare |
-| CVE-2024-47874 | High     | starlette | 0.27.0              | 0.27.0.post1+tuxcare |
-| CVE-2023-30798 | High     | starlette | 0.13.6              | 0.13.6.post2+tuxcare |
-| CVE-2023-29159 | High     | starlette | 0.13.6              | 0.13.6.post2+tuxcare |
+| CVE-2025-54121 | Medium   | starlette | <= 0.47.1           | 0.13.6.post1+tuxcare |
+| CVE-2025-54121 | Medium   | starlette | <= 0.47.1           | 0.27.0.post2+tuxcare |
+| CVE-2024-47874 | High     | starlette | < 0.40.0            | 0.13.6.post2+tuxcare |
+| CVE-2024-47874 | High     | starlette | < 0.40.0            | 0.27.0.post1+tuxcare |
+| CVE-2023-30798 | High     | starlette | < 0.25.0            | 0.13.6.post2+tuxcare |
+| CVE-2023-29159 | High     | starlette | >= 0.13.5, < 0.27.0 | 0.13.6.post2+tuxcare |
 
 **N/A (Not Available)** means that the National Vulnerability Database (NVD) has registered this CVE, but an official CVSS severity score has not yet been assigned.
 
