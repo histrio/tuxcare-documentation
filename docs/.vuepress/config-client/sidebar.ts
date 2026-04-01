@@ -510,6 +510,10 @@ export default {
                     path: '/els-for-applications/maven/',
                     icon: '/images/maven.webp',
                 },
+                {
+                    path: '/els-for-applications/mysql/',
+                    icon: '/images/mysql2-logo.webp',
+                },
             ]
         },
     ],
