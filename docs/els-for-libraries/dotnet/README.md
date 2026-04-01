@@ -9,7 +9,14 @@ NuGet is the standard package manager for .NET, used to deliver the reusable com
 * .NET 6, 8, 10
 * Microsoft.Owin 3.1.0
 * Microsoft.Owin.Security.Cookies 3.1.0
+* log4net 1.2.15
+* Microsoft.Azure.Storage.DataMovement 1.2.0, 1.2.1
+* Microsoft.Data.SqlClient 1.1.4, 1.1.5
+* MimeKit 3.6.1, 3.6.2
 * Newtonsoft.Json 4.5.11, 4.5.12, 6.0.8, 6.0.9, 8.0.3, 8.0.4, 9.0.1, 9.0.2, 10.0.3, 10.0.4, 11.0.2, 11.0.3, 12.0.3, 12.0.4
+* NHibernate 4.1.2.4001
+* Refit 6.3.2
+* RestSharp 108.0.3, 110.2.0, 111.4.1
 * SharpZipLib 0.86.0, 0.86.1
 
 Other versions upon request.
@@ -217,8 +224,15 @@ dotnet nuget add source "https://nexus.repo.tuxcare.com/repository/<els_dotnet_c
 
 | CVE ID | Severity | Affected Package | Affected Versions | Safe Versions |
 | :----: | :------: | :--------------: | :---------------: | :-----------: |
+| CVE-2018-1285 | Critical | log4net | < 2.0.10 | See Nexus |
+| CVE-2024-35252 | High | Microsoft.Azure.Storage.DataMovement | < 2.0.0 | See Nexus |
+| CVE-2024-0056 | High | Microsoft.Data.SqlClient | < 2.1.7 | See Nexus |
+| CVE-2024-38095 | High | MimeKit | >= 3.0.0, < 4.7.1 | See Nexus |
+| CVE-2024-39677 | Medium | NHibernate | < 5.4.9 | See Nexus |
 | CVE-2024-21907 | High | Newtonsoft.Json | < 13.0.1 | See Nexus |
 | GHSA-5crp-9r3c-p9vr | High | Newtonsoft.Json | < 13.0.1 | See Nexus |
+| CVE-2024-51501 | Critical | Refit | < 7.2.22 | See Nexus |
+| CVE-2024-45302 | High | RestSharp | >= 107.0.0, < 112.0.0 | See Nexus |
 | CVE-2021-32840 | Critical | SharpZipLib | < 1.3.3 | See Nexus |
 | CVE-2021-32841 | Medium | SharpZipLib | >= 1.3.0, < 1.3.3 | See Nexus |
 | CVE-2021-32842 | Medium | SharpZipLib | >= 1.0.0, < 1.3.3 | See Nexus |
