@@ -74,6 +74,12 @@ const applications = [
     link: "./maven/",
     icon: "/images/maven.webp",
   },
+  {
+    name: "MySQL",
+    versions: "8.0",
+    link: "./mysql-and-percona-server/",
+    icon: "/images/mysql2-logo.webp",
+  },
 ];
 </script>
 

@@ -510,6 +510,11 @@ export default {
                     path: '/els-for-applications/maven/',
                     icon: '/images/maven.webp',
                 },
+                {
+                    path: '/els-for-applications/mysql-and-percona-server/',
+                    title: 'MySQL and Percona Server',
+                    icon: '/images/mysql2-logo.webp',
+                },
             ]
         },
     ],
