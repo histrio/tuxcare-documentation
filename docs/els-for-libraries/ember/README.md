@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for Ember.js from TuxCare provides security fixe
 
 ## Supported Ember.js Versions
 
-* Ember.js 2.18.2
+* Ember.js 2.18.2, 3.28.6
 
 ## Connection to ELS for Ember.js Library
 
@@ -16,7 +16,7 @@ You need a token in order to use TuxCare ELS Ember.js library. Anonymous access 
 
 ## Step 2: Set Up ELS for Ember.js
 
-TuxCare publishes patched **transitive** dependencies for Ember.js 2.18.2 as NPM packages on a secure internal registry: **terser** 3.17.0, **rollup** 0.41.6, **printf** 0.5.3, **markdown-it** 8.4.2, and **clean-css** 3.4.28. Follow the steps below to add them to your project.
+TuxCare publishes patched **transitive** dependencies for supported Ember.js versions as NPM packages on a secure internal registry. Choose your Ember.js version below for the exact package list and `overrides`.
 
 1. Navigate to the root directory of your Ember.js project.
 2. Create a `.npmrc` file or update it if it already exists.
@@ -43,68 +43,125 @@ TuxCare publishes patched **transitive** dependencies for Ember.js 2.18.2 as NPM
    Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sales@tuxcare.com).
    :::
 
-4. Update your `package.json` so the transitive versions above resolve to TuxCare packages. You can do this in two ways:
+4. Update your `package.json` so the transitive versions for your Ember.js version resolve to TuxCare packages. You can do this in two ways:
 
-   * **Option 1: Manual update**
+   <TableTabs label="Choose Ember.js version: " >
 
-     Add `overrides` (and optional matching `dependencies` entries) so **terser** 3.17.0, **rollup** 0.41.6, **printf** 0.5.3, **markdown-it** 8.4.2, and **clean-css** 3.4.28 use the `@els-js/*` builds.
+    <template #ember_2.18.2>
 
-     ```text
-     "dependencies": {
-       "terser": "npm:@els-js/terser@>=3.17.0-tuxcare.1",
-       "rollup": "npm:@els-js/rollup@>=0.41.6-tuxcare.1",
-       "printf": "npm:@els-js/printf@>=0.5.3-tuxcare.1",
-       "markdown-it": "npm:@els-js/markdown-it@>=8.4.2-tuxcare.1",
-       "clean-css": "npm:@els-js/clean-css@>=3.4.28-tuxcare.1"
-     },
-     "overrides": {
-       "terser@3.17.0": "npm:@els-js/terser@>=3.17.0-tuxcare.1",
-       "rollup@0.41.6": "npm:@els-js/rollup@>=0.41.6-tuxcare.1",
-       "printf@0.5.3": "npm:@els-js/printf@>=0.5.3-tuxcare.1",
-       "markdown-it@8.4.2": "npm:@els-js/markdown-it@>=8.4.2-tuxcare.1",
-       "clean-css@3.4.28": "npm:@els-js/clean-css@>=3.4.28-tuxcare.1"
-     }
-     ```
+    * **Option 1: Manual update**
 
-   * **Option 2: TuxCare Patcher (Automated)**
+      ```text
+      "dependencies": {
+        "terser": "npm:@els-js/terser@>=3.17.0-tuxcare.1",
+        "rollup": "npm:@els-js/rollup@>=0.41.6-tuxcare.1",
+        "printf": "npm:@els-js/printf@>=0.5.3-tuxcare.1",
+        "markdown-it": "npm:@els-js/markdown-it@>=8.4.2-tuxcare.1",
+        "clean-css": "npm:@els-js/clean-css@>=3.4.28-tuxcare.1"
+      },
+      "overrides": {
+        "terser@3.17.0": "npm:@els-js/terser@>=3.17.0-tuxcare.1",
+        "rollup@0.41.6": "npm:@els-js/rollup@>=0.41.6-tuxcare.1",
+        "printf@0.5.3": "npm:@els-js/printf@>=0.5.3-tuxcare.1",
+        "markdown-it@8.4.2": "npm:@els-js/markdown-it@>=8.4.2-tuxcare.1",
+        "clean-css@3.4.28": "npm:@els-js/clean-css@>=3.4.28-tuxcare.1"
+      }
+      ```
 
-     Install the Patcher globally and run it. The TuxCare Patcher updates your `package.json` so these library versions use the corresponding TuxCare `@els-js/*` packages.
+    * **Option 2: TuxCare Patcher (Automated)**
 
-     ```text
-     npm install -g @els-js/tuxcare-patcher --userconfig ./.npmrc
-     tuxcare-patch-js
-     ```
+      ```text
+      npm install -g @els-js/tuxcare-patcher --userconfig ./.npmrc
+      tuxcare-patch-js
+      ```
 
-     The patcher will update your `package.json`, for example, from:
+      The patcher will update your `package.json`, for example, from:
 
-     ```text
-     "dependencies": {
-       "terser": "3.17.0",
-       "rollup": "0.41.6",
-       "printf": "0.5.3",
-       "markdown-it": "8.4.2",
-       "clean-css": "3.4.28"
-     }
-     ```
+      ```text
+      "dependencies": {
+        "terser": "3.17.0",
+        "rollup": "0.41.6",
+        "printf": "0.5.3",
+        "markdown-it": "8.4.2",
+        "clean-css": "3.4.28"
+      }
+      ```
 
-     to:
+      to:
 
-     ```text
-     "dependencies": {
-       "terser": "npm:@els-js/terser@>=3.17.0-tuxcare.1",
-       "rollup": "npm:@els-js/rollup@>=0.41.6-tuxcare.1",
-       "printf": "npm:@els-js/printf@>=0.5.3-tuxcare.1",
-       "markdown-it": "npm:@els-js/markdown-it@>=8.4.2-tuxcare.1",
-       "clean-css": "npm:@els-js/clean-css@>=3.4.28-tuxcare.1"
-     },
-     "overrides": {
-       "terser@3.17.0": "npm:@els-js/terser@>=3.17.0-tuxcare.1",
-       "rollup@0.41.6": "npm:@els-js/rollup@>=0.41.6-tuxcare.1",
-       "printf@0.5.3": "npm:@els-js/printf@>=0.5.3-tuxcare.1",
-       "markdown-it@8.4.2": "npm:@els-js/markdown-it@>=8.4.2-tuxcare.1",
-       "clean-css@3.4.28": "npm:@els-js/clean-css@>=3.4.28-tuxcare.1"
-     }
-     ```
+      ```text
+      "dependencies": {
+        "terser": "npm:@els-js/terser@>=3.17.0-tuxcare.1",
+        "rollup": "npm:@els-js/rollup@>=0.41.6-tuxcare.1",
+        "printf": "npm:@els-js/printf@>=0.5.3-tuxcare.1",
+        "markdown-it": "npm:@els-js/markdown-it@>=8.4.2-tuxcare.1",
+        "clean-css": "npm:@els-js/clean-css@>=3.4.28-tuxcare.1"
+      },
+      "overrides": {
+        "terser@3.17.0": "npm:@els-js/terser@>=3.17.0-tuxcare.1",
+        "rollup@0.41.6": "npm:@els-js/rollup@>=0.41.6-tuxcare.1",
+        "printf@0.5.3": "npm:@els-js/printf@>=0.5.3-tuxcare.1",
+        "markdown-it@8.4.2": "npm:@els-js/markdown-it@>=8.4.2-tuxcare.1",
+        "clean-css@3.4.28": "npm:@els-js/clean-css@>=3.4.28-tuxcare.1"
+      }
+      ```
+
+    </template>
+
+    <template #ember_3.28.6>
+
+    * **Option 1: Manual update**
+
+      ```text
+      "dependencies": {
+        "rollup": "npm:@els-js/rollup@>=0.57.1-tuxcare.1",
+        "markdown-it": "npm:@els-js/markdown-it@>=13.0.2-tuxcare.1",
+        "diff": "npm:@els-js/diff@>=7.0.0-tuxcare.1"
+      },
+      "overrides": {
+        "rollup@0.57.1": "npm:@els-js/rollup@>=0.57.1-tuxcare.1",
+        "markdown-it@13.0.2": "npm:@els-js/markdown-it@>=13.0.2-tuxcare.1",
+        "diff@7.0.0": "npm:@els-js/diff@>=7.0.0-tuxcare.1"
+      }
+      ```
+
+    * **Option 2: TuxCare Patcher (Automated)**
+
+      Install the Patcher globally and run it. The TuxCare Patcher updates your `package.json` so these library versions use the corresponding TuxCare `@els-js/*` packages.
+
+      ```text
+      npm install -g @els-js/tuxcare-patcher --userconfig ./.npmrc
+      tuxcare-patch-js
+      ```
+
+      The patcher will update your `package.json`, for example, from:
+
+      ```text
+      "dependencies": {
+        "rollup": "0.57.1",
+        "markdown-it": "13.0.2",
+        "diff": "7.0.0"
+      }
+      ```
+
+      to:
+
+      ```text
+      "dependencies": {
+        "rollup": "npm:@els-js/rollup@>=0.57.1-tuxcare.1",
+        "markdown-it": "npm:@els-js/markdown-it@>=13.0.2-tuxcare.1",
+        "diff": "npm:@els-js/diff@>=7.0.0-tuxcare.1"
+      },
+      "overrides": {
+        "rollup@0.57.1": "npm:@els-js/rollup@>=0.57.1-tuxcare.1",
+        "markdown-it@13.0.2": "npm:@els-js/markdown-it@>=13.0.2-tuxcare.1",
+        "diff@7.0.0": "npm:@els-js/diff@>=7.0.0-tuxcare.1"
+      }
+      ```
+
+    </template>
+
+   </TableTabs>
 
 5. You need to remove the `node_modules` directory and the `package-lock.json` file, and also clear the `npm cache` before installing the patched packages. Use the following commands:
 
@@ -149,6 +206,10 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 
 Fixes for the following **transitive** vulnerabilities are available in ELS for Ember.js from TuxCare versions:
 
+<TableTabs label="Choose Ember.js version: " >
+
+<template #ember_2.18.2>
+
 | CVE ID | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
 | :------------: | :------: |:--------:|:------------------:| :----------------: |
 | CVE-2021-23354 | Transitive | High | printf | < 0.6.1 |
@@ -157,5 +218,20 @@ Fixes for the following **transitive** vulnerabilities are available in ELS for 
 | CVE-2024-47068 | Transitive | Medium | rollup | >= 0.59.0 < 2.79.2, >= 3.0.0 < 3.29.5, >= 4.0.0 < 4.22.4 |
 | CVE-2026-27606 | Transitive | Critical | rollup | < 2.80.0, >= 3.0.0 < 3.30.0, >= 4.0.0 < 4.59.0 |
 | GHSA-wxhq-pm8v-cw75 | Transitive | Low | clean-css | < 4.1.11 |
+
+</template>
+
+<template #ember_3.28.6>
+
+| CVE ID | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
+| :------------: | :------: |:--------:|:------------------:| :----------------: |
+| CVE-2024-47068 | Transitive | Medium | rollup | < 2.79.2, >= 3.0.0 < 3.29.5, >= 4.0.0 < 4.22.4 |
+| CVE-2026-27606 | Transitive | Critical | rollup | < 2.80.0, >= 3.0.0 < 3.30.0, >= 4.0.0 < 4.59.0 |
+| CVE-2026-2327 | Transitive | High | markdown-it | >= 13.0.0 < 14.1.1 |
+| CVE-2026-24001 | Transitive | High | diff | < 3.5.1, >= 4.0.0 < 4.0.4, >= 5.0.0 < 5.2.2, >= 6.0.0 < 8.0.3 |
+
+</template>
+
+</TableTabs>
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
