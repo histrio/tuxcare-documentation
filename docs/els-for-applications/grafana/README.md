@@ -14,15 +14,17 @@ TuxCare provides ELS for Grafana as pre-built binaries for the following distrib
 * Debian 12
 * Debian 13
 
-## Connection to ELS for Grafana
+## Installation
 
 This guide outlines the steps needed to install the TuxCare ELS build of Grafana on your system.
 
-## Step 1: Get Token
+<ELSPrerequisites>
 
-You need credentials in order to access the TuxCare ELS Grafana repository. Anonymous access is disabled. To receive the credentials, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+* Repository access credentials (username and password) — contact [sales@tuxcare.com](mailto:sales@tuxcare.com) 
 
-## Step 2: Download and Install Grafana
+</ELSPrerequisites>
+
+<ELSSteps>
 
 1. To browse available artifacts, visit TuxCare [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els-golang). Sign in with your TuxCare credentials. Navigate to the `grafana` folder and choose the directory for your operating system (e.g. `debian12`, `debian13`, `alpine3_22`), then download the appropriate archive for your Grafana version.
 
@@ -71,16 +73,16 @@ You need credentials in order to access the TuxCare ELS Grafana repository. Anon
 
    Adjust the archive filename if you downloaded a different version.
 
-## Step 3: Verify Installation
-
-1. Change to the Grafana installation directory and run the binary to confirm the TuxCare ELS build is installed:
+4. Change to the Grafana installation directory and run the binary to confirm the TuxCare ELS build is installed:
 
    ```text
    cd /opt/grafana
    ./bin/grafana-server --version
    ```
 
-2. Start Grafana according to your deployment method (systemd, Docker, or manual) and verify that the application runs correctly.
+5. Start Grafana according to your deployment method (systemd, Docker, or manual) and verify that the application runs correctly.
+
+</ELSSteps>
 
 ## Resolved CVEs
 

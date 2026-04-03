@@ -7,24 +7,17 @@ TuxCare's Endless Lifecycle Support (ELS) for Apache Maven provides security pat
 * Apache Maven 3.8.1
 * Apache Maven Shared Utils 3.2.1
 
-## Prerequisites
+## Installation
 
-* Ensure you have a compatible version of **Java Development Kit (JDK)** installed. JDK 7 or later is required.
+<ELSPrerequisites>
 
-  To verify if JDK is already installed on your system, open a terminal or command prompt and run:
+* Java Development Kit (JDK) 7 or later installed (verify with `java -version`)
+* Repository access credentials (username and password) for TuxCare ELS Apache Maven repository
+* Access to TuxCare [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els_java) to browse available artifacts after sign-in
 
-  ```text
-  java -version
-  ```
+</ELSPrerequisites>
 
-  If JDK is installed, you should see version information. If not, you'll need to install it.
-
-## Repository Access
-
-You need a username and password to access the TuxCare ELS Apache Maven repository. Anonymous access is disabled.
-To obtain credentials, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
-
-To browse available artifacts via the web interface, visit TuxCare [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els_java). Click the **Sign in** button in the top right corner to authenticate with your TuxCare credentials. After logging in, you may need to refresh or re-open the browse link due to Nexus routing behavior.
+<ELSSteps>
 
 ## Linux Installation
 
@@ -68,6 +61,8 @@ To browse available artifacts via the web interface, visit TuxCare [Nexus](https
 ## Upgrading to a Newer TuxCare Version
 
 To upgrade to a newer TuxCare release (e.g., from `tuxcare.1` to `tuxcare.2`), download and extract the new version of the Apache Maven archive from TuxCare using the instructions above.
+
+</ELSSteps>
 
 ## Vulnerability Exploitability eXchange (VEX)
 

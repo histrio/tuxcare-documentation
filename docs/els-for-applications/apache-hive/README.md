@@ -7,15 +7,17 @@ Our ELS for Apache Hive service is designed to provide solutions for organizatio
 
 * Apache Hive 2.3.9
 
-## Connection to ELS for Apache Hive Repository
+## Installation
 
 This guide outlines the steps needed to integrate the TuxCare ELS for Apache Hive repository into your Java application. The repository provides trusted Java libraries that can be easily integrated into your **Maven** and **Gradle** projects.
 
-### Step 1: Get user credentials
+<ELSPrerequisites>
 
-You need a username and password in order to use the TuxCare ELS Apache Hive repository. Anonymous access is disabled. To receive a username and password please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+* Repository access credentials (username and password) — contact [sales@tuxcare.com](mailto:sales@tuxcare.com) 
 
-### Step 2: Configure Registry
+</ELSPrerequisites>
+
+<ELSSteps>
 
 1. Navigate to the directory depending on your operating system.
    * Windows
@@ -45,52 +47,48 @@ You need a username and password in order to use the TuxCare ELS Apache Hive rep
      { title: 'Gradle (~/.gradle/gradle.properties)', content: gradlecreds }
    ]" />
 
-Here `USERNAME` and `PASSWORD` are your credentials mentioned in [Step 1](#step-1-get-user-credentials).
+   Here `USERNAME` and `PASSWORD` are your TuxCare credentials.
 
-### Step 3: Update Build Configuration
+3. Add the TuxCare Apache Hive repository and plugins to your build configuration:
 
-Add the TuxCare Apache Hive repository and plugins to your build configuration:
+   <CodeTabs :tabs="[
+     { title: 'Maven (pom.xml)', content: mavenrepo },
+     { title: 'Gradle (build.gradle)', content: gradlerepo }
+   ]" />
 
-<CodeTabs :tabs="[
-  { title: 'Maven (pom.xml)', content: mavenrepo },
-  { title: 'Gradle (build.gradle)', content: gradlerepo }
-]" />
+   * To fully switch from the official Apache Hive repository, replace it with the TuxCare repository.
+   * To keep both, add TuxCare after the official one.
 
-* To fully switch from the official Apache Hive repository, replace it with the TuxCare repository.
-* To keep both, add TuxCare after the official one.
+   Example Maven and Gradle projects are available on GitHub. Remember to set the required environment variables.
+   * [Maven](https://github.com/cloudlinux/securechain-java/tree/main/examples/maven)
+   * [Gradle](https://github.com/cloudlinux/securechain-java/tree/main/examples/gradle)
 
-Example Maven and Gradle projects are available on GitHub. Remember to set the required environment variables.
-* [Maven](https://github.com/cloudlinux/securechain-java/tree/main/examples/maven)
-* [Gradle](https://github.com/cloudlinux/securechain-java/tree/main/examples/gradle)
+4. Replace the Apache Hive dependencies in your build file with the TuxCare-maintained versions to cover both direct and transitive dependencies.
 
-### Step 4: Update Dependencies
+   You can find a specific artifact version in your TuxCare account on [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els_java). Click **Sign In** in the top right corner to authenticate with your TuxCare credentials. After logging in, you may need to refresh or reopen the link to browse artifacts due to Nexus routing behavior.
 
-Replace the Apache Hive dependencies in your build file with the TuxCare-maintained versions to cover both direct and transitive dependencies.
+   <CodeTabs :tabs="[
+     { title: 'Maven (pom.xml)', content: mavendeps },
+     { title: 'Gradle (build.gradle)', content: gradledeps }
+   ]" />
 
-You can find a specific artifact version in your TuxCare account on [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els_java). Click **Sign In** in the top right corner to authenticate with your TuxCare credentials. After logging in, you may need to refresh or reopen the link to browse artifacts due to Nexus routing behavior.
-
-<CodeTabs :tabs="[
-  { title: 'Maven (pom.xml)', content: mavendeps },
-  { title: 'Gradle (build.gradle)', content: gradledeps }
-]" />
-
-### Step 5: Verify and Build
-
-1. To confirm the TuxCare Apache Hive repository is set up correctly, use your build tool to list the project's dependencies. It shows both direct and transitive dependencies in the classpath.
+5. To confirm the TuxCare Apache Hive repository is set up correctly, use your build tool to list the project's dependencies. It shows both direct and transitive dependencies in the classpath.
 
    <CodeTabs :tabs="[
      { title: 'Maven', content: `mvn dependency:tree -Dverbose` },
      { title: 'Gradle', content: `./gradlew dependencies --configuration runtimeClasspath` }
    ]" />
 
-2. After reviewing the dependencies, include any library from the repository into your project and then run a build:
+6. After reviewing the dependencies, include any library from the repository into your project and then run a build:
 
    <CodeTabs :tabs="[
-    { title: 'Maven', content: `mvn clean install` },
-    { title: 'Gradle', content: `./gradlew build` }
+     { title: 'Maven', content: `mvn clean install` },
+     { title: 'Gradle', content: `./gradlew build` }
    ]" />
 
-The build tool you're using should be able to identify and resolve dependencies from the TuxCare ELS for Apache Hive repository.
+   The build tool you're using should be able to identify and resolve dependencies from the TuxCare ELS for Apache Hive repository.
+
+</ELSSteps>
 
 ### Conclusion
 
