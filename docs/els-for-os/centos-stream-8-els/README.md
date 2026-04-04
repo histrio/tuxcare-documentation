@@ -62,9 +62,9 @@
 
 * ![](/images/shield-alert.webp) [OVAL](https://security.tuxcare.com/oval/els_os/centos-stream8els/oval.xml) — OVAL security data
 * ![](/images/unlock-alt.webp) [CSAF](https://security.tuxcare.com/csaf/v2/els_os/centos-stream8els/) — CSAF security advisories
-* ![](/images/eye.webp) [RSS](https://cve.tuxcare.com/rss_feed/els/releases/centos8streamels) — Release notifications
+* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=CentOS+Stream+8+ELS) — Track vulnerability fixes and updates
 * ![](/images/shield.webp) [Machine-Readable Security Data](/els-for-os/machine-readable-security-data/) — Errata, OVAL, CSAF
-* ![](/images/box.webp) [Supported packages list](https://cve.tuxcare.com/els/projects?os=becccb8e-9378-476f-a37c-48c3d5cb1105&project=&version=&packages=&orderBy=project-asc) — Full list of packages covered by ELS
+* ![](/images/box.webp) [Supported packages list](https://tuxcare.com/cve-tracker/?product=CentOS+Stream+8+ELS) — Full list of packages covered by ELS
 * ![](/images/wrench.webp) [Managing the ELS repository](/els-for-os/managing-els-repository/) — Updates, local mirror, and other repository operations
 
 </WhatsNext>

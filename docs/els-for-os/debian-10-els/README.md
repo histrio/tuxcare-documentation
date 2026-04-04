@@ -67,9 +67,9 @@
 
 * ![](/images/shield-alert.webp) [OVAL](https://security.tuxcare.com/oval/els_os/debian10els/oval.xml) — OVAL security data
 * ![](/images/unlock-alt.webp) [CSAF](https://security.tuxcare.com/csaf/v2/els_os/debian10els/) — CSAF security advisories
-* ![](/images/eye.webp) [RSS](https://cve.tuxcare.com/rss_feed/els/releases/debian10els) — Release notifications
+* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=Debian+10+ELS) — Track vulnerability fixes and updates
 * ![](/images/shield.webp) [Machine-Readable Security Data](/els-for-os/machine-readable-security-data/) — Errata, OVAL, CSAF
-* ![](/images/box.webp) [Supported packages list](https://cve.tuxcare.com/els/projects?os=e0d2023e-5d4e-410c-8f5b-12e732dd5d7f&project=&version=&packages=&orderBy=project-asc) — Full list of packages covered by ELS
+* ![](/images/box.webp) [Supported packages list](https://tuxcare.com/cve-tracker/?product=Debian+10+ELS) — Full list of packages covered by ELS
 * ![](/images/wrench.webp) [Managing the ELS repository](/els-for-os/managing-els-repository/) — Updates, local mirror, and other repository operations
 
 </WhatsNext>

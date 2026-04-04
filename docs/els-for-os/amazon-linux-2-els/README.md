@@ -42,7 +42,7 @@
 
 <WhatsNext hide-title>
 
-* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/) — Track vulnerability fixes and updates
+* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=Amazon+Linux+2+ELS) — Track vulnerability fixes and updates
 * ![](/images/wrench.webp) [Managing the ELS repository](/els-for-os/managing-els-repository/) — Updates, local mirror, and other repository operations
 
 </WhatsNext>
