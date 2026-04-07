@@ -30,7 +30,7 @@
 const operatingSystems = [
   {
     name: "Amazon Linux 2",
-    icon: "/images/placeholder-logo.webp",
+    icon: "/images/amazon-linux.webp",
     link: "./amazon-linux-2-els",
   },
   {

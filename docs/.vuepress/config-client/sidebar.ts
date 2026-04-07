@@ -32,7 +32,7 @@ export default {
                 "/els-for-os/",
                 {
                     path: '/els-for-os/amazon-linux-2-els/',
-                    icon: '/images/placeholder-logo.webp',
+                    icon: '/images/amazon-linux.webp',
                 },
                 {
                     path: '/els-for-os/alpine-linux-3-18-els/',
@@ -513,7 +513,7 @@ export default {
                 {
                     path: '/els-for-applications/mysql-and-percona-server/',
                     title: 'MySQL and Percona Server',
-                    icon: '/images/mysql2-logo.webp',
+                    icon: '/images/mysql.webp',
                 },
             ]
         },

@@ -78,7 +78,7 @@ const applications = [
     name: "MySQL",
     versions: "8.0",
     link: "./mysql-and-percona-server/",
-    icon: "/images/mysql2-logo.webp",
+    icon: "/images/mysql.webp",
   },
 ];
 </script>
