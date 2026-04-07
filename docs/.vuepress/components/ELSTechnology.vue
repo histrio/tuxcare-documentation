@@ -883,13 +883,8 @@ const techData = [
       },
       {
         name: "React",
-        versions: "15.6.2 | 19.2.0",
+        versions: "15.6.2 | 16.4.1 | 19.2.0",
         link: "./react/",
-      },
-      {
-        name: "react-dom",
-        versions: "16.4.1",
-        link: "./react-dom/",
       },
       {
         name: "react-pdf",
