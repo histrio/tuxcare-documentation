@@ -182,7 +182,7 @@ const techData = [
       },
       {
         name: "Apache Tomcat®",
-        versions: "8.5.100 | 9.0.46 | 9.0.50 | 9.0.75 | 9.0.83 | 9.0.87 | 9.0.90 | 9.0.100 | 10.1.18",
+        versions: "8.5.100 | 9.0.46 | 9.0.50 | 9.0.75 | 9.0.83 | 9.0.87 | 9.0.90 | 9.0.100 | 10.1.18 | 10.1.42",
         link: "./apache-tomcat/",
       },
       {
@@ -512,7 +512,7 @@ const techData = [
       },
       {
         name: "Eclipse Jetty",
-        versions: "8.2.0.v20160908 | 9.4.24.v20191120 | 9.4.48.v20220622 | 9.4.53.v20231009 | 9.4.59 | 10.0.27 | 11.0.19 | 11.0.27",
+        versions: "8.2.0.v20160908 | 9.4.24.v20191120 | 9.4.48.v20220622 | 9.4.53.v20231009 | 9.4.59 | 9.4.60 | 10.0.27 | 10.0.28 | 11.0.19 | 11.0.27 | 11.0.28",
         link: "./jetty/",
       },
       {
@@ -645,6 +645,11 @@ const techData = [
         name: "ejs",
         versions: "1.0.0 | 2.7.4",
         link: "./javascript-libraries/",
+      },
+      {
+        name: "Ember.js",
+        versions: "2.18.2 | 3.28.6",
+        link: "./ember/",
       },
       {
         name: "elliptic",
@@ -952,6 +957,11 @@ const techData = [
         link: "./node-fetch/",
       },
       {
+        name: "Nuxt",
+        versions: "0.10.7 | 2.18.1 | 3.2.0",
+        link: "./nuxt/",
+      },
+      {
         name: "node-forge",
         versions: "0.10.0",
         link: "./javascript-libraries/",
@@ -1018,13 +1028,8 @@ const techData = [
       },
       {
         name: "React",
-        versions: "15.6.2 | 19.2.0",
+        versions: "15.6.2 | 16.4.1 | 19.2.0",
         link: "./react/",
-      },
-      {
-        name: "react-dom",
-        versions: "16.4.1",
-        link: "./react-dom/",
       },
       {
         name: "react-pdf",
@@ -1274,7 +1279,7 @@ const techData = [
       },
       {
         name: "cryptography",
-        versions: "3.4.8 | 41.0.7 | 42.0.0 | 42.0.8 | 43.0.1 | 43.0.3",
+        versions: "3.4.8 | 41.0.7 | 42.0.0 | 42.0.8 | 43.0.1 | 43.0.3 | 44.0.3 | 45.0.7",
         link: "./python-libraries/",
       },
       {
@@ -1534,6 +1539,16 @@ const techData = [
         link: "./carbon/",
       },
       {
+        name: "CraftCMS",
+        versions: "3.9.15",
+        link: "./craftcms/",
+      },
+      {
+        name: "CraftCMS Feed Me Plugin",
+        versions: "3.1.17",
+        link: "./craftcms-feed-me/",
+      },
+      {
         name: "DomPDF",
         versions: "0.8.x | 1.2.x | 3.1.0",
         link: "./dompdf/",
@@ -1620,8 +1635,43 @@ const techData = [
         link: "./dotnet/",
       },
       {
+        name: "log4net",
+        versions: "1.2.15",
+        link: "./dotnet/",
+      },
+      {
+        name: "Microsoft.Azure.Storage.DataMovement",
+        versions: "1.2.0 | 1.2.1",
+        link: "./dotnet/",
+      },
+      {
+        name: "Microsoft.Data.SqlClient",
+        versions: "1.1.4 | 1.1.5",
+        link: "./dotnet/",
+      },
+      {
+        name: "MimeKit",
+        versions: "3.6.1 | 3.6.2",
+        link: "./dotnet/",
+      },
+      {
         name: "Newtonsoft.Json",
         versions: "4.5.11 | 4.5.12 | 6.0.8 | 6.0.9 | 8.0.3 | 8.0.4 | 9.0.1 | 9.0.2 | 10.0.3 | 10.0.4 | 11.0.2 | 11.0.3 | 12.0.3 | 12.0.4",
+        link: "./dotnet/",
+      },
+      {
+        name: "NHibernate",
+        versions: "4.1.2.4001",
+        link: "./dotnet/",
+      },
+      {
+        name: "Refit",
+        versions: "6.3.2",
+        link: "./dotnet/",
+      },
+      {
+        name: "RestSharp",
+        versions: "108.0.3 | 110.2.0 | 111.4.1",
         link: "./dotnet/",
       },
       {

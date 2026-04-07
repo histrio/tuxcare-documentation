@@ -4,7 +4,7 @@ TuxCare's Endless Lifecycle Support (ELS) for Eclipse Jetty provides security pa
 
 ## Supported Versions
 
-* Eclipse Jetty 8.2.0.v20160908, 9.4.24.v20191120, 9.4.48.v20220622, 9.4.53.v20231009, 9.4.59, 10.0.27, 11.0.19, 11.0.27
+* Eclipse Jetty 8.2.0.v20160908, 9.4.24.v20191120, 9.4.48.v20220622, 9.4.53.v20231009, 9.4.59, 9.4.60, 10.0.27, 10.0.28, 11.0.19, 11.0.27, 11.0.28
 
 ## Connection to ELS for Eclipse Jetty Repository
 

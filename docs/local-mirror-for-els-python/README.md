@@ -47,3 +47,4 @@ We provide the ability to create local mirrors of Python for ELS updates.
 | deb/debian/11/    | Debian 11                                                                  |
 | deb/debian/12/    | Debian 12                                                                  |
 | deb/debian/13/    | Debian 13                                                                  |
+| apk/alpine/3.22/  | Alpine Linux 3.22                                                          |

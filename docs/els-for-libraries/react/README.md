@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for React from TuxCare provides security fixes f
 
 ## Supported React Versions
 
-* React 15.6.2, 19.2.0
+* React 15.6.2, 16.4.1, 19.2.0
 
 ## Connection to ELS for React Library
 
@@ -49,63 +49,82 @@ TuxCare provides ELS for React as an NPM package, hosted on a secure internal re
 
      Manually update your `package.json` file by replacing your React dependencies with the TuxCare packages. This method gives you full control over which packages to update.
 
-   * **Option 2: TuxCare Patcher (Automated)**
+     <TableTabs label="Choose version: " >
 
-     Install the Patcher globally and run it. The TuxCare Patcher automatically detects the React version in your `package.json` and updates your `dependencies` and `overrides` to use the corresponding TuxCare `@els-js/*` packages.
-
-     ```text
-     npm install -g @els-js/tuxcare-patcher --userconfig ./.npmrc
-     tuxcare-patch-js
-     ```
-
-     The patcher will update your `package.json`, for example, from:
-
-     ```text
-     "dependencies": {
-       "react": "^19.2.0"
-     }
-     ```
-
-     to:
-
-     ```text
-     "dependencies": {
-       "react": "npm:@els-js/react@>=19.2.0-tuxcare.1"
-     },
-     "overrides": {
-       "react@19.2.0": "npm:@els-js/react@>=19.2.0-tuxcare.1"
-     }
-     ```
-
-     <TableTabs label="Choose React version: " >
-
-      <template #react_15.6.2>
+     <template #react-15.6.2>
 
       ```text
       "dependencies": {
-        "react": "npm:@els-js/react@>=15.6.2-tuxcare.1"
+        "react": "npm:@els-js/react@>=15.6.2-tuxcare.1",
+        "react-dom": "npm:@els-js/react-dom@>=15.6.2-tuxcare.1"
       },
       "overrides": {
         "react@15.6.2": "npm:@els-js/react@>=15.6.2-tuxcare.1"
+        "react-dom@15.6.2": "npm:@els-js/react-dom@>=15.6.2-tuxcare.1"
       }
       ```
 
       </template>
 
-      <template #react_19.2.0>
+     <template #react-16.4.1>
+
+      ```text
+      "dependencies": {
+        "react": "npm:@els-js/react@>=16.4.1-tuxcare.1",
+        "react-dom": "npm:@els-js/react-dom@>=16.4.1-tuxcare.1"
+      },
+      "overrides": {
+        "react@16.4.1": "npm:@els-js/react@>=16.4.1-tuxcare.1"
+        "react-dom@16.4.1": "npm:@els-js/react-dom@>=16.4.1-tuxcare.1"
+      }
+      ```
+
+      </template>  
+
+     <template #react-19.2.0>
 
       ```text
       "dependencies": {
         "react": "npm:@els-js/react@>=19.2.0-tuxcare.1"
+        "react-dom": "npm:@els-js/react-dom@>=19.2.0-tuxcare.1"
       },
       "overrides": {
         "react@19.2.0": "npm:@els-js/react@>=19.2.0-tuxcare.1"
+        "react-dom@19.2.0": "npm:@els-js/react-dom@>=19.2.0-tuxcare.1"
       }
       ```
 
       </template>
 
      </TableTabs>
+
+  * **Option 2: TuxCare Patcher (Automated)**
+
+    Install the Patcher globally and run it. The TuxCare Patcher automatically detects the React version in your `package.json` and updates your `dependencies` and `overrides` to use the corresponding TuxCare `@els-js/*` packages.
+
+    ```text
+    npm install -g @els-js/tuxcare-patcher --userconfig ./.npmrc
+    tuxcare-patch-js
+    ```
+
+    The patcher will update your `package.json`, for example, from:
+
+    ```text
+    "dependencies": {
+      "react": "^19.2.0"
+    }
+    ```
+
+    to:
+
+    ```text
+    "dependencies": {
+      "react": "npm:@els-js/react@>=19.2.0-tuxcare.1"
+    },
+    "overrides": {
+      "react@19.2.0": "npm:@els-js/react@>=19.2.0-tuxcare.1"
+    }
+    ```
 
 5. You need to remove the `node_modules` directory and the `package-lock.json` file, and also clear the `npm cache` before installing the patched packages. Use the following commands:
 
@@ -150,13 +169,21 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 
 Fixes for the following vulnerabilities are available in ELS for React from TuxCare versions:
 
-<TableTabs label="Choose React version: " >
+<TableTabs label="Choose version: " >
 
 <template #react_15.6.2>
 
 | CVE ID         | CVE Type   | Severity | Affected Libraries | Vulnerable Versions |
 | :------------: | :--------: |:--------:|:------------------:| :----------------: |
 | CVE-2022-0235  | Transitive | High     | node-fetch         | < 2.6.7, >= 3.0.0 < 3.1.1 |
+
+</template>
+
+<template #react_16.4.1>
+
+| CVE ID        | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
+| :-----------: | :------: |:--------:|:------------------:| :----------------: |
+| CVE-2018-6341 | Direct   | Medium   | react-dom          | >= 16.0.0 < 16.0.1, >= 16.1.0 < 16.1.2, >= 16.2.0 < 16.2.1, >= 16.3.0 < 16.3.3, >= 16.4.0 < 16.4.2 |
 
 </template>
 

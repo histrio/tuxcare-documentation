@@ -1,4 +1,4 @@
-<!-- markdownlint-disable MD040 -->
+<!-- markdownlint-disable MD040 MD033 -->
 
 # Installation instructions of a local mirror with ELS updates
 
@@ -158,6 +158,20 @@ For example:
 rsync -avSHP --delete rsync://repo.tuxcare.com/RHEL8ELS/ .
 ```
 
+### Amazon Linux 2 ELS
+
+To create a local mirror of the [amazonlinux2-els](https://repo.tuxcare.com/amazonlinux2-els/) repository with security updates via `rsync`, use the following:
+
+```
+rsync://repo.tuxcare.com/AMAZONLINUX2ELS/
+```
+
+For example:
+
+```
+rsync -avSHP --delete rsync://repo.tuxcare.com/AMAZONLINUX2ELS/ .
+```
+
 ### Ubuntu 16.04 ELS
 
 To create a local mirror of the ubuntu16_04-els repository with security updates via `rsync`, use the following:
@@ -237,10 +251,7 @@ For example:
 rsync -avSHP --delete rsync://repo.tuxcare.com/TUXCARE96ESU/ .
 ```
 
-:::tip Note
-When configuring machines to use a local mirror for the TuxCare 9.6 ESU repository, set `priority=1` in the `tuxcare-esu` repo so ESU packages override the standard repos.
-
-Example `/etc/yum.repos.d/tuxcare-esu.repo` file for TuxCare 9.6 ESU:
+When configuring machines to use a local mirror for the TuxCare 9.6 ESU repository, set `priority=1` in the `tuxcare-esu` repo so ESU packages override the standard repos. Below is an example `/etc/yum.repos.d/tuxcare-esu.repo` file for TuxCare 9.6 ESU:
 
 ```
 [tuxcare-esu96]
@@ -252,5 +263,20 @@ skip_if_unavailable=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-TuxCare
 priority=1
 ```
+
+:::tip Note
+
+Vulnerability scanners will often look for the information stored in /etc/tuxcare-release, however if you're using a local mirror you may not have installed the tuxcare-release package, so you should create the file with the correct OS name and version info like so:
+
+```
+source /etc/os-release
+echo "TuxCare Enterprise Support for ${NAME} release ${VERSION_ID}" > /etc/tuxcare-release
+```
+
+Or simply hardcode it as one of these (if using Ansible to roll out config for example):
+
+* `TuxCare Enterprise Support for AlmaLinux release 9.2`
+* `TuxCare Enterprise Support for AlmaLinux release 9.6`
+* `TuxCare Enterprise Support for Rocky Linux release 9.6`
 
 :::
