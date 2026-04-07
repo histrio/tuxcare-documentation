@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for Knockout from TuxCare provides security fixe
 
 ## Supported Knockout Versions
 
-* Knockout 2.3.0, 3.4.2
+* Knockout 2.3.0, 3.2.0, 3.4.2
 
 ## Connection to ELS for Knockout Library
 
@@ -59,6 +59,19 @@ TuxCare provides ELS for Knockout as an NPM package, hosted on a secure internal
        },
        "overrides": {
          "knockout@2.3.0": "npm:@els-js/knockout@>=2.3.0-tuxcare.1"
+       }
+       ```
+
+       </template>
+
+       <template #knockout_3.2.0>
+
+       ```text
+       "dependencies": {
+         "knockout": "npm:@els-js/knockout@>=3.2.0-tuxcare.1"
+       },
+       "overrides": {
+         "knockout@3.2.0": "npm:@els-js/knockout@>=3.2.0-tuxcare.1"
        }
        ```
 
@@ -153,6 +166,14 @@ Fixes for the following vulnerabilities are available in ELS for Knockout from T
 <TableTabs label="Choose Knockout version: " >
 
 <template #knockout_2.3.0>
+
+| CVE ID         | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
+| :------------: | :------: |:--------:|:------------------:| :----------------: |
+| CVE-2019-14862 | Direct   | Medium   | knockout           | <= 3.4.2            |
+
+  </template>
+
+<template #knockout_3.2.0>
 
 | CVE ID         | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
 | :------------: | :------: |:--------:|:------------------:| :----------------: |

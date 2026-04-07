@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for undici from TuxCare provides security fixes 
 
 ## Supported undici Versions
 
-* undici 5.28.5
+* undici 5.28.5, 5.29.0
 
 ## Connection to ELS for undici Library
 
@@ -49,14 +49,35 @@ TuxCare provides ELS for undici as an NPM package, hosted on a secure internal r
 
      Manually update your `package.json` file by replacing your undici dependencies with the TuxCare packages. This method gives you full control over which packages to update.
 
-     ```text
-     "dependencies": {
-       "undici": "npm:@els-js/undici@>=5.28.5-tuxcare.1"
-     },
-     "overrides": {
-       "undici@5.28.5": "npm:@els-js/undici@>=5.28.5-tuxcare.1"
-     }
-     ```
+     <TableTabs label="Choose undici version: " >
+
+      <template #undici_5.28.5>
+
+      ```text
+      "dependencies": {
+        "undici": "npm:@els-js/undici@>=5.28.5-tuxcare.1"
+      },
+      "overrides": {
+        "undici@5.28.5": "npm:@els-js/undici@>=5.28.5-tuxcare.1"
+      }
+      ```
+
+      </template>
+
+      <template #undici_5.29.0>
+
+      ```text
+      "dependencies": {
+        "undici": "npm:@els-js/undici@>=5.29.0-tuxcare.1"
+      },
+      "overrides": {
+        "undici@5.29.0": "npm:@els-js/undici@>=5.29.0-tuxcare.1"
+      }
+      ```
+
+      </template>
+
+     </TableTabs>
 
    * **Option 2: TuxCare Patcher (Automated)**
 
@@ -129,9 +150,25 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 
 Fixes for the following vulnerabilities are available in ELS for undici from TuxCare versions:
 
+<TableTabs label="Choose undici version: " >
+
+<template #undici_5.28.5>
+
 | CVE ID         | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
 | :------------: | :------: |:--------:|:------------------:| :----------------: |
-| AIKIDO-2024-10065 | Direct   | Medium   | undici            | 4.4.0 - 6.14.1    |
+| CVE-2026-22036 | Direct   | High     | undici            | < 6.23.0, >= 7.0.0 < 7.18.2 |
+
+  </template>
+
+<template #undici_5.29.0>
+
+| CVE ID         | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
+| :------------: | :------: |:--------:|:------------------:| :----------------: |
+| CVE-2026-22036 | Direct   | High     | undici            | < 6.23.0, >= 7.0.0 < 7.18.2 |
+
+  </template>
+
+</TableTabs>
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
