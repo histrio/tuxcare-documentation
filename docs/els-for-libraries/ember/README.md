@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for Ember.js from TuxCare provides security fixe
 
 ## Supported Ember.js Versions
 
-* Ember.js 2.18.2, 3.28.6
+* Ember.js 0.2.7, 2.18.2, 3.28.6
 
 ## Connection to ELS for Ember.js Library
 
@@ -46,6 +46,87 @@ TuxCare publishes patched **transitive** dependencies for supported Ember.js ver
 4. Update your `package.json` so the transitive versions for your Ember.js version resolve to TuxCare packages. You can do this in two ways:
 
    <TableTabs label="Choose Ember.js version: " >
+
+   <template #ember_0.2.7>
+
+      ```text
+      "dependencies": {
+        "body-parser": "npm:@els-js/body-parser@>=1.8.4-tuxcare.1",
+        "chownr": "npm:@els-js/chownr@>=0.0.2-tuxcare.1",
+        "clean-css": "npm:@els-js/clean-css@>=2.2.23-tuxcare.1",
+        "concat-stream": "npm:@els-js/concat-stream@>=1.4.8-tuxcare.1",
+        "cross-spawn": "npm:@els-js/cross-spawn@>=0.2.9-tuxcare.1",
+        "decompress-zip": "npm:@els-js/decompress-zip@>=0.1.0-tuxcare.1",
+        "deep-extend": "npm:@els-js/deep-extend@>=0.2.11-tuxcare.1",
+        "es5-ext": "npm:@els-js/es5-ext@>=0.10.7-tuxcare.1",
+        "forwarded": "npm:@els-js/forwarded@>=0.1.0-tuxcare.1",
+        "fresh": "npm:@els-js/fresh@>=0.2.4-tuxcare.1",
+        "got": "npm:@els-js/got@>=2.9.2-tuxcare.1",
+        "hoek": "npm:@els-js/hoek@>=2.14.0-tuxcare.1",
+        "ini": "npm:@els-js/ini@>=1.3.3-tuxcare.1",
+        "is-my-json-valid": "npm:@els-js/is-my-json-valid@>=2.10.1-tuxcare.1",
+        "js-yaml": "npm:@els-js/js-yaml@>=3.3.1-tuxcare.1",
+        "json5": "npm:@els-js/json5@>=0.5.1-tuxcare.1",
+        "jsonpointer": "npm:@els-js/jsonpointer@>=1.1.0-tuxcare.1",
+        "markdown-it": "npm:@els-js/markdown-it@>=4.0.3-tuxcare.1",
+        "merge": "npm:@els-js/merge@>=1.2.1-tuxcare.1",
+        "morgan": "npm:@els-js/morgan@>=1.5.3-tuxcare.1",
+        "mout": "npm:@els-js/mout@>=0.11.0-tuxcare.1",
+        "parsejson": "npm:@els-js/parsejson@>=0.0.3-tuxcare.1",
+        "path-to-regexp": "npm:@els-js/path-to-regexp@>=0.1.3-tuxcare.1",
+        "qs": "npm:@els-js/qs@>=2.4.2-tuxcare.1",
+        "semver": "npm:@els-js/semver@>=2.3.2-tuxcare.1",
+        "shell-quote": "npm:@els-js/shell-quote@>=1.4.3-tuxcare.1",
+        "stringstream": "npm:@els-js/stringstream@>=0.0.4-tuxcare.1",
+        "tar": "npm:@els-js/tar@>=2.1.1-tuxcare.1",
+        "tar-fs": "npm:@els-js/tar-fs@>=1.5.1-tuxcare.1",
+        "tough-cookie": "npm:@els-js/tough-cookie@>=1.2.0-tuxcare.1",
+        "tunnel-agent": "npm:@els-js/tunnel-agent@>=0.4.0-tuxcare.1",
+        "uglify-js": "npm:@els-js/uglify-js@>=1.1.1-tuxcare.1",
+        "websocket-extensions": "npm:@els-js/websocket-extensions@>=0.1.1-tuxcare.1",
+        "xmldom": "npm:@els-js/xmldom@>=0.1.31-tuxcare.1"
+      },
+      "overrides": {
+        "body-parser@1.8.4": "npm:@els-js/body-parser@>=1.8.4-tuxcare.1",
+        "chownr@0.0.2": "npm:@els-js/chownr@>=0.0.2-tuxcare.1",
+        "clean-css@2.2.23": "npm:@els-js/clean-css@>=2.2.23-tuxcare.1",
+        "concat-stream@1.4.8": "npm:@els-js/concat-stream@>=1.4.8-tuxcare.1",
+        "cross-spawn@0.2.9": "npm:@els-js/cross-spawn@>=0.2.9-tuxcare.1",
+        "decompress-zip@0.1.0": "npm:@els-js/decompress-zip@>=0.1.0-tuxcare.1",
+        "deep-extend@0.2.11": "npm:@els-js/deep-extend@>=0.2.11-tuxcare.1",
+        "es5-ext@0.10.7": "npm:@els-js/es5-ext@>=0.10.7-tuxcare.1",
+        "forwarded@0.1.0": "npm:@els-js/forwarded@>=0.1.0-tuxcare.1",
+        "fresh@0.2.4": "npm:@els-js/fresh@>=0.2.4-tuxcare.1",
+        "got@2.9.2": "npm:@els-js/got@>=2.9.2-tuxcare.1",
+        "hoek@2.12.0": "npm:@els-js/hoek@>=2.12.0-tuxcare.1",
+        "hoek@2.14.0": "npm:@els-js/hoek@>=2.14.0-tuxcare.1",
+        "ini@1.3.3": "npm:@els-js/ini@>=1.3.3-tuxcare.1",
+        "is-my-json-valid@2.10.1": "npm:@els-js/is-my-json-valid@>=2.10.1-tuxcare.1",
+        "js-yaml@3.3.1": "npm:@els-js/js-yaml@>=3.3.1-tuxcare.1",
+        "json5@0.5.1": "npm:@els-js/json5@>=0.5.1-tuxcare.1",
+        "jsonpointer@1.1.0": "npm:@els-js/jsonpointer@>=1.1.0-tuxcare.1",
+        "markdown-it@4.0.3": "npm:@els-js/markdown-it@>=4.0.3-tuxcare.1",
+        "merge@1.2.1": "npm:@els-js/merge@>=1.2.1-tuxcare.1",
+        "morgan@1.5.3": "npm:@els-js/morgan@>=1.5.3-tuxcare.1",
+        "mout@0.11.0": "npm:@els-js/mout@>=0.11.0-tuxcare.1",
+        "parsejson@0.0.3": "npm:@els-js/parsejson@>=0.0.3-tuxcare.1",
+        "path-to-regexp@0.1.3": "npm:@els-js/path-to-regexp@>=0.1.3-tuxcare.1",
+        "qs@2.2.5": "npm:@els-js/qs@>=2.2.5-tuxcare.1",
+        "qs@2.4.2": "npm:@els-js/qs@>=2.4.2-tuxcare.1",
+        "semver@2.3.2": "npm:@els-js/semver@>=2.3.2-tuxcare.1",
+        "shell-quote@1.4.3": "npm:@els-js/shell-quote@>=1.4.3-tuxcare.1",
+        "stringstream@0.0.4": "npm:@els-js/stringstream@>=0.0.4-tuxcare.1",
+        "tar@2.1.1": "npm:@els-js/tar@>=2.1.1-tuxcare.1",
+        "tar-fs@1.5.1": "npm:@els-js/tar-fs@>=1.5.1-tuxcare.1",
+        "tough-cookie@1.2.0": "npm:@els-js/tough-cookie@>=1.2.0-tuxcare.1",
+        "tunnel-agent@0.4.0": "npm:@els-js/tunnel-agent@>=0.4.0-tuxcare.1",
+        "uglify-js@1.1.1": "npm:@els-js/uglify-js@>=1.1.1-tuxcare.1",
+        "websocket-extensions@0.1.1": "npm:@els-js/websocket-extensions@>=0.1.1-tuxcare.1",
+        "xmldom@0.1.31": "npm:@els-js/xmldom@>=0.1.31-tuxcare.1"
+      }
+      ```
+
+    </template>
 
     <template #ember_2.18.2>
 
@@ -218,6 +299,73 @@ Fixes for the following **transitive** vulnerabilities are available in ELS for 
 | CVE-2024-47068 | Transitive | Medium | rollup | >= 0.59.0 < 2.79.2, >= 3.0.0 < 3.29.5, >= 4.0.0 < 4.22.4 |
 | CVE-2026-27606 | Transitive | Critical | rollup | < 2.80.0, >= 3.0.0 < 3.30.0, >= 4.0.0 < 4.59.0 |
 | GHSA-wxhq-pm8v-cw75 | Transitive | Low | clean-css | < 4.1.11 |
+
+</template>
+
+<template #ember_0.2.7>
+
+| CVE ID | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
+| :------------: | :------: |:--------:|:------------------:| :----------------: |
+| CVE-2021-21366 | Transitive | Medium | xmldom | < 0.5.0 |
+| CVE-2022-39353 | Transitive | Critical | xmldom | < 0.6.0, >= 0.7.0 < 0.7.8, >= 0.8.0 < 0.8.5, 0.9.0 betas |
+| CVE-2021-32796 | Transitive | Medium | xmldom | <= 0.6.0 |
+| CVE-2020-7662 | Transitive | High | websocket-extensions | < 0.1.4 |
+| CVE-2015-8858 | Transitive | High | uglify-js | < 2.6.0 |
+| CVE-2015-8857 | Transitive | Critical | uglify-js | < 2.4.24 |
+| GHSA-xc7v-wxcw-j472 | Transitive | Medium | tunnel-agent | < 0.6.0 |
+| CVE-2016-1000232 | Transitive | Medium | tough-cookie | >= 0.9.7 <= 2.2.2 |
+| CVE-2017-15010 | Transitive | High | tough-cookie | <= 2.3.2 |
+| CVE-2023-26136 | Transitive | Critical | tough-cookie | < 4.1.3 |
+| CVE-2018-20835 | Transitive | High | tar-fs | < 1.16.2 |
+| CVE-2025-59343 | Transitive | — | tar-fs | < 1.16.6, < 2.1.4, < 3.1.1 |
+| CVE-2025-48387 | Transitive | — | tar-fs | < 1.16.5, < 2.1.3, < 3.0.9 |
+| CVE-2024-12905 | Transitive | High | tar-fs | < 1.16.4, >= 2.0.0 < 2.1.2, >= 3.0.0 < 3.0.8 |
+| CVE-2021-32804 | Transitive | High | tar | < 3.2.3, >= 4.0.0 < 4.4.15, >= 5.0.0 < 5.0.7, >= 6.0.0 < 6.1.2 |
+| CVE-2015-8860 | Transitive | High | tar | < 2.0.0 |
+| CVE-2021-37713 | Transitive | High | tar | < 4.4.18, >= 5.0.0 < 5.0.11, >= 6.0.0 < 6.1.10 |
+| CVE-2018-20834 | Transitive | High | tar | < 2.2.2, >= 3.0.0 < 4.4.2 |
+| CVE-2024-28863 | Transitive | Medium | tar | < 6.2.1 |
+| CVE-2026-23950 | Transitive | High | tar | <= 7.5.3 |
+| CVE-2026-24842 | Transitive | High | tar | < 7.5.7 |
+| CVE-2026-23745 | Transitive | — | tar | <= 7.5.2 |
+| CVE-2026-26960 | Transitive | High | tar | <= 7.5.7 |
+| CVE-2026-29786 | Transitive | — | tar | < 7.5.10 |
+| CVE-2018-21270 | Transitive | Medium | stringstream | < 0.0.6 |
+| CVE-2016-10541 | Transitive | Critical | shell-quote | <= 1.6.0 |
+| CVE-2022-25883 | Transitive | High | semver | < 7.5.2 |
+| CVE-2015-8855 | Transitive | High | semver | < 4.3.2 |
+| CVE-2017-1000048 | Transitive | High | qs | <= 5.2.1, >= 6.0.0 < 6.0.4, >= 6.1.0 < 6.1.2, >= 6.2.0 < 6.2.3, >= 6.3.0 < 6.3.2 |
+| CVE-2022-24999 | Transitive | High | qs | < 6.10.3 |
+| CVE-2025-15284 | Transitive | — | qs | < 6.14.1 |
+| CVE-2024-45296 | Transitive | High | path-to-regexp | < 0.1.10 (0.1.x), < 8.0.0 (≥ 0.2) |
+| CVE-2024-52798 | Transitive | — | path-to-regexp | >= 0.1.0 < 0.1.12 |
+| CVE-2017-16113 | Transitive | High | parsejson | <= 0.0.3 |
+| CVE-2020-7792 | Transitive | High | mout | all versions |
+| CVE-2022-21213 | Transitive | High | mout | all versions |
+| CVE-2019-5413 | Transitive | Critical | morgan | < 1.9.1 |
+| CVE-2020-28499 | Transitive | Critical | merge | all versions |
+| CVE-2022-21670 | Transitive | Medium | markdown-it | <= 12.3.1 |
+| CVE-2021-23807 | Transitive | Critical | jsonpointer | < 5.0.0 |
+| CVE-2022-46175 | Transitive | High | json5 | <= 1.0.1, >= 2.0.0 <= 2.2.1 |
+| GHSA-2pr6-76vf-7546 | Transitive | Medium | js-yaml | < 3.13.0 |
+| GHSA-8j8c-7jfh-h6hx | Transitive | High | js-yaml | < 3.13.1 |
+| CVE-2025-64718 | Transitive | Medium | js-yaml | < 3.14.2, >= 4.0.0 < 4.1.1 |
+| CVE-2018-1107 | Transitive | Medium | is-my-json-valid | < 1.4.1, >= 2.0.0 < 2.17.2 |
+| CVE-2016-2537 | Transitive | High | is-my-json-valid | < 2.12.4 |
+| CVE-2020-7788 | Transitive | Critical | ini | < 1.3.6 |
+| CVE-2020-36604 | Transitive | High | hoek | < 8.5.1, >= 9.0.0 < 9.0.3 |
+| CVE-2018-3728 | Transitive | High | hoek | < 4.2.0, >= 5.0.0 < 5.0.3 |
+| CVE-2022-33987 | Transitive | Medium | got | < 11.8.5, >= 12.0.0 < 12.1.0 |
+| CVE-2017-16119 | Transitive | High | fresh | < 0.5.2 |
+| CVE-2017-16118 | Transitive | High | forwarded | < 0.1.2 |
+| CVE-2024-27088 | Transitive | — | es5-ext | >= 0.10.0 < 0.10.63 |
+| CVE-2018-3750 | Transitive | Critical | deep-extend | <= 0.5.0 |
+| GHSA-73v8-v6g4-vrpm | Transitive | High | decompress-zip | < 0.2.2 |
+| CVE-2024-21538 | Transitive | — | cross-spawn | < 6.0.6, >= 7.0.0 < 7.0.5 |
+| GHSA-g74r-ffvr-5q9f | Transitive | Medium | concat-stream | >= 1.5.0 < 1.5.2 |
+| GHSA-wxhq-pm8v-cw75 | Transitive | Low | clean-css | < 4.1.11 |
+| CVE-2017-18869 | Transitive | Low | chownr | < 1.1.0 |
+| CVE-2024-45590 | Transitive | High | body-parser | < 1.20.3 |
 
 </template>
 
