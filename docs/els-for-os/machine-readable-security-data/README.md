@@ -7,7 +7,7 @@ TuxCare provides the following security updates for ELS for OS:
 * **CSAF** — Common Security Advisory Framework advisories in [OASIS](https://www.csaf.io/) CSAF 2.0 format (VEX and Security Advisory)
 * **RSS** — release feeds for tracking updates
 
-Released fixes are available via [tuxcare.com/cve-tracker](https://tuxcare.com/cve-tracker/) and can additionally be found on [security.tuxcare.com](https://security.tuxcare.com).
+Released fixes are available via [tuxcare.com/cve-tracker](https://tuxcare.com/cve-tracker/fixes) and can additionally be found on [security.tuxcare.com](https://security.tuxcare.com).
 
 ## Security data feeds
 

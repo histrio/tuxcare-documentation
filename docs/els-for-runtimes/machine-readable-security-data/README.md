@@ -7,7 +7,7 @@ TuxCare provides machine-readable security data for ELS for Runtimes in the foll
 * **CSAF** — Common Security Advisory Framework advisories in [OASIS](https://www.csaf.io/) CSAF 2.0 format (VEX and Security Advisory)
 * **RSS** — release feeds for tracking updates
 
-Released fixes are also available via [tuxcare.com/cve-tracker](https://tuxcare.com/cve-tracker/) and [security.tuxcare.com](https://security.tuxcare.com).
+Released fixes are also available via [tuxcare.com/cve-tracker](https://tuxcare.com/cve-tracker/fixes) and [security.tuxcare.com](https://security.tuxcare.com).
 
 ## PHP
 
