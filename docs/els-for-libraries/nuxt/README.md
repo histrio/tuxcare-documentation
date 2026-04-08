@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for Nuxt from TuxCare provides security fixes fo
 
 ## Supported Nuxt Versions
 
-* Nuxt 0.10.7, 2.18.1, 3.2.0
+* Nuxt 0.10.7, 2.18.1
 
 ## Connection to ELS for Nuxt Library
 
@@ -46,17 +46,6 @@ TuxCare provides ELS for Nuxt as an NPM package, hosted on a secure internal reg
 4. Update your `package.json` file to add the following overrides for the TuxCare packages:
 
    <TableTabs label="Choose Nuxt version: " >
-
-    <template #nuxt_3.2.0>
-
-    ```text
-    "overrides": {
-      "lodash.pick@4.4.0": "npm:@els-js/lodash.pick@>=4.4.0-tuxcare.1",
-      "lodash.template@4.5.0": "npm:@els-js/lodash.template@>=4.5.0-tuxcare.1"
-    }
-    ```
-
-    </template>
 
     <template #nuxt_2.18.1>
 
@@ -148,19 +137,11 @@ Fixes for the following vulnerabilities are available in ELS for Nuxt from TuxCa
 
 <TableTabs label="Choose Nuxt version: " >
 
-<template #nuxt_3.2.0>
-
-|    CVE ID     | CVE Type  | Severity | Affected Libraries | Vulnerable Versions |
-|:-------------:|:---------:|:--------:|:------------------:|:-------------------:|
-| CVE-2020-8203 | Transitive | High     | lodash.pick        | >= 4.0.0 <= 4.4.0   |
-| CVE-2021-23337 | Transitive | High     | lodash.template    | <= 4.5.0            |
-
-</template>
-
 <template #nuxt_2.18.1>
 
 |    CVE ID     | CVE Type  | Severity | Affected Libraries | Vulnerable Versions |
 |:-------------:|:---------:|:--------:|:------------------:|:-------------------:|
+| CVE-2024-34343 | Direct | Medium   | nuxt               |       < 3.12.4      |
 | CVE-2024-4068 | Transitive | High     | braces             |       < 3.0.3       |
 | CVE-2024-47764 | Transitive | Medium   | cookie             |       < 0.7.0       |
 | CVE-2025-57820 | Transitive | High     | devalue            |       < 5.3.2       |
@@ -206,4 +187,3 @@ Fixes for the following vulnerabilities are available in ELS for Nuxt from TuxCa
 </TableTabs>
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
-

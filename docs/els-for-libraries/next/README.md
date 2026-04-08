@@ -211,6 +211,23 @@ Fixes for the following vulnerabilities are available in ELS for Next.js from Tu
 
   </template>
 
+<template #next_14.2.35>
+
+|     CVE ID     | CVE Type | Severity | Affected Libraries |      Vulnerable Versions       |
+|:--------------:| :------: |:--------:|:------------------:|:------------------------------:|
+| CVE-2025-57822 | Direct   | High     |        next        | < 14.2.32, >= 15.0.0, < 15.4.7 |
+| CVE-2024-51479 | Direct   | High     |        next        |      >= 9.5.5, < 14.2.15       |
+| CVE-2024-47831 | Direct   | High     |        next        |      >= 10.0.0, < 14.2.7       |
+| CVE-2024-34351 | Direct   | High     |        next        |      >= 13.4.0, < 14.1.1       |
+| CVE-2025-55184 | Transitive | High   |        React       |      >= 13.3.0 < 14.2.35       |
+| CVE-2025-67779 | Transitive | High   |        React       |      >= 13.3.0 < 14.2.35       |
+| CVE-2025-57752 | Direct   | Medium   |        next        | < 14.2.31, >= 15.0.0 < 15.4.5 |
+| CVE-2025-55173 | Direct   | Medium   |        next        | < 14.2.31, >= 15.0.0 < 15.4.5 |
+| CVE-2025-48068 | Direct   | Low      |        next        | >= 13.0.0 < 14.2.30, >= 15.0.0 < 15.2.2 |
+| CVE-2025-32421 | Direct   | Low      |        next        | < 14.2.24, >= 15.0.0 < 15.1.6 |
+
+  </template>
+
 <template #next_16.0.6>
 
 |     CVE ID     | CVE Type | Severity | Affected Libraries |      Vulnerable Versions       |

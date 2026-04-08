@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for JSON Web Token from TuxCare provides securit
 
 ## Supported JSON Web Token Versions
 
-* JSON Web Token 0.4.0, 8.5.1
+* JSON Web Token 0.4.0, 0.4.1, 8.5.1
 
 ## Connection to ELS for JSON Web Token Library
 
@@ -59,6 +59,19 @@ TuxCare provides ELS for JSON Web Token as an NPM package, hosted on a secure in
       },
       "overrides": {
         "jsonwebtoken@0.4.0": "npm:@els-js/jsonwebtoken@>=0.4.0-tuxcare.1"
+      }
+      ```
+
+      </template>
+
+      <template #JSON_Web_Token_0.4.1>
+
+      ```text
+      "dependencies": {
+        "jsonwebtoken": "npm:@els-js/jsonwebtoken@>=0.4.1-tuxcare.1"
+      },
+      "overrides": {
+        "jsonwebtoken@0.4.1": "npm:@els-js/jsonwebtoken@>=0.4.1-tuxcare.1"
       }
       ```
 
@@ -153,6 +166,14 @@ Fixes for the following vulnerabilities are available in ELS for JSON Web Token 
 <TableTabs label="Choose JSON Web Token version: " >
 
 <template #JSON_Web_Token_0.4.0>
+
+| CVE ID         |  CVE Type  | Severity | Affected Libraries | Vulnerable Versions |
+| :------------: |:----------:|:--------:|:------------------:|:------------------:|
+| CVE-2015-9235  | Direct     | Critical | jsonwebtoken       | < 4.2.2            |
+
+  </template>
+
+<template #JSON_Web_Token_0.4.1>
 
 | CVE ID         |  CVE Type  | Severity | Affected Libraries | Vulnerable Versions |
 | :------------: |:----------:|:--------:|:------------------:|:------------------:|
