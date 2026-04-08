@@ -66,11 +66,11 @@
 * [8.5] ![](/images/shield-alert.webp) [OVAL](https://security.tuxcare.com/oval/els_os/centos8.5els/oval.xml) — OVAL security data
 * [8.4] ![](/images/unlock-alt.webp) [CSAF](https://security.tuxcare.com/csaf/v2/els_os/centos8.4els/) — CSAF security advisories
 * [8.5] ![](/images/unlock-alt.webp) [CSAF](https://security.tuxcare.com/csaf/v2/els_os/centos8.5els/) — CSAF security advisories
-* [8.4] ![](/images/eye.webp) [RSS](https://cve.tuxcare.com/rss_feed/els/releases/centos8.4els) — Release notifications
-* [8.5] ![](/images/eye.webp) [RSS](https://cve.tuxcare.com/rss_feed/els/releases/centos8.5els) — Release notifications
+* [8.4] ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=CentOS+8.4+ELS) — Track vulnerability fixes and updates
+* [8.5] ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=CentOS+8.5+ELS) — Track vulnerability fixes and updates
 * ![](/images/shield.webp) [Machine-Readable Security Data](/els-for-os/machine-readable-security-data/) — Errata, OVAL, CSAF
-* [8.4] ![](/images/box.webp) [Supported packages list](https://cve.tuxcare.com/els/projects?os=aa4ebb59-95d6-4734-9014-0dded2e4a382&project=&version=&packages=&orderBy=project-asc) — Full list of packages covered by ELS
-* [8.5] ![](/images/box.webp) [Supported packages list](https://cve.tuxcare.com/els/projects?os=a3407f4d-0962-4971-bb9f-3141bb924451&project=&version=&packages=&orderBy=project-asc) — Full list of packages covered by ELS
+* [8.4] ![](/images/box.webp) [Supported packages list](https://tuxcare.com/cve-tracker/products/?product=CentOS+8.4+ELS) — Full list of packages covered by ELS
+* [8.5] ![](/images/box.webp) [Supported packages list](https://tuxcare.com/cve-tracker/products/?product=CentOS+8.5+ELS) — Full list of packages covered by ELS
 * ![](/images/wrench.webp) [Managing the ELS repository](/els-for-os/managing-els-repository/) — Updates, local mirror, and other repository operations
 
 </WhatsNext>

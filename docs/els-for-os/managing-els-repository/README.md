@@ -54,7 +54,7 @@ apk update && apk upgrade
 
 For several platforms, TuxCare delivers security updates through staged rollout repositories. This process may take up to 14 additional days after a patch is published to stable repositories.
 
-If you need to apply a fix immediately without waiting for the rollout to complete, you can use the bypass repository. The necessary instructions are always provided on the [release information page](https://cve.tuxcare.com/els/releases).
+If you need to apply a fix immediately without waiting for the rollout to complete, you can use the bypass repository. The necessary instructions are always provided on the [release information page](https://tuxcare.com/cve-tracker/fixes/).
 
 For example (packages in the 3rd rollout slot):
 

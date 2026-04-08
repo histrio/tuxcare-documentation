@@ -7,32 +7,32 @@ TuxCare provides the following security updates for ELS for OS:
 * **CSAF** — Common Security Advisory Framework advisories in [OASIS](https://www.csaf.io/) CSAF 2.0 format (VEX and Security Advisory)
 * **RSS** — release feeds for tracking updates
 
-Released fixes are available via [cve.tuxcare.com](https://cve.tuxcare.com) and can additionally be found on [security.tuxcare.com](https://security.tuxcare.com).
+Released fixes are available via [tuxcare.com/cve-tracker](https://tuxcare.com/cve-tracker/fixes) and can additionally be found on [security.tuxcare.com](https://security.tuxcare.com).
 
 ## Security data feeds
 
 | OS | OVAL | CSAF | RSS |
 |----|------|------|-----|
-| Alpine Linux 3.18 ELS | [oval.xml](https://security.tuxcare.com/oval/els_os/alpinelinux3.18els/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_os/alpinelinux3.18els/) | [rss](https://cve.tuxcare.com/rss_feed/els/releases/alpinelinux3.18els) |
-| CentOS 6 ELS | [oval.xml](https://security.tuxcare.com/oval/els_os/centos6els/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_os/centos6els/) | [rss](https://cve.tuxcare.com/rss_feed/els/releases/centos6els) |
-| CentOS 7 ELS | [oval.xml](https://security.tuxcare.com/oval/els_os/centos7els/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_os/centos7els/) | [rss](https://cve.tuxcare.com/rss_feed/els/releases/centos7els) |
-| CentOS 8.4 ELS | [oval.xml](https://security.tuxcare.com/oval/els_os/centos8.4els/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_os/centos8.4els/) | [rss](https://cve.tuxcare.com/rss_feed/els/releases/centos8.4els) |
-| CentOS 8.5 ELS | [oval.xml](https://security.tuxcare.com/oval/els_os/centos8.5els/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_os/centos8.5els/) | [rss](https://cve.tuxcare.com/rss_feed/els/releases/centos8.5els) |
-| CentOS Stream 8 ELS | [oval.xml](https://security.tuxcare.com/oval/els_os/centos-stream8els/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_os/centos-stream8els/) | [rss](https://cve.tuxcare.com/rss_feed/els/releases/centos8streamels) |
-| Debian 10 ELS | [oval.xml](https://security.tuxcare.com/oval/els_os/debian10els/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_os/debian10els/) | [rss](https://cve.tuxcare.com/rss_feed/els/releases/debian10els) |
-| Oracle Linux 6 ELS | [oval.xml](https://security.tuxcare.com/oval/els_os/oraclelinux6els/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_os/oraclelinux6els/) | [rss](https://cve.tuxcare.com/rss_feed/els/releases/oraclelinux6els) |
-| Oracle Linux 7 ELS | [oval.xml](https://security.tuxcare.com/oval/els_os/oraclelinux7els/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_os/oraclelinux7els/) | [rss](https://cve.tuxcare.com/rss_feed/els/releases/oraclelinux7els) |
-| Red Hat Enterprise Linux 7 ELS | [oval.xml](https://security.tuxcare.com/oval/els_os/rhel7els/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_os/rhel7els/) | [rss](https://cve.tuxcare.com/rss_feed/els/releases/rhel7els) |
-| Red Hat Enterprise Linux 8 ELS | [oval.xml](https://security.tuxcare.com/oval/els_os/rhel8els/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_os/rhel8els/) | [rss](https://tuxcare.com/cve-tracker/) |
-| Ubuntu 16.04 ELS | [oval.xml](https://security.tuxcare.com/oval/els_os/ubuntu16.04els/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_os/ubuntu16.04els/) | [rss](https://cve.tuxcare.com/rss_feed/els/releases/ubuntu16.04els) |
-| Ubuntu 18.04 ELS | [oval.xml](https://security.tuxcare.com/oval/els_os/ubuntu18.04els/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_os/ubuntu18.04els/) | [rss](https://cve.tuxcare.com/rss_feed/els/releases/ubuntu18.04els) |
-| Ubuntu 20.04 ELS | [oval.xml](https://security.tuxcare.com/oval/els_os/ubuntu20.04els/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_os/ubuntu20.04els/) | [rss](https://cve.tuxcare.com/rss_feed/els/releases/ubuntu20.04els) |
+| Alpine Linux 3.18 ELS | [oval.xml](https://security.tuxcare.com/oval/els_os/alpinelinux3.18els/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_os/alpinelinux3.18els/) | [rss](https://tuxcare.com/cve-tracker/api/products/export/rss?product=Alpine+Linux+3.18+ELS) |
+| CentOS 6 ELS | [oval.xml](https://security.tuxcare.com/oval/els_os/centos6els/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_os/centos6els/) | [rss](https://tuxcare.com/cve-tracker/api/products/export/rss?product=CentOS+6+ELS) |
+| CentOS 7 ELS | [oval.xml](https://security.tuxcare.com/oval/els_os/centos7els/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_os/centos7els/) | [rss](https://tuxcare.com/cve-tracker/api/products/export/rss?product=CentOS+7+ELS) |
+| CentOS 8.4 ELS | [oval.xml](https://security.tuxcare.com/oval/els_os/centos8.4els/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_os/centos8.4els/) | [rss](https://tuxcare.com/cve-tracker/api/products/export/rss?product=CentOS+8.4+ELS) |
+| CentOS 8.5 ELS | [oval.xml](https://security.tuxcare.com/oval/els_os/centos8.5els/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_os/centos8.5els/) | [rss](https://tuxcare.com/cve-tracker/api/products/export/rss?product=CentOS+8.5+ELS) |
+| CentOS Stream 8 ELS | [oval.xml](https://security.tuxcare.com/oval/els_os/centos-stream8els/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_os/centos-stream8els/) | [rss](https://tuxcare.com/cve-tracker/api/products/export/rss?product=CentOS+Stream+8+ELS) |
+| Debian 10 ELS | [oval.xml](https://security.tuxcare.com/oval/els_os/debian10els/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_os/debian10els/) | [rss](https://tuxcare.com/cve-tracker/api/products/export/rss?product=Debian+10+ELS) |
+| Oracle Linux 6 ELS | [oval.xml](https://security.tuxcare.com/oval/els_os/oraclelinux6els/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_os/oraclelinux6els/) | [rss](https://tuxcare.com/cve-tracker/api/products/export/rss?product=Oracle+Linux+6+ELS) |
+| Oracle Linux 7 ELS | [oval.xml](https://security.tuxcare.com/oval/els_os/oraclelinux7els/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_os/oraclelinux7els/) | [rss](https://tuxcare.com/cve-tracker/api/products/export/rss?product=Oracle+Linux+7+ELS) |
+| Red Hat Enterprise Linux 7 ELS | [oval.xml](https://security.tuxcare.com/oval/els_os/rhel7els/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_os/rhel7els/) | [rss](https://tuxcare.com/cve-tracker/api/products/export/rss?product=Red+Hat+Enterprise+Linux+7+ELS) |
+| Red Hat Enterprise Linux 8 ELS | [oval.xml](https://security.tuxcare.com/oval/els_os/rhel8els/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_os/rhel8els/) | [rss](https://tuxcare.com/cve-tracker/api/products/export/rss?product=Red+Hat+Enterprise+Linux+8+ELS) |
+| Ubuntu 16.04 ELS | [oval.xml](https://security.tuxcare.com/oval/els_os/ubuntu16.04els/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_os/ubuntu16.04els/) | [rss](https://tuxcare.com/cve-tracker/api/products/export/rss?product=Ubuntu+16.04+ELS) |
+| Ubuntu 18.04 ELS | [oval.xml](https://security.tuxcare.com/oval/els_os/ubuntu18.04els/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_os/ubuntu18.04els/) | [rss](https://tuxcare.com/cve-tracker/api/products/export/rss?product=Ubuntu+18.04+ELS) |
+| Ubuntu 20.04 ELS | [oval.xml](https://security.tuxcare.com/oval/els_os/ubuntu20.04els/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_os/ubuntu20.04els/) | [rss](https://tuxcare.com/cve-tracker/api/products/export/rss?product=Ubuntu+20.04+ELS) |
 
 ## Errata advisories
 
 TuxCare Endless Lifecycle Support provides qualified security and selected bug-fix errata advisories across all architectures. They can help users track which CVEs are resolved and which bugs have been addressed.
 
-You can view the full list of released fixes on [cve.tuxcare.com](https://cve.tuxcare.com/els/releases).
+You can view the full list of released fixes on [tuxcare.com/cve-tracker](https://tuxcare.com/cve-tracker/fixes/).
 
 ## OVAL patch definitions
 
