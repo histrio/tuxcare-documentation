@@ -46,7 +46,7 @@
 * ![](/images/unlock-alt.webp) [CSAF](https://security.tuxcare.com/csaf/v2/els_os/rhel7els/) — CSAF security advisories
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=Red+Hat+Enterprise+Linux+7+ELS) — Track vulnerability fixes and updates
 * ![](/images/shield.webp) [Machine-Readable Security Data](/els-for-os/machine-readable-security-data/) — Errata, OVAL, CSAF
-* ![](/images/box.webp) [Supported packages list](https://tuxcare.com/cve-tracker/?product=Red+Hat+Enterprise+Linux+7+ELS) — Full list of packages covered by ELS
+* ![](/images/box.webp) [Supported packages list](https://tuxcare.com/cve-tracker/products/?product=Red+Hat+Enterprise+Linux+7+ELS) — Full list of packages covered by ELS
 * ![](/images/wrench.webp) [Managing the ELS repository](/els-for-os/managing-els-repository/) — Updates, local mirror, and other repository operations
 
 </WhatsNext>

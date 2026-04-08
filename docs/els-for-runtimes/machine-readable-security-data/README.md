@@ -13,77 +13,77 @@ Released fixes are also available via [tuxcare.com/cve-tracker](https://tuxcare.
 
 | OS | Errata | OVAL | CSAF | RSS |
 |----|--------|------|------|-----|
-| EL 7 | [errata](https://security.tuxcare.com/errata/els_alt_php/el7/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_php/el7/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_php/el7/) | [rss](https://tuxcare.com/cve-tracker/?product=EL+7) |
-| EL 8 | [errata](https://security.tuxcare.com/errata/els_alt_php/el8/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_php/el8/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_php/el8/) | [rss](https://tuxcare.com/cve-tracker/?product=EL+8) |
-| EL 9 | [errata](https://security.tuxcare.com/errata/els_alt_php/el9/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_php/el9/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_php/el9/) | [rss](https://tuxcare.com/cve-tracker/?product=EL+9) |
-| EL 10 | [errata](https://security.tuxcare.com/errata/els_alt_php/el10/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_php/el10/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_php/el10/) | [rss](https://tuxcare.com/cve-tracker/?product=EL+10) |
-| Ubuntu 16.04 | [errata](https://security.tuxcare.com/errata/els_alt_php/ubuntu16.04/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_php/ubuntu16.04/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_php/ubuntu16.04/) | [rss](https://tuxcare.com/cve-tracker/?product=Ubuntu+16.04) |
-| Ubuntu 18.04 | [errata](https://security.tuxcare.com/errata/els_alt_php/ubuntu18.04/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_php/ubuntu18.04/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_php/ubuntu18.04/) | [rss](https://tuxcare.com/cve-tracker/?product=Ubuntu+18.04) |
-| Ubuntu 20.04 | [errata](https://security.tuxcare.com/errata/els_alt_php/ubuntu20.04/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_php/ubuntu20.04/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_php/ubuntu20.04/) | [rss](https://tuxcare.com/cve-tracker/?product=Ubuntu+20.04) |
-| Ubuntu 22.04 | [errata](https://security.tuxcare.com/errata/els_alt_php/ubuntu22.04/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_php/ubuntu22.04/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_php/ubuntu22.04/) | [rss](https://tuxcare.com/cve-tracker/?product=Ubuntu+22.04) |
-| Ubuntu 24.04 | [errata](https://security.tuxcare.com/errata/els_alt_php/ubuntu24.04/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_php/ubuntu24.04/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_php/ubuntu24.04/) | [rss](https://tuxcare.com/cve-tracker/?product=Ubuntu+24.04) |
-| Debian 10 | [errata](https://security.tuxcare.com/errata/els_alt_php/debian10/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_php/debian10/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_php/debian10/) | [rss](https://tuxcare.com/cve-tracker/?product=Debian+10) |
-| Debian 11 | [errata](https://security.tuxcare.com/errata/els_alt_php/debian11/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_php/debian11/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_php/debian11/) | [rss](https://tuxcare.com/cve-tracker/?product=Debian+11) |
-| Debian 12 | [errata](https://security.tuxcare.com/errata/els_alt_php/debian12/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_php/debian12/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_php/debian12/) | [rss](https://tuxcare.com/cve-tracker/?product=Debian+12) |
-| Debian 13 | [errata](https://security.tuxcare.com/errata/els_alt_php/debian13/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_php/debian13/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_php/debian13/) | [rss](https://tuxcare.com/cve-tracker/?product=Debian+13) |
-| Alpine Linux 3.22 | — | — | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_php/alpinelinux3.22/) | [rss](https://tuxcare.com/cve-tracker/?product=Alpine+Linux+3.22) |
+| EL 7 | [errata](https://security.tuxcare.com/errata/els_alt_php/el7/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_php/el7/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_php/el7/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=PHP) |
+| EL 8 | [errata](https://security.tuxcare.com/errata/els_alt_php/el8/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_php/el8/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_php/el8/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=PHP) |
+| EL 9 | [errata](https://security.tuxcare.com/errata/els_alt_php/el9/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_php/el9/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_php/el9/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=PHP) |
+| EL 10 | [errata](https://security.tuxcare.com/errata/els_alt_php/el10/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_php/el10/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_php/el10/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=PHP) |
+| Ubuntu 16.04 | [errata](https://security.tuxcare.com/errata/els_alt_php/ubuntu16.04/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_php/ubuntu16.04/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_php/ubuntu16.04/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=PHP) |
+| Ubuntu 18.04 | [errata](https://security.tuxcare.com/errata/els_alt_php/ubuntu18.04/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_php/ubuntu18.04/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_php/ubuntu18.04/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=PHP) |
+| Ubuntu 20.04 | [errata](https://security.tuxcare.com/errata/els_alt_php/ubuntu20.04/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_php/ubuntu20.04/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_php/ubuntu20.04/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=PHP) |
+| Ubuntu 22.04 | [errata](https://security.tuxcare.com/errata/els_alt_php/ubuntu22.04/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_php/ubuntu22.04/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_php/ubuntu22.04/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=PHP) |
+| Ubuntu 24.04 | [errata](https://security.tuxcare.com/errata/els_alt_php/ubuntu24.04/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_php/ubuntu24.04/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_php/ubuntu24.04/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=PHP) |
+| Debian 10 | [errata](https://security.tuxcare.com/errata/els_alt_php/debian10/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_php/debian10/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_php/debian10/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=PHP) |
+| Debian 11 | [errata](https://security.tuxcare.com/errata/els_alt_php/debian11/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_php/debian11/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_php/debian11/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=PHP) |
+| Debian 12 | [errata](https://security.tuxcare.com/errata/els_alt_php/debian12/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_php/debian12/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_php/debian12/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=PHP) |
+| Debian 13 | [errata](https://security.tuxcare.com/errata/els_alt_php/debian13/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_php/debian13/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_php/debian13/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=PHP) |
+| Alpine Linux 3.22 | — | — | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_php/alpinelinux3.22/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=PHP) |
 
 ## Python
 
 | OS | Errata | OVAL | CSAF | RSS |
 |----|--------|------|------|-----|
-| EL 7 | [errata](https://security.tuxcare.com/errata/els_alt_python/el7/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_python/el7/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_python/el7/) | [rss](https://tuxcare.com/cve-tracker/?product=EL+7) |
-| EL 8 | [errata](https://security.tuxcare.com/errata/els_alt_python/el8/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_python/el8/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_python/el8/) | [rss](https://tuxcare.com/cve-tracker/?product=EL+8) |
-| EL 9 | [errata](https://security.tuxcare.com/errata/els_alt_python/el9/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_python/el9/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_python/el9/) | [rss](https://tuxcare.com/cve-tracker/?product=EL+9) |
-| EL 10 | [errata](https://security.tuxcare.com/errata/els_alt_python/el10/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_python/el10/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_python/el10/) | [rss](https://tuxcare.com/cve-tracker/?product=EL+10) |
-| Ubuntu 16.04 | [errata](https://security.tuxcare.com/errata/els_alt_python/ubuntu16.04/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_python/ubuntu16.04/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_python/ubuntu16.04/) | [rss](https://tuxcare.com/cve-tracker/?product=Ubuntu+16.04) |
-| Ubuntu 18.04 | [errata](https://security.tuxcare.com/errata/els_alt_python/ubuntu18.04/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_python/ubuntu18.04/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_python/ubuntu18.04/) | [rss](https://tuxcare.com/cve-tracker/?product=Ubuntu+18.04) |
-| Ubuntu 20.04 | [errata](https://security.tuxcare.com/errata/els_alt_python/ubuntu20.04/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_python/ubuntu20.04/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_python/ubuntu20.04/) | [rss](https://tuxcare.com/cve-tracker/?product=Ubuntu+20.04) |
-| Ubuntu 22.04 | [errata](https://security.tuxcare.com/errata/els_alt_python/ubuntu22.04/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_python/ubuntu22.04/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_python/ubuntu22.04/) | [rss](https://tuxcare.com/cve-tracker/?product=Ubuntu+22.04) |
-| Ubuntu 24.04 | [errata](https://security.tuxcare.com/errata/els_alt_python/ubuntu24.04/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_python/ubuntu24.04/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_python/ubuntu24.04/) | [rss](https://tuxcare.com/cve-tracker/?product=Ubuntu+24.04) |
-| Debian 10 | [errata](https://security.tuxcare.com/errata/els_alt_python/debian10/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_python/debian10/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_python/debian10/) | [rss](https://tuxcare.com/cve-tracker/?product=Debian+10) |
-| Debian 11 | [errata](https://security.tuxcare.com/errata/els_alt_python/debian11/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_python/debian11/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_python/debian11/) | [rss](https://tuxcare.com/cve-tracker/?product=Debian+11) |
-| Debian 12 | [errata](https://security.tuxcare.com/errata/els_alt_python/debian12/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_python/debian12/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_python/debian12/) | [rss](https://tuxcare.com/cve-tracker/?product=Debian+12) |
-| Debian 13 | [errata](https://security.tuxcare.com/errata/els_alt_python/debian13/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_python/debian13/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_python/debian13/) | [rss](https://tuxcare.com/cve-tracker/?product=Debian+13) |
-| Alpine Linux 3.22 | — | — | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_python/alpinelinux3.22/) | [rss](https://tuxcare.com/cve-tracker/?product=Alpine+Linux+3.22) |
+| EL 7 | [errata](https://security.tuxcare.com/errata/els_alt_python/el7/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_python/el7/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_python/el7/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Python) |
+| EL 8 | [errata](https://security.tuxcare.com/errata/els_alt_python/el8/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_python/el8/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_python/el8/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Python) |
+| EL 9 | [errata](https://security.tuxcare.com/errata/els_alt_python/el9/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_python/el9/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_python/el9/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Python) |
+| EL 10 | [errata](https://security.tuxcare.com/errata/els_alt_python/el10/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_python/el10/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_python/el10/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Python) |
+| Ubuntu 16.04 | [errata](https://security.tuxcare.com/errata/els_alt_python/ubuntu16.04/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_python/ubuntu16.04/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_python/ubuntu16.04/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Python) |
+| Ubuntu 18.04 | [errata](https://security.tuxcare.com/errata/els_alt_python/ubuntu18.04/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_python/ubuntu18.04/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_python/ubuntu18.04/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Python) |
+| Ubuntu 20.04 | [errata](https://security.tuxcare.com/errata/els_alt_python/ubuntu20.04/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_python/ubuntu20.04/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_python/ubuntu20.04/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Python) |
+| Ubuntu 22.04 | [errata](https://security.tuxcare.com/errata/els_alt_python/ubuntu22.04/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_python/ubuntu22.04/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_python/ubuntu22.04/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Python) |
+| Ubuntu 24.04 | [errata](https://security.tuxcare.com/errata/els_alt_python/ubuntu24.04/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_python/ubuntu24.04/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_python/ubuntu24.04/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Python) |
+| Debian 10 | [errata](https://security.tuxcare.com/errata/els_alt_python/debian10/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_python/debian10/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_python/debian10/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Python) |
+| Debian 11 | [errata](https://security.tuxcare.com/errata/els_alt_python/debian11/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_python/debian11/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_python/debian11/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Python) |
+| Debian 12 | [errata](https://security.tuxcare.com/errata/els_alt_python/debian12/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_python/debian12/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_python/debian12/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Python) |
+| Debian 13 | [errata](https://security.tuxcare.com/errata/els_alt_python/debian13/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_python/debian13/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_python/debian13/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Python) |
+| Alpine Linux 3.22 | — | — | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_python/alpinelinux3.22/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Python) |
 
 ## Node.js
 
 | OS | CSAF | RSS |
 |----|------|-----|
-| EL 7 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/el7/) | [rss](https://tuxcare.com/cve-tracker/?product=EL+7) |
-| EL 8 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/el8/) | [rss](https://tuxcare.com/cve-tracker/?product=EL+8) |
-| EL 9 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/el9/) | [rss](https://tuxcare.com/cve-tracker/?product=EL+9) |
-| EL 10 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/el10/) | [rss](https://tuxcare.com/cve-tracker/?product=EL+10) |
-| Ubuntu 16.04 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/ubuntu16.04/) | [rss](https://tuxcare.com/cve-tracker/?product=Ubuntu+16.04) |
-| Ubuntu 18.04 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/ubuntu18.04/) | [rss](https://tuxcare.com/cve-tracker/?product=Ubuntu+18.04) |
-| Ubuntu 20.04 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/ubuntu20.04/) | [rss](https://tuxcare.com/cve-tracker/?product=Ubuntu+20.04) |
-| Ubuntu 22.04 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/ubuntu22.04/) | [rss](https://tuxcare.com/cve-tracker/?product=Ubuntu+22.04) |
-| Ubuntu 24.04 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/ubuntu24.04/) | [rss](https://tuxcare.com/cve-tracker/?product=Ubuntu+24.04) |
-| Debian 10 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/debian10/) | [rss](https://tuxcare.com/cve-tracker/?product=Debian+10) |
-| Debian 11 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/debian11/) | [rss](https://tuxcare.com/cve-tracker/?product=Debian+11) |
-| Debian 12 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/debian12/) | [rss](https://tuxcare.com/cve-tracker/?product=Debian+12) |
-| Debian 13 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/debian13/) | [rss](https://tuxcare.com/cve-tracker/?product=Debian+13) |
-| Alpine Linux 3.22 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/alpinelinux3.22/) | [rss](https://tuxcare.com/cve-tracker/?product=Alpine+Linux+3.22) |
+| EL 7 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/el7/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Node.js) |
+| EL 8 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/el8/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Node.js) |
+| EL 9 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/el9/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Node.js) |
+| EL 10 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/el10/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Node.js) |
+| Ubuntu 16.04 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/ubuntu16.04/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Node.js) |
+| Ubuntu 18.04 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/ubuntu18.04/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Node.js) |
+| Ubuntu 20.04 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/ubuntu20.04/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Node.js) |
+| Ubuntu 22.04 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/ubuntu22.04/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Node.js) |
+| Ubuntu 24.04 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/ubuntu24.04/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Node.js) |
+| Debian 10 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/debian10/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Node.js) |
+| Debian 11 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/debian11/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Node.js) |
+| Debian 12 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/debian12/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Node.js) |
+| Debian 13 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/debian13/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Node.js) |
+| Alpine Linux 3.22 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/alpinelinux3.22/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Node.js) |
 
 ## Ruby
 
 | OS | CSAF | RSS |
 |----|------|-----|
-| EL 7 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_ruby/el7/) | [rss](https://tuxcare.com/cve-tracker/?product=EL+7) |
-| EL 8 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_ruby/el8/) | [rss](https://tuxcare.com/cve-tracker/?product=EL+8) |
-| EL 9 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_ruby/el9/) | [rss](https://tuxcare.com/cve-tracker/?product=EL+9) |
-| EL 10 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_ruby/el10/) | [rss](https://tuxcare.com/cve-tracker/?product=EL+10) |
-| Ubuntu 16.04 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_ruby/ubuntu16.04/) | [rss](https://tuxcare.com/cve-tracker/?product=Ubuntu+16.04) |
-| Ubuntu 18.04 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_ruby/ubuntu18.04/) | [rss](https://tuxcare.com/cve-tracker/?product=Ubuntu+18.04) |
-| Ubuntu 20.04 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_ruby/ubuntu20.04/) | [rss](https://tuxcare.com/cve-tracker/?product=Ubuntu+20.04) |
-| Ubuntu 22.04 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_ruby/ubuntu22.04/) | [rss](https://tuxcare.com/cve-tracker/?product=Ubuntu+22.04) |
-| Ubuntu 24.04 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_ruby/ubuntu24.04/) | [rss](https://tuxcare.com/cve-tracker/?product=Ubuntu+24.04) |
-| Debian 10 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_ruby/debian10/) | [rss](https://tuxcare.com/cve-tracker/?product=Debian+10) |
-| Debian 11 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_ruby/debian11/) | [rss](https://tuxcare.com/cve-tracker/?product=Debian+11) |
-| Debian 12 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_ruby/debian12/) | [rss](https://tuxcare.com/cve-tracker/?product=Debian+12) |
-| Debian 13 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_ruby/debian13/) | [rss](https://tuxcare.com/cve-tracker/?product=Debian+13) |
-| Alpine Linux 3.22 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_ruby/alpinelinux3.22/) | [rss](https://tuxcare.com/cve-tracker/?product=Alpine+Linux+3.22) |
+| EL 7 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_ruby/el7/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Ruby) |
+| EL 8 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_ruby/el8/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Ruby) |
+| EL 9 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_ruby/el9/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Ruby) |
+| EL 10 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_ruby/el10/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Ruby) |
+| Ubuntu 16.04 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_ruby/ubuntu16.04/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Ruby) |
+| Ubuntu 18.04 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_ruby/ubuntu18.04/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Ruby) |
+| Ubuntu 20.04 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_ruby/ubuntu20.04/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Ruby) |
+| Ubuntu 22.04 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_ruby/ubuntu22.04/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Ruby) |
+| Ubuntu 24.04 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_ruby/ubuntu24.04/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Ruby) |
+| Debian 10 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_ruby/debian10/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Ruby) |
+| Debian 11 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_ruby/debian11/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Ruby) |
+| Debian 12 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_ruby/debian12/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Ruby) |
+| Debian 13 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_ruby/debian13/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Ruby) |
+| Alpine Linux 3.22 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_ruby/alpinelinux3.22/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Ruby) |
 
 ## How to use OVAL
 

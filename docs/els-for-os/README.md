@@ -56,7 +56,7 @@ yum update kernel* --enablerepo=centos7els-rollout-3-bypass
 
 You can track the status of vulnerabilities and their corresponding fixes via [tuxcare.com/cve-tracker](https://tuxcare.com/cve-tracker/):
 * [Vulnerabilities](https://tuxcare.com/cve-tracker/)
-* [Fixes](https://tuxcare.com/cve-tracker/)
+* [Fixes](https://tuxcare.com/cve-tracker/fixes/)
 
 ## CVE status definition
 
@@ -72,7 +72,7 @@ You can track the status of vulnerabilities and their corresponding fixes via [t
 
 ## Supported packages
 
-TuxCare's Endless Lifecycle Support provides updates for a comprehensive list of packages integral to server operations (100+ packages), providing maximum security for your operating system. You can view the full list of supported packages for each operating system, as well as get detailed information on the patched Common Vulnerabilities and Exposures (CVEs), [here](https://tuxcare.com/cve-tracker/). The list of supported packages may change as projects can be added or removed from the list. Support for additional packages can be provided on request.
+TuxCare's Endless Lifecycle Support provides updates for a comprehensive list of packages integral to server operations (100+ packages), providing maximum security for your operating system. You can view the full list of supported packages for each operating system, as well as get detailed information on the patched Common Vulnerabilities and Exposures (CVEs), [here](https://tuxcare.com/cve-tracker/products/). The list of supported packages may change as projects can be added or removed from the list. Support for additional packages can be provided on request.
 
 ## Live patching for ELS systems
 
