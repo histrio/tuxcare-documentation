@@ -498,6 +498,7 @@ export default {
                     path: '/els-for-applications/maven/',
                     icon: '/images/maven.webp',
                 },
+                "/els-for-applications/managing-els-repository/",
             ]
         },
     ],

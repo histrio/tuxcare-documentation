@@ -1,6 +1,6 @@
 # Loki
 
-Endless Lifecycle Support (ELS) for Loki from TuxCare provides security fixes for Loki versions that have reached their end of life. This allows you to continue running Loki without vulnerability concerns, even after official support has ended.
+TuxCare's ELS for Loki provides security patches for Loki versions that have reached End of Life (EOL), helping organizations maintain stability without migrating to newer releases.
 
 ## Supported Loki Versions
 
@@ -26,9 +26,13 @@ This guide outlines the steps needed to install the TuxCare ELS build of Loki on
 
 <ELSSteps>
 
-1. To browse available artifacts, visit TuxCare [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els-golang). Sign in with your TuxCare credentials. Navigate to the `loki` folder and choose the directory for your operating system (e.g. `debian12`, `debian13`, `alpine3_22`), then download the appropriate archive for your Loki version.
+1. **Browse and download from Nexus**
 
-2. Alternatively, download from the command line. Replace `USERNAME` and `PASSWORD` with your TuxCare credentials, and choose the URL that matches your OS and desired Loki version.
+   Visit TuxCare [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els-golang) and sign in with your credentials. Navigate to the `loki` folder, choose the directory for your operating system, and download the appropriate archive
+
+2. **Or download from the command line**
+
+   Replace `USERNAME` and `PASSWORD` with your TuxCare credentials, and choose the URL that matches your OS and Loki version
 
    <TableTabs label="Choose operating system: ">
 
@@ -64,7 +68,9 @@ This guide outlines the steps needed to install the TuxCare ELS build of Loki on
 
    </TableTabs>
 
-3. Create an installation directory (for example `/opt/loki`) and extract the archive:
+3. **Extract the archive**
+
+   Create an installation directory (for example `/opt/loki`) and extract.
 
    ```text
    sudo mkdir -p /opt/loki
@@ -73,14 +79,18 @@ This guide outlines the steps needed to install the TuxCare ELS build of Loki on
 
    Adjust the archive filename if you downloaded a different version.
 
-4. Change to the Loki installation directory and run the binary to confirm the TuxCare ELS build is installed:
+4. **Verify the installation**
+
+   Change to the installation directory and run the binary to confirm the TuxCare ELS build.
 
    ```text
    cd /opt/loki
    ./loki --version
    ```
 
-5. Start Loki with your configuration and verify that the application runs correctly.
+5. **Start Loki**
+
+   Use your configuration and verify that the application runs correctly
 
 </ELSSteps>
 

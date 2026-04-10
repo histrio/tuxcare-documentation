@@ -1,7 +1,6 @@
 # Apache Hadoop
 
-TuxCare's Endless Lifecycle Support (ELS) for Apache Hadoop provides security patches and selected bug fixes that are integral to the stable operation of applications running on these versions of Apache Hadoop core components. These components have either reached their end of standard support from vendors or have reached End of Life (EOL).
-Our ELS for Apache Hadoop service is designed to provide solutions for organizations that are not yet ready to migrate to newer versions and that are seeking long-term stability for their legacy Apache Hadoop applications.
+TuxCare's ELS for Apache Hadoop provides security patches for Apache Hadoop versions that have reached End of Life (EOL), helping organizations maintain stability without migrating to newer releases.
 
 ## Supported Versions
 
@@ -19,7 +18,7 @@ This guide outlines the steps needed to integrate the TuxCare ELS for Apache Had
 
 <ELSSteps>
 
-1. Navigate to the directory depending on your operating system.
+1. **Navigate to the build tool directory**
    * Windows
    ```text
    Maven: C:\Users\{username}\.m2
@@ -36,7 +35,7 @@ This guide outlines the steps needed to integrate the TuxCare ELS for Apache Had
    Gradle: /home/{username}/.gradle
    ```
 
-2. Add the TuxCare repository and plugin repository to your build configuration.
+2. **Configure credentials**
 
    :::tip
    For Maven, you may choose any valid `<id>` value instead of `tuxcare-registry`, but the same value must be used in both `settings.xml` and `pom.xml`.
@@ -49,7 +48,9 @@ This guide outlines the steps needed to integrate the TuxCare ELS for Apache Had
 
    Here `USERNAME` and `PASSWORD` are your TuxCare credentials.
 
-3. Add the TuxCare Apache Hadoop repository and plugins to your build configuration:
+3. **Add the TuxCare repository**
+
+   Add the TuxCare Apache Hadoop repository and plugins to your build configuration.
 
    <CodeTabs :tabs="[
      { title: 'Maven (pom.xml)', content: mavenrepo },
@@ -63,23 +64,27 @@ This guide outlines the steps needed to integrate the TuxCare ELS for Apache Had
    * [Maven](https://github.com/cloudlinux/securechain-java/tree/main/examples/maven)
    * [Gradle](https://github.com/cloudlinux/securechain-java/tree/main/examples/gradle)
 
-4. Replace the Apache Hadoop dependencies in your build file with the TuxCare-maintained versions to cover both direct and transitive dependencies.
+4. **Update dependencies**
 
-   You can find a specific artifact version in your TuxCare account on [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els_java). Click **Sign In** in the top right corner to authenticate with your TuxCare credentials. After logging in, you may need to refresh or reopen the link to browse artifacts due to Nexus routing behavior.
+   Replace Apache Hadoop dependencies with TuxCare-maintained versions. You can find artifact versions on [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els_java) — sign in with your TuxCare credentials.
 
    <CodeTabs :tabs="[
      { title: 'Maven (pom.xml)', content: mavendeps },
      { title: 'Gradle (build.gradle)', content: gradledeps }
    ]" />
 
-5. To confirm the TuxCare Apache Hadoop repository is set up correctly, use your build tool to list the project's dependencies. It shows both direct and transitive dependencies in the classpath.
+5. **Verify the setup**
+
+   Use your build tool to list the project's dependencies and confirm TuxCare packages are resolved correctly.
 
    <CodeTabs :tabs="[
      { title: 'Maven', content: `mvn dependency:tree -Dverbose` },
      { title: 'Gradle', content: `./gradlew dependencies --configuration runtimeClasspath` }
    ]" />
 
-6. After reviewing the dependencies, include any library from the repository into your project and then run a build:
+6. **Build the project**
+
+   Include any library from the repository and run a build.
 
    <CodeTabs :tabs="[
      { title: 'Maven', content: `mvn clean install` },
@@ -90,35 +95,20 @@ This guide outlines the steps needed to integrate the TuxCare ELS for Apache Had
 
 </ELSSteps>
 
-### Conclusion
-
-You've successfully integrated the TuxCare ELS for Apache Hadoop repository into your project. You can now benefit from the secure and vetted Apache Hadoop libraries it provides.
-
-## Vulnerability Exploitability eXchange (VEX)
-
-VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives and helps prioritize real risks.
-
-TuxCare provides VEX for Apache Hadoop ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_java/org.apache.hadoop/](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/org.apache.hadoop/).
-
-## How to Upgrade to a Newer Version of TuxCare Packages
-
-If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), you need to update version strings in your Maven or Gradle build file.
-
-## Source Code
-
-Source code for TuxCare-patched Apache Hadoop libraries is available in the repository. Source JARs follow the standard Maven naming convention with a `-sources` classifier.
-
-For example: [https://nexus.repo.tuxcare.com/repository/els_java/org/apache/hadoop/hadoop-common/2.7.3.tuxcare.1/hadoop-common-2.7.3.tuxcare.1-sources.jar](https://nexus.repo.tuxcare.com/repository/els_java/org/apache/hadoop/hadoop-common/2.7.3.tuxcare.1/hadoop-common-2.7.3.tuxcare.1-sources.jar).
-
-:::tip
-If a source JAR is not available for a specific package, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com) to report the issue.
-:::
-
 ## Resolved CVEs in ELS for Apache Hadoop
 
 <ClientOnly>
   <ResolvedCveTable project="apache-hadoop" />
 </ClientOnly>
+
+## What's next?
+
+<WhatsNext hide-title>
+
+* ![](/images/shield-alert.webp) [VEX](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/org.apache.hadoop/) — Vulnerability Exploitability eXchange
+* ![](/images/wrench.webp) [Managing the ELS repository](/els-for-applications/managing-els-repository/) — Source code and upgrades
+
+</WhatsNext>
 
 <!-- data for Apache Hadoop instructions used in code blocks -->
 

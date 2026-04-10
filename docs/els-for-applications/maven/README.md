@@ -1,6 +1,6 @@
 # Apache Maven
 
-TuxCare's Endless Lifecycle Support (ELS) for Apache Maven provides security patches for versions of Apache Maven that have reached End of Life (EOL) or are no longer maintained by the upstream vendor. Our ELS for Apache Maven service is designed for organizations that are not yet ready to migrate to newer Maven versions and that are seeking long-term stability for their build infrastructure.
+TuxCare's ELS for Apache Maven provides security patches for Maven versions that have reached End of Life (EOL), helping organizations maintain stability without migrating to newer releases.
 
 ## Supported Versions
 
@@ -21,7 +21,9 @@ TuxCare's Endless Lifecycle Support (ELS) for Apache Maven provides security pat
 
 ## Linux Installation
 
-1. Download Apache Maven from TuxCare via the terminal using your credentials. For example, Maven 3.8.1:
+1. **Download Apache Maven**
+
+   Download from TuxCare via the terminal using your credentials. For example, Maven 3.8.1:
 
    ```text
    curl -u USERNAME:PASSWORD -O https://nexus.repo.tuxcare.com/repository/els_java/org/apache/maven/apache-maven/3.8.1-tuxcare.1/apache-maven-3.8.1-tuxcare.1-bin.tar.gz
@@ -29,14 +31,16 @@ TuxCare's Endless Lifecycle Support (ELS) for Apache Maven provides security pat
 
    Replace `USERNAME` and `PASSWORD` with your actual credentials, and adjust the version as needed.
 
-2. Extract the archive to a directory of your choice:
+2. **Extract the archive**
 
    ```text
    sudo mkdir -p /opt/maven
    sudo tar -xvzf apache-maven-3.8.1-tuxcare.1-bin.tar.gz -C /opt/maven
    ```
 
-3. Run the Maven binary directly from the extracted directory to verify:
+3. **Verify the installation**
+
+   Run the Maven binary from the extracted directory.
 
    ```text
    /opt/maven/apache-maven-3.8.1-tuxcare.1/bin/mvn --version
@@ -46,11 +50,17 @@ TuxCare's Endless Lifecycle Support (ELS) for Apache Maven provides security pat
 
 ## Windows Installation
 
-1. Download the Apache Maven .zip archive from [TuxCare Nexus](https://nexus.repo.tuxcare.com/repository/els_java/org/apache/maven/apache-maven/) using your credentials.
+1. **Download Apache Maven**
 
-2. Extract the downloaded archive, for example, `apache-maven-3.8.1-tuxcare.1-bin.zip`, to a directory of your choice, e.g., `C:\Maven`.
+   Download the .zip archive from [TuxCare Nexus](https://nexus.repo.tuxcare.com/repository/els_java/org/apache/maven/apache-maven/) using your credentials
 
-3. Open a Command Prompt or PowerShell window and run the following command to verify:
+2. **Extract the archive**
+
+   Extract, for example, `apache-maven-3.8.1-tuxcare.1-bin.zip` to a directory of your choice, e.g., `C:\Maven`
+
+3. **Verify the installation**
+
+   Open a Command Prompt or PowerShell window and run the following command.
 
    ```text
    C:\Maven\apache-maven-3.8.1-tuxcare.1\bin\mvn --version
@@ -58,20 +68,19 @@ TuxCare's Endless Lifecycle Support (ELS) for Apache Maven provides security pat
 
    The output should display the Maven version and build details.
 
-## Upgrading to a Newer TuxCare Version
-
-To upgrade to a newer TuxCare release (e.g., from `tuxcare.1` to `tuxcare.2`), download and extract the new version of the Apache Maven archive from TuxCare using the instructions above.
-
 </ELSSteps>
-
-## Vulnerability Exploitability eXchange (VEX)
-
-VEX is a machine-readable format that indicates whether a known vulnerability is actually exploitable in your product. It helps reduce false positives and prioritize real risks.
-
-TuxCare provides VEX data for Apache Maven ELS versions at: [security.tuxcare.com/vex/cyclonedx/els_lang_java/](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/).
 
 ## Resolved CVEs in ELS for Apache Maven
 
 <ClientOnly>
   <ResolvedCveTable project="maven" />
 </ClientOnly>
+
+## What's next?
+
+<WhatsNext hide-title>
+
+* ![](/images/shield-alert.webp) [VEX](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/) — Vulnerability Exploitability eXchange
+* ![](/images/wrench.webp) [Managing the ELS repository](/els-for-applications/managing-els-repository/) — Source code and upgrades
+
+</WhatsNext>
