@@ -5,7 +5,6 @@ export default {
             children: [
                 "/enterprise-support-for-almalinux/",
                 "/enterprise-support-for-almalinux/fips/",
-                "/enterprise-support-for-almalinux/nss-fips-and-java-crypto-apis/",
             ]
         },
     ],
