@@ -182,7 +182,7 @@ const techData = [
       },
       {
         name: "Apache Tomcat®",
-        versions: "8.5.100 | 9.0.46 | 9.0.50 | 9.0.75 | 9.0.83 | 9.0.87 | 9.0.90 | 9.0.100 | 10.1.18",
+        versions: "8.5.100 | 9.0.46 | 9.0.50 | 9.0.75 | 9.0.83 | 9.0.87 | 9.0.90 | 9.0.100 | 10.1.18 | 10.1.42",
         link: "./apache-tomcat/",
       },
       {
@@ -512,7 +512,7 @@ const techData = [
       },
       {
         name: "Eclipse Jetty",
-        versions: "8.2.0.v20160908 | 9.4.24.v20191120 | 9.4.48.v20220622 | 9.4.53.v20231009 | 9.4.59 | 10.0.27 | 11.0.19 | 11.0.27",
+        versions: "8.2.0.v20160908 | 9.4.24.v20191120 | 9.4.48.v20220622 | 9.4.53.v20231009 | 9.4.59 | 9.4.60 | 10.0.27 | 10.0.28 | 11.0.19 | 11.0.27 | 11.0.28",
         link: "./jetty/",
       },
       {
@@ -537,6 +537,11 @@ const techData = [
         link: "./angularjs/",
       },
       {
+        name: "ajv",
+        versions: "4.11.8 | 5.5.2 | 6.12.6 | 6.14.0 | 8.6.2 | 8.9.0 | 8.11.0 | 8.12.0 | 8.17.1",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "ansi-html",
         versions: "0.0.7",
         link: "./javascript-libraries/",
@@ -547,8 +552,18 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "axios",
+        versions: "0.18.1 | 0.27.2",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "base64url",
         versions: "0.0.6",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "body-parser",
+        versions: "1.8.4 | 1.13.3 | 1.14.2",
         link: "./javascript-libraries/",
       },
       {
@@ -563,7 +578,7 @@ const techData = [
       },
       {
         name: "braces",
-        versions: "2.3.2",
+        versions: "1.8.5 | 2.3.2 | 3.0.3",
         link: "./javascript-libraries/",
       },
       {
@@ -573,12 +588,27 @@ const techData = [
       },
       {
         name: "clean-css",
-        versions: "2.2.23",
+        versions: "2.2.23 | 3.4.28",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "chownr",
+        versions: "0.0.2 | 1.0.1",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "concat-stream",
+        versions: "1.4.8 | 1.5.0",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "connect",
+        versions: "1.9.2 | 2.6.0 | 2.7.5",
         link: "./javascript-libraries/",
       },
       {
         name: "cookie",
-        versions: "0.4.2",
+        versions: "0.0.5 | 0.1.3 | 0.3.1 | 0.4.2 | 0.5.0",
         link: "./javascript-libraries/",
       },
       {
@@ -588,7 +618,7 @@ const techData = [
       },
       {
         name: "cross-spawn",
-        versions: "5.1.0",
+        versions: "0.2.9 | 5.1.0",
         link: "./javascript-libraries/",
       },
       {
@@ -598,27 +628,42 @@ const techData = [
       },
       {
         name: "debug",
-        versions: "2.1.1 | 4.1.1",
+        versions: "1.0.5 | 2.1.1 | 2.2.0 | 2.3.3 | 3.2.6 | 4.1.1",
         link: "./javascript-libraries/",
       },
       {
         name: "diff",
-        versions: "1.4.0",
+        versions: "1.0.2 | 1.4.0 | 7.0.0",
         link: "./javascript-libraries/",
       },
       {
         name: "DOMPurify",
-        versions: "2.3.0 | 2.4.3",
+        versions: "2.3.0 | 2.4.3 | 2.5.8",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "ejs",
+        versions: "1.0.0 | 2.7.4",
         link: "./javascript-libraries/",
       },
       {
         name: "Ember.js",
-        versions: "2.18.2",
+        versions: "0.2.7 | 2.18.2 | 3.28.6",
         link: "./ember/",
       },
       {
         name: "elliptic",
-        versions: "6.6.0",
+        versions: "6.6.0 | 6.6.1",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "engine.io",
+        versions: "3.2.1",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "es5-ext",
+        versions: "0.10.7",
         link: "./javascript-libraries/",
       },
       {
@@ -633,7 +678,12 @@ const techData = [
       },
       {
         name: "express-jwt",
-        versions: "0.1.3",
+        versions: "0.1.3 | 0.1.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "fast-xml-parser",
+        versions: "4.5.3",
         link: "./javascript-libraries/",
       },
       {
@@ -642,13 +692,28 @@ const techData = [
         link: "./fastify/",
       },
       {
-        name: "formidable",
-        versions: "2.1.2",
+        name: "follow-redirects",
+        versions: "0.0.3 | 1.15.11",
         link: "./javascript-libraries/",
       },
       {
         name: "Form-Data",
-        versions: "0.2.0 | 2.3.3",
+        versions: "0.0.8 | 0.1.4 | 0.2.0 | 1.0.0-rc3 | 2.3.3",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "formidable",
+        versions: "2.1.2 | 2.1.5",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "forwarded",
+        versions: "0.1.0",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "fresh",
+        versions: "0.2.4 | 0.3.0 | 0.5.2",
         link: "./javascript-libraries/",
       },
       {
@@ -657,18 +722,33 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "got",
+        versions: "2.9.2 | 8.3.2 | 9.6.0",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "growl",
+        versions: "1.7.0",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "handlebars",
+        versions: "1.0.12 | 1.3.0 | 2.0.0 | 3.0.3",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "hawk",
+        versions: "0.13.1 | 1.0.0 | 1.1.1 | 2.3.1 | 3.1.0",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "highlight.js",
         versions: "9.18.5",
         link: "./javascript-libraries/",
       },
       {
-        name: "handlebars",
-        versions: "3.0.3",
-        link: "./javascript-libraries/",
-      },
-      {
         name: "hoek",
-        versions: "2.12.0 | 2.14.0",
+        versions: "0.8.5 | 0.9.1 | 2.11.1 | 2.12.0 | 2.14.0 | 2.16.3",
         link: "./javascript-libraries/",
       },
       {
@@ -688,7 +768,12 @@ const techData = [
       },
       {
         name: "ip",
-        versions: "1.1.5 | 2.0.0",
+        versions: "1.1.5 | 1.1.9 | 2.0.0 | 2.0.1",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "is-my-json-valid",
+        versions: "2.10.1 | 2.12.2",
         link: "./javascript-libraries/",
       },
       {
@@ -707,8 +792,18 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "js-yaml",
+        versions: "3.3.1 | 3.7.0",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "json5",
+        versions: "0.4.0 | 0.5.1",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "JSON Web Token (JWT)",
-        versions: "0.4.0 | 8.5.1",
+        versions: "0.4.0 | 0.4.1 | 8.5.1",
         link: "./jsonwebtoken/",
       },
       {
@@ -717,8 +812,18 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "jsonpointer",
+        versions: "1.1.0 | 2.0.0 | 4.1.0",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "jsPDF",
         versions: "2.5.2 | 3.0.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "knex",
+        versions: "0.95.15",
         link: "./javascript-libraries/",
       },
       {
@@ -728,7 +833,7 @@ const techData = [
       },
       {
         name: "Knockout",
-        versions: "2.3.0 | 3.4.2",
+        versions: "2.3.0 | 3.2.0 | 3.4.2",
         link: "./knockout/",
       },
       {
@@ -738,7 +843,7 @@ const techData = [
       },
       {
         name: "Lodash",
-        versions: "3.10.1 | 4.5.0 | 4.17.x",
+        versions: "1.3.1 | 2.4.2 | 3.2.0 | 3.10.1 | 4.5.0 | 4.17.15 | 4.17.19",
         link: "./lodash/",
       },
       {
@@ -758,12 +863,17 @@ const techData = [
       },
       {
         name: "markdown-it",
-        versions: "4.0.3 | 4.3.0",
+        versions: "4.0.3 | 4.3.0 | 8.4.2 | 13.0.2",
         link: "./javascript-libraries/",
       },
       {
         name: "marked",
-        versions: "0.2.10 | 4.0.9",
+        versions: "0.2.10 | 0.7.0 | 4.0.7 | 4.0.9",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "mem",
+        versions: "1.1.0",
         link: "./javascript-libraries/",
       },
       {
@@ -772,18 +882,28 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "mime",
+        versions: "1.2.11 | 1.3.0 | 1.3.4",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "minimatch",
-        versions: "3.0.4",
+        versions: "0.0.4 | 0.0.5 | 0.2.14 | 0.3.0 | 1.0.0 | 2.0.10 | 3.0.4 | 3.1.2 | 3.1.5 | 5.1.0",
         link: "./javascript-libraries/",
       },
       {
         name: "minimist",
-        versions: "1.2.8",
+        versions: "0.0.8 | 0.0.10 | 1.2.0 | 1.2.8",
         link: "./javascript-libraries/",
       },
       {
         name: "moment",
-        versions: "2.10.6",
+        versions: "2.10.6 | 2.24.0",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "moment-timezone",
+        versions: "0.4.1",
         link: "./javascript-libraries/",
       },
       {
@@ -793,7 +913,7 @@ const techData = [
       },
       {
         name: "Mongoose",
-        versions: "5.13.23",
+        versions: "5.13.23 | 6.12.2 | 7.8.8",
         link: "./mongoose/",
       },
       {
@@ -812,9 +932,19 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "mysql",
+        versions: "2.18.1",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "MySQL2",
         versions: "2.3.3",
         link: "./mysql2/",
+      },
+      {
+        name: "negotiator",
+        versions: "0.5.3",
+        link: "./javascript-libraries/",
       },
       {
         name: "next",
@@ -823,12 +953,12 @@ const techData = [
       },
       {
         name: "node-fetch",
-        versions: "1.7.3 | 2.6.1",
+        versions: "1.6.3 | 1.7.3 | 2.6.1",
         link: "./node-fetch/",
       },
       {
         name: "Nuxt",
-        versions: "2.18.1 | 3.2.0",
+        versions: "0.10.7 | 2.18.1",
         link: "./nuxt/",
       },
       {
@@ -839,6 +969,16 @@ const techData = [
       {
         name: "nth-check",
         versions: "1.0.2",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "Nuxt",
+        versions: "0.10.7 | 2.18.1",
+        link: "./nuxt/",
+      },
+      {
+        name: "object-path",
+        versions: "0.11.4",
         link: "./javascript-libraries/",
       },
       {
@@ -858,7 +998,7 @@ const techData = [
       },
       {
         name: "pdfjs-dist",
-        versions: "2.16.105",
+        versions: "2.16.105 | 3.11.174",
         link: "./javascript-libraries/",
       },
       {
@@ -868,12 +1008,17 @@ const techData = [
       },
       {
         name: "PostCSS",
-        versions: "7.0.39 | 8.3.6",
+        versions: "5.2.18 | 6.0.23 | 7.0.39 | 8.3.6",
         link: "./postcss/",
       },
       {
+        name: "pug",
+        versions: "2.0.4",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "qs",
-        versions: "2.2.5 | 2.3.3 | 2.4.2 | 5.1.0 | 5.2.0 | 6.5.3",
+        versions: "0.5.1 | 0.6.6 | 1.0.2 | 1.2.2 | 2.2.5 | 2.3.3 | 2.4.2 | 4.0.0 | 5.1.0 | 5.2.0 | 6.5.3",
         link: "./javascript-libraries/",
       },
       {
@@ -883,13 +1028,8 @@ const techData = [
       },
       {
         name: "React",
-        versions: "15.6.2 | 19.2.0",
+        versions: "15.6.2 | 16.4.1 | 19.2.0",
         link: "./react/",
-      },
-      {
-        name: "react-dom",
-        versions: "16.4.1",
-        link: "./react-dom/",
       },
       {
         name: "react-pdf",
@@ -908,27 +1048,52 @@ const techData = [
       },
       {
         name: "Request",
-        versions: "2.88.0",
+        versions: "2.88.0 | 2.88.2",
         link: "./javascript-libraries/",
       },
       {
         name: "Rollup",
-        versions: "2.1.0 | 2.26.5 | 2.38.4 | 2.79.1 | 2.79.2",
+        versions: "0.41.6 | 0.57.1 | 2.1.0 | 2.26.5 | 2.38.4 | 2.79.1 | 2.79.2",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "sanitize-html",
+        versions: "1.27.5",
         link: "./javascript-libraries/",
       },
       {
         name: "semver",
-        versions: "7.1.3 | 7.3.2",
+        versions: "2.3.2 | 4.3.6 | 5.0.3 | 6.3.0 | 7.1.3 | 7.3.2 | 7.3.8",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "sentry-browser",
+        versions: "5.7.1",
         link: "./javascript-libraries/",
       },
       {
         name: "serialize-javascript",
-        versions: "6.0.2",
+        versions: "1.9.1 | 3.1.0 | 4.0.0 | 5.0.1 | 6.0.2",
         link: "./javascript-libraries/",
       },
       {
         name: "shell-quote",
-        versions: "1.4.3",
+        versions: "1.4.3 | 1.7.2",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "shelljs",
+        versions: "0.1.4 | 0.3.0",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "socket.io",
+        versions: "2.1.1",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "socket.io-parser",
+        versions: "3.2.0",
         link: "./javascript-libraries/",
       },
       {
@@ -938,7 +1103,7 @@ const techData = [
       },
       {
         name: "stringstream",
-        versions: "0.0.4",
+        versions: "0.0.4 | 0.0.5",
         link: "./javascript-libraries/",
       },
       {
@@ -953,12 +1118,12 @@ const techData = [
       },
       {
         name: "tar",
-        versions: "1.0.3 | 2.2.2 | 4.4.19 | 6.0.2 | 6.2.1",
+        versions: "1.0.3 | 2.1.1 | 2.2.2 | 4.4.19 | 6.0.2 | 6.2.1",
         link: "./javascript-libraries/",
       },
       {
         name: "terser",
-        versions: "4.6.10 | 4.8.1 | 5.3.0 | 5.5.1",
+        versions: "3.17.0 | 4.6.3 | 4.6.10 | 4.8.1 | 5.3.0 | 5.5.1",
         link: "./javascript-libraries/",
       },
       {
@@ -967,13 +1132,18 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "tmp",
+        versions: "0.0.30 | 0.0.33 | 0.1.0 | 0.2.1",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "tough-cookie",
-        versions: "2.2.0 | 2.4.3 | 2.5.0",
+        versions: "0.12.1 | 1.2.0 | 2.2.0 | 2.4.3 | 2.5.0 | 3.0.1",
         link: "./javascript-libraries/",
       },
       {
         name: "tunnel-agent",
-        versions: "0.4.0",
+        versions: "0.3.0 | 0.4.0 | 0.4.3",
         link: "./javascript-libraries/",
       },
       {
@@ -982,19 +1152,29 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
-        name: "validator",
-        versions: "8.2.0 | 10.11.0",
+        name: "uglify-js",
+        versions: "1.1.1 | 1.3.5 | 2.3.6",
         link: "./javascript-libraries/",
       },
       {
-        name: "uglify-js",
-        versions: "1.1.1",
+        name: "underscore",
+        versions: "1.4.4 | 1.6.0 | 1.7.0",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "underscore.string",
+        versions: "2.2.1 | 2.3.3",
         link: "./javascript-libraries/",
       },
       {
         name: "undici",
-        versions: "5.28.5",
+        versions: "5.28.5 | 5.29.0",
         link: "./undici/",
+      },
+      {
+        name: "validator",
+        versions: "8.2.0 | 10.11.0",
+        link: "./javascript-libraries/",
       },
       {
         name: "Vite",
@@ -1027,9 +1207,9 @@ const techData = [
         link: "./webpack/",
       },
       {
-        name: "YUI",
-        versions: "2.9.0 | 3.18.1",
-        link: "./yui/",
+        name: "webpack-dev-middleware",
+        versions: "1.12.2 | 3.7.2 | 5.0.0 | 5.3.0",
+        link: "./javascript-libraries/",
       },
       {
         name: "webpack-dev-server",
@@ -1037,34 +1217,44 @@ const techData = [
         link: "./webpack-dev-server/",
       },
       {
-        name: "websocket-extensions",
-        versions: "0.1.1",
-        link: "./javascript-libraries/",
-      },
-      {
         name: "webpack-subresource-integrity",
         versions: "1.4.0",
         link: "./javascript-libraries/",
       },
       {
+        name: "websocket-extensions",
+        versions: "0.1.1",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "ws",
+        versions: "1.1.1 | 3.3.3 | 4.1.0 | 7.4.6",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "xlsx",
+        versions: "0.18.5",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "xml2js",
-        versions: "0.4.23",
+        versions: "0.2.6 | 0.2.8 | 0.4.23",
         link: "./javascript-libraries/",
       },
       {
         name: "xmlhttprequest-ssl",
-        versions: "1.5.3",
+        versions: "1.5.3 | 1.5.5",
         link: "./javascript-libraries/",
       },
       {
         name: "yargs-parser",
-        versions: "11.1.1",
+        versions: "4.2.1 | 7.0.0 | 10.1.0 | 11.1.1",
         link: "./javascript-libraries/",
       },
       {
-        name: "@sentry/browser",
-        versions: "5.7.1",
-        link: "./javascript-libraries/",
+        name: "YUI",
+        versions: "2.9.0 | 3.18.1",
+        link: "./yui/",
       },
     ],
   },
@@ -1089,7 +1279,7 @@ const techData = [
       },
       {
         name: "cryptography",
-        versions: "3.4.8 | 41.0.7 | 42.0.0 | 42.0.8 | 43.0.1 | 43.0.3",
+        versions: "3.4.8 | 41.0.7 | 42.0.0 | 42.0.8 | 43.0.1 | 43.0.3 | 44.0.3 | 45.0.7",
         link: "./python-libraries/",
       },
       {
@@ -1349,6 +1539,16 @@ const techData = [
         link: "./carbon/",
       },
       {
+        name: "CraftCMS",
+        versions: "3.9.15",
+        link: "./craftcms/",
+      },
+      {
+        name: "CraftCMS Feed Me Plugin",
+        versions: "3.1.17",
+        link: "./craftcms-feed-me/",
+      },
+      {
         name: "DomPDF",
         versions: "0.8.x | 1.2.x | 3.1.0",
         link: "./dompdf/",
@@ -1435,8 +1635,43 @@ const techData = [
         link: "./dotnet/",
       },
       {
+        name: "log4net",
+        versions: "1.2.15",
+        link: "./dotnet/",
+      },
+      {
+        name: "Microsoft.Azure.Storage.DataMovement",
+        versions: "1.2.0 | 1.2.1",
+        link: "./dotnet/",
+      },
+      {
+        name: "Microsoft.Data.SqlClient",
+        versions: "1.1.4 | 1.1.5",
+        link: "./dotnet/",
+      },
+      {
+        name: "MimeKit",
+        versions: "3.6.1 | 3.6.2",
+        link: "./dotnet/",
+      },
+      {
         name: "Newtonsoft.Json",
         versions: "4.5.11 | 4.5.12 | 6.0.8 | 6.0.9 | 8.0.3 | 8.0.4 | 9.0.1 | 9.0.2 | 10.0.3 | 10.0.4 | 11.0.2 | 11.0.3 | 12.0.3 | 12.0.4",
+        link: "./dotnet/",
+      },
+      {
+        name: "NHibernate",
+        versions: "4.1.2.4001",
+        link: "./dotnet/",
+      },
+      {
+        name: "Refit",
+        versions: "6.3.2",
+        link: "./dotnet/",
+      },
+      {
+        name: "RestSharp",
+        versions: "108.0.3 | 110.2.0 | 111.4.1",
         link: "./dotnet/",
       },
       {

@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for Mongoose from TuxCare provides security fixe
 
 ## Supported Mongoose Versions
 
-* Mongoose 5.13.23
+* Mongoose 5.13.23, 6.12.2, 7.8.8
 
 ## Connection to ELS for Mongoose Library
 
@@ -49,14 +49,48 @@ TuxCare provides ELS for Mongoose as an NPM package, hosted on a secure internal
 
      Manually update your `package.json` file by replacing your Mongoose dependencies with the TuxCare packages. This method gives you full control over which packages to update.
 
-     ```text
-     "dependencies": {
-       "mongoose": "npm:@els-js/mongoose@>=5.13.23-tuxcare.1"
-     },
-     "overrides": {
-       "mongoose@5.13.23": "npm:@els-js/mongoose@>=5.13.23-tuxcare.1"
-     }
-     ```
+     <TableTabs label="Choose Mongoose version: " >
+
+      <template #Mongoose_5.13.23>
+
+      ```text
+      "dependencies": {
+        "mongoose": "npm:@els-js/mongoose@>=5.13.23-tuxcare.1"
+      },
+      "overrides": {
+        "mongoose@5.13.23": "npm:@els-js/mongoose@>=5.13.23-tuxcare.1"
+      }
+      ```
+
+      </template>
+
+      <template #Mongoose_6.12.2>
+
+      ```text
+      "dependencies": {
+        "mongoose": "npm:@els-js/mongoose@>=6.12.2-tuxcare.1"
+      },
+      "overrides": {
+        "mongoose@6.12.2": "npm:@els-js/mongoose@>=6.12.2-tuxcare.1"
+      }
+      ```
+
+      </template>
+
+      <template #Mongoose_7.8.8>
+
+      ```text
+      "dependencies": {
+        "mongoose": "npm:@els-js/mongoose@>=7.8.8-tuxcare.1"
+      },
+      "overrides": {
+        "mongoose@7.8.8": "npm:@els-js/mongoose@>=7.8.8-tuxcare.1"
+      }
+      ```
+
+      </template>
+
+     </TableTabs>
 
    * **Option 2: TuxCare Patcher (Automated)**
 
@@ -129,9 +163,34 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 
 Fixes for the following vulnerabilities are available in ELS for Mongoose from TuxCare versions:
 
-|     CVE ID     | CVE Type | Severity | Affected Libraries |            Vulnerable Versions            |
-|:--------------:| :------: |:--------:|:------------------:|:-----------------------------------------:|
-| CVE-2025-23061 | Direct   | Critical |      mongoose      |          < 8.9.5          |
-| CVE-2024-53900 | Direct   | Critical |      mongoose      | < 6.13.5, ≥ 7.0.1 < 7.8.3, ≥ 8.0.1 < 8.8.3 |
+<TableTabs label="Choose Mongoose version: " >
+
+  <template #Mongoose_5.13.23>
+
+| CVE ID         | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
+| :------------: | :------: |:--------:|:------------------:|:-------------------:|
+| CVE-2025-23061 | Direct   | Critical | mongoose           | < 8.9.5            |
+| CVE-2024-53900 | Direct   | Critical | mongoose           | < 6.13.5, ≥ 7.0.1 < 7.8.3, ≥ 8.0.1 < 8.8.3 |
+
+  </template>
+
+  <template #Mongoose_6.12.2>
+
+| CVE ID         | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
+| :------------: | :------: |:--------:|:------------------:|:-------------------:|
+| CVE-2025-23061 | Direct   | Critical | mongoose           | < 8.9.5            |
+| CVE-2024-53900 | Direct   | Critical | mongoose           | < 6.13.5, ≥ 7.0.1 < 7.8.3, ≥ 8.0.1 < 8.8.3 |
+
+  </template>
+
+  <template #Mongoose_7.8.8>
+
+| CVE ID         | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
+| :------------: | :------: |:--------:|:------------------:|:-------------------:|
+| CVE-2025-23061 | Direct   | Critical | mongoose           | < 8.9.5            |
+
+  </template>
+
+</TableTabs>
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).

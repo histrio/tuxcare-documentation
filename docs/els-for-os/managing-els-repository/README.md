@@ -10,7 +10,7 @@ After the ELS repository is installed, you can apply security updates using your
 
 <template #RPM-based_(YUM)>
 
-**Applies to:** CentOS 6, CentOS 7, CentOS 8, CentOS Stream 8, Oracle Linux 6, Oracle Linux 7, Red Hat Enterprise Linux 7, Red Hat Enterprise Linux 8
+**Applies to:** Amazon Linux 2, CentOS 6, CentOS 7, CentOS 8, CentOS Stream 8, Oracle Linux 6, Oracle Linux 7, Red Hat Enterprise Linux 7, Red Hat Enterprise Linux 8
 
 Update all packages:
 
@@ -54,7 +54,7 @@ apk update && apk upgrade
 
 For several platforms, TuxCare delivers security updates through staged rollout repositories. This process may take up to 14 additional days after a patch is published to stable repositories.
 
-If you need to apply a fix immediately without waiting for the rollout to complete, you can use the bypass repository. The necessary instructions are always provided on the [release information page](https://cve.tuxcare.com/els/releases).
+If you need to apply a fix immediately without waiting for the rollout to complete, you can use the bypass repository. The necessary instructions are always provided on the [release information page](https://tuxcare.com/cve-tracker/fixes/).
 
 For example (packages in the 3rd rollout slot):
 
@@ -75,12 +75,12 @@ To obtain access to the local mirroring facility, provide your external IP addre
 
 <template #RPM-based_(YUM)>
 
-**Applies to:** CentOS 6, CentOS 7, CentOS 8, CentOS Stream 8, Oracle Linux 6, Oracle Linux 7, Red Hat Enterprise Linux 7, Red Hat Enterprise Linux 8
+**Applies to:** Amazon Linux 2, CentOS 6, CentOS 7, CentOS 8, CentOS Stream 8, Oracle Linux 6, Oracle Linux 7, Red Hat Enterprise Linux 7, Red Hat Enterprise Linux 8
 
-**For Red Hat Enterprise Linux 8**, the repository can be removed by running the installation script with the `--delete` flag:
+**For Amazon Linux 2 and Red Hat Enterprise Linux 8**, the repository can be removed by running the installation script with the `--delete` flag. For example:
 
 ```
-sh install-rhel8-els-repo.sh --delete
+sh install-amazonlinux2-els-repo.sh --delete
 ```
 
 **For other RPM-based systems:**

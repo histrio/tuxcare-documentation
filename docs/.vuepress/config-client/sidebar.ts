@@ -31,6 +31,10 @@ export default {
             children: [
                 "/els-for-os/",
                 {
+                    path: '/els-for-os/amazon-linux-2-els/',
+                    icon: '/images/amazon-linux.webp',
+                },
+                {
                     path: '/els-for-os/alpine-linux-3-18-els/',
                     icon: '/images/alpine-linux.webp',
                 },
@@ -259,6 +263,14 @@ export default {
                 {
                     path: '/els-for-libraries/cakephp/',
                     icon: '/images/cakephp.webp',
+                },
+                {
+                    path: '/els-for-libraries/craftcms/',
+                    icon: '/images/craftcms.webp',
+                },
+                {
+                    path: '/els-for-libraries/craftcms-feed-me/',
+                    icon: '/images/feed-me.webp',
                 },
                 {
                     path: '/els-for-libraries/firebase-php-jwt/',
@@ -499,6 +511,11 @@ export default {
                     icon: '/images/maven.webp',
                 },
                 "/els-for-applications/managing-els-repository/",
+                {
+                    path: '/els-for-applications/mysql-and-percona-server/',
+                    title: 'MySQL and Percona Server',
+                    icon: '/images/mysql.webp',
+                },
             ]
         },
     ],

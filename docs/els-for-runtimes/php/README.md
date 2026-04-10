@@ -36,7 +36,7 @@ alt-php provides a more flexible and convenient environment for working with dif
 | Debian                                                                   | DEB          | 10, 11, 12, 13                    |
 | Windows                                                                  | -            | Windows Server 2019, 2022, 2025   |
 
-**For supported PHP versions, see [cve.tuxcare.com](https://cve.tuxcare.com/els-alt-php/projects).**
+**For supported PHP versions, see [tuxcare.com/cve-tracker](https://tuxcare.com/cve-tracker/).**
 
 **Supported architecture:** x86_64 (64-bit) on Linux
 

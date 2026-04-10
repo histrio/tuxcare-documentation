@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for node-fetch from TuxCare provides security fi
 
 ## Supported node-fetch Versions
 
-* node-fetch 1.7.3, 2.6.1 
+* node-fetch 1.6.3, 1.7.3, 2.6.1
 
 ## Connection to ELS for node-fetch Library
 
@@ -50,6 +50,19 @@ TuxCare provides ELS for node-fetch as an NPM package, hosted on a secure intern
      Manually update your `package.json` file by replacing your node-fetch dependencies with the TuxCare packages. This method gives you full control over which packages to update.
 
      <TableTabs label="Choose node-fetch version: " >
+
+     <template #node-fetch_1.6.3>
+
+      ```text
+      "dependencies": {
+        "node-fetch": "npm:@els-js/node-fetch@>=1.6.3-tuxcare.1"
+      },
+      "overrides": {
+        "node-fetch@1.6.3": "npm:@els-js/node-fetch@>=1.6.3-tuxcare.1"
+      }
+      ```
+
+      </template>
 
      <template #node-fetch_1.7.3>
 
@@ -145,6 +158,14 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 Fixes for the following vulnerabilities are available in ELS for node-fetch from TuxCare versions:
 
 <TableTabs label="Choose node-fetch version: " >
+
+<template #node-fetch_1.6.3>
+
+| CVE ID         | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
+| :------------: | :------: |:--------:|:------------------:| :----------------: |
+| CVE-2022-0235  | Direct   | High     | node-fetch         | < 2.6.7, >= 3.0.0 < 3.1.1 |
+
+  </template>
 
 <template #node-fetch_1.7.3>
 

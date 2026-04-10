@@ -96,9 +96,9 @@ Fixes for the following vulnerabilities are available in ELS for Flask from TuxC
 
 | CVE ID           | Severity | Library | Vulnerable Versions | Safe Version         |
 | :--------------: | :------: | :-----: | :-----------------: | :------------------: |
-| CVE-2023-30861   | High     | flask   | 1.1.2               | 1.1.2.post1+tuxcare  |
-| CVE-2023-30861   | High     | flask   | 1.1.4               | 1.1.4.post1+tuxcare  |
-| CVE-2023-30861   | High     | flask   | 2.2.1               | 2.2.1.post1+tuxcare  |
-| CVE-2019-1010083 | High     | flask   | 0.12.5              | 0.12.5.post1+tuxcare |
+| CVE-2023-30861   | High     | flask   | < 2.2.5             | 1.1.2.post1+tuxcare  |
+| CVE-2023-30861   | High     | flask   | < 2.2.5             | 1.1.4.post1+tuxcare  |
+| CVE-2023-30861   | High     | flask   | < 2.2.5             | 2.2.1.post1+tuxcare  |
+| CVE-2019-1010083 | High     | flask   | < 1.0               | 0.12.5.post1+tuxcare |
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).

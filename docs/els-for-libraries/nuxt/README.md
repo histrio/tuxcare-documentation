@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for Nuxt from TuxCare provides security fixes fo
 
 ## Supported Nuxt Versions
 
-* Nuxt 2.18.1, 3.2.0
+* Nuxt 0.10.7, 2.18.1
 
 ## Connection to ELS for Nuxt Library
 
@@ -47,17 +47,6 @@ TuxCare provides ELS for Nuxt as an NPM package, hosted on a secure internal reg
 
    <TableTabs label="Choose Nuxt version: " >
 
-    <template #nuxt_3.2.0>
-
-    ```text
-    "overrides": {
-      "lodash.pick@4.4.0": "npm:@els-js/lodash.pick@>=4.4.0-tuxcare.1",
-      "lodash.template@4.5.0": "npm:@els-js/lodash.template@>=4.5.0-tuxcare.1"
-    }
-    ```
-
-    </template>
-
     <template #nuxt_2.18.1>
 
     ```text
@@ -73,6 +62,29 @@ TuxCare provides ELS for Nuxt as an NPM package, hosted on a secure internal reg
       "tmp@0.0.33": "npm:@els-js/tmp@>=0.0.33-tuxcare.1",
       "vue@2.7.16": "npm:@els-js/vue@>=2.7.16-tuxcare.1",
       "vue-template-compiler@2.7.16": "npm:@els-js/vue-template-compiler@>=2.7.16-tuxcare.1"
+    }
+    ```
+
+    </template>
+
+    <template #nuxt_0.10.7>
+
+    ```text
+    "overrides": {
+      "ajv@4.11.8": "npm:@els-js/ajv@>=4.11.8-tuxcare.1",
+      "ajv@6.14.0": "npm:@els-js/ajv@>=6.14.0-tuxcare.1",
+      "color-string@0.3.0": "npm:@els-js/color-string@>=0.3.0-tuxcare.1",
+      "deep-extend@0.4.2": "npm:@els-js/deep-extend@>=0.4.2-tuxcare.1",
+      "is-svg@2.1.0": "npm:@els-js/is-svg@>=2.1.0-tuxcare.1",
+      "js-yaml@3.7.0": "npm:@els-js/js-yaml@>=3.7.0-tuxcare.1",
+      "mime@1.3.0": "npm:@els-js/mime@>=1.3.0-tuxcare.1",
+      "postcss@5.2.18": "npm:@els-js/postcss@>=5.2.18-tuxcare.1",
+      "serialize-javascript@1.9.1": "npm:@els-js/serialize-javascript@>=1.9.1-tuxcare.1",
+      "ssri@5.3.0": "npm:@els-js/ssri@>=5.3.0-tuxcare.1",
+      "webpack-dev-middleware@1.12.2": "npm:@els-js/webpack-dev-middleware@>=1.12.2-tuxcare.1",
+      "webpack-dev-middleware@2.0.6": "npm:@els-js/webpack-dev-middleware@>=2.0.6-tuxcare.1",
+      "ws@4.1.0": "npm:@els-js/ws@>=4.1.0-tuxcare.1",
+      "yargs-parser@4.2.1": "npm:@els-js/yargs-parser@>=4.2.1-tuxcare.1"
     }
     ```
 
@@ -125,19 +137,11 @@ Fixes for the following vulnerabilities are available in ELS for Nuxt from TuxCa
 
 <TableTabs label="Choose Nuxt version: " >
 
-<template #nuxt_3.2.0>
-
-|    CVE ID     | CVE Type  | Severity | Affected Libraries | Vulnerable Versions |
-|:-------------:|:---------:|:--------:|:------------------:|:-------------------:|
-| CVE-2020-8203 | Transitive | High     | lodash.pick        | >= 4.0.0 <= 4.4.0   |
-| CVE-2021-23337 | Transitive | High     | lodash.template    | <= 4.5.0            |
-
-</template>
-
 <template #nuxt_2.18.1>
 
 |    CVE ID     | CVE Type  | Severity | Affected Libraries | Vulnerable Versions |
 |:-------------:|:---------:|:--------:|:------------------:|:-------------------:|
+| CVE-2024-34343 | Direct | Medium   | nuxt               |       < 3.12.4      |
 | CVE-2024-4068 | Transitive | High     | braces             |       < 3.0.3       |
 | CVE-2024-47764 | Transitive | Medium   | cookie             |       < 0.7.0       |
 | CVE-2025-57820 | Transitive | High     | devalue            |       < 5.3.2       |
@@ -151,7 +155,35 @@ Fixes for the following vulnerabilities are available in ELS for Nuxt from TuxCa
 
 </template>
 
+<template #nuxt_0.10.7>
+
+|    CVE ID     | CVE Type  | Severity | Affected Libraries | Vulnerable Versions |
+|:-------------:|:---------:|:--------:|:------------------:|:-------------------:|
+| CVE-2020-7608 | Transitive | Medium   | yargs-parser | < 5.0.1, >= 6.0.0 < 13.1.2, >= 14.0.0 < 15.0.1 |
+| CVE-2024-37890 | Transitive | High     | ws | < 5.2.4, >= 6.0.0 < 6.2.3, >= 7.0.0 < 7.5.10, >= 8.0.0 < 8.17.1 |
+| CVE-2024-29180 | Transitive | High     | webpack-dev-middleware | < 5.3.4, >= 6.0.0 < 6.1.2, >= 7.0.0 < 7.1.0 |
+| CVE-2019-16769 | Transitive | Medium   | serialize-javascript | < 2.1.1 |
+| CVE-2020-7660 | Transitive | High     | serialize-javascript | < 3.1.0 |
+| GHSA-5c6j-r48x-rmvq | Transitive | High     | serialize-javascript | <= 7.0.2 |
+| CVE-2021-23382 | Transitive | Medium   | postcss | < 7.0.36, >= 8.0.0 < 8.2.13 |
+| CVE-2023-44270 | Transitive | Medium   | postcss | < 8.4.31 |
+| CVE-2017-16138 | Transitive | High     | mime | < 1.4.1, >= 2.0.1 < 2.0.3 |
+| GHSA-2pr6-76vf-7546 | Transitive | Medium   | js-yaml | < 3.13.0 |
+| GHSA-8j8c-7jfh-h6hx | Transitive | High     | js-yaml | < 3.13.1 |
+| CVE-2025-64718 | Transitive | Medium   | js-yaml | < 3.14.2, >= 4.0.0 < 4.1.1 |
+| CVE-2021-29059 | Transitive | High     | is-svg | >= 2.1.0 < 4.3.0 |
+| CVE-2021-28092 | Transitive | High     | is-svg | >= 2.1.0 <= 4.2.1 |
+| CVE-2018-3750 | Transitive | Critical | deep-extend | <= 0.5.0 |
+| CVE-2021-29060 | Transitive | Medium   | color-string | < 1.5.5 |
+| CVE-2020-15366 | Transitive | Medium   | ajv 4.11.8 | < 6.12.3 |
+| CVE-2025-69873 | Transitive | Low      | ajv 4.11.8 | < 8.18.0 |
+| CVE-2020-15366 | Transitive | Medium   | ajv 6.14.0 | < 6.12.3 |
+| CVE-2025-69873 | Transitive | Low      | ajv 6.14.0 | < 6.14.0 |
+| CVE-2024-37890 | Transitive | High     | webpack-dev-middleware | < 5.2.4, >= 6.0.0 < 6.2.3, >= 7.0.0 < 7.5.10, >= 8.0.0 < 8.17.1 |
+| CVE-2021-27290 | Transitive | High     | ssri | >= 5.2.2 < 6.0.2, >= 7.0.0 < 8.0.1 |
+
+</template>
+
 </TableTabs>
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
-
