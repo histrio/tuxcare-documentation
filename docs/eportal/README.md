@@ -1022,6 +1022,8 @@ You can see servers belonging to the key by clicking on the key itself in the [M
 
 The screen shows servers registered under the key, their IP, hostname, effective kernel as well as the time of registration and last check in.
 
+The **Check-in** / **last check in** time is when the agent last completed a successful check-in to ePortal. With automatic updates enabled, that happens on the **same schedule** as the client’s periodic patch check (by default every four hours)—it is not a separate “heartbeat.” See [KernelCare Enterprise client config file](#kernelcare-enterprise-client-config-file) and [Config options](/live-patching-services/#config-options) for `AUTO_UPDATE` and related settings.
+
 To view the list of all servers IDs that are connected to the particular key, do the following:
 
 * In the UI go to the page with the list of keys. Then click the particular
@@ -1536,7 +1538,7 @@ PATCH_SERVER=http://10.1.10.115/
 REGISTRATION_URL=http://10.1.10.115/admin/api/kcare
 ```
 
-If `AUTO_UPDATE` set to `True`, KernelCare client will check in every 4 hours, and try to download and apply latest patchsets
+If `AUTO_UPDATE` is set to `True`, the client runs every 4 hours. Each run **checks in** to ePortal (this updates **Check-in** / **last check in** in the admin UI) and tries to download and apply the latest patchsets—so check-in frequency is the same as the automatic “look for updates” cadence, not an extra timer.
 
 `PATCH_SERVER` - server from which patchsets will be downloaded
 
