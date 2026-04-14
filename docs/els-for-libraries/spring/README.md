@@ -37,10 +37,10 @@ ELS for Spring® also patches transitive dependencies at no extra cost, includin
 
 | Module | Version |
 |---|---|
-| spring-core | 3.1.1.RELEASE, 4.0.0.RELEASE, 4.1.7.RELEASE, 4.3.30.RELEASE, 5.2.0.RELEASE, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.39, 6.0.16, 6.0.23, 6.1.20, 6.1.21 |
+| spring-core | 3.1.1.RELEASE, 4.0.0.RELEASE, 4.1.7.RELEASE, 4.3.30.RELEASE, 5.2.0.RELEASE, 5.2.13.RELEASE, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.37, 5.3.39, 6.0.16, 6.0.23, 6.1.20, 6.1.21 |
 | spring-jcl | 5.2.0.RELEASE, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.39, 6.0.16, 6.0.23, 6.1.20, 6.1.21 |
-| spring-context | 3.1.1.RELEASE, 4.0.0.RELEASE, 4.3.30.RELEASE, 5.2.0.RELEASE, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.39, 6.0.16, 6.0.23, 6.1.20, 6.1.21 |
-| spring-beans | 3.1.1.RELEASE, 4.0.0.RELEASE, 4.1.7.RELEASE, 4.3.30.RELEASE, 5.2.0.RELEASE, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.39, 6.0.16, 6.0.23, 6.1.20, 6.1.21 |
+| spring-context | 3.1.1.RELEASE, 4.0.0.RELEASE, 4.3.30.RELEASE, 5.2.0.RELEASE, 5.2.13.RELEASE, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.37, 5.3.39, 6.0.16, 6.0.23, 6.1.20, 6.1.21 |
+| spring-beans | 3.1.1.RELEASE, 4.0.0.RELEASE, 4.1.7.RELEASE, 4.3.30.RELEASE, 5.2.0.RELEASE, 5.2.13.RELEASE, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.37, 5.3.39, 6.0.16, 6.0.23, 6.1.20, 6.1.21 |
 | spring-expression | 3.1.1.RELEASE, 4.0.0.RELEASE, 4.3.30.RELEASE, 5.2.0.RELEASE, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.39, 6.0.16, 6.0.23, 6.1.20, 6.1.21 |
 | spring-jms | 4.3.30.RELEASE, 5.2.0.RELEASE, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.39, 6.0.16, 6.0.23, 6.1.20, 6.1.21 |
 | spring-messaging | 4.0.0.RELEASE, 4.3.30.RELEASE, 5.2.0.RELEASE, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.39, 6.0.16, 6.0.23, 6.1.20, 6.1.21 |
@@ -51,7 +51,7 @@ ELS for Spring® also patches transitive dependencies at no extra cost, includin
 | spring-aspects | 4.3.30.RELEASE, 5.2.0.RELEASE, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.39, 6.0.16, 6.0.23, 6.1.20, 6.1.21 |
 | spring-r2dbc | 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.39, 6.0.16, 6.0.23, 6.1.20, 6.1.21 |
 | spring-jdbc | 4.3.30.RELEASE, 5.2.0.RELEASE, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.39, 6.0.16, 6.0.23, 6.1.20, 6.1.21 |
-| spring-web | 3.1.1.RELEASE, 4.0.0.RELEASE, 4.3.30.RELEASE, 5.2.0.RELEASE, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.39, 6.0.16, 6.0.23, 6.1.20, 6.1.21 |
+| spring-web | 3.1.1.RELEASE, 4.0.0.RELEASE, 4.3.30.RELEASE, 5.2.0.RELEASE, 5.2.13.RELEASE, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.37, 5.3.39, 6.0.16, 6.0.23, 6.1.20, 6.1.21 |
 | spring-webmvc | 3.1.1.RELEASE, 4.0.0.RELEASE, 4.3.30.RELEASE, 5.2.0.RELEASE, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.39, 6.0.16, 6.0.23, 6.1.20, 6.1.21 |
 | spring-oxm | 4.3.30.RELEASE, 5.2.0.RELEASE, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.39, 6.0.16, 6.0.23, 6.1.20, 6.1.21 |
 | spring-webflux | 5.2.0.RELEASE, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.39, 6.0.16, 6.0.23, 6.1.20, 6.1.21 |
