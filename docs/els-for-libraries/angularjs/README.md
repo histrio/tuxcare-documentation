@@ -157,6 +157,16 @@ VEX is a machine-readable format that tells you if a known vulnerability is actu
 
 TuxCare provides VEX for AngularJS ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_javascript/angular/](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/angular/).
 
+## Software Bill of Materials (SBOM)
+
+For each published ELS package and version, TuxCare generates SBOM files. Those artifacts are published to TuxCare Nexus.
+
+You can browse SBOM files for AngularJS here:
+
+[https://nexus.repo.tuxcare.com/#browse/browse:els-js-sbom:angularjs](https://nexus.repo.tuxcare.com/#browse/browse:els-js-sbom:angularjs)
+
+Use the credentials you received for TuxCare ELS ([Step 1: Get Token](#step-1:-get-token)) to access Nexus.
+
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
 If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), remove node_modules, clear the npm cache to avoid conflicts, and then run the installation command:
