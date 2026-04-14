@@ -1354,7 +1354,7 @@ const techData = [
       },
       {
         name: "MLflow",
-        versions: "2.22.4",
+        versions: "2.9.1 | 2.22.4",
         link: "./python-libraries/",
       },
       {
