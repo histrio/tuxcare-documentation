@@ -135,6 +135,16 @@ TuxCare provides VEX data for Vue packages:
 * [vue](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/vue/)
 * [vue-template-compiler](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/vue-template-compiler/)
 
+## Software Bill of Materials (SBOM)
+
+For each published ELS package and version, TuxCare generates SBOM files. Those artifacts are published to TuxCare Nexus.
+
+You can browse SBOM files for Vue here:
+
+[https://nexus.repo.tuxcare.com/#browse/browse:els-js-sbom:vue](https://nexus.repo.tuxcare.com/#browse/browse:els-js-sbom:vue)
+
+Use the credentials you received for TuxCare ELS ([Step 1: Get Token](#step-1:-get-token)) to access Nexus.
+
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
 If you already use TuxCare-patched Vue packages and need to upgrade, clear local dependencies and reinstall (the `>=` range will resolve to the latest available TuxCare build):
