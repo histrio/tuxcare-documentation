@@ -18,7 +18,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **idna** 2.1, 2.8, 2.10, 3.6
 * **jaraco-context** 5.3.0
 * **Jinja2** 2.11.3, 3.0.3
-* **MLflow** 2.22.4
+* **MLflow** 2.9.1, 2.22.4
 * **MySQL Connector/Python** 8.4.0
 * **orjson** 3.8.5
 * **pandas** 2.2.0, 2.2.2
@@ -315,13 +315,29 @@ Fixes for the following vulnerabilities are available in ELS for Python Librarie
 
   <template #mlflow>
 
-| CVE ID        | Severity | Vulnerable Versions | Safe Version          |
-| :-----------: | :------: | :-----------------: | :-------------------: |
-| CVE-2024-6838 | Medium   | 2.22.4              | 2.22.4.post1+tuxcare  |
-| CVE-2024-156  | Medium   | 2.22.4              | 2.22.4.post1+tuxcare  |
-| CVE-2025-0453 | High     | 2.22.4              | 2.22.4.post1+tuxcare  |
-| CVE-2025-14279| High     | 2.22.4              | 2.22.4.post1+tuxcare  |
-
+| CVE ID         | Severity | Vulnerable Versions | Safe Version           |
+| :------------: | :------: | :-----------------: | :--------------------: |
+| CVE-2026-2635  | Critical | 2.22.4              | 2.22.4.post2+tuxcare   |
+| CVE-2026-2033  | High     | 2.22.4              | 2.22.4.post2+tuxcare   |
+| CVE-2025-15031 | Critical | 2.22.4              | 2.22.4.post2+tuxcare   |
+| CVE-2025-14287 | High     | 2.22.4              | 2.22.4.post2+tuxcare   |
+| CVE-2025-14279 | High     | 2.22.4              | 2.22.4.post1+tuxcare   |
+| CVE-2025-0453  | High     | 2.22.4              | 2.22.4.post1+tuxcare   |
+| CVE-2024-6838  | Medium   | 2.22.4              | 2.22.4.post1+tuxcare   |
+| CVE-2024-156   | Medium   | 2.22.4              | 2.22.4.post1+tuxcare   |
+| CVE-2024-27132 | Critical | <= 2.9.2            | 2.9.1.post2+tuxcare    |
+| CVE-2024-27133 | Critical | <= 2.9.2            | 2.9.1.post2+tuxcare    |
+| CVE-2024-3573  | Critical | < 2.10.0            | 2.9.1.post2+tuxcare    |
+| CVE-2023-6974  | Critical | < 2.9.2             | 2.9.1.post2+tuxcare    |
+| CVE-2023-6975  | Critical | < 2.9.2             | 2.9.1.post2+tuxcare    |
+| CVE-2024-37056 | High     | >= 1.23.0           | 2.9.1.post2+tuxcare    |
+| CVE-2024-27134 | High     | < 2.16.0            | 2.9.1.post2+tuxcare    |
+| CVE-2023-6709  | High     | < 2.9.2             | 2.9.1.post2+tuxcare    |
+| CVE-2023-6753  | High     | < 2.9.2             | 2.9.1.post2+tuxcare    |
+| CVE-2023-6909  | High     | < 2.9.2             | 2.9.1.post2+tuxcare    |
+| CVE-2024-1593  | High     | < 2.11.3            | 2.9.1.post2+tuxcare    |
+| CVE-2024-2928  | High     | < 2.11.3            | 2.9.1.post2+tuxcare    |
+| CVE-2025-52967 | Medium   | < 3.1.0             | 2.9.1.post2+tuxcare    |
 
   </template>
 
