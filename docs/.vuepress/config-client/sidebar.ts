@@ -430,6 +430,10 @@ export default {
                     icon: '/images/requirejs-logo.webp',
                 },
                 {
+                    path: '/els-for-libraries/svelte/',
+                    icon: '/images/svelte-logo.webp',
+                },
+                {
                     path: '/els-for-libraries/tailwindcss/',
                     icon: '/images/tailwindcss-logo.webp',
                 },
