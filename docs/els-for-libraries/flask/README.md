@@ -96,7 +96,7 @@ For each published ELS package and version, TuxCare generates SBOM files. Those 
 
 You can browse SBOM files for this package in the `els_python_sbom` repository:
 
-[https://nexus.repo.tuxcare.com/#browse/browse:els_python_sbom:flask](https://nexus.repo.tuxcare.com/#browse/browse:els_python_sbom:flask)
+[nexus.repo.tuxcare.com/#browse/browse:els_python_sbom:flask](https://nexus.repo.tuxcare.com/#browse/browse:els_python_sbom:flask)
 
 Use the credentials you received for TuxCare ELS ([Step 1: Get user credentials](#step-1:-get-user-credentials)) to access Nexus.
 
