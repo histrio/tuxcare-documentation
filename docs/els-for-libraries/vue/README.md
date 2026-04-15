@@ -35,8 +35,8 @@ TuxCare provides ELS for Vue as npm packages, hosted on a secure internal regist
 
    ```text
    registry=https://registry.npmjs.org/
-   @els-vue:registry=https://nexus.repo.tuxcare.com/repository/els-vue/
-   //nexus.repo.tuxcare.com/repository/els-vue/:_auth=${TOKEN}
+   @els-vue:registry=https://nexus.repo.tuxcare.com/repository/els_vue/
+   //nexus.repo.tuxcare.com/repository/els_vue/:_auth=${TOKEN}
    ```
 
    :::warning
@@ -121,7 +121,7 @@ TuxCare provides ELS for Vue as npm packages, hosted on a secure internal regist
 1. Confirm package resolution:
 
    ```text
-   npm list <package-name>
+   npm list
    ```
 
 2. Run your application and verify that dependency resolution works through the TuxCare repository.
