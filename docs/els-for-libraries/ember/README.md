@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for Ember.js from TuxCare provides security fixe
 
 ## Supported Ember.js Versions
 
-* Ember.js 0.2.7, 2.18.2, 3.28.6
+* Ember.js 0.2.7, 2.18.2, 3.28.6, 4.12.13
 
 ## Connection to ELS for Ember.js Library
 
@@ -242,6 +242,52 @@ TuxCare publishes patched **transitive** dependencies for supported Ember.js ver
 
     </template>
 
+    <template #ember_4.12.13>
+
+    * **Option 1: Manual update**
+
+      ```text
+      "dependencies": {
+        "@babel/runtime": "npm:@els-js/babel-runtime@>=7.12.18-tuxcare.1",
+        "tmp": "npm:@els-js/tmp@>=0.0.28-tuxcare.1"
+      },
+      "overrides": {
+        "@babel/runtime@7.12.18": "npm:@els-js/babel-runtime@>=7.12.18-tuxcare.1",
+        "tmp@0.0.28": "npm:@els-js/tmp@>=0.0.28-tuxcare.1"
+      }
+      ```
+
+    * **Option 2: TuxCare Patcher (Automated)**
+
+      ```text
+      npm install -g @els-js/tuxcare-patcher --userconfig ./.npmrc
+      tuxcare-patch-js
+      ```
+
+      The patcher will update your `package.json`, for example, from:
+
+      ```text
+      "dependencies": {
+        "@babel/runtime": "7.12.18",
+        "tmp": "0.0.28"
+      }
+      ```
+
+      to:
+
+      ```text
+      "dependencies": {
+        "@babel/runtime": "npm:@els-js/babel-runtime@>=7.12.18-tuxcare.1",
+        "tmp": "npm:@els-js/tmp@>=0.0.28-tuxcare.1"
+      },
+      "overrides": {
+        "@babel/runtime@7.12.18": "npm:@els-js/babel-runtime@>=7.12.18-tuxcare.1",
+        "tmp@0.0.28": "npm:@els-js/tmp@>=0.0.28-tuxcare.1"
+      }
+      ```
+
+    </template>
+
    </TableTabs>
 
 5. You need to remove the `node_modules` directory and the `package-lock.json` file, and also clear the `npm cache` before installing the patched packages. Use the following commands:
@@ -387,6 +433,15 @@ Fixes for the following **transitive** vulnerabilities are available in ELS for 
 | CVE-2026-27606 | Transitive | Critical | rollup | < 2.80.0, >= 3.0.0 < 3.30.0, >= 4.0.0 < 4.59.0 |
 | CVE-2026-2327 | Transitive | High | markdown-it | >= 13.0.0 < 14.1.1 |
 | CVE-2026-24001 | Transitive | High | diff | < 3.5.1, >= 4.0.0 < 4.0.4, >= 5.0.0 < 5.2.2, >= 6.0.0 < 8.0.3 |
+
+</template>
+
+<template #ember_4.12.13>
+
+| CVE ID | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
+| :------------: | :------: |:--------:|:------------------:| :----------------: |
+| CVE-2025-27789 | Transitive | Medium | @babel/runtime | < 7.26.10 |
+| CVE-2025-54798 | Transitive | Low | tmp | <= 0.2.3 |
 
 </template>
 

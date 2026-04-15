@@ -648,7 +648,7 @@ const techData = [
       },
       {
         name: "Ember.js",
-        versions: "0.2.7 | 2.18.2 | 3.28.6",
+        versions: "0.2.7 | 2.18.2 | 3.28.6 | 4.12.13",
         link: "./ember/",
       },
       {
@@ -1105,6 +1105,11 @@ const techData = [
         name: "stringstream",
         versions: "0.0.4 | 0.0.5",
         link: "./javascript-libraries/",
+      },
+      {
+        name: "Svelte",
+        versions: "0.3.0 | 1.64.1 | 2.16.1 | 3.59.2 | 4.2.20",
+        link: "./svelte/",
       },
       {
         name: "swiper",

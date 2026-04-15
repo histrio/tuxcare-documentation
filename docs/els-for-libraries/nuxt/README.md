@@ -169,6 +169,7 @@ Fixes for the following vulnerabilities are available in ELS for Nuxt from TuxCa
 
 |    CVE ID     | CVE Type  | Severity | Affected Libraries | Vulnerable Versions |
 |:-------------:|:---------:|:--------:|:------------------:|:-------------------:|
+| CVE-2024-34343 | Direct | Medium   | nuxt               |       < 3.12.4      |
 | CVE-2020-7608 | Transitive | Medium   | yargs-parser | < 5.0.1, >= 6.0.0 < 13.1.2, >= 14.0.0 < 15.0.1 |
 | CVE-2024-37890 | Transitive | High     | ws | < 5.2.4, >= 6.0.0 < 6.2.3, >= 7.0.0 < 7.5.10, >= 8.0.0 < 8.17.1 |
 | CVE-2024-29180 | Transitive | High     | webpack-dev-middleware | < 5.3.4, >= 6.0.0 < 6.1.2, >= 7.0.0 < 7.1.0 |
