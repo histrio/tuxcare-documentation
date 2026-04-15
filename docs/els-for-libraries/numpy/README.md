@@ -90,6 +90,16 @@ VEX is a machine-readable format that tells you if a known vulnerability is actu
 
 TuxCare provides VEX for NumPy ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_python/numpy/](https://security.tuxcare.com/vex/cyclonedx/els_lang_python/numpy/).
 
+## Software Bill of Materials (SBOM)
+
+For each published ELS package and version, TuxCare generates SBOM files. Those artifacts are published to TuxCare Nexus.
+
+You can browse SBOM files for this package in the `els_python_sbom` repository:
+
+[nexus.repo.tuxcare.com/#browse/browse:els_python_sbom:numpy](https://nexus.repo.tuxcare.com/#browse/browse:els_python_sbom:numpy)
+
+Use the credentials you received for TuxCare ELS ([Step 1: Get user credentials](#step-1:-get-user-credentials)) to access Nexus.
+
 ## Resolved CVEs
 
 Fixes for the following vulnerabilities are available in ELS for NumPy from TuxCare versions:
