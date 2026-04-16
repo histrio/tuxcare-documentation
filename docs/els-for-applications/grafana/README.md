@@ -94,12 +94,10 @@ This guide outlines the steps needed to install the TuxCare ELS build of Grafana
 
 </ELSSteps>
 
-## Resolved CVEs
+## What's next?
 
-Fixes for the following vulnerabilities are available in ELS for Grafana from TuxCare:
+<WhatsNext hide-title>
 
-|    CVE ID     | CVE Type | Severity | Affected Libraries |          Vulnerable Versions           |
-|:-------------:|:--------:|:--------:|:------------------:|:--------------------------------------:|
-| CVE-2025-4123 |  Direct  |  Medium  |      grafana       | 10.4.1, 11.2.0, 11.3.0, 11.4.0, 11.5.0 |
+* ![](/images/wrench.webp) [Managing the ELS repository](/els-for-applications/managing-els-repository/) — Update to newer versions
 
-If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+</WhatsNext>

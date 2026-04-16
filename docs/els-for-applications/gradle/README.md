@@ -69,17 +69,14 @@ TuxCare's ELS for Gradle provides security patches for Gradle versions that have
 
 </ELSSteps>
 
-## Resolved CVEs in ELS for Gradle
-
-<ClientOnly>
-  <ResolvedCveTable project="gradle" />
-</ClientOnly>
-
 ## What's next?
 
 <WhatsNext hide-title>
 
-* ![](/images/shield-alert.webp) [VEX](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/org.gradle/) — Vulnerability Exploitability eXchange
-* ![](/images/wrench.webp) [Managing the ELS repository](/els-for-applications/managing-els-repository/) — Source code and upgrades
+* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=Gradle) — Track vulnerability fixes and updates
+* ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=Gradle) — Patched versions and changelogs
+* ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/products?product=Gradle) — Full list of product parts covered by ELS
+* ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/org.gradle/) — Vulnerability Exploitability eXchange feed
+* ![](/images/wrench.webp) [Managing the ELS repository](/els-for-applications/managing-els-repository/) — Update to newer versions
 
 </WhatsNext>

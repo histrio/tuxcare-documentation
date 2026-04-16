@@ -1,79 +1,35 @@
 # Managing the ELS repository
 
-This page provides instructions for upgrading to newer TuxCare package versions and accessing source code for ELS-patched applications.
+This page provides instructions for upgrading to newer TuxCare-patched application versions.
 
 ## Upgrading to a newer TuxCare version
 
-To update to a newer TuxCare-patched release, follow the instructions for your application.
+<ELSSteps>
 
-<TableTabs label="Choose application: ">
+1. **Log in to the Nexus repository**
 
-<template #Apache_Hadoop>
+   Go to [nexus.repo.tuxcare.com](https://nexus.repo.tuxcare.com) using your credentials
 
-If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), update the version strings in your Maven or Gradle build file.
+2. **Download the new version**
 
-</template>
+   Find and download the updated TuxCare-patched package
 
-<template #Apache_Hive>
+3. **Install the update**
 
-If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), update the version strings in your Maven or Gradle build file.
+   Follow the [installation instructions](/els-for-applications/) for your application
 
-</template>
+4. **Verify and start using**
 
-<template #Apache_Tomcat>
+   Confirm the new version is installed correctly and resume normal operations
 
-To upgrade to a newer TuxCare release (e.g., from `tuxcare.1` to `tuxcare.3`):
+</ELSSteps>
 
-1. **Download and extract the new version**
-
-   Follow the [installation instructions](/els-for-applications/apache-tomcat/) with the new Apache Tomcat® archive
-
-2. **Start Apache Tomcat®**
-
-   Run the startup script
-
-</template>
-
-<template #Maven>
-
-To upgrade to a newer TuxCare release (e.g., from `tuxcare.1` to `tuxcare.2`), download and extract the new version of the Apache Maven archive from TuxCare using the [installation instructions](/els-for-applications/maven/).
-
-</template>
-
-<template #Gradle>
-
-To upgrade to a newer TuxCare release (e.g., from `tuxcare.1` to `tuxcare.2`), download and extract the new version of the Gradle archive from TuxCare using the [installation instructions](/els-for-applications/gradle/).
-
-</template>
-
-</TableTabs>
+If you encounter any issues, please contact [TuxCare support](https://tuxcare.com/support-portal/).
 
 ## Source code
 
-TuxCare provides source code for patched libraries as source JARs in the repository.
-
-<TableTabs label="Choose application: ">
-
-<template #Apache_Hadoop>
-
-Source code for TuxCare-patched Apache Hadoop libraries is available in the repository. Source JARs follow the standard Maven naming convention with a `-sources` classifier.
-
-For example: [hadoop-common-2.7.3.tuxcare.1-sources.jar](https://nexus.repo.tuxcare.com/repository/els_java/org/apache/hadoop/hadoop-common/2.7.3.tuxcare.1/hadoop-common-2.7.3.tuxcare.1-sources.jar)
+TuxCare provides source code for patched applications in the [Nexus repository](https://nexus.repo.tuxcare.com). Source archives and JARs follow the standard naming conventions with a `-sources` classifier or suffix.
 
 :::tip
-If a source JAR is not available for a specific package, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com) to report the issue.
+If a source archive is not available for a specific package, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 :::
-
-</template>
-
-<template #Apache_Hive>
-
-Source code for TuxCare-patched Apache Hive libraries is available in the repository. Source JARs follow the standard Maven naming convention with a `-sources` classifier.
-
-:::tip
-If a source JAR is not available for a specific package, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com) to report the issue.
-:::
-
-</template>
-
-</TableTabs>

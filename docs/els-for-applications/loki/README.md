@@ -94,4 +94,10 @@ This guide outlines the steps needed to install the TuxCare ELS build of Loki on
 
 </ELSSteps>
 
-If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+## What's next?
+
+<WhatsNext hide-title>
+
+* ![](/images/wrench.webp) [Managing the ELS repository](/els-for-applications/managing-els-repository/) — Update to newer versions
+
+</WhatsNext>

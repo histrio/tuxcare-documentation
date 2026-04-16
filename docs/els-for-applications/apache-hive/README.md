@@ -95,18 +95,16 @@ This guide outlines the steps needed to integrate the TuxCare ELS for Apache Hiv
 
 </ELSSteps>
 
-## Resolved CVEs in ELS for Apache Hive
-
-<ClientOnly>
-  <ResolvedCveTable project="apache-hive" />
-</ClientOnly>
-
 ## What's next?
 
 <WhatsNext hide-title>
 
-* ![](/images/shield-alert.webp) [VEX](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/org.apache.hive/) — Vulnerability Exploitability eXchange
-* ![](/images/wrench.webp) [Managing the ELS repository](/els-for-applications/managing-els-repository/) — Source code and upgrades
+* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=Apache+Hive) — Track vulnerability fixes and updates
+* ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=Apache+Hive) — Patched versions and changelogs
+* ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/products?product=Apache+Hive) — Full list of product parts covered by ELS
+* ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/org.apache.hive/) — Vulnerability Exploitability eXchange feed
+* ![](/images/unlock-alt.webp) [Source code](https://nexus.repo.tuxcare.com/repository/els_java/) — Nexus repository (credentials required)
+* ![](/images/wrench.webp) [Managing the ELS repository](/els-for-applications/managing-els-repository/) — Update to newer versions
 
 </WhatsNext>
 
