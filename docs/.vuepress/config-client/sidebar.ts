@@ -523,6 +523,7 @@ export default {
                     title: 'MySQL and Percona Server',
                     icon: '/images/mysql.webp',
                 },
+                "/els-for-applications/managing-els-repository/",
             ]
         },
     ],
