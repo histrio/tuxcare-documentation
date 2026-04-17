@@ -22,15 +22,23 @@ alt-ruby provides a more flexible and convenient environment for working with di
 
 ## Supported OS and Ruby versions
 
-| Operating Systems                                            | Package Type | OS Version                         | Ruby versions        |
-| :----------------------------------------------------------: | :----------: | :--------------------------------: | :------------------: |
-| EL 7 (CentOS, CloudLinux, Oracle Linux, etc.)                | RPM          | 7.x                                | 2.6, 2.7, 3.0, 3.1   |
-| EL 8 (AlmaLinux, CentOS, CentOS Stream, CloudLinux, Oracle Linux, etc.) | RPM | 8.x                     | 2.6, 2.7, 3.0, 3.1   |
-| EL 9 (AlmaLinux, CentOS, CloudLinux, Oracle Linux, etc.)     | RPM          | 9.x                                | 2.6, 2.7, 3.0, 3.1   |
-| EL 10 (AlmaLinux, CloudLinux, Oracle Linux, etc.)            | RPM          | 10.x                               | 2.6, 2.7, 3.0, 3.1   |
-| Ubuntu                                                       | DEB          | 16.04, 18.04, 20.04, 22.04, 24.04  | 2.6, 2.7, 3.0, 3.1   |
-| Debian                                                       | DEB          | 10, 11, 12, 13                     | 2.6, 2.7, 3.0, 3.1   |
-| Alpine Linux                                                 | APK          | 3.22                               | 2.7, 3.0, 3.1        |
+| Operating Systems                                                        | Package Type | OS Version | Ruby versions                                                             |
+| :----------------------------------------------------------------------: | :----------: | :--------: | :-----------------------------------------------------------------------: |
+| EL 6 (CentOS, CloudLinux, Oracle Linux, etc.)                            | RPM          | 6.x        | 1.8, 1.9, 2.0, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7                          |
+| EL 7 (CentOS, CloudLinux, Oracle Linux, etc.)                            | RPM          | 7.x        | 1.8, 1.9, 2.0, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 3.0, 3.1, 3.2           |
+| EL 8 (AlmaLinux, CentOS, CentOS Stream, CloudLinux, Oracle Linux, etc.)  | RPM          | 8.x        | 1.8, 1.9, 2.0, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 3.0, 3.1, 3.2, 3.3, 3.4 |
+| EL 9 (AlmaLinux, CentOS, CloudLinux, Oracle Linux, etc.)                 | RPM          | 9.x        | 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 3.0, 3.1, 3.2, 3.3, 3.4                     |
+| EL 10 (AlmaLinux, CloudLinux, Oracle Linux, etc.)                        | RPM          | 10.x       | 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 3.0, 3.1, 3.2, 3.3, 3.4, 4.0                |
+| Debian                                                                   | DEB          | 10         | 3.2, 3.3, 3.4, 4.0                                                        |
+| Debian                                                                   | DEB          | 11         | 2.7, 3.0, 3.1, 3.2, 3.3, 3.4, 4.0                                         |
+| Debian                                                                   | DEB          | 12         | 2.6, 2.7, 3.0, 3.1, 3.2, 3.3, 3.4, 4.0                                    |
+| Debian                                                                   | DEB          | 13         | 2.6, 2.7, 3.0, 3.1, 3.2, 3.3, 3.4, 4.0                                    |
+| Ubuntu                                                                   | DEB          | 16.04      | 3.2, 3.3, 3.4, 4.0                                                        |
+| Ubuntu                                                                   | DEB          | 18.04      | 3.2, 3.3, 3.4, 4.0                                                        |
+| Ubuntu                                                                   | DEB          | 20.04      | 3.2, 3.3, 3.4, 4.0                                                        |
+| Ubuntu                                                                   | DEB          | 22.04      | 2.7, 3.0, 3.1, 3.2, 3.3, 3.4, 4.0                                         |
+| Ubuntu                                                                   | DEB          | 24.04      | 2.7, 3.0, 3.1, 3.2, 3.3, 3.4, 4.0                                         |
+| Alpine Linux                                                             | APK          | 3.22       | 2.7, 3.0, 3.1                                                             |
 
 **Supported architectures:** x86_64 (64-bit); aarch64 on Alpine Linux
 
