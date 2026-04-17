@@ -1,0 +1,211 @@
+# Drupal
+
+Endless Lifecycle Support (ELS) for Drupal from TuxCare provides security fixes for Drupal core versions that have reached their end-of-life. This allows you to continue running your applications without vulnerability concerns, even after official support has ended.
+
+## Supported Versions and Components
+
+* **drupal/core** 9.5.x
+
+Other versions upon request.
+
+## Connection to ELS for Drupal Repository
+
+This guide outlines the steps needed to integrate the TuxCare ELS for Drupal repository into your application. The repository provides trusted Drupal packages that can be easily integrated into your **Composer** projects.
+
+### Step 1: Get user credentials
+
+You need a username and password in order to use TuxCare ELS for Drupal repository. Anonymous access is disabled. To receive the credentials, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+
+### Step 2: Configure Composer authentication
+
+1. Create or edit the `auth.json` file for the user running Composer:
+
+    * **Linux/macOS**: 
+
+        ```text
+        ~/.composer/auth.json
+        ```
+
+    * **Windows**: 
+
+        ```text
+        %APPDATA%\Composer\auth.json
+        ```
+
+2. Use either the Composer CLI or edit `auth.json` directly to add your credentials for `nexus.repo.tuxcare.com`.
+
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer config --global --auth http-basic.nexus.repo.tuxcare.com USERNAME PASSWORD` },
+     { title: 'auth.json', content: authjson }
+   ]" />
+
+   Replace `USERNAME` and `PASSWORD` with the credentials you received in [Step 1](#step-1-get-user-credentials).
+
+### Step 3: Register the TuxCare repository
+
+Add the `els_php` Composer repository either via CLI or by editing `composer.json`:
+
+  <CodeTabs :tabs="[
+    { title: 'Composer CLI', content: cli },
+    { title: 'composer.json', content: composerjson }
+  ]" />
+
+### Step 4: Install Drupal core
+
+Install the TuxCare-maintained Drupal core release that matches your project:
+
+<CodeTabs :tabs="[
+  { title: 'Composer CLI', content: `composer require drupal/core:9.5.11-p1+tuxcare` },
+  { title: 'composer.json', content: packagejson }
+]" />
+
+**Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
+
+If you edited `composer.json` manually, run `composer update` to install the package:
+
+```text
+composer update
+```
+
+Composer will resolve dependencies against the TuxCare repository and install the patched releases.
+
+### Composer Repository Configuration
+
+If you encounter dependency resolution errors like:
+
+`packages from higher priority repository do not match your constraint`
+
+it usually means your project requires a package version that is not yet available in the TuxCare repository.
+
+**Solution**: Update your `composer.json` to set the TuxCare repository as non-canonical:
+
+```
+{
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://nexus.repo.tuxcare.com/repository/els_php/",
+            "canonical": false
+        }
+    ]
+}
+```
+
+This allows Composer to fall back to Packagist for packages not available in the TuxCare repository, while still preferring TuxCare patches when available.
+
+## Customer Instructions
+
+### For legacy-project customers
+
+No special steps are needed. The `^9.5` range matches `9.5.11-p1+tuxcare` directly:
+
+```
+{
+    "repositories": [
+        {"type": "composer", "url": "https://nexus.repo.tuxcare.com/repository/els_php/"},
+        {"type": "composer", "url": "https://packages.drupal.org/8"}
+    ]
+}
+```
+
+Then run:
+
+```text
+composer update drupal/core --with-all-dependencies
+```
+
+### For recommended-project customers (needs an alias)
+
+Because `drupal/core-recommended:9.5.11` requires exactly `drupal/core:9.5.11`, customers need a Composer inline alias to tell Composer that `9.5.11-p1+tuxcare` should be treated as `9.5.11`:
+
+```
+{
+    "repositories": [
+        {"type": "composer", "url": "https://nexus.repo.tuxcare.com/repository/els_php/"},
+        {"type": "composer", "url": "https://packages.drupal.org/8"}
+    ],
+    "require": {
+        "drupal/core": "9.5.11-p1+tuxcare as 9.5.11",
+        "drupal/core-recommended": "^9.5"
+    }
+}
+```
+
+Then run:
+
+```text
+composer update "drupal/core-*" drupal/core --with-all-dependencies
+```
+
+The `"9.5.11-p1+tuxcare as 9.5.11"` alias is the key — it tells Composer to install the Satis version but pretend it's `9.5.11` for dependency resolution, satisfying `core-recommended`'s exact version constraint.
+
+## How to Upgrade to a Newer Version
+
+If you have already installed a TuxCare Drupal package and want to upgrade to a newer release, update the version string in your `composer.json` file or run the `composer require` command with the new version:
+
+```text
+composer require drupal/core:VERSION-pN+tuxcare
+```
+
+Then run `composer update` to apply the changes:
+
+```text
+composer update
+```
+
+## Resolved CVEs
+
+| CVE ID              | Vulnerable versions                                                                        | Fixed in version    |
+|---------------------|--------------------------------------------------------------------------------------------|---------------------|
+| CVE-2024-45440      | >=8.0.0, <=11.0.4                                                                         | 9.5.11-p1+tuxcare   |
+| CVE-2024-55634      | >=8.0.0, <10.2.11 \|\| >=10.3.0, <10.3.9 \|\| >=11.0.0, <11.0.8                          | 9.5.11-p1+tuxcare   |
+| CVE-2024-55636      | >=8.0.0, <10.2.11 \|\| >=10.3.0, <10.3.9 \|\| >=11.0.0, <11.0.8                          | 9.5.11-p1+tuxcare   |
+| CVE-2024-55637      | >=8.0.0, <10.2.11 \|\| >=10.3.0, <10.3.9 \|\| >=11.0.0, <11.0.8                          | 9.5.11-p1+tuxcare   |
+| CVE-2024-55638      | >=7.0 < 7.102 \|\| >= 8.0.0 < 10.2.11 \|\| >= 10.3.0 < 10.3. 9                               | 9.5.11-p1+tuxcare   |
+| GHSA-6ccv-8fgf-cjpw | >=8.0.0, <10.1.8 \|\| >=10.2.0, <10.2.2                                                   | 9.5.11-p1+tuxcare   |
+| CVE-2024-12393      | >=8.8.0, <10.2.11 \|\| >=10.3.0, <10.3.9 \|\| >=11.0.0, <11.0.8                          | 9.5.11-p1+tuxcare   |
+| CVE-2025-3057       | >=8.0.0, <10.3.13 \|\| >=10.4.0, <10.4.3 \|\| >=11.0.0, <11.0.12 \|\| >=11.1.0, <11.1.3 | 9.5.11-p1+tuxcare   |
+| CVE-2025-31675      | >=8.0.0, <10.3.14 \|\| >=10.4.0, <10.4.5 \|\| >=11.0.0, <11.0.13 \|\| >=11.1.0, <11.1.5 | 9.5.11-p1+tuxcare   |
+| CVE-2025-31673      | >=8.0.0, <10.3.13 \|\| >=10.4.0, <10.4.3 \|\| >=11.0.0, <11.0.12 \|\| >=11.1.0, <11.1.3 | 9.5.11-p1+tuxcare   |
+| CVE-2025-31674      | >=8.0.0, <10.3.13 \|\| >=10.4.0, <10.4.3 \|\| >=11.0.0, <11.0.12 \|\| >=11.1.0, <11.1.3 | 9.5.11-p1+tuxcare   |
+
+If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+
+<script setup>
+
+const authjson =
+`{
+  "http-basic": {
+    "nexus.repo.tuxcare.com": {
+      "username": "USERNAME",
+      "password": "PASSWORD"
+    }
+  }
+}`
+
+const composerjson =
+`{
+    "repositories": [
+        {
+        "type": "composer",
+        "url": "https://nexus.repo.tuxcare.com/repository/els_php/",
+        "options": {
+            "http": {
+            "verify": true
+            }
+        }
+        }
+    ]
+}`
+
+const cli =
+`composer config repositories.tuxcare '{"type":"composer","url":"https://nexus.repo.tuxcare.com/repository/els_php/","options":{"http":{"verify":true}}}' --json`
+
+const packagejson =
+`{
+    "require": {
+        "drupal/core": "9.5.11-p1+tuxcare"
+    }
+}`
+
+</script>
