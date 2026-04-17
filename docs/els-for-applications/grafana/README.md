@@ -1,6 +1,6 @@
 # Grafana
 
-TuxCare's ELS for Grafana provides security patches for Grafana versions that have reached End of Life (EOL), helping organizations maintain stability without migrating to newer releases.
+Endless Lifecycle Support (ELS) for Grafana from TuxCare provides security fixes for Grafana versions that have reached their end of life. This allows you to continue running Grafana without vulnerability concerns, even after official support has ended.
 
 ## Supported Grafana Versions
 
@@ -16,11 +16,10 @@ TuxCare provides ELS for Grafana as pre-built binaries for the following distrib
 
 ## Installation
 
-This guide outlines the steps needed to install the TuxCare ELS build of Grafana on your system.
-
 <ELSPrerequisites>
 
-* Repository access credentials (username and password) — contact [sales@tuxcare.com](mailto:sales@tuxcare.com) 
+* Nexus repository access credentials (username and password) — contact [sales@tuxcare.com](mailto:sales@tuxcare.com)
+* To browse available artifacts, visit TuxCare [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els-golang) and click **Sign in** in the top right corner. You may need to refresh the page after logging in.
 
 </ELSPrerequisites>
 
@@ -28,11 +27,9 @@ This guide outlines the steps needed to install the TuxCare ELS build of Grafana
 
 1. **Browse and download from Nexus**
 
-   Visit TuxCare [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els-golang) and sign in with your credentials. Navigate to the `grafana` folder, choose the directory for your operating system, and download the appropriate archive
+   Visit TuxCare [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els-golang) and sign in with your credentials. Navigate to the `grafana` folder, choose the directory for your operating system, and download the appropriate archive.
 
 2. **Or download from the command line**
-
-   Replace `USERNAME` and `PASSWORD` with your TuxCare credentials, and choose the URL that matches your OS and Grafana version
 
    <TableTabs label="Choose operating system: ">
 
@@ -68,6 +65,8 @@ This guide outlines the steps needed to install the TuxCare ELS build of Grafana
 
    </TableTabs>
 
+   Replace `USERNAME` and `PASSWORD` with your TuxCare credentials, and choose the URL that matches your OS and Grafana version.
+
 3. **Extract the archive**
 
    Create an installation directory (for example `/opt/grafana`) and extract.
@@ -90,7 +89,7 @@ This guide outlines the steps needed to install the TuxCare ELS build of Grafana
 
 5. **Start Grafana**
 
-   Use your deployment method (systemd, Docker, or manual) and verify that the application runs correctly
+   Use your deployment method (systemd, Docker, or manual) and verify that the application runs correctly.
 
 </ELSSteps>
 

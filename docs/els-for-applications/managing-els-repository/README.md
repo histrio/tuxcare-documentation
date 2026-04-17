@@ -8,19 +8,19 @@ This page provides instructions for upgrading to newer TuxCare-patched applicati
 
 1. **Log in to the Nexus repository**
 
-   Go to [nexus.repo.tuxcare.com](https://nexus.repo.tuxcare.com) using your credentials
+   Log in to [nexus.repo.tuxcare.com](https://nexus.repo.tuxcare.com) using your credentials.
 
 2. **Download the new version**
 
-   Find and download the updated TuxCare-patched package
+   Find and download the latest TuxCare version.
 
 3. **Install the update**
 
-   Follow the [installation instructions](/els-for-applications/) for your application
+   Follow the [installation instructions](/els-for-applications/) for your application.
 
 4. **Verify and start using**
 
-   Confirm the new version is installed correctly and resume normal operations
+   Confirm the new version is installed correctly and run your application as usual.
 
 </ELSSteps>
 

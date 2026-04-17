@@ -4,7 +4,10 @@ Apache®, Apache Tomcat®, are either registered trademarks or trademarks of the
 
 <br>
 
-TuxCare's ELS for Apache Tomcat® provides security patches for Apache Tomcat® versions that have reached End of Life (EOL), helping organizations maintain stability without migrating to newer releases.
+TuxCare's Endless Lifecycle Support (ELS) for Apache Tomcat® provides security patches, and selected bug fixes, that are integral to the stable operation of applications running on these versions of Apache Tomcat® core components such as Coyote, Catalina, Jasper, etc. These components have either reached their end of standard support from vendors or have reached End of Life (EOL).
+Our ELS for Apache Tomcat® service is designed to provide solutions for organizations that are not yet ready to migrate to newer versions and that are seeking long-term stability for their legacy Apache Tomcat® applications.
+
+This guide outlines the steps needed for Apache Tomcat server setup and configuration.
 
 :::tip
 Apache Tomcat® is also available for installation as a library for Maven and Gradle projects. You can find the corresponding instructions [here](/els-for-libraries/apache-tomcat/).
@@ -20,8 +23,8 @@ Apache Tomcat® is also available for installation as a library for Maven and Gr
 
 * Java Development Kit (JDK) 7 or later installed (verify with `java -version`)
 * `JAVA_HOME` set to your JDK installation directory
-* Repository access credentials (username and password) for TuxCare ELS Apache Tomcat repository
-* Access to TuxCare [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els_java) to browse available artifacts after sign-in
+* Nexus repository access credentials (username and password) — contact [sales@tuxcare.com](mailto:sales@tuxcare.com)
+* To browse available artifacts, visit TuxCare [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els_java) and click **Sign in** in the top right corner. You may need to refresh the page after logging in.
 
 </ELSPrerequisites>
 
@@ -189,7 +192,7 @@ Check logs for detailed error information:
 
 </ELSSteps>
 
-## What's next?
+## What's Next?
 
 <WhatsNext hide-title>
 

@@ -1,6 +1,6 @@
 # Gradle
 
-TuxCare's ELS for Gradle provides security patches for Gradle versions that have reached End of Life (EOL), helping organizations maintain stability without migrating to newer releases.
+TuxCare's Endless Lifecycle Support (ELS) for Gradle provides security patches for versions of Gradle that have reached End of Life (EOL) or are no longer maintained by the upstream vendor. Our ELS for Gradle service is designed for organizations that are not yet ready to migrate to newer Gradle versions and that are seeking long-term stability for their build infrastructure.
 
 ## Supported Versions
 
@@ -11,8 +11,8 @@ TuxCare's ELS for Gradle provides security patches for Gradle versions that have
 <ELSPrerequisites>
 
 * Java Development Kit (JDK) 8 or later installed (verify with `java -version`)
-* Repository access credentials (username and password) for TuxCare ELS Gradle repository
-* Access to TuxCare [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els_java) to browse available artifacts after sign-in
+* Nexus repository access credentials (username and password) — contact [sales@tuxcare.com](mailto:sales@tuxcare.com)
+* To browse available artifacts, visit TuxCare [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els_java) and click **Sign in** in the top right corner. You may need to refresh the page after logging in.
 
 </ELSPrerequisites>
 
@@ -51,7 +51,7 @@ TuxCare's ELS for Gradle provides security patches for Gradle versions that have
 
 1. **Download Gradle**
 
-   Download the .zip archive from [TuxCare Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els_java) using your credentials
+   Download the .zip archive from TuxCare [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els_java) using your credentials
 
 2. **Extract the archive**
 

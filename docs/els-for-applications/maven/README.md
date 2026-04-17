@@ -1,6 +1,6 @@
 # Apache Maven
 
-TuxCare's ELS for Apache Maven provides security patches for Maven versions that have reached End of Life (EOL), helping organizations maintain stability without migrating to newer releases.
+TuxCare's Endless Lifecycle Support (ELS) for Apache Maven provides security patches for versions of Apache Maven that have reached End of Life (EOL) or are no longer maintained by the upstream vendor. Our ELS for Apache Maven service is designed for organizations that are not yet ready to migrate to newer Maven versions and that are seeking long-term stability for their build infrastructure.
 
 ## Supported Versions
 
@@ -12,8 +12,8 @@ TuxCare's ELS for Apache Maven provides security patches for Maven versions that
 <ELSPrerequisites>
 
 * Java Development Kit (JDK) 7 or later installed (verify with `java -version`)
-* Repository access credentials (username and password) for TuxCare ELS Apache Maven repository
-* Access to TuxCare [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els_java) to browse available artifacts after sign-in
+* Nexus repository access credentials (username and password) — contact [sales@tuxcare.com](mailto:sales@tuxcare.com)
+* To browse available artifacts, visit TuxCare [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els_java) and click **Sign in** in the top right corner. You may need to refresh the page after logging in.
 
 </ELSPrerequisites>
 
@@ -52,7 +52,7 @@ TuxCare's ELS for Apache Maven provides security patches for Maven versions that
 
 1. **Download Apache Maven**
 
-   Download the .zip archive from [TuxCare Nexus](https://nexus.repo.tuxcare.com/repository/els_java/org/apache/maven/apache-maven/) using your credentials
+   Download the .zip archive from TuxCare [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els_java) using your credentials
 
 2. **Extract the archive**
 

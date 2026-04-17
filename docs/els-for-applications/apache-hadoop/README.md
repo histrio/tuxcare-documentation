@@ -1,6 +1,7 @@
 # Apache Hadoop
 
-TuxCare's ELS for Apache Hadoop provides security patches for Apache Hadoop versions that have reached End of Life (EOL), helping organizations maintain stability without migrating to newer releases.
+TuxCare's Endless Lifecycle Support (ELS) for Apache Hadoop provides security patches and selected bug fixes that are integral to the stable operation of applications running on these versions of Apache Hadoop core components. These components have either reached their end of standard support from vendors or have reached End of Life (EOL).
+Our ELS for Apache Hadoop service is designed to provide solutions for organizations that are not yet ready to migrate to newer versions and that are seeking long-term stability for their legacy Apache Hadoop applications.
 
 ## Supported Versions
 
@@ -8,11 +9,10 @@ TuxCare's ELS for Apache Hadoop provides security patches for Apache Hadoop vers
 
 ## Installation
 
-This guide outlines the steps needed to integrate the TuxCare ELS for Apache Hadoop repository into your Java application. The repository provides trusted Java libraries that can be easily integrated into your **Maven** and **Gradle** projects.
-
 <ELSPrerequisites>
 
-* Repository access credentials (username and password) — contact [sales@tuxcare.com](mailto:sales@tuxcare.com) 
+* Nexus repository access credentials (username and password) — contact [sales@tuxcare.com](mailto:sales@tuxcare.com)
+* To browse available artifacts, visit TuxCare [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els_java) and click **Sign in** in the top right corner. You may need to refresh the page after logging in.
 
 </ELSPrerequisites>
 
