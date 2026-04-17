@@ -273,6 +273,10 @@ export default {
                     icon: '/images/feed-me.webp',
                 },
                 {
+                    path: '/els-for-libraries/drupal/',
+                    icon: '/images/drupal.webp',
+                },
+                {
                     path: '/els-for-libraries/firebase-php-jwt/',
                     icon: '/images/firebase.webp',
                 },

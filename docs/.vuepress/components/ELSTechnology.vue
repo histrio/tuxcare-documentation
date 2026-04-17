@@ -1559,6 +1559,11 @@ const techData = [
         link: "./dompdf/",
       },
       {
+        name: "Drupal",
+        versions: "9.5.x",
+        link: "./drupal/",
+      },
+      {
         name: "php-svg-lib",
         versions: "0.3.4",
         link: "./php-svg-lib/",
