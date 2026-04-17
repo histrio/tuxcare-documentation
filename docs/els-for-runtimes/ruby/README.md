@@ -22,13 +22,17 @@ alt-ruby provides a more flexible and convenient environment for working with di
 
 ## Supported OS and Ruby versions
 
-| Operating Systems | Package Type | OS Version     |
-| :---------------: | :----------: | :------------: |
-| Debian            | DEB          | 12, 13         |
+| Operating Systems                                            | Package Type | OS Version                         | Ruby versions        |
+| :----------------------------------------------------------: | :----------: | :--------------------------------: | :------------------: |
+| EL 7 (CentOS, CloudLinux, Oracle Linux, etc.)                | RPM          | 7.x                                | 2.6, 2.7, 3.0, 3.1   |
+| EL 8 (AlmaLinux, CentOS, CentOS Stream, CloudLinux, Oracle Linux, etc.) | RPM | 8.x                     | 2.6, 2.7, 3.0, 3.1   |
+| EL 9 (AlmaLinux, CentOS, CloudLinux, Oracle Linux, etc.)     | RPM          | 9.x                                | 2.6, 2.7, 3.0, 3.1   |
+| EL 10 (AlmaLinux, CloudLinux, Oracle Linux, etc.)            | RPM          | 10.x                               | 2.6, 2.7, 3.0, 3.1   |
+| Ubuntu                                                       | DEB          | 16.04, 18.04, 20.04, 22.04, 24.04  | 2.6, 2.7, 3.0, 3.1   |
+| Debian                                                       | DEB          | 10, 11, 12, 13                     | 2.6, 2.7, 3.0, 3.1   |
+| Alpine Linux                                                 | APK          | 3.22                               | 2.7, 3.0, 3.1        |
 
-**Supported Ruby versions:** 2.6, 2.7, 3.0, 3.1
-
-**Supported architecture:** x86_64 (64-bit)
+**Supported architectures:** x86_64 (64-bit); aarch64 on Alpine Linux
 
 <ContactSales text="Other distros and architectures available upon request. Contact sales@tuxcare.com for more information." />
 
@@ -45,29 +49,37 @@ alt-ruby provides a more flexible and convenient environment for working with di
 
 1. Download the installer script
 
-   ```text
-   wget https://repo.alt.tuxcare.com/alt-ruby-els/install-els-alt-ruby-deb-repo.sh
-   ```
+   <CodeTabs :tabs="[
+     { title: 'RPM', content: `wget https://repo.alt.tuxcare.com/alt-ruby-els/install-els-alt-ruby-rpm-repo.sh` },
+     { title: 'DEB', content: `wget https://repo.alt.tuxcare.com/alt-ruby-els/install-els-alt-ruby-deb-repo.sh` },
+     { title: 'APK', content: `wget https://repo.alt.tuxcare.com/alt-ruby-els/install-els-alt-ruby-apk-repo.sh` }
+   ]" />
 
 2. Run the installer script with your license key
 
    The script registers the server with CLN, adds the PGP key and repository.
 
-   ```text
-   bash install-els-alt-ruby-deb-repo.sh --license-key XXX-XXXXXXXXXXXX
-   ```
+   <CodeTabs :tabs="[
+     { title: 'RPM', content: `sh install-els-alt-ruby-rpm-repo.sh --license-key XXX-XXXXXXXXXXXX` },
+     { title: 'DEB', content: `bash install-els-alt-ruby-deb-repo.sh --license-key XXX-XXXXXXXXXXXX` },
+     { title: 'APK', content: `sh install-els-alt-ruby-apk-repo.sh --license-key XXX-XXXXXXXXXXXX` }
+   ]" />
 
 3. Install a Ruby version
 
-   ```text
-   apt-get install alt-ruby27
-   ```
+   <CodeTabs :tabs="[
+     { title: 'RPM', content: `yum install alt-ruby27` },
+     { title: 'DEB', content: `apt-get install alt-ruby27` },
+     { title: 'APK', content: `apk add alt-ruby27` }
+   ]" />
 
    To see available packages:
 
-   ```text
-   apt list -a | grep alt-ruby
-   ```
+   <CodeTabs :tabs="[
+     { title: 'RPM', content: `yum list available 'alt-ruby*'` },
+     { title: 'DEB', content: `apt list -a | grep alt-ruby` },
+     { title: 'APK', content: `apk search alt-ruby` }
+   ]" />
 
 4. Verify the installation
 
@@ -80,10 +92,11 @@ alt-ruby provides a more flexible and convenient environment for working with di
 
 5. Update packages
 
-   ```text
-   apt-get update
-   apt-get --only-upgrade install alt-ruby*
-   ```
+   <CodeTabs :tabs="[
+     { title: 'RPM', content: `yum update 'alt-ruby*'` },
+     { title: 'DEB', content: `apt-get update && apt-get --only-upgrade install 'alt-ruby*'` },
+     { title: 'APK', content: `apk update && apk upgrade 'alt-ruby*'` }
+   ]" />
 
 </ELSSteps>
 
