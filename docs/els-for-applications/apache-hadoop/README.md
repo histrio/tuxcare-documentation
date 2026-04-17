@@ -95,7 +95,7 @@ Our ELS for Apache Hadoop service is designed to provide solutions for organizat
 
 </ELSSteps>
 
-## What's next?
+## What's Next?
 
 <WhatsNext hide-title>
 

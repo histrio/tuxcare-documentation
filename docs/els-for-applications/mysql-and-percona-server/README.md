@@ -59,7 +59,7 @@ To remove the MySQL ELS repository:
 sh install-mysql-els-repo.sh --delete
 ```
 
-## What's next?
+## What's Next?
 
 <WhatsNext hide-title>
 

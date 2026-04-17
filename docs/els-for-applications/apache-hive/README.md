@@ -95,7 +95,7 @@ Our ELS for Apache Hive service is designed to provide solutions for organizatio
 
 </ELSSteps>
 
-## What's next?
+## What's Next?
 
 <WhatsNext hide-title>
 

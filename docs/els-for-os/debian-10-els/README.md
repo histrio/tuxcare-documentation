@@ -13,13 +13,13 @@
 
 <ELSSteps>
 
-1. Download the install script:
+1. Download the install script
 
    ```
    wget https://repo.tuxcare.com/debian10-els/install-debian10-els-repo.sh
    ```
 
-2. Run with your license key.
+2. Run with your license key
 
    The script registers the server in the CLN with the key, adds a PGP key to the server.
 
@@ -27,7 +27,7 @@
    bash install-debian10-els-repo.sh --license-key XXXXXXXXXXX
    ```
 
-3. Verify that the installation was successful by running the following command:
+3. Verify that the installation was successful by running the following command
 
    ```
    apt-cache show els-os-release
@@ -61,7 +61,7 @@
 
 </ELSSteps>
 
-## What's next?
+## What's Next?
 
 <WhatsNext hide-title>
 
