@@ -93,7 +93,7 @@ TuxCare provides ELS for Loki as pre-built binaries for the following distributi
 
 </ELSSteps>
 
-## What's next?
+## What's Next?
 
 <WhatsNext hide-title>
 

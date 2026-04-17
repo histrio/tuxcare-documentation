@@ -93,7 +93,7 @@ TuxCare provides ELS for Grafana as pre-built binaries for the following distrib
 
 </ELSSteps>
 
-## What's next?
+## What's Next?
 
 <WhatsNext hide-title>
 

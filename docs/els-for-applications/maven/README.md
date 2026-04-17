@@ -70,7 +70,7 @@ TuxCare's Endless Lifecycle Support (ELS) for Apache Maven provides security pat
 
 </ELSSteps>
 
-## What's next?
+## What's Next?
 
 <WhatsNext hide-title>
 

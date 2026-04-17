@@ -69,7 +69,7 @@ TuxCare's Endless Lifecycle Support (ELS) for Gradle provides security patches f
 
 </ELSSteps>
 
-## What's next?
+## What's Next?
 
 <WhatsNext hide-title>
 

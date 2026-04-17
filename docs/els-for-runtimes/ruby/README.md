@@ -87,7 +87,9 @@ alt-ruby provides a more flexible and convenient environment for working with di
 
 </ELSSteps>
 
-<WhatsNext>
+## What's Next?
+
+<WhatsNext hide-title>
 
 * ![](/images/shield.webp) [Machine-readable security data](../machine-readable-security-data/) — CSAF advisories and RSS feeds for Ruby ELS
 
