@@ -7,28 +7,23 @@ TuxCare's Endless Lifecycle Support (ELS) for Apache Maven provides security pat
 * Apache Maven 3.8.1
 * Apache Maven Shared Utils 3.2.1
 
-## Prerequisites
+## Installation
 
-* Ensure you have a compatible version of **Java Development Kit (JDK)** installed. JDK 7 or later is required.
+<ELSPrerequisites>
 
-  To verify if JDK is already installed on your system, open a terminal or command prompt and run:
+* Java Development Kit (JDK) 7 or later installed (verify with `java -version`)
+* Nexus repository access credentials (username and password) — contact [sales@tuxcare.com](mailto:sales@tuxcare.com)
+* To browse available artifacts, visit TuxCare [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els_java) and click **Sign in** in the top right corner. You may need to refresh the page after logging in.
 
-  ```text
-  java -version
-  ```
+</ELSPrerequisites>
 
-  If JDK is installed, you should see version information. If not, you'll need to install it.
-
-## Repository Access
-
-You need a username and password to access the TuxCare ELS Apache Maven repository. Anonymous access is disabled.
-To obtain credentials, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
-
-To browse available artifacts via the web interface, visit TuxCare [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els_java). Click the **Sign in** button in the top right corner to authenticate with your TuxCare credentials. After logging in, you may need to refresh or re-open the browse link due to Nexus routing behavior.
+<ELSSteps>
 
 ## Linux Installation
 
-1. Download Apache Maven from TuxCare via the terminal using your credentials. For example, Maven 3.8.1:
+1. **Download Apache Maven**
+
+   Download from TuxCare via the terminal using your credentials. For example, Maven 3.8.1:
 
    ```text
    curl -u USERNAME:PASSWORD -O https://nexus.repo.tuxcare.com/repository/els_java/org/apache/maven/apache-maven/3.8.1-tuxcare.1/apache-maven-3.8.1-tuxcare.1-bin.tar.gz
@@ -36,14 +31,16 @@ To browse available artifacts via the web interface, visit TuxCare [Nexus](https
 
    Replace `USERNAME` and `PASSWORD` with your actual credentials, and adjust the version as needed.
 
-2. Extract the archive to a directory of your choice:
+2. **Extract the archive**
 
    ```text
    sudo mkdir -p /opt/maven
    sudo tar -xvzf apache-maven-3.8.1-tuxcare.1-bin.tar.gz -C /opt/maven
    ```
 
-3. Run the Maven binary directly from the extracted directory to verify:
+3. **Verify the installation**
+
+   Run the Maven binary from the extracted directory.
 
    ```text
    /opt/maven/apache-maven-3.8.1-tuxcare.1/bin/mvn --version
@@ -53,11 +50,17 @@ To browse available artifacts via the web interface, visit TuxCare [Nexus](https
 
 ## Windows Installation
 
-1. Download the Apache Maven .zip archive from [TuxCare Nexus](https://nexus.repo.tuxcare.com/repository/els_java/org/apache/maven/apache-maven/) using your credentials.
+1. **Download Apache Maven**
 
-2. Extract the downloaded archive, for example, `apache-maven-3.8.1-tuxcare.1-bin.zip`, to a directory of your choice, e.g., `C:\Maven`.
+   Download the .zip archive from TuxCare [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els_java) using your credentials
 
-3. Open a Command Prompt or PowerShell window and run the following command to verify:
+2. **Extract the archive**
+
+   Extract, for example, `apache-maven-3.8.1-tuxcare.1-bin.zip` to a directory of your choice, e.g., `C:\Maven`
+
+3. **Verify the installation**
+
+   Open a Command Prompt or PowerShell window and run the following command.
 
    ```text
    C:\Maven\apache-maven-3.8.1-tuxcare.1\bin\mvn --version
@@ -65,18 +68,16 @@ To browse available artifacts via the web interface, visit TuxCare [Nexus](https
 
    The output should display the Maven version and build details.
 
-## Upgrading to a Newer TuxCare Version
+</ELSSteps>
 
-To upgrade to a newer TuxCare release (e.g., from `tuxcare.1` to `tuxcare.2`), download and extract the new version of the Apache Maven archive from TuxCare using the instructions above.
+## What's Next?
 
-## Vulnerability Exploitability eXchange (VEX)
+<WhatsNext hide-title>
 
-VEX is a machine-readable format that indicates whether a known vulnerability is actually exploitable in your product. It helps reduce false positives and prioritize real risks.
+* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=Apache+Maven) — Track vulnerability fixes and updates
+* ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=Apache+Maven) — Patched versions and changelogs
+* ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/products?product=Apache+Maven) — Full list of product parts covered by ELS
+* ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/) — Vulnerability Exploitability eXchange feed
+* ![](/images/wrench.webp) [Managing the ELS repository](/els-for-applications/managing-els-repository/) — Update to newer versions
 
-TuxCare provides VEX data for Apache Maven ELS versions at: [security.tuxcare.com/vex/cyclonedx/els_lang_java/](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/).
-
-## Resolved CVEs in ELS for Apache Maven
-
-<ClientOnly>
-  <ResolvedCveTable project="maven" />
-</ClientOnly>
+</WhatsNext>

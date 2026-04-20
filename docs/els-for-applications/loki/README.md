@@ -14,19 +14,22 @@ TuxCare provides ELS for Loki as pre-built binaries for the following distributi
 * Debian 12
 * Debian 13
 
-## Connection to ELS for Loki
+## Installation
 
-This guide outlines the steps needed to install the TuxCare ELS build of Loki on your system.
+<ELSPrerequisites>
 
-## Step 1: Get Token
+* Nexus repository access credentials (username and password) — contact [sales@tuxcare.com](mailto:sales@tuxcare.com)
+* To browse available artifacts, visit TuxCare [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els-golang) and click **Sign in** in the top right corner. You may need to refresh the page after logging in. 
 
-You need credentials in order to access the TuxCare ELS Loki repository. Anonymous access is disabled. To receive the credentials, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+</ELSPrerequisites>
 
-## Step 2: Download and Install Loki
+<ELSSteps>
 
-1. To browse available artifacts, visit TuxCare [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els-golang). Sign in with your TuxCare credentials. Navigate to the `loki` folder and choose the directory for your operating system (e.g. `debian12`, `debian13`, `alpine3_22`), then download the appropriate archive for your Loki version.
+1. **Browse and download from Nexus**
 
-2. Alternatively, download from the command line. Replace `USERNAME` and `PASSWORD` with your TuxCare credentials, and choose the URL that matches your OS and desired Loki version.
+   Visit TuxCare [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els-golang) and sign in with your credentials. Navigate to the `loki` folder, choose the directory for your operating system, and download the appropriate archive
+
+2. **Or download from the command line**
 
    <TableTabs label="Choose operating system: ">
 
@@ -62,7 +65,11 @@ You need credentials in order to access the TuxCare ELS Loki repository. Anonymo
 
    </TableTabs>
 
-3. Create an installation directory (for example `/opt/loki`) and extract the archive:
+   Replace `USERNAME` and `PASSWORD` with your TuxCare credentials, and choose the URL that matches your OS and Loki version.
+
+3. **Extract the archive**
+
+   Create an installation directory (for example `/opt/loki`) and extract.
 
    ```text
    sudo mkdir -p /opt/loki
@@ -71,15 +78,25 @@ You need credentials in order to access the TuxCare ELS Loki repository. Anonymo
 
    Adjust the archive filename if you downloaded a different version.
 
-## Step 3: Verify Installation
+4. **Verify the installation**
 
-1. Change to the Loki installation directory and run the binary to confirm the TuxCare ELS build is installed:
+   Change to the installation directory and run the binary to confirm the TuxCare ELS build.
 
    ```text
    cd /opt/loki
    ./loki --version
    ```
 
-2. Start Loki with your configuration and verify that the application runs correctly.
+5. **Start Loki**
 
-If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+   Use your configuration and verify that the application runs correctly.
+
+</ELSSteps>
+
+## What's Next?
+
+<WhatsNext hide-title>
+
+* ![](/images/wrench.webp) [Managing the ELS repository](/els-for-applications/managing-els-repository/) — Update to newer versions
+
+</WhatsNext>

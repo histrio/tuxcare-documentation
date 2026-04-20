@@ -261,7 +261,9 @@ The following steps use the .NET SDK installation as an example. If you are inst
 
   If you encounter conflicts, try uninstalling the previous version before installing the new one. In most cases, .NET versions can coexist without issues, but removing the older version may help resolve compatibility problems.
 
-<WhatsNext>
+## What's Next?
+
+<WhatsNext hide-title>
 
 * ![](/images/box.webp) [ELS NuGet Repository](/els-for-libraries/dotnet/) — Set up the TuxCare NuGet feed, install patched packages, and manage .NET package dependencies
 * ![](/images/book.webp) [Official .NET documentation](https://learn.microsoft.com/en-us/dotnet/fundamentals/) — Getting started guides, API reference, and platform fundamentals

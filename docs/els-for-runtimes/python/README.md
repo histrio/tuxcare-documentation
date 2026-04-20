@@ -83,7 +83,9 @@ alt-python provides a more flexible and convenient environment for working with 
 
 </ELSSteps>
 
-<WhatsNext>
+## What's Next?
+
+<WhatsNext hide-title>
 
 * ![](/images/shield.webp) [Machine-readable security data](../machine-readable-security-data/) — OVAL, CSAF, Errata, and RSS feeds for Python ELS
 
