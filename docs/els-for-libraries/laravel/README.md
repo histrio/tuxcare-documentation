@@ -199,7 +199,28 @@ Fixes for the following vulnerabilities are available in ELS for Laravel from Tu
 
 | CVE ID         | Severity | Vulnerable versions  | Fixed in version    |
 |----------------|----------|----------------------|---------------------|
-| CVE-2025-27515 | Medium   | <= 8.83.29           | 8.83.29-p1+tuxcare  |
+| CVE-2025-27515 | Medium   | < 11.44.1           | 8.83.29-p1+tuxcare  |
+| CVE-2025-27515 | Medium   | < 11.44.1           | 8.12.0-p3+tuxcare  |
+| GHSA-wq8p-mqvg-2p5h | High   | >= 8.0.0, < 8.40.0| 8.12.0-p3+tuxcare  |
+| CVE-2024-52301 | High   | >= 8.0.0, < 83.28| 8.12.0-p3+tuxcare  |
+| CVE-2021-43808 | Medium   | 8.0.0, < 8.75.0| 8.12.0-p3+tuxcare  |
+| CVE-2021-21263 | Medium   | >= 8.0.0, < 8.75.0| 8.12.0-p1+tuxcare  |
+| CVE-2021-21263 | Medium   | >= 8.0.0, < 8.75.0| 8.12.1-p1+tuxcare  |
+| CVE-2025-27515 | Critical   | < 11.44.1           | 8.12.1-p1+tuxcare  |
+| GHSA-wq8p-mqvg-2p5h | High   | >= 8.0.0, < 8.40.0| 8.12.1-p1+tuxcare  |
+| CVE-2024-52301 | Medium   | >= 8.0.0, < 83.28| 8.12.1-p1+tuxcare  |
+| CVE-2021-43808 | Medium   | 8.0.0, < 8.75.0| 8.12.1-p1+tuxcare  |
+| CVE-2021-21263 | Medium   | >= 8.0.0, < 8.75.0| 8.12.2-p1+tuxcare  |
+| CVE-2025-27515 | Critical   | < 11.44.1           | 8.12.2-p1+tuxcare  |
+| GHSA-wq8p-mqvg-2p5h | high   | >= 8.0.0, < 8.40.0| 8.12.2-p1+tuxcare  |
+| CVE-2024-52301 | Medium   | >= 8.0.0, < 83.28| 8.12.2-p1+tuxcare  |
+| CVE-2021-43808 | Medium   | 8.0.0, < 8.75.0| 8.12.2-p1+tuxcare  |
+| CVE-2021-21263 | Medium   | >= 8.0.0, < 8.75.0| 8.12.3-p1+tuxcare  |
+| CVE-2025-27515 | Critical   | < 11.44.1           | 8.12.3-p1+tuxcare  |
+| GHSA-wq8p-mqvg-2p5h | High   | >= 8.0.0, < 8.40.0| 8.12.3-p1+tuxcare  |
+| CVE-2024-52301 | Medium   | >= 8.0.0, < 83.28| 8.12.3-p1+tuxcare  |
+| CVE-2021-43808 | Medium   | 8.0.0, < 8.75.0| 8.12.3-p1+tuxcare  |
+
 
 </template>
 
