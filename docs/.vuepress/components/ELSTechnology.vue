@@ -1604,6 +1604,11 @@ const techData = [
         link: "./phpspreadsheet/",
       },
       {
+        name: "Saloon",
+        versions: "3.15.0",
+        link: "./saloon/",
+      },
+      {
         name: "Symfony HttpFoundation",
         versions: "2.8.x | 3.4.x | 4.4.x",
         link: "./symfony/",
