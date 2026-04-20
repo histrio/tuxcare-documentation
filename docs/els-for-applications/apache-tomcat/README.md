@@ -4,10 +4,10 @@ Apache® and Apache Tomcat® are either registered trademarks or trademarks of t
 
 <br>
 
-TuxCare's Endless Lifecycle Support (ELS) for Apache Tomcat® provides security patches, and selected bug fixes, that are integral to the stable operation of applications running on these versions of Apache Tomcat® core components such as Coyote, Catalina, Jasper, etc. These components have either reached their end of standard support from vendors or have reached End of Life (EOL).
+TuxCare's Endless Lifecycle Support (ELS) for Apache Tomcat® provides security patches and selected bug fixes that are integral to the stable operation of applications running on these versions of Apache Tomcat® core components such as Coyote, Catalina, Jasper, etc. These components have either reached their end of standard support from vendors or have reached End of Life (EOL).
 Our ELS for Apache Tomcat® service is designed to provide solutions for organizations that are not yet ready to migrate to newer versions and that are seeking long-term stability for their legacy Apache Tomcat® applications.
 
-This guide outlines the steps needed for Apache Tomcat server setup and configuration.
+This guide outlines the steps needed for Apache Tomcat® server setup and configuration.
 
 :::tip
 Apache Tomcat® is also available for installation as a library for Maven and Gradle projects. You can find the corresponding instructions [here](/els-for-libraries/apache-tomcat/).
@@ -15,7 +15,7 @@ Apache Tomcat® is also available for installation as a library for Maven and Gr
 
 ## Supported Versions
 
-* Apache Tomcat® 8.5.100, 9.0.50, 9.0.75, 9.0.83, 9.0.87, 9.0.90, 9.0.100, 10.1.18
+* Apache Tomcat® 8.5.100, 9.0.46, 9.0.50, 9.0.75, 9.0.83, 9.0.87, 9.0.90, 9.0.100, 10.1.18, 10.1.42
 
 ## Installation
 
@@ -34,7 +34,7 @@ Apache Tomcat® is also available for installation as a library for Maven and Gr
 
 1. **Prepare a `tomcat` group**
 
-   * Create a `tomcat` group:
+   Create a `tomcat` group:
 
    ```text
    sudo groupadd tomcat
@@ -42,7 +42,7 @@ Apache Tomcat® is also available for installation as a library for Maven and Gr
 
 2. **Create a `tomcat` user**
 
-   * Create a new user as a member of the `tomcat` group, with a home directory of `/opt/tomcat` and the login shell set to `/bin/false`.
+   Create a new user as a member of the `tomcat` group, with a home directory of `/opt/tomcat` and the login shell set to `/bin/false`.
 
    ```text
    sudo useradd -s /bin/false -g tomcat -d /opt/tomcat tomcat
@@ -50,7 +50,7 @@ Apache Tomcat® is also available for installation as a library for Maven and Gr
 
 3. **Download the TuxCare build**
 
-   * Download from TuxCare using your credentials. For example, Apache Tomcat® 8.5.100:
+   Download from TuxCare using your credentials. For example, Apache Tomcat® 8.5.100:
 
    ```text
    curl -u USERNAME:PASSWORD -O https://nexus.repo.tuxcare.com/repository/els_java/org/apache/tomcat/tomcat/8.5.100-tuxcare.3/tomcat-8.5.100-tuxcare.3.tar.gz
@@ -80,19 +80,16 @@ Apache Tomcat® is also available for installation as a library for Maven and Gr
    cd /opt/tomcat
    ```
 
-   * Set the group of the installation to `tomcat`:
+   * Change ownership of the installation to the `tomcat` group:
 
    ```text
    sudo chgrp -R tomcat /opt/tomcat
    ```
 
-   * Give the `tomcat` group read access to `conf` and its contents, and execute access on the `conf` directory:
+   * Give the `tomcat` group read access to `conf` and its contents, and execute access to the `conf` directory:
 
    ```text
    sudo chmod -R g+r conf
-   ```
-
-   ```text
    sudo chmod g+x conf
    ```
 
@@ -132,7 +129,7 @@ Apache Tomcat® is also available for installation as a library for Maven and Gr
    sudo -u tomcat /opt/tomcat/bin/startup.sh
    ```
 
-8. **Verify the installation and stop the server**
+8. **Verify installation**
 
    * Go to [http://localhost:8080/](http://localhost:8080/). You should see the default Apache Tomcat® homepage.
 
@@ -142,7 +139,7 @@ Apache Tomcat® is also available for installation as a library for Maven and Gr
    curl http://localhost:8080
    ```
 
-   * To stop the server:
+9. **Stop Apache Tomcat®**
 
    ```text
    sudo -u tomcat /opt/tomcat/bin/shutdown.sh
