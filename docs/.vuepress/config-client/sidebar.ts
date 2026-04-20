@@ -305,6 +305,10 @@ export default {
                     icon: '/images/phpspreadsheet.webp',
                 },
                 {
+                    path: '/els-for-libraries/saloon/',
+                    icon: '/images/saloon.png',
+                },
+                {
                     path: '/els-for-libraries/swiftmailer/',
                     icon: '/images/swiftmailer.webp',
                 },
