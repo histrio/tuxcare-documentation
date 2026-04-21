@@ -91,7 +91,7 @@ const runtimes = [
   },
   {
     name: "Ruby",
-    versions: "2.6 | 2.7 | 3.0 | 3.1",
+    versions: "2.6 | 2.7 | 3.0 | 3.1 | 3.2",
     link: "./ruby/",
     icon: "/images/ruby.webp",
   },
