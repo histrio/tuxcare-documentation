@@ -46,7 +46,7 @@ const applications = [
   },
   {
     name: "Apache Tomcat®",
-    versions: "8.5.100 | 9.0.50 | 9.0.75 | 9.0.83 | 9.0.87 | 9.0.90 | 9.0.100 | 10.1.18",
+    versions: "8.5.100 | 9.0.50 | 9.0.75 | 9.0.83 | 9.0.87 | 9.0.90 | 9.0.100 | 10.1.18 | 10.1.42",
     link: "./apache-tomcat/",
     icon: "/images/tomcat.webp",
   },
