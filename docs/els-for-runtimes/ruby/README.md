@@ -34,7 +34,7 @@ alt-ruby provides a more flexible and convenient environment for working with di
 | Ubuntu                                                                   | DEB          | 24.04      | 2.7, 3.0, 3.1, 3.2            |
 | Alpine Linux                                                             | APK          | 3.22       | 2.6, 2.7, 3.0, 3.1, 3.2       |
 
-**Supported architectures:** x86_64 (64-bit); aarch64 on Alpine Linux
+**Supported architectures:** x86_64 on all OSes; aarch64 on Alpine Linux in addition to x86_64
 
 <ContactSales text="Other distros and architectures available upon request. Contact sales@tuxcare.com for more information." />
 
@@ -85,11 +85,18 @@ alt-ruby provides a more flexible and convenient environment for working with di
 
 4. Verify the installation
 
-   `alt-ruby` versions are installed alongside the system default. To use a specific version:
+   Check that the binary exists and returns the expected version:
 
-   ```text
-   source /opt/alt/alt-ruby27/enable
+   ```bash
+   /opt/alt/<ruby-version>/bin/ruby -v
+   ```
+
+   Optionally, add it to `PATH` to use it as default:
+
+   ```bash
+   export PATH=/opt/alt/<ruby-version>/bin:$PATH
    ruby -v
+   which ruby
    ```
 
 5. Update packages
