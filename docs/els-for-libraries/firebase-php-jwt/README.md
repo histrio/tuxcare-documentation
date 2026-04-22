@@ -8,66 +8,58 @@ Endless Lifecycle Support (ELS) for Firebase PHP-JWT from TuxCare provides secur
 
 Other versions upon request.
 
-## Connection to ELS for Firebase PHP-JWT Repository
+## Installation
 
-This guide outlines the steps needed to integrate the TuxCare ELS for Firebase PHP-JWT repository into your application. The repository provides trusted Firebase PHP-JWT library versions that can be easily integrated into your **Composer** projects.
+<ELSPrerequisites>
 
-### Step 1: Get user credentials
+* A valid TuxCare ELS license key — contact [sales@tuxcare.com](mailto:sales@tuxcare.com) to obtain one. Anonymous access is disabled.
+* PHP and [Composer](https://getcomposer.org/) installed on the system
 
-You need a username and password in order to use TuxCare ELS for Firebase PHP-JWT repository. Anonymous access is disabled. To receive the credentials, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+</ELSPrerequisites>
 
-### Step 2: Configure Composer authentication
+<ELSSteps>
 
-1. Create or edit the `auth.json` file for the user running Composer:
+1. Configure Composer authentication
 
-    * **Linux/macOS**: 
+   Create or edit the `auth.json` file for the user running Composer:
 
-        ```text
-        ~/.composer/auth.json
-        ```
+   * **Linux/macOS**: `~/.composer/auth.json`
+   * **Windows**: `%APPDATA%\Composer\auth.json`
 
-    * **Windows**: 
-
-        ```text
-        %APPDATA%\Composer\auth.json
-        ```
-
-2. Use either the Composer CLI or edit `auth.json` directly to add your credentials for `nexus.repo.tuxcare.com`.
+   Use either the Composer CLI or edit `auth.json` directly to add your credentials for `nexus.repo.tuxcare.com`:
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer config --global --auth http-basic.nexus.repo.tuxcare.com USERNAME PASSWORD` },
      { title: 'auth.json', content: authjson }
    ]" />
 
-   Replace `USERNAME` and `PASSWORD` with the credentials you received in [Step 1](#step-1-get-user-credentials).
+   Replace `USERNAME` and `PASSWORD` with the credentials provided by TuxCare.
 
-### Step 3: Register the TuxCare repository
+2. Register the TuxCare repository
 
-Add the `els_php` Composer repository either via CLI or by editing `composer.json`:
+   Add the `els_php` Composer repository either via CLI or by editing `composer.json`:
 
-  <CodeTabs :tabs="[
-    { title: 'Composer CLI', content: cli },
-    { title: 'composer.json', content: composerjson }
-  ]" />
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: cli },
+     { title: 'composer.json', content: composerjson }
+   ]" />
 
-### Step 4: Install Firebase PHP-JWT
+3. Install Firebase PHP-JWT
 
-Install the TuxCare-maintained Firebase PHP-JWT release that matches your project:
+   Install the TuxCare-maintained Firebase PHP-JWT release that matches your project:
 
-<CodeTabs :tabs="[
-  { title: 'Composer CLI', content: `composer require firebase/php-jwt:6.11.1-p2+tuxcare` },
-  { title: 'composer.json', content: pkgjson }
-]" />
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require firebase/php-jwt:6.11.1-p2+tuxcare` },
+     { title: 'composer.json', content: pkgjson }
+   ]" />
 
-**Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
+   **Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
 
-If you edited `composer.json` manually, run `composer update` to install the package:
+   If you edited `composer.json` manually, run `composer update` to install the package. Composer will resolve dependencies against the TuxCare repository and install the patched releases.
 
-```text
-composer update
-```
+</ELSSteps>
 
-Composer will resolve dependencies against the TuxCare repository and install the patched releases.
+## Troubleshooting
 
 ### Composer Repository Configuration
 
@@ -93,26 +85,6 @@ it usually means your project requires a package version that is not yet availab
 
 This allows Composer to fall back to Packagist for packages not available in the TuxCare repository, while still preferring TuxCare patches when available.
 
-## Vulnerability Exploitability eXchange (VEX)
-
-VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives and helps prioritize real risks.
-
-TuxCare provides VEX for Firebase PHP-JWT ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_php/firebase-php-jwt/](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/firebase-php-jwt/).
-
-## How to Upgrade to a Newer Version
-
-If you have already installed a TuxCare Firebase PHP-JWT package and want to upgrade to a newer release, update the version string in your `composer.json` file or run the `composer require` command with the new version:
-
-```text
-composer require firebase/php-jwt:VERSION-pN+tuxcare
-```
-
-Then run `composer update` to apply the changes:
-
-```text
-composer update
-```
-
 ## Resolved CVEs in Firebase PHP-JWT
 
 Fixes for the following vulnerabilities are available in ELS for Firebase PHP-JWT from TuxCare:
@@ -129,7 +101,15 @@ Fixes for the following vulnerabilities are available in ELS for Firebase PHP-JW
 
 </TableTabs>
 
-If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+## What's Next?
+
+<WhatsNext hide-title>
+
+* ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/firebase-php-jwt/) — Machine-readable vulnerability exploitability data
+* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=Firebase+PHP-JWT) — Track vulnerability fixes and updates
+* ![](/images/wrench.webp) [Managing the ELS repository](/els-for-libraries/managing-els-repository/) — Upgrade to a newer version and other repository operations
+
+</WhatsNext>
 
 <script setup>
 
