@@ -141,45 +141,67 @@ Fixes for the following vulnerabilities are available in ELS for Laravel from Tu
 
 <template #Laravel_5.4>
 
-| CVE ID         | Severity | Vulnerable versions           | Fixed in version    |
-|----------------|----------|-------------------------------|---------------------|
-| CVE-2021-43808 | Medium   | < 6.18.35, < 7.24.0           | 5.4.36-p2+tuxcare   |
+| CVE ID              | Severity | Vulnerable versions                                              | Fixed in version    |
+|---------------------|----------|------------------------------------------------------------------|---------------------|
+| CVE-2021-43808      | Medium   | < 6.18.35, < 7.24.0                                              | 5.4.36-p1+tuxcare   |
+| CVE-2021-21263      | High     | < 6.20.14, < 7.30.4, < 8.24.0                                    | 5.4.36-p2+tuxcare   |
+| GHSA-x7p5-p2c9-phvg | High     | < 6.20.14, < 7.30.4, < 8.24.0                                    | 5.4.36-p2+tuxcare   |
+| GHSA-jwvj-pwww-3mj5 | High     | < 6.20.14, < 7.30.4, < 8.24.0                                    | 5.4.36-p2+tuxcare   |
+| CVE-2017-14775      | Medium   | < 5.5.10                                                         | 5.4.36-p2+tuxcare   |
+| CVE-2017-16894      | High     | <= 5.5.21                                                        | 5.4.36-p2+tuxcare   |
+| CVE-2018-15133      | High     | <= 5.5.40, 5.6.0 - 5.6.29                                        | 5.4.36-p2+tuxcare   |
+| CVE-2024-52301      | High     | < 6.20.45, < 7.30.7, < 8.83.28, < 9.52.17, < 10.48.23, < 11.31.0 | 5.4.36-p2+tuxcare   |
+| CVE-2020-19316      | High     | < 5.8.17                                                         | 5.4.36-p2+tuxcare   |
+| CVE-2020-24941      | High     | < 6.18.35, < 7.24.0                                              | 5.4.36-p2+tuxcare   |
+| CVE-2025-27515      | Medium   | < 11.44.1, < 12.1.1                                              | 5.4.36-p2+tuxcare   |
+| GHSA-7852-w36x-6mf6 | Medium   | < 5.5.40, < 5.6.15                                               | 5.4.36-p2+tuxcare   |
+| GHSA-4mg9-vhxq-vm7j | High     | < 6.20.26, < 7.30.5, < 8.40.0                                    | 5.4.36-p3+tuxcare   |
+| GHSA-wq8p-mqvg-2p5h | High     | < 6.20.26, < 7.30.5, < 8.40.0                                    | 5.4.36-p3+tuxcare   |
 
 </template>
 
 <template #Laravel_5.5>
 
-| CVE ID              | Severity | Vulnerable versions           | Fixed in version    |
-|---------------------|----------|-------------------------------|---------------------|
-| CVE-2021-43808      | Medium   | < 6.18.35, < 7.24.0           | 5.5.50-p1+tuxcare   |
-| CVE-2020-24941      | High     | < 6.18.35, < 7.24.0           | 5.5.50-p1+tuxcare   |
-| GHSA-x7p5-p2c9-phvg | High     | < 6.20.14, < 7.30.4, < 8.24.0 | 5.5.50-p1+tuxcare   |
-| GHSA-qm5c-m76r-2hfr | Critical | < 6.18.31, < 7.22.4           | 5.5.50-p1+tuxcare   |
-| GHSA-4mg9-vhxq-vm7j | High     | < 6.18.35, < 7.24.0           | 5.5.50-p1+tuxcare   |
+| CVE ID              | Severity | Vulnerable versions                                              | Fixed in version    |
+|---------------------|----------|------------------------------------------------------------------|---------------------|
+| CVE-2021-43808      | Medium   | < 6.18.35, < 7.24.0                                              | 5.5.50-p1+tuxcare   |
+| CVE-2020-24941      | High     | < 6.18.35, < 7.24.0                                              | 5.5.50-p1+tuxcare   |
+| GHSA-x7p5-p2c9-phvg | High     | < 6.20.14, < 7.30.4, < 8.24.0                                    | 5.5.50-p1+tuxcare   |
+| GHSA-qm5c-m76r-2hfr | Critical | < 6.18.31, < 7.22.4                                              | 5.5.50-p1+tuxcare   |
+| GHSA-4mg9-vhxq-vm7j | High     | < 6.18.35, < 7.24.0                                              | 5.5.50-p1+tuxcare   |
+| CVE-2024-52301      | High     | < 6.20.45, < 7.30.7, < 8.83.28, < 9.52.17, < 10.48.23, < 11.31.0 | 5.5.50-p1+tuxcare   |
+| CVE-2020-19316      | High     | < 5.8.17                                                         | 5.5.50-p1+tuxcare   |
+| CVE-2025-27515      | Medium   | < 11.44.1, < 12.1.1                                              | 5.5.50-p1+tuxcare   |
 
 </template>
 
 <template #Laravel_5.6>
 
-| CVE ID              | Severity | Vulnerable versions           | Fixed in version    |
-|---------------------|----------|-------------------------------|---------------------|
-| CVE-2021-43808      | Medium   | < 6.18.35, < 7.24.0           | 5.6.40-p1+tuxcare   |
-| CVE-2020-24941      | High     | < 6.18.35, < 7.24.0           | 5.6.40-p1+tuxcare   |
-| GHSA-x7p5-p2c9-phvg | High     | < 6.20.14, < 7.30.4, < 8.24.0 | 5.6.40-p1+tuxcare   |
-| GHSA-qm5c-m76r-2hfr | Critical | < 6.18.31, < 7.22.4           | 5.6.40-p1+tuxcare   |
-| GHSA-4mg9-vhxq-vm7j | High     | < 6.18.35, < 7.24.0           | 5.6.40-p1+tuxcare   |
+| CVE ID              | Severity | Vulnerable versions                                              | Fixed in version    |
+|---------------------|----------|------------------------------------------------------------------|---------------------|
+| CVE-2021-43808      | Medium   | < 6.18.35, < 7.24.0                                              | 5.6.40-p1+tuxcare   |
+| CVE-2020-24941      | High     | < 6.18.35, < 7.24.0                                              | 5.6.40-p1+tuxcare   |
+| GHSA-x7p5-p2c9-phvg | High     | < 6.20.14, < 7.30.4, < 8.24.0                                    | 5.6.40-p1+tuxcare   |
+| GHSA-qm5c-m76r-2hfr | Critical | < 6.18.31, < 7.22.4                                              | 5.6.40-p1+tuxcare   |
+| GHSA-4mg9-vhxq-vm7j | High     | < 6.18.35, < 7.24.0                                              | 5.6.40-p1+tuxcare   |
+| CVE-2024-52301      | High     | < 6.20.45, < 7.30.7, < 8.83.28, < 9.52.17, < 10.48.23, < 11.31.0 | 5.6.40-p1+tuxcare   |
+| CVE-2020-19316      | High     | < 5.8.17                                                         | 5.6.40-p1+tuxcare   |
+| CVE-2025-27515      | Medium   | < 11.44.1, < 12.1.1                                              | 5.6.40-p1+tuxcare   |
 
 </template>
 
 <template #Laravel_5.7>
 
-| CVE ID              | Severity | Vulnerable versions           | Fixed in version    |
-|---------------------|----------|-------------------------------|---------------------|
-| CVE-2021-43808      | Medium   | < 6.18.35, < 7.24.0           | 5.7.29-p1+tuxcare   |
-| CVE-2020-24941      | High     | < 6.18.35, < 7.24.0           | 5.7.29-p1+tuxcare   |
-| GHSA-x7p5-p2c9-phvg | High     | < 6.20.14, < 7.30.4, < 8.24.0 | 5.7.29-p1+tuxcare   |
-| GHSA-qm5c-m76r-2hfr | Critical | < 6.18.31, < 7.22.4           | 5.7.29-p1+tuxcare   |
-| GHSA-4mg9-vhxq-vm7j | High     | < 6.18.35, < 7.24.0           | 5.7.29-p1+tuxcare   |
+| CVE ID              | Severity | Vulnerable versions                                              | Fixed in version    |
+|---------------------|----------|------------------------------------------------------------------|---------------------|
+| CVE-2021-43808      | Medium   | < 6.18.35, < 7.24.0                                              | 5.7.29-p1+tuxcare   |
+| CVE-2020-24941      | High     | < 6.18.35, < 7.24.0                                              | 5.7.29-p1+tuxcare   |
+| GHSA-x7p5-p2c9-phvg | High     | < 6.20.14, < 7.30.4, < 8.24.0                                    | 5.7.29-p1+tuxcare   |
+| GHSA-qm5c-m76r-2hfr | Critical | < 6.18.31, < 7.22.4                                              | 5.7.29-p1+tuxcare   |
+| GHSA-4mg9-vhxq-vm7j | High     | < 6.18.35, < 7.24.0                                              | 5.7.29-p1+tuxcare   |
+| CVE-2024-52301      | High     | < 6.20.45, < 7.30.7, < 8.83.28, < 9.52.17, < 10.48.23, < 11.31.0 | 5.7.29-p1+tuxcare   |
+| CVE-2020-19316      | High     | < 5.8.17                                                         | 5.7.29-p1+tuxcare   |
+| CVE-2025-27515      | Medium   | < 11.44.1, < 12.1.1                                              | 5.7.29-p1+tuxcare   |
 
 </template>
 
