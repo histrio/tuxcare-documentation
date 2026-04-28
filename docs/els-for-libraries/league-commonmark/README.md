@@ -80,8 +80,10 @@ Other versions upon request.
 
    </TableTabs>
 
-**Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
+   **Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
 
+   :::tip
+   
    If you edited `composer.json` manually, run `composer update` to install the package:
    
    ```

@@ -58,74 +58,74 @@ Other versions upon request.
 
    Install the TuxCare-maintained PHPUnit release that matches your project:
 
-  <TableTabs label="Choose version: " >
+   <TableTabs label="Choose version: " >
 
-  <template #PHPUnit_6.5>
+   <template #PHPUnit_6.5>
 
-  <CodeTabs :tabs="[
-    { title: 'Composer CLI', content: `composer require phpunit/phpunit:6.5.14-p1+tuxcare` },
-    { title: 'composer.json', content: phpunitjson65 }
-  ]" />
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require phpunit/phpunit:6.5.14-p1+tuxcare` },
+     { title: 'composer.json', content: phpunitjson65 }
+   ]" />
 
-  </template>
+   </template>
 
-  <template #PHPUnit_7.5>
+   <template #PHPUnit_7.5>
 
-  <CodeTabs :tabs="[
-    { title: 'Composer CLI', content: `composer require phpunit/phpunit:7.5.20-p1+tuxcare` },
-    { title: 'composer.json', content: phpunitjson75 }
-  ]" />
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require phpunit/phpunit:7.5.20-p1+tuxcare` },
+     { title: 'composer.json', content: phpunitjson75 }
+   ]" />
 
-  </template>
+   </template>
 
-  <template #PHPUnit_8.4>
+   <template #PHPUnit_8.4>
 
-  <CodeTabs :tabs="[
-    { title: 'Composer CLI', content: `composer require phpunit/phpunit:8.4.3-p1+tuxcare` },
-    { title: 'composer.json', content: phpunitjson84 }
-  ]" />
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require phpunit/phpunit:8.4.3-p1+tuxcare` },
+     { title: 'composer.json', content: phpunitjson84 }
+   ]" />
 
-  </template>
+   </template>
 
-  <template #PHPUnit_9.5>
+   <template #PHPUnit_9.5>
 
-  <CodeTabs :tabs="[
-    { title: 'Composer CLI', content: `composer require phpunit/phpunit:9.5.28-p1+tuxcare` },
-    { title: 'composer.json', content: phpunitjson95 }
-  ]" />
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require phpunit/phpunit:9.5.28-p1+tuxcare` },
+     { title: 'composer.json', content: phpunitjson95 }
+   ]" />
 
-  </template>
+   </template>
 
-  <template #PHPUnit_10.4>
+   <template #PHPUnit_10.4>
 
-  <CodeTabs :tabs="[
-    { title: 'Composer CLI', content: `composer require phpunit/phpunit:10.4.2-p1+tuxcare` },
-    { title: 'composer.json', content: phpunitjson104 }
-  ]" />
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require phpunit/phpunit:10.4.2-p1+tuxcare` },
+     { title: 'composer.json', content: phpunitjson104 }
+   ]" />
 
-  </template>
+   </template>
 
-  <template #PHPUnit_11.4>
+   <template #PHPUnit_11.4>
 
-  <CodeTabs :tabs="[
-    { title: 'Composer CLI', content: `composer require phpunit/phpunit:11.4.4-p1+tuxcare` },
-    { title: 'composer.json', content: phpunitjson114 }
-  ]" />
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require phpunit/phpunit:11.4.4-p1+tuxcare` },
+     { title: 'composer.json', content: phpunitjson114 }
+   ]" />
 
-  </template>
+   </template>
 
-  <template #PHPUnit_12.4>
+   <template #PHPUnit_12.4>
+ 
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require phpunit/phpunit:12.4.5-p1+tuxcare` },
+     { title: 'composer.json', content: phpunitjson124 }
+   ]" />
 
-  <CodeTabs :tabs="[
-    { title: 'Composer CLI', content: `composer require phpunit/phpunit:12.4.5-p1+tuxcare` },
-    { title: 'composer.json', content: phpunitjson124 }
-  ]" />
+   </template>
 
-  </template>
+   </TableTabs>
 
-  </TableTabs>
-
-**Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
+   **Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
 
    :::tip
 
