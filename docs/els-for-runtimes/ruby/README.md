@@ -22,13 +22,19 @@ alt-ruby provides a more flexible and convenient environment for working with di
 
 ## Supported OS and Ruby versions
 
-| Operating Systems | Package Type | OS Version     |
-| :---------------: | :----------: | :------------: |
-| Debian            | DEB          | 12, 13         |
+| Operating Systems                                                        | Package Type | OS Version | Ruby versions                 |
+| :----------------------------------------------------------------------: | :----------: | :--------: | :---------------------------: |
+| EL 8 (AlmaLinux, CentOS, CentOS Stream, CloudLinux, Oracle Linux, etc.)  | RPM          | 8.x        | 2.7, 3.0, 3.1, 3.2            |
+| EL 9 (AlmaLinux, CentOS, CloudLinux, Oracle Linux, etc.)                 | RPM          | 9.x        | 2.7, 3.0, 3.1, 3.2            |
+| EL 10 (AlmaLinux, CloudLinux, Oracle Linux, etc.)                        | RPM          | 10.x       | 2.7, 3.0, 3.1, 3.2            |
+| Debian                                                                   | DEB          | 11         | 2.7, 3.0, 3.1, 3.2            |
+| Debian                                                                   | DEB          | 12         | 2.6, 2.7, 3.0, 3.1, 3.2       |
+| Debian                                                                   | DEB          | 13         | 2.6, 2.7, 3.0, 3.1, 3.2       |
+| Ubuntu                                                                   | DEB          | 22.04      | 2.7, 3.0, 3.1, 3.2            |
+| Ubuntu                                                                   | DEB          | 24.04      | 2.7, 3.0, 3.1, 3.2            |
+| Alpine Linux                                                             | APK          | 3.22       | 2.6, 2.7, 3.0, 3.1, 3.2       |
 
-**Supported Ruby versions:** 2.6, 2.7, 3.0, 3.1
-
-**Supported architecture:** x86_64 (64-bit)
+**Supported architectures:** x86_64 on all OSes; aarch64 on Alpine Linux in addition to x86_64
 
 <ContactSales text="Other distros and architectures available upon request. Contact sales@tuxcare.com for more information." />
 
@@ -45,45 +51,61 @@ alt-ruby provides a more flexible and convenient environment for working with di
 
 1. Download the installer script
 
-   ```text
-   wget https://repo.alt.tuxcare.com/alt-ruby-els/install-els-alt-ruby-deb-repo.sh
-   ```
+   <CodeTabs :tabs="[
+     { title: 'RPM', content: `wget https://repo.alt.tuxcare.com/alt-ruby-els/install-els-alt-ruby-rpm-repo.sh` },
+     { title: 'DEB', content: `wget https://repo.alt.tuxcare.com/alt-ruby-els/install-els-alt-ruby-deb-repo.sh` },
+     { title: 'APK', content: `wget https://repo.alt.tuxcare.com/alt-ruby-els/install-els-alt-ruby-apk-repo.sh` }
+   ]" />
 
 2. Run the installer script with your license key
 
    The script registers the server with CLN, adds the PGP key and repository.
 
-   ```text
-   bash install-els-alt-ruby-deb-repo.sh --license-key XXX-XXXXXXXXXXXX
-   ```
+   <CodeTabs :tabs="[
+     { title: 'RPM', content: `sh install-els-alt-ruby-rpm-repo.sh --license-key XXX-XXXXXXXXXXXX` },
+     { title: 'DEB', content: `bash install-els-alt-ruby-deb-repo.sh --license-key XXX-XXXXXXXXXXXX` },
+     { title: 'APK', content: `sh install-els-alt-ruby-apk-repo.sh --license-key XXX-XXXXXXXXXXXX` }
+   ]" />
 
 3. Install a Ruby version
 
-   ```text
-   apt-get install alt-ruby27
-   ```
+   <CodeTabs :tabs="[
+     { title: 'RPM', content: `yum install alt-ruby27` },
+     { title: 'DEB', content: `apt-get install alt-ruby27` },
+     { title: 'APK', content: `apk add alt-ruby27` }
+   ]" />
 
    To see available packages:
 
-   ```text
-   apt list -a | grep alt-ruby
-   ```
+   <CodeTabs :tabs="[
+     { title: 'RPM', content: `yum list available 'alt-ruby*'` },
+     { title: 'DEB', content: `apt list -a | grep alt-ruby` },
+     { title: 'APK', content: `apk search alt-ruby` }
+   ]" />
 
 4. Verify the installation
 
-   `alt-ruby` versions are installed alongside the system default. To use a specific version:
+   Check that the binary exists and returns the expected version:
 
    ```text
-   source /opt/alt/alt-ruby27/enable
+   /opt/alt/<ruby-version>/bin/ruby -v
+   ```
+
+   Optionally, add it to `PATH` to use it as default:
+
+   ```text
+   export PATH=/opt/alt/<ruby-version>/bin:$PATH
    ruby -v
+   which ruby
    ```
 
 5. Update packages
 
-   ```text
-   apt-get update
-   apt-get --only-upgrade install alt-ruby*
-   ```
+   <CodeTabs :tabs="[
+     { title: 'RPM', content: `yum update 'alt-ruby*'` },
+     { title: 'DEB', content: `apt-get update && apt-get --only-upgrade install 'alt-ruby*'` },
+     { title: 'APK', content: `apk update && apk upgrade 'alt-ruby*'` }
+   ]" />
 
 </ELSSteps>
 
@@ -91,6 +113,9 @@ alt-ruby provides a more flexible and convenient environment for working with di
 
 <WhatsNext hide-title>
 
+* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=Ruby) — Track vulnerability fixes and updates
+* ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=Ruby) — Patched versions and changelogs
+* ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/products?product=Ruby) — Full list of product parts covered by ELS
 * ![](/images/shield.webp) [Machine-readable security data](../machine-readable-security-data/) — CSAF advisories and RSS feeds for Ruby ELS
 
 </WhatsNext>

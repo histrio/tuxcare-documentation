@@ -36,7 +36,7 @@
 
   <div class="txc-logos-list">
     <div class="heading text-center">
-      <h3>We Keep Your Runtimes Secure on Enterprise Linux, <br>Windows, and Debian-Based Operating Systems</h3>
+      <h3>We Keep Your Runtimes Secure on Enterprise Linux, Windows, <br>Debian-Based, and Alpine Linux Operating Systems</h3>
     </div>
 
     <div class="list">
@@ -91,7 +91,7 @@ const runtimes = [
   },
   {
     name: "Ruby",
-    versions: "2.6 | 2.7 | 3.0 | 3.1",
+    versions: "2.6 | 2.7 | 3.0 | 3.1 | 3.2",
     link: "./ruby/",
     icon: "/images/ruby.webp",
   },
@@ -125,6 +125,10 @@ const operatingSystems = [
   {
     name: "Ubuntu",
     icon: "/images/Ubuntu.webp",
+  },
+  {
+    name: "Alpine Linux",
+    icon: "/images/alpine-linux.webp",
   },
   {
     name: "Windows",
