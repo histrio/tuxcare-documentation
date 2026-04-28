@@ -324,9 +324,9 @@ TuxCare publishes VEX data for JavaScript ELS packages, including the **transiti
 
 For each published ELS package and version, TuxCare generates SBOM files. Those artifacts are published to TuxCare Nexus.
 
-You can browse SBOM files for Ember.js here:
+You can browse SBOM files for Ember.js transitive dependencies here:
 
-[https://nexus.repo.tuxcare.com/#browse/browse:els-js-sbom:ember](https://nexus.repo.tuxcare.com/#browse/browse:els-js-sbom:ember)
+[https://nexus.repo.tuxcare.com/#browse/browse:els-js-sbom](https://nexus.repo.tuxcare.com/#browse/browse:els-js-sbom)
 
 Use the credentials you received for TuxCare ELS ([Step 1: Get Token](#step-1:-get-token)) to access Nexus.
 
