@@ -141,8 +141,7 @@ This allows Composer to fall back to Packagist for packages not available in the
 
 <WhatsNext hide-title>
 
-* ![](/images/shield-alert.webp) [VEX feed — Symfony Process](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/symfony/process/) — Vulnerability Exploitability eXchange feed
-* ![](/images/shield-alert.webp) [VEX feed — Symfony HttpFoundation](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/symfony/http-foundation/) — Vulnerability Exploitability eXchange feed
+* ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/symfony/) — Vulnerability Exploitability eXchange feed
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=Symfony) — Track vulnerability fixes and updates
 * ![](/images/bolt.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=Symfony) — Released fixes for Symfony
 * ![](/images/box.webp) [Supported components](https://tuxcare.com/cve-tracker/products?product=Symfony) — Symfony components covered by ELS
