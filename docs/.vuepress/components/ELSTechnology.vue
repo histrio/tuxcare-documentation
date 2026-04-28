@@ -1580,7 +1580,7 @@ const techData = [
       },
       {
         name: "League Commonmark",
-        versions: "1.6.7",
+        versions: "1.6.7 | 2.7.1",
         link: "./league-commonmark/",
       },
       {
@@ -1595,13 +1595,18 @@ const techData = [
       },
       {
         name: "PHPUnit",
-        versions: "12.4.5",
+        versions: "6.5.14 | 7.5.20 | 8.4.3 | 9.5.28 | 10.4.2 | 11.4.4 | 12.4.5",
         link: "./phpunit/",
       },
       {
         name: "PhpSpreadsheet",
         versions: "4.5.0",
         link: "./phpspreadsheet/",
+      },
+      {
+        name: "Saloon",
+        versions: "3.15.0",
+        link: "./saloon/",
       },
       {
         name: "Symfony HttpFoundation",

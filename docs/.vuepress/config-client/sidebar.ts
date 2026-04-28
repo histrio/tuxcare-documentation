@@ -306,7 +306,7 @@ export default {
                 },
                 {
                     path: '/els-for-libraries/saloon/',
-                    icon: '/images/saloon.png',
+                    icon: '/images/saloon.webp',
                 },
                 {
                     path: '/els-for-libraries/swiftmailer/',

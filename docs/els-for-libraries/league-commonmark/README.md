@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for League CommonMark from TuxCare provides secu
 
 ## Supported Versions
 
-* **League CommonMark** 1.6.7
+* **League CommonMark** 1.6.7, 2.7.1
 
 Other versions upon request.
 
@@ -58,14 +58,29 @@ Other versions upon request.
 
    Install the TuxCare-maintained League CommonMark release that matches your project:
 
+   <TableTabs label="Choose version: " >
+
+   <template #League_CommonMark_1.6>
+
    <CodeTabs :tabs="[
-     { title: 'Composer CLI', content: `composer require league/commonmark:1.6.7-p2+tuxcare` },
-     { title: 'composer.json', content: commonmarkjson }
+     { title: 'Composer CLI', content: `composer require league/commonmark:1.6.7-p3+tuxcare` },
+     { title: 'composer.json', content: commonmarkjson16 }
    ]" />
 
-   **Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
+   </template>
 
-   :::tip
+   <template #League_CommonMark_2.7>
+
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require league/commonmark:2.7.1-p1+tuxcare` },
+     { title: 'composer.json', content: commonmarkjson27 }
+   ]" />
+
+   </template>
+
+   </TableTabs>
+
+**Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
 
    If you edited `composer.json` manually, run `composer update` to install the package:
    
@@ -111,10 +126,20 @@ Fixes for the following vulnerabilities are available in ELS for League CommonMa
 
 <template #League_CommonMark_1.6>
 
-| CVE ID             | Severity | Vulnerable versions | Fixed in version    |
-|--------------------|----------|---------------------|---------------------|
-| CVE-2025-46734     | Medium   | < 2.7.0             | 1.6.7-p2+tuxcare    |
+| CVE ID              | Severity | Vulnerable versions | Fixed in version    |
+|---------------------|----------|---------------------|---------------------|
+| CVE-2026-30838      | High     | < 2.8.1             | 1.6.7-p3+tuxcare    |
+| CVE-2025-46734      | Medium   | < 2.7.0             | 1.6.7-p2+tuxcare    |
 | GHSA-c2pc-g5qf-rfrf | High     | < 2.6.0             | 1.6.7-p1+tuxcare    |
+
+</template>
+
+<template #League_CommonMark_2.7>
+
+| CVE ID         | Severity | Vulnerable versions | Fixed in version    |
+|----------------|----------|---------------------|---------------------|
+| CVE-2026-33347 | High     | < 2.8.2             | 2.7.1-p1+tuxcare    |
+| CVE-2026-30838 | High     | < 2.8.1             | 2.7.1-p1+tuxcare    |
 
 </template>
 
@@ -160,10 +185,17 @@ const composerjson =
 const cli =
 `composer config repositories.tuxcare '{"type":"composer","url":"https://nexus.repo.tuxcare.com/repository/els_php/","options":{"http":{"verify":true}}}' --json`
 
-const commonmarkjson =
+const commonmarkjson16 =
 `{
     "require": {
-        "league/commonmark": "1.6.7-p2+tuxcare"
+        "league/commonmark": "1.6.7-p3+tuxcare"
+    }
+}`
+
+const commonmarkjson27 =
+`{
+    "require": {
+        "league/commonmark": "2.7.1-p1+tuxcare"
     }
 }`
 
