@@ -242,9 +242,10 @@ Fixes for the following vulnerabilities are available in ELS for Laravel from Tu
 
 <WhatsNext hide-title>
 
-* ![](/images/shield-alert.webp) [VEX feed — Laravel framework](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/laravel/framework/) — Vulnerability Exploitability eXchange feed
-* ![](/images/shield-alert.webp) [VEX feed — Illuminate View](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/illuminate/view/) — Vulnerability Exploitability eXchange feed
-* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/) — Track vulnerability fixes and updates
+* ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/) — Vulnerability Exploitability eXchange feed
+* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=Laravel) — Track vulnerability fixes and updates
+* ![](/images/bolt.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=Laravel) — Released fixes for Laravel
+* ![](/images/box.webp) [Supported components](https://tuxcare.com/cve-tracker/products?product=Laravel) — Laravel components covered by ELS
 * ![](/images/wrench.webp) [Managing the ELS repository](/els-for-libraries/managing-els-repository/) — Upgrade to a newer version
 
 </WhatsNext>
