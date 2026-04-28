@@ -13,20 +13,30 @@ Other versions upon request.
 <ELSPrerequisites>
 
 * A valid TuxCare ELS license key — contact [sales@tuxcare.com](mailto:sales@tuxcare.com) to obtain one. Anonymous access is disabled.
-* PHP and [Composer](https://getcomposer.org/) installed on the system
 
 </ELSPrerequisites>
 
 <ELSSteps>
 
-1. Configure Composer authentication
+1. Locate the `auth.json` file
 
-   Create or edit the `auth.json` file for the user running Composer:
+   Composer reads credentials from a per-user `auth.json`. Create or edit the file at:
 
-   * **Linux/macOS**: `~/.composer/auth.json`
-   * **Windows**: `%APPDATA%\Composer\auth.json`
+   * **Linux/macOS**: 
+     
+     ```
+     ~/.composer/auth.json
+     ```
 
-   Use either the Composer CLI or edit `auth.json` directly to add your credentials for `nexus.repo.tuxcare.com`:
+   * **Windows**:
+   
+     ```
+     %APPDATA%\Composer\auth.json
+     ```
+
+2. Add your TuxCare credentials
+
+   Use either the Composer CLI or edit `auth.json` directly to add credentials for `nexus.repo.tuxcare.com`:
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer config --global --auth http-basic.nexus.repo.tuxcare.com USERNAME PASSWORD` },
@@ -35,7 +45,7 @@ Other versions upon request.
 
    Replace `USERNAME` and `PASSWORD` with the credentials provided by TuxCare.
 
-2. Register the TuxCare repository
+3. Register the TuxCare repository
 
    Add the `els_php` Composer repository either via CLI or by editing `composer.json`:
 
@@ -44,7 +54,7 @@ Other versions upon request.
      { title: 'composer.json', content: composerjson }
    ]" />
 
-3. Install CakePHP
+4. Install CakePHP
 
    Install the TuxCare-maintained CakePHP release that matches your project:
 
@@ -55,11 +65,19 @@ Other versions upon request.
 
    **Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
 
-   If you edited `composer.json` manually, run `composer update` to install the package. Composer will resolve dependencies against the TuxCare repository and install the patched releases.
+   :::tip
+
+   If you edited `composer.json` manually, run `composer update` to install the package:
+   
+   ```
+   composer update
+   ```
+   
+   Composer will resolve dependencies against the TuxCare repository and install the patched releases.
+
+   :::
 
 </ELSSteps>
-
-## Troubleshooting
 
 ### Composer Repository Configuration
 
@@ -106,9 +124,9 @@ Fixes for the following vulnerabilities are available in ELS for CakePHP from Tu
 
 <WhatsNext hide-title>
 
-* ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/cakephp/) — Machine-readable vulnerability exploitability data
-* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=CakePHP) — Track vulnerability fixes and updates
-* ![](/images/wrench.webp) [Managing the ELS repository](/els-for-libraries/managing-els-repository/) — Upgrade to a newer version and other repository operations
+* ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/cakephp/cakephp/) — Vulnerability Exploitability eXchange feed
+* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/) — Track vulnerability fixes and updates
+* ![](/images/wrench.webp) [Managing the ELS repository](/els-for-libraries/managing-els-repository/) — Upgrade to a newer version
 
 </WhatsNext>
 
