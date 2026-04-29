@@ -149,7 +149,8 @@ To check whether the package is installed and see its current version, use the f
 
   <CodeTabs :tabs="[
     { title: 'RPM', content: `sudo yum list installed | grep php` },
-    { title: 'DEB', content: `dpkg -l | grep php` }
+    { title: 'DEB', content: `dpkg -l | grep php` },
+    { title: 'APK', content: `apk info -v | grep alt-php` }
   ]" />
 
   </template>
@@ -160,14 +161,16 @@ To find out which groups/meta-packages are available for installation:
 
   <CodeTabs :tabs="[
     { title: 'RPM', content: `sudo yum group list` },
-    { title: 'DEB', content: `apt list -a | grep alt-php` }
+    { title: 'DEB', content: `apt list -a | grep alt-php` },
+    { title: 'APK', content: `apk search alt-php` }
   ]" />
 
 To get a list of packages of a specific group or meta package:
 
   <CodeTabs :tabs="[
     { title: 'RPM', content: `sudo yum groupinfo alt-phpXY` },
-    { title: 'DEB', content: `apt-cache showpkg alt-phpXY` }
+    { title: 'DEB', content: `apt-cache showpkg alt-phpXY` },
+    { title: 'APK', content: `apk info -R alt-phpXY` }
   ]" />
 
 Replace `XY` with a version of alt-php.
@@ -182,7 +185,10 @@ Replace `XY` with a version of alt-php.
       { title: 'RPM', content: `sudo yum check-update` },
       { title: 'DEB', content:
       `sudo apt-get update
-      apt list --upgradable` }
+      apt list --upgradable` },
+      { title: 'APK', content:
+      `sudo apk update
+      apk list --upgradable` }
     ]" />
 
 2. Update packages:
@@ -191,14 +197,16 @@ Replace `XY` with a version of alt-php.
 
        <CodeTabs :tabs="[
          { title: 'RPM', content: `sudo yum update alt-php*` },
-         { title: 'DEB', content: `sudo apt-get upgrade alt-php*` }
+         { title: 'DEB', content: `sudo apt-get upgrade alt-php*` },
+         { title: 'APK', content: `sudo apk upgrade 'alt-php*'` }
        ]" />
 
    * Update a specific version:
 
        <CodeTabs :tabs="[
          { title: 'RPM', content: `sudo yum groupupdate alt-phpXY` },
-         { title: 'DEB', content: `sudo apt-get upgrade alt-phpXY` }
+         { title: 'DEB', content: `sudo apt-get upgrade alt-phpXY` },
+         { title: 'APK', content: `sudo apk upgrade alt-phpXY` }
        ]" />
 
      Replace `XY` with a version of alt-php.
@@ -209,7 +217,8 @@ Replace `XY` with a version of alt-php.
 
   <CodeTabs :tabs="[
     { title: 'RPM', content: `sudo yum search alt-package-name` },
-    { title: 'DEB', content: `sudo apt search alt-package-name` }
+    { title: 'DEB', content: `sudo apt search alt-package-name` },
+    { title: 'APK', content: `apk search alt-package-name` }
   ]" />
 
 Replace `alt-package-name` with the specific name of the package you are looking for.
