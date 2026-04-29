@@ -36,7 +36,7 @@
 
   <div class="txc-logos-list">
     <div class="heading text-center">
-      <h3>We Keep Your Runtimes Secure on Enterprise Linux, Windows, <br>Debian-Based, and Alpine Linux Operating Systems</h3>
+      <h3>We Keep Your Runtimes Secure on Enterprise Linux, <br>Windows, and Debian-Based Operating Systems</h3>
     </div>
 
     <div class="list">
@@ -125,10 +125,6 @@ const operatingSystems = [
   {
     name: "Ubuntu",
     icon: "/images/Ubuntu.webp",
-  },
-  {
-    name: "Alpine Linux",
-    icon: "/images/alpine-linux.webp",
   },
   {
     name: "Windows",
