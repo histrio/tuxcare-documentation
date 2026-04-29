@@ -24,13 +24,15 @@ alt-python provides a more flexible and convenient environment for working with 
 
 | Operating Systems                                            | Package Type | OS Version                         | Python versions               |
 | :----------------------------------------------------------: | :----------: | :--------------------------------: | :---------------------------: |
-| EL 7 (CentOS, CloudLinux, Oracle Linux, etc.)                | RPM          | 7.x                               | 2.7, 3.6                     |
-| EL 8 (CentOS, CentOS Stream, CloudLinux, Oracle Linux, etc.) | RPM          | 8.x                               | 2.7, 3.6                     |
-| EL 9 (AlmaLinux, CentOS, CloudLinux, Oracle Linux, etc.)     | RPM          | 9.x                               | 2.7, 3.6                     |
-| EL 10 (AlmaLinux, CloudLinux, Oracle Linux, etc.)            | RPM          | 10.x                              | 2.7, 3.6                     |
-| Ubuntu                                                       | DEB          | 16.04, 18.04, 20.04, 22.04, 24.04 | 2.7, 3.6                     |
-| Debian                                                       | DEB          | 10, 11                            | 2.7, 3.6                     |
-| Debian                                                       | DEB          | 12, 13                            | 2.7, 3.6, 3.7, 3.8, 3.9     |
+| EL 6 (CentOS, CloudLinux, Oracle Linux, etc.)                | RPM          | 6.x                                | 2.7, 3.6                      |
+| EL 7 (CentOS, CloudLinux, Oracle Linux, etc.)                | RPM          | 7.x                                | 2.7, 3.6                      |
+| EL 8 (CentOS, CentOS Stream, CloudLinux, Oracle Linux, etc.) | RPM          | 8.x                                | 2.7, 3.6                      |
+| EL 9 (AlmaLinux, CentOS, CloudLinux, Oracle Linux, etc.)     | RPM          | 9.x                                | 2.7, 3.6                      |
+| EL 10 (AlmaLinux, CloudLinux, Oracle Linux, etc.)            | RPM          | 10.x                               | 2.7, 3.6                      |
+| Ubuntu                                                       | DEB          | 16.04, 18.04, 20.04, 22.04, 24.04  | 2.7, 3.6                      |
+| Debian                                                       | DEB          | 10, 11                             | 2.7, 3.6                      |
+| Debian                                                       | DEB          | 12, 13                             | 2.7, 3.6, 3.7, 3.8, 3.9       |
+| Alpine Linux                                                 | APK          | 3.22, 3.23                         | 3.6, 3.7, 3.8, 3.9            |
 
 **Supported architecture:** x86_64 (64-bit)
 
@@ -51,7 +53,8 @@ alt-python provides a more flexible and convenient environment for working with 
 
    <CodeTabs :tabs="[
      { title: 'RPM', content: `wget https://repo.alt.tuxcare.com/alt-python-els/install-els-alt-python-rpm-repo.sh` },
-     { title: 'DEB', content: `wget https://repo.alt.tuxcare.com/alt-python-els/install-els-alt-python-deb-repo.sh` }
+     { title: 'DEB', content: `wget https://repo.alt.tuxcare.com/alt-python-els/install-els-alt-python-deb-repo.sh` },
+     { title: 'APK', content: `wget https://repo.alt.tuxcare.com/alt-python-els/install-els-alt-python-apk-repo.sh` }
    ]" />
 
 2. Run the installer script with your license key
@@ -60,7 +63,8 @@ alt-python provides a more flexible and convenient environment for working with 
 
    <CodeTabs :tabs="[
      { title: 'RPM', content: `sh install-els-alt-python-rpm-repo.sh --license-key XXX-XXXXXXXXXXXX` },
-     { title: 'DEB', content: `bash install-els-alt-python-deb-repo.sh --license-key XXX-XXXXXXXXXXXX` }
+     { title: 'DEB', content: `bash install-els-alt-python-deb-repo.sh --license-key XXX-XXXXXXXXXXXX` },
+     { title: 'APK', content: `sh install-els-alt-python-apk-repo.sh --license-key XXX-XXXXXXXXXXXX` }
    ]" />
 
 3. Install a Python version
@@ -69,16 +73,40 @@ alt-python provides a more flexible and convenient environment for working with 
 
    <CodeTabs :tabs="[
      { title: 'RPM', content: `yum install alt-python36 --enablerepo crb` },
-     { title: 'DEB', content: `apt-get install alt-python36` }
+     { title: 'DEB', content: `apt-get install alt-python36` },
+     { title: 'APK', content: `apk add alt-python36` }
+   ]" />
+
+   To see available packages:
+
+   <CodeTabs :tabs="[
+     { title: 'RPM', content: `yum list available 'alt-python*'` },
+     { title: 'DEB', content: `apt list -a | grep alt-python` },
+     { title: 'APK', content: `apk search alt-python` }
    ]" />
 
 4. Verify the installation
 
-   `alt-python` versions are installed alongside the system default. To use a specific version:
+   Check that the binary exists and returns the expected version:
+
+   ```text
+   /opt/alt/<python-version>/bin/python3 -V
+   ```
+
+   Optionally, add it to `PATH` to use it as default:
+
+   ```text
+   export PATH=/opt/alt/<python-version>/bin:$PATH
+   python3 -V
+   which python3
+   ```
+
+5. Update packages
 
    <CodeTabs :tabs="[
-     { title: 'RPM', content: rpmex },
-     { title: 'DEB', content: debex }
+     { title: 'RPM', content: `yum update 'alt-python*'` },
+     { title: 'DEB', content: `apt-get update && apt-get --only-upgrade install 'alt-python*'` },
+     { title: 'APK', content: `apk update && apk upgrade 'alt-python*'` }
    ]" />
 
 </ELSSteps>
@@ -87,25 +115,9 @@ alt-python provides a more flexible and convenient environment for working with 
 
 <WhatsNext hide-title>
 
+* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=Python) — Track vulnerability fixes and updates
+* ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=Python) — Patched versions and changelogs
+* ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/products?product=Python) — Full list of product parts covered by ELS
 * ![](/images/shield.webp) [Machine-readable security data](../machine-readable-security-data/) — OVAL, CSAF, Errata, and RSS feeds for Python ELS
 
 </WhatsNext>
-
-<script setup>
-
-const rpmex =
-`$ /opt/alt/python36/bin/python3.6
-Python 3.6.15 (default, Apr 10 2024, 00:00:00) 
-[GCC 11.5.0 20240719 (Red Hat 11.5.0-5)] on linux
-Type "help", "copyright", "credits" or "license" for more information.
->>> print("Hello, World!")
-Hello, World!`
-
-const debex =
-`$ /opt/alt/python36/bin/python3.6
-Python 3.6.15 (default, Sep 18 2025, 13:57:38) 
-[GCC 5.4.0 20160609] on linux
-Type "help", "copyright", "credits" or "license" for more information.
->>>`
-
-</script>
