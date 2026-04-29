@@ -26,17 +26,18 @@ alt-php provides a more flexible and convenient environment for working with dif
 
   <template #Active_Support>
 
-| OS                                                                       | Package Type | OS Version                        |
-| :----------------------------------------------------------------------: | :----------: | :-------------------------------: |
-| EL 7 ( Amazon Linux 2, CentOS, CloudLinux, Oracle Linux, etc.)           | RPM          | 7.x                        |
-| EL 8 ( AlmaLinux, CentOS, CentOS Stream, CloudLinux, Oracle Linux, etc.) | RPM          | 8.x                        |
-| EL 9 ( AlmaLinux, CentOS, CloudLinux, Oracle Linux, etc.)                | RPM          | 9.x                        |
-| EL 10 ( AlmaLinux, CloudLinux, Oracle Linux, etc.)                       | RPM          | 10.x                        |
-| Ubuntu                                                                   | DEB          | 16.04, 18.04, 20.04, 22.04, 24.04 |
-| Debian                                                                   | DEB          | 10, 11, 12, 13                    |
-| Windows                                                                  | -            | Windows Server 2019, 2022, 2025   |
-
-**For supported PHP versions, see [tuxcare.com/cve-tracker](https://tuxcare.com/cve-tracker/).**
+| OS                                                                       | Package Type | OS Version                        | PHP versions                              |
+| :----------------------------------------------------------------------: | :----------: | :-------------------------------: | :---------------------------------------: |
+| EL 7 ( Amazon Linux 2, CentOS, CloudLinux, Oracle Linux, etc.)           | RPM          | 7.x                               | 5.1–5.6, 7.0–7.4, 8.0–8.2                 |
+| EL 8 ( AlmaLinux, CentOS, CentOS Stream, CloudLinux, Oracle Linux, etc.) | RPM          | 8.x                               | 5.1–5.6, 7.0–7.4, 8.0–8.2                 |
+| EL 9 ( AlmaLinux, CentOS, CloudLinux, Oracle Linux, etc.)                | RPM          | 9.x                               | 5.2–5.6, 7.0–7.4, 8.0–8.2                 |
+| EL 10 ( AlmaLinux, CloudLinux, Oracle Linux, etc.)                       | RPM          | 10.x                              | 5.3, 5.6, 7.0–7.4, 8.0–8.2                |
+| Ubuntu                                                                   | DEB          | 16.04                             | 5.6, 7.0–7.4, 8.0–8.2                     |
+| Ubuntu                                                                   | DEB          | 18.04, 20.04, 22.04, 24.04        | 5.2, 5.6, 7.0–7.4, 8.0–8.2                |
+| Debian                                                                   | DEB          | 10, 11, 12                        | 5.6, 7.0–7.4, 8.0–8.2                     |
+| Debian                                                                   | DEB          | 13                                | 5.2–5.6, 7.0–7.4, 8.0–8.2                 |
+| Alpine Linux                                                             | APK          | 3.22, 3.23                        | 7.3, 7.4, 8.0, 8.1                        |
+| Windows                                                                  | -            | Windows Server 2019, 2022, 2025   | —                                         |
 
 **Supported architecture:** x86_64 (64-bit) on Linux
 
@@ -92,7 +93,8 @@ sudo yum install libvpx-1.3.0
 
    <CodeTabs :tabs="[
      { title: 'RPM', content: `wget https://repo.alt.tuxcare.com/alt-php-els/install-els-alt-php-rpm-repo.sh` },
-     { title: 'DEB', content: `wget https://repo.alt.tuxcare.com/alt-php-els/install-els-alt-php-deb-repo.sh` }
+     { title: 'DEB', content: `wget https://repo.alt.tuxcare.com/alt-php-els/install-els-alt-php-deb-repo.sh` },
+     { title: 'APK', content: `wget https://repo.alt.tuxcare.com/alt-php-els/install-els-alt-php-apk-repo.sh` }
    ]" />
 
 2. Run the installer script with your license key
@@ -101,7 +103,8 @@ sudo yum install libvpx-1.3.0
 
    <CodeTabs :tabs="[
      { title: 'RPM', content: `sh install-els-alt-php-rpm-repo.sh --license-key XXX-XXXXXXXXXXXX` },
-     { title: 'DEB', content: `bash install-els-alt-php-deb-repo.sh --license-key XXX-XXXXXXXXXXXX` }
+     { title: 'DEB', content: `bash install-els-alt-php-deb-repo.sh --license-key XXX-XXXXXXXXXXXX` },
+     { title: 'APK', content: `sh install-els-alt-php-apk-repo.sh --license-key XXX-XXXXXXXXXXXX` }
    ]" />
 
 3. Install a PHP version
@@ -110,14 +113,16 @@ sudo yum install libvpx-1.3.0
 
    <CodeTabs :tabs="[
      { title: 'RPM', content: `yum groupinstall alt-php73` },
-     { title: 'DEB', content: `apt-get install alt-php73-meta` }
+     { title: 'DEB', content: `apt-get install alt-php73-meta` },
+     { title: 'APK', content: `apk add alt-php73` }
    ]" />
 
    To install all versions at the same time:
 
    <CodeTabs :tabs="[
      { title: 'RPM', content: `yum groupinstall alt-php` },
-     { title: 'DEB', content: `apt-get install alt-php` }
+     { title: 'DEB', content: `apt-get install alt-php` },
+     { title: 'APK', content: `apk add alt-php` }
    ]" />
 
 4. Verify the installation
@@ -126,7 +131,8 @@ sudo yum install libvpx-1.3.0
 
    <CodeTabs :tabs="[
      { title: 'RPM', content: `rpm -qa | grep alt-php` },
-     { title: 'DEB', content: `dpkg -l | grep alt-php` }
+     { title: 'DEB', content: `dpkg -l | grep alt-php` },
+     { title: 'APK', content: `apk info | grep alt-php` }
    ]" />
 
 </ELSSteps>
@@ -999,7 +1005,10 @@ The PHP core includes many built-in extensions that provide basic functionality,
 
 <WhatsNext hide-title>
 
-* ![](/images/shield.webp) [Machine-readable security data](../machine-readable-security-data/) — OVAL, CSAF, Errata, and RSS feeds for PHP ELS
+* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=PHP) — Track vulnerability fixes and updates
+* ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=PHP) — Patched versions and changelogs
+* ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/products?product=PHP) — Full list of product parts covered by ELS
+* ![](/images/shield.webp) [Machine-readable security data](/els-for-runtimes/machine-readable-security-data/#php) — OVAL, CSAF, Errata, and RSS feeds for PHP ELS
 * ![](/images/clipboard-notes.webp) [PHP Changelog](https://changelog.cloudlinux.com/) — latest updates, fixes, and enhancements for ALT-PHP
 
 </WhatsNext>
