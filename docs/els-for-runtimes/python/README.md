@@ -25,7 +25,6 @@ alt-python provides a more flexible and convenient environment for working with 
 | Operating Systems                                            | Package Type | OS Version                         | Python versions               |
 | :----------------------------------------------------------: | :----------: | :--------------------------------: | :---------------------------: |
 | EL 6 (CentOS, CloudLinux, Oracle Linux, etc.)                | RPM          | 6.x                                | 2.7, 3.6                      |
-| EL 7 (CentOS, CloudLinux, Oracle Linux, etc.)                | RPM          | 7.x                                | 2.7, 3.6                      |
 | EL 8 (CentOS, CentOS Stream, CloudLinux, Oracle Linux, etc.) | RPM          | 8.x                                | 2.7, 3.6                      |
 | EL 9 (AlmaLinux, CentOS, CloudLinux, Oracle Linux, etc.)     | RPM          | 9.x                                | 2.7, 3.6                      |
 | EL 10 (AlmaLinux, CloudLinux, Oracle Linux, etc.)            | RPM          | 10.x                               | 2.7, 3.6                      |
@@ -93,7 +92,13 @@ alt-python provides a more flexible and convenient environment for working with 
    /opt/alt/<python-version>/bin/python3 -V
    ```
 
-   Optionally, add it to `PATH` to use it as default:
+   Optionally, verify execution:
+
+   ```text
+   /opt/alt/<python-version>/bin/python3 -c "print('Hello, World!')"
+   ```
+
+   To use this version as default in the current shell:
 
    ```text
    export PATH=/opt/alt/<python-version>/bin:$PATH
