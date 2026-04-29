@@ -81,9 +81,9 @@ TuxCare provides additional security support for PHP versions after the end of s
 * Root or `sudo` access to the server
 * **Amazon Linux 2-specific.** Before installing `alt-php`, make sure `libvpx` is installed. Amazon Linux 2 provides two versions of libvpx: 1.9 (the default) and 1.3. `alt-php` requires 1.3 for compatibility with EL 7 systems like CentOS 7:
 
-```
-sudo yum install libvpx-1.3.0
-```
+  ```
+  sudo yum install libvpx-1.3.0
+  ```
 
 </ELSPrerequisites>
 
