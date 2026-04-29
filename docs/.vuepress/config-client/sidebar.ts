@@ -486,6 +486,12 @@ export default {
                     path: '/els-for-libraries/dotnet/',
                     icon: '/images/dotnet-logo.webp',
                 },
+                {
+                    title: 'Resources',
+                    type: 'section-header',
+                    icon: '/images/star.webp',
+                },
+                "/els-for-libraries/managing-els-repository/",
             ]
         },
     ],
