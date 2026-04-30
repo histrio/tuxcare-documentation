@@ -55,6 +55,11 @@ export default [
         link: "/els-for-applications/",
     },
     {
+        title: "SecureChain for Open Source",
+        description: "delivers verified, malware-free open-source packages from a single trusted source — stopping threats at install, continuously patching vulnerabilities, and extending protection beyond end of life across npm, Python, Java, Go, Rust, and PHP.",
+        link: "/securechain/",
+    },
+    {
         title: "Subscription Management Portal",
         description: "The TuxCare subscription management portal is designed to easily manage your licenses of TuxCare products and services by means of a user-friendly interface.",
         link: "/tuxcare-cln/",
