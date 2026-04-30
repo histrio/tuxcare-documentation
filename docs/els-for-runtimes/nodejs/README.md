@@ -22,15 +22,17 @@ alt-nodejs provides a more flexible and convenient environment for working with 
 
 ## Supported OS and Node.js versions
 
-| Operating Systems                                            | Package Type | OS Version                        |
-| :----------------------------------------------------------: | :----------: | :-------------------------------: |
-| EL 7 (CentOS, CloudLinux, Oracle Linux, etc.)                | RPM          | 7.x                               |
-| EL 8 (CentOS, CentOS Stream, CloudLinux, Oracle Linux, etc.) | RPM          | 8.x                               |
-| EL 9 (AlmaLinux, CentOS, CloudLinux, Oracle Linux, etc.)    | RPM          | 9.x                               |
-| Ubuntu                                                       | DEB          | 18.04, 20.04, 22.04, 24.04        |
-| Debian                                                       | DEB          | 10, 11, 12, 13                    |
-
-**For supported Node.js versions, see [tuxcare.com/cve-tracker](https://tuxcare.com/cve-tracker/).**
+| Operating Systems                                            | Package Type | OS Version                        | Node.js versions                  |
+| :----------------------------------------------------------: | :----------: | :-------------------------------: | :-------------------------------: |
+| EL 7 (CentOS, CloudLinux, Oracle Linux, etc.)                | RPM          | 7.x                               | 12, 14, 16, 18, 20                |
+| EL 8 (CentOS, CentOS Stream, CloudLinux, Oracle Linux, etc.) | RPM          | 8.x                               | 12, 14, 16, 18, 20                |
+| EL 9 (AlmaLinux, CentOS, CloudLinux, Oracle Linux, etc.)     | RPM          | 9.x                               | 12, 14, 16, 18, 20                |
+| EL 10 (AlmaLinux, CloudLinux, Oracle Linux, etc.)            | RPM          | 10.x                              | 14, 16, 18, 20                    |
+| Ubuntu                                                       | DEB          | 18.04, 20.04, 22.04, 24.04        | 12, 14, 16, 18, 20                |
+| Debian                                                       | DEB          | 10, 11                            | 12, 14, 16, 18, 20                |
+| Debian                                                       | DEB          | 12                                | 12, 14, 16, 18, 20, 23            |
+| Debian                                                       | DEB          | 13                                | 12, 14, 16, 18, 20, 22, 23, 24    |
+| Alpine Linux                                                 | APK          | 3.22, 3.23                        | 12, 14, 16, 18, 20, 22, 23, 24    |
 
 **Supported architecture:** x86_64 (64-bit)
 
@@ -51,7 +53,8 @@ alt-nodejs provides a more flexible and convenient environment for working with 
 
    <CodeTabs :tabs="[
      { title: 'RPM', content: `wget https://repo.alt.tuxcare.com/alt-nodejs-els/install-els-alt-nodejs-rpm-repo.sh` },
-     { title: 'DEB', content: `wget https://repo.alt.tuxcare.com/alt-nodejs-els/install-els-alt-nodejs-deb-repo.sh` }
+     { title: 'DEB', content: `wget https://repo.alt.tuxcare.com/alt-nodejs-els/install-els-alt-nodejs-deb-repo.sh` },
+     { title: 'APK', content: `wget https://repo.alt.tuxcare.com/alt-nodejs-els/install-els-alt-nodejs-apk-repo.sh` }
    ]" />
 
 2. Run the installer script with your license key
@@ -60,7 +63,8 @@ alt-nodejs provides a more flexible and convenient environment for working with 
 
    <CodeTabs :tabs="[
      { title: 'RPM', content: `sh install-els-alt-nodejs-rpm-repo.sh --license-key XXX-XXXXXXXXXXXX` },
-     { title: 'DEB', content: `bash install-els-alt-nodejs-deb-repo.sh --license-key XXX-XXXXXXXXXXXX` }
+     { title: 'DEB', content: `bash install-els-alt-nodejs-deb-repo.sh --license-key XXX-XXXXXXXXXXXX` },
+     { title: 'APK', content: `sh install-els-alt-nodejs-apk-repo.sh --license-key XXX-XXXXXXXXXXXX` }
    ]" />
 
 3. Install a Node.js version
@@ -69,30 +73,47 @@ alt-nodejs provides a more flexible and convenient environment for working with 
 
    <CodeTabs :tabs="[
      { title: 'RPM', content: `yum install alt-nodejs18*` },
-     { title: 'DEB', content: `apt-get install alt-nodejs18*` }
+     { title: 'DEB', content: `apt-get install alt-nodejs18*` },
+     { title: 'APK', content: `apk add 'alt-nodejs18*'` }
    ]" />
 
    To install all versions at the same time:
 
    <CodeTabs :tabs="[
      { title: 'RPM', content: `yum groupinstall alt-nodejs` },
-     { title: 'DEB', content: `apt-get install alt-nodejs` }
+     { title: 'DEB', content: `apt-get install alt-nodejs` },
+     { title: 'APK', content: `apk add alt-nodejs` }
    ]" />
 
    To list available groups/meta-packages:
 
    <CodeTabs :tabs="[
      { title: 'RPM', content: `sudo yum group list` },
-     { title: 'DEB', content: `apt list -a | grep alt-nodejs` }
+     { title: 'DEB', content: `apt list -a | grep alt-nodejs` },
+     { title: 'APK', content: `apk search alt-nodejs` }
    ]" />
 
 4. Verify the installation
 
-   `alt-nodejs` versions are installed alongside the system default. To use a specific version:
+   Activate the desired version and check it returns the expected version:
+
+   ```text
+   source /opt/alt/alt-nodejs<version>/enable
+   node -v
+   ```
+
+   Optionally, verify execution:
+
+   ```text
+   node -e "console.log('Hello, World!')"
+   ```
+
+5. Update packages
 
    <CodeTabs :tabs="[
-     { title: 'RPM', content: rpmex },
-     { title: 'DEB', content: debex }
+     { title: 'RPM', content: `yum update 'alt-nodejs*'` },
+     { title: 'DEB', content: `apt-get update && apt-get --only-upgrade install 'alt-nodejs*'` },
+     { title: 'APK', content: `apk update && apk upgrade 'alt-nodejs*'` }
    ]" />
 
 </ELSSteps>
@@ -101,22 +122,9 @@ alt-nodejs provides a more flexible and convenient environment for working with 
 
 <WhatsNext hide-title>
 
-* ![](/images/shield.webp) [Machine-readable security data](../machine-readable-security-data/) — CSAF advisories and RSS feeds for Node.js ELS
+* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=Node.js) — Track vulnerability fixes and updates
+* ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=Node.js) — Patched versions and changelogs
+* ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/products?product=Node.js) — Full list of product parts covered by ELS
+* ![](/images/shield.webp) [Machine-readable security data](/els-for-runtimes/machine-readable-security-data/#nodejs) — CSAF advisories and RSS feeds for Node.js ELS
 
 </WhatsNext>
-
-<!--examples -->
-
-<script setup>
-
-const rpmex =
-`$ source /opt/alt/alt-nodejs18/enable
-$ node -v 
-v18.20.8`
-
-const debex =
-`$ source /opt/alt/alt-nodejs18/enable
-$ node -v 
-v18.20.8`
-
-</script>
