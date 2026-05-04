@@ -16,11 +16,25 @@ ePortal software can help protect servers located behind the firewall (i.e. with
 
 **Disk:**
 
-* 100 GB minimum, 200 GB recommended (20GB in case of cache mode)
+| Installation mode | Minimum | Recommended |
+|-------------------|---------|-------------|
+| Default (mirror all distros) | 1 TB | 2 TB |
+| With distro filter | Scales with the subset of mirrored distros | — |
+| [Cache mode](#cache-mode) | 25 GB | 50 GB |
+
 * SSD with at least 100 IOPS
+* Plan for additional growth of about 4–5 GiB/month
 
 :::tip Note
-SSD based storage is a crucial requirement for ePortal server.
+SSD-based storage is a crucial requirement for ePortal server.
+:::
+
+:::tip Reducing disk usage
+If full mirroring is not required, the footprint can be reduced significantly by:
+
+* Enabling [cache mode](#cache-mode) during installation — patchsets are served on demand from TuxCare instead of stored locally.
+* Limiting the set of mirrored distros via the **Patch Source** configuration — only the selected distros are downloaded.
+* Running `kc.eportal --clean-releases` regularly to purge obsolete patchsets. See [Clean obsolete releases](#clean-obsolete-releases).
 :::
 
 **CPU:**
