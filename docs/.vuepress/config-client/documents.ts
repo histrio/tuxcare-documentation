@@ -56,7 +56,7 @@ export default [
     },
     {
         title: "SecureChain for Open Source",
-        description: "delivers verified, malware-free open-source packages from a single trusted source — stopping threats at install, continuously patching vulnerabilities, and extending protection beyond end of life across npm, Python, Java, Go, Rust, and PHP.",
+        description: "delivers verified, malware-free open-source packages from a single trusted source - stopping threats at install, continuously patching vulnerabilities, and extending protection beyond end of life across Python, Java, JavaScript, Go, Rust, and PHP.",
         link: "/securechain/",
     },
     {

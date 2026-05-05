@@ -2,30 +2,16 @@
 
 # SecureChain for Open Source Software
 
-**Get your open-source packages – verified, malware-free, and secured for as long as they're in your stack.**
-
-SecureChain stops threats at install, continuously patches vulnerabilities, and extends protection beyond end of life. One trusted source for npm, Python, Java, Go, Rust, and PHP.
-
-[Contact sales](mailto:sales@tuxcare.com) to request a quote or ask a question.
-
-## Supported Ecosystems
-
 <SecureChainTechnology />
 
-## Your stack – minus the supply chain risks
+<ContactSales text="Need a version not listed? Contact sales@tuxcare.com for more information." />
 
-Most solutions stop before your exposure does. SecureChain doesn't.
-
-**What SecureChain covers:**
+## What SecureChain Covers
 
 * Verified, signed builds from trusted sources
 * Continuous CVE patching for the packages you actually use
 * Coverage that continues after upstream end of life
 * A single registry your developers and CI already know how to talk to
-
-### Compliance & GRC
-
-SLSA-aligned builds, SBOMs, and VEX feeds give auditors and customers the supply-chain evidence they expect — for new releases and for end-of-life versions still in production.
 
 ## Vulnerability Coverage and Target Response Times
 

@@ -1,7 +1,6 @@
 <template>
   <div class="heading text-center">
-    <h2>Available Guides for SecureChain</h2>
-    <p>If something's missing or you have questions, contact <a href="mailto:sales@tuxcare.com">sales@tuxcare.com</a>.</p>
+    <h2>Get your open-source packages – verified, malware-free, and secured for as long as they're in your stack.</h2>
   </div>
 
   <div class="supported-product-sorting">
@@ -79,8 +78,6 @@ import { ref, computed } from "vue";
 const search = ref("");
 const activeTab = ref(0);
 
-// Only JavaScript ships at launch. Other ecosystems are kept commented out
-// so they can be uncommented per ecosystem rollout. When uncommenting Rust,
 // add /images/rust.webp first — it does not yet exist in public/images.
 const techData = [
   {
@@ -94,7 +91,7 @@ const techData = [
       },
     ],
   },
-  /*
+/*  
   {
     ecosystem: "Python",
     ecosystemIcon: "/images/python.webp",
@@ -120,7 +117,7 @@ const techData = [
     ecosystemIcon: "/images/php-logo.webp",
     projects: [],
   },
-  */
+*/
 ];
 
 const filteredData = computed(() => {
