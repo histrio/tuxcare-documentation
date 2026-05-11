@@ -1,6 +1,6 @@
 # Managing the ELS repository
 
-This page provides instructions for upgrading to newer TuxCare package versions and accessing source code for ELS-patched libraries.
+This page provides instructions for upgrading to newer TuxCare package versions, accessing source code for ELS-patched libraries, and managing the TuxCare NuGet source for .NET projects.
 
 ## How to Upgrade to a Newer Version
 
@@ -54,6 +54,84 @@ To upgrade to a newer TuxCare release (for example, from `tuxcare.1` to `tuxcare
 rm -rf node_modules package-lock.json && npm cache clean --force
 npm install
 ```
+
+</template>
+
+</TableTabs>
+
+## Managing the TuxCare NuGet source
+
+<TableTabs>
+
+<template #.NET>
+
+The TuxCare NuGet source is configured per-project in `nuget.config`. Use the `dotnet` CLI or edit `nuget.config` directly to manage it. Replace `<els_dotnet_customerN>` with your customer repository name.
+
+* **Add the TuxCare source**
+
+  ```text
+  dotnet nuget add source "https://nexus.repo.tuxcare.com/repository/<els_dotnet_customerN>/index.json" \
+    --name TuxCare \
+    --username USERNAME \
+    --password PASSWORD
+  ```
+
+* **List configured sources**
+
+  ```text
+  dotnet nuget list source
+  ```
+
+  Example output:
+
+  ```text
+  Registered Sources:
+    1.  TuxCare [Enabled]
+        https://nexus.repo.tuxcare.com/repository/<els_dotnet_customerN>/index.json
+    2.  nuget [Enabled]
+        https://api.nuget.org/v3/index.json
+  ```
+
+* **Update source credentials**
+
+  ```text
+  dotnet nuget update source TuxCare --username NEW_USERNAME --password NEW_PASSWORD
+  ```
+
+* **Remove the source**
+
+  ```text
+  dotnet nuget remove source TuxCare
+  ```
+
+* **Route specific packages to TuxCare (Package Source Mapping)**
+
+  Add a `<packageSourceMapping>` section inside `<configuration>` in `nuget.config` to route specific packages to the TuxCare feed while others continue coming from NuGet.org:
+
+  ```
+  <packageSourceMapping>
+    <packageSource key="nuget">
+      <package pattern="*" />
+    </packageSource>
+    <packageSource key="TuxCare">
+      <package pattern="Newtonsoft.*" />
+    </packageSource>
+  </packageSourceMapping>
+  ```
+
+* **Upgrade an installed package to a newer TuxCare release**
+
+  ```text
+  dotnet add package <PACKAGE_NAME> --version <NEW_VERSION>
+  ```
+
+  For example:
+
+  ```text
+  dotnet add package Newtonsoft.Json --version 12.0.4-tuxcare-els
+  ```
+
+  **Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
 
 </template>
 

@@ -28,7 +28,7 @@ Other versions upon request.
 
 <ELSPrerequisites>
 
-* .NET SDK installed — a TuxCare-supported .NET SDK build is also [available](/els-for-runtimes/dotnet/)
+* .NET SDK installed — TuxCare also provides a supported [.NET SDK build](/els-for-runtimes/dotnet/)
 * Nexus repository access credentials (username and password) — contact [sales@tuxcare.com](mailto:sales@tuxcare.com). Anonymous access is disabled.
 * To browse available artifacts, visit TuxCare [Nexus](https://nexus.repo.tuxcare.com/) and sign in. You may need to refresh the page after logging in.
 
@@ -36,25 +36,26 @@ Other versions upon request.
 
 <ELSSteps>
 
-1. Locate the `nuget.config` file
+1. Locate your project
 
-   NuGet reads sources and credentials from `nuget.config`. The file is resolved in the following order (highest to lowest priority):
-
-   * **Project-level**: `nuget.config` in your project folder (next to the `.csproj`)
-   * **Solution-level**: `nuget.config` in the solution folder
-   * **User-level**: `~/.nuget/NuGet/NuGet.Config` (Linux/macOS) or `%APPDATA%\NuGet\NuGet.Config` (Windows)
-   * **Machine-level**: `/etc/nuget/NuGet/NuGet.Config` (Linux/macOS) or `%ProgramFiles(x86)%\NuGet\Config\` (Windows)
-
-   If you don't have a project yet, create one before continuing:
+   Ensure you are in a directory that contains a valid .NET project — the folder must include a `.csproj` file:
 
    ```text
-   dotnet new console -o MyProject
-   cd MyProject
+   dir *.csproj
    ```
 
-2. Add your TuxCare credentials
+2. Register the TuxCare NuGet repository
 
-   Use either the `dotnet` CLI or edit `nuget.config` directly to add credentials for the TuxCare source. Replace `USERNAME` and `PASSWORD` with the credentials provided by TuxCare.
+   Add the `els_dotnet` NuGet source either with the `dotnet` CLI or by editing `nuget.config`. Replace `<els_dotnet_customerN>` with your customer repository name provided by TuxCare.
+
+   <CodeTabs :tabs="[
+     { title: 'dotnet CLI', content: cli },
+     { title: 'nuget.config', content: configxml }
+   ]" />
+
+3. Add your TuxCare credentials
+
+   Replace `USERNAME` and `PASSWORD` with the credentials provided by TuxCare.
 
    <CodeTabs :tabs="[
      { title: 'dotnet CLI', content: `dotnet nuget update source TuxCare --username USERNAME --password PASSWORD` },
@@ -66,38 +67,28 @@ Other versions upon request.
    :::
 
    :::tip
-   When using the CLI (`dotnet nuget add source` or `dotnet nuget update source`), the password is stored as a hash. When editing `nuget.config` manually, the password is stored in plain text — use `<ClearTextPassword>` only when a hashed password isn't practical.
+   When using the CLI, the password is stored as a hash. When editing `nuget.config` manually, the password is stored in plain text — use `<ClearTextPassword>` only when a hashed password isn't practical.
    :::
-
-3. Register the TuxCare NuGet repository
-
-   Add the `els_dotnet` NuGet source either via the CLI or by editing `nuget.config`. Replace `<els_dotnet_customerN>` with your customer repository name.
-
-   <CodeTabs :tabs="[
-     { title: 'dotnet CLI', content: cli },
-     { title: 'nuget.config', content: configjson }
-   ]" />
-
-   To verify that the source was added, list all configured NuGet sources:
-
-   ```text
-   dotnet nuget list source
-   ```
 
 4. Install the patched package
 
    Install the TuxCare-maintained release that matches your project:
 
-   <CodeTabs :tabs="[
-     { title: 'dotnet CLI', content: `dotnet add package Newtonsoft.Json --version 12.0.4-tuxcare-els` },
-     { title: 'csproj', content: pkgxml }
-   ]" />
+   ```text
+   dotnet add package <PACKAGE_NAME> --version <VERSION>
+   ```
+
+   For example:
+
+   ```text
+   dotnet add package Newtonsoft.Json --version 12.0.4-tuxcare-els
+   ```
 
    **Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
 
    :::tip
 
-   If you edited `nuget.config` or `.csproj` manually, run `dotnet restore` in your project directory to install packages and resolve dependencies against the TuxCare repository:
+   If you edited `nuget.config` manually, run `dotnet restore` in your project directory to install packages and resolve dependencies against the TuxCare repository:
 
    ```text
    dotnet restore
@@ -106,35 +97,6 @@ Other versions upon request.
    :::
 
 </ELSSteps>
-
-### Package Source Mapping
-
-If you use a shared `nuget.config`, you can route specific packages to the TuxCare feed while others continue to come from NuGet.org. Add a `<packageSourceMapping>` section inside `<configuration>`. For example, to route Newtonsoft.Json to TuxCare:
-
-<CodeTabs :tabs="[
-  { title: 'Snippet to Add', content: mappingSnippet },
-  { title: 'Full nuget.config', content: mappingFullConfig }
-]" />
-
-### Managing the TuxCare Source
-
-To update existing credentials or remove the source:
-
-```text
-dotnet nuget update source TuxCare --username <NEW_USERNAME> --password <NEW_PASSWORD>
-```
-
-```text
-dotnet nuget remove source TuxCare
-```
-
-## Vulnerability Exploitability eXchange (VEX)
-
-VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives and helps prioritize real risks.
-
-TuxCare provides VEX for .NET ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_dotnet/](https://security.tuxcare.com/vex/cyclonedx/els_lang_dotnet/).
-
-Per-package, per-version CycloneDX VEX documents are available at `els_lang_dotnet/<package>/<version>/vex.json`, alongside a top-level aggregated `vex.json` signed via `vex.json.asc`.
 
 ## Resolved CVEs
 
@@ -171,11 +133,24 @@ Per-package, per-version CycloneDX VEX documents are available at `els_lang_dotn
 * ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=.NET+Libraries) — Patched versions and changelogs
 * ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/products?product=.NET+Libraries) — Full list of product parts covered by ELS
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_dotnet/) — Vulnerability Exploitability eXchange feed
-* ![](/images/wrench.webp) [Managing the ELS repository](/els-for-libraries/managing-els-repository/) — Update to newer versions
+* ![](/images/wrench.webp) [Managing NuGet sources](/els-for-libraries/managing-els-repository/#.NET) — Add, update, remove sources, and upgrade packages
 
 </WhatsNext>
 
 <script setup>
+
+const cli =
+`dotnet nuget add source "https://nexus.repo.tuxcare.com/repository/<els_dotnet_customerN>/index.json" --name TuxCare`
+
+const configxml =
+`<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <packageSources>
+    <clear />
+    <add key="TuxCare" value="https://nexus.repo.tuxcare.com/repository/<els_dotnet_customerN>/index.json" />
+    <add key="nuget" value="https://api.nuget.org/v3/index.json" />
+  </packageSources>
+</configuration>`
 
 const credsSnippet =
 `<packageSourceCredentials>
@@ -184,70 +159,5 @@ const credsSnippet =
     <add key="ClearTextPassword" value="PASSWORD" />
   </TuxCare>
 </packageSourceCredentials>`
-
-const cli =
-`dotnet nuget add source "https://nexus.repo.tuxcare.com/repository/<els_dotnet_customerN>/index.json" \\
-  --name TuxCare \\
-  --username USERNAME \\
-  --password PASSWORD`
-
-const configjson =
-`<?xml version="1.0" encoding="utf-8"?>
-<configuration>
-  <packageSources>
-    <!-- To inherit the global NuGet package sources remove the <clear/> line below -->
-    <clear />
-    <add key="TuxCare" value="https://nexus.repo.tuxcare.com/repository/<els_dotnet_customerN>/index.json" />
-    <add key="nuget" value="https://api.nuget.org/v3/index.json" />
-  </packageSources>
-</configuration>`
-
-const pkgxml =
-`<ItemGroup>
-  <PackageReference Include="Newtonsoft.Json" Version="12.0.4-tuxcare-els" />
-</ItemGroup>`
-
-const mappingSnippet =
-`<packageSourceMapping>
-  <!-- Allow nuget.org to serve any package -->
-  <packageSource key="nuget">
-    <package pattern="*" />
-  </packageSource>
-
-  <!-- Route specific packages to the TuxCare feed -->
-  <packageSource key="TuxCare">
-    <package pattern="Newtonsoft.*" />
-  </packageSource>
-</packageSourceMapping>`
-
-const mappingFullConfig =
-`<?xml version="1.0" encoding="utf-8"?>
-<configuration>
-  <packageSources>
-    <!-- To inherit the global NuGet package sources remove the <clear/> line below -->
-    <clear />
-    <add key="TuxCare" value="https://nexus.repo.tuxcare.com/repository/<els_dotnet_customerN>/index.json" />
-    <add key="nuget" value="https://api.nuget.org/v3/index.json" />
-  </packageSources>
-
-  <packageSourceCredentials>
-    <TuxCare>
-      <add key="Username" value="USERNAME" />
-      <add key="ClearTextPassword" value="PASSWORD" />
-    </TuxCare>
-  </packageSourceCredentials>
-
-  <packageSourceMapping>
-    <!-- Allow nuget.org to serve any package -->
-    <packageSource key="nuget">
-      <package pattern="*" />
-    </packageSource>
-
-    <!-- Route specific packages to the TuxCare feed -->
-    <packageSource key="TuxCare">
-      <package pattern="Newtonsoft.*" />
-    </packageSource>
-  </packageSourceMapping>
-</configuration>`
 
 </script>
