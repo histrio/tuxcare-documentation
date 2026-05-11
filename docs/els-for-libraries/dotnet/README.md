@@ -129,12 +129,12 @@ Other versions upon request.
 
 <WhatsNext hide-title>
 
-* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=.NET+Libraries) — Track vulnerability fixes and updates
-* ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=.NET+Libraries) — Patched versions and changelogs
-* ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/products?product=.NET+Libraries) — Full list of product parts covered by ELS
+* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=.NET) — Track vulnerability fixes and updates
+* ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=.NET) — Patched versions and changelogs
+* ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/products?product=.NET) — Full list of product parts covered by ELS
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_dotnet/) — Vulnerability Exploitability eXchange feed
-* ![](/images/wrench.webp) [Managing NuGet sources](/els-for-libraries/managing-els-repository/#managing-the-tuxcare-nuget-source) — Add, update, and remove the TuxCare source
-* ![](/images/bolt.webp) [Upgrading packages](/els-for-libraries/managing-els-repository/#.NET) — Update an installed package to a newer TuxCare release
+* ![](/images/wrench.webp) [Managing NuGet sources](/els-for-libraries/managing-els-repository/#DotNetSources) — Add, update, and remove the TuxCare source
+* ![](/images/bolt.webp) [Upgrading packages](/els-for-libraries/managing-els-repository/#DotNet) — Update an installed package to a newer TuxCare release
 
 </WhatsNext>
 

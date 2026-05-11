@@ -4,7 +4,7 @@ This page provides instructions for upgrading to newer TuxCare package versions,
 
 ## How to Upgrade to a Newer Version
 
-<TableTabs label="Choose the Ecosystem: " >
+<TableTabs label="Choose the Ecosystem: " :labels="{ DotNet: '.NET' }">
 
 <template #Java>
 
@@ -57,7 +57,7 @@ npm install
 
 </template>
 
-<template #.NET>
+<template #DotNet>
 
 To upgrade to a newer TuxCare release, update the package in your project:
 
@@ -77,11 +77,23 @@ dotnet build
 
 </TableTabs>
 
-## Managing the TuxCare NuGet source
+## Source code
 
-<TableTabs>
+<TableTabs label="Choose the Ecosystem: " :labels="{ JavaSources: 'Java', DotNetSources: '.NET' }">
 
-<template #.NET>
+<template #JavaSources>
+
+Source code is available for TuxCare-patched **Java** libraries. Source JARs follow the standard Maven naming convention with a `-sources` classifier and are published to the [Nexus repository](https://nexus.repo.tuxcare.com/#browse/browse:els_java).
+
+For example: [https://nexus.repo.tuxcare.com/repository/els_java/commons-lang/commons-lang/2.6-tuxcare.1/commons-lang-2.6-tuxcare.1-sources.jar](https://nexus.repo.tuxcare.com/repository/els_java/commons-lang/commons-lang/2.6-tuxcare.1/commons-lang-2.6-tuxcare.1-sources.jar).
+
+:::tip
+If a source JAR is not available for a specific package, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+:::
+
+</template>
+
+<template #DotNetSources>
 
 The TuxCare NuGet source is configured per-project in `nuget.config`. Use the `dotnet` CLI or edit `nuget.config` directly to manage it. Replace `<els_dotnet_customerN>` with your customer repository name.
 
@@ -142,13 +154,3 @@ To upgrade an installed package to a newer TuxCare release, see [How to Upgrade 
 </template>
 
 </TableTabs>
-
-## Source code
-
-Source code is currently available for TuxCare-patched **Java** libraries. Source JARs follow the standard Maven naming convention with a `-sources` classifier and are published to the [Nexus repository](https://nexus.repo.tuxcare.com/#browse/browse:els_java).
-
-For example: [https://nexus.repo.tuxcare.com/repository/els_java/commons-lang/commons-lang/2.6-tuxcare.1/commons-lang-2.6-tuxcare.1-sources.jar](https://nexus.repo.tuxcare.com/repository/els_java/commons-lang/commons-lang/2.6-tuxcare.1/commons-lang-2.6-tuxcare.1-sources.jar).
-
-:::tip
-If a source JAR is not available for a specific package, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
-:::
