@@ -57,6 +57,24 @@ npm install
 
 </template>
 
+<template #.NET>
+
+To upgrade to a newer TuxCare release, update the package in your project:
+
+```text
+dotnet add package <PACKAGE_NAME> --version <NEW_VERSION>
+```
+
+Then rebuild the project to verify the upgrade:
+
+```text
+dotnet build
+```
+
+**Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
+
+</template>
+
 </TableTabs>
 
 ## Managing the TuxCare NuGet source
@@ -119,19 +137,7 @@ The TuxCare NuGet source is configured per-project in `nuget.config`. Use the `d
   </packageSourceMapping>
   ```
 
-* **Upgrade an installed package to a newer TuxCare release**
-
-  ```text
-  dotnet add package <PACKAGE_NAME> --version <NEW_VERSION>
-  ```
-
-  For example:
-
-  ```text
-  dotnet add package Newtonsoft.Json --version 12.0.4-tuxcare-els
-  ```
-
-  **Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
+To upgrade an installed package to a newer TuxCare release, see [How to Upgrade to a Newer Version](#how-to-upgrade-to-a-newer-version).
 
 </template>
 

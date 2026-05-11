@@ -133,7 +133,8 @@ Other versions upon request.
 * ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=.NET+Libraries) — Patched versions and changelogs
 * ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/products?product=.NET+Libraries) — Full list of product parts covered by ELS
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_dotnet/) — Vulnerability Exploitability eXchange feed
-* ![](/images/wrench.webp) [Managing NuGet sources](/els-for-libraries/managing-els-repository/#.NET) — Add, update, remove sources, and upgrade packages
+* ![](/images/wrench.webp) [Managing NuGet sources](/els-for-libraries/managing-els-repository/#managing-the-tuxcare-nuget-source) — Add, update, and remove the TuxCare source
+* ![](/images/bolt.webp) [Upgrading packages](/els-for-libraries/managing-els-repository/#.NET) — Update an installed package to a newer TuxCare release
 
 </WhatsNext>
 
