@@ -8,33 +8,33 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 
 Other versions upon request.
 
-## Connection to ELS for Celery Repository
+## Installation
 
-This guide outlines the steps needed to integrate the TuxCare ELS for Celery repository.
+<ELSPrerequisites>
 
-### Step 1: Get user credentials
+* **pip** package manager installed
+* Nexus repository access credentials (username and password) — contact [sales@tuxcare.com](mailto:sales@tuxcare.com)
+* To browse available artifacts, visit TuxCare [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els_python) and click Sign in in the top right corner. You may need to refresh the page after logging in.
 
-You need a username and password in order to use TuxCare ELS for Celery repository. Anonymous access is disabled. To receive the credentials please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+</ELSPrerequisites>
 
-### Step 2: Set Up ELS for Celery
-
-To use TuxCare's ELS for Celery, follow one of the options below:
-
-#### Option 1: Install a Package with ELS Repository via Command Line
+### Option 1: Install via command line
 
 You can install or upgrade a package directly using the ELS repository with your credentials:
 
 ```text
 pip install --upgrade \
-  -i https://<username>:<password>@nexus.repo.tuxcare.com/repository/els_python/simple \
+  -i https://USERNAME:PASSWORD@nexus.repo.tuxcare.com/repository/els_python/simple \
   celery
 ```
 
-**Replace `<username>` and `<password>` with the credentials provided by sales.**
+Here `USERNAME` and `PASSWORD` are your TuxCare credentials.
 
-#### Option 2: Configure `pip` to Use the ELS Repository (Full Replacement)
+### Option 2: Configure `pip` to use the ELS repository (full replacement)
 
-This method is recommended if you want to use only ELS-patched Python packages from TuxCare and replace the default PyPI source with the TuxCare ELS repository. 
+This method is recommended if you want to use only ELS-patched Python packages from TuxCare and replace the default PyPI source with the TuxCare ELS repository.
+
+<ELSSteps>
 
 1. Create or update the `pip` configuration file and add the following:
 
@@ -58,10 +58,14 @@ This method is recommended if you want to use only ELS-patched Python packages f
    ```text
    pip install celery==5.1.2.post1+tuxcare
    ```
-   
-#### Option 3: Add the TuxCare ELS Repository as Additional (recommended)
 
-If you want to keep using public PyPI and fetch only specific patched packages from TuxCare, use *extra-index-url* instead. In this configuration, make sure to specify the exact patched version (step 2 below), otherwise `pip` may install the version from public PyPI.
+</ELSSteps>
+
+### Option 3: Add the TuxCare ELS repository as additional (recommended)
+
+If you want to keep using public PyPI and fetch only specific patched packages from TuxCare, use *extra-index-url* instead. In this configuration, make sure to specify the exact patched version, otherwise `pip` may install the version from public PyPI.
+
+<ELSSteps>
 
 1. Create or update the `pip` configuration file and add the following:
 
@@ -80,33 +84,17 @@ If you want to keep using public PyPI and fetch only specific patched packages f
    pip install celery==5.1.2.post1+tuxcare
    ```
 
-## Upgrading to a Newer TuxCare Version
+</ELSSteps>
 
-To upgrade to a newer TuxCare release (e.g., from `version.post1+tuxcare` to `version.post2+tuxcare`) use the same installation method you used above and specify the newer package version.
+## What's Next?
 
-## Vulnerability Exploitability eXchange (VEX) 
+<WhatsNext hide-title>
 
-VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
+* ![](/images/eye.webp) [CVE tracker](https://tuxcare.com/cve-tracker/?product=Celery) — Track vulnerability fixes and updates
+* ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=Celery) — Patched versions and changelogs
+* ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/products?product=Celery) — Full list of product parts covered by ELS
+* ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_python/celery/) — Vulnerability Exploitability eXchange feed
+* ![](/images/unlock-alt.webp) [SBOM](https://nexus.repo.tuxcare.com/#browse/browse:els_python_sbom:celery) — Software Bill of Materials (Nexus, credentials required)
+* ![](/images/wrench.webp) [Managing the ELS repository](/els-for-libraries/managing-els-repository/) — Update to newer versions
 
-TuxCare provides VEX for Celery ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_python/celery/](https://security.tuxcare.com/vex/cyclonedx/els_lang_python/celery/).
-
-## Software Bill of Materials (SBOM)
-
-For each published ELS package and version, TuxCare generates SBOM files. Those artifacts are published to TuxCare Nexus.
-
-You can browse SBOM files for this package in the `els_python_sbom` repository:
-
-[nexus.repo.tuxcare.com/#browse/browse:els_python_sbom:celery](https://nexus.repo.tuxcare.com/#browse/browse:els_python_sbom:celery)
-
-Use the credentials you received for TuxCare ELS ([Step 1: Get user credentials](#step-1:-get-user-credentials)) to access Nexus.
-
-## Resolved CVEs
-
-Fixes for the following vulnerabilities are available in ELS for Celery from TuxCare versions:
-
-| CVE ID         | Severity | Library | Vulnerable Versions | Safe Version         |
-| :------------: | :------: | :-----: | :-----------------: | :------------------: |
-| CVE-2021-23727 | High     | celery  | < 5.2.2             | 4.4.7.post1+tuxcare  |
-| CVE-2021-23727 | High     | celery  | < 5.2.2             | 5.1.2.post1+tuxcare  |
-
-If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+</WhatsNext>

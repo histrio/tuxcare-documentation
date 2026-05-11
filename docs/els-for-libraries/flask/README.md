@@ -8,33 +8,31 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 
 Other versions upon request.
 
-## Connection to ELS for Flask Repository
+## Installation
 
-This guide outlines the steps needed to integrate the TuxCare ELS for Flask repository.
+<ELSPrerequisites>
 
-### Step 1: Get user credentials
+* **pip** package manager installed
+* Nexus repository access credentials (username and password) — contact [sales@tuxcare.com](mailto:sales@tuxcare.com)
+* To browse available artifacts, visit TuxCare [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els_python) and click Sign in in the top right corner. You may need to refresh the page after logging in.
 
-You need a username and password in order to use TuxCare ELS for Flask repository. Anonymous access is disabled. To receive the credentials please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+</ELSPrerequisites>
 
-### Step 2: Set Up ELS for Flask
-
-To use TuxCare's ELS for Flask, follow one of the options below:
-
-#### Option 1: Install a Package with ELS Repository via Command Line
+### Option 1: Install via command line
 
 You can install or upgrade a package directly using the ELS repository with your credentials:
 
 ```text
-pip install --upgrade \
-  -i https://<username>:<password>@nexus.repo.tuxcare.com/repository/els_python/simple \
-  flask
+pip install --upgrade -i https://USERNAME:PASSWORD@nexus.repo.tuxcare.com/repository/els_python/simple flask
 ```
 
-**Replace `<username>` and `<password>` with the credentials provided by sales.**
+Here `USERNAME` and `PASSWORD` are your TuxCare credentials.
 
-#### Option 2: Configure `pip` to Use the ELS Repository (Full Replacement)
+### Option 2: Configure `pip` to use the ELS repository (full replacement)
 
-This method is recommended if you want to use only ELS-patched Python packages from TuxCare and replace the default PyPI source with the TuxCare ELS repository. 
+This method is recommended if you want to use only ELS-patched Python packages from TuxCare and replace the default PyPI source with the TuxCare ELS repository.
+
+<ELSSteps>
 
 1. Create or update the `pip` configuration file and add the following:
 
@@ -56,12 +54,16 @@ This method is recommended if you want to use only ELS-patched Python packages f
    Or install a specific patched TuxCare version, for example:
 
    ```text
-   pip install flask==1.1.2.post1+tuxcare
+   pip install flask==0.12.5.post1+tuxcare
    ```
 
-#### Option 3: Add the TuxCare ELS Repository as Additional (recommended)
+</ELSSteps>
 
-If you want to keep using public PyPI and fetch only specific patched packages from TuxCare, use *extra-index-url* instead. In this configuration, make sure to specify the exact patched version (step 2 below), otherwise `pip` may install the version from public PyPI.
+### Option 3: Add the TuxCare ELS repository as additional (recommended)
+
+If you want to keep using public PyPI and fetch only specific patched packages from TuxCare, use *extra-index-url* instead. In this configuration, make sure to specify the exact patched version, otherwise `pip` may install the version from public PyPI.
+
+<ELSSteps>
 
 1. Create or update the `pip` configuration file and add the following:
 
@@ -77,38 +79,20 @@ If you want to keep using public PyPI and fetch only specific patched packages f
 2. Run the command to install a specific patched TuxCare version, for example:
 
    ```text
-   pip install flask==1.1.2.post1+tuxcare
+   pip install flask==0.12.5.post1+tuxcare
    ```
 
-## Upgrading to a Newer TuxCare Version
+</ELSSteps>
 
-To upgrade to a newer TuxCare release (e.g., from `version.post1+tuxcare` to `version.post2+tuxcare`) use the same installation method you used above and specify the newer package version.
+## What's Next?
 
-## Vulnerability Exploitability eXchange (VEX) 
+<WhatsNext hide-title>
 
-VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
+* ![](/images/eye.webp) [CVE tracker](https://tuxcare.com/cve-tracker/?product=Flask) — Track vulnerability fixes and updates
+* ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=Flask) — Patched versions and changelogs
+* ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/products?product=Flask) — Full list of product parts covered by ELS
+* ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_python/flask/) — Vulnerability Exploitability eXchange feed
+* ![](/images/unlock-alt.webp) [SBOM](https://nexus.repo.tuxcare.com/#browse/browse:els_python_sbom:flask) — Software Bill of Materials (Nexus, credentials required)
+* ![](/images/wrench.webp) [Managing the ELS repository](/els-for-libraries/managing-els-repository/) — Update to newer versions
 
-TuxCare provides VEX for Flask ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_python/flask/](https://security.tuxcare.com/vex/cyclonedx/els_lang_python/flask/).
-
-## Software Bill of Materials (SBOM)
-
-For each published ELS package and version, TuxCare generates SBOM files. Those artifacts are published to TuxCare Nexus.
-
-You can browse SBOM files for this package in the `els_python_sbom` repository:
-
-[nexus.repo.tuxcare.com/#browse/browse:els_python_sbom:flask](https://nexus.repo.tuxcare.com/#browse/browse:els_python_sbom:flask)
-
-Use the credentials you received for TuxCare ELS ([Step 1: Get user credentials](#step-1:-get-user-credentials)) to access Nexus.
-
-## Resolved CVEs
-
-Fixes for the following vulnerabilities are available in ELS for Flask from TuxCare versions:
-
-| CVE ID           | Severity | Library | Vulnerable Versions | Safe Version         |
-| :--------------: | :------: | :-----: | :-----------------: | :------------------: |
-| CVE-2023-30861   | High     | flask   | < 2.2.5             | 1.1.2.post1+tuxcare  |
-| CVE-2023-30861   | High     | flask   | < 2.2.5             | 1.1.4.post1+tuxcare  |
-| CVE-2023-30861   | High     | flask   | < 2.2.5             | 2.2.1.post1+tuxcare  |
-| CVE-2019-1010083 | High     | flask   | < 1.0               | 0.12.5.post1+tuxcare |
-
-If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+</WhatsNext>
