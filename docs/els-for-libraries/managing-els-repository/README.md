@@ -4,7 +4,7 @@ This page provides instructions for upgrading to newer TuxCare package versions,
 
 ## How to Upgrade to a Newer Version
 
-<TableTabs label="Choose the Ecosystem: " :labels="{ DotNet: '.NET' }">
+<TableTabs label="Choose the Ecosystem: " :labels="{ dotnet: '.NET' }">
 
 <template #Java>
 
@@ -57,7 +57,7 @@ npm install
 
 </template>
 
-<template #DotNet>
+<template #dotnet>
 
 To upgrade to a newer TuxCare release, update the package in your project:
 
@@ -79,7 +79,7 @@ dotnet build
 
 ## Source code
 
-<TableTabs label="Choose the Ecosystem: " :labels="{ JavaSources: 'Java', DotNetSources: '.NET' }">
+<TableTabs label="Choose the Ecosystem: " :labels="{ JavaSources: 'Java', dotnetSources: '.NET' }">
 
 <template #JavaSources>
 
@@ -93,7 +93,7 @@ If a source JAR is not available for a specific package, please contact [sales@t
 
 </template>
 
-<template #DotNetSources>
+<template #dotnetSources>
 
 The TuxCare NuGet source is configured per-project in `nuget.config`. Use the `dotnet` CLI or edit `nuget.config` directly to manage it. Replace `<els_dotnet_customerN>` with your customer repository name.
 
