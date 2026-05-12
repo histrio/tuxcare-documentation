@@ -59,6 +59,8 @@ npm install
 
 <template #dotnet>
 
+**Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
+
 To upgrade to a newer TuxCare release, update the package in your project:
 
 ```text
@@ -70,8 +72,6 @@ Then rebuild the project to verify the upgrade:
 ```text
 dotnet build
 ```
-
-**Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
 
 </template>
 
@@ -125,7 +125,11 @@ The TuxCare NuGet source is configured per-project in `nuget.config`. Use the `d
 * **Update source credentials**
 
   ```text
-  dotnet nuget update source TuxCare --username NEW_USERNAME --password NEW_PASSWORD
+  dotnet nuget remove source TuxCare
+  dotnet nuget add source "https://nexus.repo.tuxcare.com/repository/<els_dotnet_customerN>/index.json" `
+    --name TuxCare `
+    --username <NEW_USERNAME> `
+    --password <NEW_PASSWORD>
   ```
 
 * **Remove the source**
@@ -136,21 +140,61 @@ The TuxCare NuGet source is configured per-project in `nuget.config`. Use the `d
 
 * **Route specific packages to TuxCare (Package Source Mapping)**
 
-  Add a `<packageSourceMapping>` section inside `<configuration>` in `nuget.config` to route specific packages to the TuxCare feed while others continue coming from NuGet.org:
+  If you use a `nuget.config` file, you can add package source mapping to route specific packages to the TuxCare feed. This ensures certain packages are always fetched from TuxCare while others come from NuGet.org.
 
-  ```
-  <packageSourceMapping>
-    <packageSource key="nuget">
-      <package pattern="*" />
-    </packageSource>
-    <packageSource key="TuxCare">
-      <package pattern="Newtonsoft.*" />
-    </packageSource>
-  </packageSourceMapping>
-  ```
+  Add a `<packageSourceMapping>` section inside `<configuration>` in your `nuget.config`. For example, to route Newtonsoft.Json to TuxCare:
 
-To upgrade an installed package to a newer TuxCare release, see [How to Upgrade to a Newer Version](#how-to-upgrade-to-a-newer-version).
+  <CodeTabs :tabs="[
+    { title: 'Snippet to Add', content: mappingSnippet },
+    { title: 'Full nuget.config', content: mappingFullConfig }
+  ]" />
 
 </template>
 
 </TableTabs>
+
+<script setup>
+
+const mappingSnippet =
+`<packageSourceMapping>
+  <!-- Allow nuget.org to serve any package -->
+  <packageSource key="nuget">
+    <package pattern="*" />
+  </packageSource>
+
+  <!-- Route specific packages to TuxCare feed -->
+  <packageSource key="TuxCare">
+    <package pattern="Newtonsoft.*" />
+  </packageSource>
+</packageSourceMapping>`
+
+const mappingFullConfig =
+`<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <packageSources>
+    <!-- To inherit the global NuGet package sources remove the <clear/> line below -->
+    <clear />
+    <add key="TuxCare" value="https://nexus.repo.tuxcare.com/repository/<els_dotnet_customerN>/index.json" />
+    <add key="nuget" value="https://api.nuget.org/v3/index.json" />
+  </packageSources>
+
+  <packageSourceCredentials>
+      <TuxCare>
+          <add key="Username" value="username" />
+          <add key="Password" value="passwordHash" />
+      </TuxCare>
+  </packageSourceCredentials>
+
+  <packageSourceMapping>
+    <!-- Allow nuget.org to serve any package -->
+    <packageSource key="nuget">
+      <package pattern="*" />
+    </packageSource>
+
+    <!-- Route specific packages to TuxCare feed -->
+    <packageSource key="TuxCare">
+      <package pattern="Newtonsoft.*" />
+    </packageSource>
+  </packageSourceMapping>
+</configuration>`
+</script>

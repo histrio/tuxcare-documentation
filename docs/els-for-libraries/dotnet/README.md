@@ -44,6 +44,13 @@ Other versions upon request.
    dir *.csproj
    ```
 
+   If a `.csproj` file is not found, create a new project:
+
+   ```text
+   dotnet new console -o MyProject
+   cd MyProject
+   ```
+
 2. Register the TuxCare NuGet repository
 
    Add the `els_dotnet` NuGet source either with the `dotnet` CLI or by editing `nuget.config`. Replace `<els_dotnet_customerN>` with your customer repository name provided by TuxCare.
