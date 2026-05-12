@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for Laravel from TuxCare provides security fixes
 
 ## Supported Versions
 
-* **Laravel** 5.4.36, 5.5.50, 5.6.40, 5.7.29, 5.8.38, 8, 10, 11
+* **Laravel** 5.4.36, 5.5.50, 5.6.40, 5.7.29, 5.8.38, 7.30.7, 8, 9.52.21, 10, 11, 12.58.0
 * **Illuminate View** 5.4.36
 * **Illuminate Database** 5.4.36
 

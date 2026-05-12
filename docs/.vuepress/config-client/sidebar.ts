@@ -301,6 +301,10 @@ export default {
                     icon: '/images/livewire-logo.webp',
                 },
                 {
+                    path: '/els-for-libraries/nategood/',
+                    icon: '/images/php-logo.webp',
+                },
+                {
                     path: '/els-for-libraries/phpmailer/',
                     icon: '/images/phpmailer.webp',
                 },
