@@ -77,7 +77,15 @@ Other versions upon request.
    When using the CLI, the password is stored as a hash. When editing `nuget.config` manually, the password is stored in plain text — use `<ClearTextPassword>` only when a hashed password isn't practical.
    :::
 
-4. Install the patched package
+4. Verify the source
+
+   To verify that the source was added successfully, list all configured NuGet sources:
+
+   ```text
+   dotnet nuget list source
+   ```
+
+5. Install the patched package
 
    Install the TuxCare-maintained release that matches your project:
 
