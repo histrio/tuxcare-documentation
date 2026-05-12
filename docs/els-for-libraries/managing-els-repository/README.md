@@ -4,9 +4,9 @@ This page provides instructions for upgrading to newer TuxCare package versions,
 
 ## How to Upgrade to a Newer Version
 
-<TableTabs label="Choose the Ecosystem: " :labels="{ dotnet: '.NET' }">
+<TableTabs label="Choose the Ecosystem: " :labels="{ java: 'Java', dotnet: '.NET' }">
 
-<template #Java>
+<template #java>
 
 If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), update the version string in your Maven or Gradle build file with the version listed in your TuxCare Nexus account.
 
@@ -79,9 +79,9 @@ dotnet build
 
 ## Source code
 
-<TableTabs label="Choose the Ecosystem: " :labels="{ JavaSources: 'Java', dotnetSources: '.NET' }">
+<TableTabs label="Choose the Ecosystem: " :labels="{ javaSources: 'Java', dotnetSources: '.NET' }">
 
-<template #JavaSources>
+<template #javaSources>
 
 Source code is available for TuxCare-patched **Java** libraries. Source JARs follow the standard Maven naming convention with a `-sources` classifier and are published to the [Nexus repository](https://nexus.repo.tuxcare.com/#browse/browse:els_java).
 
