@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for Astro from TuxCare provides security fixes f
 
 ## Supported Astro Versions
 
-* Astro 0.26.1, 1.9.2, 2.10.15
+* Astro 0.26.1, 1.9.2, 2.10.15, 3.6.5
 
 ## Installation
 
@@ -90,6 +90,19 @@ Endless Lifecycle Support (ELS) for Astro from TuxCare provides security fixes f
       },
       "overrides": {
         "astro@2.10.15": "npm:@els-js/astro@>=2.10.15-tuxcare.1"
+      }
+      ```
+
+      </template>
+
+      <template #astro_3.6.5>
+
+      ```text
+      "dependencies": {
+        "astro": "npm:@els-js/astro@>=3.6.5-tuxcare.1"
+      },
+      "overrides": {
+        "astro@3.6.5": "npm:@els-js/astro@>=3.6.5-tuxcare.1"
       }
       ```
 
@@ -201,6 +214,26 @@ Fixes for the following vulnerabilities are available in ELS for Astro from TuxC
 | CVE-2024-56159 | Direct   | Medium   |       astro        | <= 4.16.17, >= 5.0.0 <= 5.0.8  |
 | CVE-2025-55303 | Direct   | Medium   |       astro        | < 4.16.18, >= 5.0.0 < 5.13.2   |
 | CVE-2025-61925 | Direct   | Medium   |       astro        |          < 5.14.2              |
+| CVE-2025-64757 | Direct   | Low      |       astro        |          < 5.14.3              |
+| CVE-2025-64764 | Direct   | Medium   |       astro        |          < 5.15.8              |
+| CVE-2025-64765 | Direct   | Medium   |       astro        |          < 5.15.8              |
+| CVE-2025-65019 | Direct   | Medium   |       astro        |          < 5.15.9              |
+| CVE-2025-66202 | Direct   | Medium   |       astro        |          < 5.15.8              |
+| CVE-2026-33769 | Direct   | Medium   |       astro        |     >= 2.10.10 < 5.18.1        |
+| CVE-2026-41067 | Direct   | Medium   |       astro        |          < 6.1.6               |
+
+</template>
+
+<template #astro_3.6.5>
+
+|     CVE ID     | CVE Type | Severity | Affected Libraries |      Vulnerable Versions       |
+|:--------------:| :------: |:--------:|:------------------:|:------------------------------:|
+| CVE-2024-47885 | Direct   | Medium   |       astro        |      >= 3.0.0 < 4.16.1         |
+| CVE-2024-56140 | Direct   | Medium   |       astro        |          < 4.16.17             |
+| CVE-2024-56159 | Direct   | Medium   |       astro        | <= 4.16.17, >= 5.0.0 <= 5.0.8  |
+| CVE-2025-55303 | Direct   | Medium   |       astro        | < 4.16.18, >= 5.0.0 < 5.13.2   |
+| CVE-2025-61925 | Direct   | Medium   |       astro        |          < 5.14.2              |
+| CVE-2025-64525 | Direct   | Medium   |       astro        |     >= 2.16.0 < 5.15.5         |
 | CVE-2025-64757 | Direct   | Low      |       astro        |          < 5.14.3              |
 | CVE-2025-64764 | Direct   | Medium   |       astro        |          < 5.15.8              |
 | CVE-2025-64765 | Direct   | Medium   |       astro        |          < 5.15.8              |
