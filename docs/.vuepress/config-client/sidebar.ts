@@ -537,6 +537,10 @@ export default {
                     icon: '/images/maven.webp',
                 },
                 {
+                    path: '/els-for-applications/minio/',
+                    icon: '/images/minio.webp',
+                },
+                {
                     path: '/els-for-applications/mysql-and-percona-server/',
                     title: 'MySQL and Percona Server',
                     icon: '/images/mysql.webp',
