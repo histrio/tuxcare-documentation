@@ -8,33 +8,31 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 
 Other versions upon request.
 
-## Connection to ELS for Django Repository
+## Installation
 
-This guide outlines the steps needed to integrate the TuxCare ELS for Django repository.
+<ELSPrerequisites>
 
-### Step 1: Get user credentials
+* **pip** package manager installed
+* Nexus repository access credentials (username and password) — contact [sales@tuxcare.com](mailto:sales@tuxcare.com)
+* To browse available artifacts, visit TuxCare [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els_python) and click Sign in in the top right corner. You may need to refresh the page after logging in.
 
-You need a username and password in order to use TuxCare ELS for Django repository. Anonymous access is disabled. To receive the credentials please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+</ELSPrerequisites>
 
-### Step 2: Set Up ELS for Django
-
-To use TuxCare's ELS for Django, follow one of the options below:
-
-#### Option 1: Install a Package with ELS Repository via Command Line
+#### Option 1: Install via command line
 
 You can install or upgrade a package directly using the ELS repository with your credentials:
 
 ```text
-pip install --upgrade \
-  -i https://<username>:<password>@nexus.repo.tuxcare.com/repository/els_python/simple \
-  django
+pip install --upgrade -i https://USERNAME:PASSWORD@nexus.repo.tuxcare.com/repository/els_python/simple django
 ```
 
-**Replace `<username>` and `<password>` with the credentials provided by sales.** 
+Here `USERNAME` and `PASSWORD` are your TuxCare credentials.
 
-#### Option 2: Configure `pip` to Use the ELS Repository (Full Replacement)
+#### Option 2: Configure `pip` to use the ELS repository (full replacement)
 
-This method is recommended if you want to use only ELS-patched Python packages from TuxCare and replace the default PyPI source with the TuxCare ELS repository. 
+This method is recommended if you want to use only ELS-patched Python packages from TuxCare and replace the default PyPI source with the TuxCare ELS repository.
+
+<ELSSteps>
 
 1. Create or update the `pip` configuration file and add the following:
 
@@ -59,9 +57,13 @@ This method is recommended if you want to use only ELS-patched Python packages f
    pip install django==3.2.25.post1+tuxcare
    ```
 
-#### Option 3: Add the TuxCare ELS Repository as Additional (recommended)
+</ELSSteps>
 
-If you want to keep using public PyPI and fetch only specific patched packages from TuxCare, use *extra-index-url* instead. In this configuration, make sure to specify the exact patched version (step 2 below), otherwise `pip` may install the version from public PyPI.
+#### Option 3: Add the TuxCare ELS repository as additional (recommended)
+
+If you want to keep using public PyPI and fetch only specific patched packages from TuxCare, use *extra-index-url* instead. In this configuration, make sure to specify the exact patched version, otherwise `pip` may install the version from public PyPI.
+
+<ELSSteps>
 
 1. Create or update the `pip` configuration file and add the following:
 
@@ -80,68 +82,17 @@ If you want to keep using public PyPI and fetch only specific patched packages f
    pip install django==3.2.25.post1+tuxcare
    ```
 
-## Upgrading to a Newer TuxCare Version
+</ELSSteps>
 
-To upgrade to a newer TuxCare release (e.g., from `version.post1+tuxcare` to `version.post2+tuxcare`) use the same installation method you used above and specify the newer package version.   
+## What's Next?
 
-## Vulnerability Exploitability eXchange (VEX) 
+<WhatsNext hide-title>
 
-VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
+* ![](/images/eye.webp) [CVE tracker](https://tuxcare.com/cve-tracker/?product=Django) — Track vulnerability fixes and updates
+* ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=Django) — Patched versions and changelogs
+* ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/products?product=Django) — Full list of product parts covered by ELS
+* ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_python/django/) — Vulnerability Exploitability eXchange feed
+* ![](/images/unlock-alt.webp) [SBOM](https://nexus.repo.tuxcare.com/#browse/browse:els_python_sbom:django) — Software Bill of Materials (Nexus, credentials required)
+* ![](/images/wrench.webp) [Managing the ELS repository](/els-for-libraries/managing-els-repository/) — Update to newer versions
 
-TuxCare provides VEX for Django ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_python/django/](https://security.tuxcare.com/vex/cyclonedx/els_lang_python/django/).
-
-## Software Bill of Materials (SBOM)
-
-For each published ELS package and version, TuxCare generates SBOM files. Those artifacts are published to TuxCare Nexus.
-
-You can browse SBOM files for this package in the `els_python_sbom` repository:
-
-[nexus.repo.tuxcare.com/#browse/browse:els_python_sbom:django](https://nexus.repo.tuxcare.com/#browse/browse:els_python_sbom:django)
-
-Use the credentials you received for TuxCare ELS ([Step 1: Get user credentials](#step-1:-get-user-credentials)) to access Nexus.
-
-## Resolved CVEs
-
-Fixes for the following vulnerabilities are available in ELS for Django from TuxCare versions:
-
-| CVE ID         | Severity | Library | Vulnerable Versions | Safe Version         |
-| :------------: | :------: | :-----: | :-----------------: | :------------------: |
-| CVE-2025-57833 | High     | django  | >= 3.2, < 3.2.25    | 3.2.25.post1+tuxcare |
-| CVE-2025-64458 | High     | django  | >= 3.2, < 3.2.26    | 3.2.25.post2+tuxcare |
-| CVE-2025-64459 | Critical | django  | >= 3.2, < 3.2.26    | 3.2.25.post2+tuxcare |
-| CVE-2025-48432 | Medium   | django  | >= 4.2, < 4.2.23    | 4.2.post1+tuxcare    |
-| CVE-2025-48432 | Medium   | django  | >= 5.1, < 5.1.11    | 5.1.9.post1+tuxcare  |
-| CVE-2025-27556 | High     | django  | >= 5.1, < 5.1.8     | 5.1.post2+tuxcare    |
-| CVE-2024-56374 | Medium   | django  | >= 5.1, < 5.1.5     | 5.1.4.post1+tuxcare  |
-| CVE-2024-53908 | N/A      | django  | >= 5.1, < 5.1.4     | 5.1.post3+tuxcare    |
-| CVE-2024-53907 | N/A      | django  | >= 5.1, < 5.1.4     | 5.1.post3+tuxcare    |
-| CVE-2024-45231 | N/A      | django  | >= 5.1, < 5.1.1     | 5.1.post2+tuxcare    |
-| CVE-2024-45230 | N/A      | django  | >= 5.1, < 5.1.1     | 5.1.post3+tuxcare    |
-| CVE-2024-42005 | High     | django  | >= 5.0, < 5.0.8     | 5.0.post5+tuxcare    |
-| CVE-2024-41991 | N/A      | django  | >= 5.0, < 5.0.8     | 5.0.1.post2+tuxcare  |
-| CVE-2024-41990 | High     | django  | >= 5.0, < 5.0.8     | 5.0.post5+tuxcare    |
-| CVE-2024-41989 | High     | django  | >= 5.0, < 5.0.8     | 5.0.1.post3+tuxcare  |
-| CVE-2024-39614 | N/A      | django  | >= 5.0, < 5.0.7     | 5.0.post2+tuxcare    |
-| CVE-2024-39330 | N/A      | django  | >= 5.0, < 5.0.7     | 5.0.post4+tuxcare    |
-| CVE-2024-39329 | N/A      | django  | >= 5.0, < 5.0.7     | 5.0.1.post2+tuxcare  |
-| CVE-2024-38875 | N/A      | django  | >= 5.0, < 5.0.7     | 5.0.post3+tuxcare    |
-| CVE-2024-27351 | Medium   | django  | >= 5.0, < 5.0.3     | 5.0.2.post1+tuxcare  |
-| CVE-2024-24680 | High     | django  | >= 5.0, < 5.0.2     | 5.0.post1+tuxcare    |
-| CVE-2024-24680 | High     | django  | >= 5.0, < 5.0.2     | 5.0.1.post1+tuxcare  |
-| CVE-2023-24580 | High     | django  | >= 4.0, < 4.0.10    | 4.0.post1+tuxcare    |
-| CVE-2023-23969 | High     | django  | >= 4.0, < 4.0.9     | 4.0.post1+tuxcare    |
-| CVE-2022-41323 | High     | django  | >= 4.0, < 4.0.8     | 4.0.post2+tuxcare    |
-| CVE-2022-41323 | High     | django  | >= 5.1, < 5.1.2     | 5.1.post1+tuxcare    |
-| CVE-2022-36359 | High     | django  | >= 4.0, < 4.0.7     | 4.0.post3+tuxcare    |
-| CVE-2022-34265 | Critical | django  | >= 4.0, < 4.0.6     | 4.0.post3+tuxcare    |
-| CVE-2022-28347 | Critical | django  | >= 4.0, < 4.0.4     | 4.0.post3+tuxcare    |
-| CVE-2022-28346 | Critical | django  | >= 4.0, < 4.0.4     | 4.0.post4+tuxcare    |
-| CVE-2022-23833 | High     | django  | >= 4.0, < 4.0.2     | 4.0.post6+tuxcare    |
-| CVE-2022-22818 | Medium   | django  | >= 4.0, < 4.0.2     | 4.0.post5+tuxcare    |
-| CVE-2021-45452 | Medium   | django  | >= 4.0, < 4.0.1     | 4.0.post4+tuxcare    |
-| CVE-2021-45116 | High     | django  | >= 4.0, < 4.0.1     | 4.0.post2+tuxcare    |
-| CVE-2021-45115 | High     | django  | >= 4.0, < 4.0.1     | 4.0.post4+tuxcare    |
-
-**N/A (Not Available)** means that the National Vulnerability Database (NVD) has registered this CVE, but an official CVSS severity score has not yet been assigned.
-
-If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+</WhatsNext>

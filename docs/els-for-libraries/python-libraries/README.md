@@ -53,35 +53,31 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 
 Other libraries upon request.
 
-## Connection to ELS for Python Libraries Repository
+## Installation
 
-This guide outlines the steps needed to integrate the TuxCare ELS for Python Libraries repository.
+<ELSPrerequisites>
 
-### Step 1: Get user credentials
+* **pip** package manager installed
+* Nexus repository access credentials (username and password) — contact [sales@tuxcare.com](mailto:sales@tuxcare.com)
+* To browse available artifacts, visit TuxCare [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els_python) and click Sign in in the top right corner. You may need to refresh the page after logging in.
 
-You need a username and password in order to use TuxCare ELS for Python Libraries repository. Anonymous access is disabled. To receive the credentials please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+</ELSPrerequisites>
 
-### Step 2: Set Up ELS for Python Libraries
-
-To use TuxCare's ELS for Python libraries, follow one of the options below:
-
-#### Option 1: Install a Package with ELS Repository via Command Line
+#### Option 1: Install via command line
 
 You can install or upgrade a package directly using the ELS repository with your credentials:
 
 ```text
-pip install --upgrade \
-  -i https://<username>:<password>@nexus.repo.tuxcare.com/repository/els_python/simple \
-  <package>
+pip install --upgrade -i https://USERNAME:PASSWORD@nexus.repo.tuxcare.com/repository/els_python/simple <package>
 ```
 
-**Replace:**
-* `<username>` and `<password>` with the credentials provided by sales.  
-* `<package>` - with the Python package name (e.g., `certifi`).
+Here `USERNAME` and `PASSWORD` are your TuxCare credentials. Replace `<package>` with the Python package name (e.g., `certifi`).
 
-#### Option 2: Configure `pip` to Use the ELS Repository (Full Replacement)
+#### Option 2: Configure `pip` to use the ELS repository (full replacement)
 
-This method is recommended if you want to use only ELS-patched Python packages from TuxCare and replace the default PyPI source with the TuxCare ELS repository. 
+This method is recommended if you want to use only ELS-patched Python packages from TuxCare and replace the default PyPI source with the TuxCare ELS repository.
+
+<ELSSteps>
 
 1. Create or update the `pip` configuration file and add the following:
 
@@ -94,13 +90,11 @@ This method is recommended if you want to use only ELS-patched Python packages f
    index-url = https://username:password@nexus.repo.tuxcare.com/repository/els_python/simple` }
    ]" />
 
-2. Run the command to install the latest package version:
+2. Run the command to install the latest package version. Replace `<package>` with the Python package name (e.g., `certifi`):
 
    ```text
    pip install --upgrade <package>
    ```
-
-   **Replace `<package>` with the python package name, for example, certifi.**
 
    Or install a specific patched TuxCare version, for example:
 
@@ -108,9 +102,13 @@ This method is recommended if you want to use only ELS-patched Python packages f
    pip install certifi==2021.10.8.post2+tuxcare
    ```
 
-#### Option 3: Add the TuxCare ELS Repository as Additional (recommended)
+</ELSSteps>
 
-If you want to keep using public PyPI and fetch only specific patched packages from TuxCare, use *extra-index-url* instead. In this configuration, make sure to specify the exact patched version (step 2 below), otherwise `pip` may install the version from public PyPI.
+#### Option 3: Add the TuxCare ELS repository as additional (recommended)
+
+If you want to keep using public PyPI and fetch only specific patched packages from TuxCare, use *extra-index-url* instead. In this configuration, make sure to specify the exact patched version, otherwise `pip` may install the version from public PyPI.
+
+<ELSSteps>
 
 1. Create or update the `pip` configuration file and add the following:
 
@@ -129,577 +127,17 @@ If you want to keep using public PyPI and fetch only specific patched packages f
    pip install certifi==2021.10.8.post2+tuxcare
    ```
 
-## Upgrading to a Newer TuxCare Version
+</ELSSteps>
 
-To upgrade to a newer TuxCare release (e.g., from `version.post1+tuxcare` to `version.post2+tuxcare`) use the same installation method you used above and specify the newer package version.
+## What's Next?
 
-## Vulnerability Exploitability eXchange (VEX) 
+<WhatsNext hide-title>
 
-VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
+* ![](/images/eye.webp) [CVE tracker](https://tuxcare.com/cve-tracker/) — Track vulnerability fixes and updates
+* ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes) — Patched versions and changelogs
+* ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/products) — Full list of product parts covered by ELS
+* ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_python/) — Vulnerability Exploitability eXchange feed
+* ![](/images/unlock-alt.webp) [SBOM](https://nexus.repo.tuxcare.com/#browse/browse:els_python_sbom) — Software Bill of Materials (Nexus, credentials required)
+* ![](/images/wrench.webp) [Managing the ELS repository](/els-for-libraries/managing-els-repository/) — Update to newer versions
 
-TuxCare provides VEX for Python Libraries ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_python/](https://security.tuxcare.com/vex/cyclonedx/els_lang_python/).
-
-## Software Bill of Materials (SBOM)
-
-For each published ELS package and version, TuxCare generates SBOM files. Those artifacts are published to TuxCare Nexus.
-
-You can browse SBOM files for ELS Python packages in the `els_python_sbom` repository:
-
-[nexus.repo.tuxcare.com/#browse/browse:els_python_sbom](https://nexus.repo.tuxcare.com/#browse/browse:els_python_sbom)
-
-Use the credentials you received for TuxCare ELS ([Step 1: Get user credentials](#step-1:-get-user-credentials)) to access Nexus.
-
-## Resolved CVEs
-
-Fixes for the following vulnerabilities are available in ELS for Python Libraries from TuxCare versions:
-
-<TableTabs label="Select library:">
-
-  <template #aiohttp>
-
-| CVE ID              | Severity | Vulnerable Versions | Safe Version        |
-| :-----------------: | :------: | :-----------------: | :-----------------: |
-| CVE-2026-34520      | Critical | < 3.13.4            | 3.8.4.post2+tuxcare |
-| CVE-2026-34520      | Critical | < 3.13.4            | 3.8.5.post6+tuxcare |
-| CVE-2026-34520      | Critical | < 3.13.4            | 3.8.6.post3+tuxcare |
-| CVE-2026-34516      | High     | < 3.13.4            | 3.8.4.post2+tuxcare |
-| CVE-2026-34516      | High     | < 3.13.4            | 3.8.5.post5+tuxcare |
-| CVE-2026-34516      | High     | < 3.13.4            | 3.8.6.post4+tuxcare |
-| CVE-2026-34513      | High     | < 3.13.4            | 3.8.1.post8+tuxcare |
-| CVE-2026-34513      | High     | < 3.13.4            | 3.8.4.post2+tuxcare |
-| CVE-2026-34513      | High     | < 3.13.4            | 3.8.6.post4+tuxcare |
-| CVE-2026-22815      | High     | < 3.13.4            | 3.8.6.post4+tuxcare |
-| CVE-2026-34519      | Medium   | < 3.13.4            | 3.8.4.post2+tuxcare |
-| CVE-2026-34519      | Medium   | < 3.13.4            | 3.8.6.post4+tuxcare |
-| CVE-2026-34517      | Medium   | < 3.13.4            | 3.8.1.post8+tuxcare |
-| CVE-2026-34517      | Medium   | < 3.13.4            | 3.8.6.post4+tuxcare |
-| CVE-2026-34525      | Medium   | < 3.13.4            | 3.8.6.post4+tuxcare |
-| CVE-2025-53643      | High     | < 3.12.14           | 3.8.1.post5+tuxcare |
-| CVE-2024-52304      | High     | < 3.10.11           | 3.8.1.post7+tuxcare |
-| CVE-2024-52304      | High     | < 3.10.11           | 3.8.5.post2+tuxcare |
-| CVE-2024-30251      | High     | < 3.9.4             | 3.8.1.post4+tuxcare |
-| CVE-2024-30251      | High     | < 3.9.4             | 3.8.6.post1+tuxcare |
-| CVE-2024-27306      | Medium   | < 3.9.4             | 3.8.1.post6+tuxcare |
-| CVE-2024-23829      | Medium   | < 3.9.2             | 3.8.1.post3+tuxcare |
-| CVE-2024-23829      | Medium   | < 3.9.2             | 3.8.5.post3+tuxcare |
-| CVE-2024-23334      | High     | >= 1.0.5, < 3.9.2   | 3.8.1.post7+tuxcare |
-| CVE-2024-23334      | High     | >= 1.0.5, < 3.9.2   | 3.8.5.post3+tuxcare |
-| CVE-2023-49082      | Medium   | < 3.9.0             | 3.8.1.post6+tuxcare |
-| CVE-2023-49082      | Medium   | < 3.9.0             | 3.8.5.post1+tuxcare |
-| CVE-2023-49082      | Medium   | < 3.9.0             | 3.8.6.post2+tuxcare |
-| CVE-2023-49081      | Medium   | < 3.9.0             | 3.8.1.post2+tuxcare |
-| CVE-2023-49081      | Medium   | < 3.9.0             | 3.8.5.post4+tuxcare |
-| CVE-2023-47627      | High     | < 3.8.6             | 3.8.1.post1+tuxcare |
-| CVE-2023-47627      | High     | < 3.8.6             | 3.8.5.post1+tuxcare |
-| CVE-2023-37276      | High     | < 3.8.5             | 3.8.1.post5+tuxcare |
-| CVE-2023-37276      | High     | < 3.8.5             | 3.8.4.post1+tuxcare |
-| GHSA-pjjw-qhg8-p2p9 | High     | < 3.8.6             | 3.8.1.post7+tuxcare |
-
-  </template>
-
-  <template #certifi>
-
-| CVE ID         | Severity | Vulnerable Versions | Safe Version             |
-| :------------: | :------: | :-----------------: | :----------------------: |
-| CVE-2024-39689 | High     | >= 2021.5.30, < 2024.7.4  | 2022.12.07.post2+tuxcare |
-| CVE-2024-39689 | High     | >= 2021.5.30, < 2024.7.4  | 2023.07.22.post1+tuxcare |
-| CVE-2023-37920 | Critical | >= 2015.4.28, < 2023.7.22 | 2021.10.08.post2+tuxcare |
-| CVE-2023-37920 | Critical | >= 2015.4.28, < 2023.7.22 | 2022.12.07.post2+tuxcare |
-| CVE-2022-23491 | High     | >= 2017.11.5, < 2022.12.7 | 2021.10.08.post2+tuxcare |
-
-  </template>
-
-  <template #cryptography>
-
-| CVE ID              | Severity | Vulnerable Versions | Safe Version         |
-| :-----------------: | :------: | :-----------------: | :------------------: |
-| CVE-2026-26007      | Medium   | < 46.0.5            | 42.0.8.post2+tuxcare |
-| CVE-2026-26007      | Medium   | < 46.0.5            | 43.0.3.post2+tuxcare |
-| CVE-2026-26007      | Medium   | < 46.0.5            | 44.0.3.post1+tuxcare |
-| CVE-2026-26007      | Medium   | < 46.0.5            | 45.0.7.post1+tuxcare |
-| CVE-2024-26130      | High     | >= 38.0.0, < 42.0.4 | 41.0.7.post1+tuxcare |
-| CVE-2024-26130      | High     | >= 38.0.0, < 42.0.4 | 42.0.0.post1+tuxcare |
-| CVE-2024-0727       | Medium   | 41.0.7              | 41.0.7.post2+tuxcare |
-| CVE-2024-12797      | Medium   | 3.4.8               | 3.4.8.post3+tuxcare  |
-| CVE-2024-12797      | Medium   | 42.0.0              | 42.0.0.post1+tuxcare |
-| CVE-2024-12797      | Medium   | 42.0.8              | 42.0.8.post1+tuxcare |
-| CVE-2024-12797      | Medium   | 43.0.1              | 43.0.1.post1+tuxcare |
-| CVE-2024-12797      | Medium   | 43.0.3              | 43.0.3.post1+tuxcare |
-| CVE-2023-50782      | High     | < 42.0.0            | 3.4.8.post1+tuxcare  |
-| CVE-2023-50782      | High     | < 42.0.0            | 41.0.7.post1+tuxcare |
-| CVE-2023-49083      | High     | >= 3.1, < 41.0.6    | 3.4.8.post4+tuxcare  |
-| CVE-2023-23931      | Medium   | >= 1.8, < 39.0.1    | 3.4.8.post1+tuxcare  |
-| CVE-2023-3446       | Medium   | 3.4.8               | 3.4.8.post2+tuxcare  |
-| GHSA-h4gh-qq45-vh27 | Medium   | >= 37.0.0, < 43.0.1 | 42.0.8.post1+tuxcare |
-
-  </template>
-
-  <template #deepdiff>
-
-| CVE ID         | Severity | Vulnerable Versions | Safe Version        |
-| :------------: | :------: | :-----------------: | :-----------------: |
-| CVE-2025-58367 | Critical | 6.2.3               | 6.2.3.post1+tuxcare |
-
-  </template>
-
-  <template #dnspython>
-
-| CVE ID         | Severity | Vulnerable Versions | Safe Version        |
-| :------------: | :------: | :-----------------: | :-----------------: |
-| CVE-2023-29483 | High     | < 2.6.0             | 2.3.0.post1+tuxcare |
-
-  </template>
-
-  <template #flask-cors>
-
-| CVE ID         | Severity | Vulnerable Versions | Safe Version        |
-| :------------: | :------: | :-----------------: | :-----------------: |
-| CVE-2024-6866  | High     | 4.0.2               | 4.0.2.post1+tuxcare |
-
-  </template>
-
-  <template #future>
-
-| CVE ID         | Severity | Vulnerable Versions | Safe Version        |
-| :------------: | :------: | :-----------------: | :-----------------: |
-| CVE-2025-50817 | Medium | 1.0.0               | 1.0.0.post1+tuxcare |
-
-  </template>
-
-  <template #gitpython>
-
-| CVE ID         | Severity | Vulnerable Versions | Safe Version         |
-| :------------: | :------: | :-----------------: | :------------------: |
-| CVE-2024-22190 | High     | < 3.1.41            | 3.1.31.post1+tuxcare |
-| CVE-2023-41040 | Medium   | <= 3.1.34           | 3.1.31.post1+tuxcare |
-| CVE-2023-40590 | High     | <= 3.1.32           | 3.1.31.post1+tuxcare |
-
-  </template>
-
-  <template #gunicorn>
-
-| CVE ID         | Severity | Vulnerable Versions | Safe Version         |
-| :------------: | :------: | :-----------------: | :------------------: |
-| CVE-2024-7923  | Critical | 20.1.0              | 20.1.0.post2+tuxcare |
-| CVE-2024-7923  | Critical | 21.2.0              | 21.2.0.post3+tuxcare |
-| CVE-2024-6827  | High     | 20.1.0              | 20.1.0.post1+tuxcare |
-| CVE-2024-6827  | High     | 21.2.0              | 21.2.0.post2+tuxcare |
-| CVE-2024-6827  | High     | 22.0.0              | 22.0.0.post1+tuxcare |
-| CVE-2024-6827  | High     | 20.0.4              | 20.0.4.post2+tuxcare |
-| CVE-2024-1135  | High     | 20.0.4              | 20.0.4.post1+tuxcare |
-| CVE-2024-1135  | High     | 20.1.0              | 20.1.0.post1+tuxcare |
-| CVE-2024-1135  | High     | 21.2.0              | 21.2.0.post2+tuxcare |
-| CVE-2024-1135  | High     | 22.0.0              | 22.0.0.post1+tuxcare |
-
-  </template>
-  <template #h11>
-
-| CVE ID         | Severity | Vulnerable Versions | Safe Version         |
-| :------------: | :------: | :-----------------: | :------------------: |
-| CVE-2025-43859 | Critical | < 0.16.0            | 0.9.0.post1+tuxcare  |
-
-  </template>
-
-  <template #httpx>
-
-| CVE ID         | Severity | Vulnerable Versions | Safe Version         |
-| :------------: | :------: | :-----------------: | :------------------: |
-| CVE-2021-41945 | Critical | < 0.23.0            | 0.22.0.post1+tuxcare |
-
-  </template>
-
-  <template #idna>
-
-| CVE ID        | Severity | Vulnerable Versions | Safe Version       |
-| :-----------: | :------: | :-----------------: | :----------------: |
-| CVE-2024-3651 | High     | >= 0.2, < 3.7       | 2.1.post1+tuxcare  |
-| CVE-2024-3651 | High     | >= 0.2, < 3.7       | 2.8.post1+tuxcare  |
-| CVE-2024-3651 | High     | >= 0.2, < 3.7       | 2.10.post1+tuxcare |
-| CVE-2024-3651 | High     | >= 0.2, < 3.7       | 3.6.post1+tuxcare  |
-
-  </template>
-
-  <template #jaraco-context>
-
-| CVE ID         | Severity | Vulnerable Versions | Safe Version         |
-| :------------: | :------: | :-----------------: | :------------------: |
-| CVE-2026-23949 | N/A     | 5.3.0               | 5.3.0.post1+tuxcare  |
-
-  </template>
-
-  <template #jinja2>
-
-| CVE ID         | Severity | Vulnerable Versions | Safe Version         |
-| :------------: | :------: | :-----------------: | :------------------: |
-| CVE-2025-27516 | Medium   | < 3.1.6             | 2.11.3.post2+tuxcare |
-| CVE-2024-56326 | Medium   | < 3.1.5             | 2.11.3.post2+tuxcare |
-| CVE-2024-56326 | Medium   | < 3.1.5             | 3.0.3.post1+tuxcare  |
-| CVE-2024-56201 | Medium   | >= 3.0.0, < 3.1.5   | 3.0.3.post1+tuxcare  |
-| CVE-2024-34064 | Medium   | < 3.1.4             | 2.11.3.post2+tuxcare |
-| CVE-2024-22195 | Medium   | < 3.1.3             | 2.11.3.post2+tuxcare |
-| CVE-2024-22195 | Medium   | < 3.1.3             | 3.0.3.post1+tuxcare |
-
-  </template>
-
-  <template #langchain-core>
-
-| CVE ID         | Severity | Vulnerable Versions | Safe Version          |
-| :------------: | :------: | :-----------------: | :-------------------: |
-| CVE-2026-34070 | High     | < 1.2.22            | 0.3.83.post1+tuxcare  |
-
-  </template>
-
-  <template #lightgbm>
-
-| CVE ID         | Severity | Vulnerable Versions | Safe Version         |
-| :------------: | :------: | :-----------------: | :------------------: |
-| CVE-2024-43598 | High     | < 4.6.0             | 3.3.5.post1+tuxcare  |
-
-  </template>
-
-  <template #mlflow>
-
-| CVE ID         | Severity | Vulnerable Versions | Safe Version           |
-| :------------: | :------: | :-----------------: | :--------------------: |
-| CVE-2026-2635  | Critical | 2.22.4              | 2.22.4.post2+tuxcare   |
-| CVE-2026-2033  | High     | 2.22.4              | 2.22.4.post2+tuxcare   |
-| CVE-2025-15031 | Critical | <= 3.10.1           | 2.22.4.post2+tuxcare   |
-| CVE-2025-14287 | High     | < 3.7.0             | 2.22.4.post2+tuxcare   |
-| CVE-2025-14279 | High     | 2.22.4              | 2.22.4.post1+tuxcare   |
-| CVE-2025-14279 | High     | < 3.5.0             | 2.9.1.post1+tuxcare    |
-| CVE-2025-14287 | High     | < 3.7.0             | 2.9.1.post1+tuxcare    |
-| CVE-2025-10279 | High     | < 3.4.0             | 2.9.1.post1+tuxcare    |
-| CVE-2026-2635  | Critical | 2.9.1               | 2.9.1.post1+tuxcare    |
-| CVE-2026-2033  | High     | 2.9.1               | 2.9.1.post1+tuxcare    |
-| CVE-2025-0453  | High     | 2.22.4              | 2.22.4.post1+tuxcare   |
-| CVE-2024-6838  | Medium   | 2.22.4              | 2.22.4.post1+tuxcare   |
-| CVE-2024-156   | Medium   | 2.22.4              | 2.22.4.post1+tuxcare   |
-| CVE-2024-27132 | Critical | <= 2.9.2            | 2.9.1.post2+tuxcare    |
-| CVE-2024-27133 | Critical | <= 2.9.2            | 2.9.1.post2+tuxcare    |
-| CVE-2024-3573  | Critical | < 2.10.0            | 2.9.1.post2+tuxcare    |
-| CVE-2023-6974  | Critical | < 2.9.2             | 2.9.1.post2+tuxcare    |
-| CVE-2023-6975  | Critical | < 2.9.2             | 2.9.1.post2+tuxcare    |
-| CVE-2024-37056 | High     | >= 1.23.0           | 2.9.1.post2+tuxcare    |
-| CVE-2024-27134 | High     | < 2.16.0            | 2.9.1.post2+tuxcare    |
-| CVE-2023-6709  | High     | < 2.9.2             | 2.9.1.post2+tuxcare    |
-| CVE-2023-6753  | High     | < 2.9.2             | 2.9.1.post2+tuxcare    |
-| CVE-2023-6909  | High     | < 2.9.2             | 2.9.1.post2+tuxcare    |
-| CVE-2024-1593  | High     | < 2.11.3            | 2.9.1.post2+tuxcare    |
-| CVE-2024-2928  | High     | < 2.11.3            | 2.9.1.post2+tuxcare    |
-| CVE-2025-52967 | Medium   | < 3.1.0             | 2.9.1.post2+tuxcare    |
-
-  </template>
-
-  <template #mysql-connector-python>
-
-| CVE ID         | Severity | Vulnerable Versions | Safe Version        |
-| :------------: | :------: | :-----------------: | :-----------------: |
-| CVE-2024-21272 | High     | <= 9.0.0            | 8.4.0.post1+tuxcare |
-
-  </template>
-
-  <template #orjson>
-
-| CVE ID         | Severity | Vulnerable Versions | Safe Version        |
-| :------------: | :------: | :-----------------: | :-----------------: |
-| CVE-2024-27454 | High     | < 3.9.15            | 3.8.5.post1+tuxcare |
-
-  </template>
-
-  <template #pandas>
-
-| CVE ID        | Severity | Vulnerable Versions | Safe Version        |
-| :-----------: | :------: | :-----------------: | :-----------------: |
-| CVE-2024-9880 | N/A      | 2.2.0               | 2.2.0.post1+tuxcare |
-| CVE-2024-9880 | N/A      | 2.2.2               | 2.2.2.post1+tuxcare |
-
-  </template>
-
-  <template #paramiko>
-
-| CVE ID         | Severity | Vulnerable Versions | Safe Version        |
-| :------------: | :------: | :-----------------: | :-----------------: |
-| CVE-2023-48795 | Medium   | < 3.4.0             | 3.0.0.post1+tuxcare |
-
-  </template>
-
-  <template #pdfkit>
-
-| CVE ID         | Severity | Vulnerable Versions | Safe Version        |
-| :------------: | :------: | :-----------------: | :-----------------: |
-| CVE-2025-26240 | High     | 0.6.1               | 0.6.1.post1+tuxcare |
-
-  </template>
-
-  <template #pillow>
-
-| CVE ID              | Severity | Vulnerable Versions | Safe Version         |
-| :-----------------: | :------: | :-----------------: | :------------------: |
-| CVE-2026-40192      | High     | >= 10.3.0, < 12.2.0 | 10.4.0.post2+tuxcare |
-| CVE-2026-25990      | High     | >= 10.3.0, < 12.1.1 | 10.4.0.post1+tuxcare |
-| CVE-2026-25990      | High     | >= 10.3.0, < 12.1.1 | 11.3.0.post1+tuxcare |
-| CVE-2025-48379      | High     | 11.2.1              | 11.2.1.post1+tuxcare |
-| CVE-2024-28219      | Medium   | < 10.3.0            | 9.4.0.post3+tuxcare  |
-| CVE-2024-28219      | Medium   | < 10.3.0            | 9.5.0.post2+tuxcare  |
-| CVE-2023-50447      | High     | <= 10.1.0           | 8.4.0.post1+tuxcare  |
-| CVE-2023-50447      | High     | <= 10.1.0           | 9.4.0.post2+tuxcare  |
-| CVE-2023-50447      | High     | <= 10.1.0           | 9.5.0.post1+tuxcare  |
-| CVE-2023-44271      | High     | < 10.0.0            | 9.4.0.post1+tuxcare  |
-| CVE-2023-44271      | High     | < 10.0.0            | 9.5.0.post2+tuxcare  |
-| CVE-2023-4863       | High     | 9.4.0               | 9.4.0.post2+tuxcare  |
-| CVE-2023-4863       | High     | 9.5.0               | 9.5.0.post1+tuxcare  |
-| CVE-2022-45198      | High     | < 9.2.0             | 8.4.0.post1+tuxcare  |
-| CVE-2022-24303      | Critical | < 9.0.1             | 8.4.0.post1+tuxcare  |
-| CVE-2022-22817      | Critical | < 9.0.0             | 8.4.0.post1+tuxcare  |
-| GHSA-56pw-mpj4-fxww | High     | 9.4.0               | 9.4.0.post2+tuxcare  |
-
-  </template>
-
-  <template #pip>
-
-| CVE ID         | Severity | Vulnerable Versions | Safe Version        |
-| :------------: | :------: | :-----------------: | :-----------------: |
-| CVE-2019-20916 | High     | < 19.2              | 9.0.post1+tuxcare   |
-
-  </template>
-
-  <template #protobuf>
-
-| CVE ID        | Severity | Vulnerable Versions | Safe Version          |
-| :-----------: | :------: | :-----------------: | :-------------------: |
-| CVE-2026-0994 | N/A      | 3.20.3              | 3.20.3.post1+tuxcare  |
-| CVE-2026-0994 | N/A      | 4.25.8              | 4.25.8.post1+tuxcare  |
-| CVE-2025-4565 | Medium   | 3.20.3              | 3.20.3.post1+tuxcare  |
-| CVE-2025-4565 | Medium   | 4.24.3              | 4.24.3.post1+tuxcare  |
-| CVE-2022-1941 | High     | 3.17.0              | 3.17.0.post1+tuxcare  |
-
-  </template>
-
-  <template #pydantic>
-
-| CVE ID        | Severity | Vulnerable Versions | Safe Version         |
-| :-----------: | :------: | :-----------------: | :------------------: |
-| CVE-2024-3772 | High     | < 1.10.13           | 1.10.5.post1+tuxcare |
-
-  </template>
-
-  <template #pyjwt>
-
-| CVE ID         | Severity | Vulnerable Versions | Safe Version         |
-| :------------: | :------: | :-----------------: | :------------------: |
-| CVE-2026-32597 | High     | < 2.12.0            | 1.7.1.post2+tuxcare  |
-| CVE-2025-45768 | High     | 2.8.0               | 2.8.0.post1+tuxcare  |
-| CVE-2025-45768 | High     | 2.10.1              | 2.10.1.post1+tuxcare |
-| CVE-2022-29217 | High     | >= 1.5.0, < 2.4.0   | 1.7.1.post1+tuxcare  |
-| CVE-2022-29217 | High     | >= 1.5.0, < 2.4.0   | 2.3.0.post1+tuxcare  |
-
-  </template>
-
-  <template #pymongo>
-
-| CVE ID        | Severity | Vulnerable Versions | Safe Version         |
-| :-----------: | :------: | :-----------------: | :------------------: |
-| CVE-2024-5629 | High     | 3.13.0              | 3.13.0.post1+tuxcare |
-
-  </template>
-
-  <template #pymysql>
-
-| CVE ID        | Severity | Vulnerable Versions | Safe Version         |
-| :-----------: | :------: | :-----------------: | :------------------: |
-| CVE-2024-36039| Medium   | 0.10.1              | 0.10.1.post1+tuxcare |
-
-  </template>
-
-  <template #pyopenssl>
-
-| CVE ID         | Severity | Vulnerable Versions | Safe Version          |
-| :------------: | :------: | :-----------------: | :-------------------: |
-| CVE-2026-27459 | Critical | >= 22.0.0, < 26.0.0 | 23.3.0.post1+tuxcare  |
-| CVE-2026-27459 | Critical | >= 22.0.0, < 26.0.0 | 24.3.0.post1+tuxcare  |
-| CVE-2026-27459 | Critical | >= 22.0.0, < 26.0.0 | 25.3.0.post1+tuxcare  |
-| CVE-2026-27448 | Medium   | >= 0.14, < 26.0.0   | 23.3.0.post1+tuxcare  |
-| CVE-2026-27448 | Medium   | >= 0.14, < 26.0.0   | 24.3.0.post1+tuxcare  |
-| CVE-2026-27448 | Medium   | >= 0.14, < 26.0.0   | 25.3.0.post1+tuxcare  |
-
-  </template>
-
-  <template #pypdf>
-
-| CVE ID         | Severity | Vulnerable Versions | Safe Version        |
-| :------------: | :------: | :-----------------: | :-----------------: |
-| CVE-2025-62708 | High     | < 6.1.3             | 5.9.0.post3+tuxcare |
-| CVE-2025-62707 | High     | < 6.1.3             | 5.9.0.post2+tuxcare |
-| CVE-2025-55197 | High     | < 6.0.0             | 5.9.0.post1+tuxcare |
-
-  </template>
-
-  <template #python-jose>
-
-| CVE ID         | Severity | Vulnerable Versions | Safe Version        |
-| :------------: | :------: | :-----------------: | :-----------------: |
-| CVE-2024-33664 | Medium   | <= 3.3.0            | 3.3.0.post1+tuxcare |
-| CVE-2024-33663 | Medium   | <= 3.3.0            | 3.3.0.post2+tuxcare |
-
-  </template>
-
-  <template #python-multipart>
-
-| CVE ID         | Severity | Vulnerable Versions | Safe Version        |
-| :------------: | :------: | :-----------------: | :-----------------: |
-| CVE-2024-24762 | High     | < 0.0.7             | 0.0.6.post1+tuxcare |
-| CVE-2024-53981 | High     | < 0.0.18            | 0.0.6.post2+tuxcare |
-
-  </template>
-
-  <template #pyyaml>
-
-| CVE ID         | Severity | Vulnerable Versions | Safe Version        |
-| :------------: | :------: | :-----------------: | :-----------------: |
-| CVE-2020-14343 | Critical | < 5.4               | 3.13.post1+tuxcare  |
-| CVE-2020-14343 | Critical | < 5.4               | 5.3.1.post1+tuxcare |
-| CVE-2017-18342 | Critical | < 5.1               | 3.13.post1+tuxcare  |
-
-  </template>
-
-  <template #redis-py>
-
-| CVE ID         | Severity | Vulnerable Versions | Safe Version        |
-| :------------: | :------: | :-----------------: | :-----------------: |
-| CVE-2023-28859 | Medium   | < 4.5.4             | 4.5.1.post1+tuxcare |
-| CVE-2023-28858 | Low      | < 4.5.3             | 4.5.1.post1+tuxcare |
-
-  </template>
-
-  <template #requests>
-
-| CVE ID         | Severity | Vulnerable Versions | Safe Version         |
-| :------------: | :------: | :-----------------: | :------------------: |
-| CVE-2024-47081 | Medium   | < 2.32.4            | 2.32.3.post1+tuxcare |
-| CVE-2024-35195 | Medium   | < 2.32.0            | 2.31.0.post1+tuxcare |
-| CVE-2023-32681 | Medium   | >= 2.3.0, < 2.31.0  | 2.25.1.post1+tuxcare |
-| CVE-2023-32681 | Medium   | >= 2.3.0, < 2.31.0  | 2.30.0.post1+tuxcare |
-
-  </template>
-
-  <template #scikit-learn>
-
-| CVE ID         | Severity | Vulnerable Versions | Safe Version         |
-| :------------: | :------: | :-----------------: | :------------------: |
-| CVE-2024-5206  | Medium   | < 1.5.0             | 1.0.2.post1+tuxcare  |
-
-  </template>
-
-  <template #setuptools>
-
-| CVE ID         | Severity | Vulnerable Versions | Safe Version         |
-| :------------: | :------: | :-----------------: | :------------------: |
-| CVE-2022-40897 | Medium   | < 65.5.1            | 59.8.0.post1+tuxcare |
-| CVE-2025-47273 | High     | < 78.1.1            | 68.0.0.post1+tuxcare |
-| CVE-2025-47273 | High     | < 78.1.1            | 70.3.0.post1+tuxcare |
-| CVE-2025-47273 | High     | < 78.1.1            | 75.0.0.post1+tuxcare |
-| CVE-2025-47273 | High     | < 78.1.1            | 75.8.0.post1+tuxcare |
-| CVE-2024-6345  | High     | <= 69.1.1           | 65.5.1.post1+tuxcare |
-| CVE-2024-6345  | High     | <= 69.1.1           | 68.0.0.post1+tuxcare |
-
-  </template>
-
-  <template #torch>
-
-| CVE ID         | Severity | Vulnerable Versions | Safe Version         |
-| :------------: | :------: | :-----------------: | :------------------: |
-| CVE-2025-32434 | Medium   | < 2.6.0             | 1.13.1.post1+tuxcare |
-| CVE-2024-31583 | High     | < 2.2.0             | 1.13.1.post2+tuxcare |
-| CVE-2024-31580 | Medium   | < 2.2.0             | 1.13.1.post2+tuxcare |
-
-  </template>
-
-  <template #tornado>
-
-| CVE ID         | Severity | Vulnerable Versions | Safe Version         |
-| :------------: | :------: | :-----------------: | :------------------: |
-| CVE-2026-35536 | High     | < 6.5.5             | 6.1.0.post2+tuxcare  |
-| CVE-2026-31958 | High     | < 6.5.5             | 6.1.0.post2+tuxcare  |
-| CVE-2025-47287 | High     | < 6.5.0             | 5.1.1.post1+tuxcare  |
-| CVE-2025-47287 | High     | < 6.5.0             | 6.1.0.post1+tuxcare  |
-| CVE-2024-52804 | High     | < 6.4.2             | 5.1.1.post1+tuxcare  |
-| CVE-2024-52804 | High     | < 6.4.2             | 6.1.0.post1+tuxcare  |
-| CVE-2023-28370 | Medium   | < 6.3.2             | 6.1.0.post2+tuxcare  |
-
-  </template>
-
-  <template #tqdm>
-
-| CVE ID         | Severity | Vulnerable Versions | Safe Version         |
-| :------------: | :------: | :-----------------: | :------------------: |
-| CVE-2024-34062 | Medium   | < 4.66.3            | 4.66.1.post1+tuxcare |
-
-  </template>
-
-  <template #twisted>
-
-| CVE ID         | Severity | Vulnerable Versions | Safe Version         |
-| :------------: | :------: | :-----------------: | :------------------: |
-| CVE-2024-41810 | Medium   | <= 24.3.0           | 20.3.0.post4+tuxcare |
-| CVE-2024-41671 | High     | < 24.7.0            | 20.3.0.post4+tuxcare |
-| CVE-2023-46137 | Medium   | < 23.10.0           | 20.3.0.post4+tuxcare |
-| CVE-2022-21712 | High     | >= 11.1.0, < 22.1.0 | 20.3.0.post4+tuxcare |
-
-  </template>
-
-  <template #urllib3>
-
-| CVE ID         | Severity | Vulnerable Versions | Safe Version          |
-| :------------: | :------: | :-----------------: | :-------------------: |
-| CVE-2026-21441 | High     | >= 1.22, < 2.6.3    | 1.26.20.post3+tuxcare |
-| CVE-2025-66471 | High     | >= 1.0, < 2.6.0     | 1.25.11.post3+tuxcare |
-| CVE-2025-66471 | High     | >= 1.0, < 2.6.0     | 1.26.4.post3+tuxcare  |
-| CVE-2025-66471 | High     | >= 1.0, < 2.6.0     | 1.26.20.post2+tuxcare |
-| CVE-2025-66418 | High     | >= 1.24, < 2.6.0    | 1.25.11.post3+tuxcare |
-| CVE-2025-66418 | High     | >= 1.24, < 2.6.0    | 1.26.4.post3+tuxcare  |
-| CVE-2025-66418 | High     | >= 1.24, < 2.6.0    | 1.26.20.post2+tuxcare |
-| CVE-2025-50181 | Medium   | < 2.5.0             | 1.25.11.post3+tuxcare |
-| CVE-2025-50181 | Medium   | < 2.5.0             | 1.26.4.post4+tuxcare  |
-| CVE-2025-50181 | Medium   | < 2.5.0             | 1.26.20.post1+tuxcare |
-| CVE-2025-50181 | Medium   | < 2.5.0             | 2.0.7.post1+tuxcare   |
-| CVE-2024-37891 | Medium   | < 1.26.19; >= 2.0.0, < 2.2.2 | 1.25.11.post5+tuxcare |
-| CVE-2024-37891 | Medium   | < 1.26.19           | 1.26.4.post2+tuxcare  |
-| CVE-2023-45803 | Medium   | < 1.26.18           | 1.25.11.post2+tuxcare |
-| CVE-2023-45803 | Medium   | < 1.26.18           | 1.26.4.post1+tuxcare  |
-| CVE-2023-43804 | High     | < 1.26.17           | 1.25.11.post4+tuxcare |
-| CVE-2021-33503 | High     | < 1.26.5            | 1.25.11.post2+tuxcare |
-| CVE-2021-33503 | High     | < 1.26.5            | 1.26.4.post4+tuxcare  |
-
-  </template>
-
-  <template #uvicorn>
-
-| CVE ID        | Severity | Vulnerable Versions | Safe Version         |
-| :-----------: | :------: | :-----------------: | :------------------: |
-| CVE-2020-7695 | High     | < 0.11.7            | 0.11.6.post1+tuxcare |
-| CVE-2020-7694 | Low      | all versions        | 0.11.6.post1+tuxcare |
-
-  </template>
-
-  <template #waitress>
-
-| CVE ID         | Severity | Vulnerable Versions | Safe Version        |
-| :------------: | :------: | :-----------------: | :-----------------: |
-| CVE-2024-49769 | High     | < 3.0.1             | 2.1.2.post2+tuxcare |
-| CVE-2024-49768 | Medium   | >= 2.0.0, < 3.0.1   | 2.1.2.post2+tuxcare |
-
-  </template>
-
-  <template #websockets>
-
-| CVE ID         | Severity | Vulnerable Versions | Safe Version      |
-| :------------: | :------: | :-----------------: | :---------------: |
-| CVE-2021-33880 | Medium   | < 9.1               | 8.1.post1+tuxcare |
-
-  </template>
-
-</TableTabs>
-
-**N/A (Not Available)** means that the National Vulnerability Database (NVD) has registered this CVE, but an official CVSS severity score has not yet been assigned.
-
-If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+</WhatsNext>
