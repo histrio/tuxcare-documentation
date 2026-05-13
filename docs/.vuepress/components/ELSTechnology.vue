@@ -1599,6 +1599,11 @@ const techData = [
         link: "./firebase-php-jwt/",
       },
       {
+        name: "Httpful",
+        versions: "0.3.2",
+        link: "./httpful/",
+      },
+      {
         name: "Laravel",
         versions: "5.4.36 | 5.5.50 | 5.6.40 | 5.7.29 | 5.8.38 | 7.30.7 | 8 | 9.52.21 | 10 | 11 | 12.58.0",
         link: "./laravel/",
@@ -1617,11 +1622,6 @@ const techData = [
         name: "Livewire",
         versions: "3.x",
         link: "./livewire/",
-      },
-      {
-        name: "Nategood",
-        versions: "0.3.2",
-        link: "./nategood/",
       },
       {
         name: "PHPMailer",

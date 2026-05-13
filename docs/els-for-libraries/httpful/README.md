@@ -1,10 +1,10 @@
-# Nategood
+# Httpful
 
-Endless Lifecycle Support (ELS) for Nategood from TuxCare provides security fixes for Nategood library versions that have reached their end-of-life. This allows you to continue running your applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for Httpful from TuxCare provides security fixes for Httpful library versions that have reached their end-of-life. This allows you to continue running your applications without vulnerability concerns, even after official support has ended.
 
 ## Supported Versions
 
-* **nategood/httpful** 0.3.2
+* **Httpful** 0.3.2
 
 Other versions upon request.
 
@@ -55,13 +55,13 @@ Other versions upon request.
      { title: 'composer.json', content: composerjson }
    ]" />
 
-4. Install Nategood
+4. Install Httpful
 
-   Install the TuxCare-maintained Nategood release that matches your project:
+   Install the TuxCare-maintained Httpful release that matches your project:
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require nategood/httpful:0.3.2-p1+tuxcare` },
-     { title: 'composer.json', content: nategoodjson }
+     { title: 'composer.json', content: httpfuljson }
    ]" />
 
    **Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
@@ -146,7 +146,7 @@ const composerjson =
 const cli =
 `composer config repositories.tuxcare '{"type":"composer","url":"https://nexus.repo.tuxcare.com/repository/els_php/","options":{"http":{"verify":true}}}' --json`
 
-const nategoodjson =
+const httpfuljson =
 `{
     "require": {
         "nategood/httpful": "0.3.2-p1+tuxcare"

@@ -285,6 +285,10 @@ export default {
                     icon: '/images/firebase.webp',
                 },
                 {
+                    path: '/els-for-libraries/httpful/',
+                    icon: '/images/php-logo.webp',
+                },
+                {
                     path: '/els-for-libraries/laravel/',
                     icon: '/images/laravel-logo.webp',
                 },
@@ -299,10 +303,6 @@ export default {
                 {
                     path: '/els-for-libraries/livewire/',
                     icon: '/images/livewire-logo.webp',
-                },
-                {
-                    path: '/els-for-libraries/nategood/',
-                    icon: '/images/php-logo.webp',
                 },
                 {
                     path: '/els-for-libraries/phpmailer/',
