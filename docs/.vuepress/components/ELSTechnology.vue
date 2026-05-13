@@ -528,7 +528,7 @@ const techData = [
     projects: [
       {
         name: "Angular",
-        versions: "4-18",
+        versions: "4-19",
         link: "./angular/",
       },
       {
@@ -553,7 +553,7 @@ const techData = [
       },
       {
         name: "Astro",
-        versions: "0.26.1 | 1.9.2 | 2.10.15",
+        versions: "0.26.1 | 1.9.2 | 2.10.15 | 3.6.5",
         link: "./astro/",
       },
       {
