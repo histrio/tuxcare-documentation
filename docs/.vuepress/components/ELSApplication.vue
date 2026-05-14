@@ -75,6 +75,12 @@ const applications = [
     icon: "/images/maven.webp",
   },
   {
+    name: "MinIO",
+    versions: "RELEASE.2025-10-15T17-29-55Z",
+    link: "./minio/",
+    icon: "/images/minio.webp",
+  },
+  {
     name: "MySQL",
     versions: "8.0",
     link: "./mysql-and-percona-server/",
