@@ -56,7 +56,7 @@ export default [
     },
     {
         title: "SecureChain for Open Source",
-        description: "delivers verified, malware-free open-source packages from a single trusted source - stopping threats at install, continuously patching vulnerabilities, and extending protection beyond end of life across Python, Java, JavaScript, Go, Rust, and PHP.",
+        description: "delivers verified, signed, continuously patched open-source packages from a trusted, TuxCare-managed registry — drop-in replacements that extend protection beyond upstream end of life. Available for JavaScript at launch, with Python, Java, Go, and PHP on the roadmap.",
         link: "/securechain/",
     },
     {

@@ -1,6 +1,6 @@
 <template>
   <div class="heading text-center">
-    <h2>Get your open-source packages – verified, malware-free, and secured for as long as they're in your stack.</h2>
+    <h2>Get your open-source packages — verified, signed, and supported for as long as they're in your stack.</h2>
   </div>
 
   <div class="supported-product-sorting">
@@ -78,7 +78,8 @@ import { ref, computed } from "vue";
 const search = ref("");
 const activeTab = ref(0);
 
-// add /images/rust.webp first — it does not yet exist in public/images.
+// Only JavaScript ships at launch. Other ecosystems are kept commented out
+// so they can be uncommented per ecosystem rollout.
 const techData = [
   {
     ecosystem: "JavaScript",
@@ -105,11 +106,6 @@ const techData = [
   {
     ecosystem: "Go",
     ecosystemIcon: "/images/go_logo.webp",
-    projects: [],
-  },
-  {
-    ecosystem: "Rust",
-    ecosystemIcon: "/images/rust.webp", // TODO: add rust.webp before uncommenting
     projects: [],
   },
   {
