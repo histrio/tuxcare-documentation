@@ -1188,7 +1188,7 @@ const techData = [
       },
       {
         name: "Vite",
-        versions: "2.9.18 | 3.2.11 | 4.5.14 | 4.5.5 | 5.4.14",
+        versions: "2.9.18 | 3.2.11 | 4.5.14 | 4.5.5 | 5.4.14 | 5.4.21",
         link: "./vite/",
       },
       {
@@ -1599,8 +1599,13 @@ const techData = [
         link: "./firebase-php-jwt/",
       },
       {
+        name: "Httpful",
+        versions: "0.3.2",
+        link: "./httpful/",
+      },
+      {
         name: "Laravel",
-        versions: "5.4.36 | 5.5.50 | 5.6.40 | 5.7.29 | 5.8.38 | 8 | 10 | 11",
+        versions: "5.4.36 | 5.5.50 | 5.6.40 | 5.7.29 | 5.8.38 | 7.30.7 | 8 | 9.52.21 | 10 | 11 | 12.58.0",
         link: "./laravel/",
       },
       {
