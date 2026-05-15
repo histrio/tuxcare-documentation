@@ -28,9 +28,9 @@ defineEmits(['toggle']);
       @keydown.enter.prevent="collapsible && $emit('toggle')"
       @keydown.space.prevent="collapsible && $emit('toggle')"
   >
+    <span v-if="collapsible" class="section-arrow" aria-hidden="true"></span>
     <img :src="item.icon" class="language-logo" alt="language-logo" loading="lazy" />
     <span class="language-title">{{ item.title }}</span>
-    <span v-if="collapsible" class="section-arrow" aria-hidden="true"></span>
   </div>
 </template>
 
@@ -72,17 +72,16 @@ defineEmits(['toggle']);
 }
 
 .section-arrow {
-  margin-left: auto;
-  width: 0;
-  height: 0;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 6px solid #2c3e50;
-  transition: transform 0.15s ease-out;
-  transform: rotate(-90deg);
+  flex-shrink: 0;
+  width: 1rem;
+  height: 0.5625rem;
+  background-image: url("../../public/expand-more.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1rem 0.5625rem;
 }
 
 .sidebar-section-header.expanded .section-arrow {
-  transform: rotate(0deg);
+  background-image: url("../../public/expand-more-down.svg");
 }
 </style>
