@@ -9,23 +9,46 @@
           class="sidebar-group-items"
           v-if="open || !collapsable"
       >
-        <li v-for="child in item?.children">
-          <SidebarSectionHeader
-              v-if="child?.type === 'section-header'"
-              :item="child"
-          />
-          <SidebarLink
-              v-else
-              :closeSidebarDrawer="closeSidebarDrawer"
-              :item="child"
-          />
-        </li>
+        <template v-for="(section, sIdx) in sections" :key="sIdx">
+          <template v-if="section.header">
+            <li>
+              <SidebarSectionHeader
+                  :item="section.header"
+                  :collapsible="true"
+                  :expanded="!collapsedSections[section.key]"
+                  @toggle="toggleSection(section.key)"
+              />
+              <DropdownTransition>
+                <ul
+                    v-if="!collapsedSections[section.key]"
+                    class="sidebar-section-items"
+                >
+                  <li v-for="(child, cIdx) in section.items" :key="cIdx">
+                    <SidebarLink
+                        :closeSidebarDrawer="closeSidebarDrawer"
+                        :item="child"
+                    />
+                  </li>
+                </ul>
+              </DropdownTransition>
+            </li>
+          </template>
+          <template v-else>
+            <li v-for="(child, cIdx) in section.items" :key="cIdx">
+              <SidebarLink
+                  :closeSidebarDrawer="closeSidebarDrawer"
+                  :item="child"
+              />
+            </li>
+          </template>
+        </template>
       </ul>
     </DropdownTransition>
   </div>
 </template>
 
 <script setup>
+import { computed, reactive } from 'vue'
 import SidebarLink from './SidebarLink.vue'
 import SidebarSectionHeader from './SidebarSectionHeader.vue'
 import DropdownTransition from "../components/DropdownTransition.vue";
@@ -52,6 +75,28 @@ const props = defineProps({
     default: () => {}
   }
 })
+
+const sections = computed(() => {
+  const children = props.item?.children || []
+  const result = []
+  let current = { header: null, items: [], key: '__leading__' }
+  for (const child of children) {
+    if (child?.type === 'section-header') {
+      if (current.header || current.items.length) result.push(current)
+      current = { header: child, items: [], key: child.title || `section-${result.length}` }
+    } else {
+      current.items.push(child)
+    }
+  }
+  if (current.header || current.items.length) result.push(current)
+  return result
+})
+
+const collapsedSections = reactive({})
+
+const toggleSection = (key) => {
+  collapsedSections[key] = !collapsedSections[key]
+}
 </script>
 
 <style lang="stylus">
@@ -94,5 +139,11 @@ const props = defineProps({
 
 .sidebar-group-items
   transition height .1s ease-out
+  overflow hidden
+
+.sidebar-section-items
+  padding 0
+  margin 0
+  list-style-type none
   overflow hidden
 </style>
