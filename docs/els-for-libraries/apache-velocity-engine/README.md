@@ -101,12 +101,12 @@ TuxCare's Endless Lifecycle Support (ELS) for Apache Velocity Engine™ provides
 
 <WhatsNext hide-title>
 
-* ![](/images/eye.webp) [CVE tracker](https://tuxcare.com/cve-tracker/?product=Apache+Velocity) — Track vulnerability fixes and updates
+* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=Apache+Velocity) — Track vulnerability fixes and updates
 * ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=Apache+Velocity) — Patched versions and changelogs
 * ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/products?product=Apache+Velocity) — Full list of product parts covered by ELS
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/org.apache.velocity/) — Vulnerability Exploitability eXchange feed
-* ![](/images/unlock-alt.webp) [Source code](https://nexus.repo.tuxcare.com/#browse/browse:els_java:org) — Nexus repository (credentials required)
-* ![](/images/wrench.webp) [Managing the ELS repository](/els-for-libraries/managing-els-repository/) — Update to newer versions
+* ![](/images/unlock-alt.webp) [Source code](/els-for-libraries/managing-els-repository/#javaSources) — Access source JARs in Nexus
+* ![](/images/bolt.webp) [Upgrading packages](/els-for-libraries/managing-els-repository/#java) — Update an installed package to a newer TuxCare release
 
 </WhatsNext>
 

@@ -128,7 +128,7 @@ Fixes for the following vulnerabilities are available in ELS for Livewire from T
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=Livewire) — Track vulnerability fixes and updates
 * ![](/images/bolt.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=Livewire) — Released fixes for Livewire
 * ![](/images/box.webp) [Supported components](https://tuxcare.com/cve-tracker/products?product=Livewire) — Livewire components covered by ELS
-* ![](/images/wrench.webp) [Managing the ELS repository](/els-for-libraries/managing-els-repository/) — Upgrade to a newer version
+* ![](/images/bolt.webp) [Upgrading packages](/els-for-libraries/managing-els-repository/#PHP) — Update an installed package to a newer TuxCare release
 
 </WhatsNext>
 

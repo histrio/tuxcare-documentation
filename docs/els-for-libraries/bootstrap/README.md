@@ -170,12 +170,12 @@ Endless Lifecycle Support (ELS) for Bootstrap from TuxCare provides security fix
 
 <WhatsNext hide-title>
 
-* ![](/images/eye.webp) [CVE tracker](https://tuxcare.com/cve-tracker/?product=Bootstrap) — Track vulnerability fixes and updates
+* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=Bootstrap) — Track vulnerability fixes and updates
 * ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=Bootstrap) — Patched versions and changelogs
 * ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/products?product=Bootstrap) — Full list of product parts covered by ELS
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/bootstrap/) — Vulnerability Exploitability eXchange feed
 * ![](/images/unlock-alt.webp) [SBOM](https://nexus.repo.tuxcare.com/#browse/browse:els-js-sbom:bootstrap) — Software Bill of Materials (Nexus, credentials required)
-* ![](/images/wrench.webp) [Managing the ELS repository](/els-for-libraries/managing-els-repository/) — Update to newer versions
+* ![](/images/bolt.webp) [Upgrading packages](/els-for-libraries/managing-els-repository/#JavaScript) — Update an installed package to a newer TuxCare release
 
 </WhatsNext>
 

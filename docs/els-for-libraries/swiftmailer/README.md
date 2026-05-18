@@ -126,7 +126,7 @@ Fixes for the following vulnerabilities are available in ELS for SwiftMailer fro
 
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/swiftmailer/swiftmailer/) — Vulnerability Exploitability eXchange feed
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/) — Track vulnerability fixes and updates
-* ![](/images/wrench.webp) [Managing the ELS repository](/els-for-libraries/managing-els-repository/) — Upgrade to a newer version
+* ![](/images/bolt.webp) [Upgrading packages](/els-for-libraries/managing-els-repository/#PHP) — Update an installed package to a newer TuxCare release
 
 </WhatsNext>
 

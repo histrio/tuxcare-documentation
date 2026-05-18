@@ -146,7 +146,7 @@ This allows Composer to fall back to Packagist for packages not available in the
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=Symfony) — Track vulnerability fixes and updates
 * ![](/images/bolt.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=Symfony) — Released fixes for Symfony
 * ![](/images/box.webp) [Supported components](https://tuxcare.com/cve-tracker/products?product=Symfony) — Symfony components covered by ELS
-* ![](/images/wrench.webp) [Managing the ELS repository](/els-for-libraries/managing-els-repository/) — Upgrade to a newer version
+* ![](/images/bolt.webp) [Upgrading packages](/els-for-libraries/managing-els-repository/#PHP) — Update an installed package to a newer TuxCare release
 
 </WhatsNext>
 
