@@ -112,7 +112,7 @@ This allows Composer to fall back to Packagist for packages not available in the
 * ![](/images/bolt.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes) — Released fixes
 * ![](/images/box.webp) [Supported components](https://tuxcare.com/cve-tracker/products) — Components covered by ELS
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/) — Vulnerability Exploitability eXchange feed
-* ![](/images/bolt.webp) [Upgrading packages](/els-for-libraries/managing-els-repository/#PHP) — Update an installed package to a newer TuxCare release
+* ![](/images/bolt.webp) [Package updates](/els-for-libraries/managing-els-repository/#PHP) — Update an installed package to a newer TuxCare release
 
 </WhatsNext>
 

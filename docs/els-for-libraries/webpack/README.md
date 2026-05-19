@@ -175,7 +175,7 @@ If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@t
 * ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=webpack) — Patched versions and changelogs
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/webpack/) — Vulnerability Exploitability eXchange feed
 * ![](/images/unlock-alt.webp) [SBOM](https://nexus.repo.tuxcare.com/#browse/browse:els-js-sbom:webpack) — Software Bill of Materials (Nexus, credentials required)
-* ![](/images/bolt.webp) [Upgrading packages](/els-for-libraries/managing-els-repository/#JavaScript) — Update an installed package to a newer TuxCare release
+* ![](/images/bolt.webp) [Package updates](/els-for-libraries/managing-els-repository/#JavaScript) — Update an installed package to a newer TuxCare release
 
 </WhatsNext>
 
