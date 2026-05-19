@@ -39,7 +39,7 @@ TuxCare's commitment to transparency and visibility is foundational to our ELS f
 Note: SBOM support for certain components is in progress and will be available soon. To confirm current availability or expected timeframes, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 :::
 
-* **Enhanced Metadata in Standard Formats:** Each SBOM is provided in universally recognized formats such as SPDX and VEX. These include enhanced metadata like artifact analysis, package health, and vulnerability impact data, ensuring that you have the most detailed and actionable information at your fingertips.
+* **Enhanced Metadata in Standard Formats:** SBOMs are provided in SPDX and CycloneDX. CycloneDX VEX documents accompany them with exploitability status (`affected`, `not_affected`, `fixed`, `under_investigation`) so scanners can suppress non-applicable findings.
 * **Verifiable Integrity and Provenance**: Our packages and metadata provide comprehensive end-to-end provenance, detailing how each package was constructed and tested, ensuring that all components in your software stack are trustworthy.
 
 :::warning
