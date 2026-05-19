@@ -36,7 +36,7 @@ Extended Security Updates are currently available for AlmaLinux 9.2, AlmaLinux 9
 
 ### Vulnerability coverage
 
-TuxCare employs the Common Vulnerability Scoring System (CVSS v3) to assess the severity of security vulnerabilities. Our severity rating system for patching vulnerabilities integrates both NVD scoring and vendor scoring (when available). When the vendor's score is lower than the NVD score, we give priority to the NVD score.
+TuxCare employs the Common Vulnerability Scoring System (CVSS) to assess the severity of security vulnerabilities. Our severity rating system integrates both NVD scoring and vendor scoring (when available); when the vendor's score is lower than the NVD score, we prioritize the NVD score.
 
 ESU prioritises security patches for High and Critical CVE's and bug fixes - but to help our customers comply with regulations such as FedRAMP, HIPAA and PCI-DSS - TuxCare also provides Low and Moderate severity security patches where possible (or otherwise mitigations/analysis) and where breaking changes aren't introduced, going back as far as November 2025. Additional Low/Moderate CVE patches can be purchased if required - speak to your Account Manager about our 10 CVE bundles.
 

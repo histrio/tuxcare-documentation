@@ -20,7 +20,7 @@ It delivers 24/7/365 access to TuxCare’s support team through the [TuxCare Sup
 
 ## Vulnerability coverage
 
-TuxCare employs the Common Vulnerability Scoring System (CVSS v3) to assess the severity of security vulnerabilities. Our severity rating system for patching vulnerabilities integrates both NVD scoring and vendor scoring (when available). When the vendor's score is lower than the NVD score, we give priority to the NVD score.
+TuxCare employs the Common Vulnerability Scoring System (CVSS) to assess the severity of security vulnerabilities. Our severity rating system integrates both NVD scoring and vendor scoring (when available); when the vendor's score is lower than the NVD score, we prioritize the NVD score.
 
 TuxCare shall provide security patches for high- and critical-risk vulnerabilities (CVSS 7 and above). For medium-risk vulnerabilities (CVSS 4.0 to 6.9), TuxCare may provide security patches where mitigations are not available, and there is sufficient customer demand. TuxCare reserves the right to offer a mitigation strategy as an alternative to a direct code fix.
 
