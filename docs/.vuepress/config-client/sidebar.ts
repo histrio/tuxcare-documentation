@@ -286,7 +286,7 @@ export default {
                 },
                 {
                     path: '/els-for-libraries/guzzle/',
-                    icon: '/images/php-logo.webp',
+                    icon: '/images/guzzle.webp',
                 },
                 {
                     path: '/els-for-libraries/httpful/',
@@ -310,7 +310,7 @@ export default {
                 },
                 {
                     path: '/els-for-libraries/phpseclib/',
-                    icon: '/images/php-logo.webp',
+                    icon: '/images/phpseclib.webp',
                 },
                 {
                     path: '/els-for-libraries/phpmailer/',

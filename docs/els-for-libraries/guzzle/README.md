@@ -108,11 +108,10 @@ This allows Composer to fall back to Packagist for packages not available in the
 
 <WhatsNext hide-title>
 
-* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/) — Track vulnerability fixes and updates
-* ![](/images/bolt.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes) — Released fixes
-* ![](/images/box.webp) [Supported components](https://tuxcare.com/cve-tracker/products) — Components covered by ELS
+* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?q=guzzlehttp%2Fguzzle) — Track vulnerability fixes and updates
+* ![](/images/bolt.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?q=guzzlehttp%2Fguzzle) — Released fixes
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/) — Vulnerability Exploitability eXchange feed
-* ![](/images/wrench.webp) [Managing the ELS repository](/els-for-libraries/managing-els-repository/) — Upgrade to a newer version
+* ![](/images/wrench.webp) [Package updates](/els-for-libraries/managing-els-repository/#PHP) — Upgrade to a newer version
 
 </WhatsNext>
 
