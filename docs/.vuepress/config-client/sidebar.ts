@@ -285,6 +285,10 @@ export default {
                     icon: '/images/firebase.webp',
                 },
                 {
+                    path: '/els-for-libraries/guzzle/',
+                    icon: '/images/guzzle.webp',
+                },
+                {
                     path: '/els-for-libraries/httpful/',
                     icon: '/images/php-logo.webp',
                 },
@@ -303,6 +307,10 @@ export default {
                 {
                     path: '/els-for-libraries/livewire/',
                     icon: '/images/livewire-logo.webp',
+                },
+                {
+                    path: '/els-for-libraries/phpseclib/',
+                    icon: '/images/phpseclib.webp',
                 },
                 {
                     path: '/els-for-libraries/phpmailer/',
@@ -330,6 +338,10 @@ export default {
                 },
                 {
                     path: '/els-for-libraries/zendframework-zf1/',
+                    icon: '/images/zf1.webp',
+                },
+                {
+                    path: '/els-for-libraries/zendframework-zend-http/',
                     icon: '/images/zf1.webp',
                 },
                 {
