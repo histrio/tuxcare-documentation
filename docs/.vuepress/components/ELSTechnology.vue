@@ -1599,6 +1599,11 @@ const techData = [
         link: "./firebase-php-jwt/",
       },
       {
+        name: "Guzzle",
+        versions: "6.3.3",
+        link: "./guzzle/",
+      },
+      {
         name: "Httpful",
         versions: "0.3.2",
         link: "./httpful/",
@@ -1622,6 +1627,11 @@ const techData = [
         name: "Livewire",
         versions: "3.x",
         link: "./livewire/",
+      },
+      {
+        name: "phpseclib",
+        versions: "0.3.10",
+        link: "./phpseclib/",
       },
       {
         name: "PHPMailer",
@@ -1662,6 +1672,11 @@ const techData = [
         name: "Zend Framework 1",
         versions: "1.12.10",
         link: "./zendframework-zf1/",
+      },
+      {
+        name: "Zend HTTP",
+        versions: "2.5.6",
+        link: "./zendframework-zend-http/",
       },
     ],
   },
