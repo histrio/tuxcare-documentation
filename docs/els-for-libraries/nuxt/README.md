@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for Nuxt from TuxCare provides security fixes fo
 
 ## Supported Nuxt Versions
 
-* Nuxt 0.10.7, 2.18.1
+* Nuxt 0.10.7, 1.4.5, 2.18.1, 3.12.4
 
 ## Installation
 
@@ -52,6 +52,19 @@ Endless Lifecycle Support (ELS) for Nuxt from TuxCare provides security fixes fo
 
      <TableTabs label="Choose Nuxt version: " >
 
+      <template #nuxt_3.12.4>
+
+      ```text
+      "dependencies": {
+        "nuxt": "npm:@els-js/nuxt@>=3.12.4-tuxcare.1"
+      },
+      "overrides": {
+        "nuxt@3.12.4": "npm:@els-js/nuxt@>=3.12.4-tuxcare.1"
+      }
+      ```
+
+      </template>
+
       <template #nuxt_2.18.1>
 
       ```text
@@ -67,6 +80,19 @@ Endless Lifecycle Support (ELS) for Nuxt from TuxCare provides security fixes fo
         "tmp@0.0.33": "npm:@els-js/tmp@>=0.0.33-tuxcare.1",
         "vue@2.7.16": "npm:@els-js/vue@>=2.7.16-tuxcare.1",
         "vue-template-compiler@2.7.16": "npm:@els-js/vue-template-compiler@>=2.7.16-tuxcare.1"
+      }
+      ```
+
+      </template>
+
+      <template #nuxt_1.4.5>
+
+      ```text
+      "dependencies": {
+        "nuxt": "npm:@els-js/nuxt@>=1.4.5-tuxcare.1"
+      },
+      "overrides": {
+        "nuxt@1.4.5": "npm:@els-js/nuxt@>=1.4.5-tuxcare.1"
       }
       ```
 
@@ -131,6 +157,15 @@ Fixes for the following vulnerabilities are available in ELS for Nuxt from TuxCa
 
 <TableTabs label="Choose Nuxt version: " >
 
+<template #nuxt_3.12.4>
+
+|    CVE ID     | CVE Type  | Severity | Affected Libraries | Vulnerable Versions |
+|:-------------:|:---------:|:--------:|:------------------:|:-------------------:|
+| CVE-2025-24360 | Direct | Medium   | nuxt               |  >= 3.8.1 < 3.15.3  |
+| CVE-2025-24361 | Direct | Medium   | nuxt               |      < 3.15.13      |
+
+</template>
+
 <template #nuxt_2.18.1>
 
 |    CVE ID     | CVE Type  | Severity | Affected Libraries | Vulnerable Versions |
@@ -146,6 +181,14 @@ Fixes for the following vulnerabilities are available in ELS for Nuxt from TuxCa
 | CVE-2025-54798 | Transitive | High     | tmp                |      <= 0.2.4       |
 | CVE-2024-9506 | Transitive | High     | vue                |   >=2.0.0 < 3.0.0   |
 | CVE-2024-6783 | Transitive | High     | vue-template-compiler |   >=2.0.0 < 3.0.0   |
+
+</template>
+
+<template #nuxt_1.4.5>
+
+|    CVE ID     | CVE Type  | Severity | Affected Libraries | Vulnerable Versions |
+|:-------------:|:---------:|:--------:|:------------------:|:-------------------:|
+| CVE-2024-34343 | Direct | Medium   | nuxt               |       < 3.12.4      |
 
 </template>
 
