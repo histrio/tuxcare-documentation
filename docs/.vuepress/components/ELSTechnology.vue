@@ -1662,6 +1662,9 @@ const techData = [
         name: "Google Protobuf",
         versions: "3.24.4",
         link: "./google-protobuf/",
+        name: "Guzzle",
+        versions: "6.3.3",
+        link: "./guzzle/",
       },
       {
         name: "Httpful",
@@ -1687,6 +1690,11 @@ const techData = [
         name: "Livewire",
         versions: "3.x",
         link: "./livewire/",
+      },
+      {
+        name: "phpseclib",
+        versions: "0.3.10",
+        link: "./phpseclib/",
       },
       {
         name: "PHPMailer",
@@ -1727,6 +1735,11 @@ const techData = [
         name: "Zend Framework 1",
         versions: "1.12.10",
         link: "./zendframework-zf1/",
+      },
+      {
+        name: "Zend HTTP",
+        versions: "2.5.6",
+        link: "./zendframework-zend-http/",
       },
     ],
   },

@@ -1,10 +1,10 @@
-# Dompdf
+# phpseclib
 
-Endless Lifecycle Support (ELS) for Dompdf from TuxCare provides security fixes for Dompdf versions that have reached their end-of-life. This allows you to continue running your Dompdf applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for phpseclib from TuxCare provides security fixes for phpseclib library versions that have reached their end-of-life. This allows you to continue running your applications without vulnerability concerns, even after official support has ended.
 
 ## Supported Versions
 
-* **Dompdf** 0.8.6, 1.2.2, 3.1.0
+* **phpseclib** 0.3.10
 
 Other versions upon request.
 
@@ -23,7 +23,7 @@ Other versions upon request.
 
    Composer reads credentials from a per-user `auth.json`. Create or edit the file at:
 
-   * **Linux/macOS**: 
+   * **Linux/macOS**:
      
      ```
      ~/.composer/auth.json
@@ -55,13 +55,13 @@ Other versions upon request.
      { title: 'composer.json', content: composerjson }
    ]" />
 
-4. Install Dompdf
+4. Install phpseclib
 
-   Install the TuxCare-maintained Dompdf release that matches your project:
+   Install the TuxCare-maintained phpseclib release that matches your project:
 
    <CodeTabs :tabs="[
-     { title: 'Composer CLI', content: `composer require dompdf/dompdf:1.2.2-p1+tuxcare` },
-     { title: 'composer.json', content: dompdfjson }
+     { title: 'Composer CLI', content: `composer require phpseclib/phpseclib:0.3.10-p1+tuxcare` },
+     { title: 'composer.json', content: phpseclibjson }
    ]" />
 
    **Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
@@ -104,50 +104,14 @@ it usually means your project requires a package version that is not yet availab
 
 This allows Composer to fall back to Packagist for packages not available in the TuxCare repository, while still preferring TuxCare patches when available.
 
-## Resolved CVEs in Dompdf
-
-Fixes for the following vulnerabilities are available in ELS for Dompdf from TuxCare:
-
-<TableTabs label="Choose Dompdf version: ">
-
-<template #Dompdf_0.8.6>
-
-| CVE ID         | Severity | Vulnerable versions | Fixed in version    |
-|----------------|----------|---------------------|---------------------|
-| CVE-2023-50262 | High     | < 2.0.3             | 0.8.6-p1+tuxcare    |
-| CVE-2023-23924 | Critical | < 2.0.2             | 0.8.6-p1+tuxcare    |
-| CVE-2022-41343 | High     | < 2.0.1             | 0.8.6-p1+tuxcare    |
-| CVE-2022-28368 | Critical | < 1.2.1             | 0.8.6-p1+tuxcare    |
-| CVE-2022-0085  | Low      | < 2.0.0             | 0.8.6-p1+tuxcare    |
-| CVE-2021-3902  | Critical | < 2.0.0             | 0.8.6-p1+tuxcare    |
-| CVE-2021-3838  | Critical | < 2.0.0             | 0.8.6-p1+tuxcare    |
-| CVE-2022-2400  | Medium   | < 2.0.0             | 0.8.6-p1+tuxcare    |
-
-</template>
-
-<template #Dompdf_1.2.2>
-
-| CVE ID         | Severity | Vulnerable versions | Fixed in version    |
-|----------------|----------|---------------------|---------------------|
-| CVE-2023-50262 | High     | < 2.0.3             | 1.2.2-p1+tuxcare    |
-| CVE-2023-23924 | Critical | < 2.0.2             | 1.2.2-p1+tuxcare    |
-| CVE-2022-41343 | High     | < 2.0.1             | 1.2.2-p1+tuxcare    |
-| CVE-2022-0085  | Low      | < 2.0.0             | 1.2.2-p1+tuxcare    |
-| CVE-2021-3902  | Critical | < 2.0.0             | 1.2.2-p1+tuxcare    |
-| CVE-2021-3838  | Critical | < 2.0.0             | 1.2.2-p1+tuxcare    |
-| CVE-2022-2400  | Medium   | < 2.0.0             | 1.2.2-p1+tuxcare    |
-
-</template>
-
-</TableTabs>
-
 ## What's Next?
 
 <WhatsNext hide-title>
 
-* ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/dompdf/dompdf/) — Vulnerability Exploitability eXchange feed
-* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/) — Track vulnerability fixes and updates
-* ![](/images/bolt.webp) [Package updates](/els-for-libraries/managing-els-repository/#PHP) — Update an installed package to a newer TuxCare release
+* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?q=phpseclib%2Fphpseclib) — Track vulnerability fixes and updates
+* ![](/images/bolt.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?q=phpseclib%2Fphpseclib) — Released fixes
+* ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/phpseclib/phpseclib/) — Vulnerability Exploitability eXchange feed
+* ![](/images/wrench.webp) [Package updates](/els-for-libraries/managing-els-repository/#PHP) — Upgrade to a newer version
 
 </WhatsNext>
 
@@ -181,10 +145,10 @@ const composerjson =
 const cli =
 `composer config repositories.tuxcare '{"type":"composer","url":"https://nexus.repo.tuxcare.com/repository/els_php/","options":{"http":{"verify":true}}}' --json`
 
-const dompdfjson =
+const phpseclibjson =
 `{
     "require": {
-        "dompdf/dompdf": "1.2.2-p1+tuxcare"
+        "phpseclib/phpseclib": "0.3.10-p1+tuxcare"
     }
 }`
 

@@ -193,11 +193,11 @@ If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@t
 
 <WhatsNext hide-title>
 
-* ![](/images/eye.webp) [CVE tracker](https://tuxcare.com/cve-tracker/?q=mongoose) — Track vulnerability fixes and updates
+* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?q=mongoose) — Track vulnerability fixes and updates
 * ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?q=mongoose) — Patched versions and changelogs
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/mongoose/) — Vulnerability Exploitability eXchange feed
 * ![](/images/unlock-alt.webp) [SBOM](https://nexus.repo.tuxcare.com/#browse/browse:els-js-sbom:mongoose) — Software Bill of Materials (Nexus, credentials required)
-* ![](/images/wrench.webp) [Managing the ELS repository](/els-for-libraries/managing-els-repository/) — Update to newer versions
+* ![](/images/bolt.webp) [Package updates](/els-for-libraries/managing-els-repository/#JavaScript) — Update an installed package to a newer TuxCare release
 
 </WhatsNext>
 

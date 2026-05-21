@@ -6,7 +6,7 @@
 
 ## Vulnerability Coverage and Target Response Times
 
-TuxCare employs the Common Vulnerability Scoring System (CVSS v3.1) to assess the severity of security vulnerabilities. Our severity rating system for patching vulnerabilities integrates both NVD scoring and vendor scoring (when available). When the vendor's score is lower than the NVD score, we prioritize the NVD score.
+TuxCare employs the Common Vulnerability Scoring System (CVSS) to assess the severity of security vulnerabilities. Our severity rating system integrates both NVD scoring and vendor scoring (when available); when the vendor's score is lower than the NVD score, we prioritize the NVD score.
 
 Aligning with many industry standards and regulatory requirements, TuxCare is committed to delivering timely security updates. For instance, the Payment Card Industry Data Security Standard (PCI DSS) mandates that all 'High' vulnerabilities (CVSS score of 7.0+) must be addressed within 30 days. Other regulations and standards, such as the Health Insurance Portability and Accountability Act (HIPAA) for healthcare or the Federal Information Security Management Act (FISMA) for government agencies, uphold similar requirements.
 
@@ -37,7 +37,7 @@ TuxCare's commitment to transparency and visibility is foundational to our ELS f
 Note: SBOM support for certain components is in progress and will be available soon. To confirm current availability or expected timeframes, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 :::
 
-* **Enhanced Metadata in Standard Formats:** Each SBOM is provided in universally recognized formats such as SPDX and VEX. These include enhanced metadata like artifact analysis, package health, and vulnerability impact data, ensuring that you have the most detailed and actionable information at your fingertips.
+* **Enhanced Metadata in Standard Formats:** SBOMs are provided in SPDX and CycloneDX. CycloneDX VEX documents accompany them with exploitability status (`affected`, `not_affected`, `fixed`, `under_investigation`) so scanners can suppress non-applicable findings.
 * **Verifiable Integrity and Provenance**: Our packages and metadata provide comprehensive end-to-end provenance, detailing how each package was constructed and tested, ensuring that all components in your software stack are trustworthy.
 
 :::warning
