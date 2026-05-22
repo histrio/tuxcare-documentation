@@ -1659,9 +1659,6 @@ const techData = [
         link: "./firebase-php-jwt/",
       },
       {
-        name: "Google Protobuf",
-        versions: "3.24.4",
-        link: "./google-protobuf/",
         name: "Guzzle",
         versions: "6.3.3",
         link: "./guzzle/",
@@ -1710,6 +1707,11 @@ const techData = [
         name: "PhpSpreadsheet",
         versions: "4.5.0",
         link: "./phpspreadsheet/",
+      },
+      {
+        name: "Protobuf",
+        versions: "3.24.4",
+        link: "./google-protobuf/",
       },
       {
         name: "Saloon",

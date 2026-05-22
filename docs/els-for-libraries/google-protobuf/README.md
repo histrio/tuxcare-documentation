@@ -1,10 +1,10 @@
-# Google Protobuf
+# Protobuf
 
-Endless Lifecycle Support (ELS) for Google Protobuf from TuxCare provides security fixes for Google Protobuf library versions that have reached their end-of-life. This allows you to continue running your applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for Protobuf from TuxCare provides security fixes for Protobuf library versions that have reached their end-of-life. This allows you to continue running your applications without vulnerability concerns, even after official support has ended.
 
 ## Supported Versions
 
-* **Google Protobuf** 3.24.4
+* **Protobuf** 3.24.4
 
 Other versions upon request.
 
@@ -55,9 +55,9 @@ Other versions upon request.
      { title: 'composer.json', content: composerjson }
    ]" />
 
-4. Install Google Protobuf
+4. Install Protobuf
 
-   Install the TuxCare-maintained Google Protobuf release that matches your project:
+   Install the TuxCare-maintained Protobuf release that matches your project:
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require google/protobuf:3.24.4-p1+tuxcare` },
@@ -108,10 +108,9 @@ This allows Composer to fall back to Packagist for packages not available in the
 
 <WhatsNext hide-title>
 
-* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/) — Track vulnerability fixes and updates
-* ![](/images/bolt.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes) — Released fixes
-* ![](/images/box.webp) [Supported components](https://tuxcare.com/cve-tracker/products) — Components covered by ELS
-* ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/) — Vulnerability Exploitability eXchange feed
+* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?q=google%2Fprotobuf) — Track vulnerability fixes and updates
+* ![](/images/bolt.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?q=google%2Fprotobuf) — Released fixes
+* ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/google/) — Vulnerability Exploitability eXchange feed
 * ![](/images/bolt.webp) [Package updates](/els-for-libraries/managing-els-repository/#PHP) — Update an installed package to a newer TuxCare release
 
 </WhatsNext>
