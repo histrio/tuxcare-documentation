@@ -7,6 +7,7 @@ SecureChain delivers verified, signed, continuously patched JavaScript packages 
 <ELSPrerequisites>
 
 * TuxCare SecureChain registry token — contact [sales@tuxcare.com](mailto:sales@tuxcare.com)
+* An npm project with `package.json`. If you're starting from scratch, run `npm init -y` in your project directory to create one.
 * To browse available packages, visit TuxCare [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:securechain-js) and sign in. You may need to refresh the page after logging in.
 
 </ELSPrerequisites>
