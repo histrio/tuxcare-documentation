@@ -2,7 +2,7 @@
 
 # SecureChain for Open Source Software
 
-<SecureChainTechnology />
+<SecureChainEcosystemSelector />
 
 <ContactSales text="Need a version not listed? Contact sales@tuxcare.com for more information." />
 

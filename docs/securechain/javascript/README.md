@@ -1,0 +1,49 @@
+# JavaScript
+
+SecureChain delivers verified, signed, continuously patched JavaScript packages from a TuxCare-managed npm registry. Packages install with standard `npm` tooling and continue to receive CVE patches after upstream end of life.
+
+## Installation
+
+<ELSPrerequisites>
+
+* TuxCare SecureChain registry token — contact [sales@tuxcare.com](mailto:sales@tuxcare.com)
+* To browse available packages, visit TuxCare [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:securechain-js) and sign in. You may need to refresh the page after logging in.
+
+</ELSPrerequisites>
+
+<ELSSteps>
+
+1. Connect to the SecureChain registry
+
+   In the root directory of your project, create or edit `.npmrc` to point npm at the SecureChain registry and provide your token:
+
+   ```text
+   registry=https://nexus.repo.tuxcare.com/repository/securechain-js/
+   //nexus.repo.tuxcare.com/repository/securechain-js/:_auth=<TOKEN>
+   always-auth=true
+   ```
+
+   :::warning
+   Replace `<TOKEN>` with the token you received from [sales@tuxcare.com](mailto:sales@tuxcare.com).
+   :::
+
+2. Install a SecureChain package
+
+   SecureChain packages are published under the `@securechain-js` scope. Install them with their fully qualified name and version:
+
+   ```text
+   npm install @securechain-js/<package>@<version>
+   ```
+
+   For the list of available packages and versions, visit TuxCare [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:securechain-js).
+
+</ELSSteps>
+
+## What's Next?
+
+<WhatsNext hide-title>
+
+* ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/securechain/) — Vulnerability Exploitability eXchange feed
+* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/) — Track vulnerability fixes and updates
+
+</WhatsNext>
