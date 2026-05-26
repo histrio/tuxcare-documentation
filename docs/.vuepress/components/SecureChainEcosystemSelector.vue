@@ -1,8 +1,7 @@
 <template>
   <div class="os-selector">
     <div class="os-selector-heading">
-      <h3>Which ecosystem are you using?</h3>
-      <p>Select your language ecosystem to get started with SecureChain.</p>
+      <h3>Select your ecosystem to get started with SecureChain.</h3>
     </div>
 
     <div class="os-grid">
