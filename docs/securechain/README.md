@@ -4,8 +4,6 @@
 
 <SecureChainEcosystemSelector />
 
-<ContactSales text="Need a version not listed? Contact sales@tuxcare.com for more information." />
-
 ## What SecureChain Covers
 
 * Verified, signed builds from trusted sources
@@ -66,13 +64,9 @@ Why it matters:
 * Cuts scanner noise to what truly matters
 * Automation-friendly for tooling and CI/CD
 
-:::warning
-Per-ecosystem VEX feed paths for SecureChain are being finalized. The link in the "What's Next" section below points to the planned location.
-:::
-
 <WhatsNext hide-title>
 
-* ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/securechain/) — Vulnerability Exploitability eXchange feed
+* ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/) — Vulnerability Exploitability eXchange feed
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/) — Track vulnerability fixes and updates
 
 </WhatsNext>

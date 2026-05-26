@@ -43,7 +43,7 @@ SecureChain delivers verified, signed, continuously patched JavaScript packages 
 
 <WhatsNext hide-title>
 
-* ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/securechain/) — Vulnerability Exploitability eXchange feed
+* ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/) — Vulnerability Exploitability eXchange feed
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/) — Track vulnerability fixes and updates
 
 </WhatsNext>
