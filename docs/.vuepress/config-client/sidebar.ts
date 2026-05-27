@@ -326,7 +326,7 @@ export default {
                 },
                 {
                     path: '/els-for-libraries/ratchet/',
-                    icon: '/images/php-logo.webp',
+                    icon: '/images/ratchet.webp',
                 },
                 {
                     path: '/els-for-libraries/google-protobuf/',
