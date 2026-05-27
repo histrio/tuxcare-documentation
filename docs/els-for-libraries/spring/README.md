@@ -30,7 +30,9 @@ ELS for Spring® also patches transitive dependencies at no extra cost, includin
   GraphQL: 'Spring® GraphQL',
   Retry: 'Spring® Retry',
   Plugin: 'Spring® Plugin',
-  Web_Flow: 'Spring® Web Flow'
+  Web_Flow: 'Spring® Web Flow',
+  Pulsar: 'Spring® for Apache Pulsar',
+  Authorization_Server: 'Spring® Authorization Server'
 }">
 
 <template #Framework>
@@ -375,6 +377,25 @@ ELS for Spring® also patches transitive dependencies at no extra cost, includin
 | spring-js-resources | 2.3.1.RELEASE, 2.3.3.RELEASE |
 | spring-webflow | 2.3.1.RELEASE, 2.3.3.RELEASE |
 | spring-faces | 2.3.1.RELEASE, 2.3.3.RELEASE |
+</template>
+
+<template #Pulsar>
+
+| Module | Version |
+|---|---|
+| spring-pulsar | 1.1.13 |
+| spring-pulsar-reactive | 1.1.13 |
+| spring-pulsar-cache-provider | 1.1.13 |
+| spring-pulsar-cache-provider-caffeine | 1.1.13 |
+| spring-pulsar-test | 1.1.13 |
+| spring-pulsar-bom | 1.1.13 |
+</template>
+
+<template #Authorization_Server>
+
+| Module | Version |
+|---|---|
+| spring-security-oauth2-authorization-server | 1.1.4 |
 </template>
 
 </TableTabs>
