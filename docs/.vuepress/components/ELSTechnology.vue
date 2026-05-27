@@ -296,11 +296,6 @@ const techData = [
         link: "./hibernate/",
       },
       {
-        name: "Hibernate Validator",
-        versions: "6.2.5.Final",
-        link: "./hibernate/",
-      },
-      {
         name: "HtmlUnit",
         versions: "2.70.0",
         link: "./java-libraries/",
