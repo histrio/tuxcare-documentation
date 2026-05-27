@@ -526,6 +526,16 @@ const techData = [
         link: "./spring/",
       },
       {
+        name: "Spring® for Apache Pulsar",
+        versions: "1.1.13",
+        link: "./spring/",
+      },
+      {
+        name: "Spring® Authorization Server",
+        versions: "1.1.4",
+        link: "./spring/",
+      },
+      {
         name: "Thymeleaf",
         versions: "3.0.15.RELEASE",
         link: "./java-libraries/",
