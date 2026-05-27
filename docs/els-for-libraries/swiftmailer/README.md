@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for SwiftMailer from TuxCare provides security f
 
 ## Supported Versions
 
-* **SwiftMailer** 5.4.12
+* **SwiftMailer** 5.4.12, 6.0.2
 
 Other versions upon request.
 

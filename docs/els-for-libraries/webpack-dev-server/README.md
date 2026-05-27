@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for webpack-dev-server from TuxCare provides sec
 
 ## Supported webpack-dev-server Versions
 
-* webpack-dev-server 3.11.0, 4.7.3, 4.15.1
+* webpack-dev-server 3.11.0, 3.11.2, 4.7.3, 4.11.0, 4.15.1
 
 ## Installation
 

@@ -5,6 +5,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 ## Supported Python Libraries
 
 * **aiohttp** 3.8.1, 3.8.4, 3.8.5, 3.8.6
+* **apache-airflow-providers-http** 4.13.3
 * **certifi** 2021.10.8, 2022.12.7, 2023.7.22
 * **cryptography** 3.4.8, 41.0.7, 42.0.0, 42.0.8, 43.0.1, 43.0.3, 44.0.3, 45.0.7
 * **deepdiff** 6.2.3
@@ -21,7 +22,10 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Jinja2** 2.11.3, 3.0.3
 * **keras** 2.15.0
 * **langchain-core** 0.3.83
+* **langchain-text-splitters** 0.3.11
+* **langgraph-checkpoint** 2.1.2
 * **LightGBM** 3.3.5
+* **lxml** 4.9.4, 5.4.0
 * **MLflow** 2.9.1, 2.22.4
 * **MySQL Connector/Python** 8.4.0
 * **orjson** 3.8.5
