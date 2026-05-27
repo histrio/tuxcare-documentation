@@ -679,6 +679,10 @@ The alternate feed option is enabled by setting the `PREFIX` variable in `/et
 
 ## KernelCare Enterprise
 
+:::tip Note
+**KernelCare Plus** was the former name for this product. It reached end-of-life in March 2023 and was replaced by **KernelCare Enterprise**, which is the current supported offering. KernelCare Enterprise includes everything KernelCare Plus provided, plus additional enterprise capabilities such as controlled patch rollout via ePortal, air-gapped environment support, and access to add-ons such as LibCare and QEMUCare. If you see references to "KernelCare Plus" on invoices or in the CLN portal, these refer to the same product now marketed as KernelCare Enterprise.
+:::
+
 KernelCare Enterprise live patching enhances customers' vulnerability patching programs by providing live patches to the Linux kernel and, optionally (with an add-on), to critical userspace components. The systems are patched according to your patch deployment policy, allowing you to customize your patch management to align with the needs of your unique environment, whether online or air-gapped.
 
 KernelCare Enterprise can be extended with the following add-ons:
