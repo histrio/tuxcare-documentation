@@ -37,7 +37,8 @@ TuxCare's commitment to transparency and visibility is foundational to our ELS f
 Note: SBOM support for certain components is in progress and will be available soon. To confirm current availability or expected timeframes, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 :::
 
-* **Enhanced Metadata in Standard Formats:** SBOMs are provided in SPDX and CycloneDX. CycloneDX VEX documents accompany them with exploitability status (`affected`, `not_affected`, `fixed`, `under_investigation`) so scanners can suppress non-applicable findings.
+* **Vulnerability Exploitability eXchange (VEX):** Each package is accompanied by a CycloneDX VEX document indicating which known CVEs actually affect this build. The feed is updated with each release; entries carry one of two status values — `exploitable` (the CVE affects this artifact version and has not yet been patched in that specific release) or `resolved` (the CVE has been patched through a TuxCare release). For evaluation purposes, filter the data to the latest `-tuxcare.N` iteration of the base version you plan to use. See the [VEX feed](https://security.tuxcare.com/vex/cyclonedx/) for details.
+* **Enhanced Metadata in Standard Formats:** SBOMs are provided in SPDX and CycloneDX.
 * **Verifiable Integrity and Provenance**: Our packages and metadata provide comprehensive end-to-end provenance, detailing how each package was constructed and tested, ensuring that all components in your software stack are trustworthy.
 
 :::warning
