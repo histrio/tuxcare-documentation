@@ -7,7 +7,6 @@
 ## What SecureChain Covers
 
 * Verified, signed builds from trusted sources
-* Continuous CVE patching for the packages you actually use
 * Coverage that continues after upstream end of life
 * A single registry your developers and CI already know how to talk to
 
