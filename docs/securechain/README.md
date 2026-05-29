@@ -33,19 +33,18 @@ Handling Multiple Vulnerabilities: In cases where several CVEs are reported simu
 
 ## Enhanced Transparency & Visibility
 
-TuxCare's commitment to transparency and visibility is foundational to our SecureChain offering. We aim to provide comprehensive details about how each package is built, verified, and distributed, ensuring complete trust in the software supply chain.
+TuxCare's commitment to transparency and visibility is foundational to our SecureChain offering. We provide verifiable metadata that helps customers understand package composition, software provenance, and vulnerability impact across the software supply chain.
 
-* **SLSA Compliance**: All packages are built and signed to ensure verifiable Supply-chain Levels for Software Artifacts (SLSA) compliance at Level 2 at launch, with Level 3 on the roadmap. They are securely constructed from vetted sources, include attestations for all dependencies, and undergo continuous testing to maintain integrity and security.
-* **Software Bill of Materials (SBOM)**: We provide complete visibility into the software supply chain with a comprehensive inventory of every package in the codebase, ensuring transparency and accountability in your software ecosystem.
+* **SLSA Compliance**: TuxCare packages are built and signed to support verifiable Supply-chain Levels for Software Artifacts (SLSA) compliance at Level 2 at launch, with Level 3 on the roadmap. Builds run from vetted sources, include attestations for dependencies, and undergo continuous testing to maintain integrity and trust.
+* **Software Bill of Materials (SBOM)**: Machine-readable SBOMs provide visibility into package composition and dependencies, supporting software supply chain transparency and accountability. Depending on the package, SBOMs are provided in industry-standard formats — SPDX and CycloneDX. See [Machine-Readable Security Data](./machine-readable-security-data/) for current availability.
 
 :::warning
-Note: SBOM support for certain components is in progress and will be available soon. To confirm current availability or expected timeframes, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+Note: SBOM availability for certain components is still expanding and may vary by package. Contact [sales@tuxcare.com](mailto:sales@tuxcare.com) for current availability details.
 :::
 
-* **Vulnerability Exploitability eXchange (VEX)**: Each package is accompanied by a VEX document indicating which known CVEs actually affect this build. See the [VEX section](#vulnerability-exploitability-exchange-vex) below for format, states, and feed URLs.
-* **Enhanced metadata in standard formats**: SBOMs are provided in SPDX and CycloneDX.
-* **Verifiable Integrity and Provenance**: Our packages and metadata provide comprehensive end-to-end provenance, detailing how each package was constructed and tested, ensuring that all components in your software stack are trustworthy.
-* **Secure Distribution**: Signed versions of the packages and their metadata are distributed from a registry managed, secured, and protected by TuxCare, guaranteeing that your software updates are authentic and untampered.
+* **Vulnerability Exploitability eXchange (VEX)**: Machine-readable VEX documents provide contextual vulnerability information, helping teams understand which known CVEs affect specific package versions and reduce remediation noise. VEX is published in standard formats, including CycloneDX VEX. See [Machine-Readable Security Data](./machine-readable-security-data/) for the feed URL and details.
+* **Verifiable Integrity and Provenance**: Packages and metadata provide end-to-end provenance information, helping customers verify how software was built, tested, and distributed.
+* **Secure Distribution**: Signed packages and associated metadata are distributed through TuxCare-managed infrastructure to ensure authenticity and integrity.
 
 ## Support Duration
 
@@ -59,35 +58,9 @@ TuxCare provides technical support according to the standard [support policy](ht
 
 It delivers 24/7/365 access to TuxCare's support team through the [TuxCare Support Portal](https://tuxcare.com/support-portal/) and to TuxCare's online knowledge base.
 
-## Vulnerability Exploitability eXchange (VEX)
-
-The VEX (Vulnerability Exploitability eXchange) feed provides machine-readable information about the vulnerability status of artifacts maintained in the TuxCare portfolio. TuxCare publishes VEX as **CycloneDX VEX documents**, distributed alongside each package version (separately from the SBOM). The feed is updated with each release and reflects the current state of vulnerability handling across supported components and their dependencies.
-
-The feed aggregates data across the entire supported portfolio. Each entry represents the relationship between a specific CVE and a specific artifact version. Because the dataset includes all supported base versions, all released iterations, and transitive dependencies, the total number of entries reflects combinations of these elements rather than the number of unique vulnerabilities.
-
-VEX status values describe how a vulnerability relates to a particular artifact version:
-
-* **exploitable** — the CVE affects this artifact version and has not yet been patched in that specific release.
-* **resolved** — the CVE affecting that artifact version has been patched through a TuxCare release.
-
-For evaluation and planning purposes, it is recommended to filter the VEX data to the specific artifact versions relevant to your environment. The most meaningful view is typically the latest released `-tuxcare.N` iteration for the base version you plan to use. This reflects the current vulnerability coverage provided by TuxCare. Earlier iterations remain in the VEX for historical completeness but are usually not relevant once a newer release has been adopted.
-
-Why it matters:
-
-* Context-aware vulnerability status
-* Cuts scanner noise to what truly matters
-* Automation-friendly for tooling and CI/CD
-
-Language-specific VEX feeds:
-
-* [Python](https://security.tuxcare.com/vex/cyclonedx/els_lang_python/)
-* [Java](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/)
-* [JavaScript](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/)
-* [PHP](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/)
-
 <WhatsNext hide-title>
 
-* ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/) — Vulnerability Exploitability eXchange feed
+* ![](/images/shield-alert.webp) [Machine-Readable Security Data](./machine-readable-security-data/) — SBOM and VEX feeds, formats, and consumption guidance
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/) — Track vulnerability fixes and updates
 
 </WhatsNext>

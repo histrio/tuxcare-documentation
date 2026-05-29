@@ -524,6 +524,7 @@ export default {
                     icon: '/images/star.webp',
                 },
                 "/els-for-libraries/managing-els-repository/",
+                "/els-for-libraries/machine-readable-security-data/",
             ]
         },
     ],
@@ -542,6 +543,7 @@ export default {
                     icon: '/images/star.webp',
                 },
                 "/securechain/managing-securechain-repository/",
+                "/securechain/machine-readable-security-data/",
             ]
         },
     ],
@@ -587,7 +589,13 @@ export default {
                     title: 'MySQL and Percona Server',
                     icon: '/images/mysql.webp',
                 },
+                {
+                    title: 'Resources',
+                    type: 'section-header',
+                    icon: '/images/star.webp',
+                },
                 "/els-for-applications/managing-els-repository/",
+                "/els-for-applications/machine-readable-security-data/",
             ]
         },
     ],
