@@ -10,6 +10,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **cryptography** 3.4.8, 41.0.7, 42.0.0, 42.0.8, 43.0.1, 43.0.3, 44.0.3, 45.0.7
 * **deepdiff** 6.2.3
 * **dnspython** 2.3.0
+* **dulwich** 0.25.2
 * **fastmcp** 2.14.5, 2.14.7
 * **flask-cors** 4.0.2
 * **future** 1.0.0

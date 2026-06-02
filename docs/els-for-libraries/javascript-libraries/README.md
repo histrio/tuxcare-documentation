@@ -25,7 +25,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **debug** 1.0.5, 2.1.1, 2.2.0, 2.3.3, 3.2.6, 4.1.1
 * **devalue** 2.0.1, 4.3.3
 * **diff** 1.0.2, 1.4.0, 7.0.0
-* **dompurify** 2.3.0, 2.4.3, 2.5.8, 2.5.9, 3.1.6, 3.2.3
+* **dompurify** 2.3.0, 2.4.0, 2.4.3, 2.5.8, 2.5.9, 3.0.3, 3.1.6, 3.2.3
 * **ejs** 1.0.0, 2.7.4
 * **elliptic** 6.6.0, 6.6.1
 * **engine.io** 3.2.1

@@ -105,6 +105,11 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "Apache Commons Digester",
+        versions: "2.1",
+        link: "./java-libraries/",
+      },
+      {
         name: "Apache Commons FileUpload",
         versions: "1.2.1 | 1.2.2",
         link: "./java-libraries/",
@@ -151,7 +156,7 @@ const techData = [
       },
       {
         name: "Apache Log4j",
-        versions: "1.2.16 | 1.2.17",
+        versions: "1.2.16 | 1.2.17 | 2.17.1",
         link: "./apache-log4j/",
       },
       {
@@ -212,7 +217,7 @@ const techData = [
       },
       {
         name: "Bouncy Castle",
-        versions: "1.64 | 1.76",
+        versions: "1.64 | 1.76 | 1.78.1",
         link: "./java-libraries/",
       },
       {
@@ -287,7 +292,7 @@ const techData = [
       },
       {
         name: "Hibernate",
-        versions: "5.4.32.Final | 5.4.33.Final | 5.5.6.Final | 5.5.9.Final | 5.6.15.Final | 6.2.5.Final",
+        versions: "5.4.3.Final | 5.4.32.Final | 5.4.33.Final | 5.5.6.Final | 5.5.9.Final | 5.6.15.Final | 6.2.5.Final",
         link: "./hibernate/",
       },
       {
@@ -309,6 +314,11 @@ const techData = [
         name: "Jackson",
         versions: "1.9.13",
         link: "./jackson/",
+      },
+      {
+        name: "JasperReports",
+        versions: "3.7.4",
+        link: "./java-libraries/",
       },
       {
         name: "JBoss XNIO",
@@ -557,7 +567,7 @@ const techData = [
       },
       {
         name: "Eclipse Jetty",
-        versions: "8.2.0.v20160908 | 9.4.24.v20191120 | 9.4.48.v20220622 | 9.4.53.v20231009 | 9.4.58.v20250814 | 9.4.59 | 9.4.60 | 10.0.26 | 10.0.27 | 10.0.28 | 11.0.19 | 11.0.26 | 11.0.27 | 11.0.28",
+        versions: "8.2.0.v20160908 | 9.4.24.v20191120 | 9.4.48.v20220622 | 9.4.53.v20231009 | 9.4.57.v20241219 | 9.4.58.v20250814 | 9.4.59 | 9.4.60 | 10.0.26 | 10.0.27 | 10.0.28 | 11.0.19 | 11.0.26 | 11.0.27 | 11.0.28",
         link: "./jetty/",
       },
       {
@@ -703,7 +713,7 @@ const techData = [
       },
       {
         name: "dompurify",
-        versions: "2.3.0 | 2.4.3 | 2.5.8 | 2.5.9 | 3.1.6 | 3.2.3",
+        versions: "2.3.0 | 2.4.0 | 2.4.3 | 2.5.8 | 2.5.9 | 3.0.3 | 3.1.6 | 3.2.3",
         link: "./javascript-libraries/",
       },
       {
@@ -1415,6 +1425,11 @@ const techData = [
       {
         name: "dnspython",
         versions: "2.3.0",
+        link: "./python-libraries/",
+      },
+      {
+        name: "dulwich",
+        versions: "0.25.2",
         link: "./python-libraries/",
       },
       {
