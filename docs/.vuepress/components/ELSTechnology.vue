@@ -74,7 +74,7 @@
 </template>
 
 <script setup>
-import { ref, computed } from "vue";
+import { ref, computed, watch } from "vue";
 
 const search = ref("");
 const activeTab = ref(0);
@@ -1920,7 +1920,7 @@ const techData = [
 
 const filteredData = computed(() => {
   const term = search.value.toLowerCase();
-  const result = techData
+  return techData
     .map((item) => {
       const matchEcosystem = item.ecosystem.toLowerCase().includes(term);
       const filteredProjects = item.projects.filter((p) =>
@@ -1938,11 +1938,13 @@ const filteredData = computed(() => {
       };
     })
     .filter(Boolean);
+});
 
-  // reset activeTab if out of range
+// Reset the active tab when the filtered list changes and the current
+// selection falls out of range. Handled as a side effect in response to
+// dependency changes, keeping the computed getter above pure.
+watch(filteredData, (result) => {
   if (activeTab.value >= result.length) activeTab.value = 0;
-
-  return result;
 });
 
 function getFilteredProjects(item) {
