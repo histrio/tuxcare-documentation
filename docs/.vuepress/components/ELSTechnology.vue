@@ -592,6 +592,11 @@ const techData = [
         link: "./angularjs/",
       },
       {
+        name: "ag-grid-community",
+        versions: "23.0.2 | 23.2.1 | 24.1.0 | 25.0.0",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "ajv",
         versions: "4.11.8 | 5.5.2 | 6.4.0 | 6.12.3 | 6.12.4 | 6.12.6 | 6.14.0 | 8.6.2 | 8.9.0 | 8.11.0 | 8.12.0 | 8.17.1",
         link: "./javascript-libraries/",
