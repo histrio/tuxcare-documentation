@@ -1433,11 +1433,6 @@ const techData = [
         link: "./python-libraries/",
       },
       {
-        name: "dulwich",
-        versions: "0.25.2",
-        link: "./python-libraries/",
-      },
-      {
         name: "fastapi",
         versions: "0.63.0 | 0.104.1",
         link: "./fastapi/",
