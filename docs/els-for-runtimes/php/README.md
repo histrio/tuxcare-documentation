@@ -39,7 +39,10 @@ alt-php provides a more flexible and convenient environment for working with dif
 | Alpine Linux                                                             | APK          | 3.22, 3.23                        | 7.3, 7.4, 8.0, 8.1                                                        |
 | Windows                                                                  | -            | Windows Server 2019, 2022, 2025   | 5.2, 5.4, 5.6, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2                               |
 
-**Supported architectures:** x86_64 (64-bit) on all supported OSes; arm64 on Debian 12 and 13; aarch64 on Alpine Linux 3.22+ (in addition to x86_64). On Windows, x64 and x86 are available.
+**Supported architectures:**
+
+* x86_64 — all supported Linux OSes; x64 and x86 on Windows
+* ARM64 — Debian 12 and 13, Alpine Linux 3.22+
 
 <ContactSales text="Other versions and architectures available upon request. Contact sales@tuxcare.com for more information." />
 

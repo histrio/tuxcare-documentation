@@ -34,7 +34,10 @@ alt-nodejs provides a more flexible and convenient environment for working with 
 | Debian                                                       | DEB          | 13                                | 12, 14, 16, 18, 20, 22, 23, 24    |
 | Alpine Linux                                                 | APK          | 3.22, 3.23                        | 12, 14, 16, 18, 20, 22, 23, 24    |
 
-**Supported architectures:** x86_64 (64-bit) on all supported OSes; arm64 on Debian 12 and 13 (in addition to x86_64).
+**Supported architectures:**
+
+* x86_64 — all supported OSes
+* ARM64 — Debian 12 and 13
 
 <ContactSales text="Other versions and architectures available upon request. Contact sales@tuxcare.com for more information." />
 
