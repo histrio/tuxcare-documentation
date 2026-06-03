@@ -34,7 +34,10 @@ alt-ruby provides a more flexible and convenient environment for working with di
 | Ubuntu                                                                   | DEB          | 24.04      | 2.7, 3.0, 3.1, 3.2            |
 | Alpine Linux                                                             | APK          | 3.22       | 2.6, 2.7, 3.0, 3.1, 3.2       |
 
-**Supported architectures:** x86_64 on all OSes; aarch64 on Alpine Linux in addition to x86_64
+**Supported architectures:**
+
+* x86_64 — all supported OSes
+* aarch64/arm64 — Debian 12 and 13, Alpine Linux
 
 <ContactSales text="Other distros and architectures available upon request. Contact sales@tuxcare.com for more information." />
 

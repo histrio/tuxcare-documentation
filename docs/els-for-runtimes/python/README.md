@@ -33,7 +33,10 @@ alt-python provides a more flexible and convenient environment for working with 
 | Debian                                                       | DEB          | 12, 13                             | 2.7, 3.6, 3.7, 3.8, 3.9       |
 | Alpine Linux                                                 | APK          | 3.22, 3.23                         | 3.6, 3.7, 3.8, 3.9            |
 
-**Supported architecture:** x86_64 (64-bit)
+**Supported architectures:**
+
+* x86_64 — all supported OSes
+* arm64 — Debian 12 and 13
 
 <ContactSales text="Other versions and architectures available upon request. Contact sales@tuxcare.com for more information." />
 
