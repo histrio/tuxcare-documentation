@@ -8,6 +8,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Apache Axis** 1.4
 * **Apache Commons BeanUtils** 1.6, 1.8.0, 1.8.3, 1.9.4
 * **Apache Commons Compress** 1.19, 1.20, 1.21, 1.26.2
+* **Apache Commons Digester** 2.1
 * **Apache Commons FileUpload** 1.2.1, 1.2.2
 * **Apache Commons HttpClient** 3.1
 * **Apache Commons IO** 2.4, 2.5, 2.6, 2.7, 2.11.0
@@ -17,7 +18,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Apache Thrift** 0.9.1, 0.9.3
 * **Apache XML Graphics Commons** 1.4, 2.1
 * **Apache XMLBeans** 2.6.0
-* **Bouncy Castle** 1.64, 1.76
+* **Bouncy Castle** 1.64, 1.76, 1.78.1
 * **DNSJava** 2.1.7
 * **docx4j** 3.3.6
 * **Dom4j** 1.6.1
@@ -34,6 +35,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Hazelcast** 4.2.8
 * **HtmlUnit** 2.70.0
 * **iText** 2.1.7
+* **JasperReports** 3.7.4
 * **JBoss XNIO** 3.8.0
 * **JDOM** 1.0, 1.1.3
 * **Joda-Time** 1.3
