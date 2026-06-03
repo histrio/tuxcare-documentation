@@ -571,6 +571,10 @@ export default {
                     icon: '/images/loki.webp',
                 },
                 {
+                    path: '/els-for-applications/mariadb/',
+                    icon: '/images/mariadb.webp',
+                },
+                {
                     path: '/els-for-applications/maven/',
                     icon: '/images/maven.webp',
                 },
