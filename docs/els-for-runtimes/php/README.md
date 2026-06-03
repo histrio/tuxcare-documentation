@@ -42,7 +42,7 @@ alt-php provides a more flexible and convenient environment for working with dif
 **Supported architectures:**
 
 * x86_64 — all supported Linux OSes; x64 and x86 on Windows
-* ARM64 — Debian 12 and 13, Alpine Linux 3.22+
+* ARM64 — Debian 12 and 13, Alpine Linux 3.22 and later
 
 <ContactSales text="Other versions and architectures available upon request. Contact sales@tuxcare.com for more information." />
 
