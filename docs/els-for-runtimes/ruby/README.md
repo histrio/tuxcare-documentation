@@ -37,7 +37,7 @@ alt-ruby provides a more flexible and convenient environment for working with di
 **Supported architectures:**
 
 * x86_64 — all supported OSes
-* ARM64 — Debian 12 and 13, Alpine Linux
+* aarch64/arm64 — Debian 12 and 13, Alpine Linux
 
 <ContactSales text="Other distros and architectures available upon request. Contact sales@tuxcare.com for more information." />
 
