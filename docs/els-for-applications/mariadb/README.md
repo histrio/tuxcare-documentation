@@ -55,6 +55,7 @@ sh install-mariadb-els-repo.sh --delete
 
 <WhatsNext hide-title>
 
+* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/) — Track vulnerability fixes and updates
 * ![](/images/wrench.webp) [Managing the ELS repository](/els-for-applications/managing-els-repository/) — Update to newer versions
 
 </WhatsNext>

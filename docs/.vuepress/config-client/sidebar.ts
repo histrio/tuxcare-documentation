@@ -572,7 +572,7 @@ export default {
                 },
                 {
                     path: '/els-for-applications/mariadb/',
-                    icon: '/images/mariadb.webp',
+                    icon: '/images/TuxCare_color_icon.webp',
                 },
                 {
                     path: '/els-for-applications/maven/',
