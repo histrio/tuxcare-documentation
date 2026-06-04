@@ -72,7 +72,7 @@ const applications = [
     name: "MariaDB",
     versions: "10.6",
     link: "./mariadb/",
-    icon: "/images/TuxCare_color_icon.webp",
+    icon: "/images/mariadb.webp",
   },
   {
     name: "Maven",
