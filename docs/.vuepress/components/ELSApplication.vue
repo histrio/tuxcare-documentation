@@ -69,6 +69,12 @@ const applications = [
     icon: "/images/loki.webp",
   },
   {
+    name: "MariaDB",
+    versions: "10.6",
+    link: "./mariadb/",
+    icon: "/images/TuxCare_color_icon.webp",
+  },
+  {
     name: "Maven",
     versions: "3.8.1",
     link: "./maven/",
