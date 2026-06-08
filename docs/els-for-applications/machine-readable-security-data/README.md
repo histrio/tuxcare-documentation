@@ -7,21 +7,11 @@ TuxCare provides machine-readable security data for ELS for Open-Source Applicat
 
 Released fixes are also available via [tuxcare.com/cve-tracker](https://tuxcare.com/cve-tracker/) and [security.tuxcare.com](https://security.tuxcare.com/).
 
-## Per-ecosystem feeds
-
-| Ecosystem | Applications | VEX feed | SBOM |
-|-----------|--------------|----------|------|
-| Java (JVM) | Apache Tomcat, Apache Hadoop, Apache Hive, Gradle, Maven | [els_lang_java](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/) | — |
-
-:::warning
-Note: Coverage for non-JVM applications (MinIO, Grafana, Loki, MySQL/Percona Server, etc.) is still expanding. Contact [sales@tuxcare.com](mailto:sales@tuxcare.com) for current availability.
-:::
-
 ## Software Bill of Materials (SBOM)
 
 Each application package built by TuxCare ships with an SBOM that lists its components, versions, and dependency relationships. SBOMs are provided in industry-standard formats — SPDX and CycloneDX — so they can be consumed by any SBOM-aware scanner or supply-chain tool.
 
-SBOM publishing for applications is being rolled out across the catalog. To confirm availability for a specific application or to request a copy, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+To check whether an SBOM is available for a specific application or to request a copy, reach out to [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
 ## Vulnerability Exploitability eXchange (VEX)
 
