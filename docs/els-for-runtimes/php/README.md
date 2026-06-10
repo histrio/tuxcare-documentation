@@ -119,8 +119,6 @@ TuxCare provides additional security support for PHP versions after the end of s
      { title: 'DEB', content: `bash install-els-alt-php-deb-repo.sh --imunify` },
      { title: 'APK', content: `sh install-els-alt-php-apk-repo.sh --imunify` }
    ]" />
-
-   Use this option only when Imunify360 is installed on the system and has a valid license. Do not use it otherwise.
    :::
 
 3. Install a PHP version
