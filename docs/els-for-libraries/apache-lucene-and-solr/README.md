@@ -51,7 +51,7 @@ TuxCare's Endless Lifecycle Support (ELS) for Apache Lucene® and Apache Solr pr
      { title: 'Gradle (~/.gradle/gradle.properties)', content: gradlecreds }
    ]" />
 
-   Here `USERNAME` and `PASSWORD` are your Tuxcare credentials.
+   Replace `USERNAME` and `PASSWORD` with your TuxCare credentials (see [Prerequisites](#installation) above).
 
 3. **Add the TuxCare repository**
 

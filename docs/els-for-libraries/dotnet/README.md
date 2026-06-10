@@ -62,7 +62,7 @@ Other versions upon request.
 
 3. Add your TuxCare credentials
 
-   Replace `USERNAME` and `PASSWORD` with the credentials provided by TuxCare.
+   Replace `USERNAME` and `PASSWORD` with your TuxCare credentials (see [Prerequisites](#installation) above).
 
    <CodeTabs :tabs="[
      { title: 'dotnet CLI', content: `dotnet nuget update source TuxCare --username USERNAME --password PASSWORD` },

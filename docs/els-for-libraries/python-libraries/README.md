@@ -79,7 +79,7 @@ You can install or upgrade a package directly using the ELS repository with your
 pip install --upgrade -i https://USERNAME:PASSWORD@nexus.repo.tuxcare.com/repository/els_python/simple <package>
 ```
 
-Here `USERNAME` and `PASSWORD` are your TuxCare credentials. Replace `<package>` with the Python package name (e.g., `certifi`).
+Replace `USERNAME` and `PASSWORD` with your TuxCare credentials (see [Prerequisites](#installation) above), and `<package>` with the Python package name (e.g., `certifi`).
 
 #### Option 2: Configure `pip` to use the ELS repository (full replacement)
 
