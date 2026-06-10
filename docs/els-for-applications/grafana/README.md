@@ -65,7 +65,7 @@ TuxCare provides ELS for Grafana as pre-built binaries for the following distrib
 
    </TableTabs>
 
-   Replace `USERNAME` and `PASSWORD` with your TuxCare credentials, and choose the URL that matches your OS and Grafana version.
+   Replace `USERNAME` and `PASSWORD` with your TuxCare credentials (see [Prerequisites](#installation) above). Choose the URL that matches your OS and Grafana version.
 
 3. **Extract the archive**
 

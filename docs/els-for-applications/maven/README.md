@@ -29,7 +29,7 @@ TuxCare's Endless Lifecycle Support (ELS) for Apache Maven provides security pat
    curl -u USERNAME:PASSWORD -O https://nexus.repo.tuxcare.com/repository/els_java/org/apache/maven/apache-maven/3.8.1-tuxcare.1/apache-maven-3.8.1-tuxcare.1-bin.tar.gz
    ```
 
-   Replace `USERNAME` and `PASSWORD` with your actual credentials, and adjust the version as needed.
+   Replace `USERNAME` and `PASSWORD` with your TuxCare credentials (see [Prerequisites](#installation) above). Adjust the version as needed.
 
 2. **Extract the archive**
 
