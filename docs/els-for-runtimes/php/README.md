@@ -111,6 +111,16 @@ TuxCare provides additional security support for PHP versions after the end of s
      { title: 'APK', content: `sh install-els-alt-php-apk-repo.sh --license-key XXX-XXXXXXXXXXXX` }
    ]" />
 
+   :::tip Imunify customers
+   If [Imunify360](https://docs.imunify360.com/) is installed on the server and has a valid license, you can install alt-php (HardenedPHP) without a separate ELS license key. Run the installer with the `-i` (`--imunify`) option instead of `--license-key` — your Imunify access credentials are used automatically for repository access:
+
+   <CodeTabs :tabs="[
+     { title: 'RPM', content: `sh install-els-alt-php-rpm-repo.sh --imunify` },
+     { title: 'DEB', content: `bash install-els-alt-php-deb-repo.sh --imunify` },
+     { title: 'APK', content: `sh install-els-alt-php-apk-repo.sh --imunify` }
+   ]" />
+   :::
+
 3. Install a PHP version
 
    Each version can be installed individually or all versions at once.
