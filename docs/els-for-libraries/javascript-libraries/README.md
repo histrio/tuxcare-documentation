@@ -5,7 +5,8 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 ## Supported JavaScript Libraries
 
 * **acorn** 6.0.4, 6.2.0
-* **ag-grid-community** 23.0.2, 23.2.1, 24.1.0, 25.0.0
+* **ag-grid** 16.0.1, 17.1.0, 17.1.1, 18.0.1, 18.1.2
+* **ag-grid-community** 20.2.0, 21.0.0, 23.0.2, 23.2.1, 24.1.0, 25.0.0, 26.1.0, 26.2.0, 26.2.1, 28.1.0, 28.1.1, 28.2.0, 29.1.0, 30.1.0, 30.2.0, 31.1.1
 * **ajv** 4.11.8, 5.5.2, 6.4.0, 6.12.3, 6.12.4, 6.12.6, 6.14.0, 8.6.2, 8.9.0, 8.11.0, 8.12.0, 8.17.1
 * **ansi-html** 0.0.7
 * **async** 2.6.1

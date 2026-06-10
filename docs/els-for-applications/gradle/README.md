@@ -28,7 +28,7 @@ TuxCare's Endless Lifecycle Support (ELS) for Gradle provides security patches f
    curl -u USERNAME:PASSWORD -O https://nexus.repo.tuxcare.com/repository/els_java/org/gradle/gradle/6.9.4-tuxcare.1/gradle-6.9.4-tuxcare.1-bin.zip
    ```
 
-   Replace `USERNAME` and `PASSWORD` with your actual credentials, and adjust the version as needed.
+   Replace `USERNAME` and `PASSWORD` with your TuxCare credentials (see [Prerequisites](#installation) above). Adjust the version as needed.
 
 2. **Extract the archive**
 
