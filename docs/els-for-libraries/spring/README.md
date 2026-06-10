@@ -440,7 +440,7 @@ ELS for Spring® also patches transitive dependencies at no extra cost, includin
      { title: 'Gradle (gradle.properties)', content: gradlecreds }
    ]" />
 
-   Here `USERNAME` and `PASSWORD` are your Tuxcare credentials.
+   Replace `USERNAME` and `PASSWORD` with your TuxCare credentials (see [Prerequisites](#installation) above).
 
 3. **Add the TuxCare repository**
 
