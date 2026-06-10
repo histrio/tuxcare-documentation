@@ -16,18 +16,23 @@ function anchorSteps() {
   const body = bodyRef.value;
   if (!body) return;
 
-  // Seed from ids already on the page so step anchors never collide with
-  // heading anchors or other <ELSSteps> blocks on the same page.
+  // Step ids are assigned at build time (els-structured-data markdown plugin).
+  // We only read them here to attach the visual affordances; slugify is a
+  // fallback for the rare case a build-time id is missing.
   const used = collectUsedIds();
 
   // Top-level steps only — leave nested sub-steps (ol ol > li) un-anchored.
   body.querySelectorAll<HTMLLIElement>(':scope > ol > li').forEach((li) => {
-    if (li.id) return; // already processed
+    if (li.dataset.anchored) return; // already decorated
+    li.dataset.anchored = '1';
 
     const titleEl = li.querySelector('p');
-    const title = titleEl?.textContent ?? li.textContent ?? '';
-    const id = uniqueId(slugify(title) || 'step', used);
-    li.id = id;
+    let id = li.id;
+    if (!id) {
+      const title = titleEl?.textContent ?? li.textContent ?? '';
+      id = uniqueId(slugify(title) || 'step', used);
+      li.id = id;
+    }
 
     const anchor = document.createElement('a');
     anchor.className = 'header-anchor els-step-anchor';

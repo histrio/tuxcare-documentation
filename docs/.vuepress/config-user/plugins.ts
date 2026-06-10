@@ -3,9 +3,11 @@ import {ContainerPluginOptions} from "@vuepress/plugin-container/lib/node/contai
 import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
 import { prismjsPlugin } from '@vuepress/plugin-prismjs'
 import { path } from '@vuepress/utils'
+import { elsStructuredDataPlugin } from '../plugins/elsStructuredData'
 
 export default [
     prismjsPlugin(),
+    elsStructuredDataPlugin,
     containerPlugin({
         type: 'warning',
         before: info => `<div class="warning custom-block"><p class="custom-block-title">${info}</p>`,

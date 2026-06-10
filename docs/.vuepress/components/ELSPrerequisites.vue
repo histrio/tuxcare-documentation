@@ -1,7 +1,7 @@
 <template>
   <div ref="rootRef" class="prereqs">
     <div class="prereqs-header">
-      <h4 ref="headingRef"><slot name="title">Prerequisites</slot></h4>
+      <h4 ref="headingRef" :id="headingId"><slot name="title">Prerequisites</slot></h4>
     </div>
     <div class="prereqs-body">
       <slot />
@@ -11,22 +11,23 @@
 
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
-import { slugify, uniqueId, collectUsedIds } from '../utils/slugify';
+
+// id is rendered server-side so the section anchor exists in the static HTML.
+// Override with <ELSPrerequisites id="..."> if a page has more than one block.
+const props = defineProps<{ id?: string }>();
+const headingId = props.id ?? 'prerequisites';
 
 const rootRef = ref<HTMLElement | null>(null);
 const headingRef = ref<HTMLElement | null>(null);
 
 function anchorPrerequisites() {
   const heading = headingRef.value;
-  if (!heading || heading.id) return;
-
-  const used = collectUsedIds();
-  const id = uniqueId(slugify(heading.textContent ?? '') || 'prerequisites', used);
-  heading.id = id;
+  if (!heading || heading.dataset.anchored) return;
+  heading.dataset.anchored = '1';
 
   const anchor = document.createElement('a');
   anchor.className = 'header-anchor prereq-anchor';
-  anchor.setAttribute('href', `#${id}`);
+  anchor.setAttribute('href', `#${heading.id}`);
   anchor.setAttribute('aria-hidden', 'true');
   anchor.setAttribute('tabindex', '-1');
   anchor.textContent = '#';
@@ -35,7 +36,6 @@ function anchorPrerequisites() {
 }
 
 onMounted(() => {
-  // Run after VuePress has assigned heading ids.
   setTimeout(anchorPrerequisites, 0);
 });
 </script>
