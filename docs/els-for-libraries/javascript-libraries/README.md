@@ -4,6 +4,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 
 ## Supported JavaScript Libraries
 
+* **acorn** 6.0.4, 6.2.0
 * **ag-grid** 16.0.1, 17.1.0, 17.1.1, 18.0.1, 18.1.2
 * **ag-grid-community** 20.2.0, 21.0.0, 23.0.2, 23.2.1, 24.1.0, 25.0.0, 26.1.0, 26.2.0, 26.2.1, 28.1.0, 28.1.1, 28.2.0, 29.1.0, 30.1.0, 30.2.0, 31.1.1
 * **ajv** 4.11.8, 5.5.2, 6.4.0, 6.12.3, 6.12.4, 6.12.6, 6.14.0, 8.6.2, 8.9.0, 8.11.0, 8.12.0, 8.17.1
@@ -12,27 +13,35 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **axios** 0.18.1, 0.27.2
 * **babel-runtime** 7.18.9, 7.22.6
 * **base64url** 0.0.6
+* **basic-ftp** 5.0.5
 * **body-parser** 1.8.4, 1.13.3, 1.14.2
-* **braces** 1.8.5, 2.3.2, 3.0.3
+* **braces** 1.8.5, 2.3.2, 3.0.2, 3.0.3
 * **bson** 0.5.7, 1.0.9
 * **chownr** 0.0.2, 1.0.1
 * **cipher-base** 1.0.4
 * **clean-css** 2.2.23, 3.4.28
-* **concat-stream** 1.4.8, 1.5.0
+* **concat-stream** 1.4.8, 1.4.10, 1.5.0
 * **connect** 1.9.2, 2.6.0, 2.7.5
-* **cookie** 0.0.5, 0.1.3, 0.3.1, 0.4.2, 0.5.0
+* **cookie** 0.0.5, 0.1.3, 0.3.1, 0.4.2, 0.5.0, 0.6.0
 * **copy-anything** 2.0.6
-* **cross-spawn** 0.2.9, 5.1.0
+* **cross-spawn** 0.2.9, 5.1.0, 6.0.5, 7.0.3
 * **crypto-js** 3.3.0
+* **csvtojson** 2.0.8
+* **datatables.net** 1.10.13
 * **debug** 1.0.5, 2.1.1, 2.2.0, 2.3.3, 3.2.6, 4.1.1
+* **decode-uri-component** 0.2.0
+* **defu** 6.1.2
 * **devalue** 2.0.1, 4.3.3
-* **diff** 1.0.2, 1.4.0, 7.0.0
-* **dompurify** 2.3.0, 2.4.0, 2.4.3, 2.5.8, 2.5.9, 3.0.3, 3.1.6, 3.2.3
-* **ejs** 1.0.0, 2.7.4
+* **diff** 1.0.2, 1.4.0, 3.5.0, 7.0.0
+* **dns-packet** 1.3.1
+* **dompurify** 2.3.0, 2.4.0, 2.4.3, 2.4.7, 2.5.8, 2.5.9, 3.0.3, 3.1.6, 3.2.3
+* **dset** 3.1.3
+* **ejs** 1.0.0, 2.7.4, 3.1.9
 * **elliptic** 6.6.0, 6.6.1
 * **engine.io** 3.2.1
 * **es5-ext** 0.10.7
 * **esbuild** 0.13.8, 0.14.22, 0.14.25, 0.14.54, 0.15.18, 0.15.5, 0.17.19, 0.18.17, 0.18.20, 0.19.12, 0.20.1, 0.21.5
+* **eslint-plugin-kit** 0.2.7
 * **express-jwt** 0.1.3, 0.1.4
 * **extend** 3.0.0
 * **fast-xml-parser** 4.5.3
@@ -57,10 +66,11 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **is-my-json-valid** 2.10.1, 2.12.2
 * **jquery-validation** 1.19.0
 * **js-yaml** 3.3.1, 3.7.0, 4.1.0
-* **json5** 0.4.0, 0.5.1
-* **jsonpath-plus** 7.2.0
+* **json5** 0.4.0, 0.5.1, 1.0.1
+* **jsoneditor** 5.19.0
+* **jsonpath-plus** 6.0.1, 7.2.0
 * **jsonpointer** 1.1.0, 2.0.0, 4.1.0
-* **jspdf** 2.5.2, 3.0.4
+* **jspdf** 2.5.1, 2.5.2, 3.0.4
 * **knex** 0.95.15
 * **loader-utils** 0.2.17, 1.2.3, 2.0.0
 * **lodash.merge** 3.3.2
@@ -89,6 +99,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **picomatch** 2.3.1, 4.0.2
 * **prismjs** 1.27.0, 1.29.0
 * **protobufjs** 6.11.6
+* **protobufjs-utf8** 1.1.0
 * **pug** 2.0.4
 * **qs** 0.5.1, 0.6.6, 1.0.2, 1.2.2, 2.2.5, 2.3.3, 2.4.2, 4.0.0, 5.1.0, 5.2.0, 6.5.3, 6.14.0
 * **quill** 1.3.7

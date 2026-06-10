@@ -85,8 +85,13 @@ const techData = [
     ecosystemIcon: "/images/java.webp",
     projects: [
       {
+        name: "Apache ActiveMQ Artemis",
+        versions: "2.26.0",
+        link: "./java-libraries/",
+      },
+      {
         name: "Apache Avro",
-        versions: "1.7.6 | 1.7.7 | 1.10.2 | 1.11.3",
+        versions: "1.7.6 | 1.7.7 | 1.10.2 | 1.11.0 | 1.11.3",
         link: "./java-libraries/",
       },
       {
@@ -106,7 +111,7 @@ const techData = [
       },
       {
         name: "Apache Commons Digester",
-        versions: "2.1",
+        versions: "2.0 | 2.1",
         link: "./java-libraries/",
       },
       {
@@ -150,13 +155,18 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "Apache POI",
+        versions: "4.1.2",
+        link: "./java-libraries/",
+      },
+      {
         name: "Apache Kafka®",
         versions: "3.2.3",
         link: "./apache-kafka/",
       },
       {
         name: "Apache Log4j",
-        versions: "1.2.16 | 1.2.17 | 2.17.1",
+        versions: "1.2.16 | 1.2.17 | 2.17.1 | 2.22.1",
         link: "./apache-log4j/",
       },
       {
@@ -193,6 +203,11 @@ const techData = [
       {
         name: "Apache Thrift",
         versions: "0.9.1 | 0.9.3",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Apache Tika",
+        versions: "2.9.4",
         link: "./java-libraries/",
       },
       {
@@ -292,7 +307,7 @@ const techData = [
       },
       {
         name: "Hibernate",
-        versions: "5.4.3.Final | 5.4.32.Final | 5.4.33.Final | 5.5.6.Final | 5.5.9.Final | 5.6.15.Final | 6.2.5.Final",
+        versions: "4.3.11.Final | 5.4.3.Final | 5.4.30.Final | 5.4.31.Final | 5.4.32.Final | 5.4.33.Final | 5.5.6.Final | 5.5.9.Final | 5.6.15.Final | 6.2.5.Final",
         link: "./hibernate/",
       },
       {
@@ -322,7 +337,7 @@ const techData = [
       },
       {
         name: "JBoss XNIO",
-        versions: "3.8.0",
+        versions: "3.8.0 | 3.8.8",
         link: "./java-libraries/",
       },
       {
@@ -377,12 +392,12 @@ const techData = [
       },
       {
         name: "Netty",
-        versions: "4.1.115.Final | 4.1.48.Final | 4.1.49.Final | 4.1.52.Final | 4.1.58.Final | 4.1.60.Final | 4.1.63.Final | 4.1.73.Final | 4.1.75.Final | 4.1.82.Final | 4.1.92.Final | 4.1.93.Final",
+        versions: "4.1.115.Final | 4.1.48.Final | 4.1.49.Final | 4.1.52.Final | 4.1.58.Final | 4.1.60.Final | 4.1.63.Final | 4.1.73.Final | 4.1.75.Final | 4.1.82.Final | 4.1.92.Final | 4.1.93.Final | 4.1.112.Final",
         link: "./java-libraries/",
       },
       {
         name: "Nimbus JOSE + JWT",
-        versions: "9.22 | 9.24.4",
+        versions: "9.22 | 9.23 | 9.24.4",
         link: "./java-libraries/",
       },
       {
@@ -547,7 +562,7 @@ const techData = [
       },
       {
         name: "Undertow",
-        versions: "2.2.33.Final | 2.3.10.Final",
+        versions: "2.2.33.Final | 2.3.0.Final | 2.3.10.Final",
         link: "./java-libraries/",
       },
       {
@@ -567,7 +582,7 @@ const techData = [
       },
       {
         name: "Eclipse Jetty",
-        versions: "8.2.0.v20160908 | 9.4.24.v20191120 | 9.4.48.v20220622 | 9.4.53.v20231009 | 9.4.57.v20241219 | 9.4.58.v20250814 | 9.4.59 | 9.4.60 | 10.0.26 | 10.0.27 | 10.0.28 | 11.0.19 | 11.0.26 | 11.0.27 | 11.0.28",
+        versions: "8.2.0.v20160908 | 9.2.16.v20160414 | 9.4.24.v20191120 | 9.4.48.v20220622 | 9.4.53.v20231009 | 9.4.57.v20241219 | 9.4.58.v20250814 | 9.4.59 | 9.4.60 | 10.0.26 | 10.0.27 | 10.0.28 | 11.0.19 | 11.0.26 | 11.0.27 | 11.0.28",
         link: "./jetty/",
       },
       {
@@ -590,6 +605,11 @@ const techData = [
         name: "AngularJS",
         versions: "1.4.4 | 1.5.11 | 1.6.10 | 1.7.9 | 1.8.2 | 1.8.3",
         link: "./angularjs/",
+      },
+      {
+        name: "acorn",
+        versions: "6.0.4 | 6.2.0",
+        link: "./javascript-libraries/",
       },
       {
         name: "ag-grid",
@@ -637,6 +657,11 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "basic-ftp",
+        versions: "5.0.5",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "body-parser",
         versions: "1.8.4 | 1.13.3 | 1.14.2",
         link: "./javascript-libraries/",
@@ -653,7 +678,7 @@ const techData = [
       },
       {
         name: "braces",
-        versions: "1.8.5 | 2.3.2 | 3.0.3",
+        versions: "1.8.5 | 2.3.2 | 3.0.2 | 3.0.3",
         link: "./javascript-libraries/",
       },
       {
@@ -678,7 +703,7 @@ const techData = [
       },
       {
         name: "concat-stream",
-        versions: "1.4.8 | 1.5.0",
+        versions: "1.4.8 | 1.4.10 | 1.5.0",
         link: "./javascript-libraries/",
       },
       {
@@ -688,7 +713,7 @@ const techData = [
       },
       {
         name: "cookie",
-        versions: "0.0.5 | 0.1.3 | 0.3.1 | 0.4.2 | 0.5.0",
+        versions: "0.0.5 | 0.1.3 | 0.3.1 | 0.4.2 | 0.5.0 | 0.6.0",
         link: "./javascript-libraries/",
       },
       {
@@ -698,7 +723,7 @@ const techData = [
       },
       {
         name: "cross-spawn",
-        versions: "0.2.9 | 5.1.0",
+        versions: "0.2.9 | 5.1.0 | 6.0.5 | 7.0.3",
         link: "./javascript-libraries/",
       },
       {
@@ -707,8 +732,28 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "csvtojson",
+        versions: "2.0.8",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "datatables.net",
+        versions: "1.10.13",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "debug",
         versions: "1.0.5 | 2.1.1 | 2.2.0 | 2.3.3 | 3.2.6 | 4.1.1",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "decode-uri-component",
+        versions: "0.2.0",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "defu",
+        versions: "6.1.2",
         link: "./javascript-libraries/",
       },
       {
@@ -718,17 +763,27 @@ const techData = [
       },
       {
         name: "diff",
-        versions: "1.0.2 | 1.4.0 | 7.0.0",
+        versions: "1.0.2 | 1.4.0 | 3.5.0 | 7.0.0",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "dns-packet",
+        versions: "1.3.1",
         link: "./javascript-libraries/",
       },
       {
         name: "dompurify",
-        versions: "2.3.0 | 2.4.0 | 2.4.3 | 2.5.8 | 2.5.9 | 3.0.3 | 3.1.6 | 3.2.3",
+        versions: "2.3.0 | 2.4.0 | 2.4.3 | 2.4.7 | 2.5.8 | 2.5.9 | 3.0.3 | 3.1.6 | 3.2.3",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "dset",
+        versions: "3.1.3",
         link: "./javascript-libraries/",
       },
       {
         name: "ejs",
-        versions: "1.0.0 | 2.7.4",
+        versions: "1.0.0 | 2.7.4 | 3.1.9",
         link: "./javascript-libraries/",
       },
       {
@@ -754,6 +809,11 @@ const techData = [
       {
         name: "esbuild",
         versions: "0.13.8 | 0.14.22 | 0.14.25 | 0.14.54 | 0.15.18 | 0.15.5 | 0.17.19 | 0.18.17 | 0.18.20 | 0.19.12 | 0.20.1 | 0.21.5",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "eslint-plugin-kit",
+        versions: "0.2.7",
         link: "./javascript-libraries/",
       },
       {
@@ -898,7 +958,12 @@ const techData = [
       },
       {
         name: "json5",
-        versions: "0.4.0 | 0.5.1",
+        versions: "0.4.0 | 0.5.1 | 1.0.1",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "jsoneditor",
+        versions: "5.19.0",
         link: "./javascript-libraries/",
       },
       {
@@ -908,7 +973,7 @@ const techData = [
       },
       {
         name: "JSONPath Plus",
-        versions: "7.2.0",
+        versions: "6.0.1 | 7.2.0",
         link: "./javascript-libraries/",
       },
       {
@@ -918,7 +983,7 @@ const techData = [
       },
       {
         name: "jsPDF",
-        versions: "2.5.2 | 3.0.4",
+        versions: "2.5.1 | 2.5.2 | 3.0.4",
         link: "./javascript-libraries/",
       },
       {
@@ -1124,6 +1189,11 @@ const techData = [
       {
         name: "protobufjs",
         versions: "6.11.6",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "protobufjs-utf8",
+        versions: "1.1.0",
         link: "./javascript-libraries/",
       },
       {
