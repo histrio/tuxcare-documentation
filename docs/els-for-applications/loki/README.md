@@ -65,7 +65,7 @@ TuxCare provides ELS for Loki as pre-built binaries for the following distributi
 
    </TableTabs>
 
-   Replace `USERNAME` and `PASSWORD` with your TuxCare credentials, and choose the URL that matches your OS and Loki version.
+   Replace `USERNAME` and `PASSWORD` with your TuxCare credentials (see [Prerequisites](#installation) above). Choose the URL that matches your OS and Loki version.
 
 3. **Extract the archive**
 

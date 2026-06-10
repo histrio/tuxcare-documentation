@@ -50,7 +50,7 @@ TuxCare provides ELS for MinIO as pre-built Linux binaries for the following arc
 
    </TableTabs>
 
-   Replace `USERNAME` and `PASSWORD` with your TuxCare credentials, and choose the URL that matches your architecture.
+   Replace `USERNAME` and `PASSWORD` with your TuxCare credentials (see [Prerequisites](#installation) above). Choose the URL that matches your architecture.
 
 3. **Extract the archive**
 

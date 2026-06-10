@@ -56,7 +56,7 @@ Apache Tomcat® is also available for installation as a library for Maven and Gr
    curl -u USERNAME:PASSWORD -O https://nexus.repo.tuxcare.com/repository/els_java/org/apache/tomcat/tomcat/8.5.100-tuxcare.3/tomcat-8.5.100-tuxcare.3.tar.gz
    ```
 
-   Replace `USERNAME` and `PASSWORD` with your actual credentials.
+   Replace `USERNAME` and `PASSWORD` with your TuxCare credentials (see [Prerequisites](#installation) above).
 
 4. **Create the installation directory and extract the archive**
 
