@@ -1,10 +1,65 @@
 <template>
   <div class="els-steps">
-    <div class="els-steps-body">
+    <div ref="bodyRef" class="els-steps-body">
       <slot />
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+import { onMounted, ref } from 'vue';
+import { slugify, uniqueId, collectUsedIds } from '../utils/slugify';
+
+const bodyRef = ref<HTMLElement | null>(null);
+
+function anchorSteps() {
+  const body = bodyRef.value;
+  if (!body) return;
+
+  // Step ids are assigned at build time (els-structured-data markdown plugin).
+  // We only read them here to attach the visual affordances; slugify is a
+  // fallback for the rare case a build-time id is missing.
+  const used = collectUsedIds();
+
+  // Top-level steps only — leave nested sub-steps (ol ol > li) un-anchored.
+  body.querySelectorAll<HTMLLIElement>(':scope > ol > li').forEach((li) => {
+    if (li.dataset.anchored) return; // already decorated
+    li.dataset.anchored = '1';
+
+    const titleEl = li.querySelector('p');
+    let id = li.id;
+    if (!id) {
+      const title = titleEl?.textContent ?? li.textContent ?? '';
+      id = uniqueId(slugify(title) || 'step', used);
+      li.id = id;
+    }
+
+    const anchor = document.createElement('a');
+    anchor.className = 'header-anchor els-step-anchor';
+    anchor.setAttribute('href', `#${id}`);
+    anchor.setAttribute('aria-hidden', 'true');
+    anchor.setAttribute('tabindex', '-1');
+    anchor.textContent = '#';
+    // On the left of the step title (prepended), vertically aligned with it.
+    const target = titleEl ?? li;
+    target.insertBefore(anchor, target.firstChild);
+
+    // Transparent overlay over the number badge so clicking the number also
+    // navigates to the step's anchor and updates the URL.
+    const numberLink = document.createElement('a');
+    numberLink.className = 'els-step-number';
+    numberLink.setAttribute('href', `#${id}`);
+    numberLink.setAttribute('aria-hidden', 'true');
+    numberLink.setAttribute('tabindex', '-1');
+    li.appendChild(numberLink);
+  });
+}
+
+onMounted(() => {
+  // Run after VuePress has assigned heading ids.
+  setTimeout(anchorSteps, 0);
+});
+</script>
 
 <style scoped>
 .els-steps {
@@ -22,11 +77,52 @@
 .els-steps-body :deep(ol > li) {
   counter-increment: step-counter;
   position: relative;
-  padding-left: 1.5rem;
+  padding-left: 1.2rem;
   padding-bottom: 1.25rem;
   margin-bottom: 0;
   border-left: 2px solid #e0e3e8;
   margin-left: 0.9rem;
+  /* Land below the fixed navbar when navigated to via a step anchor. */
+  scroll-margin-top: 6rem;
+}
+
+/* The anchor floats left at its natural position (no negative margin, so it
+   never overlaps the number badge), with a fixed width and a minimal gap.
+   font-size in rem (not em) keeps it identical to the prerequisites anchor. */
+.els-steps-body :deep(ol > li > p:first-child > a.els-step-anchor) {
+  opacity: 0;
+  font-size: 1rem;
+  width: 0.7rem;
+  padding-right: 0;
+  margin-left: 0;
+  /* Inherit the title's 2rem line-height so the floated # centers at the same
+     level as the (vertically centered) wording. No extra margin-top needed. */
+  line-height: inherit;
+  margin-top: 0;
+  transition: opacity 0.15s ease;
+}
+
+.els-steps-body :deep(ol > li:hover > p:first-child > a.els-step-anchor) {
+  opacity: 1;
+}
+
+/* Indent the step's body content (everything below the title) by the anchor's
+   reserved width so it aligns with the title wording. margin-left (not padding)
+   so code blocks move as a whole and their background aligns too. Exclude the
+   absolutely positioned number-overlay link. */
+.els-steps-body :deep(ol > li > *:not(:first-child):not(a)) {
+  margin-left: 0.7rem;
+}
+
+/* Transparent overlay over the number badge — makes the number clickable. */
+.els-steps-body :deep(ol > li > a.els-step-number) {
+  position: absolute;
+  left: -1rem;
+  top: 0;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 .els-steps-body :deep(ol > li:last-child) {
@@ -50,12 +146,22 @@
   align-items: center;
   justify-content: center;
   line-height: 1;
+  transition: background 0.15s ease;
+}
+
+/* Hover hint on the step: the number badge changes color. */
+.els-steps-body :deep(ol > li:hover::before) {
+  background: #0B5CAD;
 }
 
 .els-steps-body :deep(ol > li > p:first-child) {
   font-weight: 600;
   color: #0d1a26;
   margin-top: 0;
+  /* Match the number badge height so the wording sits at the badge's vertical
+     middle (where the number is) instead of at its top. */
+  min-height: 2rem;
+  line-height: 2rem;
 }
 
 .els-steps-body :deep(ol > li > p) {
@@ -83,7 +189,10 @@
 
 .els-steps-body :deep(div[class*="language-"]),
 .els-steps-body :deep(.code-with-copy) {
-  margin: 0.5rem 0;
+  /* top/bottom only — left indent comes from the body-content rule above so
+     the code block aligns with the step wording. */
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .els-steps-body :deep(:not(pre) > code) {

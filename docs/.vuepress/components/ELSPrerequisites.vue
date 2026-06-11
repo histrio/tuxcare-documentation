@@ -1,13 +1,44 @@
 <template>
-  <div class="prereqs">
+  <div ref="rootRef" class="prereqs">
     <div class="prereqs-header">
-      <h4><slot name="title">Prerequisites</slot></h4>
+      <h4 ref="headingRef" :id="headingId"><slot name="title">Prerequisites</slot></h4>
     </div>
     <div class="prereqs-body">
       <slot />
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+import { onMounted, ref } from 'vue';
+
+// id is rendered server-side so the section anchor exists in the static HTML.
+// Override with <ELSPrerequisites id="..."> if a page has more than one block.
+const props = defineProps<{ id?: string }>();
+const headingId = props.id ?? 'prerequisites';
+
+const rootRef = ref<HTMLElement | null>(null);
+const headingRef = ref<HTMLElement | null>(null);
+
+function anchorPrerequisites() {
+  const heading = headingRef.value;
+  if (!heading || heading.dataset.anchored) return;
+  heading.dataset.anchored = '1';
+
+  const anchor = document.createElement('a');
+  anchor.className = 'header-anchor prereq-anchor';
+  anchor.setAttribute('href', `#${heading.id}`);
+  anchor.setAttribute('aria-hidden', 'true');
+  anchor.setAttribute('tabindex', '-1');
+  anchor.textContent = '#';
+  // On the left of the heading wording, vertically aligned with it.
+  heading.insertBefore(anchor, heading.firstChild);
+}
+
+onMounted(() => {
+  setTimeout(anchorPrerequisites, 0);
+});
+</script>
 
 <style scoped>
 .prereqs {
@@ -16,6 +47,8 @@
   background: linear-gradient(135deg, #f8fbff 0%, #f0f7ff 100%);
   padding: 1.25rem 1.5rem;
   margin: 1.5rem 0;
+  /* Land below the fixed navbar when navigated to via the section anchor. */
+  scroll-margin-top: 6rem;
 }
 
 .prereqs-header h4 {
@@ -23,6 +56,36 @@
   font-size: 1rem;
   font-weight: 700;
   color: #1b1f27;
+}
+
+/* The anchor floats left at its natural position with a fixed width and a
+   minimal gap; the body list below is indented to match (see .prereqs-body).
+   font-size in rem (not em) keeps it identical to the ELSSteps anchor. */
+.prereqs-header h4 :deep(a.prereq-anchor) {
+  opacity: 0;
+  font-size: 1rem;
+  width: 0.7rem;
+  padding-right: 0;
+  margin-left: 0;
+  /* Match the heading's line-height and nudge down so the floated # starts at
+     the same level as the wording instead of riding above it. */
+  line-height: inherit;
+  margin-top: 0.1rem;
+  transition: opacity 0.15s ease;
+}
+
+.prereqs-header h4:hover {
+  cursor: pointer;
+}
+
+.prereqs-header h4:hover :deep(a.prereq-anchor) {
+  opacity: 1;
+}
+
+/* Indent the body by the anchor's reserved width so the list aligns with the
+   "Prerequisites" wording, which the floated anchor pushes right. */
+.prereqs-body {
+  padding-left: 0.7rem;
 }
 
 .prereqs-body :deep(ul) {
