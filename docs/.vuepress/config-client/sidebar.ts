@@ -587,6 +587,10 @@ export default {
                     title: 'MySQL and Percona Server',
                     icon: '/images/mysql.webp',
                 },
+                {
+                    path: '/els-for-applications/wildfly/',
+                    icon: '/images/Wildfly.webp',
+                },
                 "/els-for-applications/managing-els-repository/",
             ]
         },
