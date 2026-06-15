@@ -94,9 +94,9 @@ export default defineClientConfig({
             // icons
             arrowDownIcon: "arrows/arrow-down.svg",
             githubEditIcon: 'global/pen.svg',
-            footerCustomLogo: 'global/TuxCare_color_logo_primary_RGB.webp',
+            footerCustomLogo: 'global/TuxCare_color_logo_tagline_RGB.webp',
             headerDefaultSearchIcon: 'global/search.svg',
-            siteLogo: "global/logo.svg",
+            siteLogo: "global/TuxCare_white-blue_logo_tagline_RGB.webp",
             searchSelectIcon: 'arrows/select-down.svg',
             headerSearchIcon: 'global/header-search.svg',
 

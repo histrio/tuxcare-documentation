@@ -22,7 +22,7 @@ export default [
       "@type": "Organization",
       name: "TuxCare",
       url: "https://tuxcare.com",
-      logo: "https://docs.tuxcare.com/global/logo.svg",
+      logo: "https://docs.tuxcare.com/global/TuxCare_color_logo_tagline_RGB.webp",
       sameAs: [
         "https://www.linkedin.com/company/tuxcare",
         "https://www.youtube.com/@TuxCare",
