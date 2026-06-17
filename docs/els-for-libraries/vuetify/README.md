@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for Vuetify from TuxCare provides security fixes
 
 ## Supported Vuetify Versions
 
-* Vuetify 2.5.5
+* Vuetify 2.5.5, 2.6.13
 
 ## Installation
 
