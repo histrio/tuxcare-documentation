@@ -25,7 +25,7 @@ SecureChain delivers verified, signed, continuously patched JavaScript packages 
    ```
 
    :::warning
-   Replace `<TOKEN>` with the token you received from [sales@tuxcare.com](mailto:sales@tuxcare.com).
+   Replace `<TOKEN>` with your SecureChain registry token (see [Prerequisites](#prerequisites) above).
    :::
 
 2. Install your dependencies
