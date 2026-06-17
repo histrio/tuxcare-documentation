@@ -8,6 +8,8 @@ Endless Lifecycle Support (ELS) for Bootstrap from TuxCare provides security fix
 
 ## Installation
 
+<ELSBadge heading>Docker compatible</ELSBadge>
+
 <ELSPrerequisites>
 
 * **npm** package manager installed

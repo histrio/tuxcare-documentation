@@ -8,6 +8,8 @@ Endless Lifecycle Support (ELS) for Vuetify from TuxCare provides security fixes
 
 ## Installation
 
+<ELSBadge heading>Docker compatible</ELSBadge>
+
 <ELSPrerequisites>
 
 * **npm** package manager installed
