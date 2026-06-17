@@ -50,7 +50,7 @@ TuxCare's Endless Lifecycle Support (ELS) for Apache Velocity Engine™ provides
      { title: 'Gradle (~/.gradle/gradle.properties)', content: gradlecreds }
    ]" />
 
-   Replace `USERNAME` and `PASSWORD` with your TuxCare credentials (see [Prerequisites](#installation) above).
+   Replace `USERNAME` and `PASSWORD` with your TuxCare credentials (see [Prerequisites](#prerequisites) above).
 
 3. **Add the TuxCare repository**
 

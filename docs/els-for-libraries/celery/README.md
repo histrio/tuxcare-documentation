@@ -28,7 +28,7 @@ pip install --upgrade \
   celery
 ```
 
-Replace `USERNAME` and `PASSWORD` with your TuxCare credentials (see [Prerequisites](#installation) above).
+Replace `USERNAME` and `PASSWORD` with your TuxCare credentials (see [Prerequisites](#prerequisites) above).
 
 #### Option 2: Configure `pip` to use the ELS repository (full replacement)
 
