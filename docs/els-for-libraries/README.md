@@ -27,8 +27,10 @@ Handling Multiple Vulnerabilities: In cases where several CVEs are reported simu
 
 ## Enhanced Transparency & Visibility
 
-TuxCare's commitment to transparency and visibility is foundational to our ELS for Libraries offering. We provide verifiable metadata that helps customers understand package composition, software provenance, and vulnerability impact across the software supply chain.
+TuxCare's commitment to transparency and visibility is foundational to our ELS for Libraries offering. We aim to provide comprehensive details about how each package is built, verified, and distributed, ensuring complete trust in the software supply chain.
 
+<!-- * **SLSA Compliance**: All packages are built and signed to ensure verifiable Supply-chain Levels for Software Artifacts (SLSA) compliance. They are securely constructed from vetted sources, include attestations for all dependencies, and undergo continuous testing to maintain integrity and security.
+-->
 * **Software Bill of Materials (SBOM)**: Machine-readable SBOMs provide visibility into package composition and dependencies, supporting software supply chain transparency and accountability. Depending on the package, SBOMs are provided in industry-standard formats — SPDX and CycloneDX. See [Machine-Readable Security Data](./machine-readable-security-data/) for per-ecosystem links.
 
 :::warning
@@ -36,13 +38,13 @@ Note: SBOM availability for certain components is still expanding and may vary b
 :::
 
 * **Vulnerability Exploitability eXchange (VEX)**: Machine-readable VEX documents provide contextual vulnerability information, helping teams understand which known CVEs affect specific package versions and reduce remediation noise. VEX is published in standard formats, including CycloneDX VEX. See [Machine-Readable Security Data](./machine-readable-security-data/) for per-ecosystem feeds and details.
-* **Verifiable Integrity and Provenance**: Packages and metadata provide end-to-end provenance information, helping customers verify how software was built, tested, and distributed.
+* **Verifiable Integrity and Provenance**: Our packages and metadata provide comprehensive end-to-end provenance, detailing how each package was constructed and tested, ensuring that all components in your software stack are trustworthy.
 
 :::warning
 Note: This feature is under consideration for future development and may be available at a later date. If you are interested, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 :::
 
-* **Secure Distribution**: Signed packages and associated metadata are distributed through TuxCare-managed infrastructure to ensure authenticity and integrity.
+* **Secure Distribution**: Signed versions of the packages and their metadata are distributed from a registry managed, secured, and protected by TuxCare, guaranteeing that your software updates are authentic and untampered.
 
 ## Support Duration
 
