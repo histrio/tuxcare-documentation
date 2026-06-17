@@ -543,7 +543,6 @@ export default {
                     icon: '/images/star.webp',
                 },
                 "/securechain/managing-securechain-repository/",
-                "/securechain/machine-readable-security-data/",
             ]
         },
     ],
