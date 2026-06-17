@@ -2,8 +2,8 @@
 
 TuxCare provides machine-readable security data for ELS for Open-Source Applications in the following formats:
 
-* **SBOM (Software Bill of Materials)** — package composition and dependency inventory in SPDX and CycloneDX formats
-* **VEX (Vulnerability Exploitability eXchange)** — exploitability status for known CVEs in CycloneDX VEX format
+* **SBOM (Software Bill of Materials)** - package composition and dependency inventory in SPDX and CycloneDX formats
+* **VEX (Vulnerability Exploitability eXchange)** - exploitability status for known CVEs in CycloneDX VEX format
 
 Released fixes are available via [tuxcare.com/cve-tracker](https://tuxcare.com/cve-tracker/) and [security.tuxcare.com](https://security.tuxcare.com/).
 
@@ -19,7 +19,7 @@ TuxCare publishes VEX as CycloneDX VEX documents, distributed alongside each pac
 
 Each entry links one CVE to one artifact version and carries a status:
 
-* **exploitable** — the CVE affects this artifact version and has not yet been patched in this release.
-* **resolved** — the CVE has been patched through a TuxCare release.
+* **exploitable** - the CVE affects this artifact version and has not yet been patched in this release.
+* **resolved** - the CVE has been patched through a TuxCare release.
 
 The feed covers every supported base version, every released `-tuxcare.N` iteration, and transitive dependencies, so the entry count reflects all of these combinations rather than the number of unique CVEs. When checking coverage, filter to the artifact versions you actually use — usually the latest `-tuxcare.N` iteration of your chosen base version. Earlier iterations remain in the feed for historical completeness but aren't relevant once you've adopted a newer release.
