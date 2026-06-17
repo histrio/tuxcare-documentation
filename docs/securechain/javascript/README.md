@@ -19,7 +19,7 @@ SecureChain delivers verified, signed, continuously patched JavaScript packages 
    In the root directory of your project, create or edit `.npmrc` to point npm at the SecureChain registry and provide your token:
 
    ```text
-   registry=https://nexus.repo.tuxcare.com/repository/securechain-js/@securechain-js/
+   registry=https://nexus.repo.tuxcare.com/repository/securechain-js/
    //nexus.repo.tuxcare.com/repository/securechain-js/:_auth=<TOKEN>
    always-auth=true
    ```
@@ -54,7 +54,7 @@ If `npm install` resolves to the public registry instead of SecureChain, use the
    npm config get registry
    ```
 
-   The output must be `https://nexus.repo.tuxcare.com/repository/securechain-js/@securechain-js/`. If it returns `https://registry.npmjs.org/`, npm is not reading your project `.npmrc` - check that you are running npm from the project root and that no user-level `~/.npmrc` is overriding it.
+   The output must be `https://nexus.repo.tuxcare.com/repository/securechain-js/`. If it returns `https://registry.npmjs.org/`, npm is not reading your project `.npmrc` - check that you are running npm from the project root and that no user-level `~/.npmrc` is overriding it.
 
 * **Confirm authentication and connectivity**
 
