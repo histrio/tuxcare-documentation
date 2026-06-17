@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for undici from TuxCare provides security fixes 
 
 ## Supported undici Versions
 
-* undici 5.28.5, 5.29.0
+* undici 5.28.5, 5.29.0, 6.11.1
 
 ## Installation
 
