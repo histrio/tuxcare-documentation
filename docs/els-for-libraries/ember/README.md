@@ -8,6 +8,8 @@ Endless Lifecycle Support (ELS) for Ember.js from TuxCare provides security fixe
 
 ## Installation
 
+<ELSBadge heading>Docker compatible</ELSBadge>
+
 TuxCare publishes patched **transitive** dependencies for supported Ember.js versions as NPM packages on a secure internal registry. Choose your Ember.js version below for the exact package list and `overrides`.
 
 <ELSPrerequisites>

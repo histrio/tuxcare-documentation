@@ -8,6 +8,8 @@ Endless Lifecycle Support (ELS) for react-router from TuxCare provides security 
 
 ## Installation
 
+<ELSBadge heading>Docker compatible</ELSBadge>
+
 <ELSPrerequisites>
 
 * **npm** package manager installed

@@ -8,6 +8,8 @@ Endless Lifecycle Support (ELS) for webpack-dev-server from TuxCare provides sec
 
 ## Installation
 
+<ELSBadge heading>Docker compatible</ELSBadge>
+
 <ELSPrerequisites>
 
 * **npm** package manager installed

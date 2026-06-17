@@ -8,6 +8,8 @@ Endless Lifecycle Support (ELS) for PostCSS from TuxCare provides security fixes
 
 ## Installation
 
+<ELSBadge heading>Docker compatible</ELSBadge>
+
 <ELSPrerequisites>
 
 * **npm** package manager installed

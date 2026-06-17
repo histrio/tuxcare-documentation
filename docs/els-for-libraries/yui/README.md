@@ -8,6 +8,8 @@ Endless Lifecycle Support (ELS) for YUI from TuxCare provides security fixes for
 
 ## Installation
 
+<ELSBadge heading>Docker compatible</ELSBadge>
+
 <ELSPrerequisites>
 
 * **npm** package manager installed

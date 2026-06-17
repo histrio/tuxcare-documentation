@@ -8,6 +8,8 @@ Angular versions from 4 to 19 are supported.
 
 ## Installation
 
+<ELSBadge heading>Docker compatible</ELSBadge>
+
 <ELSPrerequisites>
 
 * **npm** version 9.6.3 or later  

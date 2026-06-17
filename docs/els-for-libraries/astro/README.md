@@ -8,6 +8,8 @@ Endless Lifecycle Support (ELS) for Astro from TuxCare provides security fixes f
 
 ## Installation
 
+<ELSBadge heading>Docker compatible</ELSBadge>
+
 <ELSPrerequisites>
 
 * **npm** package manager installed
