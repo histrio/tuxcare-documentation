@@ -15,7 +15,7 @@ This page describes how to upgrade an already-installed SecureChain package to a
 2. To upgrade, install the new version of the package — `npm install` will replace the previously installed release:
 
     ```text
-    npm install @securechain-js/<package>@<new-version>
+    npm install <package>@<new-version>
     ```
 
     :::tip
