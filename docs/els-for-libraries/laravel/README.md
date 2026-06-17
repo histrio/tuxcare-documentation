@@ -46,7 +46,7 @@ Other versions upon request.
      { title: 'auth.json', content: authjson }
    ]" />
 
-   Replace `USERNAME` and `PASSWORD` with your TuxCare credentials (see [Prerequisites](#installation) above).
+   Replace `USERNAME` and `PASSWORD` with your TuxCare credentials (see [Prerequisites](#prerequisites) above).
 
 3. Register the TuxCare repository
 
