@@ -4,16 +4,6 @@ export default [
   [
     "script",
     {
-      type: "text/javascript",
-      id: "hs-script-loader",
-      async: true,
-      defer: true,
-      src: "//js.hs-scripts.com/5408110.js",
-    },
-  ],
-  [
-    "script",
-    {
       type: "application/ld+json",
       id: "tc-org-schema",
     },
