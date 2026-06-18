@@ -101,7 +101,7 @@ TuxCare provides additional security support for PHP versions after the end of s
      { title: 'APK', content: `wget https://repo.alt.tuxcare.com/alt-php-els/install-els-alt-php-apk-repo.sh` }
    ]" />
 
-2. Run the installer script with your license key
+2. Run the installer script with your license key (see [Prerequisites](#prerequisites) above)
 
    The script registers the server with CLN, adds the PGP key and repository.
 
@@ -299,7 +299,7 @@ Replace `alt-package-name` with the specific name of the package you are looking
 
 TuxCare provides two ways to install ELS PHP on Windows: **manually** by downloading and configuring PHP from the repository, or using the **TuxCare Installer** — a graphical tool that automates the process.
 
-<ELSPrerequisites>
+<ELSPrerequisites id="windows-prerequisites">
 
 * Secure download link (tokenized URL) — contact [sales@tuxcare.com](mailto:sales@tuxcare.com)
 * Administrator access to the Windows system
@@ -383,7 +383,7 @@ curl -O "${BASE}${FILE}"
 
 1. Open the repository in your browser
 
-   Navigate to your tokenized URL:
+   Navigate to your tokenized URL (see [Prerequisites](#windows-prerequisites) above):
 
    ```text
    https://<YOUR-TOKEN>@windows.tuxcare.com/php/
@@ -485,7 +485,7 @@ TuxCare Installer allows you to install and manage ELS PHP versions through a gr
 
 1. Download the installer and launch it
 
-   Download the installer using your tokenized URL:
+   Download the installer using your tokenized URL (see [Prerequisites](#windows-prerequisites) above):
 
    ```text
    https://<YOUR-TOKEN>@windows.tuxcare.com/php/installer/TuxCare.Installer.exe

@@ -60,7 +60,7 @@ alt-nodejs provides a more flexible and convenient environment for working with 
      { title: 'APK', content: `wget https://repo.alt.tuxcare.com/alt-nodejs-els/install-els-alt-nodejs-apk-repo.sh` }
    ]" />
 
-2. Run the installer script with your license key
+2. Run the installer script with your license key (see [Prerequisites](#prerequisites) above)
 
    The script registers the server with CLN, adds the PGP key and repository.
 
