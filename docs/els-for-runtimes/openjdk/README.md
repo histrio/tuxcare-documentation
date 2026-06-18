@@ -34,7 +34,7 @@ Endless Lifecycle Support (ELS) from TuxCare provides security fixes for OpenJDK
    wget https://repo.tuxcare.com/openjdk-els/install-openjdk-els-repo.sh
    ```
 
-2. Run the installer script with your license key
+2. Run the installer script with your license key (see [Prerequisites](#prerequisites) above)
 
    ```text
    sh install-openjdk-els-repo.sh --license-key XXXXXXXXXXX

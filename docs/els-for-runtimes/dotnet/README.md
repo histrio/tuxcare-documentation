@@ -75,7 +75,7 @@ The following steps use the .NET SDK installation as an example. If you are inst
 
 1. Download the installer
 
-   Use your tokenized URL to access the download page. Choose the appropriate runtime (SDK, Runtime, Desktop Runtime, or ASP.NET Core Runtime) and download the installer for your architecture (x64 or x86). Downloading the latest version is recommended.
+   Use your tokenized URL (see [Prerequisites](#prerequisites) above) to access the download page. Choose the appropriate runtime (SDK, Runtime, Desktop Runtime, or ASP.NET Core Runtime) and download the installer for your architecture (x64 or x86). Downloading the latest version is recommended.
 
    The .NET SDK is installed via an `.exe` installer. The .NET Runtime, Desktop Runtime, and ASP.NET Core Runtime are installed via `.msi` files.
 
