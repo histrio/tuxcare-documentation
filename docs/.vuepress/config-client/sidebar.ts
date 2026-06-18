@@ -293,6 +293,10 @@ export default {
                     icon: '/images/php-logo.webp',
                 },
                 {
+                    path: '/els-for-libraries/laminas/',
+                    icon: '/images/laminas.webp',
+                },
+                {
                     path: '/els-for-libraries/laravel/',
                     icon: '/images/laravel-logo.webp',
                 },

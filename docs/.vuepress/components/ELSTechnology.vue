@@ -1894,6 +1894,11 @@ const techData = [
         link: "./httpful/",
       },
       {
+        name: "Laminas",
+        versions: "2.22.0",
+        link: "./laminas/",
+      },
+      {
         name: "Laravel",
         versions: "5.4.36 | 5.5.50 | 5.6.40 | 5.7.29 | 5.8.38 | 7.30.7 | 8 | 9.52.21 | 10 | 11 | 12.58.0",
         link: "./laravel/",
