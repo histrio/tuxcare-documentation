@@ -293,6 +293,10 @@ export default {
                     icon: '/images/php-logo.webp',
                 },
                 {
+                    path: '/els-for-libraries/laminas/',
+                    icon: '/images/laminas.webp',
+                },
+                {
                     path: '/els-for-libraries/laravel/',
                     icon: '/images/laravel-logo.webp',
                 },
@@ -520,6 +524,7 @@ export default {
                     icon: '/images/star.webp',
                 },
                 "/els-for-libraries/managing-els-repository/",
+                "/els-for-libraries/machine-readable-security-data/",
             ]
         },
     ],
@@ -591,7 +596,13 @@ export default {
                     path: '/els-for-applications/wildfly/',
                     icon: '/images/Wildfly.webp',
                 },
+                {
+                    title: 'Resources',
+                    type: 'section-header',
+                    icon: '/images/star.webp',
+                },
                 "/els-for-applications/managing-els-repository/",
+                "/els-for-applications/machine-readable-security-data/",
             ]
         },
     ],

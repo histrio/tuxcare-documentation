@@ -8,6 +8,8 @@ Endless Lifecycle Support (ELS) for LoopBack from TuxCare provides security fixe
 
 ## Installation
 
+<ELSBadge heading>Docker compatible</ELSBadge>
+
 <ELSPrerequisites>
 
 * **npm** package manager installed

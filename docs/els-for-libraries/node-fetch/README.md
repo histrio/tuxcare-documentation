@@ -8,6 +8,8 @@ Endless Lifecycle Support (ELS) for node-fetch from TuxCare provides security fi
 
 ## Installation
 
+<ELSBadge heading>Docker compatible</ELSBadge>
+
 <ELSPrerequisites>
 
 * **npm** package manager installed

@@ -612,6 +612,11 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "adm-zip",
+        versions: "0.4.4",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "ag-grid",
         versions: "16.0.1 | 17.1.0 | 17.1.1 | 18.0.1 | 18.1.2",
         link: "./javascript-libraries/",
@@ -627,6 +632,11 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "animations",
+        versions: "6.0.1",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "ansi-html",
         versions: "0.0.7",
         link: "./javascript-libraries/",
@@ -638,17 +648,27 @@ const techData = [
       },
       {
         name: "Astro",
-        versions: "0.26.1 | 1.9.2 | 2.10.15 | 3.6.5",
+        versions: "0.26.1 | 1.9.2 | 2.10.15 | 3.6.5 | 4.16.19 | 5.18.1",
         link: "./astro/",
       },
       {
         name: "axios",
-        versions: "0.18.1 | 0.27.2",
+        versions: "0.15.3 | 0.18.1 | 0.27.2",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "azure-identity",
+        versions: "4.0.1",
         link: "./javascript-libraries/",
       },
       {
         name: "babel-runtime",
-        versions: "7.18.9 | 7.22.6",
+        versions: "7.11.2 | 7.12.5 | 7.12.18 | 7.14.8 | 7.16.7 | 7.18.9 | 7.22.6",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "babel-traverse",
+        versions: "6.26.0",
         link: "./javascript-libraries/",
       },
       {
@@ -668,7 +688,7 @@ const techData = [
       },
       {
         name: "Bootstrap",
-        versions: "3.2.0 | 3.4.1 | 4.1.1 | 4.6.2",
+        versions: "3.2.0 | 3.3.6 | 3.4.1 | 4.1.1 | 4.6.2",
         link: "./bootstrap/",
       },
       {
@@ -678,7 +698,12 @@ const techData = [
       },
       {
         name: "braces",
-        versions: "1.8.5 | 2.3.2 | 3.0.2 | 3.0.3",
+        versions: "0.1.5 | 1.8.5 | 2.3.1 | 2.3.2 | 3.0.2 | 3.0.3",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "browserslist",
+        versions: "4.10.0 | 4.13.0 | 4.27.0",
         link: "./javascript-libraries/",
       },
       {
@@ -713,7 +738,7 @@ const techData = [
       },
       {
         name: "cookie",
-        versions: "0.0.5 | 0.1.3 | 0.3.1 | 0.4.2 | 0.5.0 | 0.6.0",
+        versions: "0.0.5 | 0.1.3 | 0.3.1 | 0.4.0 | 0.4.2 | 0.5.0 | 0.6.0 | 0.7.2",
         link: "./javascript-libraries/",
       },
       {
@@ -723,7 +748,7 @@ const techData = [
       },
       {
         name: "cross-spawn",
-        versions: "0.2.9 | 5.1.0 | 6.0.5 | 7.0.3",
+        versions: "0.2.9 | 3.0.1 | 5.1.0 | 6.0.5 | 7.0.3",
         link: "./javascript-libraries/",
       },
       {
@@ -743,7 +768,7 @@ const techData = [
       },
       {
         name: "debug",
-        versions: "1.0.5 | 2.1.1 | 2.2.0 | 2.3.3 | 3.2.6 | 4.1.1",
+        versions: "0.7.4 | 1.0.5 | 2.1.1 | 2.2.0 | 2.3.3 | 2.6.9 | 3.1.0 | 3.2.6 | 3.2.7 | 4.1.1 | 4.4.3",
         link: "./javascript-libraries/",
       },
       {
@@ -793,7 +818,7 @@ const techData = [
       },
       {
         name: "elliptic",
-        versions: "6.6.0 | 6.6.1",
+        versions: "6.4.1 | 6.5.4 | 6.5.5 | 6.6.0 | 6.6.1",
         link: "./javascript-libraries/",
       },
       {
@@ -803,7 +828,7 @@ const techData = [
       },
       {
         name: "es5-ext",
-        versions: "0.10.7",
+        versions: "0.10.7 | 0.10.46",
         link: "./javascript-libraries/",
       },
       {
@@ -817,8 +842,13 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "eventsource",
+        versions: "0.1.6 | 1.1.0",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "express",
-        versions: "3.21.2",
+        versions: "3.4.8 | 3.21.2 | 4.17.1 | 4.18.1 | 4.18.2 | 4.18.3 | 4.19.2",
         link: "./express/",
       },
       {
@@ -853,7 +883,7 @@ const techData = [
       },
       {
         name: "Form-Data",
-        versions: "0.0.8 | 0.1.4 | 0.2.0 | 1.0.0-rc3 | 1.0.1 | 2.0.0 | 2.1.4 | 2.3.3",
+        versions: "0.0.8 | 0.1.4 | 0.2.0 | 1.0.0-rc3 | 1.0.1 | 2.0.0 | 2.1.4 | 2.3.3 | 4.0.0 | 4.0.1",
         link: "./javascript-libraries/",
       },
       {
@@ -953,12 +983,12 @@ const techData = [
       },
       {
         name: "js-yaml",
-        versions: "3.3.1 | 3.7.0 | 4.1.0",
+        versions: "3.3.1 | 3.7.0 | 3.14.1 | 4.1.0",
         link: "./javascript-libraries/",
       },
       {
         name: "json5",
-        versions: "0.4.0 | 0.5.1 | 1.0.1",
+        versions: "0.4.0 | 0.5.1 | 1.0.1 | 1.0.2",
         link: "./javascript-libraries/",
       },
       {
@@ -973,7 +1003,7 @@ const techData = [
       },
       {
         name: "JSONPath Plus",
-        versions: "6.0.1 | 7.2.0",
+        versions: "5.1.0 | 6.0.1 | 7.2.0",
         link: "./javascript-libraries/",
       },
       {
@@ -983,7 +1013,7 @@ const techData = [
       },
       {
         name: "jsPDF",
-        versions: "2.5.1 | 2.5.2 | 3.0.4",
+        versions: "1.4.1 | 2.5.1 | 2.5.2 | 3.0.4",
         link: "./javascript-libraries/",
       },
       {
@@ -993,7 +1023,7 @@ const techData = [
       },
       {
         name: "karma",
-        versions: "4.1.0 | 5.0.9",
+        versions: "3.0.0 | 4.0.1 | 4.1.0 | 4.4.1 | 5.0.9",
         link: "./karma/",
       },
       {
@@ -1017,13 +1047,18 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "log4js",
+        versions: "3.0.6 | 4.5.1",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "LoopBack",
         versions: "1.10.0 | 2.42.0",
         link: "./loopback/",
       },
       {
         name: "loader-utils",
-        versions: "0.2.17 | 1.2.3 | 2.0.0",
+        versions: "0.2.17 | 1.1.0 | 1.2.3 | 2.0.0",
         link: "./javascript-libraries/",
       },
       {
@@ -1033,7 +1068,7 @@ const techData = [
       },
       {
         name: "marked",
-        versions: "0.2.10 | 0.7.0 | 4.0.7 | 4.0.9",
+        versions: "0.2.10 | 0.7.0 | 4.0.6 | 4.0.7 | 4.0.9",
         link: "./javascript-libraries/",
       },
       {
@@ -1043,7 +1078,7 @@ const techData = [
       },
       {
         name: "micromatch",
-        versions: "3.1.10",
+        versions: "2.3.11 | 3.1.10",
         link: "./javascript-libraries/",
       },
       {
@@ -1058,7 +1093,7 @@ const techData = [
       },
       {
         name: "minimist",
-        versions: "0.0.8 | 0.0.10 | 1.2.0 | 1.2.8",
+        versions: "0.0.8 | 0.0.10 | 1.2.0 | 1.2.1 | 1.2.8",
         link: "./javascript-libraries/",
       },
       {
@@ -1112,6 +1147,11 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "netmask",
+        versions: "1.0.6",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "nguniversal-express-engine",
         versions: "10.1.0",
         link: "./javascript-libraries/",
@@ -1138,12 +1178,17 @@ const techData = [
       },
       {
         name: "Nuxt",
-        versions: "0.10.7 | 1.4.5 | 2.18.1 | 3.12.4",
+        versions: "0.10.7 | 1.4.5 | 2.18.1 | 3.2.0 | 3.12.3 | 3.12.4 | 4.0.3",
         link: "./nuxt/",
       },
       {
         name: "object-path",
         versions: "0.11.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "parse-git-config",
+        versions: "3.0.0",
         link: "./javascript-libraries/",
       },
       {
@@ -1178,7 +1223,7 @@ const techData = [
       },
       {
         name: "PostCSS",
-        versions: "5.2.18 | 6.0.23 | 7.0.17 | 7.0.32 | 7.0.39 | 8.3.6",
+        versions: "5.2.18 | 6.0.23 | 7.0.14 | 7.0.17 | 7.0.21 | 7.0.32 | 7.0.39 | 8.2.15 | 8.3.6 | 8.4.5 | 8.4.14 | 8.4.31 | 8.4.41 | 8.5.6",
         link: "./postcss/",
       },
       {
@@ -1203,7 +1248,7 @@ const techData = [
       },
       {
         name: "qs",
-        versions: "0.5.1 | 0.6.6 | 1.0.2 | 1.2.2 | 2.2.5 | 2.3.3 | 2.4.2 | 4.0.0 | 5.1.0 | 5.2.0 | 6.5.3 | 6.14.0",
+        versions: "0.5.1 | 0.6.6 | 1.0.2 | 1.2.2 | 2.2.5 | 2.3.3 | 2.4.2 | 4.0.0 | 5.1.0 | 5.2.0 | 6.5.3 | 6.5.5 | 6.14.0",
         link: "./javascript-libraries/",
       },
       {
@@ -1225,6 +1270,11 @@ const techData = [
         name: "react-router",
         versions: "6.3.0 | 7.5.1",
         link: "./react-router/",
+      },
+      {
+        name: "redis",
+        versions: "2.8.0",
+        link: "./javascript-libraries/",
       },
       {
         name: "RequireJS",
@@ -1323,12 +1373,12 @@ const techData = [
       },
       {
         name: "tinymce",
-        versions: "6.8.6",
+        versions: "4.9.11 | 5.10.9 | 6.8.6",
         link: "./javascript-libraries/",
       },
       {
         name: "tmp",
-        versions: "0.0.30 | 0.0.33 | 0.1.0 | 0.2.1",
+        versions: "0.0.24 | 0.0.28 | 0.0.30 | 0.0.33 | 0.1.0 | 0.2.1",
         link: "./javascript-libraries/",
       },
       {
@@ -1363,7 +1413,7 @@ const techData = [
       },
       {
         name: "undici",
-        versions: "5.28.5 | 5.29.0",
+        versions: "5.28.5 | 5.29.0 | 6.11.1",
         link: "./undici/",
       },
       {
@@ -1383,7 +1433,7 @@ const techData = [
       },
       {
         name: "Vuetify",
-        versions: "2.5.5",
+        versions: "2.5.5 | 2.6.13",
         link: "./vuetify/",
       },
       {
@@ -1403,7 +1453,7 @@ const techData = [
       },
       {
         name: "webpack",
-        versions: "5.55.0 | 5.76.1",
+        versions: "5.50.0 | 5.55.0 | 5.76.1 | 5.88.2 | 5.94.0",
         link: "./webpack/",
       },
       {
@@ -1413,7 +1463,7 @@ const techData = [
       },
       {
         name: "webpack-dev-server",
-        versions: "3.11.0 | 3.11.2 | 4.7.3 | 4.11.0 | 4.15.1",
+        versions: "2.11.5 | 3.1.14 | 3.11.0 | 3.11.2 | 3.11.3 | 4.7.3 | 4.11.0 | 4.15.1",
         link: "./webpack-dev-server/",
       },
       {
@@ -1428,7 +1478,7 @@ const techData = [
       },
       {
         name: "ws",
-        versions: "1.1.1 | 3.3.3 | 4.1.0 | 7.4.6",
+        versions: "1.1.1 | 1.1.2 | 3.3.3 | 4.1.0 | 7.4.6",
         link: "./javascript-libraries/",
       },
       {
@@ -1453,7 +1503,7 @@ const techData = [
       },
       {
         name: "yargs-parser",
-        versions: "4.2.1 | 7.0.0 | 10.1.0 | 11.1.1",
+        versions: "4.2.1 | 7.0.0 | 10.1.0 | 11.1.1 | 13.1.2",
         link: "./javascript-libraries/",
       },
       {
@@ -1842,6 +1892,11 @@ const techData = [
         name: "Httpful",
         versions: "0.3.2",
         link: "./httpful/",
+      },
+      {
+        name: "Laminas",
+        versions: "2.22.0",
+        link: "./laminas/",
       },
       {
         name: "Laravel",

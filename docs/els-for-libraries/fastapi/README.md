@@ -26,7 +26,7 @@ You can install or upgrade a package directly using the ELS repository with your
 pip install --upgrade -i https://USERNAME:PASSWORD@nexus.repo.tuxcare.com/repository/els_python/simple fastapi
 ```
 
-Replace `USERNAME` and `PASSWORD` with your TuxCare credentials (see [Prerequisites](#installation) above).
+Replace `USERNAME` and `PASSWORD` with your TuxCare credentials (see [Prerequisites](#prerequisites) above).
 
 #### Option 2: Configure `pip` to use the ELS repository (full replacement)
 

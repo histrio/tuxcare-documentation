@@ -19,7 +19,7 @@
    wget https://repo.els.tuxcare.com/centos6-els/install-centos6-els-repo.sh
    ```
 
-2. Run with your license key
+2. Run with your license key (see [Prerequisites](#prerequisites) above)
 
    The script registers the server in the CLN with the key, adds a PGP key to the server.
 

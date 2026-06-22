@@ -4,16 +4,6 @@ export default [
   [
     "script",
     {
-      type: "text/javascript",
-      id: "hs-script-loader",
-      async: true,
-      defer: true,
-      src: "//js.hs-scripts.com/5408110.js",
-    },
-  ],
-  [
-    "script",
-    {
       type: "application/ld+json",
       id: "tc-org-schema",
     },
@@ -22,7 +12,7 @@ export default [
       "@type": "Organization",
       name: "TuxCare",
       url: "https://tuxcare.com",
-      logo: "https://docs.tuxcare.com/global/logo.svg",
+      logo: "https://docs.tuxcare.com/global/TuxCare_color_logo_tagline_RGB.webp",
       sameAs: [
         "https://www.linkedin.com/company/tuxcare",
         "https://www.youtube.com/@TuxCare",

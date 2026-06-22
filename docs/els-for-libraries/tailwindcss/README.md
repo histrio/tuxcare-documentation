@@ -8,6 +8,8 @@ Endless Lifecycle Support (ELS) for tailwindcss from TuxCare provides security f
 
 ## Installation
 
+<ELSBadge heading>Docker compatible</ELSBadge>
+
 <ELSPrerequisites>
 
 * **npm** package manager installed

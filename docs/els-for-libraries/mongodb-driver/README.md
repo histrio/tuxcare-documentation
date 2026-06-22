@@ -8,6 +8,8 @@ Endless Lifecycle Support (ELS) for MongoDB driver from TuxCare provides securit
 
 ## Installation
 
+<ELSBadge heading>Docker compatible</ELSBadge>
+
 <ELSPrerequisites>
 
 * **npm** package manager installed

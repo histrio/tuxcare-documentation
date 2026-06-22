@@ -4,9 +4,11 @@ Endless Lifecycle Support (ELS) for express from TuxCare provides security fixes
 
 ## Supported express Versions
 
-* express 3.21.2
+* express 3.4.8, 3.21.2, 4.17.1, 4.18.1, 4.18.2, 4.18.3, 4.19.2
 
 ## Installation
+
+<ELSBadge heading>Docker compatible</ELSBadge>
 
 <ELSPrerequisites>
 

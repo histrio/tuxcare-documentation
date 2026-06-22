@@ -49,22 +49,22 @@ Released fixes are also available via [tuxcare.com/cve-tracker](https://tuxcare.
 
 ## Node.js
 
-| OS | CSAF | RSS |
-|----|------|-----|
-| EL 7 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/el7/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Node.js) |
-| EL 8 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/el8/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Node.js) |
-| EL 9 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/el9/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Node.js) |
-| EL 10 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/el10/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Node.js) |
-| Ubuntu 16.04 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/ubuntu16.04/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Node.js) |
-| Ubuntu 18.04 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/ubuntu18.04/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Node.js) |
-| Ubuntu 20.04 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/ubuntu20.04/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Node.js) |
-| Ubuntu 22.04 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/ubuntu22.04/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Node.js) |
-| Ubuntu 24.04 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/ubuntu24.04/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Node.js) |
-| Debian 10 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/debian10/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Node.js) |
-| Debian 11 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/debian11/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Node.js) |
-| Debian 12 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/debian12/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Node.js) |
-| Debian 13 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/debian13/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Node.js) |
-| Alpine Linux 3.22 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/alpinelinux3.22/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Node.js) |
+| OS | Errata | CSAF | RSS |
+|----|--------|------|-----|
+| EL 7 | [errata](https://security.tuxcare.com/errata/els_alt_nodejs/el7/) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/el7/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Node.js) |
+| EL 8 | [errata](https://security.tuxcare.com/errata/els_alt_nodejs/el8/) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/el8/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Node.js) |
+| EL 9 | [errata](https://security.tuxcare.com/errata/els_alt_nodejs/el9/) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/el9/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Node.js) |
+| EL 10 | [errata](https://security.tuxcare.com/errata/els_alt_nodejs/el10/) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/el10/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Node.js) |
+| Ubuntu 16.04 | [errata](https://security.tuxcare.com/errata/els_alt_nodejs/ubuntu16.04/) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/ubuntu16.04/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Node.js) |
+| Ubuntu 18.04 | [errata](https://security.tuxcare.com/errata/els_alt_nodejs/ubuntu18.04/) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/ubuntu18.04/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Node.js) |
+| Ubuntu 20.04 | [errata](https://security.tuxcare.com/errata/els_alt_nodejs/ubuntu20.04/) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/ubuntu20.04/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Node.js) |
+| Ubuntu 22.04 | [errata](https://security.tuxcare.com/errata/els_alt_nodejs/ubuntu22.04/) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/ubuntu22.04/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Node.js) |
+| Ubuntu 24.04 | [errata](https://security.tuxcare.com/errata/els_alt_nodejs/ubuntu24.04/) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/ubuntu24.04/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Node.js) |
+| Debian 10 | [errata](https://security.tuxcare.com/errata/els_alt_nodejs/debian10/) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/debian10/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Node.js) |
+| Debian 11 | [errata](https://security.tuxcare.com/errata/els_alt_nodejs/debian11/) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/debian11/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Node.js) |
+| Debian 12 | [errata](https://security.tuxcare.com/errata/els_alt_nodejs/debian12/) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/debian12/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Node.js) |
+| Debian 13 | [errata](https://security.tuxcare.com/errata/els_alt_nodejs/debian13/) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/debian13/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Node.js) |
+| Alpine Linux 3.22 | [errata](https://security.tuxcare.com/errata/els_alt_nodejs/alpinelinux3.22/) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/alpinelinux3.22/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Node.js) |
 
 ## Ruby
 

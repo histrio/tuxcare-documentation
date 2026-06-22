@@ -19,7 +19,7 @@
    wget https://repo.tuxcare.com/amazonlinux2-els/install-amazonlinux2-els-repo.sh
    ```
 
-2. Run with your license key
+2. Run with your license key (see [Prerequisites](#prerequisites) above)
 
    The script registers the server in the CLN with the key, adds a PGP key to the server.
 

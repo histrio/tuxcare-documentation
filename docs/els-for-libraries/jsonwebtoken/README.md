@@ -8,6 +8,8 @@ Endless Lifecycle Support (ELS) for JSON Web Token from TuxCare provides securit
 
 ## Installation
 
+<ELSBadge heading>Docker compatible</ELSBadge>
+
 <ELSPrerequisites>
 
 * **npm** package manager installed

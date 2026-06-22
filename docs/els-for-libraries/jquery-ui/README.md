@@ -8,6 +8,8 @@ Endless Lifecycle Support (ELS) for jQuery UI from TuxCare provides security fix
 
 ## Installation
 
+<ELSBadge heading>Docker compatible</ELSBadge>
+
 <ELSPrerequisites>
 
 * **npm** package manager installed

@@ -4,9 +4,11 @@ Endless Lifecycle Support (ELS) for webpack from TuxCare provides security fixes
 
 ## Supported webpack Versions
 
-* webpack 5.55.0, 5.76.1
+* webpack 5.50.0, 5.55.0, 5.76.1, 5.88.2, 5.94.0
 
 ## Installation
+
+<ELSBadge heading>Docker compatible</ELSBadge>
 
 <ELSPrerequisites>
 

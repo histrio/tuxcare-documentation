@@ -10,6 +10,8 @@ The versions **2.6.11**, **2.6.14**, and **2.7.16** are supported by TuxCare for
 
 ## Installation
 
+<ELSBadge heading>Docker compatible</ELSBadge>
+
 <ELSPrerequisites>
 
 * **npm** package manager installed

@@ -4,9 +4,11 @@ Endless Lifecycle Support (ELS) for Nuxt from TuxCare provides security fixes fo
 
 ## Supported Nuxt Versions
 
-* Nuxt 0.10.7, 1.4.5, 2.18.1, 3.12.4
+* Nuxt 0.10.7, 1.4.5, 2.18.1, 3.2.0, 3.12.3, 3.12.4, 4.0.3
 
 ## Installation
+
+<ELSBadge heading>Docker compatible</ELSBadge>
 
 <ELSPrerequisites>
 

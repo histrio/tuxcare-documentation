@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 
 ## Supported NumPy Versions
 
-* **NumPy** 1.15.4, 1.16.0
+* **NumPy** 1.15.4, 1.16.0, 1.21.0
 
 Other versions upon request.
 
@@ -26,7 +26,7 @@ You can install or upgrade a package directly using the ELS repository with your
 pip install --upgrade -i https://USERNAME:PASSWORD@nexus.repo.tuxcare.com/repository/els_python/simple numpy
 ```
 
-Replace `USERNAME` and `PASSWORD` with your TuxCare credentials (see [Prerequisites](#installation) above).
+Replace `USERNAME` and `PASSWORD` with your TuxCare credentials (see [Prerequisites](#prerequisites) above).
 
 #### Option 2: Configure `pip` to use the ELS repository (full replacement)
 
