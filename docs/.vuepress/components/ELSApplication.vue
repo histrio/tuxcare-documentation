@@ -94,7 +94,7 @@ const applications = [
   },
   {
     name: "Wildfly",
-    versions: "19.0.1.Final",
+    versions: "27.0.1.Final",
     link: "./wildfly/",
     icon: "/images/Wildfly.webp",
   },
