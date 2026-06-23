@@ -50,13 +50,7 @@ A failed verification is an **integrity violation**: the artifact must be treate
 
 <p style="font-size: 1.125rem; font-weight: 700; margin-top: 1.75rem; margin-bottom: 0.5rem;">Where signatures are published</p>
 
-Signatures are published per ecosystem to a dedicated Nexus signatures repository, mirroring the path of the package they sign. For JavaScript libraries, signatures live in [els-js-signatures](https://nexus.repo.tuxcare.com/#browse/browse:els-js-signatures) and require the same TuxCare Nexus credentials as the package repositories.
-
-For example, the signature for `@els-js/angular` version `1.8.3-tuxcare.8` is:
-
-```text
-https://nexus.repo.tuxcare.com/repository/els-js-signatures/angular/1.8.3-tuxcare.8/angular-1.8.3-tuxcare.8.tgz.asc
-```
+Signature files are published to a dedicated Nexus signatures repository, separate from the package repositories and mirroring the path of the package they sign. Accessing them requires the same TuxCare Nexus credentials as the package repositories.
 
 <p style="font-size: 1.125rem; font-weight: 700; margin-top: 1.75rem; margin-bottom: 0.5rem;">Obtain the TuxCare public key</p>
 
@@ -79,6 +73,8 @@ Import the public key once. It can verify every TuxCare-signed package, so this 
 :::
 
 <p style="font-size: 1.125rem; font-weight: 700; margin-top: 1.75rem; margin-bottom: 0;">Verify a package</p>
+
+The steps below show an example for the `angular` package (npm ecosystem); the same process applies to packages in other ecosystems.
 
 <ELSSteps>
 
