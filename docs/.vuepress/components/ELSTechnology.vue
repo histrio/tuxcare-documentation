@@ -91,7 +91,7 @@ const techData = [
       },
       {
         name: "Apache Avro",
-        versions: "1.7.6 | 1.7.7 | 1.10.2 | 1.11.0 | 1.11.3",
+        versions: "1.7.6 | 1.7.7 | 1.8.2 | 1.10.2 | 1.11.0 | 1.11.3",
         link: "./java-libraries/",
       },
       {
@@ -327,7 +327,7 @@ const techData = [
       },
       {
         name: "Jackson",
-        versions: "1.9.13",
+        versions: "1.9.13 | 2.14.2",
         link: "./jackson/",
       },
       {
@@ -386,6 +386,11 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "MyBatis",
+        versions: "2.3.5",
+        link: "./java-libraries/",
+      },
+      {
         name: "NekoHTML",
         versions: "1.9.22",
         link: "./java-libraries/",
@@ -393,6 +398,11 @@ const techData = [
       {
         name: "Netty",
         versions: "4.1.115.Final | 4.1.48.Final | 4.1.49.Final | 4.1.52.Final | 4.1.58.Final | 4.1.60.Final | 4.1.63.Final | 4.1.73.Final | 4.1.75.Final | 4.1.82.Final | 4.1.92.Final | 4.1.93.Final | 4.1.112.Final",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Netty Incubator",
+        versions: "0.0.21.Final",
         link: "./java-libraries/",
       },
       {
@@ -562,7 +572,7 @@ const techData = [
       },
       {
         name: "Undertow",
-        versions: "2.2.33.Final | 2.3.0.Final | 2.3.10.Final",
+        versions: "2.2.33.Final | 2.3.0.Final | 2.3.10.Final | 2.3.18.Final",
         link: "./java-libraries/",
       },
       {
@@ -642,8 +652,13 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "ansi-regex",
+        versions: "3.0.0",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "async",
-        versions: "2.6.1",
+        versions: "2.6.1 | 2.6.3",
         link: "./javascript-libraries/",
       },
       {
@@ -653,7 +668,7 @@ const techData = [
       },
       {
         name: "axios",
-        versions: "0.15.3 | 0.18.1 | 0.27.2",
+        versions: "0.15.3 | 0.18.1 | 0.27.2 | 0.33.0",
         link: "./javascript-libraries/",
       },
       {
@@ -663,7 +678,7 @@ const techData = [
       },
       {
         name: "babel-runtime",
-        versions: "7.11.2 | 7.12.5 | 7.12.18 | 7.14.8 | 7.16.7 | 7.18.9 | 7.22.6",
+        versions: "7.11.2 | 7.12.5 | 7.12.18 | 7.14.8 | 7.16.7 | 7.18.9 | 7.22.6 | 7.24.1",
         link: "./javascript-libraries/",
       },
       {
@@ -678,7 +693,7 @@ const techData = [
       },
       {
         name: "basic-ftp",
-        versions: "5.0.5",
+        versions: "5.0.5 | 5.3.1",
         link: "./javascript-libraries/",
       },
       {
@@ -695,6 +710,11 @@ const techData = [
         name: "bootstrap-sass",
         versions: "3.4.0",
         link: "./bootstrap-sass/",
+      },
+      {
+        name: "brace-expansion",
+        versions: "1.1.11 | 2.0.1",
+        link: "./javascript-libraries/",
       },
       {
         name: "braces",
@@ -862,8 +882,13 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "fast-uri",
+        versions: "3.0.1 | 3.0.3",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "fast-xml-parser",
-        versions: "4.5.3",
+        versions: "3.14.0 | 3.17.5 | 3.19.0 | 4.2.7 | 4.4.0 | 4.5.3 | 4.5.6",
         link: "./javascript-libraries/",
       },
       {
@@ -872,8 +897,13 @@ const techData = [
         link: "./fastify/",
       },
       {
+        name: "file-type",
+        versions: "17.1.6",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "flatted",
-        versions: "3.3.3",
+        versions: "3.2.9 | 3.3.3",
         link: "./javascript-libraries/",
       },
       {
@@ -904,6 +934,16 @@ const techData = [
       {
         name: "fstream",
         versions: "1.0.8",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "gh-pages",
+        versions: "0.12.0",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "glob",
+        versions: "10.2.6 | 10.4.5",
         link: "./javascript-libraries/",
       },
       {
@@ -979,6 +1019,11 @@ const techData = [
       {
         name: "jquery-validation",
         versions: "1.19.0",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "js-cookie",
+        versions: "2.2.1",
         link: "./javascript-libraries/",
       },
       {
@@ -1510,6 +1555,11 @@ const techData = [
         name: "YUI",
         versions: "2.9.0 | 3.18.1",
         link: "./yui/",
+      },
+      {
+        name: "zod",
+        versions: "3.25.76",
+        link: "./javascript-libraries/",
       },
     ],
   },

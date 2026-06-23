@@ -11,14 +11,16 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **ajv** 4.11.8, 5.5.2, 6.4.0, 6.12.3, 6.12.4, 6.12.6, 6.14.0, 8.6.2, 8.9.0, 8.11.0, 8.12.0, 8.17.1
 * **animations** 6.0.1
 * **ansi-html** 0.0.7
-* **async** 2.6.1
-* **axios** 0.15.3, 0.18.1, 0.27.2
+* **ansi-regex** 3.0.0
+* **async** 2.6.1, 2.6.3
+* **axios** 0.15.3, 0.18.1, 0.27.2, 0.33.0
 * **azure-identity** 4.0.1
-* **babel-runtime** 7.11.2, 7.12.5, 7.12.18, 7.14.8, 7.16.7, 7.18.9, 7.22.6
+* **babel-runtime** 7.11.2, 7.12.5, 7.12.18, 7.14.8, 7.16.7, 7.18.9, 7.22.6, 7.24.1
 * **babel-traverse** 6.26.0
 * **base64url** 0.0.6
-* **basic-ftp** 5.0.5
+* **basic-ftp** 5.0.5, 5.3.1
 * **body-parser** 1.8.4, 1.13.3, 1.14.2
+* **brace-expansion** 1.1.11, 2.0.1
 * **braces** 0.1.5, 1.8.5, 2.3.1, 2.3.2, 3.0.2, 3.0.3
 * **browserslist** 4.10.0, 4.13.0, 4.27.0
 * **bson** 0.5.7, 1.0.9
@@ -50,14 +52,18 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **eventsource** 0.1.6, 1.1.0
 * **express-jwt** 0.1.3, 0.1.4
 * **extend** 3.0.0
-* **fast-xml-parser** 4.5.3
-* **flatted** 3.3.3
+* **fast-uri** 3.0.1, 3.0.3
+* **fast-xml-parser** 3.14.0, 3.17.5, 3.19.0, 4.2.7, 4.4.0, 4.5.3, 4.5.6
+* **file-type** 17.1.6
+* **flatted** 3.2.9, 3.3.3
 * **follow-redirects** 0.0.3, 1.15.11
 * **form-data** 0.0.8, 0.1.4, 0.2.0, 1.0.0-rc3, 1.0.1, 2.0.0, 2.1.4, 2.3.3, 4.0.0, 4.0.1
 * **formidable** 2.1.2, 2.1.5
 * **forwarded** 0.1.0
 * **fresh** 0.2.4, 0.3.0, 0.5.2
 * **fstream** 1.0.8
+* **gh-pages** 0.12.0
+* **glob** 10.2.6, 10.4.5
 * **got** 2.9.2, 8.3.2, 9.6.0
 * **growl** 1.7.0
 * **handlebars** 1.0.12, 1.3.0, 2.0.0, 3.0.3
@@ -71,6 +77,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **ip** 1.1.5, 1.1.9, 2.0.0, 2.0.1
 * **is-my-json-valid** 2.10.1, 2.12.2
 * **jquery-validation** 1.19.0
+* **js-cookie** 2.2.1
 * **js-yaml** 3.3.1, 3.7.0, 3.14.1, 4.1.0
 * **json5** 0.4.0, 0.5.1, 1.0.1, 1.0.2
 * **jsoneditor** 5.19.0
@@ -148,6 +155,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **xmlhttprequest-ssl** 1.5.3, 1.5.5
 * **yaml** 1.10.2
 * **yargs-parser** 4.2.1, 7.0.0, 10.1.0, 11.1.1, 13.1.2
+* **zod** 3.25.76
 
 Other libraries upon request.
 
