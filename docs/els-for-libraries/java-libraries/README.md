@@ -5,7 +5,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 ## Supported Java Libraries
 
 * **Apache ActiveMQ Artemis** 2.26.0
-* **Apache Avro** 1.7.6, 1.7.7, 1.10.2, 1.11.0, 1.11.3
+* **Apache Avro** 1.7.6, 1.7.7, 1.8.2, 1.10.2, 1.11.0, 1.11.3
 * **Apache Axis** 1.4
 * **Apache Commons BeanUtils** 1.6, 1.8.0, 1.8.3, 1.9.4
 * **Apache Commons Compress** 1.19, 1.20, 1.21, 1.26.2
@@ -49,8 +49,10 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Logback** 1.1.7, 1.2.13, 1.4.14
 * **LZ4** 1.8.1
 * **Mozilla Rhino** 1.7.10, 1.7.15
+* **MyBatis** 2.3.5
 * **NekoHTML** 1.9.22
 * **Netty** 4.1.115.Final, 4.1.48.Final, 4.1.49.Final, 4.1.52.Final, 4.1.58.Final, 4.1.60.Final, 4.1.63.Final, 4.1.73.Final, 4.1.75.Final, 4.1.82.Final, 4.1.92.Final, 4.1.93.Final, 4.1.112.Final
+* **Netty Incubator** 0.0.21.Final
 * **Nimbus JOSE + JWT** 9.22, 9.23, 9.24.4
 * **OkHttp3** 3.14.9, 4.10.0
 * **Okio** 2.8.0, 2.10.0
@@ -63,7 +65,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Snappy Java** 1.1.8.4
 * **Sonatype Aether** 1.13.1
 * **Thymeleaf** 3.0.15.RELEASE
-* **Undertow** 2.2.33.Final, 2.3.0.Final, 2.3.10.Final
+* **Undertow** 2.2.33.Final, 2.3.0.Final, 2.3.10.Final, 2.3.18.Final
 * **Woodstox** 5.0.3
 * **Xerces** 2.11.0, 2.12.0
 * **XMLUnit** 2.9.1, 2.9.0
