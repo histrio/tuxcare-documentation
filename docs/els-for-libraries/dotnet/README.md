@@ -8,12 +8,13 @@ NuGet is the standard package manager for .NET, used to deliver the reusable com
 
 * .NET 6, 8, 10
 * AutoMapper 2.2.2, 3.3.2, 4.2.2, 5.2.1, 6.2.3, 7.0.2, 8.1.2, 9.0.1, 10.1.2, 11.0.2, 12.0.2, 13.0.2, 14.0.1
+* jose-jwt 2.6.2
 * log4net 1.2.15, 1.2.16
 * Microsoft.Azure.Storage.DataMovement 1.2.0, 1.2.1
 * Microsoft.Data.SqlClient 1.1.4, 1.1.5
 * Microsoft.Owin 3.1.0, 3.1.1
 * MimeKit 3.6.1, 3.6.2
-* Newtonsoft.Json 4.5.11, 4.5.12, 6.0.8, 6.0.9, 8.0.3, 8.0.4, 9.0.1, 9.0.2, 10.0.3, 10.0.4, 11.0.2, 11.0.3, 12.0.3, 12.0.4
+* Newtonsoft.Json 4.5.11, 4.5.12, 6.0.8, 6.0.9, 8.0.3, 8.0.4, 9.0.1, 9.0.2, 10.0.3, 10.0.4, 11.0.2, 11.0.3, 12.0.3, 12.0.4, 13.0.5
 * NHibernate 4.1.2.4001
 * Refit 6.3.2, 6.3.3
 * RestSharp 108.0.3, 108.0.4, 110.2.0, 110.2.1, 111.4.1, 111.4.2
@@ -96,7 +97,7 @@ Other versions upon request.
    For example:
 
    ```text
-   dotnet add package Newtonsoft.Json --version 12.0.4-tuxcare-els
+   dotnet add package Newtonsoft.Json --version 12.0.4-tuxcare.1
    ```
 
    **Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
