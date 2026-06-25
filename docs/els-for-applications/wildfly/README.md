@@ -28,23 +28,7 @@ This guide outlines the steps needed for Wildfly server setup and configuration.
 
 <ELSSteps>
 
-1. **Prepare a `wildfly` group**
-
-   Create a `wildfly` group:
-
-   ```text
-   sudo groupadd wildfly
-   ```
-
-2. **Create a `wildfly` user**
-
-   Create a new user as a member of the `wildfly` group, with a home directory of `/opt/wildfly` and the login shell set to `/bin/false`.
-
-   ```text
-   sudo useradd -s /bin/false -g wildfly -d /opt/wildfly wildfly
-   ```
-
-3. **Download the TuxCare build**
+1. **Download the TuxCare build**
 
    Download from TuxCare using your credentials. For example, Wildfly 27.0.1.Final:
 
@@ -54,59 +38,34 @@ This guide outlines the steps needed for Wildfly server setup and configuration.
 
    Replace `USERNAME` and `PASSWORD` with your TuxCare credentials (see [Prerequisites](#prerequisites) above).
 
-4. **Create the installation directory and extract the archive**
+2. **Extract the archive**
 
-   * Create the `/opt/wildfly` directory:
+   Create an installation directory in your home folder and extract the archive into it:
 
    ```text
-   sudo mkdir -p /opt/wildfly
+   mkdir -p ~/wildfly
+   tar -xzf wildfly-ee-dist-27.0.1.Final-tuxcare.1.tar.gz -C ~/wildfly --strip-components=1
    ```
 
-   * Extract the archive into it:
+3. **Verify the installation**
 
    ```text
-   sudo tar -xvzf wildfly-ee-dist-27.0.1.Final-tuxcare.1.tar.gz -C /opt/wildfly --strip-components=1
+   ~/wildfly/bin/standalone.sh --version
    ```
 
-5. **Configure ownership and permissions**
+   The output should display the Wildfly version and build details.
 
-   Change ownership of the installation to the `wildfly` user and group:
-
-   ```text
-   sudo chown -R wildfly:wildfly /opt/wildfly
-   ```
-
-6. **Set `JBOSS_HOME` and reload the shell**
-
-   * Add the following line at the end of your `~/.bashrc` file, updating the path if needed.
+4. **Start Wildfly**
 
    ```text
-   export JBOSS_HOME=/opt/wildfly
+   ~/wildfly/bin/standalone.sh
    ```
 
    :::tip
-   If you're using a different shell, you may need to edit `~/.bash_profile` instead.
+   This command runs in the foreground and keeps the terminal busy. Use a second terminal to verify and stop the server.
    :::
 
-   * Reload the shell configuration:
-
-   ```text
-   source ~/.bashrc
-   ```
-
-   * Confirm the variable is set:
-
-   ```text
-   echo $JBOSS_HOME
-   ```
-
-7. **Start Wildfly**
-
-   ```text
-   sudo -u wildfly /opt/wildfly/bin/standalone.sh
-   ```
-
-8. **Verify installation**
+5. **Verify the server is running**
 
    * Go to [http://localhost:8080/](http://localhost:8080/). You should see the default Wildfly welcome page.
 
@@ -116,41 +75,73 @@ This guide outlines the steps needed for Wildfly server setup and configuration.
    curl http://localhost:8080
    ```
 
-9. **Stop Wildfly**
+6. **Stop Wildfly**
 
    ```text
-   /opt/wildfly/bin/jboss-cli.sh --connect command=:shutdown
+   ~/wildfly/bin/jboss-cli.sh --connect command=:shutdown
    ```
 
 ## Windows Installation
 
 1. **Download Wildfly**
 
-   Download the .zip archive from [https://nexus.repo.tuxcare.com/repository/els_java/org/wildfly/wildfly-ee-dist/27.0.1.Final-tuxcare.1/](https://nexus.repo.tuxcare.com/repository/els_java/org/wildfly/wildfly-ee-dist/27.0.1.Final-tuxcare.1/) using your credentials, for example `wildfly-ee-dist-27.0.1.Final-tuxcare.1.zip`.
+   Download the `.zip` archive from [Nexus](https://nexus.repo.tuxcare.com/repository/els_java/org/wildfly/wildfly-ee-dist/27.0.1.Final-tuxcare.1/) using your credentials, for example `wildfly-ee-dist-27.0.1.Final-tuxcare.1.zip`.
 
 2. **Extract the archive**
 
-   Extract the archive to the installation directory, e.g., `C:\WildFly`.
+   Extract it to the installation directory, e.g., `C:\WildFly`. The archive contains a top-level folder, so this produces `C:\WildFly\wildfly-27.0.1.Final-tuxcare.1` — that folder is your Wildfly directory.
 
-3. **Open Environment Variables**
+3. **Start Wildfly**
 
-   Right-click *This PC* → *Properties* → *Advanced system settings* → *Environment Variables*.
+   Run `C:\WildFly\wildfly-27.0.1.Final-tuxcare.1\bin\standalone.bat`.
 
-4. **Set `JBOSS_HOME`**
+   :::tip
+   This window stays open while the server runs. Use your browser (next step) to verify it, and a second window to stop it.
+   :::
 
-   Add a new system variable with the value `C:\WildFly` (or your installation path).
-
-5. **Start Wildfly**
-
-   Run `C:\WildFly\bin\standalone.bat`.
-
-6. **Verify installation**
+4. **Verify the server is running**
 
    Go to [http://localhost:8080/](http://localhost:8080/) in your browser. You should see the default Wildfly welcome page.
 
-7. **Stop Wildfly**
+5. **Stop Wildfly**
 
-   Run `C:\WildFly\bin\jboss-cli.bat --connect command=:shutdown`.
+   Run `C:\WildFly\wildfly-27.0.1.Final-tuxcare.1\bin\jboss-cli.bat --connect command=:shutdown` from a second window.
+
+## Use Case: Production Setup <ELSBadge>Linux</ELSBadge>
+
+1. **Create a `wildfly` group**
+
+   ```text
+   sudo groupadd wildfly
+   ```
+
+2. **Create a `wildfly` user**
+
+   Create a new user as a member of the `wildfly` group, with a home directory of `/opt/wildfly` and the login shell set to `/bin/false`:
+
+   ```text
+   sudo useradd -s /bin/false -g wildfly -d /opt/wildfly wildfly
+   ```
+
+3. **Install into `/opt/wildfly` and set ownership**
+
+   ```text
+   sudo mkdir -p /opt/wildfly
+   sudo tar -xzf wildfly-ee-dist-27.0.1.Final-tuxcare.1.tar.gz -C /opt/wildfly --strip-components=1
+   sudo chown -R wildfly:wildfly /opt/wildfly
+   ```
+
+4. **Start Wildfly as the `wildfly` user**
+
+   ```text
+   sudo -u wildfly JAVA_HOME=/path/to/your/jdk /opt/wildfly/bin/standalone.sh
+   ```
+
+   :::tip
+   `sudo` does not pass your environment to the target user, so set `JAVA_HOME` explicitly (or configure it for the `wildfly` user). Otherwise the server fails with `java: command not found`.
+   :::
+
+   Stop it from a second terminal with `/opt/wildfly/bin/jboss-cli.sh --connect command=:shutdown`.
 
 ## Logs Location
 
@@ -159,13 +150,15 @@ Check logs for detailed error information:
 * **Linux:**
 
   ```text
-  /opt/wildfly/standalone/log/server.log
+  ~/wildfly/standalone/log/server.log
   ```
+
+  (or `/opt/wildfly/standalone/log/server.log` if you installed under a dedicated user)
 
 * **Windows:**
 
   ```text
-  C:\WildFly\standalone\log\server.log
+  C:\WildFly\wildfly-27.0.1.Final-tuxcare.1\standalone\log\server.log
   ```
 
 </ELSSteps>
