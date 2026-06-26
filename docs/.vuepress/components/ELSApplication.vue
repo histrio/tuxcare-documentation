@@ -92,6 +92,12 @@ const applications = [
     link: "./mysql-and-percona-server/",
     icon: "/images/mysql.webp",
   },
+  {
+    name: "WildFly®",
+    versions: "27.0.1.Final",
+    link: "./wildfly/",
+    icon: "/images/wildfly-logo.webp",
+  },
 ];
 </script>
 

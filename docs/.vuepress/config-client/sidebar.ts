@@ -593,6 +593,10 @@ export default {
                     icon: '/images/mysql.webp',
                 },
                 {
+                    path: '/els-for-applications/wildfly/',
+                    icon: '/images/wildfly-logo.webp',
+                },
+                {
                     title: 'Resources',
                     type: 'section-header',
                     icon: '/images/star.webp',
