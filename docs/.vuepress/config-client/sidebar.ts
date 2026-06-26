@@ -594,7 +594,7 @@ export default {
                 },
                 {
                     path: '/els-for-applications/wildfly/',
-                    icon: '/images/Wildfly.webp',
+                    icon: '/images/wildfly-logo.webp',
                 },
                 {
                     title: 'Resources',

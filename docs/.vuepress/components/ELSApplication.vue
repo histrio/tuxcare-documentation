@@ -93,10 +93,10 @@ const applications = [
     icon: "/images/mysql.webp",
   },
   {
-    name: "Wildfly",
+    name: "WildFly®",
     versions: "27.0.1.Final",
     link: "./wildfly/",
-    icon: "/images/Wildfly.webp",
+    icon: "/images/wildfly-logo.webp",
   },
 ];
 </script>

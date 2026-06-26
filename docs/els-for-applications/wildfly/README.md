@@ -1,17 +1,17 @@
-# Wildfly
+# WildFly®
 
-Wildfly is a trademark of Red Hat, Inc.
+WildFly is a registered trademark of the Commonhaus Foundation.
 
 <br>
 
-TuxCare's Endless Lifecycle Support (ELS) for Wildfly provides security patches and selected bug fixes that are integral to the stable operation of applications running on these versions of Wildfly. These components have either reached their end of standard support from vendors or have reached End of Life (EOL).
-Our ELS for Wildfly service is designed to provide solutions for organizations that are not yet ready to migrate to newer versions and that are seeking long-term stability for their legacy Wildfly applications.
+TuxCare's Endless Lifecycle Support (ELS) for WildFly provides security patches and selected bug fixes that are integral to the stable operation of applications running on these versions of WildFly. These components have either reached their end of standard support from vendors or have reached End of Life (EOL).
+Our ELS for WildFly service is designed to provide solutions for organizations that are not yet ready to migrate to newer versions and that are seeking long-term stability for their legacy WildFly applications.
 
-This guide outlines the steps needed for Wildfly server setup and configuration.
+This guide outlines the steps needed for WildFly server setup and configuration.
 
 ## Supported Versions
 
-* Wildfly 27.0.1.Final
+* WildFly 27.0.1.Final
 
 ## Installation
 
@@ -30,7 +30,7 @@ This guide outlines the steps needed for Wildfly server setup and configuration.
 
 1. **Download the TuxCare build**
 
-   Download from TuxCare using your credentials. For example, Wildfly 27.0.1.Final:
+   Download from TuxCare using your credentials. For example, WildFly 27.0.1.Final:
 
    ```text
    curl -u USERNAME:PASSWORD -O https://nexus.repo.tuxcare.com/repository/els_java/org/wildfly/wildfly-ee-dist/27.0.1.Final-tuxcare.1/wildfly-ee-dist-27.0.1.Final-tuxcare.1.tar.gz
@@ -53,9 +53,9 @@ This guide outlines the steps needed for Wildfly server setup and configuration.
    ~/wildfly/bin/standalone.sh --version
    ```
 
-   The output should display the Wildfly version and build details.
+   The output should display the WildFly version and build details.
 
-4. **Start Wildfly**
+4. **Start WildFly**
 
    ```text
    ~/wildfly/bin/standalone.sh
@@ -67,15 +67,15 @@ This guide outlines the steps needed for Wildfly server setup and configuration.
 
 5. **Verify the server is running**
 
-   * Go to [http://localhost:8080/](http://localhost:8080/). You should see the default Wildfly welcome page.
+   * Go to [http://localhost:8080/](http://localhost:8080/). You should see the default WildFly welcome page.
 
-   * Or check from the terminal (successful output is HTML from Wildfly):
+   * Or check from the terminal (successful output is HTML from WildFly):
 
-   ```text
-   curl http://localhost:8080
-   ```
+     ```text
+     curl http://localhost:8080
+     ```
 
-6. **Stop Wildfly**
+6. **Stop WildFly**
 
    ```text
    ~/wildfly/bin/jboss-cli.sh --connect command=:shutdown
@@ -83,15 +83,15 @@ This guide outlines the steps needed for Wildfly server setup and configuration.
 
 ## Windows Installation
 
-1. **Download Wildfly**
+1. **Download WildFly**
 
    Download the `.zip` archive from [Nexus](https://nexus.repo.tuxcare.com/repository/els_java/org/wildfly/wildfly-ee-dist/27.0.1.Final-tuxcare.1/) using your credentials, for example `wildfly-ee-dist-27.0.1.Final-tuxcare.1.zip`.
 
 2. **Extract the archive**
 
-   Extract it to the installation directory, e.g., `C:\WildFly`. The archive contains a top-level folder, so this produces `C:\WildFly\wildfly-27.0.1.Final-tuxcare.1` — that folder is your Wildfly directory.
+   Extract it to the installation directory, e.g., `C:\WildFly`. The archive contains a top-level folder, so this produces `C:\WildFly\wildfly-27.0.1.Final-tuxcare.1` — that folder is your WildFly directory.
 
-3. **Start Wildfly**
+3. **Start WildFly**
 
    Run `C:\WildFly\wildfly-27.0.1.Final-tuxcare.1\bin\standalone.bat`.
 
@@ -101,9 +101,9 @@ This guide outlines the steps needed for Wildfly server setup and configuration.
 
 4. **Verify the server is running**
 
-   Go to [http://localhost:8080/](http://localhost:8080/) in your browser. You should see the default Wildfly welcome page.
+   Go to [http://localhost:8080/](http://localhost:8080/) in your browser. You should see the default WildFly welcome page.
 
-5. **Stop Wildfly**
+5. **Stop WildFly**
 
    Run `C:\WildFly\wildfly-27.0.1.Final-tuxcare.1\bin\jboss-cli.bat --connect command=:shutdown` from a second window.
 
@@ -131,7 +131,7 @@ This guide outlines the steps needed for Wildfly server setup and configuration.
    sudo chown -R wildfly:wildfly /opt/wildfly
    ```
 
-4. **Start Wildfly as the `wildfly` user**
+4. **Start WildFly as the `wildfly` user**
 
    ```text
    sudo -u wildfly JAVA_HOME=/path/to/your/jdk /opt/wildfly/bin/standalone.sh
