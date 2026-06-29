@@ -6,686 +6,15 @@ sidebarDepth: 5
 
 # KernelCare
 
-## KernelCare SimplePatch
-
-### Introduction 
-
-KernelCare SimplePatch is a kernel live patching product that provides security patches for a range of popular Linux kernels that can be installed without rebooting the system. It supports kernels of Enterprise Linux operating systems, i.e., RHEL, Oracle, Rocky, AlmaLinux, and CentOS, as well as Ubuntu and Debian. Each individual kernel receives new live patches for as long as the kernel vendor releases security updates for the series. 
-
-The KernelCare SimplePatch offering consists of the client application, and the live patching service hosted by TuxCare. The client application runs on machines, periodically checks for available patches, downloads, verifies, and installs them. 
-
-### The live patching process 
-
-When a new vulnerability is detected in the Linux kernel, TuxCare creates a live patch addressing the vulnerability. After the live patch is made available, it is tested in TuxCare’s internal server farm and then promoted gradually to a series of testing tiers, ensuring that any released live patch has been tested sufficient time on live systems. Once the patch is released, systems that enable the KernelCare SimplePatch client will receive the patch over an authenticated channel and apply it. 
-
-### Kernel patching lifetime 
-
-KernelCare SimplePatch offers live patches for each individual kernel for as long as the kernel vendor releases security updates for the series. This allows you to enjoy continuous protection for your existing kernels without being bound by the kernel vendor’s release schedule when planning your maintenance windows. 
-
-### Vulnerability coverage 
-
-During the lifecycle of an operating system, TuxCare makes commercially reasonable efforts to provide live patches for all vulnerability fixes provided by the vendor, irrespective of their vulnerability rating. We may also address vulnerabilities that haven't been addressed by the OS vendor if they gained significant attention and were being actively discussed, exploited (according to the [CISA list](https://www.cisa.gov/known-exploited-vulnerabilities-catalog)), or researched by the cybersecurity community. 
-
-### Target response rates 
-
-TuxCare is committed to delivering timely security updates. We aim to deliver live patches for all CVEs patched by the vendor within 10 days from when the vulnerability is publicly disclosed. This rapid response time significantly reduces the opportunity window for a potential attack and meets most security regulation requirements. However, a live patch for a vulnerability can be significantly more complex than an ordinary kernel patch, and due to the additional complexity, can take more time to develop and test. 
-
-### Supported architectures 
-
-KernelCare is available for both x86-64 (Intel and AMD) and ARM64 architectures. 
-
-### Supported Linux distros and kernels 
-
-Customers can find detailed information about supported kernels, Linux distributions, specific vulnerabilities, and live patches provided by KernelCare SimplePatch for each of the supported Linux distributions at [https://patches.kernelcare.com/](https://patches.kernelcare.com/). 
-
-### Third-party modules and tainted kernels
-
-KernelCare Enterprise can apply live patches to systems that run third-party or out-of-tree (OOT) kernel modules, such as DRBD, NVIDIA, or proprietary device drivers.
-
-KernelCare patches are built to preserve the kernel ABI. Exported symbols, function signatures, and structure layouts remain unchanged, which allows external modules to continue working through the same interfaces after patching.
-
-#### Possible interactions
-
-In rare situations, conflicts may occur if an external module:
-- injects instrumentation such as kprobes or ftrace hooks into a function being patched
-- executes long-running code inside a function at the moment it is being replaced
-  
-KernelCare includes safety checks that detect busy or unsafe patch sites and defer patching until they are safe to update.
-
-#### Support policy
-
-- TuxCare provides support for all officially supported kernels regardless of taint status.
-
-### End-of-life (EOL) policy 
-
-TuxCare will stop supporting live patching for specific distros if there are no security advisories provided by the distro's vendor for the last 365 days. In this case, all customers running the affected distributions are notified about the upcoming EOL. Existing live patches for EOL distributions are available for the next 6 years after the EOL date. 
-
-### Technical Support 
-
-All TuxCare live patching products include technical support provided according to the [TuxCare support policy](https://tuxcare.com/TuxCare-support-policy.pdf). It delivers 24/7/365 access to our engineers through the [TuxCare Support Portal](https://tuxcare.com/support-portal/) and to our online knowledge base. 
-
-### Getting a trial license
-
-You will need a trial activation key to be able to use the KernelCare SimplePatch. The trial license subscription will work for 30 days. You can request your free trial here [https://tuxcare.com/free-trial/](https://tuxcare.com/free-trial/).  
- 
- If you have any questions regarding using your trial subscription, contact [sales@tuxcare.com](mailto:sales@tuxcare.com) and we will help. 
-
-### Installation 
-
-KernelCare SimplePatch is compatible with 64-bit versions of CloudLinuxOS/CentOS 6, 7 and 8, AlmaLinux/RHEL 6, 7, 8 and 9, Oracle Linux 6 and 7, Amazon Linux 1 and 2, Virtuozzo/PCS/OpenVZ 2.6.32, Debian 8, 9 and 10, 11, 12, Proxmox VE 5 and 6, Virt-SIG/Xen4CentOS 6 and 7, Ubuntu 14.04, 15.04, 16.04, 18.04 and 20.04 kernels. The list of compatible kernels can be found at the following link: [https://patches.kernelcare.com/](https://patches.kernelcare.com/)
-
-To install KernelCare SimplePatch, run the following as root:
-```
-curl -s -L https://kernelcare.com/installer | bash 
-```
-or:
-```
-wget -qq -O - https://kernelcare.com/installer | bash
-```
-If you are using an IP-based license, nothing else is required to be done.
-If you are using a key-based license, run:
-```
-kcarectl --register <KEY>
-```
-Where `KEY` is the registration key code string provided when you sign up for purchase or trial of the product.
-If you are experiencing a `Key limit reached` error after the end of the trial period, you should first unregister the server by running:
-```
-kcarectl --unregister
-```
-To check if patches applied, run:
-```
-kcarectl --info
-```
-The software will automatically check for new patches every 4 hours.
-If you would like to run update manually:
-```
-kcarectl --update
-```
-To check current kernel compatibility with KernelCare SimplePatch, use the following [script](https://raw.githubusercontent.com/iseletsk/kernelchecker/master/py/kc-compat.py) by running:
-```
-curl -s -L https://kernelcare.com/checker | python
-```
-or:
-```
-wget -qq -O - https://kernelcare.com/checker | python
-```
-
-### Update 
-
-To update the agent package to the latest version use:
-* For rpm-based distributions (CentOS, RedHat, etc):
-```
-yum install -y kernelcare
-```
-or:
-```
-dnf install -y kernelcare
-```
-* For apt-based distributions (Debian, Ubuntu, etc):
-```
-apt-get install kernelcare
-```
-or:
-```
-apt install kernelcare
-```
-
-### Uninstalling 
-
-To uninstall KernelCare SimplePatch, run the following as root:
-*For CloudLinux, CentOS, RHEL, Virtuozzo, OpenVZ:
-```
-yum remove kernelcare
-```
-or:
-```
-dnf remove kernelcare
-```
-* For Ubuntu, Debian, Proxmox VE:
-```
-apt-get remove kernelcare 
-```
-or:
-```
-apt purge kernelcare
-```
-
-This will also unlink the system from its activation key (provided there is network connectivity to the CLN Portal). However, you'll need to remove the license from the CLN Portal manually if you don't plan to use the service anymore. 
-
-### KernelCare repository structure changelog
-
-KernelCare repository structure changes are typically transparent to users, with necessary updates applied automatically during package upgrades.
-However, in highly customized environments, such as those using custom repo mirrors, manual intervention may be required to accommodate these changes.
-
-#### KernelCare 3.0-1
-
-1. *RPM-only* - started using [RPM-GPG-KEY-KernelCare-rsa4096](https://repo.cloudlinux.com/kernelcare/RPM-GPG-KEY-KernelCare-rsa4096),
- which offers stronger cryptography. This change is mandatory for EL10 and remains compatible with older EL versions.
-
-Old `gpgkey` param value example:
-`gpgkey=https://repo.cloudlinux.com/kernelcare/RPM-GPG-KEY-KernelCare`
-
-New `gpgkey` param value example:
-`gpgkey=https://repo.cloudlinux.com/kernelcare/RPM-GPG-KEY-KernelCare-rsa4096`
-
-2. *RPM-only* - The repository URL has changed to [kernelcare/el-sig202505](https://repo.cloudlinux.com/kernelcare/el-sig202505/), with packages signed using the new signature key.
-
-Old `baseurl` param value example:
-`https://repo.cloudlinux.com/kernelcare/$releasever/$basearch`
-
-New `baseurl` param value example:
-`https://repo.cloudlinux.com/kernelcare/el-sig202505/$releasever/$basearch`
-
-#### KernelCare 2.97-2
-
-1. *Debian-only* - The repository URL has changed to [kernelcare/debian-sig202505](https://repo.cloudlinux.com/kernelcare/debian-sig202505/), with metadata signed using a stronger cryptographic key.
-
-Old repo url example:
-`https://repo.cloudlinux.com/kernelcare/kernelcare-debian/12`
-
-New repo url example:
-`https://repo.cloudlinux.com/kernelcare/debian-sig202505/12`
-
-2. *Ubuntu-only* - The repository URL has changed to [kernelcare/ubuntu-sig202505](https://repo.cloudlinux.com/kernelcare/ubuntu-sig202505/), with metadata signed using a stronger cryptographic key.
-
-Old repo url example:
-`https://repo.cloudlinux.com/kernelcare-ubuntu/24.04`
-
-New repo url example:
-`https://repo.cloudlinux.com/kernelcare/ubuntu-sig202505/24.04`
-
-### Switching from Ksplice 
-
-To switch from Ksplice to KernelCare SimplePatch, use the following script that uninstalls Ksplice and installs KernelCare SimplePatch instead. 
-
-It will automatically detect and abort if the system is not 64-bit (as KernelCare SimplePatch doesn't support it). 
-
-It will also detect when the Ksplice module cannot be uninstalled and retries multiple times. 
-
-Download the script here: [https://patches.kernelcare.com/ksplice2kcare](https://patches.kernelcare.com/ksplice2kcare) 
-
-Run the command: 
-```
-bash ksplice2kcare <KERNELCARE_KEY> 
-``` 
-
-The key can be created/retrieved in KernelCare SimplePatch Keys section of CLN. 
-
-If you want to use IP based licenses, run: 
-```
-bash ksplice2kcare IP 
-``` 
-
-You have to add an IP license for that server, and it is just the two letters `IP`, not your actual IP address. 
-
-By default the script will attempt 3 times to uninstall Ksplice, waiting 60 seconds in between. You can run it using `nohup` if you don't want to wait. 
-
-You can change that by editing the script and changing `RETRY` and `SLEEP` values. 
-
-The script will exit with exit code `0` and message `Done` on success. Otherwise, it will produce exit code `-1`. 
-
-The complete log file can be found at `/var/log/ksplice2kcare.log` 
-
-### Canonical Livepatch 
-
-KernelCare SimplePatch is not compatible with Canonical Livepatch and should not be used on the same system. 
-
-### Basic management 
-
-To disable automatic updates, edit the file `/etc/sysconfig/kcare/kcare.conf`
-```
-AUTO_UPDATE=False
-``` 
-
-To check the updated 'effective' version, run:
-```
-kcarectl --uname
-``` 
-
-We provide a convenience script `/usr/bin/kcare-uname` that has same syntax as `uname`. 
-
-To see applied patches, run: 
-```
-kcarectl --patch-info 
-``` 
-
-### Command line tools 
-
-* `/usr/bin/kcarectl` - Manage KernelCare SimplePatch patches for your kernel.
-* `/usr/bin/kcare-uname` - Print certain system information.
-
-#### kcarectl
-
-| Option  | Description  |
-|---|---|
-| `-i`,`--info`  | Displays information about patches installed by KernelCare SimplePatch.  |
-| `-u`, `--updated`  | Downloads the latest patches and applies them to current kernel.  |
-|`--smart-update` [since 1.6]  | The same as `--update` but is used to decide where to get pathches |
-| `--unload`  | Unloads patches.  |
-| `--auto-update`  | Checks if update is needed and performs an update  |
-| `--patch-info`  | Lists applied patches.  |
-| `--status`  | Returns a status of an update. Refer to the exit code: <br> `0` - host is updated to the latests patch level <br> `1` - there are no applied patches <br> `2` - there are new but not applied patches <br> `3` - kernel is unsupported  |
-| `--force` [since 2.3]  | When used with update, forces applying the patch even if unable to freeze some threads.  |
-| `--uname`  | Prints safe kernel version.  |
-| `--license-info`  | Outputs the current license info.  |
-| `--register KEY`  | Registers using KernelCare SimplePatch Key.  |
-| `--register-autoretry` [since 2.5]  | If the registration fails, retries the registration indefinitely.  |
-| `--unregister`  | Unregisters from KernelCare SimplePatch for the Key-based servers.  |
-| `--test`  | Tries the test builds instead of the production builds (deprecated, use `--prefix=test` instead).  |
-| `--prefix`  | Patches thesource prefix. Used to test different builds by downloading builds from a different location based on prefix (v2.2+).  |
-| `--version`  | Prints the KernelCare SimplePatch version.  |
-| `--import-key PATH` | Imports the gpg key.  |
-| `--set-monitoring-key`  | Sets the monitoring key for IP-based licenses. 16 to 32 characters, alphanumeric only [version 2.1+]  |
-| `--freezer` [since 2.3]  | none: don't freeze any threads; full: freeze all threads; smart: freezes only threads that need to be frozen for patching. If option is not selected, best freezer method is chosen automatically.  |
-| `--check` [since 2.4]  | Checks if new patchset is available, without updating. Exit code 0 means there is a new kernel. 1 when there is no new kernel.  |
-| `--doctor` [since 2.6]  | Sends a report to the TuxCare support staff for diagnostics.  |
-| `--set-patch-type extra`  | To enable extra patches.  |
-| `--set-patch-type free`  | To enable free patches.  |
-| `--tag COMMAND`  | Adds an extra field for a server. `COMMAND` is a user-defined parameter.  | 
-
-#### kcare-uname
-
-Print certain system information. Default is `-s`.
-
-| Argument  | Description  |
-|---|---|
-| `-a`, `--all`  | print all information in the following order, except omit `-p` and `-i` if unknown  |
-| `-s`, `--kernel-name`  | print the kernel name  |
-| `-n`, `--nodename`  | print the network node hostname  |
-| `-r`, `--kernel-release`  | print the kernel release  |
-| `-v`, `--kernel-version`  | print the kernel version  |
-| `-m`, `--machine`  | print the machine hardware name  |
-| `-p`, `--processor`  | print the processor type or `unknown` |
-| `-i`, `--hardware-platform`  | print the hardware platform or `unknown` |
-| `-o`, `--operating-system`  | print the operating system  |
-| `--help`  | display this help and exit  |
-| `--version`  | output the version information and exit  | 
-
-#### kernelcare doctor
-
-This tool collects essential information about the KernelCare SimplePatch environment and sends it to the support team. 
-
-```
-kcarectl --doctor  
-```
-```
-Generating report... 
-Uploading... 
-Key: FRWf74Zw11111111.83991334-1111-1111-1111-681ddd653e5f 
-Please, provide above mentioned key to KernelCare Support Team 
-``` 
-
-The command generates a report and prints out the ID which could be linked to a support ticket. 
-
-::: tip Note 
-If there was a connection problem during uploading the report, the report will be stored locally as `/root/cl-report`. This file should be sent to the support team manually.
-::: 
-
-#### Config options
-
-The `kcarectl` behavior can be configured using `/etc/sysconfig/kcare/kcare.conf`. 
-
-| Parameter  | Description  |
-|---|---|
-| `AUTO_UPDATE=True/False`  | `True`- enable auto-update, `False` - disable auto-update  |
-| `PATCH_METHOD=normal/nofreeze/smart`  | `Normal` - (default) use freezer; <br> `Nofreeze` - don't use freezer to free processes; <br> `Smart` - smart freezer freezes only threads that need ot be frozen for patching [kernelcare 2.3+]  |
-| `PATCH_SERVER`  | Server to use to download patches.  |
-| `REGISTRATION_URL`  | Licensing server.  |
-| `PREFIX=prefix`  | Patch source prefix, used to test different builds, by downloading builds from a different location, based on prefix [kernelcare 2.2+]  |
-| `UPDATE_POLICY=REMOTE/LOCAL/LOCAL_FIRST`  | Depending on the policy, on server startup, use: <br> `REMOTE` - (default) patches from patch server; <br> `LOCAL` - only locally cached patches, if none cached (caching is done automatically) - do nothing; <br> `LOCAL_FIRST`- see if locally cached patches exist, and load them. If not, try getting them from remote server.  |
-| `IGNORE_UNKNOWN_KERNEL=True/False`  | Don't provide notification if unknown kernel on auto-update. [kernelcare 2.5+]  |
-| `LOAD_KCARE_SYSCTL`  | Controls if `/etc/sysconfig/kcare/sysctl.conf` will be loaded on patchset load. True by default. [kernelcare 2.7+]  |
-| `[AUTO_]UPDATE_DELAY=<num>h/<num>d`  | Use patchsets not newer than specified time. For example `24h` or `2d`. `AUTO_UPDATE_DELAY` works for `auto` and `smart` modes. `UPDATE_DELAY` works for all modes. [kernelcare 2.82+] |
-| `REPORT_FQDN=True/False`  | Force using Fully Qualified Domain as a hostname. False by default.  |
-| `FORCE_GID=N`  | Use this group ID for symlink protection patch. By default, it's 48 (default Apache user GID) or 99 (`nobody` user)  | 
-
-### Disabling some patches 
-
-Some patches might affect the functioning of the system, and we created a way to disable them. 
-
-This is done via the `sysctl` command. 
-
-When new patchsets load, KernelCare SimplePatch sysctl options get reset. To prevent that we added a file: 
-```
-/etc/sysconfig/kcare/sysctl.conf 
-```
-Options in this file will be loaded automatically on new patchset load. 
-
-To disable loading these options, specify `LOAD_KCARE_SYSCTL=0` in `/etc/sysconfig/kcare/kcare.conf`
-To disable the patch, set the corresponding kcare option to `1`. 
-
-Patches that can be disabled: 
-
-| Patch  | sysctl  |
-|---|---|
-| CVE-2015-5157  | kcare_modify_ldt  | 
-
-### Extra patchset 
-
-::: tip Note: 
-KernelCare SimplePatch 2.12-5 or higher 
-::: 
-
-KernelCare SimplePatch Extra patchset includes all the security fixes from KernelCare SimplePatch for AlmaLinux, CentOS 6, CentOS 7, and CentOS 8 as well as symlink protection and the IPSet bugfix for CentOS 6. 
-
-To enable extra patches and apply updates, run:
-```
-kcarectl --set-patch-type extra --update
-``` 
-To enable extra patches without an update, run:
-```
-kcarectl --set-patch-type extra
-``` 
-The 'extra' patch will be applied on the next automatic update.
-To see details, run: 
-```
-kcarectl --patch-info 
-```
-You should see something similar to: 
-```
-OS: centos6 
-kernel: kernel-2.6.32-696.6.3.el6 
-time: 2017-07-31 22:46:22 
-uname: 2.6.32-696.6.3.el6 
-kpatch-name: 2.6.32
-/symlink-protection.patch 
-kpatch-description: symlink protection // If you see this patch, it mean that you can enable symlink protection. 
-kpatch-kernel: kernel-2.6.32-279.2.1.el6 
-kpatch-cve: N/A 
-kpatch-cvss: N/A 
-kpatch-cve-url: N/A 
-kpatch-patch-url: https://gerrit.cloudlinux.com/#/c/16508/ 
-kpatch-name: 2.6.32/symlink-protection.kpatch-1.patch 
-kpatch-description: symlink protection (kpatch adaptation) 
-kpatch-kernel: kernel-2.6.32-279.2.1.el6 
-kpatch-cve: N/A 
-kpatch-cvss: N/A 
-kpatch-cve-url: N/A 
-kpatch-patch-url: https://gerrit.cloudlinux.com/#/c/16508/ 
-kpatch-name: 2.6.32/ipset-fix-list-shrinking.patch 
-kpatch-description: fix ipset list shrinking for no reason 
-kpatch-kernel: N/A 
-kpatch-cve: N/A 
-kpatch-cvss: N/A 
-kpatch-cve-url: N/A 
-kpatch-patch-url: https://bugs.centos.org/view.php?id=13499 
-``` 
-
-To enable Symlink Owner Match Protection, add `fs.enforce_symlinksifowner=1` to `/etc/sysconfig/kcare/sysctl.conf` and run:
-```
-sysctl -p /etc/sysconfig/kcare/sysctl.conf
-``` 
-
-### UEFI Secure Boot Support 
-
-KernelCare supports systems with Secure Boot enabled in UEFI firmware. The KernelCare Agent uses a certificate that must be added to the Secure Boot trust chain to sign kernel modules. You can use the automated setup method (recommended), which uses a certificate embedded in a Microsoft-signed helper binary, or manually add a public certificate to the MOK database.
-
-#### Automated Setup (Recommended)
-
-The automated setup method uses a Microsoft-signed helper binary that automatically injects the KernelCare certificate into the Secure Boot trust chain at boot time. This eliminates the need for manual MOK enrollment. The KernelCare Agent package (version 3.0-2 or later) includes this helper binary and a setup script that configures it.
-
-**Supported Distributions:**
-
-The automated setup method is supported on RPM-based distributions (RHEL, CentOS, AlmaLinux, Rocky Linux, Oracle Linux, CloudLinux, Amazon Linux) with EFI boot, shim installed, and Secure Boot enabled. Not available for Debian/Ubuntu.
-
-**Setup steps:**
-
-1. Update the KernelCare Agent to version 3.0-2 or later.
-
-2. Run the setup script as root:
-
-```bash
-$ /usr/share/kcare/secure_boot/setup_kcare_certs.sh
-```
-
-The script verifies the EFI system partition and shim bootloader are present, then places the helper binary in the appropriate location.
-
-3. Reboot the system. The helper binary will automatically inject the certificate during the boot process.
-
-#### Manual Setup
-
-**Supported Distributions:**
-
-This method of adding a certificate with `mokutil` is supported on systems that use UEFI Secure Boot with the standard shim and MOK stack.
-
-If you need to set up the certificate manually or are using an older KernelCare Agent version:
-
-1. The latest KernelCare Agent package contains a public certificate at `/usr/libexec/kcare/kernelcare_pub.der`. For older versions, download it to that location:
-
-```bash
-curl -o /usr/libexec/kcare/kernelcare_pub.der https://patches.kernelcare.com/kernelcare_pub.der
-```
-
-2. Use `mokutil` as root to add this MOK to the UEFI firmware:
-
-```bash
-$ mokutil --import /usr/libexec/kcare/kernelcare_pub.der
- input password:
- input password again:
-```
-
-If you don't have a MOK password, `mokutil` will ask you to create one. The password is temporary and will be used on the next boot.
-
-3. Reboot your machine to enter the MOK manager EFI utility.
-
-   First, go down to the 'Enroll Mok':
-
-![alt text](/images/uefi-enroll-mok.png "Select Enroll MOK")
-
-Then the firmware gives you the option of viewing the new MOK or continuing. Let's continue.
-
-![alt text](/images/uefi-continue.png "Select Continue")
-
-It then asks you to confirm the enrollment.
-
-![alt text](/images/uefi-yes.png "Select Yes")
-
-Then you will need to enter the password you used when running `mokutil --import`.
-
-![alt text](/images/uefi-password.png "Enter the password")
-
-Finally, the firmware will ask you to reboot.
-
-![alt text](/images/uefi-ok.png  "Select OK")
-
-#### Verification
-
-After completing either setup method and rebooting, verify the certificate was enrolled successfully:
-
-```bash
-$ mokutil --list-enrolled | egrep -i 'SHA1|Issuer'
-```
-
-In some cases, the enrolled key may not appear in the mokutil output but can be verified with:
-
-```bash
-$ dmesg | grep -i 'cloud linux'
-[   0.722149] EFI: Loaded cert 'Cloud Linux Software, Inc: Kernel Module Signing Key: 12ff0613c0f80cfba3b2f8eba71ebc27c5a76170' linked to '.system_keyring'
-```
-
-After successful verification, KernelCare should be able to apply patches as usual on systems with Secure Boot enabled. 
-
-### Live patching and FIPS compliance 
-
-The FIPS-140 certification of a Linux kernel validates that the cryptography contained within a Linux kernel complies with the US government FIPS-140 data protection standard. Meaning that algorithms like AES, the random generator and other cryptographic aspects of the kernel are implemented as the standard defines. 
-
-At the same time the certification is a lengthy process --a typical validation can take almost a year-- and for that reason only some of each vendor's kernels are validated. That is because vendors release new kernels with security and feature updates on a regular cadence some as often as weekly, irrespective of their FIPS validation status. This means users of FIPS validated kernels need to choose between: (a) strict compliance by staying on the same kernel without updating until the next validated kernel is available and (b) reducing their security risk by installing new kernels with security updates even if they are not validated. The same story applies to the vendor's live patching solutions. 
-
-With KernelCare SimplePatch it is possible to live patch FIPS-140 validated Linux kernels, for example at the Red Hat Enterprise Linux operating system. The live patches applied to these kernels, in this example, consist of the same RHEL kernel patches but are limited to the ones addressing security vulnerabilities. That way, a live patched kernel contains the same security fixes as a vendor update without any feature or bug-fix updates, e.g. updates that may change the cryptographic subsystem for performance or other non-security related reasons. 
-
-**In this way, security-conscious users of FIPS-validated Linux kernels that today apply their vendor's security patches can rely on KernelCare SimplePatch live patching the same way they do with their vendor's security updates.** Furthermore, KernelCare live patching applies the minimum possible updates to the validated kernel by explicitly excluding any non-security updates. 
-
-### Firewall and Proxy Settings 
-
-#### Patching servers through firewall 
-
-As long as your servers have access to the Internet, even behind NAT - you will be able to use KernelCare SimplePatch patch server without any problems. 
-
-Generally, KernelCare SimplePatch requires connection to only two servers to work: 
-```
-cln.cloudlinux.com patches.kernelcare.com 
-```
-An additional address is used for KernelCare SimplePatch agent installation/update: 
-```
-repo.cloudlinux.com 
-``` 
-
-![](/images/patchingthroughfirewall.png) 
-
-#### Patching servers through proxy 
-
-If your servers don't have direct Internet access but can gain access to the Internet using proxy, the configuration is not that different. KernelCare SimplePatch can pick up standard environment variables for a proxy. 
-
-Make sure you have environment settings for proxy setup, and everything else will be the same as if servers were directly connected to the Internet: 
-```
-export http_proxy=http://proxy.domain.com:port # export https_proxy=http://proxy.domain.com:port 
-``` 
-
-NoteSettings defined by export are case-insensitive, so the example above could be as follows for certain software: 
-```
-export HTTP_PROXY=http://proxy.domain.com:port # export HTTPS_PROXY=http://proxy.domain.com:port 
-``` 
-
-You can define these settings in the KernelCare SimplePatch config `/etc/sysconfig/kcare/kcare.conf`, for example: 
-```
-cat /etc/sysconfig/kcare/kcare.conf AUTO_UPDATE=True HTTPS_PROXY=http://myproxy.com:59794 
-``` 
-
-If you define these settings in the config, you don't need to export them each `kcarectl` launch and don't need to edit cron jobs. 
-
-All `kcarectl` launches will be aware of proxy settings from the config. In this case, you need to set proxy settings only once. 
-
-![](/images/patchingthroughproxy.png) 
-
-### KernelCare on AWS - Deployment User Guide 
-
-#### Prerequisites and Requirements 
-
-KernelCare can be installed on any x86_64 compatible server or VM running one of the following distributions: 
-
-* Amazon Linux 1, 2
-* CentOS 6, 7, Xen4CentOS, CentOS-Plus, ElRepo
-* CloudLinux 6, 7
-* Debian 7, 8, 9, 8-backports
-* Oracle Linux 6, 7
-* ProxmoxVE 3,4,5
-* RedHat EL 6, 7
-* Ubuntu 14.04, 16.04, 18.04
-* Virtuozzo 6 
-
-The exact list of compatible kernels can be found at the following link: [https://patches.kernelcare.com/](https://patches.kernelcare.com/) 
-
-Standard OS kernels are required in most cases unless the custom kernel is supported. 
-
-The software can be installed on a running server and doesn't require a reboot. 
-
-Basic Linux skills are sufficient to deploy KernelCare on AWS. Simple deployments involve just an EC2 instance. KernelCare is available using the BYOL model. You need to register in our [customer portal](https://cln.cloudlinux.com/console) to get a trial license. Once you get the trial license, you need to register your running EC2 instance with the activation key. 
-
-#### Architectural Design 
-
-As long as your servers have access to the Internet, even behind NAT - you will be able to use KernelCare without any problems. 
-
-Generally, KernelCare requires a connection to only two servers to work: 
-```
-cln.cloudlinux.com patches.kernelcare.com
-``` 
-
-![](/images/AWS_arch2.png)  
-  
-
-If your servers don't have direct Internet access but can gain access to the Internet using a proxy, the configuration is not that different. KernelCare can pick up standard environment variables for proxies. 
-
-![](/images/AWS_proxy_arch2.png)  
-
-Make sure you have environment settings for your proxy setup, and everything else will be the same as if the servers were directly connected to the Internet:
-```
-export http_proxy=http://proxy.domain.com:port # export https_proxy=http://proxy.domain.com:port 
-``` 
-
-#### Security 
-
-The only thing you need to be able to install/control your KernelCare SimplePatch deployment is SSH access (root credentials, key-based authentication/sudo, or similar mechanisms are preferred). 
-
-#### Sizing 
-
-KernelCare SimplePatch agent has a tiny RAM footprint - binary patches usually require less than 1 MB. 
-
-#### Deployment Guidance 
-
-To install KernelCare SimplePatch, run: 
-```
-curl -s -L https://kernelcare.com/installer | bash 
-```
-or: 
-```
-wget -qq -O - https://kernelcare.com/installer | bash 
-``` 
-
-If you are using IP-based license, nothing else required to be done. If you are using key-based license, run: 
-```
-kcarectl --register <KEY> 
-```
-Where `KEY` is the registration key code string provided when you signed up for a trial or purchased the product. 
-
-You can easily automate KernelCare SimplePatch deployment with Ansible, Puppet, Chef or other orchestration tools. Here are the steps that may be automated: 
-
-1. Distribute KernelCare SimplePatch agent package (optional - required only for servers with no access to the Internet) and a KernelCare SimplePatch agent configuration file (`/etc/sysconfig/kcare/kcare.conf`);
-2. Set required environmental variables (optional);
-3. Install KernelCare SimplePatch agent from either locally available package or central KernelCare download location;
-4. Register KernelCare SimplePatch with either license key or IP-based license. 
-
-#### Health Check 
-
-Systems protected by KernelCare SimplePatch can be monitored using TuxCare Portal available at [https://portal.tuxcare.com/](https://portal.tuxcare.com/). Registered KernelCare SimplePatch installations are grouped by license keys. Kernels that are marked with the exclamation sign in amber do not have the latest patches installed. 
-
-![](/images/KC-Ent-monit.png)
-
-In either case, you can check whether the latest available patch has been applied by running the following command on a system protected by KernelCare SimplePatch: 
-```
-kcarectl --check 
-```
-#### Backup and Recovery 
-
-There is no reason to backup KernelCare SimplePatch. KernelCare SimplePatch doesn't store any data. You can always re-install and re-register KernelCare SimplePatch. To backup the configuration file of KernelCare SimplePatch if you have modified it, backup the `/etc/sysconfig/kcare/` folder. 
-
-#### Routine Maintenance 
-
-KernelCare SimplePatch is packaged in RPM/DEB packages (depending on Linux distribution) and will update any time system packages are updated. No additional maintenance is needed. 
-
-#### Emergency Maintenance 
-
-If one of your instances degraded, once you start another instance based on EBS or snapshot - KernelCare SimplePatch will continue working as before, no additional work is needed. If you set up a new server instead, re-register KernelCare SimplePatch on the new server. If you decide to uninstall patches, run the command: 
-```
-kcarectl --unload
-```
-Or to completely remove the KernelCare SimplePatch package run one of the following commands: 
-
-* on RPM-based systems: 
-```
-yum remove kernelcare
-```
-* or on DEB-based systems: 
-```
-apt-get remove kernelcare 
-``` 
-
-### Patch Feed Advanced Options 
-
-#### Delayed Feeds 
-
-The KernelCare SimplePatch patch server provides the option to delay the installation of patches:
-* **Delayed feeds** - instructs KernelCare to skip loading patches that were released within the last 12/24/48 hours.
-The alternate feed option is enabled by setting the `PREFIX` variable in `/etc/sysconfig/kcare/kcare.conf` to one of `test/12h/24h/48h`.
-
-## KernelCare Enterprise
+## KernelCare
 
 :::tip Note
-**KernelCare Plus** was the former name for this product. It reached end-of-life in March 2023 and was replaced by **KernelCare Enterprise**, which is the current supported offering. KernelCare Enterprise includes everything KernelCare Plus provided, plus additional enterprise capabilities such as controlled patch rollout via ePortal, air-gapped environment support, and access to add-ons such as LibCare and QEMUCare. If you see references to "KernelCare Plus" on invoices or in the CLN portal, these refer to the same product now marketed as KernelCare Enterprise.
+**KernelCare Plus** was the former name for this product. It reached end-of-life in March 2023 and was replaced by **KernelCare Enterprise**, which was the previous supported offering. KernelCare Enterprise includes everything KernelCare Plus provided, plus additional enterprise capabilities such as controlled patch rollout via ePortal, air-gapped environment support, and access to add-ons such as LibCare and QEMUCare. If you see references to "KernelCare Plus" on invoices or in the CLN portal, these refer to the same product now marketed as KernelCare. KernelCare Enterprise is likewise a former name of this product, which is now offered simply as KernelCare. If you see references to "KernelCare Enterprise" in older materials, invoices, or the CLN portal, they refer to this same product.
 :::
 
-KernelCare Enterprise live patching enhances customers' vulnerability patching programs by providing live patches to the Linux kernel and, optionally (with an add-on), to critical userspace components. The systems are patched according to your patch deployment policy, allowing you to customize your patch management to align with the needs of your unique environment, whether online or air-gapped.
+KernelCare live patching enhances customers' vulnerability patching programs by providing live patches to the Linux kernel and, optionally (with an add-on), to critical userspace components. The systems are patched according to your patch deployment policy, allowing you to customize your patch management to align with the needs of your unique environment, whether online or air-gapped.
 
-KernelCare Enterprise can be extended with the following add-ons:
+KernelCare can be extended with the following add-ons:
 
 * LibCare - for live patching of critical userspace components.
 * QEMUCare - for live patching of QEMU-based virtualization systems.
@@ -696,15 +25,15 @@ The sections below describe KernelCare and LibCare live patching in more detail.
 
 #### Introduction
 
-KernelCare Enterprise is a live kernel patching product that provides security patches for a range of popular Linux kernels that can be installed without rebooting the system. It supports kernels of Enterprise Linux operating systems, i.e., RHEL, Oracle, Rocky, AlmaLinux, and CentOS, as well as Ubuntu and Debian. Each individual kernel receives new live patches for as long as the kernel vendor releases security updates for the series.
+KernelCare is a live kernel patching product that provides security patches for a range of popular Linux kernels that can be installed without rebooting the system. It supports kernels of Enterprise Linux operating systems, i.e., RHEL, Oracle, Rocky, AlmaLinux, and CentOS, as well as Ubuntu and Debian. Each individual kernel receives new live patches for as long as the kernel vendor releases security updates for the series.
 
-The KernelCare Enterprise offering consists of the client application, the live patching service hosted by TuxCare, and an optional on-prem management server. The client application runs on machines, periodically checks for available patches, downloads, verifies, and installs them.
+The KernelCare offering consists of the client application, the live patching service hosted by TuxCare, and an optional on-prem management server. The client application runs on machines, periodically checks for available patches, downloads, verifies, and installs them.
 
 At the same time, complex enterprise environments often follow policies that require a gradual roll-out of updates to reduce risk or have high-security isolated environments that need to be updated. ePortal is an on-prem management server allowing organizations to define their rollout policy and remain in full control of which machines will get updated and when.
 
 #### The live patching process
 
-When a new vulnerability is detected in the Linux kernel, TuxCare creates a live patch addressing the vulnerability. After the live patch is made available, it is tested in TuxCare’s internal server farm and then promoted gradually to a series of testing tiers, ensuring that any released live patch has been tested sufficient time on live systems. Once the patch is released, systems that enable the KernelCare Enterprise client will receive the patch over an authenticated channel and apply it.
+When a new vulnerability is detected in the Linux kernel, TuxCare creates a live patch addressing the vulnerability. After the live patch is made available, it is tested in TuxCare’s internal server farm and then promoted gradually to a series of testing tiers, ensuring that any released live patch has been tested sufficient time on live systems. Once the patch is released, systems that enable the KernelCare client will receive the patch over an authenticated channel and apply it.
 
 #### ePortal
 
@@ -712,7 +41,7 @@ Many organizations have a gradual patch roll-out policy or maintain a strict pol
 
 #### Live patching testing tiers
 
-KernelCare Enterprise delivers live patches to “tiers”. A tier is a target audience for the delivery of a patch. Your tier depends on whether your systems receive updates directly from the TuxCare Portal repository or use ePortal as a proxy to gradually roll out patches according to your patching policy. The differences are outlined below.
+KernelCare delivers live patches to “tiers”. A tier is a target audience for the delivery of a patch. Your tier depends on whether your systems receive updates directly from the TuxCare Portal repository or use ePortal as a proxy to gradually roll out patches according to your patching policy. The differences are outlined below.
 
 | TIER  | DESCRIPTION  |
 |---|---|
@@ -724,7 +53,7 @@ Our kernel team closely monitors the patch health internally before promoting it
 
 #### Kernel patching lifetime
 
-KernelCare Enterprise offers live patches for each individual kernel for as long as the kernel vendor releases security updates for the series. This allows you to enjoy continuous protection for your existing kernels without being bound by the kernel vendor’s release schedule when planning your maintenance windows.
+KernelCare offers live patches for each individual kernel for as long as the kernel vendor releases security updates for the series. This allows you to enjoy continuous protection for your existing kernels without being bound by the kernel vendor’s release schedule when planning your maintenance windows.
 
 #### Vulnerability coverage
 
@@ -752,15 +81,15 @@ All TuxCare live patching products include technical support provided according 
 
 #### Getting a trial license
 
-You will need a trial activation key to be able to use the KernelCare Enterprise. The trial license subscription will work for 30 days. You can request your free trial here [https://tuxcare.com/free-trial/](https://tuxcare.com/free-trial/).  
+You will need a trial activation key to be able to use the KernelCare. The trial license subscription will work for 30 days. You can request your free trial here [https://tuxcare.com/free-trial/](https://tuxcare.com/free-trial/).  
  
  If you have any questions regarding using your trial subscription, contact [sales@tuxcare.com](mailto:sales@tuxcare.com) and we will help.  
  
 #### Installation
 
-KernelCare Enterprise is compatible with 64-bit versions of CloudLinuxOS/CentOS 6, 7 and 8, AlmaLinux/RHEL 6, 7, 8 and 9, Oracle Linux 6 and 7, Amazon Linux 1 and 2, Virtuozzo/PCS/OpenVZ 2.6.32, Debian 8, 9 and 10, Proxmox VE 5 and 6, Virt-SIG/Xen4CentOS 6 and 7, Ubuntu 14.04, 15.04, 16.04, 18.04 and 20.04 kernels. The list of compatible kernels can be found at the following link: [https://patches.kernelcare.com/](https://patches.kernelcare.com/)
+KernelCare is compatible with 64-bit versions of CloudLinuxOS/CentOS 6, 7 and 8, AlmaLinux/RHEL 6, 7, 8 and 9, Oracle Linux 6 and 7, Amazon Linux 1 and 2, Virtuozzo/PCS/OpenVZ 2.6.32, Debian 8, 9 and 10, Proxmox VE 5 and 6, Virt-SIG/Xen4CentOS 6 and 7, Ubuntu 14.04, 15.04, 16.04, 18.04 and 20.04 kernels. The list of compatible kernels can be found at the following link: [https://patches.kernelcare.com/](https://patches.kernelcare.com/)
 
-To install KernelCare Enterprise, run the following as root:
+To install KernelCare, run the following as root:
 
 ```text
 # curl -s -L https://kernelcare.com/installer | bash
@@ -844,7 +173,7 @@ or:
 
 #### Uninstalling
 
-To uninstall KernelCare Enterprise, run the following as root:
+To uninstall KernelCare, run the following as root:
 
 * For CloudLinux, CentOS, RHEL, Virtuozzo, OpenVZ:
 
@@ -874,9 +203,9 @@ This will also unlink the system from its activation key (provided there is netw
 
 #### Switching from Ksplice
 
-To switch from Ksplice to KernelCare Enterprise, use the following script that uninstalls Ksplice and installs KernelCare Enterprise instead.
+To switch from Ksplice to KernelCare, use the following script that uninstalls Ksplice and installs KernelCare instead.
 
-It will automatically detect and abort if the system is not 64-bit (as KernelCare Enterprise doesn't support it).
+It will automatically detect and abort if the system is not 64-bit (as KernelCare doesn't support it).
 
 It will also detect when the Ksplice module cannot be uninstalled and retries multiple times.
 
@@ -888,7 +217,7 @@ Run the command:
 # bash ksplice2kcare <KERNELCARE_KEY>
 ```
 
-The key can be created/retrieved in KernelCare Enterprise Keys section of CLN.
+The key can be created/retrieved in KernelCare Keys section of CLN.
 
 If you want to use IP based licenses, run:
 
@@ -908,7 +237,7 @@ The complete log file can be found at `/var/log/ksplice2kcare.log`
 
 ##### Canonical Livepatch
 
-KernelCare Enterprise is not compatible with Canonical Livepatch and should not be used on the same system.
+KernelCare is not compatible with Canonical Livepatch and should not be used on the same system.
 
 #### Basic management
 
@@ -934,7 +263,7 @@ To see applied patches, run:
 
 #### Command line tools
 
-`/usr/bin/kcarectl` - Manage KernelCare Enterprise patches for your kernel.
+`/usr/bin/kcarectl` - Manage KernelCare patches for your kernel.
 
 `/usr/bin/kcare-uname` - Print certain system information.
 
@@ -942,7 +271,7 @@ To see applied patches, run:
 
 | | |
 |-|-|
-|`-i, --info` | Display information about patches installed by KernelCare Enterprise.|
+|`-i, --info` | Display information about patches installed by KernelCare.|
 |`-u, --update` | Download latest patches, and apply them to current kernel.|
 |`--smart-update  [since 1.6]` | The same as --update, but uses [UPDATE_POLICY](/live-patching-services/#config-options) to decide where to get patches.|
 |`--unload` | Unload patches.|
@@ -952,13 +281,13 @@ To see applied patches, run:
 |`--force  [since 2.3]` | When used with update, forces applying the patch even if unable to freeze some threads.|
 |`--uname` | Prints safe kernel version.|
 |`--license-info` | Output current license info.|
-|`--register KEY` | Register using KernelCare Enterprise Key.|
+|`--register KEY` | Register using KernelCare Key.|
 |`--register-autoretry [since 2.5]` | If registration fails retries registration indefinitely.|
-|`--unregister` | Unregister from KernelCare Enterprise for Key based servers.|
+|`--unregister` | Unregister from KernelCare for Key based servers.|
 |`--userspace-update [PATCHES]` | Download latest patches and apply them to the corresponding userspace processes. Сan be set so that only certain types of patches are applied.|
 |`--test` | Try test builds instead of production builds (deprecated, use --prefix=test instead).|
 |`--prefix` | Patch source prefix, used to test different builds, by downloading builds from a different location, based on prefix (v2.2+)|
-|`--version` | Print KernelCare Enterprise version.|
+|`--version` | Print KernelCare version.|
 |`--import-key PATH` | Import gpg key.|
 |`--set-monitoring-key` | Set monitoring key for IP based licenses. 16 to 32 characters, alphanumeric only [version 2.1+]|
 |`--freezer  [since 2.3]` | none: don't freeze any threads; full: freeze all threads; smart: freezes only threads that need to be frozen for patching. If option is not selected, best freezer method is chosen automatically.|
@@ -1038,7 +367,7 @@ Some patches might affect the functioning of the system, and we created a way to
 
 This is done via the `sysctl` command.
 
-When new patchsets load, KernelCare Enterprise sysctl options get reset. To prevent that we added a file:
+When new patchsets load, KernelCare sysctl options get reset. To prevent that we added a file:
 
 `/etc/sysconfig/kcare/sysctl.conf`
 
@@ -1058,10 +387,10 @@ Patches that can be disabled:
 #### Extra patchset
 
 ::: tip Note
-KernelCare Enterprise 2.12-5 or higher
+KernelCare 2.12-5 or higher
 :::
 
-KernelCare Enterprise Extra patchset includes all the security fixes from KernelCare Enterprise for AlmaLinux, CentOS 6, CentOS 7, and CentOS 8 as well as symlink protection and the IPSet bugfix for CentOS 6.
+KernelCare Extra patchset includes all the security fixes from KernelCare for AlmaLinux, CentOS 6, CentOS 7, and CentOS 8 as well as symlink protection and the IPSet bugfix for CentOS 6.
 
 To enable extra patches and apply updates, run:
 
@@ -1163,7 +492,7 @@ Identifying the vulnerabilities that apply to your systems is an important task 
 
 ##### How to use a vulnerability scanner with KernelCare
 
-It's rather simple. New scan results after installing a package and applying a patchset should not show any kernel CVEs that are handled by KernelCare Enterprise.
+It's rather simple. New scan results after installing a package and applying a patchset should not show any kernel CVEs that are handled by KernelCare.
 
 For example, Nessus for an old kernel shows a lot of detected CVEs before apply live patches:
 
@@ -1213,7 +542,7 @@ sudo is not installed by default on some distributions like CentOS 6 but is the 
 
 ##### How to use OpenSCAP with KernelCare
 
-OpenSCAP is an open source vulnerability scanner and compliance tool and it can be used to scan a system protected by KernelCare Enterprise. The following commands show how to use OpenSCAP to produce a vulnerability report for a system.
+OpenSCAP is an open source vulnerability scanner and compliance tool and it can be used to scan a system protected by KernelCare. The following commands show how to use OpenSCAP to produce a vulnerability report for a system.
 
 ```text
 $ source /etc/os-release
@@ -1316,7 +645,7 @@ The FIPS-140 certification of a Linux kernel validates that the cryptography con
 
 At the same time the certification is a lengthy process --a typical validation can take almost a year-- and for that reason only some of each vendor's kernels are validated. That is because vendors release new kernels with security and feature updates on a regular cadence some as often as weekly, irrespective of their FIPS validation status. This means users of FIPS validated kernels need to choose between: (a) strict compliance by staying on the same kernel without updating until the next validated kernel is available and (b) reducing their security risk by installing new kernels with security updates even if they are not validated. The same story applies to the vendor's live patching solutions.
 
-With KernelCare Enterprise it is possible to live patch FIPS-140 validated Linux kernels, for example at the Red Hat Enterprise Linux operating system. The live patches applied to these kernels, in this example, consist of the same RHEL kernel patches but are limited to the ones addressing security vulnerabilities. That way, a live patched kernel contains the same security fixes as a vendor update without any feature or bug-fix updates, e.g. updates that may change the cryptographic subsystem for performance or other non-security related reasons.
+With KernelCare it is possible to live patch FIPS-140 validated Linux kernels, for example at the Red Hat Enterprise Linux operating system. The live patches applied to these kernels, in this example, consist of the same RHEL kernel patches but are limited to the ones addressing security vulnerabilities. That way, a live patched kernel contains the same security fixes as a vendor update without any feature or bug-fix updates, e.g. updates that may change the cryptographic subsystem for performance or other non-security related reasons.
 
 **In this way, security-conscious users of FIPS-validated Linux kernels that today apply their vendor's security patches can rely on KernelCare live patching the same way they do with their vendor's security updates**. Furthermore, KernelCare live patching applies the minimum possible updates to the validated kernel by explicitly excluding any non-security updates.
 
@@ -2264,7 +1593,7 @@ Alternatively, the command `/usr/bin/kcarectl --uname` can be run instead of the
 
 ### Comprehensive: Using OVAL data
 
-KernelCare comes with OVAL data that provides instructions to the scanner to identify the vulnerabilities addressed by the installed live patches. OVAL data are available for the operating systems supported by KernelCare Enterprise, including AlmaLinux, Red Hat Enterprise Linux, Oracle Linux, CentOS, Debian, and Ubuntu.
+KernelCare comes with OVAL data that provides instructions to the scanner to identify the vulnerabilities addressed by the installed live patches. OVAL data are available for the operating systems supported by KernelCare, including AlmaLinux, Red Hat Enterprise Linux, Oracle Linux, CentOS, Debian, and Ubuntu.
 
 The OVAL data cover all KernelCare enterprise products and add-ons, including LibCare and QEMUCare.
 
