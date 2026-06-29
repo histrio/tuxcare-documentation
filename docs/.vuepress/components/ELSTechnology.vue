@@ -156,7 +156,7 @@ const techData = [
       },
       {
         name: "Apache POI",
-        versions: "4.1.2",
+        versions: "3.10-FINAL | 4.1.2",
         link: "./java-libraries/",
       },
       {
@@ -668,7 +668,7 @@ const techData = [
       },
       {
         name: "axios",
-        versions: "0.15.3 | 0.18.1 | 0.27.2 | 0.33.0",
+        versions: "0.15.3 | 0.18.1 | 0.19.2 | 0.27.2 | 0.33.0",
         link: "./javascript-libraries/",
       },
       {
@@ -677,13 +677,28 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "babel-helpers",
+        versions: "7.15.4 | 7.24.0 | 7.24.1 | 7.25.6 | 7.26.0",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "babel-plugin-transform-modules-systemjs",
+        versions: "7.15.4 | 7.23.9 | 7.24.1 | 7.25.0",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "babel-runtime",
-        versions: "7.11.2 | 7.12.5 | 7.12.18 | 7.14.8 | 7.16.7 | 7.18.9 | 7.22.6 | 7.24.1",
+        versions: "7.11.2 | 7.12.5 | 7.12.18 | 7.14.8 | 7.15.4 | 7.16.7 | 7.18.9 | 7.21.0 | 7.22.6 | 7.22.15 | 7.23.1 | 7.23.2 | 7.23.9 | 7.24.0 | 7.24.1 | 7.24.4 | 7.24.7 | 7.25.7 | 7.26.0",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "babel-runtime-corejs3",
+        versions: "7.15.3",
         link: "./javascript-libraries/",
       },
       {
         name: "babel-traverse",
-        versions: "6.26.0",
+        versions: "6.26.0 | 7.15.4",
         link: "./javascript-libraries/",
       },
       {
@@ -697,19 +712,29 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "bn.js",
+        versions: "4.11.8 | 4.12.0",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "body-parser",
-        versions: "1.8.4 | 1.13.3 | 1.14.2",
+        versions: "1.8.4 | 1.13.3 | 1.14.2 | 1.19.0 | 1.20.1 | 1.20.2",
         link: "./javascript-libraries/",
       },
       {
         name: "Bootstrap",
-        versions: "3.2.0 | 3.3.6 | 3.4.1 | 4.1.1 | 4.6.2",
+        versions: "3.2.0 | 3.3.6 | 3.3.7 | 3.4.1 | 4.1.1 | 4.1.3 | 4.6.2",
         link: "./bootstrap/",
       },
       {
         name: "bootstrap-sass",
         versions: "3.4.0",
         link: "./bootstrap-sass/",
+      },
+      {
+        name: "bower",
+        versions: "1.8.4",
+        link: "./javascript-libraries/",
       },
       {
         name: "brace-expansion",
@@ -722,6 +747,11 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "browserify-sign",
+        versions: "4.0.4 | 4.2.1",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "browserslist",
         versions: "4.10.0 | 4.13.0 | 4.27.0",
         link: "./javascript-libraries/",
@@ -729,6 +759,16 @@ const techData = [
       {
         name: "bson",
         versions: "0.5.7 | 1.0.9",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "ckeditor",
+        versions: "4.5.11",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "ckeditor4",
+        versions: "4.17.1",
         link: "./javascript-libraries/",
       },
       {
@@ -908,7 +948,7 @@ const techData = [
       },
       {
         name: "follow-redirects",
-        versions: "0.0.3 | 1.15.11",
+        versions: "0.0.3 | 1.5.10 | 1.15.2 | 1.15.3 | 1.15.5 | 1.15.6 | 1.15.9 | 1.15.11",
         link: "./javascript-libraries/",
       },
       {
@@ -958,7 +998,7 @@ const techData = [
       },
       {
         name: "handlebars",
-        versions: "1.0.12 | 1.3.0 | 2.0.0 | 3.0.3",
+        versions: "1.0.12 | 1.3.0 | 2.0.0 | 3.0.3 | 4.7.7 | 4.7.8",
         link: "./javascript-libraries/",
       },
       {
@@ -1589,7 +1629,7 @@ const techData = [
       },
       {
         name: "cryptography",
-        versions: "3.4.8 | 41.0.7 | 42.0.0 | 42.0.8 | 43.0.1 | 43.0.3 | 44.0.3 | 45.0.7",
+        versions: "3.4.8 | 41.0.7 | 42.0.0 | 42.0.8 | 43.0.1 | 43.0.3 | 44.0.3 | 45.0.7 | 46.0.7",
         link: "./python-libraries/",
       },
       {
@@ -1639,7 +1679,7 @@ const techData = [
       },
       {
         name: "gunicorn",
-        versions: "20.0.4 | 20.1.0 | 21.2.0 | 22.0.0",
+        versions: "20.0.4 | 20.1.0 | 21.2.0 | 22.0.0 | 23.0.0",
         link: "./python-libraries/",
       },
       {
