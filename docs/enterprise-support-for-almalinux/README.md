@@ -732,6 +732,10 @@ Technical support covered by any of the TuxCare Support Programs shall not be pr
 * Incidents for which the Customer cannot provide accurate information, as reasonably requested by TuxCare, in order to reproduce, investigate, and resolve the incident
 * Incidents which arise as a result of neglect or incorrect use of TuxCare instructions, which, if properly used, would have prevented the Incident
 
+#### Appendix C. Validity of Enhanced Support Hours
+
+Enhanced Support is sold in bundles of 5, 10, or 20 hours. The contract term for purchased Enhanced Support hours begins on the date of purchase unless otherwise agreed by the parties in the applicable Agreement or Quote. All purchased Enhanced Support hours remain valid for use only during the applicable contract term and expire at the end of that term. Any unused hours remaining at the end of the applicable contract term are forfeited, do not carry over to any renewal term, and are non-refundable and non-transferable.
+
 ### Installing tuxctl (Essential Support)
 
 Similarly to the ESU instructions [above](/enterprise-support-for-almalinux/#installing-tuxctl), Essential Support customers should install tuxcare-release and register their server using tuxctl. The main difference is the choice of OS version - you must install the RPM specifically for your AlmaLinux/Rocky Linux version, currently 8.8, 8.10, 9.2, 9.4, 9.5, 9.6, 9.7, 10.0 and 10.1 are supported.
