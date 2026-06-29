@@ -9,15 +9,12 @@ sidebarDepth: 5
 ## KernelCare
 
 :::tip Note
-**KernelCare Plus** was the former name for this product. It reached end-of-life in March 2023 and was replaced by **KernelCare Enterprise**, which was the previous supported offering. KernelCare Enterprise includes everything KernelCare Plus provided, plus additional enterprise capabilities such as controlled patch rollout via ePortal, air-gapped environment support, and access to add-ons such as LibCare and QEMUCare. If you see references to "KernelCare Plus" on invoices or in the CLN portal, these refer to the same product now marketed as KernelCare. KernelCare Enterprise is likewise a former name of this product, which is now offered simply as KernelCare. If you see references to "KernelCare Enterprise" in older materials, invoices, or the CLN portal, they refer to this same product.
+**KernelCare Plus** was the former name for this product. It reached end-of-life in March 2023 and was replaced by **KernelCare Enterprise**, which was the previous supported offering. KernelCare Enterprise includes everything KernelCare Plus provided, plus additional enterprise capabilities such as controlled patch rollout via ePortal, air-gapped environment support, and access to add-ons such as LibCare. If you see references to "KernelCare Plus" on invoices or in the CLN portal, these refer to the same product now marketed as KernelCare. KernelCare Enterprise is likewise a former name of this product, which is now offered simply as KernelCare. If you see references to "KernelCare Enterprise" in older materials, invoices, or the CLN portal, they refer to this same product.
 :::
 
 KernelCare live patching enhances customers' vulnerability patching programs by providing live patches to the Linux kernel and, optionally (with an add-on), to critical userspace components. The systems are patched according to your patch deployment policy, allowing you to customize your patch management to align with the needs of your unique environment, whether online or air-gapped.
 
-KernelCare can be extended with the following add-ons:
-
-* LibCare - for live patching of critical userspace components.
-* QEMUCare - for live patching of QEMU-based virtualization systems.
+KernelCare can be extended with the LibCare add-on for live patching of critical userspace components.
 
 The sections below describe KernelCare and LibCare live patching in more detail.
 
@@ -299,7 +296,7 @@ To see applied patches, run:
 |`--tag COMMAND` | Adds an extra _Tag_ field for a server. COMMAND is a user-defined parameter.|
 
 :::tip Note
-Currently available userspace patch types are `libs` and `qemu`. To apply patches only for shared libraries, use `--userspace-update libs`
+Currently available userspace patch type is `libs`. To apply patches only for shared libraries, use `--userspace-update libs`.
 :::
 
 ##### kcare-uname
@@ -359,7 +356,7 @@ If there was a connection problem during uploading the report, the report will b
 |`[AUTO_]STICKY_PATCHSET=<patchset>`| Use patchsets not newer than specified value. For example `K20230908_02`. `AUTO_STICKY_PATCHSET` works for `auto` and `smart` modes. `STICKY_PATCHSET` works for all modes. [kernelcare 2.82+]|
 |`REPORT_FQDN=True\|False` | Force using Fully Qualified Domain as a hostname. False by default.|
 |`FORCE_GID=N`|Use this group ID for symlink protection patch. By default, it's 48 (default Apache user GID) or 99 (`nobody` user)|
-|`USERSPACE_PATCHES=libs,qemu`| Define which userspace patches will be applyed by default|
+|`USERSPACE_PATCHES=libs`| Define which userspace patches will be applyed by default|
 
 #### Disabling some patches
 
@@ -897,10 +894,8 @@ Your KernelCare subscription includes free 24/7 support.
 
 ##### Reference Materials
 
-* KernelCare website: [https://www.kernelcare.com](https://www.kernelcare.com)
-* KernelCare Blog: [https://www.kernelcare.com/blog/](https://www.kernelcare.com/blog/)
+* KernelCare website: [https://tuxcare.com/enterprise-live-patching-services/kernelcare-enterprise/](https://tuxcare.com/enterprise-live-patching-services/kernelcare-enterprise/)
 * KernelCare Patch Server: [https://patches.kernelcare.com](https://patches.kernelcare.com)
-* KernelCare documentation: [https://docs.kernelcare.com/](https://docs.kernelcare.com/)
 * CloudLinux Network - CLN (Billing Portal): [https://cln.cloudlinux.com](https://cln.cloudlinux.com)
 * CloudLinux 24/7 online support system: [https://tuxcare.zendesk.com](https://tuxcare.zendesk.com)
 
@@ -1514,67 +1509,6 @@ $ curl -s -L https://kernelcare.com/uchecker | sudo LOGLEVEL=debug python
 
 To learn more, visit the [UChecker Github page](https://github.com/cloudlinux/kcare-uchecker).
 
-### QEMUCare
-
-QEMUCare - virtualization patching for cloud providers, VPS hosters, or any other company with QEMU based virtualization systems. It keeps infrastructure patched without disrupting virtual tenants' systems.
-
-#### How QEMUCare works
-
-* An agent is installed on each virtualization host which installs patches directly from the QEMUCare repository.
-* In an ePortal environment, your Virtualization Hosts communicate with the QEMUCare ePortal server that acts as an intermediary.
-
-#### QEMU PatchSet Deployment
-
-Starting from version 1.25, ePortal supports the QEMU patchset management. It is accessible from the `Patches / QEMUcare` navigation item. QEMU patches use the same Patch Source credentials, and you don't need to perform additional configuration.
-
-![qemu feed](/images/eportal-qemu-feed.png)
-
-User interface for the QEMU patch management is the same as for KernelCare patches, and you
-can refer the [PatchSet Deployment](https://docs.tuxcare.com/eportal/#patchset-deployment) documentation.
-
-##### CLI to install the latest patchsets
-
-To update the default feed, run the following command:
-
-```text
-# kc.eportal qemu update
-```
-
-To update the `test` feed, run the following command:
-
-```text
-# kc.eportal qemu update --feed test
-```
-
-To update all auto-feeds, run the following command:
-
-```text
-# kc.eportal qemu auto-update
-```
-
-##### CLI to deploy patchset from archive
-
-```text
-$ kc.eportal qemu deploy --help
-usage: kc.eportal qemu deploy [-h] [--feed FEED] [--disabled] archive
-
-positional arguments:
-  archive      path to archive
-
-optional arguments:
-  -h, --help   show this help message and exit
-  --feed FEED  feed to deploy archive to
-  --disabled   do not enable patchset after deploy
-```
-
-For example:
-
-```text
-# kc.eportal qemu deploy --feed test /tmp/U20210818_01-qemu.tar.bz2
-```
-
-This command will deploy and enable the `U20210818_01-qemu` patchset in to the `test` feed.
-
 ### Vulnerability Scanner Integration with KernelCare
 
 This document is made for developers of vulnerability scanners to correctly report live patched vulnerabilities as delivered by KernelCare. There are several approaches that vendors might take to identify vulnerabilities patched by KernelCare correctly.
@@ -1595,7 +1529,7 @@ Alternatively, the command `/usr/bin/kcarectl --uname` can be run instead of the
 
 KernelCare comes with OVAL data that provides instructions to the scanner to identify the vulnerabilities addressed by the installed live patches. OVAL data are available for the operating systems supported by KernelCare, including AlmaLinux, Red Hat Enterprise Linux, Oracle Linux, CentOS, Debian, and Ubuntu.
 
-The OVAL data cover all KernelCare enterprise products and add-ons, including LibCare and QEMUCare.
+The OVAL data cover all KernelCare enterprise products and add-ons, including LibCare.
 
 The OVAL data for KernelCare live patching are available at [patches.kernelcare.com/oval](https://patches.kernelcare.com/oval/).
 
@@ -1609,106 +1543,9 @@ The list of vulnerabilities addressed by Kernel live patches is available at:
 /proc/kcare/cvelist
 ```
 
-The list of vulnerabilities addressed by system live patching (LibCare, QEMUCare, etc.) is available at:
+The list of vulnerabilities addressed by system live patching (LibCare, etc.) is available at:
 
 ```text
 /var/cache/kcare/libcare_cvelist
 ```
 
-## Live Patching for Proxmox VE 8
-
-### Overview of Proxmox VE 8
-
-Proxmox Virtual Environment (VE) 8 is a powerful, open-source platform for enterprise virtualization. It integrates KVM hypervisor and LXC containers, software-defined storage, and networking functionality on a single platform. Proxmox VE 8 offers a robust and scalable solution for managing virtual machines (VMs) and containers, making it ideal for data centers and enterprise environments.
-
-### The Need for Live Patching
-
-In the modern digital landscape, minimizing downtime is crucial. Applying security patches and updates often requires system reboots, leading to service interruptions. Live patching addresses this challenge by allowing you to apply critical updates to the kernel and key libraries without rebooting your servers. This ensures continuous security compliance and system availability.
-
-**Advantages of Live Patching:**
-
--   **Zero Downtime Maintenance**: Apply critical updates without interrupting services or affecting end-users.
--   **Enhanced Security Posture**: Rapid deployment of patches reduces the window of vulnerability.
--   **Operational Efficiency**: Eliminates the need for scheduling maintenance windows and reduces the administrative burden.
--   **Regulatory Compliance**: Meets compliance requirements that mandate timely application of security patches.
--   **Cost Savings**: Minimizes potential revenue loss due to downtime and reduces operational overhead.
-
-Implementing live patching solutions is essential for organizations that prioritize both security and availability in their IT operations.
-
-### Introduction to TuxCare's Live Patching Services
-
-TuxCare offers a comprehensive suite of live patching services designed to keep Linux-based systems secure and up-to-date without the need for reboots or service restarts. These services seamlessly integrate with Proxmox VE 8, enhancing its capabilities and ensuring uninterrupted operations.
-
-**TuxCare's Live Patching Solutions:**
-
--   **KernelCare**: Provides automated, rebootless kernel updates, ensuring the Linux kernel is always secure against the latest vulnerabilities.
--   **LibCare**: Delivers live patching for critical shared libraries like OpenSSL and glibc, protecting user-space applications without requiring restarts.
--   **QEMUCare**: Offers live patching for the QEMU emulator, allowing security fixes to be applied without stopping or migrating virtual machines.
-
-By integrating TuxCare's services into your Proxmox VE 8 environment, you can achieve a higher level of security and compliance while maintaining the performance and availability of your virtual infrastructure.
-
-#### KernelCare for Proxmox VE 8
-
-KernelCare is a live patching solution that automatically applies security patches to the Linux kernel without requiring a reboot. This service ensures that your Proxmox VE 8 servers remain secure against known vulnerabilities while maintaining high availability.
-
-##### Integration with Proxmox VE 8
-
-In a Proxmox VE 8 environment, KernelCare ensures that the underlying Linux kernel is always protected without affecting the operation of VMs and containers. This integration offers:
-
--   **Cluster-Wide Protection**: Apply kernel patches across all nodes in a Proxmox cluster without rebooting any servers.
--   **Simplified Management**: Centralized control and monitoring of kernel patch status across multiple nodes.
--   **Reduced Risk**: Mitigates the risk of security breaches that could compromise the entire virtualized infrastructure.
-
-##### Getting Started with KernelCare
-
-For detailed installation instructions, please refer to the [KernelCare Installation Guide](https://docs.tuxcare.com/live-patching-services/#installation-1) .
-
-#### LibCare for Proxmox VE 8
-
-Shared libraries like **OpenSSL** and **glibc** are fundamental to the operation of many applications and services. Vulnerabilities in these libraries can lead to serious security breaches, such as unauthorized data access or remote code execution. Traditionally, updating these libraries requires restarting the services or applications that use them, which can cause downtime.
-
-**LibCare** provides a solution by enabling live patching of these critical shared libraries without the need to restart dependent services or reboot the servers. This ensures that security updates are applied promptly, keeping your system secure while maintaining service availability.
-
-##### Importance in Proxmox VE 8
-
-In the context of Proxmox VE 8, LibCare plays a critical role in maintaining the security of both the host environment and the guest virtual machines:
-
--   **Secure Management Interfaces**: Protects the Proxmox web interface and API from vulnerabilities in libraries like OpenSSL.
--   **Guest Isolation**: Ensures that vulnerabilities in shared libraries do not compromise the isolation between VMs or containers.
--   **Service Reliability**: Maintains the stability of critical services by avoiding restarts.
-
-##### Getting Started with LibCare
-
-For detailed installation instructions, please refer to the [LibCare Installation Guide](https://docs.tuxcare.com/live-patching-services/#libcare) .
-
-#### QEMUCare for Proxmox VE 8
-
-##### Overview
-
-**QEMU** is the emulator and virtualizer used by Proxmox VE to run virtual machines. Vulnerabilities in QEMU can pose significant risks, potentially allowing attackers to escape from guest environments or cause denial-of-service conditions. Traditionally, patching QEMU requires stopping or migrating virtual machines, which can be disruptive.
-
-**QEMUCare** provides live patching for QEMU, enabling security updates to be applied without interrupting running virtual machines. This ensures that your virtual infrastructure remains secure while maintaining continuous operation.
-
-##### Benefits
-
--   **Uninterrupted VM Operation**: Apply security patches without stopping or migrating VMs.
--   **Immediate Vulnerability Mitigation**: Quickly address security flaws as patches become available.
--   **Operational Continuity**: Avoids the complexity and risk associated with migrating VMs for maintenance.
--   **Simplified Management**: Reduces the administrative burden of coordinating VM downtime.
--   **Compliance Assurance**: Helps meet security compliance requirements by ensuring the virtualization layer is up-to-date.
-
-##### Integration with Proxmox VE 8
-
-In Proxmox VE 8 environments, QEMUCare enhances the security of the virtualization stack:
-
--   **Secure Virtualization Layer**: Protects against exploits targeting QEMU vulnerabilities.
--   **Cluster-Wide Deployment**: Apply patches across all nodes without affecting cluster operations.
--   **Reduced Risk**: Minimizes the attack surface by keeping the hypervisor components up-to-date.
-
-##### Getting Started with QEMUCare
-
-For detailed installation instructions, please refer to the [QEMUCare Installation Guide](https://docs.tuxcare.com/live-patching-services/#qemucare) .
-
-### Conclusion
-
-Integrating TuxCare’s live patching services—KernelCare, LibCare, and QEMUCare—into your Proxmox VE 8 environment provides a robust solution for maintaining system security and uptime. By following the installation and configuration steps outlined in this guide, you can ensure that your virtualization infrastructure remains secure and operational without the need for disruptive reboots or service restarts.
