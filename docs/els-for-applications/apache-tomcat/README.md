@@ -62,66 +62,66 @@ Apache Tomcat® is also available for installation as a library for Maven and Gr
 
    * Create the `/opt/tomcat` directory:
 
-   ```text
-   sudo mkdir -p /opt/tomcat
-   ```
+     ```text
+     sudo mkdir -p /opt/tomcat
+     ```
 
    * Extract the archive into it:
 
-   ```text
-   sudo tar -xvzf tomcat-8.5.100-tuxcare.3.tar.gz -C /opt/tomcat --strip-components=1
-   ```
+     ```text
+     sudo tar -xvzf tomcat-8.5.100-tuxcare.3.tar.gz -C /opt/tomcat --strip-components=1
+     ```
 
 5. **Configure ownership and permissions**
 
    * Change to the installation directory:
 
-   ```text
-   cd /opt/tomcat
-   ```
+     ```text
+     cd /opt/tomcat
+     ```
 
    * Change ownership of the installation to the `tomcat` group:
 
-   ```text
-   sudo chgrp -R tomcat /opt/tomcat
-   ```
+     ```text
+     sudo chgrp -R tomcat /opt/tomcat
+     ```
 
    * Give the `tomcat` group read access to `conf` and its contents, and execute access to the `conf` directory:
 
-   ```text
-   sudo chmod -R g+r conf
-   sudo chmod g+x conf
-   ```
+     ```text
+     sudo chmod -R g+r conf
+     sudo chmod g+x conf
+     ```
 
    * Give the `tomcat` user write access to `webapps`, `work`, `temp`, and `logs`:
 
-   ```text
-   sudo chown -R tomcat webapps/ work/ temp/ logs/
-   ```
+     ```text
+     sudo chown -R tomcat webapps/ work/ temp/ logs/
+     ```
 
 6. **Set `CATALINA_HOME` and reload the shell**
 
    * Add the following line at the end of your `~/.bashrc` file, updating the path if needed.
 
-   ```text
-   export CATALINA_HOME=/opt/tomcat
-   ```
+     ```text
+     export CATALINA_HOME=/opt/tomcat
+     ```
 
-   :::tip
-   If you're using a different shell, you may need to edit `~/.bash_profile` instead.
-   :::
+     :::tip
+     If you're using a different shell, you may need to edit `~/.bash_profile` instead.
+     :::
 
    * Reload the shell configuration:
 
-   ```text
-   source ~/.bashrc
-   ```
+     ```text
+     source ~/.bashrc
+     ```
 
    * Confirm the variable is set:
 
-   ```text
-   echo $CATALINA_HOME
-   ```
+     ```text
+     echo $CATALINA_HOME
+     ```
 
 7. **Start Apache Tomcat®**
 
@@ -135,9 +135,9 @@ Apache Tomcat® is also available for installation as a library for Maven and Gr
 
    * Or check from the terminal (successful output is HTML from Tomcat®):
 
-   ```text
-   curl http://localhost:8080
-   ```
+     ```text
+     curl http://localhost:8080
+     ```
 
 9. **Stop Apache Tomcat®**
 
