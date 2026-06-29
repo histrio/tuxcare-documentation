@@ -7,7 +7,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **aiohttp** 3.8.1, 3.8.4, 3.8.5, 3.8.6
 * **apache-airflow-providers-http** 4.13.3
 * **certifi** 2021.10.8, 2022.12.7, 2023.7.22
-* **cryptography** 3.4.8, 41.0.7, 42.0.0, 42.0.8, 43.0.1, 43.0.3, 44.0.3, 45.0.7
+* **cryptography** 3.4.8, 41.0.7, 42.0.0, 42.0.8, 43.0.1, 43.0.3, 44.0.3, 45.0.7, 46.0.7
 * **deepdiff** 6.2.3
 * **dnspython** 2.3.0
 * **dulwich** 0.25.2
@@ -15,7 +15,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **flask-cors** 4.0.2
 * **future** 1.0.0
 * **GitPython** 3.1.31
-* **gunicorn** 20.0.4, 20.1.0, 21.2.0, 22.0.0
+* **gunicorn** 20.0.4, 20.1.0, 21.2.0, 22.0.0, 23.0.0
 * **h11** 0.9.0
 * **httpx** 0.22.0
 * **idna** 2.1, 2.8, 2.10, 3.6

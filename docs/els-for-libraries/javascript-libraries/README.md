@@ -13,19 +13,27 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **ansi-html** 0.0.7
 * **ansi-regex** 3.0.0
 * **async** 2.6.1, 2.6.3
-* **axios** 0.15.3, 0.18.1, 0.27.2, 0.33.0
+* **axios** 0.15.3, 0.18.1, 0.19.2, 0.27.2, 0.33.0
 * **azure-identity** 4.0.1
-* **babel-runtime** 7.11.2, 7.12.5, 7.12.18, 7.14.8, 7.16.7, 7.18.9, 7.22.6, 7.24.1
-* **babel-traverse** 6.26.0
+* **babel-helpers** 7.15.4, 7.24.0, 7.24.1, 7.25.6, 7.26.0
+* **babel-plugin-transform-modules-systemjs** 7.15.4, 7.23.9, 7.24.1, 7.25.0
+* **babel-runtime** 7.11.2, 7.12.5, 7.12.18, 7.14.8, 7.15.4, 7.16.7, 7.18.9, 7.21.0, 7.22.6, 7.22.15, 7.23.1, 7.23.2, 7.23.9, 7.24.0, 7.24.1, 7.24.4, 7.24.7, 7.25.7, 7.26.0
+* **babel-runtime-corejs3** 7.15.3
+* **babel-traverse** 6.26.0, 7.15.4
 * **base64url** 0.0.6
 * **basic-ftp** 5.0.5, 5.3.1
-* **body-parser** 1.8.4, 1.13.3, 1.14.2
+* **bn.js** 4.11.8, 4.12.0
+* **body-parser** 1.8.4, 1.13.3, 1.14.2, 1.19.0, 1.20.1, 1.20.2
+* **bower** 1.8.4
 * **brace-expansion** 1.1.11, 2.0.1
 * **braces** 0.1.5, 1.8.5, 2.3.1, 2.3.2, 3.0.2, 3.0.3
+* **browserify-sign** 4.0.4, 4.2.1
 * **browserslist** 4.10.0, 4.13.0, 4.27.0
 * **bson** 0.5.7, 1.0.9
 * **chownr** 0.0.2, 1.0.1
 * **cipher-base** 1.0.4
+* **ckeditor** 4.5.11
+* **ckeditor4** 4.17.1
 * **clean-css** 2.2.23, 3.4.28
 * **concat-stream** 1.4.8, 1.4.10, 1.5.0
 * **connect** 1.9.2, 2.6.0, 2.7.5
@@ -56,7 +64,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **fast-xml-parser** 3.14.0, 3.17.5, 3.19.0, 4.2.7, 4.4.0, 4.5.3, 4.5.6
 * **file-type** 17.1.6
 * **flatted** 3.2.9, 3.3.3
-* **follow-redirects** 0.0.3, 1.15.11
+* **follow-redirects** 0.0.3, 1.5.10, 1.15.2, 1.15.3, 1.15.5, 1.15.6, 1.15.9, 1.15.11
 * **form-data** 0.0.8, 0.1.4, 0.2.0, 1.0.0-rc3, 1.0.1, 2.0.0, 2.1.4, 2.3.3, 4.0.0, 4.0.1
 * **formidable** 2.1.2, 2.1.5
 * **forwarded** 0.1.0
@@ -66,7 +74,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **glob** 10.2.6, 10.4.5
 * **got** 2.9.2, 8.3.2, 9.6.0
 * **growl** 1.7.0
-* **handlebars** 1.0.12, 1.3.0, 2.0.0, 3.0.3
+* **handlebars** 1.0.12, 1.3.0, 2.0.0, 3.0.3, 4.7.7, 4.7.8
 * **hapi-hoek** 6.2.4
 * **hawk** 0.13.1, 1.0.0, 1.1.1, 2.3.1, 3.1.0
 * **highlight.js** 9.18.5

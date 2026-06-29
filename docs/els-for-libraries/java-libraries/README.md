@@ -15,7 +15,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Apache Commons IO** 2.4, 2.5, 2.6, 2.7, 2.11.0
 * **Apache FOP** 1.0
 * **Apache HttpComponents Client** 4.5.2
-* **Apache POI** 4.1.2
+* **Apache POI** 3.10-FINAL, 4.1.2
 * **Apache Santuario XML Security For Java** 2.0.10, 2.3.1
 * **Apache Thrift** 0.9.1, 0.9.3
 * **Apache Tika** 2.9.4
