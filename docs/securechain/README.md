@@ -20,7 +20,7 @@ Aligning with many industry standards and regulatory requirements, TuxCare is co
 
 * **Response time.** Target response times depend on where a package sits in its lifecycle — whether upstream is still releasing fixes, or TuxCare is maintaining the package after upstream activity has stopped. TuxCare will make commercially reasonable efforts to adhere to the following guidelines:
 
-| Severity | Maintenance *(from upstream fix)* | Sustained *(from CVE publication)* | ELS *(from CVE publication)* |
+| Severity | Maintenance *(from upstream fix)* | Sustained *(from CVE publication)* | Endless Lifecycle Support (ELS) *(from CVE publication)* |
 | :-- | :-: | :-: | :-: |
 | Critical (CVSS 9.0+) | 7 days | 14 days | 14 days |
 | High (CVSS 7.0–8.9) | 14 days | 21 days | 14 days |
@@ -31,7 +31,7 @@ These cycles reflect how a package is supported over time:
 
 * **Maintenance** — upstream is actively releasing fixes (an upstream release within the last 180 days). Response times are measured from the upstream fix.
 * **Sustained** — once there have been 90 days with no upstream release, TuxCare maintains the package directly. Response times are measured from CVE publication.
-* **ELS (Endless Life Support)** — from day 181 of no upstream release onward, TuxCare provides continued patching under ELS. Response times are measured from CVE publication.
+* **Endless Lifecycle Support (ELS)** — from day 181 of no upstream release onward, TuxCare provides continued patching under ELS. Response times are measured from CVE publication.
 
 ## Incident Reporting and Response Timeframe
 
