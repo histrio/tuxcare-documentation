@@ -48,13 +48,13 @@ A successful verification proves two things about the artifact:
 
 A failed verification is an **integrity violation**: the artifact must be treated as untrusted and not installed. Do not work around a failed check by re-downloading over an insecure channel or skipping verification — investigate the source instead.
 
-<p style="font-size: 1.125rem; font-weight: 700; margin-top: 1.75rem; margin-bottom: 0.5rem;">Where signatures are published</p>
+### Where Signatures Are Published
 
 Signature files are published to a dedicated Nexus signatures repository, separate from the package repositories and mirroring the path of the package they sign. Accessing them requires the same TuxCare Nexus credentials as the package repositories.
 
-<p style="font-size: 1.125rem; font-weight: 700; margin-top: 1.75rem; margin-bottom: 0.5rem;">Obtain the TuxCare public key</p>
+### Obtain the TuxCare Public Key
 
-To verify a signature you first need TuxCare's public signing key. The key is provided through your TuxCare account; if you don't have it, request it from [sales@tuxcare.com](mailto:sales@tuxcare.com) or your TuxCare support contact.
+To verify a signature you first need TuxCare's public signing key. Obtain the key from your TuxCare account, or request it from [sales@tuxcare.com](mailto:sales@tuxcare.com) or your TuxCare support contact.
 
 Once you have the key file (for example, `tuxcare-els-public.asc`), import it into your keyring:
 
@@ -72,7 +72,7 @@ gpg --list-keys
 Import the public key once. It can verify every TuxCare-signed package, so this step is not repeated for each artifact.
 :::
 
-<p style="font-size: 1.125rem; font-weight: 700; margin-top: 1.75rem; margin-bottom: 0;">Verify a package</p>
+### Verify a Package
 
 The steps below show an example for the `angular` package (npm ecosystem); the same process applies to packages in other ecosystems.
 
