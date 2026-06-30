@@ -30,7 +30,7 @@ Aligning with many industry standards and regulatory requirements, TuxCare is co
 These lifecycle stages reflect how a package is supported over time:
 
 * **Upstream-supported version** — upstream is actively releasing fixes (an upstream release within the last 180 days). Response times are measured from the upstream fix.
-* **Maintenance cycle** — upstream has gone quiet; once there have been 90 days with no upstream release, TuxCare maintains the package directly. Response times are measured from CVE publication.
+* **Maintenance cycle** — once there have been 90 days with no upstream release, TuxCare maintains the package directly. Response times are measured from CVE publication.
 * **Endless Life Support (ELS)** — from day 181 of no upstream release onward, TuxCare provides continued patching under ELS. Response times are measured from CVE publication.
 
 ## Incident Reporting and Response Timeframe
