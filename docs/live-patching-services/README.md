@@ -9,7 +9,7 @@ sidebarDepth: 5
 ## KernelCare
 
 :::tip Note
-**KernelCare Plus** was the former name for this product. It reached end-of-life in March 2023 and was replaced by **KernelCare Enterprise**, which was the previous supported offering. KernelCare Enterprise includes everything KernelCare Plus provided, plus additional enterprise capabilities such as controlled patch rollout via ePortal, air-gapped environment support, and access to add-ons such as LibCare. If you see references to "KernelCare Plus" on invoices or in the CLN portal, these refer to the same product now marketed as KernelCare. KernelCare Enterprise is likewise a former name of this product, which is now offered simply as KernelCare. If you see references to "KernelCare Enterprise" in older materials, invoices, or the CLN portal, they refer to this same product.
+**KernelCare Plus** was the former name for this product. It reached end-of-life in March 2023 and was replaced by **KernelCare**, which was the previous supported offering. KernelCare includes everything KernelCare Plus provided, plus additional capabilities such as controlled patch rollout via ePortal, air-gapped environment support, and access to add-ons such as LibCare. If you see references to "KernelCare Plus" on invoices or in the CLN portal, these refer to the same product now marketed as KernelCare. KernelCare is likewise a former name of this product, which is now offered simply as KernelCare. If you see references to "KernelCare" in older materials, invoices, or the CLN portal, they refer to this same product.
 :::
 
 KernelCare live patching enhances customers' vulnerability patching programs by providing live patches to the Linux kernel and, optionally (with an add-on), to critical userspace components. The systems are patched according to your patch deployment policy, allowing you to customize your patch management to align with the needs of your unique environment, whether online or air-gapped.
@@ -18,7 +18,7 @@ KernelCare can be extended with the LibCare add-on for live patching of critical
 
 The sections below describe KernelCare and LibCare live patching in more detail.
 
-### KernelCare
+### KernelCare (kernel live patching)
 
 #### Introduction
 
@@ -1529,7 +1529,7 @@ Alternatively, the command `/usr/bin/kcarectl --uname` can be run instead of the
 
 KernelCare comes with OVAL data that provides instructions to the scanner to identify the vulnerabilities addressed by the installed live patches. OVAL data are available for the operating systems supported by KernelCare, including AlmaLinux, Red Hat Enterprise Linux, Oracle Linux, CentOS, Debian, and Ubuntu.
 
-The OVAL data cover all KernelCare enterprise products and add-ons, including LibCare.
+The OVAL data cover all KernelCare products and LibCare.
 
 The OVAL data for KernelCare live patching are available at [patches.kernelcare.com/oval](https://patches.kernelcare.com/oval/).
 
@@ -1543,7 +1543,7 @@ The list of vulnerabilities addressed by Kernel live patches is available at:
 /proc/kcare/cvelist
 ```
 
-The list of vulnerabilities addressed by system live patching (LibCare, etc.) is available at:
+The list of vulnerabilities addressed by system live patching (LibCare) is available at:
 
 ```text
 /var/cache/kcare/libcare_cvelist
