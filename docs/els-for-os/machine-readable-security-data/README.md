@@ -14,6 +14,7 @@ Released fixes are available via [tuxcare.com/cve-tracker](https://tuxcare.com/c
 | OS | OVAL | CSAF | RSS |
 |----|------|------|-----|
 | Alpine Linux 3.18 ELS | [oval.xml](https://security.tuxcare.com/oval/els_os/alpinelinux3.18els/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_os/alpinelinux3.18els/) | [rss](https://tuxcare.com/cve-tracker/api/products/export/rss?product=Alpine+Linux+3.18+ELS) |
+| Amazon Linux 2 ELS | — | [csaf](https://security.tuxcare.com/csaf/v2/els_os/amazonlinux2els/) | [rss](https://tuxcare.com/cve-tracker/api/products/export/rss?product=Amazon+Linux+2+ELS) |
 | CentOS 6 ELS | [oval.xml](https://security.tuxcare.com/oval/els_os/centos6els/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_os/centos6els/) | [rss](https://tuxcare.com/cve-tracker/api/products/export/rss?product=CentOS+6+ELS) |
 | CentOS 7 ELS | [oval.xml](https://security.tuxcare.com/oval/els_os/centos7els/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_os/centos7els/) | [rss](https://tuxcare.com/cve-tracker/api/products/export/rss?product=CentOS+7+ELS) |
 | CentOS 8.4 ELS | [oval.xml](https://security.tuxcare.com/oval/els_os/centos8.4els/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_os/centos8.4els/) | [rss](https://tuxcare.com/cve-tracker/api/products/export/rss?product=CentOS+8.4+ELS) |
