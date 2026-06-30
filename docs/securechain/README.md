@@ -16,12 +16,22 @@ TuxCare employs the Common Vulnerability Scoring System (CVSS) to assess the sev
 
 Aligning with many industry standards and regulatory requirements, TuxCare is committed to delivering timely security updates. For instance, the Payment Card Industry Data Security Standard (PCI DSS) mandates that all 'High' vulnerabilities (CVSS score of 7.0+) must be addressed within 30 days. Other regulations and standards, such as the Health Insurance Portability and Accountability Act (HIPAA) for healthcare or the Federal Information Security Management Act (FISMA) for government agencies, uphold similar requirements.
 
-* **Vulnerability coverage.** TuxCare shall provide security patches for critical- and high-risk (CVSS 7.0 and above), medium-risk (CVSS 4.0 to 6.9), and low-risk (CVSS 0.1 to 3.9) vulnerabilities. TuxCare reserves the right to offer a mitigation strategy as an alternative to a direct code fix.
+* **Vulnerability coverage.** TuxCare provides security patches for critical (CVSS 9.0+), high (CVSS 7.0–8.9), medium (CVSS 4.0–6.9), and low (CVSS below 4.0) vulnerabilities. TuxCare reserves the right to offer a mitigation strategy as an alternative to a direct code fix.
 
-* **Response time.** TuxCare will make commercially reasonable efforts to adhere to the following guidelines when addressing vulnerabilities:
-    * **High- and critical-risk vulnerabilities (CVSS 7.0 and above):** Patches are provided within 14 days from the date the vulnerabilities are publicly disclosed.
-    * **Medium-risk vulnerabilities (CVSS 4.0 to 6.9):** Patches are provided within 60 days from the date the vulnerabilities are publicly disclosed.
-    * **Low-risk vulnerabilities (CVSS 0.1 to 3.9):** Patches are provided within 90 days from the date the vulnerabilities are publicly disclosed.
+* **Response time.** Target response times depend on where a package sits in its lifecycle — whether upstream is still releasing fixes, or TuxCare is maintaining the package after upstream activity has stopped. TuxCare will make commercially reasonable efforts to adhere to the following guidelines:
+
+| Severity | Upstream-supported version *(from upstream fix)* | Maintenance cycle *(from CVE publication)* | Endless Life Support *(from CVE publication)* |
+| :-- | :-: | :-: | :-: |
+| Critical (CVSS 9.0+) | 7 days | 14 days | 14 days |
+| High (CVSS 7.0–8.9) | 14 days | 21 days | 14 days |
+| Medium (CVSS 4.0–6.9) | 30 days | 60 days | 60 days |
+| Low (CVSS below 4.0) | 60 days | 90 days | 90 days |
+
+These lifecycle stages reflect how a package is supported over time:
+
+* **Upstream-supported version** — upstream is actively releasing fixes (an upstream release within the last 180 days). Response times are measured from the upstream fix.
+* **Maintenance cycle** — upstream has gone quiet; once there have been 90 days with no upstream release, TuxCare maintains the package directly. Response times are measured from CVE publication.
+* **Endless Life Support (ELS)** — from day 181 of no upstream release onward, TuxCare provides continued patching under ELS. Response times are measured from CVE publication.
 
 ## Incident Reporting and Response Timeframe
 
