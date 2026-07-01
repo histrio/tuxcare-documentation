@@ -4,9 +4,15 @@ export default [
   [
     // Cookiebot consent banner — MUST be the first script in <head> so its
     // auto-blocking mode can gate cookie-setting scripts (GA4/GTM) until the
-    // user opts in (GDPR/CCPA). This is a dynamic vendor loader: per GSR-10249,
-    // SRI is NOT applied to consent.cookiebot.com (it would break on vendor
-    // updates); the origin is covered by CSP allowlist / accepted risk instead.
+    // user explicitly opts in (GDPR/CCPA).
+    //
+    // Security note (tracked in ELSDOC-313): this is a NEW external <script src>
+    // on docs.tuxcare.com. SRI is intentionally NOT applied — consent.cookiebot.com
+    // is a versionless vendor loader, so a pinned integrity hash would break the
+    // banner on every Cookiebot update. GitHub Pages cannot send a CSP header, so
+    // this is a knowingly ACCEPTED supply-chain risk, taken for a legal consent
+    // requirement. NOT covered by GSR-10249: that ticket closed docs on the basis
+    // of "no external scripts present" — Cookiebot was added afterwards.
     "script",
     {
       id: "Cookiebot",
