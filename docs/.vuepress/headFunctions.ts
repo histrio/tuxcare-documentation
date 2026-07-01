@@ -2,6 +2,21 @@ import routes from './routes.json';
 
 export default [
   [
+    // Cookiebot consent banner — MUST be the first script in <head> so its
+    // auto-blocking mode can gate cookie-setting scripts (GA4/GTM) until the
+    // user opts in (GDPR/CCPA). This is a dynamic vendor loader: per GSR-10249,
+    // SRI is NOT applied to consent.cookiebot.com (it would break on vendor
+    // updates); the origin is covered by CSP allowlist / accepted risk instead.
+    "script",
+    {
+      id: "Cookiebot",
+      src: "https://consent.cookiebot.com/uc.js",
+      "data-cbid": "683e5da5-be31-4695-80e1-2c71cc909411",
+      "data-blockingmode": "auto",
+      type: "text/javascript",
+    },
+  ],
+  [
     "script",
     {
       type: "application/ld+json",
