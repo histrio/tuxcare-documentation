@@ -9,7 +9,7 @@ sidebarDepth: 5
 ## KernelCare
 
 :::tip Note
-**KernelCare Plus** was the former name for this product. It reached end-of-life in March 2023 and was replaced by **KernelCare**, which was the previous supported offering. KernelCare includes everything KernelCare Plus provided, plus additional capabilities such as controlled patch rollout via ePortal, air-gapped environment support, and access to add-ons such as LibCare. If you see references to "KernelCare Plus" on invoices or in the CLN portal, these refer to the same product now marketed as KernelCare. KernelCare is likewise a former name of this product, which is now offered simply as KernelCare. If you see references to "KernelCare" in older materials, invoices, or the CLN portal, they refer to this same product.
+**KernelCare Plus** was the former name for this product. It reached end-of-life in March 2023 and was replaced by **KernelCare**, which was the previous supported offering. KernelCare includes everything KernelCare Plus provided, plus additional capabilities such as controlled patch rollout via ePortal, air-gapped environment support, and access to add-ons such as LibCare. If you see references to "KernelCare Plus" on invoices or in the CLN portal, these refer to the same product now marketed as KernelCare.
 :::
 
 KernelCare live patching enhances customers' vulnerability patching programs by providing live patches to the Linux kernel and, optionally (with an add-on), to critical userspace components. The systems are patched according to your patch deployment policy, allowing you to customize your patch management to align with the needs of your unique environment, whether online or air-gapped.
