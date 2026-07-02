@@ -8,7 +8,7 @@ SecureChain delivers verified, signed, continuously patched JavaScript packages 
 
 * TuxCare SecureChain registry token — contact [sales@tuxcare.com](mailto:sales@tuxcare.com)
 * An npm project with `package.json`. If you're starting from scratch, run `npm init -y` in your project directory to create one.
-* To browse available packages, visit TuxCare [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:securechain-js) and sign in. You may need to refresh the page after logging in.
+* To browse available packages, visit TuxCare [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:js-securechain) and sign in. You may need to refresh the page after logging in.
 
 </ELSPrerequisites>
 
@@ -19,8 +19,8 @@ SecureChain delivers verified, signed, continuously patched JavaScript packages 
    In the root directory of your project, create or edit `.npmrc` to point npm at the SecureChain registry and provide your token:
 
    ```text
-   registry=https://nexus.repo.tuxcare.com/repository/securechain-js/
-   //nexus.repo.tuxcare.com/repository/securechain-js/:_auth=<TOKEN>
+   registry=https://nexus.repo.tuxcare.com/repository/js-securechain/
+   //nexus.repo.tuxcare.com/repository/js-securechain/:_auth=<TOKEN>
    always-auth=true
    ```
 
@@ -40,7 +40,7 @@ SecureChain delivers verified, signed, continuously patched JavaScript packages 
    
    `npm` is now pointed at SecureChain from the previous step, so the packages are pulled automatically from the TuxCare Nexus.
 
-   For the list of available packages and versions, visit TuxCare [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:securechain-js).
+   For the list of available packages and versions, visit TuxCare [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:js-securechain).
 
 </ELSSteps>
 
@@ -54,7 +54,7 @@ If `npm install` resolves to the public registry instead of SecureChain, use the
    npm config get registry
    ```
 
-   The output must be `https://nexus.repo.tuxcare.com/repository/securechain-js/`. If it returns `https://registry.npmjs.org/`, npm is not reading your project `.npmrc` - check that you are running npm from the project root and that no user-level `~/.npmrc` is overriding it.
+   The output must be `https://nexus.repo.tuxcare.com/repository/js-securechain/`. If it returns `https://registry.npmjs.org/`, npm is not reading your project `.npmrc` - check that you are running npm from the project root and that no user-level `~/.npmrc` is overriding it.
 
 * **Confirm authentication and connectivity**
 

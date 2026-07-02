@@ -10,7 +10,7 @@ This page describes how to upgrade an already-installed SecureChain package to a
 
 <ELSSteps>
 
-1. Check your TuxCare [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:securechain-js) account for the latest version available for each SecureChain package.
+1. Check your TuxCare [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:js-securechain) account for the latest version available for each SecureChain package.
 
 2. To upgrade, install the new version of the package — `npm install` will replace the previously installed release:
 
