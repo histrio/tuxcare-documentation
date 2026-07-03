@@ -155,6 +155,11 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "Apache Neethi",
+        versions: "3.1.1",
+        link: "./java-libraries/",
+      },
+      {
         name: "Apache POI",
         versions: "3.10-FINAL | 4.1.2",
         link: "./java-libraries/",
@@ -668,7 +673,7 @@ const techData = [
       },
       {
         name: "axios",
-        versions: "0.15.3 | 0.18.1 | 0.19.2 | 0.27.2 | 0.33.0",
+        versions: "0.15.3 | 0.18.1 | 0.19.2 | 0.21.1 | 0.21.4 | 0.27.2 | 0.33.0",
         link: "./javascript-libraries/",
       },
       {
@@ -893,7 +898,7 @@ const techData = [
       },
       {
         name: "esbuild",
-        versions: "0.13.8 | 0.14.22 | 0.14.25 | 0.14.54 | 0.15.18 | 0.15.5 | 0.17.19 | 0.18.17 | 0.18.20 | 0.19.12 | 0.20.1 | 0.21.5",
+        versions: "0.13.8 | 0.14.22 | 0.14.25 | 0.14.54 | 0.15.5 | 0.15.18 | 0.17.8 | 0.17.15 | 0.17.19 | 0.18.17 | 0.18.20 | 0.19.8 | 0.19.12 | 0.20.1 | 0.21.5 | 0.23.1",
         link: "./javascript-libraries/",
       },
       {
@@ -1007,8 +1012,18 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "happy-dom",
+        versions: "9.10.9 | 14.12.3",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "hawk",
         versions: "0.13.1 | 1.0.0 | 1.1.1 | 2.3.1 | 3.1.0",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "highcharts",
+        versions: "6.0.7 | 6.1.0 | 6.1.3 | 6.2.0 | 7.2.0 | 7.2.2 | 8.2.2",
         link: "./javascript-libraries/",
       },
       {
@@ -1467,6 +1482,11 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "tmpl",
+        versions: "1.0.4",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "tough-cookie",
         versions: "0.12.1 | 1.2.0 | 2.2.0 | 2.4.3 | 2.5.0 | 3.0.1",
         link: "./javascript-libraries/",
@@ -1478,7 +1498,7 @@ const techData = [
       },
       {
         name: "UAParser.js",
-        versions: "0.7.21",
+        versions: "0.7.21 | 0.7.31",
         link: "./javascript-libraries/",
       },
       {
@@ -1582,8 +1602,13 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "y18n",
+        versions: "4.0.0",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "yaml",
-        versions: "1.10.2",
+        versions: "1.10.2 | 2.5.0",
         link: "./javascript-libraries/",
       },
       {
@@ -1598,7 +1623,7 @@ const techData = [
       },
       {
         name: "zod",
-        versions: "3.25.76",
+        versions: "3.21.4 | 3.25.76",
         link: "./javascript-libraries/",
       },
     ],
@@ -2051,6 +2076,16 @@ const techData = [
       {
         name: "Symfony Process",
         versions: "3.4.x | 4.4.x | 5.x | 6.x",
+        link: "./symfony/",
+      },
+      {
+        name: "Symfony Mime",
+        versions: "7.4.x",
+        link: "./symfony/",
+      },
+      {
+        name: "Symfony Routing",
+        versions: "7.4.x",
         link: "./symfony/",
       },
       {
