@@ -6,6 +6,8 @@ Endless Lifecycle Support (ELS) for Symfony components such as Symfony Process, 
 
 * **Symfony Process** 3.4.x, 4.4.x, 5.x, 6.x
 * **Symfony HttpFoundation** 2.8.x, 3.4.x, 4.4.x
+* **Symfony Mime** 7.4.x
+* **Symfony Routing** 7.4.x
 
 Other versions upon request.
 
@@ -58,12 +60,83 @@ Other versions upon request.
 
 4. Install Symfony components
 
-   Install the TuxCare-maintained Symfony components release that matches your project:
+   Install the TuxCare-maintained Symfony component release that matches your project:
 
-   <CodeTabs :tabs="[
-     { title: 'Composer CLI', content: `composer require symfony/process:6.4.13-p2+tuxcare` },
-     { title: 'composer.json', content: symfonyjson }
-   ]" />
+   <TableTabs label="Choose version: ">
+
+   <template #Symfony_Process>
+
+   ```text
+   composer require symfony/process:6.4.13-p2+tuxcare
+   ```
+
+   `composer.json`:
+
+   ```text
+   {
+       "require": {
+           "symfony/process": "6.4.13-p2+tuxcare"
+       }
+   }
+   ```
+
+   </template>
+
+   <template #Symfony_HttpFoundation>
+
+   ```text
+   composer require symfony/http-foundation:4.4.49-p2+tuxcare
+   ```
+
+   `composer.json`:
+
+   ```text
+   {
+       "require": {
+           "symfony/http-foundation": "4.4.49-p2+tuxcare"
+       }
+   }
+   ```
+
+   </template>
+
+   <template #Symfony_Mime>
+
+   ```text
+   composer require symfony/mime:7.4.9-p1+tuxcare
+   ```
+
+   `composer.json`:
+
+   ```text
+   {
+       "require": {
+           "symfony/mime": "7.4.9-p1+tuxcare"
+       }
+   }
+   ```
+
+   </template>
+
+   <template #Symfony_Routing>
+
+   ```text
+   composer require symfony/routing:7.4.9-p1+tuxcare
+   ```
+
+   `composer.json`:
+
+   ```text
+   {
+       "require": {
+           "symfony/routing": "7.4.9-p1+tuxcare"
+       }
+   }
+   ```
+
+   </template>
+
+   </TableTabs>
 
    **Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
 
@@ -179,12 +252,5 @@ const composerjson =
 
 const cli =
 `composer config repositories.tuxcare '{"type":"composer","url":"https://nexus.repo.tuxcare.com/repository/els_php/","options":{"http":{"verify":true}}}' --json`
-
-const symfonyjson =
-`{
-    "require": {
-        "symfony/process": "6.4.13-p2+tuxcare"
-    }
-}`
 
 </script>
