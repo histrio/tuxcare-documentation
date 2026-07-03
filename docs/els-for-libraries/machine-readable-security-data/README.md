@@ -74,7 +74,11 @@ Import the public key once. It can verify every TuxCare-signed package, so this 
 
 ### Verify a Package
 
-The steps below show an example for the `angular` package (npm ecosystem); the same process applies to packages in other ecosystems.
+Select the ecosystem you work with, then follow the steps to verify a package signature.
+
+<TableTabs label="Choose ecosystem: ">
+
+<template #JavaScript>
 
 <ELSSteps>
 
@@ -117,6 +121,10 @@ The steps below show an example for the `angular` package (npm ecosystem); the s
    The `Good signature` line, and a key ID that matches the TuxCare public key you imported, confirm the artifact is authentic and unmodified. (The `[unknown]` trust level only reflects that you have not personally signed TuxCare's key in your web of trust; it does not affect the validity of the signature.)
 
 </ELSSteps>
+
+</template>
+
+</TableTabs>
 
 If `gpg` reports `BAD signature`, or cannot find the matching public key, treat the artifact as an integrity violation: stop the installation and re-obtain the package and signature from TuxCare over a trusted channel.
 
