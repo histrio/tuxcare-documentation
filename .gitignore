@@ -4,3 +4,6 @@ docs/.vuepress/dist
 docs/.vuepress/.cache
 docs/.vuepress/.temp
 package-lock.json
+
+# Generated at build time by scripts/generate-llms-full.mjs
+docs/.vuepress/public/llms-full.txt
