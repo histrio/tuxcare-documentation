@@ -13,7 +13,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **ansi-html** 0.0.7
 * **ansi-regex** 3.0.0
 * **async** 2.6.1, 2.6.3
-* **axios** 0.15.3, 0.18.1, 0.19.2, 0.27.2, 0.33.0
+* **axios** 0.15.3, 0.18.1, 0.19.2, 0.21.1, 0.21.4, 0.27.2, 0.33.0
 * **azure-identity** 4.0.1
 * **babel-helpers** 7.15.4, 7.24.0, 7.24.1, 7.25.6, 7.26.0
 * **babel-plugin-transform-modules-systemjs** 7.15.4, 7.23.9, 7.24.1, 7.25.0
@@ -76,7 +76,9 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **growl** 1.7.0
 * **handlebars** 1.0.12, 1.3.0, 2.0.0, 3.0.3, 4.7.7, 4.7.8
 * **hapi-hoek** 6.2.4
+* **happy-dom** 9.10.9, 14.12.3
 * **hawk** 0.13.1, 1.0.0, 1.1.1, 2.3.1, 3.1.0
+* **highcharts** 6.0.7, 6.1.0, 6.1.3, 6.2.0, 7.2.0, 7.2.2, 8.2.2
 * **highlight.js** 9.18.5
 * **hoek** 0.8.5, 0.9.1, 2.11.1, 2.12.0, 2.14.0, 2.16.3, 4.2.1
 * **http-proxy-middleware** 0.19.1, 2.0.8
@@ -146,9 +148,10 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **terser** 3.17.0, 4.6.3, 4.6.10, 4.8.1, 5.3.0, 5.5.1, 5.7.1
 * **tinymce** 4.9.11, 5.10.9, 6.8.6
 * **tmp** 0.0.24, 0.0.28, 0.0.30, 0.0.33, 0.1.0, 0.2.1
+* **tmpl** 1.0.4
 * **tough-cookie** 0.12.1, 1.2.0, 2.2.0, 2.4.3, 2.5.0, 3.0.1
 * **tunnel-agent** 0.3.0, 0.4.0, 0.4.3
-* **ua-parser-js** 0.7.21
+* **ua-parser-js** 0.7.21, 0.7.31
 * **uglify-js** 1.1.1, 1.3.5, 2.3.6
 * **underscore** 1.4.4, 1.6.0, 1.7.0
 * **underscore.string** 2.2.1, 2.3.3
@@ -161,9 +164,10 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **xlsx** 0.18.5
 * **xml2js** 0.2.6, 0.2.8, 0.4.23
 * **xmlhttprequest-ssl** 1.5.3, 1.5.5
-* **yaml** 1.10.2
+* **y18n** 4.0.0
+* **yaml** 1.10.2, 2.5.0
 * **yargs-parser** 4.2.1, 7.0.0, 10.1.0, 11.1.1, 13.1.2
-* **zod** 3.25.76
+* **zod** 3.21.4, 3.25.76
 
 Other libraries upon request.
 
