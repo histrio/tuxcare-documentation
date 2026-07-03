@@ -456,6 +456,22 @@ ePortal also supports a SOCKS5 proxy via `socks5://` proxy scheme:
 
 Restart ePortal (see the [Stopping & Starting](#stopping-starting) section, choose a corresponding OS).
 
+### URLs to allow
+
+If ePortal is deployed behind a proxy or a restrictive firewall, allow outbound **HTTPS (TCP 443)** to the following hosts:
+
+| URL                                   | Purpose                                                                                                                                    | Required                                             |
+| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------- |
+| `https://downloads.kernelcare.com`    | Patch source: downloads patchsets and update metadata, and sends usage statistics and error reports. Authenticated with your patch-source credentials. | Yes                                                  |
+| `https://repo.cloudlinux.com`         | TuxCare package repository. Hosts the `kcare-eportal` package and the KernelCare agent installer/packages that ePortal proxies to client servers. | Yes                                                  |
+| `https://patches.kernelcare.com`      | Patch server: ePortal proxies patch-server requests and agent doctor-report uploads here.                                                  | Yes                                                  |
+| `https://radar.tuxcare.com`           | TuxCare RADAR (default endpoint; configurable via `RADAR_PROXY_BASEURL`).                                                                   | When RADAR proxying is enabled (`RADAR_PROXY_ENABLE`) |
+| `https://repo.eportal.kernelcare.com` | Legacy ePortal package repository (older EL7 installations); also used by the `kc.eportal doctor` connectivity check.                       | Optional                                             |
+
+The `downloads.kernelcare.com` and `radar.tuxcare.com` addresses are defaults. If you point ePortal at a different patch source (`PATCH_SOURCE_URL`) or RADAR endpoint (`RADAR_PROXY_BASEURL`), allow your configured URL instead.
+
+Installing ePortal's OS dependencies (for example, the Nginx web server) may additionally require access to your distribution's package repositories and the [official Nginx repository](https://nginx.org/).
+
 ## Auth configuration
 
 | Setting | Description |
