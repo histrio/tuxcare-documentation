@@ -104,37 +104,14 @@ it usually means your project requires a package version that is not yet availab
 
 This allows Composer to fall back to Packagist for packages not available in the TuxCare repository, while still preferring TuxCare patches when available.
 
-## Resolved CVEs in League Flysystem
-
-Fixes for the following vulnerabilities are available in ELS for League Flysystem from TuxCare:
-
-<TableTabs label="Choose a version: " >
-
-<template #League_Flysystem_1.0.70>
-
-| CVE ID         | Severity | Vulnerable versions       | Fixed in version    |
-|----------------|----------|---------------------------|---------------------|
-| CVE-2021-32708 | Critical | < 1.1.4, >= 2.0.0, < 2.1.1| 1.0.70-p1+tuxcare   |
-
-</template>
-
-<template #League_Flysystem_1.1.10>
-
-| CVE ID         | Severity | Vulnerable versions       | Fixed in version    |
-|----------------|----------|---------------------------|---------------------|
-| CVE-2021-32708 | High     | < 1.1.4, >= 2.0.0, < 2.1.1| 1.1.10-p1+tuxcare   |
-
-</template>
-
-</TableTabs>
-
 ## What's Next?
 
 <WhatsNext hide-title>
 
+* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?q=league%2Fflysystem) — Track vulnerability fixes and updates
+* ![](/images/bolt.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?q=league%2Fflysystem) — Patched versions and changelogs
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/league/flysystem/) — Vulnerability Exploitability eXchange feed
-* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/) — Track vulnerability fixes and updates
-* ![](/images/bolt.webp) [Package updates](/els-for-libraries/managing-els-repository/#PHP) — Update an installed package to a newer TuxCare release
+* ![](/images/wrench.webp) [Package updates](/els-for-libraries/managing-els-repository/#PHP) — Upgrade to a newer version
 
 </WhatsNext>
 

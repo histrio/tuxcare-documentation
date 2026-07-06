@@ -178,48 +178,15 @@ it usually means your project requires a package version that is not yet availab
 
 This allows Composer to fall back to Packagist for packages not available in the TuxCare repository, while still preferring TuxCare patches when available.
 
-## Resolved CVEs in Symfony
-
-<TableTabs label="Choose Symfony component: " >
-
-<template #Symfony_Process>
-
-| CVE ID         | Severity | Vulnerable versions  | Fixed in version  |
-|----------------|----------|----------------------|-------------------|
-| CVE-2026-24739 | Medium   | < 6.4.14             | 6.4.13-p2+tuxcare |
-| CVE-2026-24739 | Medium   | < 5.4.46             | 5.4.45-p2+tuxcare |
-| CVE-2026-24739 | Medium   | < 4.4.45             | 4.4.44-p1+tuxcare |
-| CVE-2026-24739 | Medium   | < 3.4.48             | 3.4.47-p1+tuxcare |
-| CVE-2024-51736 | Critical | < 6.4.14             | 6.4.13-p1+tuxcare |
-| CVE-2024-51736 | Critical | < 5.4.46             | 5.4.45-p1+tuxcare |
-| CVE-2024-51736 | Critical | < 4.4.45             | 4.4.44-p1+tuxcare |
-| CVE-2024-51736 | Critical | < 3.4.48             | 3.4.47-p1+tuxcare |
-
-</template>
-
-<template #Symfony_HttpFoundation>
-
-| CVE ID         | Severity | Vulnerable versions  | Fixed in version  |
-|----------------|----------|----------------------|-------------------|
-| CVE-2025-64500 | Critical |< 5.4.50, >=6,<6.4.29, >=7,<7.3.7| 2.8.52-p1+tuxcare |
-| CVE-2025-64500 | Critical |< 5.4.50, >=6,<6.4.29, >=7,<7.3.7| 3.4.47-p3+tuxcare |
-| CVE-2025-64500 | Critical |< 5.4.50, >=6,<6.4.29, >=7,<7.3.7| 4.4.49-p1+tuxcare |
-| CVE-2024-50345 | Critical |< 5.4.50, >=6,<6.4.29, >=7,<7.3.7| 4.4.49-p2+tuxcare |
-| CVE-2024-50345 | Medium   |< 5.4.46, >=6,<6.4.14, >=7,<7.1.7| 3.4.47-p3+tuxcare |
-
-</template>
-
-</TableTabs>
-
 ## What's Next?
 
 <WhatsNext hide-title>
 
-* ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/symfony/) — Vulnerability Exploitability eXchange feed
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=Symfony) — Track vulnerability fixes and updates
-* ![](/images/bolt.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=Symfony) — Released fixes for Symfony
-* ![](/images/box.webp) [Supported components](https://tuxcare.com/cve-tracker/products?product=Symfony) — Symfony components covered by ELS
-* ![](/images/bolt.webp) [Package updates](/els-for-libraries/managing-els-repository/#PHP) — Update an installed package to a newer TuxCare release
+* ![](/images/bolt.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=Symfony) — Patched versions and changelogs
+* ![](/images/box.webp) [Supported components](https://tuxcare.com/cve-tracker/products?product=Symfony) — Components covered by ELS
+* ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/symfony/) — Vulnerability Exploitability eXchange feed
+* ![](/images/wrench.webp) [Package updates](/els-for-libraries/managing-els-repository/#PHP) — Upgrade to a newer version
 
 </WhatsNext>
 

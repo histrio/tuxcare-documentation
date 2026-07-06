@@ -104,19 +104,14 @@ it usually means your project requires a package version that is not yet availab
 
 This allows Composer to fall back to Packagist for packages not available in the TuxCare repository, while still preferring TuxCare patches when available.
 
-## Resolved CVEs in CraftCMS Feed Me
-
-| CVE-ID            | Severity | Vulnerable versions | Fixed in Version  |
-| ----------------- | -------- | ------------------- | ----------------- |
-| CVE-2023-36260    | High     | <4.6.1.1           | 3.1.17-p1+tuxcare |
-
 ## What's Next?
 
 <WhatsNext hide-title>
 
+* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?q=craftcms%2Ffeed-me) — Track vulnerability fixes and updates
+* ![](/images/bolt.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?q=craftcms%2Ffeed-me) — Patched versions and changelogs
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/craftcms/feed-me/) — Vulnerability Exploitability eXchange feed
-* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/) — Track vulnerability fixes and updates
-* ![](/images/bolt.webp) [Package updates](/els-for-libraries/managing-els-repository/#PHP) — Update an installed package to a newer TuxCare release
+* ![](/images/wrench.webp) [Package updates](/els-for-libraries/managing-els-repository/#PHP) — Upgrade to a newer version
 
 </WhatsNext>
 

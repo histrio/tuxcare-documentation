@@ -104,50 +104,14 @@ it usually means your project requires a package version that is not yet availab
 
 This allows Composer to fall back to Packagist for packages not available in the TuxCare repository, while still preferring TuxCare patches when available.
 
-## Resolved CVEs in Dompdf
-
-Fixes for the following vulnerabilities are available in ELS for Dompdf from TuxCare:
-
-<TableTabs label="Choose Dompdf version: ">
-
-<template #Dompdf_0.8.6>
-
-| CVE ID         | Severity | Vulnerable versions | Fixed in version    |
-|----------------|----------|---------------------|---------------------|
-| CVE-2023-50262 | High     | < 2.0.3             | 0.8.6-p1+tuxcare    |
-| CVE-2023-23924 | Critical | < 2.0.2             | 0.8.6-p1+tuxcare    |
-| CVE-2022-41343 | High     | < 2.0.1             | 0.8.6-p1+tuxcare    |
-| CVE-2022-28368 | Critical | < 1.2.1             | 0.8.6-p1+tuxcare    |
-| CVE-2022-0085  | Low      | < 2.0.0             | 0.8.6-p1+tuxcare    |
-| CVE-2021-3902  | Critical | < 2.0.0             | 0.8.6-p1+tuxcare    |
-| CVE-2021-3838  | Critical | < 2.0.0             | 0.8.6-p1+tuxcare    |
-| CVE-2022-2400  | Medium   | < 2.0.0             | 0.8.6-p1+tuxcare    |
-
-</template>
-
-<template #Dompdf_1.2.2>
-
-| CVE ID         | Severity | Vulnerable versions | Fixed in version    |
-|----------------|----------|---------------------|---------------------|
-| CVE-2023-50262 | High     | < 2.0.3             | 1.2.2-p1+tuxcare    |
-| CVE-2023-23924 | Critical | < 2.0.2             | 1.2.2-p1+tuxcare    |
-| CVE-2022-41343 | High     | < 2.0.1             | 1.2.2-p1+tuxcare    |
-| CVE-2022-0085  | Low      | < 2.0.0             | 1.2.2-p1+tuxcare    |
-| CVE-2021-3902  | Critical | < 2.0.0             | 1.2.2-p1+tuxcare    |
-| CVE-2021-3838  | Critical | < 2.0.0             | 1.2.2-p1+tuxcare    |
-| CVE-2022-2400  | Medium   | < 2.0.0             | 1.2.2-p1+tuxcare    |
-
-</template>
-
-</TableTabs>
-
 ## What's Next?
 
 <WhatsNext hide-title>
 
+* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?q=dompdf%2Fdompdf) — Track vulnerability fixes and updates
+* ![](/images/bolt.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?q=dompdf%2Fdompdf) — Patched versions and changelogs
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/dompdf/dompdf/) — Vulnerability Exploitability eXchange feed
-* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/) — Track vulnerability fixes and updates
-* ![](/images/bolt.webp) [Package updates](/els-for-libraries/managing-els-repository/#PHP) — Update an installed package to a newer TuxCare release
+* ![](/images/wrench.webp) [Package updates](/els-for-libraries/managing-els-repository/#PHP) — Upgrade to a newer version
 
 </WhatsNext>
 

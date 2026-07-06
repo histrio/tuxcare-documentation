@@ -166,77 +166,14 @@ it usually means your project requires a package version that is not yet availab
 
 This allows Composer to fall back to Packagist for packages not available in the TuxCare repository, while still preferring TuxCare patches when available.
 
-## Resolved CVEs in PHPUnit
-
-Fixes for the following vulnerabilities are available in ELS for PHPUnit from TuxCare:
-
-<TableTabs label="Choose PHPUnit version: ">
-
-<template #PHPUnit_6.5>
-
-| CVE ID         | Severity | Vulnerable versions | Fixed in version    |
-|----------------|----------|---------------------|---------------------|
-| CVE-2026-24765 | High     | 6.5.14              | 6.5.14-p1+tuxcare   |
-
-</template>
-
-<template #PHPUnit_7.5>
-
-| CVE ID         | Severity | Vulnerable versions | Fixed in version    |
-|----------------|----------|---------------------|---------------------|
-| CVE-2026-24765 | High     | 7.5.20              | 7.5.20-p1+tuxcare   |
-
-</template>
-
-<template #PHPUnit_8.4>
-
-| CVE ID         | Severity | Vulnerable versions | Fixed in version    |
-|----------------|----------|---------------------|---------------------|
-| CVE-2026-24765 | High     | 8.4.3               | 8.4.3-p1+tuxcare    |
-
-</template>
-
-<template #PHPUnit_9.5>
-
-| CVE ID         | Severity | Vulnerable versions | Fixed in version    |
-|----------------|----------|---------------------|---------------------|
-| CVE-2026-24765 | High     | 9.5.28              | 9.5.28-p1+tuxcare   |
-
-</template>
-
-<template #PHPUnit_10.4>
-
-| CVE ID         | Severity | Vulnerable versions | Fixed in version    |
-|----------------|----------|---------------------|---------------------|
-| CVE-2026-24765 | High     | 10.4.2              | 10.4.2-p1+tuxcare   |
-
-</template>
-
-<template #PHPUnit_11.4>
-
-| CVE ID         | Severity | Vulnerable versions | Fixed in version    |
-|----------------|----------|---------------------|---------------------|
-| CVE-2026-24765 | High     | 11.4.4              | 11.4.4-p1+tuxcare   |
-
-</template>
-
-<template #PHPUnit_12.4>
-
-| CVE ID         | Severity | Vulnerable versions | Fixed in version    |
-|----------------|----------|---------------------|---------------------|
-| CVE-2026-24765 | High     | 12.4.5              | 12.4.5-p1+tuxcare   |
-
-</template>
-
-</TableTabs>
-
 ## What's Next?
 
 <WhatsNext hide-title>
 
+* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?q=phpunit%2Fphpunit) — Track vulnerability fixes and updates
+* ![](/images/bolt.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?q=phpunit%2Fphpunit) — Patched versions and changelogs
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/sebastianbergmann/phpunit/) — Vulnerability Exploitability eXchange feed
-* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/) — Track vulnerability fixes and updates
-* ![](/images/bolt.webp) [Package updates](/els-for-libraries/managing-els-repository/#PHP) — Update an installed package to a newer TuxCare release
+* ![](/images/wrench.webp) [Package updates](/els-for-libraries/managing-els-repository/#PHP) — Upgrade to a newer version
 
 </WhatsNext>
 

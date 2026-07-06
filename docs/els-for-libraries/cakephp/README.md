@@ -104,30 +104,14 @@ it usually means your project requires a package version that is not yet availab
 
 This allows Composer to fall back to Packagist for packages not available in the TuxCare repository, while still preferring TuxCare patches when available.
 
-## Resolved CVEs in CakePHP
-
-Fixes for the following vulnerabilities are available in ELS for CakePHP from TuxCare:
-
-<TableTabs label="Choose a version: " >
-
-<template #CakePHP_2.10.24>
-
-| CVE ID         | Severity | Vulnerable versions         | Fixed in version      |
-|----------------|----------|-----------------------------|-----------------------|
-| CVE-2020-15400 | Medium   | < 3.10.3, >= 4.0.0, < 4.0.6 | 2.10.24-p1+tuxcare    |
-| CVE-2015-8379  | High     | >= 2.0.0-alpha, < 3.1.5     | 2.10.24-p1+tuxcare    |
-
-</template>
-
-</TableTabs>
-
 ## What's Next?
 
 <WhatsNext hide-title>
 
+* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?q=cakephp%2Fcakephp) — Track vulnerability fixes and updates
+* ![](/images/bolt.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?q=cakephp%2Fcakephp) — Patched versions and changelogs
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/cakephp/cakephp/) — Vulnerability Exploitability eXchange feed
-* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/) — Track vulnerability fixes and updates
-* ![](/images/bolt.webp) [Package updates](/els-for-libraries/managing-els-repository/#PHP) — Update an installed package to a newer TuxCare release
+* ![](/images/wrench.webp) [Package updates](/els-for-libraries/managing-els-repository/#PHP) — Upgrade to a newer version
 
 </WhatsNext>
 

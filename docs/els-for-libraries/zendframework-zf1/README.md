@@ -104,39 +104,14 @@ it usually means your project requires a package version that is not yet availab
 
 This allows Composer to fall back to Packagist for packages not available in the TuxCare repository, while still preferring TuxCare patches when available.
 
-## Resolved CVEs in Zend Framework 1
-
-Fixes for the following vulnerabilities are available in ELS for Zend Framework 1 from TuxCare:
-
-<TableTabs label="Choose Zend Framework 1 version: ">
-
-<template #Zend_Framework_1.12>
-
-| CVE ID              | Severity | Vulnerable versions | Fixed in version       |
-|---------------------|----------|---------------------|------------------------|
-| CVE-2016-6233       | Critical | 1.12.10             | 1.12.10-p1+tuxcare    |
-| CVE-2016-4861       | Critical | 1.12.10             | 1.12.10-p1+tuxcare    |
-| CVE-2015-7695       | Critical | 1.12.10             | 1.12.10-p1+tuxcare    |
-| CVE-2015-5723       | High     | 1.12.10             | 1.12.10-p1+tuxcare    |
-| CVE-2015-5161       | Medium   | 1.12.10             | 1.12.10-p1+tuxcare    |
-| CVE-2015-3154       | Medium   | 1.12.10             | 1.12.10-p1+tuxcare    |
-| GHSA-gff2-p6vm-3p8g | Medium   | 1.12.10             | 1.12.10-p1+tuxcare    |
-| GHSA-6fqw-j3vm-7f66 | Medium   | 1.12.10             | 1.12.10-p2+tuxcare    |
-| GHSA-848f-mph5-9pm9 | Medium   | 1.12.10             | 1.12.10-p2+tuxcare    |
-| GHSA-8xhv-gqm4-3w99 | Medium   | 1.12.10             | 1.12.10-p2+tuxcare    |
-| GHSA-v42g-7q2x-cw32 | Medium   | 1.12.10             | 1.12.10-p2+tuxcare    |
-
-</template>
-
-</TableTabs>
-
 ## What's Next?
 
 <WhatsNext hide-title>
 
+* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?q=zendframework%2Fzendframework1) — Track vulnerability fixes and updates
+* ![](/images/bolt.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?q=zendframework%2Fzendframework1) — Patched versions and changelogs
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/zendframework/zendframework1/) — Vulnerability Exploitability eXchange feed
-* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/) — Track vulnerability fixes and updates
-* ![](/images/bolt.webp) [Package updates](/els-for-libraries/managing-els-repository/#PHP) — Update an installed package to a newer TuxCare release
+* ![](/images/wrench.webp) [Package updates](/els-for-libraries/managing-els-repository/#PHP) — Upgrade to a newer version
 
 </WhatsNext>
 

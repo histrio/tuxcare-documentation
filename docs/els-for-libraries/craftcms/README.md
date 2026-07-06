@@ -104,32 +104,14 @@ it usually means your project requires a package version that is not yet availab
 
 This allows Composer to fall back to Packagist for packages not available in the TuxCare repository, while still preferring TuxCare patches when available.
 
-## Resolved CVEs in CraftCMS
-
-| CVE-ID            | Severity | Vulnerable versions                 | Fixed in Version  |
-| ----------------- | -------- | ----------------------------------- | ----------------- |
-| CVE-2025-35939    | Medium   | >=3.11, <4.15.3, >=5.0.0, <5.7.5    | 3.9.15-p1+tuxcare |
-| CVE-2025-54417    | Medium   | >=3.0.0, <4.16.3, >=5.0.0, <5.8.4   | 3.9.15-p1+tuxcare |
-| AIKIDO-2025-10090 | Medium   | <4.14.15, >=5.0.0, <5.6.6           | 3.9.15-p1+tuxcare |
-| CVE-2024-52291    | High     | >=3.0.0, 4.12.5,  >=5.0.0, <5.4.6   | 3.9.15-p1+tuxcare |
-| CVE-2025-68456    | Critical | >=3.0.0, <4.6.17, >=5.0.1, <5.8.21  | 3.9.15-p1+tuxcare |
-| CVE-2026-27128    | Medium   | >=2.1.0, <4.16.19, >=5.0.0, <5.8.22 | 3.9.15-p1+tuxcare |
-| CVE-2026-25493    | Low      | >=3.0.0, <4.15.16, >=5.0.0, <5.8.19 | 3.9.15-p1+tuxcare |
-| CVE-2026-25495    | High     | >=1.0.0, <4.16.18, >=5.0.0, <5.8.22 | 3.9.15-p1+tuxcare |
-| CVE-2023-33495    | Medium   | <4.4.12                             | 3.9.15-p1+tuxcare |
-| CVE-2026-29069    | Medium   | >=4.0.0, <4.17.0                    | 3.9.15-p2+tuxcare |
-| CVE-2026-28783    | Medium   | >=4.0.0, <4.17.0                    | 3.9.15-p2+tuxcare |
-| CVE-2026-27127    | High     | >=3.0.0, <4.17.1                    | 3.9.15-p3+tuxcare |
-| CVE-2026-32267    | High     | >=3.0.0, <4.17.1                    | 3.9.15-p3+tuxcare |
-| CVE-2025-68437    | Medium   | >=3.0.0, <4.17.1                    | 3.9.15-p3+tuxcare |
-
 ## What's Next?
 
 <WhatsNext hide-title>
 
+* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?q=craftcms%2Fcms) — Track vulnerability fixes and updates
+* ![](/images/bolt.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?q=craftcms%2Fcms) — Patched versions and changelogs
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/craftcms/cms/) — Vulnerability Exploitability eXchange feed
-* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/) — Track vulnerability fixes and updates
-* ![](/images/bolt.webp) [Package updates](/els-for-libraries/managing-els-repository/#PHP) — Update an installed package to a newer TuxCare release
+* ![](/images/wrench.webp) [Package updates](/els-for-libraries/managing-els-repository/#PHP) — Upgrade to a newer version
 
 </WhatsNext>
 

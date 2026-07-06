@@ -104,29 +104,14 @@ it usually means your project requires a package version that is not yet availab
 
 This allows Composer to fall back to Packagist for packages not available in the TuxCare repository, while still preferring TuxCare patches when available.
 
-## Resolved CVEs in SwiftMailer
-
-Fixes for the following vulnerabilities are available in ELS for SwiftMailer from TuxCare:
-
-<TableTabs label="Choose a version: " >
-
-<template #SwiftMailer_5.4.12>
-
-| CVE ID         | Severity | Vulnerable versions | Fixed in version      |
-|----------------|----------|---------------------|-----------------------|
-| CVE-2024-28859 | Critical | >= 4.0.0, < 6.2.5   | 5.4.12-p1+tuxcare     |
-
-</template>
-
-</TableTabs>
-
 ## What's Next?
 
 <WhatsNext hide-title>
 
+* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?q=swiftmailer%2Fswiftmailer) — Track vulnerability fixes and updates
+* ![](/images/bolt.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?q=swiftmailer%2Fswiftmailer) — Patched versions and changelogs
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/swiftmailer/swiftmailer/) — Vulnerability Exploitability eXchange feed
-* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/) — Track vulnerability fixes and updates
-* ![](/images/bolt.webp) [Package updates](/els-for-libraries/managing-els-repository/#PHP) — Update an installed package to a newer TuxCare release
+* ![](/images/wrench.webp) [Package updates](/els-for-libraries/managing-els-repository/#PHP) — Upgrade to a newer version
 
 </WhatsNext>
 

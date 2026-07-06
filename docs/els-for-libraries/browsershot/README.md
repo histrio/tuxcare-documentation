@@ -104,47 +104,14 @@ it usually means your project requires a package version that is not yet availab
 
 This allows Composer to fall back to Packagist for packages not available in the TuxCare repository, while still preferring TuxCare patches when available.
 
-## Resolved CVEs in Browsershot
-
-Fixes for the following vulnerabilities are available in ELS for Browsershot from TuxCare:
-
-<TableTabs label="Choose Browsershot version: " >
-
-<template #Browsershot_3.61.0 >
-
-| CVE ID         | Severity | Vulnerable versions | Fixed in version       |
-|----------------|----------|---------------------|------------------------|
-| CVE-2025-3192  | High     | 3.61.0              | 3.61.0-p2+tuxcare      |
-| CVE-2025-1026  | High     | 3.61.0              | 3.61.0-p1+tuxcare      |
-| CVE-2024-21547 | High     | 3.61.0              | 3.61.0-p1+tuxcare      |
-| CVE-2024-21549 | High     | 3.61.0              | 3.61.0-p1+tuxcare      |
-| CVE-2024-21544 | High     | 3.61.0              | 3.61.0-p1+tuxcare      |
-| CVE-2025-1022  | High     | 3.61.0              | 3.61.0-p1+tuxcare      |
-
-</template>
-
-<template #Browsershot_4.4.0 >
-
-| CVE ID         | Severity | Vulnerable versions | Fixed in version       |
-|----------------|----------|---------------------|------------------------|
-| CVE-2025-3192  | High     | 4.4.0               | 4.4.0-p1+tuxcare       |
-| CVE-2024-21544 | High     | 4.4.0               | 4.4.0-p2+tuxcare       |
-| CVE-2024-21547 | High     | 4.4.0               | 4.4.0-p2+tuxcare       |
-| CVE-2024-21549 | High     | 4.4.0               | 4.4.0-p2+tuxcare       |
-| CVE-2025-1022  | High     | 4.4.0               | 4.4.0-p2+tuxcare       |
-| CVE-2025-1026  | High     | 4.4.0               | 4.4.0-p2+tuxcare       |
-
-</template>
-
-</TableTabs>
-
 ## What's Next?
 
 <WhatsNext hide-title>
 
+* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?q=spatie%2Fbrowsershot) — Track vulnerability fixes and updates
+* ![](/images/bolt.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?q=spatie%2Fbrowsershot) — Patched versions and changelogs
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/spatie/browsershot/) — Vulnerability Exploitability eXchange feed
-* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/) — Track vulnerability fixes and updates
-* ![](/images/bolt.webp) [Package updates](/els-for-libraries/managing-els-repository/#PHP) — Update an installed package to a newer TuxCare release
+* ![](/images/wrench.webp) [Package updates](/els-for-libraries/managing-els-repository/#PHP) — Upgrade to a newer version
 
 </WhatsNext>
 
