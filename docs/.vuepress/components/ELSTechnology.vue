@@ -217,7 +217,7 @@ const techData = [
       },
       {
         name: "Apache Tomcat®",
-        versions: "8.5.100 | 9.0.46 | 9.0.50 | 9.0.75 | 9.0.83 | 9.0.87 | 9.0.90 | 9.0.100 | 10.1.18 | 10.1.42",
+        versions: "7.0.109 | 8.5.100 | 9.0.46 | 9.0.50 | 9.0.75 | 9.0.83 | 9.0.87 | 9.0.90 | 9.0.100 | 10.1.18 | 10.1.42",
         link: "./apache-tomcat/",
       },
       {
@@ -673,7 +673,7 @@ const techData = [
       },
       {
         name: "axios",
-        versions: "0.15.3 | 0.18.1 | 0.19.2 | 0.21.1 | 0.21.4 | 0.27.2 | 0.33.0",
+        versions: "0.15.3 | 0.18.1 | 0.19.2 | 0.21.1 | 0.21.4 | 0.24.0 | 0.27.2 | 0.33.0",
         link: "./javascript-libraries/",
       },
       {
@@ -1037,6 +1037,11 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "hosted-git-info",
+        versions: "2.1.4 | 2.7.1",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "http-proxy-middleware",
         versions: "0.19.1 | 2.0.8",
         link: "./javascript-libraries/",
@@ -1044,6 +1049,11 @@ const techData = [
       {
         name: "i18next",
         versions: "23.16.8",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "immutable",
+        versions: "4.3.5 | 4.3.7 | 5.0.3",
         link: "./javascript-libraries/",
       },
       {
@@ -1155,6 +1165,11 @@ const techData = [
         name: "LoopBack",
         versions: "1.10.0 | 2.42.0",
         link: "./loopback/",
+      },
+      {
+        name: "linkifyjs",
+        versions: "4.1.3",
+        link: "./javascript-libraries/",
       },
       {
         name: "loader-utils",
@@ -1412,6 +1427,11 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "set-value",
+        versions: "2.0.0",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "shell-quote",
         versions: "1.4.3 | 1.7.2",
         link: "./javascript-libraries/",
@@ -1579,6 +1599,11 @@ const techData = [
       {
         name: "websocket-extensions",
         versions: "0.1.1",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "word-wrap",
+        versions: "1.2.3",
         link: "./javascript-libraries/",
       },
       {
