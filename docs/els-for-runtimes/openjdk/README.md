@@ -4,12 +4,12 @@ Endless Lifecycle Support (ELS) from TuxCare provides security fixes for OpenJDK
 
 ## Supported OS and OpenJDK versions
 
-| OS                                                      | Package Type | OS Version    | OpenJDK version |
-| :-----------------------------------------------------: | :----------: | :-----------: | :-------------: |
-| EL 6 (CentOS, CloudLinux, Oracle Linux, etc.)            | RPM          | 6.x           | 8               |
-| EL 7 (CentOS, CloudLinux, Oracle Linux, etc.)            | RPM          | 7.x           | 8               |
-| EL 8 (CloudLinux, CentOS, AlmaLinux, Oracle Linux, etc.) | RPM          | 8.x           | 8, 11           |
-| AlmaLinux                                               | RPM          | 9.x           | 8               |
+| OS                                            | Package Type | OS Version | OpenJDK version |
+| :-------------------------------------------: | :----------: | :--------: | :-------------: |
+| EL 6 (CentOS, CloudLinux, Oracle Linux)       | RPM          | 6.x        | 7, 8            |
+| EL 7 (CentOS, CloudLinux, Oracle Linux, RHEL) | RPM          | 7.x        | 8, 11           |
+| EL 8 (CentOS, CentOS Stream)                  | RPM          | 8.x        | 8, 11           |
+| EL 9 (AlmaLinux, TuxCare ESU)                 | RPM          | 9.x        | 8, 11, 17       |
 
 **Supported architecture:** x86_64 (64-bit)
 
@@ -50,6 +50,14 @@ Endless Lifecycle Support (ELS) from TuxCare provides security fixes for OpenJDK
 
    <TableTabs label="OpenJDK version: " >
 
+   <template #7>
+
+   ```text
+   yum install java-1.7.0-openjdk
+   ```
+
+   </template>
+
    <template #8>
 
    ```text
@@ -62,6 +70,14 @@ Endless Lifecycle Support (ELS) from TuxCare provides security fixes for OpenJDK
 
    ```text
    yum install java-11-openjdk
+   ```
+
+   </template>
+
+   <template #17>
+
+   ```text
+   yum install java-17-openjdk
    ```
 
    </template>
