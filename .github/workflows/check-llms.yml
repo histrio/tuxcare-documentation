@@ -1,0 +1,39 @@
+name: Check llms.txt
+
+# Guards against llms.txt drifting out of sync with the site product menu.
+# Runs the dependency-free scripts/check-llms-links.mjs; fails the check if a
+# product in documents.ts has no matching link in llms.txt. Kept separate from
+# the deploy workflow so it never blocks a production deploy.
+
+on:
+  pull_request:
+    paths:
+      - "docs/.vuepress/public/llms.txt"
+      - "docs/.vuepress/config-client/documents.ts"
+      - "scripts/check-llms-links.mjs"
+      - ".github/workflows/check-llms.yml"
+  push:
+    branches:
+      - master
+    paths:
+      - "docs/.vuepress/public/llms.txt"
+      - "docs/.vuepress/config-client/documents.ts"
+      - "scripts/check-llms-links.mjs"
+
+jobs:
+  check-llms:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Check llms.txt is in sync with the product menu
+        run: node scripts/check-llms-links.mjs
