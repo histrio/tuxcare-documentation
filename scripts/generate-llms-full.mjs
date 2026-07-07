@@ -39,30 +39,34 @@ const selfCloseRe = new RegExp(`<${COMP}\\b[^>]*?/>`, "g");
 const openRe = new RegExp(`<${COMP}\\b[^>]*?>`, "g");
 const closeRe = new RegExp(`</${COMP}\\s*>`, "g");
 const templateRe = /<\/?template\b[^>]*>/g;
-const backtickRe = /`([^`]+)`/g;
-const titleRe = /title:\s*'([^']+)'/g;
+// A CodeTabs/TableTabs `content:` is either an inline `code` literal or a
+// variable defined in the page's <script setup>; resolve both.
+const scriptVarRe = /(?:const|let|var)\s+([A-Za-z_$][\w$]*)\s*=\s*`([^`]*)`/g;
+const tabRe = /title:\s*'([^']+)'\s*,\s*content:\s*(`[^`]*`|[A-Za-z_$][\w$]*)/g;
 // VuePress container markers: an opening `:::tip Title`, a bare `:::` fence,
 // and custom-container variants. Match the marker line only, keep the body.
 const containerRe = /^[ \t]*:::+.*$/gm;
 
-/** Pull human-useful code/title literals out of a component tag blob. */
-function salvage(tagText) {
-  const titles = [...tagText.matchAll(titleRe)].map((m) => m[1]);
-  const snippets = [...tagText.matchAll(backtickRe)].map((m) => m[1]);
+/** Emit each CodeTabs/TableTabs tab as a titled code block, resolving
+ *  `content:` variable refs against the page's <script> definitions. */
+function salvage(tagText, vars) {
   const out = [];
-  snippets.forEach((snip, i) => {
-    if (titles[i]) out.push(`${titles[i]}:`);
-    out.push("```\n" + snip.trim() + "\n```");
-  });
+  for (const [, title, ref] of tagText.matchAll(tabRe)) {
+    const code = ref.startsWith("`") ? ref.slice(1, -1) : vars.get(ref);
+    if (code == null) continue;
+    out.push(`${title}:`, "```\n" + code.trim() + "\n```");
+  }
   return out.join("\n");
 }
 
 function clean(text) {
+  // Capture <script> variable bodies before the script block is stripped.
+  const vars = new Map([...text.matchAll(scriptVarRe)].map((m) => [m[1], m[2]]));
   text = text.replace(frontmatterRe, "");
   text = text.replace(commentRe, "");
   text = text.replace(scriptRe, "");
   text = text.replace(styleRe, "");
-  text = text.replace(selfCloseRe, (m) => salvage(m));
+  text = text.replace(selfCloseRe, (m) => salvage(m, vars));
   text = text.replace(openRe, "");
   text = text.replace(closeRe, "");
   text = text.replace(templateRe, "");
