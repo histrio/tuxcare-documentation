@@ -109,9 +109,9 @@ This allows Composer to fall back to Packagist for packages not available in the
 <WhatsNext hide-title>
 
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?q=google%2Fprotobuf) — Track vulnerability fixes and updates
-* ![](/images/bolt.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?q=google%2Fprotobuf) — Released fixes
+* ![](/images/bolt.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?q=google%2Fprotobuf) — Patched versions and changelogs
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/google/) — Vulnerability Exploitability eXchange feed
-* ![](/images/bolt.webp) [Package updates](/els-for-libraries/managing-els-repository/#PHP) — Update an installed package to a newer TuxCare release
+* ![](/images/wrench.webp) [Package updates](/els-for-libraries/managing-els-repository/#PHP) — Upgrade to a newer version
 
 </WhatsNext>
 

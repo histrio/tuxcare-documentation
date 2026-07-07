@@ -109,7 +109,7 @@ This allows Composer to fall back to Packagist for packages not available in the
 <WhatsNext hide-title>
 
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?q=zendframework%2Fzend-http) — Track vulnerability fixes and updates
-* ![](/images/bolt.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?q=zendframework%2Fzend-http) — Released fixes
+* ![](/images/bolt.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?q=zendframework%2Fzend-http) — Patched versions and changelogs
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/zendframework/zend-http/) — Vulnerability Exploitability eXchange feed
 * ![](/images/wrench.webp) [Package updates](/els-for-libraries/managing-els-repository/#PHP) — Upgrade to a newer version
 

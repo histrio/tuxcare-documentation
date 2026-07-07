@@ -104,37 +104,14 @@ it usually means your project requires a package version that is not yet availab
 
 This allows Composer to fall back to Packagist for packages not available in the TuxCare repository, while still preferring TuxCare patches when available.
 
-## Resolved CVEs in Carbon
-
-Fixes for the following vulnerabilities are available in ELS for Carbon from TuxCare:
-
-<TableTabs label="Choose Carbon version: " >
-
-<template #Carbon_1.26.6 >
-
-| CVE ID         | Severity | Vulnerable versions | Fixed in version    |
-|----------------|----------|---------------------|---------------------|
-| CVE-2025-22145 | Medium   | 1.26.6              | 1.26.6-p1+tuxcare   |
-
-</template>
-
-<template #Carbon_1.39.1 >
-
-| CVE ID         | Severity | Vulnerable versions | Fixed in version    |
-|----------------|----------|---------------------|---------------------|
-| CVE-2025-22145 | Medium   | 1.39.1              | 1.39.1-p1+tuxcare   |
-
-</template>
-
-</TableTabs>
-
 ## What's Next?
 
 <WhatsNext hide-title>
 
+* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?q=nesbot%2Fcarbon) — Track vulnerability fixes and updates
+* ![](/images/bolt.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?q=nesbot%2Fcarbon) — Patched versions and changelogs
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/nesbot/carbon/) — Vulnerability Exploitability eXchange feed
-* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/) — Track vulnerability fixes and updates
-* ![](/images/bolt.webp) [Package updates](/els-for-libraries/managing-els-repository/#PHP) — Update an installed package to a newer TuxCare release
+* ![](/images/wrench.webp) [Package updates](/els-for-libraries/managing-els-repository/#PHP) — Upgrade to a newer version
 
 </WhatsNext>
 
